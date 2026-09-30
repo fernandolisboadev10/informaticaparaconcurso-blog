@@ -1,25 +1,53 @@
 ---
-title: "Review Galaxy A57: vale a pena o novo intermediário da Samsung?"
-description: "Review Galaxy A57: ficha técnica, comparativo com A56 e A55, bateria, câmeras e preço. Veja se o intermediário da Samsung ainda vale a pena em 2026."
+title: "Galaxy A57 vale a pena em 2026? Preço caiu e ficha técnica"
+description: "Galaxy A57 vale a pena em 2026? Veja ficha técnica, comparativo com A56 e A55, bateria, câmeras e o preço que faz o intermediário da Samsung compensar."
 category: "Reviews"
 date: 2026-09-28
-updated: 2026-09-28
-readingTime: "4 min"
+updated: 2026-09-30T17:10:00-03:00
+readingTime: "6 min"
 image: "./images/galaxy-a57-cores-techonplay.webp"
-imageAlt: "Review Galaxy A57"
+imageAlt: "Galaxy A57 5G nas quatro cores: azul escuro, azul, lilás e cinza"
 tags: ["Galaxy A57", "Samsung", "Celulares", "Review"]
-related: ["iphone-duo-iphone-dobravel", "subway-surfers-em-alta", "steam-machine"]
+related: ["galaxy-s25", "iphone-18-pro-e-pro-max", "iphone-duo-iphone-dobravel"]
 ---
 
-O **Galaxy A57** chegou ao Brasil em abril de 2026 como o intermediário mais fino da Samsung. Este review reúne a ficha técnica completa, compara o modelo com o A56 e o A55 e mostra se ele compensa hoje, com preços bem abaixo do lançamento.
+O **Galaxy A57** vale a pena em 2026 se o preço ficar perto de R$ 2 mil. Lançado no Brasil em 15 de abril por R$ 3.599 (128 GB), ele hoje aparece por cerca de R$ 1.700 em promoções. Nessa faixa, entrega tela de 6,7 polegadas, corpo de 6,9 mm, resistência IP68 e seis anos de atualizações. Ao preço de lançamento, o ganho sobre o A56 é pequeno.
+
+Este guia reúne a ficha técnica oficial, o comparativo com o A56 e o A55, os resultados de bateria e a regra de preço para decidir.
+
+## Vale a pena? A resposta rápida
+
+| 🎯 Situação | ✅ Resposta |
+| --- | --- |
+| Preço perto de R$ 2 mil | Vale a pena: tela excelente, design premium e IP68 |
+| Preço de lançamento (R$ 3.599) | Não vale: o ganho sobre o A56 é discreto |
+| Quer bateria e carga rápida | Há rivais com bateria maior e carregamento mais veloz |
+| Quer desempenho de topo | Veja o [Galaxy S25](/galaxy-s25/), que também caiu de preço |
 
 ## Ficha técnica do Galaxy A57
 
-![Ficha Técnica](./images/ficha-a57-logo-1024x683.webp)
+Segundo a [Samsung Brasil](https://www.samsung.com/br/smartphones/galaxy-a/galaxy-a57-5g-awesome-gray-128gb-sm-a576bzaezto/):
+
+| 🔍 Item | 📱 Galaxy A57 |
+| --- | --- |
+| Tela | 6,7 polegadas, Super AMOLED+, 1080 x 2340, até 120 Hz |
+| Processador | Exynos 1680 (4 nm) |
+| Memória | 8 GB de RAM; 128 GB ou 256 GB |
+| Câmera principal | 50 MP com estabilização óptica (f/1.8) |
+| Ultra-angular | 12 MP |
+| Macro | 5 MP |
+| Câmera frontal | 12 MP |
+| Vídeo | 4K a 30 quadros por segundo |
+| Bateria | 5.000 mAh (típica) |
+| Carregamento | Super Fast Charging 2.0: até 60% em cerca de 30 minutos |
+| Peso e espessura | 179 g e 6,9 mm |
+| Resistência | IP68 (água e poeira) |
+| Software | Android 16 com One UI 8.5; até 6 gerações de atualização do sistema e 6 anos de segurança |
+| Cores | Azul escuro, azul-claro, lilás e cinza |
+
+O lançamento no Brasil foi anunciado no [Samsung Newsroom Brasil](https://news.samsung.com/br/samsung-apresenta-galaxy-a57-5g-e-galaxy-a37-5g-no-brasil-com-recursos-de-nivel-profissional).
 
 ## Galaxy A57 vs A56 vs A55: o que mudou
-
-Para começar, a tabela mostra a evolução em três gerações da linha.
 
 | Item | Galaxy A55 (2024) | Galaxy A56 (2025) | Galaxy A57 (2026) |
 | --- | --- | --- | --- |
@@ -37,13 +65,13 @@ Para começar, a tabela mostra a evolução em três gerações da linha.
 | Sistema de fábrica | Android 14 | Android 15 | Android 16, One UI 8.5 |
 | Atualizações | 4 anos | 6 anos | 6 anos |
 
-Em verde, o que mudou em relação ao Galaxy A56. Fontes: Samsung Brasil, GSMArena, Tecnoblog, Oficina da Net e CNN Brasil.
+Fontes: Samsung Brasil, GSMArena, Tecnoblog, Oficina da Net e CNN Brasil.
 
-O A57 evolui em design, proteção, chip e Wi-Fi. Por outro lado, bateria, câmeras e carregamento seguem iguais aos do A56. Vale destacar que o A57 é 0,5 mm mais fino e 19 g mais leve que o antecessor, segundo a [CNN Brasil](https://www.cnnbrasil.com.br/tecnologia/galaxy-a57-e-a37-sao-lancados-oficialmente-no-brasil-confira-detalhes/).
+O A57 evolui em design, proteção, chip e Wi-Fi. Por outro lado, bateria, câmeras e carregamento seguem iguais aos do A56. O A57 é 0,5 mm mais fino e 19 g mais leve que o antecessor, segundo a [CNN Brasil](https://www.cnnbrasil.com.br/tecnologia/galaxy-a57-e-a37-sao-lancados-oficialmente-no-brasil-confira-detalhes/).
 
-## Review Galaxy A57: desempenho, câmeras e bateria
+## Desempenho, câmeras e bateria
 
-**Desempenho.** O Exynos 1680 avança pouco sobre o 1580. Para redes sociais, streaming e jogos leves, ele entrega fluidez sem aquecimento excessivo. Em jogos pesados, rivais como o POCO X8 Pro rendem mais, segundo o Oficina da Net. Para jogos leves, como o [Subway Surfers, que está em alta](/subway-surfers-em-alta/), ele dá conta sem problema.
+**Desempenho.** O Exynos 1680 avança pouco sobre o 1580. Para redes sociais, streaming e jogos leves, como o [Subway Surfers, que está em alta](/subway-surfers-em-alta/), ele entrega fluidez sem aquecimento excessivo. Em jogos pesados, rivais como o POCO X8 Pro rendem mais, segundo o Oficina da Net.
 
 **Câmeras.** O conjunto repete o do A56 e não tem teleobjetiva. As fotos com boa luz agradam, e o vídeo chega a 4K a 30 quadros por segundo.
 
@@ -55,13 +83,17 @@ No lançamento, a Samsung cobrava R$ 3.599 pela versão de 128 GB e R$ 3.999 pel
 
 Hoje, o monitor de preços do Oficina da Net registra o 128 GB perto de R$ 1.700 e o 256 GB perto de R$ 2.300. Os valores variam por loja, então compare antes de comprar.
 
+## Galaxy A57 ou Galaxy S25?
+
+O [Galaxy S25](/galaxy-s25/) custa mais, perto de R$ 3.300 em boas ofertas, mas traz processador de topo, teleobjetiva e sete anos de atualizações. Se o uso é redes, vídeo e jogos leves, o A57 basta. Para fotos melhores e desempenho por mais tempo, o S25 compensa a diferença.
+
 ## Vale a pena comprar o Galaxy A57?
 
 Sim, se o preço ficar perto de R$ 2 mil. Nessa faixa, o aparelho oferece tela excelente, design premium, IP68 e seis anos de suporte. O Oficina da Net deu nota 8,3 de 10.
 
-Ao preço de lançamento, a resposta muda para não, porque o ganho sobre o A56 é discreto. Em resumo, este review conclui que o **Galaxy A57** é um bom celular que só compensa com desconto. Com o preço em queda, a disputa agora acontece contra rivais com bateria maior e carga mais rápida.
+Ao preço de lançamento, a resposta muda para não, porque o ganho sobre o A56 é discreto. Em resumo, o **Galaxy A57** é um bom celular que só compensa com desconto. Com o preço em queda, a disputa agora acontece contra rivais com bateria maior e carga mais rápida.
 
-Quer ver o outro extremo do mercado? O [iPhone Duo, dobrável da Apple](/iphone-duo-iphone-dobravel/), custa a partir de R$ 21.999 no Brasil.
+Quer ver o outro extremo do mercado? O [iPhone 18 Pro e Pro Max](/iphone-18-pro-e-pro-max/) começam em R$ 11.999, e o [iPhone Duo, dobrável da Apple](/iphone-duo-iphone-dobravel/), custa a partir de R$ 21.999. Para mais análises, acesse a página de [Reviews](/categoria/reviews/).
 
 ## Perguntas frequentes sobre o Galaxy A57
 
@@ -79,4 +111,8 @@ _Não. Ele carrega apenas por cabo, com até 45 W._
 
 **O Galaxy A57 aceita cartão microSD?**
 
-_Não. O aparelho não tem slot para cartão de memória_
+_Não. O aparelho não tem slot para cartão de memória._
+
+**Quando o Galaxy A57 chegou ao Brasil?**
+
+_Em 15 de abril de 2026, a partir de R$ 3.599 na versão de 128 GB, segundo a Samsung._

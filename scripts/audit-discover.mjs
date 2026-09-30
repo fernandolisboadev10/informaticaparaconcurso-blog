@@ -45,7 +45,8 @@ for (const slug of slugs) {
   if (stale.length) issues.push('link to old domain techonplay.com');
   for (const u of internal) {
     const target = u.replace(/^\/|\/?(#.*)?$/g, '');
-    if (target && !slugs.includes(target)) issues.push(`broken internal link ${u}`);
+    const isSitePage = /^(blog|categoria\/[a-z-]+|sobre-nos|contate-nos|anuncie)$/.test(target);
+    if (target && !isSitePage && !slugs.includes(target)) issues.push(`broken internal link ${u}`);
   }
 
   if (issues.length) {
