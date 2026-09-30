@@ -1,4 +1,6 @@
 ---
+import { categories as categoryList } from '../data/categories';
+
 const categories = [
   { label: 'IA', category: 'Inteligência Artificial' },
   { label: 'Jogos', category: 'Jogos' },
@@ -13,7 +15,7 @@ const nav = [
   { label: 'Início', href: '/' },
   ...categories.map((c) => ({
     label: c.label,
-    href: `/blog?category=${encodeURIComponent(c.category)}`,
+    href: `/categoria/${categoryList.find((x) => x.name === c.category)?.slug}/`,
   })),
 ];
 
