@@ -1,12 +1,14 @@
 ---
-title: "Google AI Plus para estudantes: como resgatar 1 ano grátis no Brasil"
+title: "Google AI Plus grátis para estudantes: resgate 1 ano no Brasil"
 description: "Google AI Plus para estudantes grátis com 400 GB e mais acesso ao Gemini. Veja quem pode resgatar, as regras e o prazo da oferta no Brasil."
 category: "Dicas"
 date: 2026-09-20
 updated: 2026-09-29
 readingTime: "6 min"
 image: "./images/Google-AI-Plus-para-estudantes-do-Brasil.webp"
-imageAlt: "Google AI Plus para estudantes"
+imageAlt: "Notebook sobre uma mesa de biblioteca exibindo a página do plano Gemini para estudantes"
+tags: ["Google AI Plus", "Gemini", "Estudantes", "Google"]
+related: ["google-flow-gratis", "comandos-camera-google-flow", "o-que-significa-gpt"]
 ---
 
 O Google oferece o **Google AI Plus para estudantes** universitários do Brasil sem custo por 12 meses. O plano inclui 400 GB de armazenamento e mais acesso ao Gemini para quem resgatar até 31 de dezembro de 2026.
@@ -22,7 +24,7 @@ Para começar, o plano zera a mensalidade por um ano e libera mais uso das ferra
 -   **Imagens e vídeos:** mais acesso ao Gemini Omni Flash e ao Nano Banana (gerador de imagens do Google).
 -   **Armazenamento:** 400 GB para Google Fotos, Drive e Gmail.
 
-Além disso, a página oficial cita limites de uso maiores, uploads ilimitados de materiais de aula e acesso ao Gemini Live (modo de conversa por voz com a IA). O pacote também inclui 200 créditos do Google Flow, ferramenta de geração de vídeo. Quem quer testar sem pagar pode conferir como usar o [Google Flow grátis](https://techonplay.com.br/google-flow-gratis/).
+Além disso, a página oficial cita limites de uso maiores, uploads ilimitados de materiais de aula e acesso ao Gemini Live (modo de conversa por voz com a IA). Se a sigla GPT ou o funcionamento desses modelos ainda é novidade, veja [o que significa GPT](/o-que-significa-gpt/). O pacote também inclui 200 créditos do Google Flow, ferramenta de geração de vídeo. Quem quer testar sem pagar pode conferir como usar o [Google Flow grátis](/google-flow-gratis/).
 
 ## Quem pode resgatar e quais são as regras
 
@@ -72,7 +74,7 @@ _Dados da página oficial do Gemini, conferidos em 20 de setembro de 2026. Preç
 
 Em resumo, o Google AI Plus para estudantes reduz a zero o custo de uma assinatura de IA com armazenamento e ferramentas de estudo por 12 meses. Para quem já usa Gemini, Drive e Gmail no dia a dia, o benefício aparece rápido.
 
-O resgate segue aberto até 31 de dezembro de 2026, e a verificação anual define quem mantém o acesso ao plano. Quem entrar no ecossistema de vídeo pode aprender os [comandos de câmera do Google Flow](https://techonplay.com.br/comandos-camera-google-flow/) para aproveitar os créditos.
+O resgate segue aberto até 31 de dezembro de 2026, e a verificação anual define quem mantém o acesso ao plano. Quem entrar no ecossistema de vídeo pode aprender os [comandos de câmera do Google Flow](/comandos-camera-google-flow/) para aproveitar os créditos.
 
 ## Perguntas frequentes
 

@@ -7,6 +7,8 @@ updated: 2026-09-29
 readingTime: "5 min"
 image: "./images/Google-Flow.webp"
 imageAlt: "Google Flow"
+tags: ["Google Flow", "Veo 3.1", "IA de vídeo", "Google"]
+related: ["comandos-camera-google-flow", "google-ai-plus-para-estudantes", "plugin-higgsfield-chatgpt"]
 ---
 
 O **Google Flow**, estúdio de vídeo com inteligência artificial (IA) do Google, tem versão gratuita com 50 créditos por dia e usa o Veo 3.1, modelo que gera vídeo com áudio nativo. Os planos pagos começam em R$ 24,99 por mês no Brasil e ampliam créditos e recursos.
@@ -21,7 +23,7 @@ Modelos do Google DeepMind sustentam a plataforma. Em fevereiro de 2026, segundo
 
 ## O ecossistema do Google Flow
 
-O Flow reúne modelos, ferramentas de edição, música e apps em um só lugar. No Google I/O 2026, em maio, a empresa ampliou o pacote, [segundo o 9to5Google](https://9to5google.com/2026/05/19/google-flow-video-music-ai-apps/).
+O Flow reúne modelos, ferramentas de edição, música e apps em um só lugar. No Google I/O 2026, em maio, a empresa ampliou o pacote, segundo o 9to5Google.
 
 ### Modelos de IA
 
@@ -33,7 +35,7 @@ O Flow reúne modelos, ferramentas de edição, música e apps em um só lugar. 
 
 -   **Ingredientes:** imagens de personagens, objetos e cenários que o usuário reutiliza nas cenas.
 -   **Frames para vídeo:** o usuário define o primeiro e o último quadro, e o Flow preenche o trecho entre eles.
--   **Edição de cena:** o Flow [insere objetos](https://blog.google/innovation-and-ai/products/veo-updates-flow/) com sombra e iluminação naturais e remove elementos indesejados.
+-   **Edição de cena:** o Flow insere objetos com sombra e iluminação naturais e remove elementos indesejados.
 -   **Flow Agent:** age como parceiro criativo. Sugere diálogos, propõe versões de uma cena e faz edições em lote.
 -   **Flow Tools:** presets que redimensionam vídeos e aplicam estilos e efeitos.
 
@@ -43,7 +45,7 @@ O **Flow Music** cria trilhas e clipes musicais com controle de trechos da faixa
 
 ### Integrações
 
-O Veo 3.1 também funciona no app Gemini, na API do Gemini e no Vertex AI, plataforma de IA do Google Cloud para empresas. Já o Flow TV exibe uma vitrine de clipes feitos por outros criadores. Para empresas, o Flow virou serviço adicional do Google Workspace em 14 de janeiro de 2026, [com controles de administrador](https://workspaceupdates.googleblog.com/2026/01/flow-available-additional-google-service-workspace.html).
+O Veo 3.1 também funciona no app Gemini, na API do Gemini e no Vertex AI, plataforma de IA do Google Cloud para empresas. Já o Flow TV exibe uma vitrine de clipes feitos por outros criadores. Para empresas, o Flow virou serviço adicional do Google Workspace em 14 de janeiro de 2026, com controles de administrador.
 
 ## Quanto custa o Google Flow no Brasil
 
@@ -76,7 +78,7 @@ Por outro lado, o limite de créditos pesa para quem produz em volume. O plano g
 
 O Google Flow deixou de ser apenas um gerador de vídeo e virou um estúdio criativo com agente, música e apps para celular. Com o Flow Agent e o Gemini Omni no centro da estratégia, a ferramenta deve ganhar mais automação nos próximos meses.
 
-Enquanto isso, o plano gratuito funciona como porta de entrada. Continue no TechOnPlay e aprenda os [comandos de câmera do Google Flow](https://techonplay.com.br/comandos-camera-google-flow/) para dirigir suas cenas.
+Enquanto isso, o plano gratuito funciona como porta de entrada. Aprenda os [comandos de câmera do Google Flow](/comandos-camera-google-flow/) para dirigir suas cenas. Quem é universitário ainda pode [resgatar o Google AI Plus grátis por um ano](/google-ai-plus-para-estudantes/), e quem prefere gerar vídeo dentro do chat pode ver o [plugin Higgsfield no ChatGPT](/plugin-higgsfield-chatgpt/).
 
 ## Perguntas frequentes
 

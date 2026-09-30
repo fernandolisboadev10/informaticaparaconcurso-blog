@@ -1,12 +1,14 @@
 ---
-title: "Steam Machine: preço, ficha técnica completa e chegada ao Brasil"
-description: "Veja o preço da Steam Machine, a ficha técnica completa e quanto custaria importar o mini-PC da Valve para o Brasil."
+title: "Steam Machine no Brasil: preço, ficha técnica e custo de importar"
+description: "Steam Machine, o mini-PC da Valve: preços oficiais em dólar, ficha técnica e quanto custaria importar para o Brasil, que ainda não tem venda oficial."
 category: "Jogos"
 date: 2026-09-26
 updated: 2026-09-27
 readingTime: "5 min"
 image: "./images/Steam-Machine.webp"
-imageAlt: "Steam Machine"
+imageAlt: "Steam Machine, mini-PC de jogos da Valve, ao lado de um controle"
+tags: ["Steam Machine", "Valve", "SteamOS", "Jogos de PC"]
+related: ["requisitos-pc-gta-6-2026", "subway-surfers-em-alta", "iphone-duo-iphone-dobravel"]
 ---
 
 A **Steam Machine** já está à venda em outros países desde 30 de junho de 2026, mas ainda não tem data nem preço oficial para chegar ao Brasil. O mini-PC de jogos da Valve promete a praticidade de um console com a biblioteca inteira da Steam na tela da televisão.
@@ -51,7 +53,7 @@ A resposta depende do uso que o jogador já faz da própria biblioteca. Para que
 
 Por outro lado, quem busca o melhor desempenho pelo dinheiro investido ainda sai ganhando com um PC montado à parte. Testes independentes já destacam pontos positivos no hardware da Valve, como o funcionamento silencioso e a temperatura controlada mesmo em jogos pesados, mas o preço alto e a ausência de venda oficial seguem pesando contra o dispositivo no mercado brasileiro.
 
-A Valve já indicou que pretende ampliar a disponibilidade de toda a linha de hardware ao longo de 2026 e 2027. Por isso, vale acompanhar os próximos anúncios antes de fechar qualquer importação. Quem também acompanha o restante do catálogo de jogos pode conferir as últimas notícias na categoria Jogos do site.
+A Valve já indicou que pretende ampliar a disponibilidade de toda a linha de hardware ao longo de 2026 e 2027. Por isso, vale acompanhar os próximos anúncios antes de fechar qualquer importação. Quem quer saber se o PC atual aguenta os próximos lançamentos pode ver os [requisitos de PC para GTA 6](/requisitos-pc-gta-6-2026/), e quem prefere jogos leves pode conferir o [efeito de bbno$ em Subway Surfers](/subway-surfers-em-alta/).
 
 ## Perguntas frequentes
 

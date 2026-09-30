@@ -1,12 +1,14 @@
 ---
-title: "iPhone Duo vai custar mais caro que qualquer moto popular no Brasil"
+title: "iPhone Duo custa mais que uma moto popular no Brasil: R$ 21.999"
 description: "iPhone dobrável da Apple: veja preço nos EUA e no Brasil, ficha técnica completa, câmeras com IA e data de chegada às lojas em outubro."
 category: "Reviews"
 date: 2026-09-27
 updated: 2026-09-27
 readingTime: "7 min"
 image: "./images/iPhone-Duo-Review.webp"
-imageAlt: "iPhone Duo"
+imageAlt: "iPhone Duo, primeiro iPhone dobrável da Apple, aberto em pé sobre um pedestal com luz azul"
+tags: ["iPhone Duo", "Apple", "iPhone dobrável", "Celulares"]
+related: ["review-galaxy-a57", "steam-machine", "comandos-camera-google-flow"]
 ---
 
 O **iPhone Duo**, primeiro iPhone dobrável da Apple, vai custar R$ 21.999 no Brasil na entrada. É mais caro que a Honda CG 160 Titan, moto mais vendida do país, e quase dobra o preço da Honda Pop 110i.
@@ -22,9 +24,9 @@ Por versão de armazenamento, segundo levantamento do [Terra](https://www.terra.
 -   **1 TB:** US$ 2.599 nos EUA / R$ 26.499 no Brasil
 -   **2 TB:** US$ 3.199 nos EUA / R$ 30.999 no Brasil
 
-Na conversão direta, sem impostos, o modelo básico americano sairia por cerca de R$ 10.700. O valor dobra no Brasil por ICMS e importação, padrão que atinge qualquer eletrônico importado.
+Na conversão direta, sem impostos, o modelo básico americano sairia por cerca de R$ 10.700. O valor dobra no Brasil por ICMS e importação, padrão que atinge qualquer eletrônico importado, como acontece com a [Steam Machine da Valve](/steam-machine/).
 
-A CG 160 lidera o [ranking de motos mais vendidas de 2026](https://www.motoo.com.br/emplacamentos/motos-mais-vendidas/2026/), com 355.674 unidades emplacadas. Ou seja: o Duo vai custar mais que a versão mais completa do veículo mais comum nas ruas do país.
+A CG 160 lidera o ranking de motos mais vendidas de 2026, segundo o Motoo, com 355.674 unidades emplacadas. Ou seja: o Duo vai custar mais que a versão mais completa do veículo mais comum nas ruas do país.
 
 ## Ficha técnica completa do iPhone dobrável
 
@@ -64,15 +66,15 @@ Uma das mudanças mais comentadas é a volta do Touch ID no botão lateral, no l
 
 ## Apple Pencil e recursos de câmera com IA
 
-A Apple chegou a desenvolver uma Pencil menor, com fixação magnética na dobradiça, mas abandonou o projeto por dificuldades técnicas, segundo a [Canaltech](https://canaltech.com.br/smartphone/iphone-duo-quase-veio-com-pencil-mas-apple-desistiu-por-problemas-tecnicos/). No lugar, o Duo ganha suporte à Pencil USB-C existente, via atualização prevista para o fim de 2026.
+A Apple chegou a desenvolver uma Pencil menor, com fixação magnética na dobradiça, mas abandonou o projeto por dificuldades técnicas, segundo a Canaltech. No lugar, o Duo ganha suporte à Pencil USB-C existente, via atualização prevista para o fim de 2026.
 
 ## Vale a pena comprar o iPhone dobrável
 
 O Duo promete argumentos fortes: acabamento premium, tela gigante para multitarefa no iOS 27, resistência IP68 e boa autonomia.
 
-Por outro lado, é a primeira geração de uma categoria nova, por preço de moto zero. Faltam Face ID e teleobjetiva, e a durabilidade da dobradiça só ficará clara com meses de uso, algo que a Samsung levou sete gerações para amadurecer no Galaxy Z Fold.
+Por outro lado, é a primeira geração de uma categoria nova, por preço de moto zero. Faltam Face ID e teleobjetiva, e a durabilidade da dobradiça só ficará clara com meses de uso, algo que a Samsung levou sete gerações para amadurecer no Galaxy Z Fold. Para comparar com um Samsung mais acessível, veja o [review do Galaxy A57](/review-galaxy-a57/).
 
-O aparelho aposta em IA na câmera, como mostra o guia de [comandos de câmera com IA do Google Flow](https://claude.ai/comandos-camera-google-flow).
+O aparelho aposta em IA na câmera. Para ver como prompts de câmera funcionam em outras ferramentas, veja os [40 comandos de câmera do Google Flow](/comandos-camera-google-flow/).
 
 ## Perguntas frequentes
 
@@ -102,6 +104,4 @@ O iPhone Duo marca a entrada tardia, mas ambiciosa, da Apple num mercado já mad
 
 1.  [Apple: página oficial do iPhone Duo](https://www.apple.com/iphone-duo/)
 2.  [Terra: preços do iPhone Duo no Brasil e nos EUA](https://www.terra.com.br/byte/celular/iphone-duo-veja-os-precos-no-brasil-e-nos-eua-do-celular-dobravel-da-apple-em-2026,52fcd4fb9d29708ed222f71cd2bb9f11gpf3x08q.html)
-3.  [Canaltech: o projeto cancelado da Apple Pencil do Duo](https://canaltech.com.br/smartphone/iphone-duo-quase-veio-com-pencil-mas-apple-desistiu-por-problemas-tecnicos/)
-4.  [Tabela FIPE: preço da Honda CG 160 Titan 2026](https://www.tabelafipebrasil.com/motos/HONDA/CG-160-TITAN/2026)
-5.  [Motoo: ranking das motos mais vendidas do Brasil em 2026](https://www.motoo.com.br/emplacamentos/motos-mais-vendidas/2026/)
+3.  [Tabela FIPE: preço da Honda CG 160 Titan 2026](https://www.tabelafipebrasil.com/motos/HONDA/CG-160-TITAN/2026)

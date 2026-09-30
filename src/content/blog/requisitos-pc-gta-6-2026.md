@@ -5,6 +5,8 @@ category: "Jogos"
 date: 2026-09-16
 updated: 2026-09-16
 readingTime: "6 min"
+tags: ["GTA 6", "Requisitos de PC", "Rockstar", "Jogos de PC"]
+related: ["steam-machine", "limpar-arquivos-temporarios-windows", "subway-surfers-em-alta"]
 ---
 
 A Rockstar confirmou GTA 6 apenas para PlayStation 5 e Xbox Series X|S, mas os requisitos de PC para GTA 6 já ocupam a cabeça de quem joga no computador. Ou seja, a resposta real é bem mais complicada do que qualquer tabela de specs que circula por aí.
@@ -20,8 +22,6 @@ Na sequência, o histórico da franquia ajuda a estimar prazos. GTA V, por sua v
 Apesar disso, isso não significa parar de planejar. Afinal, toda tabela de requisitos por aí, inclusive esta, cruza o hardware do PS5/Xbox Series X, a engine RAGE (motor gráfico da Rockstar) e jogos AAA (produções de grande orçamento) comparáveis para estimar os números. Dessa forma, use-a como guia, não como garantia.
 
 ## As três faixas previstas de requisitos de PC para GTA 6
-
-Antes de conferir os números, vale a pena ler nosso guia de melhores placas de vídeo para jogos em 2026 para entender onde cada GPU se encaixa.
 
 **Mínimo (1080p, baixo/médio):** jogável, sem luxo. Nesse caso, espere pop-in de texturas (objetos que “aparecem” tarde) e sombras simplificadas ao longe.
 
@@ -55,7 +55,7 @@ Specs previstas, com base no hardware dos consoles e no histórico da engine RAG
 | Ray Tracing | ❌ Desativado | ✅ Efeitos selecionados | ✅ Completo |
 | 📊 Custo estimado do upgrade | PC intermediário já existente | R$ 4.000–R$ 6.000 | Build de R$ 10.000+ |
 
-Da mesma forma, a engine RAGE nunca foi gentil com HD mecânico, e o mapa de Leonida (cenário de GTA 6) supera o de RDR2 em tamanho. Por isso, o SSD NVMe vira obrigatório em qualquer faixa. Além disso, os 32 GB de RAM acima do mínimo seguem a tendência de 2026, já que o mundo aberto depende cada vez mais de memória para simular NPCs (personagens controlados pelo jogo) e tráfego. O suporte a DLSS 4 e FSR 4 (upscaling via IA) ainda não é oficial, mas dificilmente a Rockstar deixaria essa tecnologia de fora, pois ela virou padrão para manter o ray tracing jogável.
+Da mesma forma, a engine RAGE nunca foi gentil com HD mecânico, e o mapa de Leonida (cenário de GTA 6) supera o de RDR2 em tamanho. Por isso, o SSD NVMe vira obrigatório em qualquer faixa. Se o disco está cheio, comece [liberando espaço no Windows](/limpar-arquivos-temporarios-windows/). Além disso, os 32 GB de RAM acima do mínimo seguem a tendência de 2026, já que o mundo aberto depende cada vez mais de memória para simular NPCs (personagens controlados pelo jogo) e tráfego. O suporte a DLSS 4 e FSR 4 (upscaling via IA) ainda não é oficial, mas dificilmente a Rockstar deixaria essa tecnologia de fora, pois ela virou padrão para manter o ray tracing jogável.
 
 ## Seu PC atual aguenta o tranco?
 
@@ -96,6 +96,6 @@ _Na GPU, esperar pode compensar, já que a escassez de chips elevou os preços e
 
 Em resumo, ainda não existe tabela oficial de requisitos de PC para GTA 6, e quem afirma o contrário está chutando. Dessa forma, garanta armazenamento rápido, RAM acima de 16 GB e GPU não mais antiga que a RTX 3060. Isso já basta para sair na frente assim que a Rockstar anunciar a versão PC.
 
-Por fim, guarde esta página: atualizamos cada faixa assim que a Rockstar divulgar as specs oficiais. Para continuar se preparando, veja também nosso guia de melhores placas de vídeo para jogos em 2026.
+Por fim, guarde esta página: atualizamos cada faixa assim que a Rockstar divulgar as specs oficiais. Enquanto isso, quem prefere jogar na TV pode conferir a [Steam Machine da Valve](/steam-machine/), e quem quer ganhar espaço e velocidade antes de instalar um jogo de 150 GB pode [limpar os arquivos temporários do Windows](/limpar-arquivos-temporarios-windows/).
 
 **Por Redação TechOnPlay**

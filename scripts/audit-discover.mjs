@@ -5,7 +5,7 @@ import path from 'node:path';
 
 const DIR = 'src/content/blog';
 const MAX_EXTERNAL = 3;
-const MIN_INTERNAL = 3;
+const MIN_INTERNAL = 2; // inline links; RelatedPosts adds 3 more cards per post
 
 function frontmatter(text) {
   const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
@@ -35,7 +35,7 @@ for (const slug of slugs) {
 
   const links = [...body.matchAll(/(?<!!)\[[^\]]*\]\(([^)\s]+)/g)].map((m) => m[1]);
   const internal = links.filter((u) => u.startsWith('/'));
-  const external = links.filter((u) => /^https?:\/\//.test(u) && !/^https?:\/\/(www\.)?techonplay\.com\.br/.test(u));
+  const external = [...new Set(links)].filter((u) => /^https?:\/\//.test(u) && !/^https?:\/\/(www\.)?techonplay\.com\.br/.test(u));
   const stale = links.filter((u) => /^https?:\/\/(www\.)?techonplay\.com(?!\.br)/.test(u));
 
   if (internal.length < MIN_INTERNAL) issues.push(`${internal.length} internal links (min ${MIN_INTERNAL})`);
