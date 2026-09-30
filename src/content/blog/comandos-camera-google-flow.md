@@ -131,19 +131,3 @@ _Sim, e rendem melhor ali. Comandos de movimento como /ORBIT, /PUSHIN e /DRONERE
 ### Usar minha própria foto muda a qualidade do resultado?
 
 _Não. O comando controla a câmera, não a pessoa. Uma foto nítida e bem iluminada funciona tão bem quanto qualquer outra, seja sua ou de outra pessoa._
-
--   ![Subway Surfers](./images/Subway-Surfers-150x150.webp)
-    
-    [Subway Surfers em alta: entenda o efeito de bbno$ e Buenos Aires](https://techonplay.com.br/subway-surfers-em-alta/)
--   ![Google Flow](./images/Google-Flow-150x150.webp)
-    
-    [Google Flow grátis? Veja o que a IA de vídeo do Google oferece](https://techonplay.com.br/google-flow-gratis/)
--   ![Plugin Higgsfield no ChatGPT](./images/Plugin-Higgsfield-no-ChatGPT-150x150.webp)
-    
-    [Plugin Higgsfield no ChatGPT: como gerar vídeos com códigos prontos](https://techonplay.com.br/plugin-higgsfield-chatgpt/)
--   ![Navegadores alternativos](./images/Navegadores-alternativos-150x150.webp)
-    
-    [Navegadores alternativos em 2026: Brave, Opera, Vivaldi, Arc e mais](https://techonplay.com.br/navegadores-alternativos/)
--   ![Melhor navegador para PC](./images/Melhor-navegador-para-PC-150x150.webp)
-    
-    [Melhor navegador para PC em 2026: Chrome, Edge ou Firefox? Compare](https://techonplay.com.br/melhor-navegador-para-pc/)

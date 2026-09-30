@@ -68,19 +68,3 @@ _Atualmente, a versão estável é o Linux Mint 22.3 “Zena”, lançada em jan
 _Sim. É uma distribuição gratuita e de código aberto que usa o Ubuntu como base e depende de doações e de uma comunidade de patrocinadores._
 
 _Fonte: [The Linux Mint Blog](https://blog.linuxmint.com/?p=5067) e [Monthly News – April 2026](https://blog.linuxmint.com/?p=5022)_
-
--   ![Subway Surfers](./images/Subway-Surfers-150x150.webp)
-    
-    [Subway Surfers em alta: entenda o efeito de bbno$ e Buenos Aires](https://techonplay.com.br/subway-surfers-em-alta/)
--   ![Google Flow](./images/Google-Flow-150x150.webp)
-    
-    [Google Flow grátis? Veja o que a IA de vídeo do Google oferece](https://techonplay.com.br/google-flow-gratis/)
--   ![Plugin Higgsfield no ChatGPT](./images/Plugin-Higgsfield-no-ChatGPT-150x150.webp)
-    
-    [Plugin Higgsfield no ChatGPT: como gerar vídeos com códigos prontos](https://techonplay.com.br/plugin-higgsfield-chatgpt/)
--   ![Navegadores alternativos](./images/Navegadores-alternativos-150x150.webp)
-    
-    [Navegadores alternativos em 2026: Brave, Opera, Vivaldi, Arc e mais](https://techonplay.com.br/navegadores-alternativos/)
--   ![Melhor navegador para PC](./images/Melhor-navegador-para-PC-150x150.webp)
-    
-    [Melhor navegador para PC em 2026: Chrome, Edge ou Firefox? Compare](https://techonplay.com.br/melhor-navegador-para-pc/)

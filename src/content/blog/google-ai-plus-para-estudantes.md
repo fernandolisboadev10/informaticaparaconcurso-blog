@@ -95,19 +95,3 @@ O AI Plus dá 400 GB e análise de até 200 páginas de anotações, sem custo p
 Antes que o prazo acabe, [resgate seu plano de estudante grátis na página oficial do Gemini](https://gemini.google/br/students/?hl=pt-BR) e comece a usar o Google AI Plus.
 
 ![](./images/Google-AI-Plus-para-estudantes-1024x683.webp)
-
--   ![Subway Surfers](./images/Subway-Surfers-150x150.webp)
-    
-    [Subway Surfers em alta: entenda o efeito de bbno$ e Buenos Aires](https://techonplay.com.br/subway-surfers-em-alta/)
--   ![Google Flow](./images/Google-Flow-150x150.webp)
-    
-    [Google Flow grátis? Veja o que a IA de vídeo do Google oferece](https://techonplay.com.br/google-flow-gratis/)
--   ![Plugin Higgsfield no ChatGPT](./images/Plugin-Higgsfield-no-ChatGPT-150x150.webp)
-    
-    [Plugin Higgsfield no ChatGPT: como gerar vídeos com códigos prontos](https://techonplay.com.br/plugin-higgsfield-chatgpt/)
--   ![Navegadores alternativos](./images/Navegadores-alternativos-150x150.webp)
-    
-    [Navegadores alternativos em 2026: Brave, Opera, Vivaldi, Arc e mais](https://techonplay.com.br/navegadores-alternativos/)
--   ![Melhor navegador para PC](./images/Melhor-navegador-para-PC-150x150.webp)
-    
-    [Melhor navegador para PC em 2026: Chrome, Edge ou Firefox? Compare](https://techonplay.com.br/melhor-navegador-para-pc/)

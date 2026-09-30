@@ -99,19 +99,3 @@ Em resumo, ainda não existe tabela oficial de requisitos de PC para GTA 6, e qu
 Por fim, guarde esta página: atualizamos cada faixa assim que a Rockstar divulgar as specs oficiais. Para continuar se preparando, veja também nosso guia de melhores placas de vídeo para jogos em 2026.
 
 **Por Redação TechOnPlay**
-
--   ![Subway Surfers](./images/Subway-Surfers-150x150.webp)
-    
-    [Subway Surfers em alta: entenda o efeito de bbno$ e Buenos Aires](https://techonplay.com.br/subway-surfers-em-alta/)
--   ![Google Flow](./images/Google-Flow-150x150.webp)
-    
-    [Google Flow grátis? Veja o que a IA de vídeo do Google oferece](https://techonplay.com.br/google-flow-gratis/)
--   ![Plugin Higgsfield no ChatGPT](./images/Plugin-Higgsfield-no-ChatGPT-150x150.webp)
-    
-    [Plugin Higgsfield no ChatGPT: como gerar vídeos com códigos prontos](https://techonplay.com.br/plugin-higgsfield-chatgpt/)
--   ![Navegadores alternativos](./images/Navegadores-alternativos-150x150.webp)
-    
-    [Navegadores alternativos em 2026: Brave, Opera, Vivaldi, Arc e mais](https://techonplay.com.br/navegadores-alternativos/)
--   ![Melhor navegador para PC](./images/Melhor-navegador-para-PC-150x150.webp)
-    
-    [Melhor navegador para PC em 2026: Chrome, Edge ou Firefox? Compare](https://techonplay.com.br/melhor-navegador-para-pc/)

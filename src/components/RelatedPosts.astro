@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+import PostCard from './PostCard.astro';
+
+interface Props {
+  slug: string;
+  category: string;
+  tags?: string[];
+  related?: string[];
+}
+const { slug, category, tags = [], related = [] } = Astro.props;
+
+const all = (await getCollection('blog', ({ data }) => !data.draft)).filter((p) => p.id !== slug);
+const byId = new Map(all.map((p) => [p.id, p]));
+
+// Curated slugs first (topic cluster), then fill by shared tags/category, newest first.
+const curated = related.map((id) => byId.get(id)).filter((p) => p !== undefined);
+const rest = all
+  .filter((p) => !related.includes(p.id))
+  .map((p) => ({
+    p,
+    score:
+      (p.data.tags ?? []).filter((t) => tags.includes(t)).length * 2 +
+      (p.data.category === category ? 1 : 0),
+  }))
+  .sort((a, b) => b.score - a.score || b.p.data.date.getTime() - a.p.data.date.getTime())
+  .map(({ p }) => p);
+
+const posts = [...curated, ...rest].slice(0, 3);
+---
+{posts.length > 0 && (
+  <section class="related" aria-labelledby="related-title">
+    <h2 id="related-title">Leia também</h2>
+    <div class="grid">
+      {posts.map((post) => (
+        <PostCard
+          slug={post.id}
+          title={post.data.title}
+          description={post.data.description}
+          category={post.data.category}
+          date={post.data.date}
+          readingTime={post.data.readingTime}
+          image={post.data.image}
+          imageAlt={post.data.imageAlt}
+        />
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .related {
+    margin-top: 48px;
+  }
+  .related h2 {
+    margin: 0 0 20px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+</style>
