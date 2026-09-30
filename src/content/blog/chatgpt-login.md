@@ -15,16 +15,42 @@ O **ChatGPT login** é feito no endereço [chatgpt.com](https://chatgpt.com), co
 
 Quando o login falha, quase sempre a causa é simples: método de acesso diferente do usado no cadastro, cache do navegador ou código de verificação que não chegou. Abaixo estão o passo a passo e as correções, uma a uma.
 
+## Como encontrar o site oficial do ChatGPT
+
+O caminho mais seguro é pesquisar por “chatgpt” no Google. O primeiro resultado é o site oficial, com o endereço **https://chatgpt.com** logo acima do título. Abaixo dele, o Google mostra atalhos para as páginas internas, como a versão em português (“ChatGPT Brasil” e “ChatGPT Português”), o “Log in or sign up”, que leva direto à tela de entrada, e o “Baixe o ChatGPT”, com os aplicativos.
+
+![Resultado do Google para a pesquisa chatgpt, com o site oficial chatgpt.com em primeiro lugar e atalhos para login e download](./images/chatgpt-login-google.webp)
+
+_No Google, o resultado oficial vem primeiro e mostra o endereço chatgpt.com. Confira sempre esse domínio antes de clicar._
+
 ## Como fazer login no ChatGPT pelo computador
 
 O processo leva menos de um minuto:
 
 1.  Abra o navegador e acesse [chatgpt.com](https://chatgpt.com).
-2.  Clique em **Entrar** (ou **Log in**), no canto superior direito.
+2.  Clique em **Entrar**, no canto superior direito. Ao lado dele fica o botão **Cadastre-se grátis**, para quem ainda não tem conta.
 3.  Digite o e-mail da conta ou escolha **Continuar com Google**, **Microsoft** ou **Apple**.
 4.  Informe a senha ou o código de verificação enviado por e-mail, se a plataforma pedir.
 
-Depois disso, o chat abre e o histórico das conversas aparece na barra lateral. Quem usa o mesmo computador com outras pessoas deve sair da conta ao terminar.
+Na tela inicial, sem estar logado, o ChatGPT já mostra o campo “Pergunte ao ChatGPT”. Mesmo assim, vale entrar: o aviso na barra lateral explica que o login serve para receber respostas com base em chats salvos, além de criar imagens e carregar arquivos. O botão **Entrar** aparece duas vezes, no topo e na lateral, e os dois levam ao mesmo lugar.
+
+![Página inicial do chatgpt.com sem login, com os botões Entrar e Cadastre-se grátis no topo e o campo Pergunte ao ChatGPT](./images/chatgpt-login-entrar.webp)
+
+_Página inicial sem login: os botões “Entrar” e “Cadastre-se grátis” ficam no canto superior direito._
+
+Depois do login, o chat abre e o histórico das conversas aparece na barra lateral. Quem usa o mesmo computador com outras pessoas deve sair da conta ao terminar.
+
+### Como a tela fica depois de entrar
+
+Com o login feito, o nome da conta aparece no canto inferior esquerdo, junto ao plano em uso. Na conta gratuita, o rótulo mostra **Free**, ao lado do botão **Fazer upgrade**, que leva aos planos pagos. No topo, o botão **Ver planos** repete esse atalho.
+
+A barra lateral ganha os recursos que ficavam bloqueados: **Novo chat**, **Imagens**, **Biblioteca**, **Agendados**, **Plugins**, **Projetos**, **Codex** e **Mais**. Acima do campo de mensagem, as abas **Chat** e **Work** alternam entre conversa comum e trabalho mais longo. O campo tem ainda o botão **Pensar** e o microfone para falar em vez de digitar.
+
+![Tela do ChatGPT logado em conta gratuita, com o menu lateral, o nome da conta, o plano Free e o botão Fazer upgrade](./images/chatgpt-login-conta-free.webp)
+
+_Conta logada no plano gratuito: o rótulo “Free” e o botão “Fazer upgrade” ficam no canto inferior esquerdo._
+
+Os nomes e a posição dos menus mudam com as atualizações da OpenAI. Se algo estiver em outro lugar, procure pelo nome do recurso.
 
 ## Como entrar pelo celular
 
