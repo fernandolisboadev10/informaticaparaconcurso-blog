@@ -1,19 +1,19 @@
 ---
-title: "Urna eletrônica completa 30 anos: veja 6 curiosidades sobre ela"
-description: "Urna eletrônica completa 30 anos em 2026: veja 6 curiosidades sobre a criação, a evolução e a segurança do equipamento antes das eleições."
+title: "Urna eletrônica faz 30 anos: 6 curiosidades antes de votar"
+description: "A urna eletrônica faz 30 anos em 2026: veja 6 curiosidades sobre criação, evolução e segurança, e o que fazer se a biometria falhar no dia do voto."
 category: "Curiosidades"
 date: 2026-09-15
-updated: 2026-09-28
+updated: 2026-09-30
 readingTime: "4 min"
 image: "./images/Urna-Eletronica-1.webp"
 imageAlt: "Urna eletrônica"
 tags: ["Urna eletrônica", "Eleições 2026", "TSE", "Curiosidades"]
-related: ["o-que-significa-gpt", "ia-que-cria-ia", "o-que-e-bncc"]
+related: ["biometria-na-urna", "o-que-e-bncc", "iphone-duo-iphone-dobravel"]
 ---
 
-A urna eletrônica completa 30 anos em 2026, ano em que o equipamento volta a ser protagonista nas eleições gerais de outubro. Desde a estreia, em 1996, ela transformou o Brasil no país com a maior votação totalmente informatizada do mundo. Mas quantas dessas três décadas de história você realmente conhece?
+A urna eletrônica faz 30 anos em 2026, ano em que o equipamento volta a ser protagonista nas eleições gerais, com o primeiro turno em 4 de outubro. Desde a estreia, em 1996, ela transformou o Brasil no país com a maior votação totalmente informatizada do mundo. Mas quantas dessas três décadas de história você realmente conhece?
 
-Poucos sabem que a urna quase teve outro nome, que o Brasil nunca exportou essa tecnologia ou como ela evoluiu de um disquete para um processador 18 vezes mais potente. Veja seis curiosidades que respondem a essas perguntas.
+Poucos sabem que a urna quase teve outro nome, que o Brasil nunca exportou essa tecnologia ou como ela evoluiu de um disquete para um processador 18 vezes mais potente. Veja seis curiosidades que respondem a essas perguntas e, no fim, o que fazer se a sua digital não for aceita na hora de votar.
 
 ## 1\. Você sabia que a urna eletrônica já teve outro nome?
 
@@ -55,7 +55,7 @@ O parque que vai operar o pleito de outubro mostra a escala da operação. Segun
 
 Do lado do eleitorado, o Brasil chega às eleições de 2026 com mais de 158,7 milhões de eleitores aptos a votar, dos quais 88,78% (cerca de 140 milhões) já têm a biometria cadastrada, [segundo dados oficiais da Justiça Eleitoral](https://www.tse.jus.br/comunicacao/noticias/2026/Maio/eleicoes-2026-justica-eleitoral-atinge-158-milhoes-de-eleitores-e-88-de-biometria). O primeiro turno acontece em 4 de outubro, com eventual segundo turno em 25 de outubro.
 
-Com a votação se aproximando, a expectativa é repetir o mesmo modelo: divulgar os testes antes do primeiro turno e manter a urna eletrônica entre os sistemas de votação mais rápidos do planeta. Para entender o que muda nas eleições de 2026, vale acompanhar também as regras de segurança digital do pleito.
+Com a votação se aproximando, a expectativa é repetir o mesmo modelo: divulgar os testes antes do primeiro turno e manter a urna eletrônica entre os sistemas de votação mais rápidos do planeta. Quem tem dúvida sobre a digital pode ler o guia sobre [biometria na urna: o que acontece se o dedo não for aceito](/biometria-na-urna/), com o passo a passo do que o mesário faz.
 
 ## Perguntas frequentes sobre a urna eletrônica
 
@@ -70,6 +70,10 @@ _Não há registro comprovado de fraude no sistema desde sua implantação, em 1
 ### É verdade que o Brasil exportou a tecnologia da urna para outros países?
 
 _Não. Pelo menos 34 países usam algum tipo de voto eletrônico, mas cada um com sistema próprio, desenvolvido de forma independente. O TSE trata a ideia de “exportação” como desinformação._
+
+### E se a biometria não reconhecer minha digital?
+
+_Você ainda vota. A urna faz até quatro tentativas e, se todas falharem, o mesário confere seus dados e um documento oficial com foto. Veja o passo a passo em [biometria na urna](/biometria-na-urna/)._
 
 ### Quando serão as eleições de 2026?
 
