@@ -348,7 +348,17 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     }
 
     .brand-logo {
-      height: 24px;
+      height: 30px;
+    }
+
+    .theme-toggle,
+    .search-toggle {
+      width: 32px;
+      height: 32px;
+    }
+
+    .search-wrap {
+      gap: 0;
     }
 
     .bar:has(.search-wrap.open) .brand {
@@ -357,7 +367,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
 
     .right-controls {
       justify-self: end;
-      gap: 4px;
+      gap: 0;
       position: relative;
       z-index: 1;
       background: var(--bg);
@@ -373,7 +383,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
 
   @media (max-width: 360px) {
     .brand-logo {
-      height: 18px;
+      height: 22px;
     }
   }
 </style>
