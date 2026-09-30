@@ -7,6 +7,8 @@ updated: 2026-09-29
 readingTime: "3 min"
 image: "./images/Subway-Surfers.webp"
 imageAlt: "Subway Surfers"
+tags: ["Subway Surfers", "bbno$", "SYBO", "Jogos mobile"]
+related: ["steam-machine", "requisitos-pc-gta-6-2026", "review-galaxy-a57"]
 ---
 
 **Subway Surfers** voltou ao radar dos jogadores com o evento World Tour Buenos Aires, que traz o rapper canadense bbno$ como personagem jogável até 4 de outubro de 2026. A atualização também estreia o sistema de Collections e chega poucas semanas depois de uma nova temporada em Subway Surfers City.
@@ -70,11 +72,11 @@ _City é a sequência lançada em 26 de fevereiro de 2026. Ela traz novos person
 
 ### O que esperar a seguir
 
-Pelo intervalo de três semanas entre as últimas turnês, a próxima parada do World Tour pode chegar por volta de 5 de outubro. Trata-se de uma projeção, não de um anúncio oficial. Portanto, quem acompanha **Subway Surfers** deve ficar atento às redes da SYBO.
+Pelo intervalo de três semanas entre as últimas turnês, a próxima parada do World Tour pode chegar por volta de 5 de outubro. Trata-se de uma projeção, não de um anúncio oficial. Portanto, quem acompanha **Subway Surfers** deve ficar atento às redes da SYBO. Jogo leve como esse roda até em celular intermediário, como mostra o [review do Galaxy A57](/review-galaxy-a57/). Já quem quer jogos pesados na TV pode ver a [Steam Machine da Valve](/steam-machine/) ou checar os [requisitos de PC para GTA 6](/requisitos-pc-gta-6-2026/).
 
 **Fontes:**
 
--   [SYBO anuncia Subway Surfers City (Business Wire)](https://finance.yahoo.com/news/sybo-announces-subway-surfers-city-160300883.html)
+-   SYBO anuncia Subway Surfers City (Business Wire)
 -   [Subway Surfers na App Store (SYBO)](https://apps.apple.com/us/app/subway-surfers/id512939461)
 -   [Subway Surfers adds bbno$ (Digital Music News)](https://www.digitalmusicnews.com/2026/09/13/subway-surfers-adds-bbnos-character/)
--   [Buenos Aires update (Games](https://games.gg/news/subway-surfers-adds-bbno-character-in-buenos-aires-update/)[.](https://games.gg/news/subway-surfers-adds-bbno-character-in-buenos-aires-update/)[gg)](https://games.gg/news/subway-surfers-adds-bbno-character-in-buenos-aires-update/)
+-   Buenos Aires update (Games.gg)

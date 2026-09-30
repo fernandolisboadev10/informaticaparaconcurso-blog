@@ -1,5 +1,5 @@
 ---
-title: "Plugin Higgsfield no ChatGPT: como gerar vídeos com códigos prontos"
+title: "Plugin Higgsfield no ChatGPT: como gerar vídeos com 79 códigos"
 description: "O plugin Higgsfield no ChatGPT gera vídeos com IA direto no chat, sem sair da conversa. Veja como instalar, os créditos e os códigos mais usados agora."
 category: "Apps"
 date: 2026-09-29
@@ -7,11 +7,13 @@ updated: 2026-09-29
 readingTime: "12 min"
 image: "./images/Plugin-Higgsfield-no-ChatGPT.webp"
 imageAlt: "Plugin Higgsfield no ChatGPT"
+tags: ["Higgsfield", "ChatGPT", "IA de vídeo", "Plugins"]
+related: ["google-flow-gratis", "comandos-camera-google-flow", "46-comandos-do-chatgpt"]
 ---
 
 O plugin Higgsfield no ChatGPT já não é mais teste fechado: a Higgsfield confirmou a integração oficial dentro do aplicativo do ChatGPT. Com ele, qualquer foto enviada no chat vira vídeo, sem precisar abrir outro site.
 
-### O que é o plugin Higgsfield no ChatGPT
+## O que é o plugin Higgsfield no ChatGPT
 
 A ferramenta conecta o ChatGPT à suíte de criação da Higgsfield, uma empresa especializada em geração de imagem e vídeo por inteligência artificial (IA). Depois de instalado, o plugin dá acesso a modelos como Seedance 2.5, Kling 3 e Veo 3.1 para vídeo, além de Nano Banana Pro e GPT Image 2 para imagem, direto dentro da conversa.
 
@@ -34,7 +36,7 @@ Aqui está o ponto que confunde muita gente. Um código de vídeo não cria a ce
 
 O código `/orbitshot`, por exemplo, decide que a câmera vai girar. Quem entra no vídeo, e o que aparece ao redor, depende inteiramente da foto anexada. Quando o resultado sai estranho, quase sempre o problema é a foto, não o comando.
 
-A estrutura que funciona na prática segue sempre o mesmo padrão: **código + foto que ele pede + o que deve acontecer na cena**. Pular uma dessas partes costuma gerar um vídeo genérico.
+A estrutura que funciona na prática segue sempre o mesmo padrão: **código + foto que ele pede + o que deve acontecer na cena**. Pular uma dessas partes costuma gerar um vídeo genérico. Para escrever bem a parte da câmera, veja os [40 comandos de câmera do Google Flow](/comandos-camera-google-flow/).
 
 ### Códigos e presets mais usados
 
@@ -142,7 +144,7 @@ Os itens com barra (/) são códigos de vídeo: digite direto no chat. Os preset
 
 As gerações consomem créditos da conta Higgsfield, não da assinatura do ChatGPT. O custo varia conforme modelo, resolução e duração do vídeo. Um vídeo estilo depoimento de 15 segundos em 1080p, por exemplo, consome cerca de 270 créditos segundo a própria Higgsfield. Vale revisar o saldo antes de testar vários códigos seguidos, porque vídeo custa bem mais que imagem.
 
-Outro detalhe importante: o acesso ilimitado aos modelos só existe no site da Higgsfield. Dentro do plugin do ChatGPT, tudo roda por créditos.
+Outro detalhe importante: o acesso ilimitado aos modelos só existe no site da Higgsfield. Dentro do plugin do ChatGPT, tudo roda por créditos. Quem quer testar vídeo com IA sem pagar pode começar pelo [Google Flow grátis](/google-flow-gratis/).
 
 ## Erros mais comuns ao usar o plugin
 

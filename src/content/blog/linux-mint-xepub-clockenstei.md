@@ -1,5 +1,5 @@
 ---
-title: "Linux Mint terá leitor de ebooks e calendário próprios em nova versão"
+title: "Linux Mint terá leitor de ebooks e calendário em dezembro"
 description: "Linux Mint anuncia o leitor de ebooks Xepub e o calendário Clockenstein antes da versão que chega em dezembro de 2026. Confira as novidades!"
 category: "Curiosidades"
 date: 2026-09-16
@@ -7,9 +7,13 @@ updated: 2026-09-16
 readingTime: "4 min"
 image: "./images/Linux-Mint.webp"
 imageAlt: "Linux Mint"
+tags: ["Linux Mint", "Xepub", "Clockenstein", "Linux"]
+related: ["melhor-navegador-para-pc", "navegadores-alternativos", "limpar-arquivos-temporarios-windows"]
 ---
 
 A equipe do Linux Mint revelou dois aplicativos inéditos que devem estrear na próxima versão do sistema operacional: um leitor de ebooks chamado Xepub e um calendário batizado de Clockenstein. Além disso, o boletim mensal de agosto, que o projeto publicou em setembro, trouxe todos os detalhes sobre as duas novidades.
+
+Quem pensa em migrar do Windows costuma rever também o navegador do dia a dia: compare o [melhor navegador para PC em 2026](/melhor-navegador-para-pc/) e os [navegadores alternativos](/navegadores-alternativos/). Se ficar no Windows por enquanto, veja como [limpar arquivos temporários e acelerar o notebook](/limpar-arquivos-temporarios-windows/).
 
 Os dois programas fazem parte de um esforço maior da distribuição brasileira mais popular entre usuários de Linux para reduzir a dependência de aplicativos de terceiros. Dessa forma, a ideia é que o sistema já venha pronto para ler, organizar e agendar sem precisar instalar nada extra.
 

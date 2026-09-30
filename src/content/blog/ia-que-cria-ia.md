@@ -1,12 +1,14 @@
 ---
 title: "IA que cria IA: Claude já lidera 26% dos novos modelos de IA"
-description: "Anthropic revela que o Claude já lidera 26% da criação de modelos de IA e alerta sobre os riscos do autodesenvolvimento recursivo tecnológico"
+description: "A Anthropic revela que o Claude já faz 26% do trabalho de criar novos modelos de IA e alerta para os riscos do autodesenvolvimento recursivo."
 category: "Inteligência Artificial"
 date: 2026-09-18
 updated: 2026-09-28
 readingTime: "6 min"
 image: "./images/IA-que-cria-IA.webp"
 imageAlt: "IA que cria IA"
+tags: ["Anthropic", "Claude", "Inteligência artificial", "Autodesenvolvimento recursivo"]
+related: ["o-que-significa-gpt", "filme-inteligencia-artificial", "plugin-higgsfield-chatgpt"]
 ---
 
 IA que cria IA: é assim que a Anthropic resume, na prática, o relatório divulgado nesta sexta-feira (18). A empresa revelou que o Claude já lidera 26% do trabalho de pesquisa e desenvolvimento por trás dos próprios modelos de inteligência artificial (IA), um salto em relação a apenas 1% em março. O Olhar Digital também repercutiu o dado no mesmo dia.
@@ -64,11 +66,11 @@ Nenhuma das duas cria modelos de IA sozinha, mas mostram na prática o que signi
 
 O relatório não muda a experiência de quem usa Claude, ChatGPT ou outro assistente hoje, mas sinaliza uma tendência: empresas de tecnologia dependem cada vez mais da própria IA para criar a próxima geração de IA, o que acelera lançamentos e dificulta o controle humano sobre erros e falhas de segurança.
 
-Para quem usa Claude, ChatGPT e Gemini no dia a dia, o relatório sugere que a próxima geração desses assistentes pode chegar mais rápido, já que parte da criação passa a ser feita por outra IA, sem as pausas de um cronograma humano.
+Para quem usa Claude, ChatGPT e Gemini no dia a dia (e ainda não sabe [o que significa GPT](/o-que-significa-gpt/)), o relatório sugere que a próxima geração desses assistentes pode chegar mais rápido, já que parte da criação passa a ser feita por outra IA, sem as pausas de um cronograma humano.
 
 Para o público em geral, o dado reforça o debate sobre até onde a automação de tarefas de programação muda o mercado de trabalho em tecnologia.
 
-O fenômeno da IA que cria IA deve continuar em alta nos próximos relatórios trimestrais da Anthropic e de concorrentes como OpenAI e Google DeepMind.
+O fenômeno da IA que cria IA deve continuar em alta nos próximos relatórios trimestrais da Anthropic e de concorrentes como OpenAI e Google DeepMind. A OpenAI e seus bastidores já viraram até cinema: veja o [filme Artificial, com Andrew Garfield como Sam Altman](/filme-inteligencia-artificial/).
 
 ## Perguntas frequentes
 

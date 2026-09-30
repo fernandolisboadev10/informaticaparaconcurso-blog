@@ -5,6 +5,8 @@ category: "Jogos"
 date: 2026-09-16
 updated: 2026-09-16
 readingTime: "6 min"
+image: "./images/requisitos-pc-gta-6.webp"
+imageAlt: "PC gamer com iluminação rosa e turquesa e monitor exibindo uma cidade litorânea ao pôr do sol"
 tags: ["GTA 6", "Requisitos de PC", "Rockstar", "Jogos de PC"]
 related: ["steam-machine", "limpar-arquivos-temporarios-windows", "subway-surfers-em-alta"]
 ---

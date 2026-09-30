@@ -7,6 +7,8 @@ updated: 2026-09-27
 readingTime: "10 min"
 image: "./images/46-Comandos-do-ChatGPT-para-Criar-Imagens.webp"
 imageAlt: "46 Comandos do ChatGPT para Criar Imagens"
+tags: ["ChatGPT", "Comandos", "Geração de imagens", "IA"]
+related: ["comandos-camera-google-flow", "plugin-higgsfield-chatgpt", "o-que-significa-gpt"]
 ---
 
 Os **46 comandos do ChatGPT para criar imagens** são atalhos de texto que definem ângulo, perspectiva, movimento ou efeito visual antes mesmo da geração começar. Basta colar o termo no prompt e completar com o restante da cena.
@@ -144,7 +146,7 @@ Cole o comando no fim do seu prompt e complete com a descrição da cena. Combin
 
 Os 46 comandos do ChatGPT para criar imagens parecem muita coisa, mas cinco ou seis já bastam para mudar o padrão do que sai do ChatGPT. Comece por **/lowangle**, **/groundreflection** e **/silhouettepov** e compare com um prompt sem comando.
 
-A tendência é que as ferramentas de geração de imagem ampliem este tipo de controle por texto nas próximas atualizações. Vale salvar a lista e revisitar a cada novo modelo testado. Para quem trabalha também com vídeo, confira o guia de [comandos de câmera do Google Flow](https://techonplay.com.br/46-comandos-do-chatgpt/), com 40 atalhos para movimento de câmera.
+A tendência é que as ferramentas de geração de imagem ampliem este tipo de controle por texto nas próximas atualizações. Vale salvar a lista e revisitar a cada novo modelo testado. Para quem trabalha também com vídeo, confira o guia de [comandos de câmera do Google Flow](/comandos-camera-google-flow/), com 40 atalhos para movimento de câmera, e o [plugin Higgsfield no ChatGPT](/plugin-higgsfield-chatgpt/), que gera vídeo direto no chat. Se a sigla ainda confunde, veja [o que significa GPT](/o-que-significa-gpt/).
 
 ## Perguntas frequentes
 
