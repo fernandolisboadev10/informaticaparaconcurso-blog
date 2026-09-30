@@ -3,11 +3,10 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import { categories } from '../../data/categories';
+import { sortByActivity } from '../../utils/posts';
 
 export async function getStaticPaths() {
-  const all = (await getCollection('blog', ({ data }) => !data.draft)).sort(
-    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-  );
+  const all = sortByActivity(await getCollection('blog', ({ data }) => !data.draft));
   return categories.map((category) => ({
     params: { slug: category.slug },
     props: { category, posts: all.filter((p) => p.data.category === category.name) },

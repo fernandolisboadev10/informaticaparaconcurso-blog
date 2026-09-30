@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import PostCard from './PostCard.astro';
+import { activityTime } from '../utils/posts';
 
 interface Props {
   slug: string;
@@ -23,7 +24,7 @@ const rest = all
       (p.data.tags ?? []).filter((t) => tags.includes(t)).length * 2 +
       (p.data.category === category ? 1 : 0),
   }))
-  .sort((a, b) => b.score - a.score || b.p.data.date.getTime() - a.p.data.date.getTime())
+  .sort((a, b) => b.score - a.score || activityTime(b.p) - activityTime(a.p))
   .map(({ p }) => p);
 
 const posts = [...curated, ...rest].slice(0, 3);

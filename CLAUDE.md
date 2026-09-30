@@ -20,3 +20,7 @@ Consult these guides before working on related tasks:
 - [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
 - [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
 - [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+
+## Blog feed order
+
+The home, `/blog/` and category pages sort posts by latest activity: the newer of `date` (created) and `updated` (edited), via `src/utils/posts.ts`. Give every new post a `date` with a time (e.g. `2026-09-30T15:40:00-03:00`, keep it before 21:00 so the displayed UTC day does not change), and put a time in `updated` when editing a post that should rise to the top of the feed. Run `node scripts/audit-discover.mjs` before publishing.
