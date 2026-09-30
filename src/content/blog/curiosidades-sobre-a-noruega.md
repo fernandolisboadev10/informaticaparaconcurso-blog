@@ -2,7 +2,7 @@
 title: "Curiosidades sobre a Noruega: 10 fatos que parecem mentira"
 description: "Noruega tem sol da meia-noite, quase só carros elétricos e um fundo soberano gigante. Veja 10 curiosidades do país e por que ele chama tanta atenção."
 category: "Curiosidades"
-date: 2026-09-30
+date: 2026-09-30T15:40:00-03:00
 updated: 2026-09-30
 readingTime: "5 min"
 image: "./images/curiosidades-noruega.webp"

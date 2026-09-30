@@ -2,7 +2,7 @@
 title: "ChatGPT grátis ou pago: o que muda em cada plano no Brasil"
 description: "ChatGPT grátis ou pago? Compare Free, Go, Plus e Pro com preços em reais, limites de uso e recursos, e veja qual plano vale a pena para você."
 category: "Inteligência Artificial"
-date: 2026-09-30
+date: 2026-09-30T15:15:00-03:00
 updated: 2026-09-30
 readingTime: "6 min"
 image: "./images/chatgpt-gratis-ou-pago.webp"
