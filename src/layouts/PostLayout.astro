@@ -98,6 +98,55 @@ const articleSchema = {
     return ok;
   }
 
+  // The markdown tables only contain the text "📋 Copiar"; turn those cells into working copy buttons.
+  function setupCopyButtons() {
+    let uid = 0;
+    const makeButton = (label: string, targetId: string) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.dataset.copyTarget = targetId;
+      btn.textContent = label;
+      return btn;
+    };
+
+    document.querySelectorAll<HTMLTableElement>('.prose table').forEach((table) => {
+      const headers = Array.from(table.querySelectorAll('thead th'));
+      let cmdCol = headers.findIndex((th) => /comando|c[oó]digo/i.test(th.textContent ?? ''));
+      const rows = Array.from(table.querySelectorAll<HTMLTableRowElement>('tbody tr'));
+      const commands: string[] = [];
+
+      rows.forEach((row) => {
+        const cells = Array.from(row.children) as HTMLElement[];
+        const actionCell = cells.find((c) => c.tagName === 'TD' && (c.textContent ?? '').trim() === '📋 Copiar');
+        if (!actionCell) return;
+        if (cmdCol < 0 || !cells[cmdCol]) cmdCol = cells.findIndex((c) => c.querySelector('code'));
+        const cmdCell = cells[cmdCol];
+        if (!cmdCell) return;
+        const id = 'copy-cmd-' + uid++;
+        cmdCell.id = id;
+        commands.push((cmdCell.textContent ?? '').trim());
+        actionCell.textContent = '';
+        actionCell.appendChild(makeButton('📋 Copiar', id));
+      });
+
+      // "📋 Copiar todos os N" paragraph right before the table
+      const prev = table.previousElementSibling;
+      if (prev && prev.tagName === 'P' && /^📋\s*Copiar todos/i.test((prev.textContent ?? '').trim()) && commands.length) {
+        const all = document.createElement('pre');
+        all.id = 'copy-all-' + uid++;
+        all.hidden = true;
+        all.textContent = commands.join('\n');
+        const label = (prev.textContent ?? '').trim();
+        prev.textContent = '';
+        prev.appendChild(makeButton(label, all.id));
+        prev.appendChild(all);
+      }
+    });
+  }
+
+  setupCopyButtons();
+
   document.addEventListener('click', (event) => {
     const button = (event.target as HTMLElement).closest<HTMLButtonElement>('.copy-btn');
     if (!button) return;
@@ -121,15 +170,15 @@ const articleSchema = {
 
     if (navigator.clipboard?.writeText) {
       navigator.clipboard.writeText(text).then(
-        () => showFeedback('Copied!', false),
+        () => showFeedback('Copiado!', false),
         () => {
           const ok = legacyCopy(text);
-          showFeedback(ok ? 'Copied!' : 'Press Ctrl+C', !ok);
+          showFeedback(ok ? 'Copiado!' : 'Use Ctrl+C', !ok);
         },
       );
     } else {
       const ok = legacyCopy(text);
-      showFeedback(ok ? 'Copied!' : 'Press Ctrl+C', !ok);
+      showFeedback(ok ? 'Copiado!' : 'Use Ctrl+C', !ok);
     }
   });
 </script>
