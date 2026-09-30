@@ -343,5 +343,36 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     .search-wrap.open .search-form {
       width: 130px;
     }
+
+    /* Mobile: menu button first, then the logo, with theme and search pushed to the right. */
+    .bar {
+      gap: 8px;
+    }
+
+    .right-controls {
+      display: contents;
+    }
+
+    .menu-toggle {
+      order: 0;
+    }
+
+    .brand {
+      order: 1;
+    }
+
+    .divider {
+      order: 2;
+      margin-left: auto;
+      margin-right: 4px;
+    }
+
+    .theme-toggle {
+      order: 3;
+    }
+
+    .search-wrap {
+      order: 4;
+    }
   }
 </style>
