@@ -8,7 +8,7 @@ readingTime: "7 min"
 image: "./images/CMD-do-Windows.webp"
 imageAlt: "CMD do Windows"
 tags: ["CMD", "Windows", "Prompt de comando", "Tutoriais"]
-related: ["limpar-arquivos-temporarios-windows", "melhor-navegador-para-pc", "linux-mint-xepub-clockenstei"]
+related: ["limpar-arquivos-temporarios-windows", "linux", "melhor-navegador-para-pc"]
 ---
 
 O **cmd** (Prompt de Comando) do Windows verifica o disco, varre vírus e agenda tarefas com poucas linhas de texto, sem instalar nada. Bastam 20 comandos nativos para cobrir a manutenção básica do PC.
