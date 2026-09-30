@@ -5,8 +5,8 @@ category: "Dicas"
 date: 2026-09-30
 updated: 2026-09-30
 readingTime: "5 min"
-image: "./images/biometria-urna-digital.webp"
-imageAlt: "Dedo indicador sobre o leitor de digital com luz verde de um terminal de votação em uma sala de aula"
+image: "./images/biometria-urna-digital-brasil.webp"
+imageAlt: "Dedo indicador no leitor de digital de uma urna eletrônica em sala de aula, com a bandeira do Brasil ao fundo"
 tags: ["Biometria", "Urna eletrônica", "Eleições 2026", "TSE"]
 related: ["urna-eletronica-curiosidades", "iphone-duo-iphone-dobravel", "o-que-significa-gpt"]
 ---
