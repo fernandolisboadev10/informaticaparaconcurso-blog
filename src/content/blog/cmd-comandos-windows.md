@@ -7,6 +7,8 @@ updated: 2026-09-28
 readingTime: "7 min"
 image: "./images/CMD-do-Windows.webp"
 imageAlt: "CMD do Windows"
+tags: ["CMD", "Windows", "Prompt de comando", "Tutoriais"]
+related: ["limpar-arquivos-temporarios-windows", "melhor-navegador-para-pc", "linux-mint-xepub-clockenstei"]
 ---
 
 O **cmd** (Prompt de Comando) do Windows verifica o disco, varre vírus e agenda tarefas com poucas linhas de texto, sem instalar nada. Bastam 20 comandos nativos para cobrir a manutenção básica do PC.
@@ -134,7 +136,7 @@ Clique em “Copiar” para colar o comando direto no cmd aberto como administra
 
 O cmd resolve em segundos o que exige vários cliques no Windows. Comece por sfc /scannow e chkdsk, os dois comandos que mais atacam lentidão e travamentos, e evolua para o schtasks quando quiser automatizar backups.
 
-Quem dominar o cmd fica pronto para o PowerShell, o próximo passo natural em automação mais avançada. Veja mais dicas na categoria Tutoriais.
+Quem dominar o cmd fica pronto para o PowerShell, o próximo passo natural em automação mais avançada. Para uma limpeza sem linha de comando, veja como [limpar os arquivos temporários do Windows](/limpar-arquivos-temporarios-windows/), e para escolher o programa que mais roda no seu PC, compare o [melhor navegador para PC em 2026](/melhor-navegador-para-pc/).
 
 ## Perguntas frequentes
 

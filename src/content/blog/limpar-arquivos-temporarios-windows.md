@@ -7,6 +7,8 @@ updated: 2026-09-28
 readingTime: "5 min"
 image: "./images/notebook-rapido.webp"
 imageAlt: "Como limpar arquivos temporários do Windows"
+tags: ["Windows", "Arquivos temporários", "Notebook", "Tutoriais"]
+related: ["cmd-comandos-windows", "melhor-navegador-para-pc", "requisitos-pc-gta-6-2026"]
 ---
 
 Para limpar arquivos temporários do Windows, basta usar o atalho %temp%, as Configurações de Armazenamento ou a Limpeza de Disco, sem instalar nenhum programa. O processo leva poucos minutos e pode liberar gigabytes de espaço no notebook.
@@ -105,7 +107,7 @@ _Não. A pasta %temp% não guarda fotos nem documentos pessoais. O cuidado maior
 
 ## Conclusão
 
-Limpar arquivos temporários do Windows leva poucos minutos, não custa nada e devolve gigabytes ao notebook. Com o Sensor de Armazenamento ativado, essa manutenção passa a acontecer sozinha.
+Limpar arquivos temporários do Windows leva poucos minutos, não custa nada e devolve gigabytes ao notebook. Com o Sensor de Armazenamento ativado, essa manutenção passa a acontecer sozinha. Quem prefere a linha de comando pode usar os [20 comandos do cmd do Windows](/cmd-comandos-windows/), e o navegador também pesa na memória: veja o [melhor navegador para PC em 2026](/melhor-navegador-para-pc/).
 
 ## Fontes:
 

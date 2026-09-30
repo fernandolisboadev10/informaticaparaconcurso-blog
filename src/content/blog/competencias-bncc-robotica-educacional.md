@@ -1,5 +1,5 @@
 ---
-title: "Competências da BNCC na robótica educacional: guia prático"
+title: "Como a robótica educacional trabalha as 10 competências da BNCC"
 description: "Veja como as 10 competências da BNCC aparecem na robótica educacional, com exemplos por etapa e o que muda com a obrigatoriedade em 2026."
 category: "Dicas"
 date: 2026-09-28
@@ -7,19 +7,21 @@ updated: 2026-09-28
 readingTime: "5 min"
 image: "./images/BNCC-na-robotica-educacional.webp"
 imageAlt: "BNCC na robótica educacional"
+tags: ["BNCC", "Robótica educacional", "Educação", "Pensamento computacional"]
+related: ["o-que-e-bncc", "google-ai-plus-para-estudantes", "o-que-significa-gpt"]
 ---
 
 As **10 competências gerais da BNCC** ganham um laboratório natural na robótica educacional, onde o aluno programa, testa e corrige um robô para ver a própria lógica funcionar (ou falhar) na prática.
 
 Com a Resolução CNE/CEB nº 2/2025, pensamento computacional e robótica passam a ser obrigatórios nos currículos a partir de 2026, sob risco de perda parcial da complementação do Fundeb para redes que não se adequarem, segundo o Terra. Este guia mostra como cada uma das dez competências aparece na prática, com exemplos de sala de aula.
 
-Para entender a base legal completa por trás dessas mudanças, veja o guia [o que é BNCC](https://techonplay.com.br/o-que-e-bncc/), que explica a Base Nacional Comum Curricular e suas etapas.
+Para entender a base legal completa por trás dessas mudanças, veja o guia [o que é BNCC](/o-que-e-bncc/), que explica a Base Nacional Comum Curricular e suas etapas.
 
 ## Por que a robótica trabalha as competências da BNCC
 
 A robótica funciona como ponte entre teoria e prática dos três eixos da BNCC Computação: Pensamento Computacional, Mundo Digital e Cultura Digital, segundo análise da [Siminova](https://siminova.com.br/blog/2026/02/como-a-robotica-educacional-se-conecta-com-a-bncc-computacao/). Ao programar um robô, o aluno cria sequências lógicas, identifica padrões e corrige erros, algo bem diferente de decorar conceito de tecnologia no quadro.
 
-Um estudo publicado na revista Educitec, do Instituto Federal do Amazonas, reforça este ponto: egressos de equipes de robótica relatam ganhos concretos nas competências previstas na Base, principalmente em pensamento computacional e trabalho em equipe, conforme aponta a [pesquisa acadêmica sobre o tema](https://sistemascmc.ifam.edu.br/educitec/index.php/educitec/article/view/2214).
+Um estudo publicado na revista Educitec, do Instituto Federal do Amazonas, reforça este ponto: egressos de equipes de robótica relatam ganhos concretos nas competências previstas na Base, principalmente em pensamento computacional e trabalho em equipe, conforme aponta a pesquisa acadêmica sobre o tema.
 
 ## As 10 competências gerais aplicadas à robótica
 
@@ -64,7 +66,7 @@ Escolas com orçamento apertado têm alternativa viável: projetos com materiais
 
 As competências da BNCC deixam de ser texto abstrato quando viram código rodando em um robô físico, com erro visível e correção imediata. Escolas que já têm esta cultura não usam bloco pronto, usam a robótica como eixo transversal, ligando lógica, ética e trabalho em equipe numa aula só.
 
-O próximo passo natural é mapear qual competência falta reforçar na turma e escolher o projeto certo para trabalhar ela. Para entender como as dez competências se encaixam no restante do currículo, veja também o guia completo sobre [o que é BNCC](https://techonplay.com.br/o-que-e-bncc/).
+O próximo passo natural é mapear qual competência falta reforçar na turma e escolher o projeto certo para trabalhar ela. Para entender como as dez competências se encaixam no restante do currículo, veja também o guia completo sobre [o que é BNCC](/o-que-e-bncc/). Para conhecer a IA que já entra nas salas de aula, veja também [o que significa GPT](/o-que-significa-gpt/).
 
 ## Perguntas frequentes
 

@@ -7,6 +7,8 @@ updated: 2026-09-28
 readingTime: "4 min"
 image: "./images/Urna-Eletronica-1.webp"
 imageAlt: "Urna eletrônica"
+tags: ["Urna eletrônica", "Eleições 2026", "TSE", "Curiosidades"]
+related: ["o-que-significa-gpt", "ia-que-cria-ia", "o-que-e-bncc"]
 ---
 
 A urna eletrônica completa 30 anos em 2026, ano em que o equipamento volta a ser protagonista nas eleições gerais de outubro. Desde a estreia, em 1996, ela transformou o Brasil no país com a maior votação totalmente informatizada do mundo. Mas quantas dessas três décadas de história você realmente conhece?
@@ -53,7 +55,7 @@ O parque que vai operar o pleito de outubro mostra a escala da operação. Segun
 
 Do lado do eleitorado, o Brasil chega às eleições de 2026 com mais de 158,7 milhões de eleitores aptos a votar, dos quais 88,78% (cerca de 140 milhões) já têm a biometria cadastrada, [segundo dados oficiais da Justiça Eleitoral](https://www.tse.jus.br/comunicacao/noticias/2026/Maio/eleicoes-2026-justica-eleitoral-atinge-158-milhoes-de-eleitores-e-88-de-biometria). O primeiro turno acontece em 4 de outubro, com eventual segundo turno em 25 de outubro.
 
-Com a votação se aproximando, a expectativa é repetir o mesmo modelo: divulgar os testes antes do primeiro turno e manter a urna eletrônica entre os sistemas de votação mais rápidos do planeta. Para entender o que muda nas [eleições de 2026](https://claude.ai/chat/LINK-INTERNO-A-DEFINIR), vale acompanhar também as regras de segurança digital do pleito.
+Com a votação se aproximando, a expectativa é repetir o mesmo modelo: divulgar os testes antes do primeiro turno e manter a urna eletrônica entre os sistemas de votação mais rápidos do planeta. Para entender o que muda nas eleições de 2026, vale acompanhar também as regras de segurança digital do pleito.
 
 ## Perguntas frequentes sobre a urna eletrônica
 
