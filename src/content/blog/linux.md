@@ -6,7 +6,7 @@ date: 2026-09-30
 updated: 2026-09-30
 readingTime: "10 min"
 image: "./images/linux-o-que-e.webp"
-imageAlt: "Notebook com o Linux aberto ao lado de um pinguim de pelúcia sobre uma mesa de madeira"
+imageAlt: "Pinguim Tux ao lado de um notebook com o terminal do Linux aberto e livros sobre Linux, comandos e redes"
 tags: ["Linux", "Distribuições Linux", "Comandos Linux", "Software livre"]
 related: ["linux-mint-xepub-clockenstei", "cmd-comandos-windows", "steam-machine"]
 ---
