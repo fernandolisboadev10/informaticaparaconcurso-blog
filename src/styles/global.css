@@ -283,3 +283,76 @@ img {
   outline: 2px solid var(--violet);
   outline-offset: 2px;
 }
+
+/* Copy buttons inside article text and tables (the prompt-card variant keeps its own dark style). */
+.prose .copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 6px 14px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  color: #ffffff;
+  background: var(--violet-deep);
+  border: 1px solid var(--violet-deep);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+.prose .copy-btn:hover {
+  background: var(--violet);
+  border-color: var(--violet);
+}
+
+.prose .copy-btn:active {
+  transform: translateY(1px);
+}
+
+.prose .copy-btn:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.prose .copy-btn.copied {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #04211d;
+}
+
+.prose .copy-btn.copy-error {
+  background: var(--rose);
+  border-color: var(--rose);
+  color: #ffffff;
+}
+
+:root[data-theme='dark'] .prose .copy-btn {
+  color: #180f2e;
+  background: var(--violet);
+  border-color: var(--violet);
+}
+
+:root[data-theme='dark'] .prose .copy-btn:hover {
+  background: var(--violet-soft);
+  border-color: var(--violet-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .prose .copy-btn {
+    color: #180f2e;
+    background: var(--violet);
+    border-color: var(--violet);
+  }
+
+  :root:not([data-theme='light']) .prose .copy-btn:hover {
+    background: var(--violet-soft);
+    border-color: var(--violet-soft);
+  }
+}
+
+.prose p > .copy-btn {
+  margin: 8px 0;
+}
