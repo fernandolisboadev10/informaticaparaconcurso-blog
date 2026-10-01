@@ -211,13 +211,44 @@ for (const t of picked) {
   (byCat[cat] ??= []).push(t);
 }
 
+const titleCase = (s) => s.split(' ').map((w) => (w.length <= 2 && !/\d/.test(w) ? w.toUpperCase() : w[0].toUpperCase() + w.slice(1))).join(' ');
+
+// Suggests post type, working title, search term and publishing slot for a topic.
+function suggest(t, cat, isCovered) {
+  const heads = norm(t.items.map((i) => i.title).join(' '));
+  const name = titleCase(t.term);
+  const howTo = /\bcomo\b|passo a passo|tutorial|configurar|instalar|ativar|desativar/.test(heads);
+  const price = /preco|quanto custa|valor|lancamento|data de lancamento/.test(heads);
+  const review = /review|analise|testamos|hands-on|comparativo/.test(heads);
+  const fresh = t.sources.size >= 3 || t.trendHit;
+
+  if (isCovered) {
+    return { type: 'Atualização', title: `Atualize o post existente sobre ${name}`, search: `${t.term} atualização`, slot: '11h', note: 'edite o post e ponha horário em `updated`' };
+  }
+  if (howTo || cat === 'Tutoriais' || cat === 'Dicas') {
+    return { type: 'Tutorial', title: `Como usar ${name}: passo a passo`, search: `como ${t.term}`, slot: '11h', note: '800-1.200 palavras, com passos numerados' };
+  }
+  if (review || cat === 'Reviews') {
+    return { type: 'Evergreen', title: `${name} vale a pena? O que muda e para quem serve`, search: `${t.term} vale a pena`, slot: '18h', note: '1.000-1.800 palavras, veredito no início' };
+  }
+  if (price) {
+    return { type: 'Notícia com ângulo de busca', title: `${name}: preço e data no Brasil`, search: `${t.term} preço brasil`, slot: '7h', note: '500-800 palavras, preço no primeiro parágrafo' };
+  }
+  if (fresh) {
+    return { type: 'Notícia', title: `${name}: o que se sabe até agora`, search: t.term, slot: '7h', note: '300-500 palavras, categoria Notícias, tema em tags' };
+  }
+  return { type: 'Evergreen', title: `${name}: guia completo`, search: `o que é ${t.term}`, slot: '18h', note: '1.000-1.800 palavras' };
+}
+
 for (const cat of Object.keys(CATEGORIES)) {
   if (!byCat[cat]) continue;
   lines.push('', `## ${cat}`);
   for (const t of byCat[cat]) {
     const own = covered(t.term);
     const status = own.length ? `já coberto: ${own.map((s) => `/${s}/`).join(', ')} (considere atualizar)` : 'sem post no site';
+    const s = suggest(t, cat, own.length > 0);
     lines.push('', `### ${t.term}${t.trendHit ? ' 🔥' : ''}`, `${t.sources.size} fontes · ${t.items.length} manchetes · ${status}`);
+    lines.push(`**Sugestão:** ${s.type} · slot ${s.slot} · título: "${s.title}" · busca: \`${s.search}\` · ${s.note}`);
     for (const i of t.items.slice(0, 4)) lines.push(`- ${i.source}: [${i.title}](${i.link})`);
   }
 }
