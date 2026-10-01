@@ -1,9 +1,9 @@
 ---
 title: "Quem criou a Higgsfield, a startup de IA de US$ 5,4 bilhões?"
 description: "Você já viu vídeos da Higgsfield nas redes sem saber. Entenda o que é a startup de IA, quem a criou e como ela chegou a US$ 5,4 bilhões em pouco tempo."
-category: "Curiosidades"
+category: "Apps"
 date: 2026-10-01T11:15:00-03:00
-updated: 2026-10-01T11:15:00-03:00
+updated: 2026-10-01T11:25:00-03:00
 readingTime: "5 min"
 image: "./images/higgsfield-startup-de-video-com-ia.webp"
 imageAlt: "Criador de conteúdo editando um vídeo gerado por IA em um monitor, com celular em tripé ao lado"
