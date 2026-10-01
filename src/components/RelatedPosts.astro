@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import PostCard from './PostCard.astro';
-import { activityTime } from '../utils/posts';
+import { activityTime, isPublished } from '../utils/posts';
 
 interface Props {
   slug: string;
@@ -11,7 +11,7 @@ interface Props {
 }
 const { slug, category, tags = [], related = [] } = Astro.props;
 
-const all = (await getCollection('blog', ({ data }) => !data.draft)).filter((p) => p.id !== slug);
+const all = (await getCollection('blog', isPublished)).filter((p) => p.id !== slug);
 const byId = new Map(all.map((p) => [p.id, p]));
 
 // Curated slugs first (topic cluster), then fill by shared tags/category, newest first.

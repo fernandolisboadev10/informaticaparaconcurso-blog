@@ -71,6 +71,15 @@ export const categories: Category[] = [
     intro:
       'Guias de aplicativos e plugins úteis, com instalação, custos e os erros mais comuns explicados.',
   },
+  {
+    slug: 'noticias',
+    name: 'Notícias',
+    title: 'Notícias de tecnologia, IA e games no Brasil',
+    description:
+      'Notícias de tecnologia, IA, jogos e celulares com o que muda para o leitor brasileiro: preço em reais, disponibilidade e como usar a novidade.',
+    intro:
+      'O que aconteceu hoje no mundo da tecnologia, explicado de forma direta: lançamentos, atualizações e anúncios, sempre com o que muda para quem usa no Brasil.',
+  },
 ];
 
 export const categoryHref = (name: string): string => {

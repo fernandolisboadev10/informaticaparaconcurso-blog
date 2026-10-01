@@ -2,6 +2,12 @@ import type { CollectionEntry } from 'astro:content';
 
 type Post = CollectionEntry<'blog'>;
 
+// Scheduling rule: a post goes live once its `date` has passed. The site is static, so a scheduled
+// workflow rebuilds it at the publishing hours (see .github/workflows/deploy.yml) and posts dated
+// in the future stay out of every listing, page, feed and sitemap until then.
+export const isPublished = ({ data }: Pick<Post, 'data'>): boolean =>
+  !data.draft && data.date.getTime() <= Date.now();
+
 // Feed rule: a post's position is its latest activity, the newer of the creation date (`date`)
 // and the last edit (`updated`). Ties fall back to the creation date, then to the slug, so the
 // order is always deterministic. Give same-day posts a time (e.g. 2026-09-30T15:40:00-03:00)

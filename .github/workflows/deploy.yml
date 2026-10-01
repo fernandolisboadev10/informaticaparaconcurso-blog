@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Publishing hours in Brasília time (UTC-3): 07:02, 11:02 and 18:02. Posts dated in the future go live on the next run.
+    - cron: '2 10,14,21 * * *'
 
 permissions:
   contents: read

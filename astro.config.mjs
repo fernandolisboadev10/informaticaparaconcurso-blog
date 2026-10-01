@@ -13,6 +13,7 @@ for (const file of readdirSync(blogDir)) {
   if (!file.endsWith('.md')) continue;
   const content = readFileSync(new URL(file, blogDir), 'utf-8');
   const match = content.match(/^updated:\s*(\S+)/m) ?? content.match(/^date:\s*(\S+)/m);
+  if (new Date(content.match(/^date:s*(S+)/m)?.[1] ?? 0) > new Date()) continue; // scheduled, not live yet
   const cat = content.match(/^category:\s*"([^"\r\n]+)"/m);
   if (cat) postsPerCategory.set(cat[1].trim(), (postsPerCategory.get(cat[1].trim()) ?? 0) + 1);
   if (match) {
@@ -46,7 +47,7 @@ export default defineConfig({
       filter(page) {
         const m = new URL(page).pathname.match(/^\/categoria\/([^/]+)\/?$/);
         if (!m) return true;
-        const names = { 'inteligencia-artificial': 'Inteligência Artificial', jogos: 'Jogos', tutoriais: 'Tutoriais', dicas: 'Dicas', curiosidades: 'Curiosidades', reviews: 'Reviews', apps: 'Apps' };
+        const names = { 'inteligencia-artificial': 'Inteligência Artificial', jogos: 'Jogos', tutoriais: 'Tutoriais', dicas: 'Dicas', curiosidades: 'Curiosidades', reviews: 'Reviews', apps: 'Apps', noticias: 'Notícias' };
         return (postsPerCategory.get(names[m[1]]) ?? 0) >= 2;
       },
       serialize(item) {

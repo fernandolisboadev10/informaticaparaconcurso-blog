@@ -24,3 +24,7 @@ Consult these guides before working on related tasks:
 ## Blog feed order
 
 The home, `/blog/` and category pages sort posts by latest activity: the newer of `date` (created) and `updated` (edited), via `src/utils/posts.ts`. Give every new post a `date` with a time (e.g. `2026-09-30T15:40:00-03:00`, keep it before 21:00 so the displayed UTC day does not change), and put a time in `updated` when editing a post that should rise to the top of the feed. Run `node scripts/audit-discover.mjs` before publishing.
+
+## Scheduling
+
+A post goes live when its `date` has passed (`isPublished` in `src/utils/posts.ts`). The deploy workflow rebuilds at 07:02, 11:02 and 18:02 (Brasília time), so to schedule a post set `date` to a future time such as `2026-10-02T07:00:00-03:00` and push; commit it before the slot. The `Notícias` category is for time-bound news; the topic goes in `tags`.
