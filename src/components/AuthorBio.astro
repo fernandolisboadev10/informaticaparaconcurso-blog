@@ -45,6 +45,16 @@
     color: var(--ink-strong);
   }
 
+  .author-body {
+    min-width: 0;
+  }
+
+  @media (max-width: 600px) {
+    .author-bio {
+      align-items: flex-start;
+    }
+  }
+
   .author-body p:not(.author-name) {
     margin: 0;
     font-size: 0.92rem;
