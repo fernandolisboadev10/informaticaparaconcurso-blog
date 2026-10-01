@@ -64,7 +64,9 @@ const articleSchema = {
   <article class="container post">
     <p class="category"><a href={categoryHref(category)}>{category}</a></p>
     <h1>{title}</h1>
-    <p class="meta">{formattedDate}{readingTime && ` · ${readingTime}`}</p>
+    <p class="meta">
+      Por <a href="/sobre-nos">Fernando Lisboa</a> | {formattedDate}{readingTime && ` · ${readingTime}`}
+    </p>
     <ShareButtons title={title} />
 
     {image && (
@@ -215,7 +217,17 @@ const articleSchema = {
   .meta {
     color: var(--ink-soft);
     font-size: 0.9rem;
-    margin: 0 0 40px;
+    margin: 0 0 20px;
+  }
+
+  .meta a {
+    color: var(--violet);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .meta a:hover {
+    text-decoration: underline;
   }
 
   .hero-image {
