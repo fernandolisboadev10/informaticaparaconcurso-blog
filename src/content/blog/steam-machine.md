@@ -1,9 +1,9 @@
 ---
 title: "Steam Machine no Brasil: preço, ficha técnica e custo de importar"
-description: "Steam Machine, o mini-PC da Valve: preços oficiais em dólar, ficha técnica e quanto custaria importar para o Brasil, que ainda não tem venda oficial."
+description: "Valor da Steam Machine no Brasil: de R$ 9.300 a R$ 10.500 importada (US$ 1.049 lá fora). Veja ficha técnica, versões e por que ainda não há venda oficial."
 category: "Jogos"
 date: 2026-09-26
-updated: 2026-09-27
+updated: 2026-09-30T10:20:00-03:00
 readingTime: "5 min"
 image: "./images/Steam-Machine.webp"
 imageAlt: "Steam Machine, mini-PC de jogos da Valve, ao lado de um controle"
@@ -12,6 +12,8 @@ related: ["requisitos-pc-gta-6-2026", "subway-surfers-em-alta", "iphone-duo-ipho
 ---
 
 A **Steam Machine** já está à venda em outros países desde 30 de junho de 2026, mas ainda não tem data nem preço oficial para chegar ao Brasil. O mini-PC de jogos da Valve promete a praticidade de um console com a biblioteca inteira da Steam na tela da televisão.
+
+**Valor da Steam Machine no Brasil:** hoje, só importada ou por revenda. A versão de 512 GB aparece entre **R$ 9.300 e R$ 10.500**, e a de 2 TB com controle passa de **R$ 12.000**. O preço oficial nos Estados Unidos é de US$ 1.049 e US$ 1.428, respectivamente.
 
 Este guia reúne a ficha técnica completa, os preços oficiais em dólar e uma estimativa de quanto custaria importar o dispositivo hoje.
 

@@ -3,7 +3,7 @@ title: "Google AI Plus grátis para estudantes: resgate 1 ano no Brasil"
 description: "Google AI Plus para estudantes grátis com 400 GB e mais acesso ao Gemini. Veja quem pode resgatar, as regras e o prazo da oferta no Brasil."
 category: "Dicas"
 date: 2026-09-20
-updated: 2026-09-29
+updated: 2026-09-30T10:30:00-03:00
 readingTime: "6 min"
 image: "./images/Google-AI-Plus-para-estudantes-do-Brasil.webp"
 imageAlt: "Notebook sobre uma mesa de biblioteca exibindo a página do plano Gemini para estudantes"
@@ -54,6 +54,12 @@ Quem precisa de mais recursos encontra o Google AI Pro com 75% de desconto por a
 Ele amplia o pacote com 5 TB de armazenamento, análise de até 1.500 páginas de anotações, Nano Banana Pro e acesso expandido a ferramentas de programação com IA, como Google Antigravity e Jules. O YouTube Premium Lite também vem incluído, sem custo adicional.
 
 Na comparação de preços, o AI Pro com desconto (R$ 23,99) fica abaixo do AI Plus depois do ano grátis (R$ 24,99). A escolha depende do uso: o AI Plus zera o custo agora, enquanto o AI Pro cobra desde o início e entrega mais recursos.
+
+## Google AI Pro vale a pena para estudantes?
+
+Depende do uso. O Google AI Pro vale a pena para quem faz projetos grandes, programa com IA ou precisa de muito armazenamento: são 5 TB, análise de até 1.500 páginas de anotações, 1.000 créditos do Google Flow e o YouTube Premium Lite incluído, por R$ 23,99 mensais com o desconto de estudante.
+
+Para estudo diário, trabalhos e rascunhos, o AI Plus costuma bastar, e é grátis por 12 meses. Uma estratégia comum é começar pelo AI Plus e migrar para o AI Pro só se os limites de uso começarem a atrapalhar.
 
 ## Comparativo dos planos
 

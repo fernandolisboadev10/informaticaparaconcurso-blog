@@ -3,7 +3,7 @@ title: "Como limpar arquivos temporários do Windows e acelerar o notebook"
 description: "Como limpar arquivos temporários do Windows em minutos, liberar gigabytes de espaço e deixar o notebook mais rápido sem instalar programas."
 category: "Tutoriais"
 date: 2026-09-22
-updated: 2026-09-28
+updated: 2026-09-30T10:25:00-03:00
 readingTime: "5 min"
 image: "./images/notebook-rapido.webp"
 imageAlt: "Como limpar arquivos temporários do Windows"
@@ -12,6 +12,18 @@ related: ["cmd-comandos-windows", "melhor-navegador-para-pc", "requisitos-pc-gta
 ---
 
 Para limpar arquivos temporários do Windows, basta usar o atalho %temp%, as Configurações de Armazenamento ou a Limpeza de Disco, sem instalar nenhum programa. O processo leva poucos minutos e pode liberar gigabytes de espaço no notebook.
+
+## Atalho rápido para limpar arquivos temporários do PC
+
+Se você só quer o atalho, são três comandos na caixa **Executar** (**Windows + R**). Em cada um, digite o comando, aperte **Enter**, selecione tudo com **Ctrl + A** e apague com **Shift + Delete**:
+
+| ⌨️ Comando | 📁 O que abre |
+| --- | --- |
+| `%temp%` | Arquivos temporários do seu usuário |
+| `temp` | Arquivos temporários do Windows (pede permissão de administrador) |
+| `prefetch` | Cache de inicialização de programas (pede permissão de administrador) |
+
+Para remover arquivos temporários sem abrir pasta nenhuma, use também o `cleanmgr`, que abre a Limpeza de Disco direto. Os passos com imagens estão mais abaixo.
 
 ## Por que os arquivos temporários deixam o notebook lento
 
