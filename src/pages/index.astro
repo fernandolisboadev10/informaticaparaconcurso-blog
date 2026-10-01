@@ -4,7 +4,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import { isPublished, sortByActivity } from '../utils/posts';
 
-const posts = sortByActivity(await getCollection('blog', isPublished)).slice(0, 6);
+const PAGE_SIZE = 6;
+const posts = sortByActivity(await getCollection('blog', isPublished));
 ---
 <BaseLayout title="IA, Jogos, Tutoriais e Tecnologia" description="Guias, reviews e notícias sobre IA, jogos, tutoriais e curiosidades, em linguagem simples.">
   <section class="hero container">
@@ -26,7 +27,8 @@ const posts = sortByActivity(await getCollection('blog', isPublished)).slice(0, 
       <a href="/blog">Ver todos →</a>
     </div>
     <div class="grid">
-      {posts.map((post) => (
+      {posts.map((post, i) => (
+        <div class={i < PAGE_SIZE ? 'item' : 'item extra'}>
         <PostCard
           slug={post.id}
           title={post.data.title}
@@ -37,10 +39,28 @@ const posts = sortByActivity(await getCollection('blog', isPublished)).slice(0, 
           image={post.data.image}
           imageAlt={post.data.imageAlt}
         />
+        </div>
       ))}
     </div>
+    {posts.length > PAGE_SIZE && (
+      <div class="more-wrap">
+        <button type="button" id="more-posts" class="more-btn" data-step={PAGE_SIZE}>Ver mais posts</button>
+      </div>
+    )}
   </section>
 </BaseLayout>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('#more-posts');
+  btn?.addEventListener('click', () => {
+    const step = Number(btn.dataset.step) || 6;
+    const hidden = document.querySelectorAll<HTMLElement>('.item.extra:not(.show)');
+    hidden.forEach((el, i) => {
+      if (i < step) el.classList.add('show');
+    });
+    if (hidden.length <= step) btn.parentElement?.remove();
+  });
+</script>
 
 <style>
   .hero {
@@ -111,6 +131,38 @@ const posts = sortByActivity(await getCollection('blog', isPublished)).slice(0, 
     color: var(--teal);
     font-size: 0.9rem;
     white-space: nowrap;
+  }
+
+  .item {
+    display: contents;
+  }
+
+  .item.extra:not(.show) {
+    display: none;
+  }
+
+  .more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .more-btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 28px;
+    border-radius: 999px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--violet), var(--rose));
+    transition: transform 0.15s ease, filter 0.15s ease;
+  }
+
+  .more-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
   }
 
   .grid {
