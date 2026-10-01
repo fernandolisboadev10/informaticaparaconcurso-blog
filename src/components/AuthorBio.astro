@@ -12,19 +12,9 @@
   <div class="author-body">
     <p class="author-name">Fernando Lisboa</p>
     <p>
-      Sou analista de sistemas independente e redator de tecnologia, do
-      Brasil, apaixonado por IA e robótica.
-    </p>
-    <p>
-      Criei o TechOnPlay para separar o que é útil do que é ruído. Enquanto
-      a grande mídia corre atrás de manchetes, eu foco no que funciona:
-      testo ferramentas, escrevo guias e deixo a tecnologia acessível, de
-      curiosos a engenheiros experientes.
-    </p>
-    <p>
-      Manter esta publicação independente é a minha missão em tempo
-      integral. Se este conteúdo ajudou você hoje, considere apoiar o meu
-      trabalho.
+      Analista de sistemas independente e redator de tecnologia, apaixonado
+      por IA e robótica. Criei o TechOnPlay para separar o que é útil do que
+      é ruído.
     </p>
   </div>
 </aside>
@@ -32,13 +22,11 @@
 <style>
   .author-bio {
     display: flex;
-    gap: 20px;
-    align-items: flex-start;
+    gap: 16px;
+    align-items: center;
     margin-top: 56px;
-    padding: 28px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, var(--ink-deep), var(--violet-deep));
-    color: #ece7fb;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
   }
 
   .author-photo {
@@ -47,37 +35,20 @@
     height: 72px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.15);
   }
 
   .author-name {
-    margin: 0 0 8px;
+    margin: 0 0 4px;
     font-family: var(--font-display);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    color: #ffffff;
+    color: var(--ink-strong);
   }
 
   .author-body p:not(.author-name) {
-    margin: 0 0 10px;
+    margin: 0;
     font-size: 0.92rem;
     line-height: 1.6;
-    color: rgba(236, 231, 251, 0.85);
-  }
-
-  .author-body p:last-child {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 560px) {
-    .author-bio {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .author-body p:not(.author-name) {
-      text-align: left;
-    }
+    color: var(--ink-soft);
   }
 </style>
