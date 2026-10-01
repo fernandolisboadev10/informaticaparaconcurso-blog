@@ -3,7 +3,7 @@ title: "O que é BNCC e o que muda com a Computação nas escolas em 2026"
 description: "O que é BNCC, como a Base Nacional Comum Curricular organiza cada etapa de ensino, as 10 competências gerais e as mudanças recentes com Computação."
 category: "Curiosidades"
 date: 2026-09-28
-updated: 2026-09-28
+updated: 2026-10-01T06:45:00-03:00
 readingTime: "5 min"
 image: "./images/BNCC.webp"
 imageAlt: "O que é BNCC"
@@ -13,7 +13,7 @@ related: ["competencias-bncc-robotica-educacional", "google-ai-plus-para-estudan
 
 ## O que é BNCC?
 
-É a Base Nacional Comum Curricular, documento do Ministério da Educação (MEC) que define o que todo aluno brasileiro precisa aprender, da creche ao Ensino Médio, em escolas públicas e privadas.
+BNCC é a sigla de Base Nacional Comum Curricular, documento do Ministério da Educação (MEC) que define o que todo aluno brasileiro precisa aprender, da creche ao Ensino Médio, em escolas públicas e privadas.
 
 Homologada entre 2017 e 2018, a Base orienta currículos, material didático e provas como Saeb e Enem. Este guia explica como o documento se organiza, quais são as dez competências gerais e o que mudou recentemente com a Computação e o novo Ensino Médio.
 
@@ -65,7 +65,7 @@ As dez competências gerais formam o fio condutor do documento e valem da Educa�
 9.  Empatia e cooperação
 10.  Responsabilidade e cidadania
 
-Para quem acompanha tecnologia, a competência 5 é a mais relevante: pede que o aluno compreenda, use e crie tecnologias digitais com senso crítico, tema próximo do conceito de edtech, já explicado pela Canaltech. Quem quer entender a tecnologia que os alunos já usam pode ver [o que significa GPT](/o-que-significa-gpt/).
+Para quem acompanha tecnologia, a competência 5 é a mais relevante: pede que o aluno compreenda, use e crie tecnologias digitais com senso crítico, e é a que mais aparece na prática da sala de aula. Para ver como cada competência vira atividade, veja como a [robótica educacional trabalha as 10 competências da BNCC](/competencias-bncc-robotica-educacional/). Quem quer entender a tecnologia que os alunos já usam pode ver [o que significa GPT](/o-que-significa-gpt/).
 
 ## BNCC Computação e novo Ensino Médio: o que mudou
 
@@ -92,6 +92,14 @@ _Sim. A LDB determina que a Base oriente as propostas pedagógicas de todas as e
 ### BNCC e currículo são a mesma coisa?
 
 _Não. A BNCC define o que todos os alunos devem aprender, enquanto o currículo detalha como cada rede vai ensinar. Estados, municípios e escolas acrescentam uma parte diversificada, ligada à cultura e à realidade local, sempre alinhada à Base._
+
+### Quando a BNCC foi aprovada?
+
+_A BNCC da Educação Infantil e do Ensino Fundamental foi homologada em 20 de dezembro de 2017, e a do Ensino Médio, em 14 de dezembro de 2018. A implementação nas redes de ensino começou em 2020._
+
+### Quais são as 10 competências gerais da BNCC?
+
+_Conhecimento, pensamento científico, crítico e criativo, repertório cultural, comunicação, cultura digital, trabalho e projeto de vida, argumentação, autoconhecimento e autocuidado, empatia e cooperação, e responsabilidade e cidadania._
 
 ### Quais são as etapas cobertas pela BNCC?
 
