@@ -9,6 +9,15 @@ export interface Category {
 // Category pages are real, indexable URLs (/categoria/<slug>/). `name` must match the `category` field in the posts' frontmatter.
 export const categories: Category[] = [
   {
+    slug: 'noticias',
+    name: 'Notícias',
+    title: 'Notícias de tecnologia, IA e games no Brasil',
+    description:
+      'Notícias de tecnologia, IA, jogos e celulares com o que muda para o leitor brasileiro: preço em reais, disponibilidade e como usar a novidade.',
+    intro:
+      'O que aconteceu hoje no mundo da tecnologia, explicado de forma direta: lançamentos, atualizações e anúncios, sempre com o que muda para quem usa no Brasil.',
+  },
+  {
     slug: 'inteligencia-artificial',
     name: 'Inteligência Artificial',
     title: 'Inteligência Artificial: notícias, guias e comandos',
@@ -70,15 +79,6 @@ export const categories: Category[] = [
       'Aplicativos, plugins e ferramentas para usar no dia a dia, com guias de instalação e uso, como o plugin Higgsfield no ChatGPT.',
     intro:
       'Guias de aplicativos e plugins úteis, com instalação, custos e os erros mais comuns explicados.',
-  },
-  {
-    slug: 'noticias',
-    name: 'Notícias',
-    title: 'Notícias de tecnologia, IA e games no Brasil',
-    description:
-      'Notícias de tecnologia, IA, jogos e celulares com o que muda para o leitor brasileiro: preço em reais, disponibilidade e como usar a novidade.',
-    intro:
-      'O que aconteceu hoje no mundo da tecnologia, explicado de forma direta: lançamentos, atualizações e anúncios, sempre com o que muda para quem usa no Brasil.',
   },
 ];
 

@@ -7,6 +7,7 @@ import { isPublished, sortByActivity } from '../../utils/posts';
 const posts = sortByActivity(await getCollection('blog', isPublished));
 
 const categories = [
+  'Notícias',
   'Inteligência Artificial',
   'Jogos',
   'Tutoriais',
@@ -14,7 +15,6 @@ const categories = [
   'Curiosidades',
   'Reviews',
   'Apps',
-  'Notícias',
 ];
 ---
 <BaseLayout title="Blog" description="Guias, reviews e notícias sobre IA, jogos, tutoriais e curiosidades.">
