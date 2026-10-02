@@ -13,6 +13,7 @@ export async function getStaticPaths() {
   }));
 }
 
+const PAGE_SIZE = 6;
 const { category, posts } = Astro.props;
 
 const schema = {
@@ -48,7 +49,8 @@ const schema = {
     </header>
 
     <div class="posts">
-      {posts.map((post) => (
+      {posts.map((post, i) => (
+        <div class={i < PAGE_SIZE ? 'item' : 'item extra'}>
         <PostCard
           slug={post.id}
           title={post.data.title}
@@ -59,8 +61,14 @@ const schema = {
           image={post.data.image}
           imageAlt={post.data.imageAlt}
         />
+        </div>
       ))}
     </div>
+    {posts.length > PAGE_SIZE && (
+      <div class="more-wrap">
+        <button type="button" id="more-posts" class="more-btn" data-step={PAGE_SIZE}>Ver mais posts</button>
+      </div>
+    )}
 
     <nav class="other" aria-label="Outras categorias">
       {categories
@@ -70,7 +78,27 @@ const schema = {
   </div>
 </BaseLayout>
 
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('#more-posts');
+  btn?.addEventListener('click', () => {
+    const step = Number(btn.dataset.step) || 6;
+    const hidden = document.querySelectorAll<HTMLElement>('.item.extra:not(.show)');
+    hidden.forEach((el, i) => {
+      if (i < step) el.classList.add('show');
+    });
+    if (hidden.length <= step) btn.parentElement?.remove();
+  });
+</script>
+
 <style>
+  .item {
+    display: contents;
+  }
+
+  .item.extra:not(.show) {
+    display: none;
+  }
+
   .page-header {
     padding-block: 48px 24px;
     max-width: 60ch;
@@ -109,6 +137,30 @@ const schema = {
     .posts {
       grid-template-columns: 1fr;
     }
+  }
+
+  .more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-block: 24px 40px;
+  }
+
+  .more-btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 28px;
+    border-radius: 999px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--violet), var(--rose));
+    transition: transform 0.15s ease, filter 0.15s ease;
+  }
+
+  .more-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
   }
 
   .other {
