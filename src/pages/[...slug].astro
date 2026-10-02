@@ -1,17 +1,19 @@
 ---
 import { getCollection, render } from 'astro:content';
-import { isPublished } from '../utils/posts';
+import { isPublished, sortByActivity } from '../utils/posts';
 import PostLayout from '../layouts/PostLayout.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', isPublished);
-  return posts.map((post) => ({
+  // Same order as the home feed, newest first: "previous" is the older post, "next" the newer one.
+  const posts = sortByActivity(await getCollection('blog', isPublished));
+  const link = (p?: (typeof posts)[number]) => (p ? { slug: p.id, title: p.data.title } : undefined);
+  return posts.map((post, i) => ({
     params: { slug: post.id },
-    props: { post },
+    props: { post, prev: link(posts[i + 1]), next: link(posts[i - 1]) },
   }));
 }
 
-const { post } = Astro.props;
+const { post, prev, next } = Astro.props;
 const { Content } = await render(post);
 ---
 <PostLayout
@@ -26,6 +28,8 @@ const { Content } = await render(post);
   readingTime={post.data.readingTime}
   image={post.data.image}
   imageAlt={post.data.imageAlt}
+  prev={prev}
+  next={next}
 >
   <Content />
 </PostLayout>
