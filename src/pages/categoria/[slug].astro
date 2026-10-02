@@ -64,11 +64,9 @@ const schema = {
         </div>
       ))}
     </div>
-    {posts.length > PAGE_SIZE && (
-      <div class="more-wrap">
-        <button type="button" id="more-posts" class="more-btn" data-step={PAGE_SIZE}>Ver mais posts</button>
-      </div>
-    )}
+    <div class="more-wrap">
+      <a href="/blog/" id="more-posts" class="more-btn" data-step={PAGE_SIZE}>Ver mais posts</a>
+    </div>
 
     <nav class="other" aria-label="Outras categorias">
       {categories
@@ -79,14 +77,16 @@ const schema = {
 </BaseLayout>
 
 <script>
-  const btn = document.querySelector<HTMLButtonElement>('#more-posts');
-  btn?.addEventListener('click', () => {
+  // Reveals the next batch of this category's posts; once none are left the button is a plain link to the blog.
+  const btn = document.querySelector<HTMLAnchorElement>('#more-posts');
+  btn?.addEventListener('click', (event) => {
     const step = Number(btn.dataset.step) || 6;
     const hidden = document.querySelectorAll<HTMLElement>('.item.extra:not(.show)');
+    if (!hidden.length) return;
+    event.preventDefault();
     hidden.forEach((el, i) => {
       if (i < step) el.classList.add('show');
     });
-    if (hidden.length <= step) btn.parentElement?.remove();
   });
 </script>
 
@@ -146,6 +146,8 @@ const schema = {
   }
 
   .more-btn {
+    display: inline-block;
+    text-decoration: none;
     font-family: var(--font-body);
     font-weight: 600;
     font-size: 0.95rem;
