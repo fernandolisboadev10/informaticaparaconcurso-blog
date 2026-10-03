@@ -2,7 +2,7 @@
 title: "A IA chinesa que rivaliza com ChatGPT e Claude: o caso DeepSeek"
 description: "Como o DeepSeek, IA chinesa de uso pessoal gratuito, passou a rivalizar com ChatGPT e Claude em raciocínio, o que o V4 mudou e o que pesar antes de usar."
 category: "Inteligência Artificial"
-date: 2026-10-03T12:00:00-03:00
+date: 2026-10-03T11:13:00-03:00
 readingTime: "6 min"
 image: "./images/deepseek-2026-guia-completo.webp"
 imageAlt: "Celular exibindo a tela inicial do aplicativo DeepSeek sobre uma mesa cinza"
