@@ -1,5 +1,5 @@
 ---
-title: "IA chinesa grátis que desafia o raciocínio das pagas: DeepSeek"
+title: "A IA chinesa que rivaliza com ChatGPT e Claude: o caso DeepSeek"
 description: "Como o DeepSeek, IA chinesa de uso pessoal gratuito, passou a rivalizar com ChatGPT e Claude em raciocínio, o que o V4 mudou e o que pesar antes de usar."
 category: "Inteligência Artificial"
 date: 2026-10-03T12:00:00-03:00
@@ -10,7 +10,7 @@ tags: ["DeepSeek", "DeepSeek V4", "Inteligência artificial", "IA chinesa"]
 related: ["gemini-4-argon", "chatgpt-gratis-ou-pago"]
 ---
 
-Uma empresa chinesa de IA, com um chatbot de uso pessoal gratuito, passou a ser comparada em raciocínio a modelos de assinaturas caras como Claude e ChatGPT. O nome é **DeepSeek**, e em 2026 a história ganhou capítulos novos: o modelo V4, uma disputa de benchmarks e, agora, uma alta de preços que muda a conta de quem usa a API.
+Uma IA chinesa de uso pessoal gratuito passou a ser comparada em raciocínio a modelos de assinaturas caras, como o Claude e o ChatGPT. O nome é **DeepSeek**, e em 2026 a história ganhou capítulos novos: o modelo V4, uma disputa de benchmarks e, agora, uma alta de preços que muda a conta de quem usa a API.
 
 Este texto se baseia em reportagens do TechTudo e do Canaltech, e não em teste próprio. A ideia é explicar por que o DeepSeek chamou tanta atenção, até onde vai o "grátis" e o que ainda precisa de cautela.
 
