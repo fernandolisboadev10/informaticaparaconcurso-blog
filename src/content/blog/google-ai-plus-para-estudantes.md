@@ -100,6 +100,6 @@ O resgate vale até 31 de dezembro de 2026. Novos usuários e quem teve o teste 
 
 O AI Plus dá 400 GB e análise de até 200 páginas de anotações, sem custo por um ano. O AI Pro traz 5 TB, até 1.500 páginas, Nano Banana Pro e ferramentas de programação por R$ 23,99 mensais com desconto.
 
-Antes que o prazo acabe, [resgate seu plano de estudante grátis na página oficial do Gemini](https://gemini.google/br/students/?hl=pt-BR) e comece a usar o Google AI Plus.
+Antes que o prazo acabe, resgate seu plano de estudante grátis na página oficial do Gemini e comece a usar o Google AI Plus.
 
 ![](./images/Google-AI-Plus-para-estudantes-1024x683.webp)

@@ -61,7 +61,7 @@ A bateria de 5.220 mAh dura de 2 a 6,5 horas, conforme o guia. O resultado depen
 
 ## Preço no Brasil
 
-No lançamento, o Switch 2 foi anunciado por R$ 4.499,90 na versão só com o console e por R$ 4.799,90 no pacote com Mario Kart World, segundo o [Tecnoblog](https://tecnoblog.net/noticias/nintendo-switch-2-chega-ao-brasil-em-junho-confira-os-precos/) e o [Omelete](https://www.omelete.com.br/games/nintendo-switch-2-brasil-lancamento-preco). O TechTudo também registrou preços menores em lojas, como R$ 4.184,90 no Pix em um varejista no dia do lançamento, e disse que o Brasil teve um dos maiores preços do console no mundo.
+No lançamento, o Switch 2 foi anunciado por R$ 4.499,90 na versão só com o console e por R$ 4.799,90 no pacote com Mario Kart World, segundo o Tecnoblog e o [Omelete](https://www.omelete.com.br/games/nintendo-switch-2-brasil-lancamento-preco). O TechTudo também registrou preços menores em lojas, como R$ 4.184,90 no Pix em um varejista no dia do lançamento, e disse que o Brasil teve um dos maiores preços do console no mundo.
 
 São valores de 2025. Os preços mudam rápido, e o console já apareceu em ofertas antes do Dia das Crianças, então compare lojas antes de comprar.
 

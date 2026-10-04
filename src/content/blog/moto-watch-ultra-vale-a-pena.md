@@ -62,7 +62,7 @@ Segundo a Motorola, conforme o Canaltech, o relógio dura até 50 horas com a te
 
 ## Sistema e aplicativos
 
-O Moto Watch Ultra roda Wear OS e acessa a Play Store. Vêm instalados Google Maps, Mensagens, Gemini, YouTube Music, Spotify, WhatsApp e Strava, de acordo com o Canaltech. A Motorola também cita integração com a Qira, e o [Canaltech](https://canaltech.com.br/smartwatch/motorola-lanca-moto-watch-ultra-para-desafiar-apple-e-samsung-no-segmento-ultra/) lista o Google Wallet entre os serviços.
+O Moto Watch Ultra roda Wear OS e acessa a Play Store. Vêm instalados Google Maps, Mensagens, Gemini, YouTube Music, Spotify, WhatsApp e Strava, de acordo com o Canaltech. A Motorola também cita integração com a Qira, e o Canaltech lista o Google Wallet entre os serviços.
 
 Por ser Wear OS, o relógio é mais pensado para o ecossistema Android. As reportagens consultadas não falam em compatibilidade com iPhone, então quem usa iOS deve confirmar com a Motorola antes de comprar.
 
