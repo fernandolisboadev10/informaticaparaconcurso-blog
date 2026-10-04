@@ -25,7 +25,7 @@ Em resumo, ele faz sentido para quem quer um relógio Wear OS com eSIM 4G, GPS d
 
 ## Ficha técnica do Moto Watch Ultra
 
-Segundo o Canaltech, que cobriu o lançamento no Brasil, o relógio tem:
+Segundo a reportagem que cobriu o lançamento no Brasil, o relógio tem:
 
 | 🔍 Item | ⌚ Moto Watch Ultra |
 | --- | --- |
@@ -52,17 +52,17 @@ Esse recurso depende de um plano de dados compatível, e o custo do plano é à 
 
 O GPS de dupla frequência, listado na ficha, costuma ajudar em regiões com prédios altos ou muitas árvores, onde o sinal de um único canal oscila. Isso importa para quem acompanha ritmo e percurso com precisão.
 
-O relógio traz a plataforma de saúde da Polar, com recursos como o Running Coach (planos de treino), o Nightly Recharge (análise de recuperação), o Serene (respiração guiada) e o Sleep Plus Stages. Este último mede as fases do sono, entre leve, profundo e REM, e dá uma nota de 1 a 100, segundo o Canaltech.
+O relógio traz a plataforma de saúde da Polar, com recursos como o Running Coach (planos de treino), o Nightly Recharge (análise de recuperação), o Serene (respiração guiada) e o Sleep Plus Stages. Este último mede as fases do sono, entre leve, profundo e REM, e dá uma nota de 1 a 100, segundo a reportagem.
 
 Esses dados sincronizam com o aplicativo Polar Flow. Como os números vêm da própria fabricante e da Polar, a precisão real só será conhecida quando houver testes independentes.
 
 ## Bateria: o que a Motorola promete
 
-Segundo a Motorola, conforme o Canaltech, o relógio dura até 50 horas com a tela sem o modo always-on e 45 horas com ele ligado. Uma recarga rápida de 15 minutos dá cerca de 24 horas de uso. São números da fabricante, medidos em condições controladas. Quem usa o 4G e o GPS com frequência deve ter autonomia menor.
+Segundo a Motorola, conforme o anúncio, o relógio dura até 50 horas com a tela sem o modo always-on e 45 horas com ele ligado. Uma recarga rápida de 15 minutos dá cerca de 24 horas de uso. São números da fabricante, medidos em condições controladas. Quem usa o 4G e o GPS com frequência deve ter autonomia menor.
 
 ## Sistema e aplicativos
 
-O Moto Watch Ultra roda Wear OS e acessa a Play Store. Vêm instalados Google Maps, Mensagens, Gemini, YouTube Music, Spotify, WhatsApp e Strava, de acordo com o Canaltech. A Motorola também cita integração com a Qira, e o Canaltech lista o Google Wallet entre os serviços.
+O Moto Watch Ultra roda Wear OS e acessa a Play Store. Vêm instalados Google Maps, Mensagens, Gemini, YouTube Music, Spotify, WhatsApp e Strava, de acordo com a reportagem. A Motorola também cita integração com a Qira, e a reportagem lista o Google Wallet entre os serviços.
 
 Por ser Wear OS, o relógio é mais pensado para o ecossistema Android. As reportagens consultadas não falam em compatibilidade com iPhone, então quem usa iOS deve confirmar com a Motorola antes de comprar.
 
@@ -104,7 +104,7 @@ Se você está em dúvida, espere as primeiras análises de bateria e de precis�
 
 **Quanto custa o Moto Watch Ultra no Brasil?**
 
-_O preço sugerido é de R$ 4.999, segundo o Canaltech, no lançamento de 1º de outubro de 2026._
+_O preço sugerido é de R$ 4.999, segundo a reportagem, no lançamento de 1º de outubro de 2026._
 
 **O Moto Watch Ultra tem 4G?**
 

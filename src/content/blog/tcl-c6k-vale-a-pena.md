@@ -10,7 +10,7 @@ tags: ["TCL C6K", "Smart TV", "Mini LED", "Review"]
 related: []
 ---
 
-Este guia é feito com base na análise do TechTudo, na ficha técnica e em anúncios de lojas, sem teste próprio da TV. Dito isso, a **TCL C6K** vale a pena para quem quer uma TV 4K com Mini LED, 144 Hz e Google TV sem pagar o preço de uma OLED. A análise do TechTudo, feita com o modelo de 75 polegadas, deu nota 4,4 de 5 e a chamou de ótima opção de custo-benefício. O ponto fraco é não ser OLED: quem busca preto absoluto e ângulo de visão máximo precisa olhar outra categoria.
+Este guia é feito com base na análise do TechTudo, na ficha técnica e em anúncios de lojas, sem teste próprio da TV. Dito isso, a **TCL C6K** vale a pena para quem quer uma TV 4K com Mini LED, 144 Hz e Google TV sem pagar o preço de uma OLED. Na análise, feita com o modelo de 75 polegadas, deu nota 4,4 de 5 e a chamou de ótima opção de custo-benefício. O ponto fraco é não ser OLED: quem busca preto absoluto e ângulo de visão máximo precisa olhar outra categoria.
 
 Este guia reúne a ficha técnica, os preços por tamanho, os pontos fortes e fracos e uma regra simples para decidir.
 
@@ -47,21 +47,21 @@ As lojas brasileiras listam a linha como QD-Mini LED, com HDR10+, Dolby Vision I
 
 Em uma TV comum com LED, a luz de fundo é uniforme ou usa poucas zonas. No Mini LED, a luz vem de milhares de LEDs minúsculos agrupados em zonas de escurecimento local. A TV apaga ou reduz as zonas escuras da cena e mantém acesas as claras.
 
-O resultado prático é mais contraste e mais brilho em cenas de HDR do que em uma TV LED básica. O TechTudo destaca o contraste e o brilho como os pontos altos da C6K e repete o número da fabricante, segundo a qual a tela tem intensidade 53% maior que a de Mini LED convencional. Não medimos isso: é um dado da TCL.
+O resultado prático é mais contraste e mais brilho em cenas de HDR do que em uma TV LED básica. A análise destaca o contraste e o brilho como os pontos altos da C6K e repete o número da fabricante, segundo a qual a tela tem intensidade 53% maior que a de Mini LED convencional. Não medimos isso: é um dado da TCL.
 
 Isso não equivale a uma OLED, em que cada pixel acende e apaga sozinho. Em cenas com pontos de luz sobre fundo preto, a TV com zonas pode mostrar um halo discreto ao redor do objeto claro.
 
 ## Preço da TCL C6K no Brasil
 
-Os valores mudam bastante por loja e por promoção, e os números abaixo são os que as reportagens citavam no fim de setembro de 2026 (30/09/2026), sem checagem diária nas lojas. Na análise do TechTudo, a versão de 55 polegadas aparece entre R$ 3.180 e R$ 3.799, a de 65 polegadas por cerca de R$ 4.651 e a de 75 polegadas a partir de R$ 6.000.
+Os valores mudam bastante por loja e por promoção, e os números abaixo são os que as reportagens citavam no fim de setembro de 2026 (30/09/2026), sem checagem diária nas lojas. Na análise, a versão de 55 polegadas aparece entre R$ 3.180 e R$ 3.799, a de 65 polegadas por cerca de R$ 4.651 e a de 75 polegadas a partir de R$ 6.000.
 
-Em um levantamento de preços feito em lojas, a de 55 polegadas aparecia a partir de R$ 3.279, e a de 65 polegadas, a partir de R$ 3.963. Também houve promoções fortes: o Tecnoblog noticiou que o modelo de 55 polegadas chegou a cair quase R$ 1 mil em uma oferta do Magalu.
+Em um levantamento de preços feito em lojas, a de 55 polegadas aparecia a partir de R$ 3.279, e a de 65 polegadas, a partir de R$ 3.963. Também houve promoções fortes: o [Tecnoblog](https://tecnoblog.net/achados/tv-tcl-c6k-com-mini-led-de-55-tem-melhor-preco-em-meses-em-oferta-na-amazon/) noticiou que o modelo de 55 polegadas chegou a cair quase R$ 1 mil em uma oferta do Magalu.
 
 A regra é pesquisar o histórico de preço antes de fechar a compra. Quando a TV está perto do piso de mercado, o custo-benefício melhora bastante.
 
 ## Para jogos: 144 Hz, VRR e HDMI 2.1
 
-É aqui que a C6K se destaca na faixa de preço. A TV tem 144 Hz, VRR e quatro portas HDMI 2.1, segundo o TechTudo, que cita FreeSync Premium entre os recursos para jogos.
+É aqui que a C6K se destaca na faixa de preço. A TV tem 144 Hz, VRR e quatro portas HDMI 2.1, segundo a análise, que cita FreeSync Premium entre os recursos para jogos.
 
 Na prática, quem tem um PC capaz de passar de 60 quadros por segundo aproveita a taxa alta. Os consoles atuais usam até 120 Hz, então a TV atende com folga. Uma tela de 144 Hz evita que a TV vire o gargalo para quem joga em PC. Para mais conteúdo sobre jogos, veja a página de [Jogos](/categoria/jogos/).
 
@@ -97,7 +97,7 @@ Se você assiste a filmes no escuro e quer o melhor preto possível, vale pagar 
 
 ## Vale a pena comprar a TCL C6K?
 
-Sim, para a maioria das pessoas que buscam uma TV de 55 a 75 polegadas com boa imagem e recursos para jogos. O TechTudo concluiu que ela é uma excelente opção para quem quer Mini LED de qualidade sem pagar o preço de uma OLED.
+Sim, para a maioria das pessoas que buscam uma TV de 55 a 75 polegadas com boa imagem e recursos para jogos. A análise concluiu que ela é uma excelente opção para quem quer Mini LED de qualidade sem pagar o preço de uma OLED.
 
 Só não compensa se você exige preto absoluto ou paga um valor muito acima do que as lojas praticam. Antes de comprar, compare preços, confirme o tamanho do móvel e da sala e veja a ficha técnica do modelo exato. Para outras análises, acesse a página de [Reviews](/categoria/reviews/).
 
@@ -105,11 +105,11 @@ Só não compensa se você exige preto absoluto ou paga um valor muito acima do 
 
 **A TCL C6K vale a pena em 2026?**
 
-_Vale, principalmente para quem quer Mini LED e recursos de jogos sem pagar o preço de uma OLED. A nota do TechTudo foi 4,4 de 5._
+_Vale, principalmente para quem quer Mini LED e recursos de jogos sem pagar o preço de uma OLED. A nota da análise foi 4,4 de 5._
 
 **A TCL C6K tem 144 Hz?**
 
-_Sim. A linha tem 144 Hz nativos, com VRR e quatro portas HDMI 2.1, segundo o TechTudo._
+_Sim. A linha tem 144 Hz nativos, com VRR e quatro portas HDMI 2.1, segundo a análise._
 
 **Qual o sistema operacional da TCL C6K?**
 
@@ -117,7 +117,7 @@ _Google TV._
 
 **Em quais tamanhos a TCL C6K é vendida?**
 
-_55, 65, 75, 85 e 98 polegadas, de acordo com o TechTudo._
+_55, 65, 75, 85 e 98 polegadas, de acordo com a análise._
 
 **A TCL C6K é OLED?**
 

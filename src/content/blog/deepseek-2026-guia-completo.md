@@ -18,8 +18,8 @@ Este texto se baseia em reportagens do TechTudo e do Canaltech, e não em teste 
 
 | 🎯 Pergunta | ✅ Resposta curta |
 | --- | --- |
-| É gratuita? | Para uso pessoal no chat, sim, segundo o TechTudo; a API é paga por token |
-| Desafia as pagas? | O Canaltech cita benchmarks comparáveis ao Claude Fable 5, mas rankings variam |
+| É gratuita? | Para uso pessoal no chat, sim; a API é paga por token |
+| Desafia as pagas? | Há benchmarks comparáveis ao Claude Fable 5, mas rankings variam |
 | Modelos atuais | V4-Pro e V4-Flash, com contexto de até 1 milhão de tokens |
 | O que mudou | Aumento de preços anunciado em agosto de 2026 |
 
@@ -31,16 +31,16 @@ O que diferenciava o R1 era o **raciocínio em etapas**: em vez de responder de 
 
 ## Ela é mesmo gratuita?
 
-Depende do uso, e o TechTudo desfaz um mito aqui:
+Depende do uso, e a reportagem de 2025 desfaz um mito aqui:
 
-- **Chat e app, uso pessoal:** o TechTudo informou, em janeiro de 2025, que não era preciso assinatura. Esse dado tem quase dois anos, então confirme as condições atuais no próprio app.
-- **API, para desenvolvedores:** é cobrada por token. Um guia do TechTudo de julho de 2026 diz que não há plano gratuito permanente na API, só crédito promocional inicial em contas novas.
+- **Chat e app, uso pessoal:** a reportagem informou, em janeiro de 2025, que não era preciso assinatura. Esse dado tem quase dois anos, então confirme as condições atuais no próprio app.
+- **API, para desenvolvedores:** é cobrada por token. Um guia de julho de 2026 diz que não há plano gratuito permanente na API, só crédito promocional inicial em contas novas.
 
 Ou seja, "grátis" vale para quem conversa no chat, não para quem constrói produtos em cima do modelo.
 
 ## O salto do V4
 
-Em 27 de abril de 2026, o Canaltech informou que a DeepSeek apresentou o V4 em versão de testes, com duas variantes: o **V4 Pro**, de 1,6 trilhão de parâmetros, e o **V4 Flash**, de 284 bilhões, mais leve e barato. Ambos têm contexto de até 1 milhão de tokens. A empresa afirma que o modelo foi ajustado para ferramentas como Claude Code, OpenClaw, OpenCode e CodeBuddy.
+Em 27 de abril de 2026, a DeepSeek apresentou o V4 em versão de testes, segundo a imprensa de tecnologia, com duas variantes: o **V4 Pro**, de 1,6 trilhão de parâmetros, e o **V4 Flash**, de 284 bilhões, mais leve e barato. Ambos têm contexto de até 1 milhão de tokens. A empresa afirma que o modelo foi ajustado para ferramentas como Claude Code, OpenClaw, OpenCode e CodeBuddy.
 
 Em 13 de agosto, segundo o [Canaltech](https://canaltech.com.br/inteligencia-artificial/deepseek-cresce-no-mercado-e-lanca-nova-ia-para-ameacar-chatgpt-e-claude/), o V4-Pro foi para o ar no app e no site oficial, com:
 
@@ -48,11 +48,11 @@ Em 13 de agosto, segundo o [Canaltech](https://canaltech.com.br/inteligencia-art
 - raciocínio adaptável, com pouco esforço em pedidos simples e mais capacidade nos complexos;
 - desempenho em testes comparável ao do Claude Fable 5 e ao do Kimi K3.
 
-O mesmo texto diz que, em julho de 2026, a DeepSeek foi a segunda desenvolvedora de IA em volume de tokens usados, atrás da Anthropic e com quase o dobro do Google. Benchmarks dependem do teste, então vale ver o resultado como indício, e não como veredito. O TechTudo, aliás, lembrava em 2025 que o ChatGPT tinha recursos que o DeepSeek não tinha, como geração de imagem e conversa por voz. A comparação muda a cada lançamento.
+O mesmo texto diz que, em julho de 2026, a DeepSeek foi a segunda desenvolvedora de IA em volume de tokens usados, atrás da Anthropic e com quase o dobro do Google. Benchmarks dependem do teste, então vale ver o resultado como indício, e não como veredito. Já em 2025, a cobertura lembrava que o ChatGPT tinha recursos que o DeepSeek não tinha, como geração de imagem e conversa por voz. A comparação muda a cada lançamento.
 
 ## Visão computacional em teste
 
-Em 21 de agosto, o Canaltech noticiou o **DeepSeek-V4-Flash-Vision-Exp**, modelo experimental que processa texto e imagem e consegue agir a partir do que aparece na tela. O acesso é pela API, ainda em fase experimental.
+Em 21 de agosto, foi noticiado o **DeepSeek-V4-Flash-Vision-Exp**, modelo experimental que processa texto e imagem e consegue agir a partir do que aparece na tela. O acesso é pela API, ainda em fase experimental.
 
 ## A mudança de preços
 
@@ -61,7 +61,7 @@ O baixo custo foi sempre o argumento central. Em 7 de agosto, o [Canaltech](http
 - **Preço então vigente do V4 Flash:** US$ 0,14 por milhão de tokens de entrada e US$ 0,28 por milhão de saída.
 - **Novo esquema:** a empresa disse que seria divulgado separadamente.
 - **Horário de pico:** desde julho, as tarifas dobram das 9h às 12h e das 14h às 18h de Pequim, em dias úteis.
-- **Motivo:** segundo a Bloomberg, citada pelo Canaltech, a empresa planeja um data center de 1 gigawatt na Mongólia Interior.
+- **Motivo:** segundo a Bloomberg, citada na reportagem, a empresa planeja um data center de 1 gigawatt na Mongólia Interior.
 
 São valores de agosto. Antes de fazer contas, consulte a página oficial de preços da API.
 
@@ -70,8 +70,8 @@ São valores de agosto. Antes de fazer contas, consulte a página oficial de pre
 São critérios gerais, não conclusões das reportagens:
 
 1. **Dados sensíveis.** Antes de enviar documentos internos, leia a política de privacidade e as regras da sua empresa.
-2. **Qualidade em português.** Teste com tarefas reais suas. O TechTudo observou que o DeepSeek entende português, embora o raciocínio às vezes apareça em inglês.
-3. **Temas políticos.** O TechTudo apontou que a plataforma evita alguns assuntos ligados à política chinesa.
+2. **Qualidade em português.** Teste com tarefas reais suas. Testes da imprensa observaram que o DeepSeek entende português, embora o raciocínio às vezes apareça em inglês.
+3. **Temas políticos.** Reportagens apontaram que a plataforma evita alguns assuntos ligados à política chinesa.
 4. **Custo e dependência.** Com preços em alta, simule o consumo e tenha um plano B.
 
 ## E as concorrentes?
@@ -82,15 +82,15 @@ O mercado segue disputado. O Google apresentou o [Gemini 4 Argon](/gemini-4-argo
 
 **O DeepSeek é gratuito?**
 
-_Para uso pessoal no chat, segundo o TechTudo em 2025. A API é paga por token. Confirme as condições atuais no app._
+_Para uso pessoal no chat, segundo reportagem de 2025. A API é paga por token. Confirme as condições atuais no app._
 
 **O DeepSeek raciocina melhor que o ChatGPT?**
 
-_Depende do teste. O Canaltech cita benchmarks do V4-Pro comparáveis ao Claude Fable 5, mas só um teste com as suas tarefas mostra qual serve melhor._
+_Depende do teste. Há benchmarks do V4-Pro comparáveis ao Claude Fable 5, mas só um teste com as suas tarefas mostra qual serve melhor._
 
 **Qual a janela de contexto do DeepSeek V4?**
 
-_Até 1 milhão de tokens, segundo o Canaltech._
+_Até 1 milhão de tokens, segundo a reportagem do lançamento._
 
 **O DeepSeek vai ficar mais caro?**
 
