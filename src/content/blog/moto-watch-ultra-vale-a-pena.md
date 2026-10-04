@@ -10,7 +10,7 @@ tags: ["Moto Watch Ultra", "Motorola", "Smartwatch", "Wear OS"]
 related: []
 ---
 
-O **Moto Watch Ultra** chegou ao Brasil em 1º de outubro de 2026 com preço sugerido de R$ 4.999, segundo o [Canaltech](https://canaltech.com.br/smartwatch/motorola-lanca-moto-watch-ultra-no-brasil-com-esim-e-tecnologia-da-polar/). Este texto se baseia na ficha técnica e nas informações do lançamento: ainda não há análises independentes de uso prolongado, então a pergunta "vale a pena?" fica respondida por critérios, e não por teste.
+O **Moto Watch Ultra** chegou ao Brasil em 1º de outubro de 2026 com preço sugerido de R$ 4.999, segundo o [Canaltech](https://canaltech.com.br/smartwatch/motorola-lanca-moto-watch-ultra-no-brasil-com-esim-e-tecnologia-da-polar/) e o [Mundo Conectado](https://www.mundoconectado.com.br/smartphones/motorola-lanca-moto-watch-ultra-no-brasil-com-monitoramento-da-polar-e-esim/). Este texto se baseia na ficha técnica e nas informações do lançamento: ainda não há análises independentes de uso prolongado, então a pergunta "vale a pena?" fica respondida por critérios, e não por teste.
 
 Em resumo, ele faz sentido para quem quer um relógio Wear OS com eSIM 4G, GPS de dupla frequência e recursos de saúde da Polar, e aceita pagar perto de R$ 5 mil por isso. Para quem só quer ver notificações e contar passos, é caro demais.
 
