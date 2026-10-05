@@ -1,0 +1,144 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A fórmula =SOMA(B2:E2), inserida na célula F2, retorna corretamente o valor 31, referente ao total de notas de Ana.",
+   "answer": "C",
+   "comment": "A SOMA percorre o intervalo B2:E2 e soma as quatro notas: 8,5 + 7 + 8 + 7,5 = 31. O intervalo não inclui a própria célula F2."
+  },
+  {
+   "banca": "Estilo CEBRASPE",
+   "type": "mc",
+   "text": "Qual fórmula você usaria na célula G2 para calcular a média das notas de Ana, e qual seria o resultado?",
+   "options": [
+    "=MÉDIA(B2:E2), resultado 7,75",
+    "=SOMA(B2:E2)/5, resultado 6,2",
+    "=MÉDIA(B2:F2), resultado 12,4",
+    "=MÉDIA(B2:E2), resultado 31",
+    "=MÁXIMO(B2:E2), resultado 8,5"
+   ],
+   "answer": "A",
+   "comment": "A MÉDIA soma o intervalo e divide pela quantidade de células: 31 ÷ 4 = 7,75. Se o intervalo incluísse o Total (F2), o resultado seria distorcido. Células vazias são ignoradas, e não contadas como zero."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Se a fórmula =SOMA(B2:E2) da célula F2 for copiada, por meio da alça de preenchimento, para a célula F3, ela passará a somar automaticamente as notas de Bruno (B3:E3), pois a referência é relativa.",
+   "answer": "C",
+   "comment": "Sem o cifrão ($), a referência é relativa e acompanha a posição para onde a fórmula é copiada."
+  },
+  {
+   "banca": "Estilo CEBRASPE",
+   "type": "mc",
+   "text": "Considerando a fórmula =SE(G3>=7;\"APROVADO\";\"REPROVADO\") e que a média de Bruno (G3) é 6, o resultado dessa fórmula é:",
+   "options": [
+    "APROVADO",
+    "REPROVADO",
+    "VERDADEIRO",
+    "FALSO",
+    "6"
+   ],
+   "answer": "B",
+   "comment": "Como 6 não é maior ou igual a 7, a condição é falsa e a SE devolve o segundo texto. A estrutura é sempre: condição; valor se verdadeiro; valor se falso."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A função SE aceita que os textos usados como resultado, como APROVADO e REPROVADO, sejam digitados diretamente na fórmula sem as aspas duplas.",
+   "answer": "E",
+   "comment": "Todo texto digitado diretamente em uma fórmula precisa estar entre aspas duplas. Sem elas, o Excel entende que são nomes e devolve erro. Números e referências de célula não exigem aspas."
+  },
+  {
+   "banca": "Estilo CEBRASPE",
+   "type": "mc",
+   "text": "O resultado da fórmula =MÁXIMO(B2:B6), aplicada à coluna Nota 1 de todos os alunos, é:",
+   "options": [
+    "6",
+    "7,5",
+    "8,5",
+    "9",
+    "4,5"
+   ],
+   "answer": "D",
+   "comment": "As notas da coluna Nota 1 são 8,5; 6; 9; 4,5 e 7,5. O maior valor é 9, de Carla."
+  },
+  {
+   "banca": "Estilo CEBRASPE",
+   "type": "mc",
+   "text": "O resultado da fórmula =MÍNIMO(E2:E6), aplicada à coluna Nota 4 de todos os alunos, é:",
+   "options": [
+    "4,5",
+    "4",
+    "6",
+    "7",
+    "8,5"
+   ],
+   "answer": "B",
+   "comment": "As notas da coluna Nota 4 são 7,5; 6; 8,5; 4 e 7. O menor valor é 4, de Diego. Um intervalo digitado errado é a causa mais comum de erro."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A fórmula =CONT.SE(H2:H6;\"APROVADO\") retorna o valor 3, pois três alunos, Ana, Carla e Elisa, foram aprovados.",
+   "answer": "C",
+   "comment": "A CONT.SE conta as ocorrências de um critério, que pode ser texto, número ou condição. Três linhas da coluna Resultado têm APROVADO."
+  },
+  {
+   "banca": "Estilo CEBRASPE",
+   "type": "mc",
+   "text": "O resultado da fórmula =CONT.SE(H2:H6;\"REPROVADO\") é:",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "answer": "B",
+   "comment": "Apenas Bruno e Diego aparecem como REPROVADO. Como existem 5 alunos e 3 foram aprovados, sobram 2."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A função PROCV poderia ser usada para, a partir do nome de um aluno digitado em outra célula, retornar automaticamente o seu Total, desde que a coluna com os nomes esteja à esquerda da coluna com os totais.",
+   "answer": "C",
+   "comment": "A PROCV busca o valor na primeira coluna do intervalo e retorna um dado de uma coluna à direita, na mesma linha. Se o nome estivesse à direita do Total, a PROCV tradicional não conseguiria a busca."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Se em uma célula J1 fosse digitado o nome Carla e usada a fórmula =PROCV(J1;A2:H6;6;0), essa fórmula retornaria o valor 35, referente ao Total de Carla.",
+   "answer": "C",
+   "comment": "O número 6 é a sexta coluna dentro do intervalo A2:H6 (A, B, C, D, E, F), e não a coluna F da planilha. Na linha de Carla, o Total é 35."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Na fórmula =PROCV(J1;A2:H6;6;0), o último argumento 0 (ou FALSO) indica que o Excel deve procurar uma correspondência aproximada do valor buscado.",
+   "answer": "E",
+   "comment": "O 0 (ou FALSO) indica correspondência exata. A correspondência aproximada é obtida com 1, VERDADEIRO ou omitindo o argumento, o que é perigoso porque pode devolver um valor parecido no lugar do certo."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Suponha que a nota de corte (7,0) esteja na célula K1 e que a fórmula em H2 seja =SE(G2>=$K$1;\"APROVADO\";\"REPROVADO\"). Ao copiar essa fórmula para H3, a referência a G2 mudará para G3, mas a referência a $K$1 permanecerá fixa.",
+   "answer": "C",
+   "comment": "G2 é relativa e acompanha a linha. $K$1 é absoluta: os dois cifrões travam coluna e linha ao mesmo tempo."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A fórmula =(B2+C2+D2+E2)/4, aplicada às notas de Ana, produz o mesmo resultado (7,75) que a fórmula =MÉDIA(B2:E2).",
+   "answer": "C",
+   "comment": "Os parênteses fazem o Excel somar as quatro notas antes de dividir por 4. Sem eles, apenas E2 seria dividido por 4, e o resultado sairia errado."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Excel em português do Brasil, os argumentos de uma função são separados por vírgula, como em =SE(G2>=7,\"APROVADO\",\"REPROVADO\").",
+   "answer": "E",
+   "comment": "Em português do Brasil, a vírgula é o separador decimal, e os argumentos são separados por ponto e vírgula: =SE(G2>=7;\"APROVADO\";\"REPROVADO\"). No Excel em inglês, é o contrário."
+  }
+ ]
+}

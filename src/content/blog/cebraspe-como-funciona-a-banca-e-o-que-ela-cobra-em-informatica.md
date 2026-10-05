@@ -11,7 +11,7 @@ imageAlt: "Cebraspe"
 
 Você abre o edital, encontra o nome Cebraspe na primeira página e sente um frio na barriga? Isso é comum. Poucas bancas despertam tanto respeito, e o motivo está menos no conteúdo e mais na forma como a prova funciona.
 
-Neste texto, explico quem é o Cebraspe, como ele pontua, o que costuma cobrar em Informática e como você deve estudar para não perder pontos por descuido. Ao final, você ainda resolve cinco itens no estilo da banca.
+Neste texto, explico quem é o Cebraspe, como ele pontua, o que costuma cobrar em Informática e como você deve estudar para não perder pontos por descuido. Ao final, você ainda resolve dez itens no estilo da banca.
 
 ## O que é o Cebraspe e por que ele domina tantos concursos
 

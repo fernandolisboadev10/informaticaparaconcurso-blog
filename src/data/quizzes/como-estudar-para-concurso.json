@@ -41,6 +41,34 @@
    "text": "No Windows, o atalho Ctrl+C recorta o item selecionado e o remove do local de origem.",
    "answer": "E",
    "comment": "Ctrl+C copia o item e o mantém no local de origem. Quem recorta é o Ctrl+X."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Faltando menos de 15 dias para a prova, o ideal é começar assuntos inéditos e profundos para ampliar a quantidade de conteúdo estudado.",
+   "answer": "E",
+   "comment": "Em poucos dias não dá para aprender o edital inteiro. A revisão dos assuntos de maior incidência devolve mais pontos do que matéria nova e profunda."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O caderno de erros deve registrar o enunciado resumido, o motivo do erro e a regra correta.",
+   "answer": "C",
+   "comment": "Esse caderno vira o melhor material de revisão da semana final, porque o erro que você repete é o erro que a banca já sabe que você comete."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A revisão ativa consiste em puxar a informação da memória, por meio de resumos, flashcards e caderno de erros, e não apenas em reler o material.",
+   "answer": "C",
+   "comment": "Reler dá a falsa sensação de domínio. Recuperar a informação da memória fixa o conteúdo com muito mais eficiência."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Na véspera da prova, a melhor estratégia é abrir assuntos novos para eliminar lacunas de última hora.",
+   "answer": "E",
+   "comment": "Na véspera, revise apenas o caderno de erros e os resumos. Descobrir uma lacuna tarde demais só aumenta a ansiedade."
   }
  ]
 }

@@ -62,6 +62,27 @@
    "text": "Uma página que aparece entre os primeiros resultados de um sítio de busca é, necessariamente, segura e confiável.",
    "answer": "E",
    "comment": "O ranqueamento de um sítio de busca não garante segurança. Páginas falsas, usadas em golpes de phishing, também podem aparecer bem posicionadas nos resultados."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "Considerando o navegador e o seu buscador padrão, a associação correta é:",
+   "options": [
+    "Google Chrome e Bing",
+    "Microsoft Edge e Google",
+    "Brave e Brave Search",
+    "Tor Browser e Baidu",
+    "Opera e Yandex"
+   ],
+   "answer": "C",
+   "comment": "O Brave usa o Brave Search como padrão. O Chrome usa o Google, o Edge usa o Bing e o Tor Browser usa o DuckDuckGo."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O Google Chrome e o Google Search são o mesmo produto, pois pertencem à mesma empresa.",
+   "answer": "E",
+   "comment": "A mesma empresa desenvolve dois produtos diferentes: o Chrome é um navegador, e o Google Search é um buscador. Essa sobreposição de nomes confunde o candidato."
   }
  ]
 }

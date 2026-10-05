@@ -34,6 +34,41 @@
    "text": "Se a fórmula =B2*$E$1 for copiada da célula C2 para a célula D3, ela passará a ser =C3*$E$1.",
    "answer": "C",
    "comment": "A referência relativa B2 acompanha o deslocamento de uma coluna e uma linha e vira C3. Já $E$1 é absoluta e permanece igual."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O vírus depende da execução de um arquivo ou programa hospedeiro para agir, ao passo que o worm é um programa independente que se copia pela rede.",
+   "answer": "C",
+   "comment": "Esse é o critério que resolve boa parte das questões: o vírus precisa de hospedeiro, e o worm se espalha sozinho."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O cavalo de troia (trojan) se replica sozinho e infecta outros arquivos do sistema.",
+   "answer": "E",
+   "comment": "O trojan engana o usuário parecendo um programa legítimo, mas não se replica sozinho nem infecta outros arquivos."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em uma rotina com backup normal no domingo e backups diferenciais de segunda a quinta, a restauração dos dados na sexta-feira exige o backup normal de domingo e apenas o diferencial de quinta.",
+   "answer": "C",
+   "comment": "O diferencial sempre olha para o último backup normal. Por isso, bastam dois conjuntos: o normal e o último diferencial."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A extranet é uma rede pública, aberta a qualquer usuário da internet, que dispensa autenticação.",
+   "answer": "E",
+   "comment": "A extranet estende a intranet a parceiros, fornecedores ou clientes autorizados, e o acesso continua controlado por autenticação."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Windows, ao excluir um arquivo com Shift + Delete, ele é removido sem passar pela Lixeira e não há botão para restaurá-lo.",
+   "answer": "C",
+   "comment": "O Delete envia o arquivo para a Lixeira, e o Shift + Delete o exclui sem passar por ela, depois de uma confirmação."
   }
  ]
 }

@@ -34,6 +34,41 @@
    "text": "O phishing é um ataque que explora falhas de hardware para danificar a placa-mãe da vítima.",
    "answer": "E",
    "comment": "Gabarito: ERRADO. O phishing usa engenharia social, como e-mails e páginas falsas, para enganar a vítima e roubar dados. Ele não depende de falha de hardware."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em uma prova com regra de desconto em que o candidato acerta 60 itens e erra 20, a sua nota líquida equivale a 40 acertos.",
+   "answer": "C",
+   "comment": "Nessa regra, cada item errado anula um item certo: 60 − 20 = 40. O item em branco não soma nem desconta."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O Cebraspe aplica exclusivamente provas no formato Certo ou Errado, sem questões de múltipla escolha e sem prova discursiva.",
+   "answer": "E",
+   "comment": "Alguns concursos trazem questões de múltipla escolha, e outros somam uma prova discursiva ou de redação. O edital define o formato."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Palavras como “qualquer”, “somente” e “nunca” costumam ser sinais de alerta em itens do Cebraspe, pois indicam uma afirmação absoluta que pode tornar o item errado.",
+   "answer": "C",
+   "comment": "A banca troca “pode” por “deve”, “alguns” por “todos” ou “geralmente” por “sempre”. Diante de um absoluto, teste a afirmação procurando uma exceção."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Os nomes Cespe e Cebraspe designam bancas diferentes, sem qualquer relação entre si.",
+   "answer": "E",
+   "comment": "O Cebraspe é o novo nome do Cespe, centro de seleção ligado à Universidade de Brasília. Trata-se da mesma tradição de prova."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em prova com regra de desconto, quando o candidato tem dúvida real sobre um item, uma orientação comum é deixá-lo em branco, pois o erro desconta pontos.",
+   "answer": "C",
+   "comment": "Responda quando tiver segurança. Mesmo assim, cautela não é medo: se você elimina a dúvida com raciocínio sólido, marque."
   }
  ]
 }

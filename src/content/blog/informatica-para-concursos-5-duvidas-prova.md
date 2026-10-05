@@ -13,7 +13,7 @@ Em informática para concursos, a banca raramente pede uma definição solta. O 
 
 Por isso, separei cinco dúvidas que aparecem prova após prova: malware, backup, redes, exclusão de arquivos e referências no Excel. Em cada bloco, você vai ver o raciocínio, um exemplo prático e o ponto exato que a banca costuma explorar.
 
-Ao final, você resolve cinco itens no estilo Certo ou Errado, com comentário, para testar o que aprendeu.
+Ao final, você resolve dez itens no estilo Certo ou Errado, com comentário, para testar o que aprendeu.
 
 ## Vírus, worm e cavalo de troia: qual é a diferença?
 
