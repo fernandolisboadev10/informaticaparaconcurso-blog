@@ -1,6 +1,6 @@
 ---
 title: "10 dicas para gabaritar a prova de Informática da Cebraspe PM MA 2026"
-description: "0 dicas para gabaritar Informática na Cebraspe PM MA 2026: revisão por blocos, pegadinhas da banca e simulados para a véspera da prova."
+description: "10 dicas para gabaritar Informática na Cebraspe PM MA 2026: revisão por blocos, pegadinhas da banca e simulados para a véspera da prova."
 category: "Dicas"
 date: 2026-09-28T19:00:10-03:00
 updated: 2026-09-28T19:09:33Z

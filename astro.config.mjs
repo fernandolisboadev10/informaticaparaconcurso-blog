@@ -36,6 +36,14 @@ export default defineConfig({
     '/author-sitemap.xml': '/sitemap-index.xml',
     '/author/fernando-lisboa': '/sobre-nos/',
     '/contato': '/fale-conosco/',
+    // Slugs antigos que o WordPress redirecionava e que o Google ainda mostra
+    '/linux-introducao-para-concursos': '/linux-para-concursos/',
+    '/linux-introducao-para-concurso': '/linux-para-concursos/',
+    '/linux.html': '/linux-para-concursos/',
+    '/windows-x-linux-para-concursos': '/windows-vs-linux-para-concursos/',
+    '/introducao-ao-windows-10-e-11': '/sistema-windows-7-10-11-para-concursos/',
+    '/simulado-windows-10-11-questoes-resolvidas-cebraspe': '/simulado-sistemas/',
+    '/organizacao-e-gerenciamento-de-arquivos-e-pastas-o-que-cai-na-sua-prova': '/informatica-concursos-gerenciamento-arquivos-pastas/',
   },
   // Self-hosted fonts: no Google Fonts round trips, preloaded and with metric-matched fallbacks.
   fonts: [
