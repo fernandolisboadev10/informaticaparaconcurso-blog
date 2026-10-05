@@ -1,10 +1,10 @@
 ---
 title: "Microsoft Word para Concursos: Aula Prática com o que Mais Cai em Prova"
-description: "Guia completo de Microsoft Word para concursos: interface, formatação, atalhos e pegadinhas mais cobradas pelas bancas."
+description: "Guia completo e revisão de Microsoft Word para concursos: interface, formatação, atalhos em português x inglês, quebra de seção e as pegadinhas das bancas."
 category: "Office"
 date: 2026-09-25T21:40:31-03:00
-updated: 2026-09-25T21:40:44Z
-readingTime: "12 min"
+updated: 2026-10-05T10:40:00-03:00
+readingTime: "15 min"
 image: "./images/Word.webp"
 imageAlt: "Microsoft Word para Concursos"
 ---
@@ -55,6 +55,29 @@ O Controle de Alterações permite acompanhar inserções, exclusões e ediçõe
 
 Na prática, funciona assim: quando a questão mencionar trabalho colaborativo, revisão por terceiros ou acompanhamento de modificações, pense imediatamente em comentários e Controle de Alterações. Essa associação direta evita erro bobo na hora da prova.
 
+Cada alteração registrada pode ser aceita ou rejeitada individualmente. Já os comentários são inseridos pela guia Revisão (Novo Comentário) e não alteram o texto original. Fique atento também às cores do corretor: o sublinhado vermelho ondulado indica possível erro ortográfico, enquanto o azul ou o verde indica possível erro gramatical ou de estilo. A banca gosta de inverter essas cores na questão.
+
+## Quebra de página x quebra de seção
+
+Esse é um dos detalhes que mais confundem o candidato. Guarde esta ideia: se a questão falar em “página com orientação diferente dentro do mesmo documento”, pense em quebra de seção, nunca em Ctrl + Enter.
+
+-   **Ctrl + Enter**: quebra de página simples. Só empurra o texto para a próxima página, mantendo a mesma orientação, margens e formatação.
+-   **Layout ▸ Quebras ▸ Próxima Página**: quebra de seção. Permite orientação, margens e colunas independentes em cada seção.
+
+## Estilos e sumário automático
+
+O Sumário, disponível na guia Referências, é gerado e atualizado a partir dos estilos de título (Título 1, Título 2 etc.) aplicados na guia Página Inicial. Por isso, para o sumário funcionar sozinho, o documento precisa usar estilos, e não apenas texto formatado à mão. Para atualizá-lo, use **F9** ou o botão “Atualizar Sumário”.
+
+## Colunas, marca d’água, bordas de página e mala direta
+
+Esses quatro recursos são clássicos de “onde fica cada comando”:
+
+-   **Colunas**: ficam na guia Layout, e não na Inserir. Dividem o texto em colunas lado a lado, como em um jornal.
+-   **Marca d’água e bordas de página**: ficam na guia Design, grupo frequentemente confundido com Layout. A marca d’água pode ser um texto, como “CONFIDENCIAL”, ou uma imagem posicionada atrás do conteúdo.
+-   **Mala direta**: acessada em Correspondências ▸ Iniciar Mala Direta. Combina um documento principal com uma fonte de dados (uma planilha do Excel, uma lista do Outlook ou uma lista digitada no próprio Word) para gerar cartas, etiquetas ou e-mails personalizados.
+
+A banca costuma trocar a localização desses comandos entre guias para testar sua memória da interface, então confira sempre a guia certa antes de marcar a resposta.
+
 ## Atalhos de teclado: do básico ao avançado
 
 Os atalhos são campeões de cobrança em informática, mas decorar combinação por combinação sem entender a lógica por trás não resolve. Logo abaixo está a tabela completa com todos os atalhos deste artigo; use-a como referência de consulta e volte a ela sempre que precisar revisar.
@@ -85,12 +108,31 @@ Atalhos organizados por bloco de função, com destaque em rosa para as pegadinh
 | Ctrl + J | Justificar parágrafo | Alinha o texto às duas margens, simultaneamente. |
 | Ctrl + Shift + C | Copiar formatação | Funciona junto com Ctrl + Shift + V, no lugar do Pincel de Formatação. |
 | Ctrl + Shift + V | Colar formatação | Aplica a formatação copiada em outro trecho do texto. |
+| Ctrl + Enter | Quebra de página | Quebra simples; para orientação ou margens diferentes, use quebra de seção. |
+| F7 | Verificação ortográfica e gramatical | Abre a verificação completa do documento. |
+| F9 | Atualizar sumário | Atualiza campos, como o sumário automático. |
+| Ctrl + Shift + E | Controle de Alterações | Ativa ou desativa o registro de alterações. |
 
 Atalho consolidado Pegadinha recorrente de prova
 
 Aqui está um ponto que merece atenção redobrada: no Word em português, Ctrl + S não salva o documento. Ele sublinha o texto selecionado. Essa troca acontece porque o programa mapeia as teclas pela primeira letra da função em português, então Negrito fica em Ctrl + N, Itálico em Ctrl + I e Sublinhado em Ctrl + S, enquanto salvar herdou o Ctrl + B. Não confunda os dois conceitos: se a banca apresentar Ctrl + S como atalho de salvar, a questão está errada.
 
 O mesmo raciocínio vale para abrir e criar documentos. Na sua prova, se aparecer que Ctrl + A abre um documento novo, desconfie: Ctrl + A abre um documento já existente, e quem cria um documento em branco é o Ctrl + O. Quem seleciona todo o conteúdo é o Ctrl + T, como você confere na tabela acima.
+
+### Atalhos em português x inglês
+
+A pegadinha vem de os atalhos mudarem com o idioma do programa. Compare os que mais diferem:
+
+| Ação | Word em português | Word em inglês |
+| --- | --- | --- |
+| Negrito | Ctrl + N | Ctrl + B |
+| Sublinhado | Ctrl + S | Ctrl + U |
+| Salvar | Ctrl + B | Ctrl + S |
+| Novo documento | Ctrl + O | Ctrl + N |
+| Abrir | Ctrl + A | Ctrl + O |
+| Selecionar tudo | Ctrl + T | Ctrl + A |
+
+O Itálico (Ctrl + I), o Copiar (Ctrl + C), o Colar (Ctrl + V), o Recortar (Ctrl + X), o Desfazer (Ctrl + Z), o Imprimir (Ctrl + P) e o Justificar (Ctrl + J) são iguais nos dois idiomas.
 
 No entanto, se o seu foco é nível intermediário, vale dominar também o Pincel de Formatação, acionado por Ctrl + Shift + C e Ctrl + Shift + V, que copia e aplica formatação dentro do próprio documento. A melhor postura para concurso é entender que versões e configurações diferentes do Word podem alterar o comportamento de certos atalhos. Aliás, o programa também permite personalizar atalhos de teclado, o que pode virar questão em provas mais detalhistas.
 
@@ -112,7 +154,7 @@ Estudar Microsoft Word para concursos de forma estratégica significa compreende
 
 Em vez de estudar o Word como usuário casual, trate o programa como conteúdo de prova: observe os nomes exatos das guias, as funções dos comandos e as diferenças entre atalhos básicos e avançados. Com esta aula, você já tem uma base bem mais sólida para enfrentar questões intermediárias sobre o editor.
 
-O próximo passo é praticar com exercícios comentados, porque é na resolução que as pegadinhas ficam realmente visíveis. Se quiser consolidar tudo o que foi visto nesta aula antes de seguir para Excel e PowerPoint, vale passar pela nossa [revisão completa do Word para concursos](/revisao-do-word/).
+O próximo passo é praticar com exercícios comentados, porque é na resolução que as pegadinhas ficam realmente visíveis. Se quiser consolidar tudo o que foi visto nesta aula antes de seguir para Excel e PowerPoint, vale passar pelo nosso [simulado de Office](/simulado-office/).
 
 ## Questões sobre Microsoft Word – Nível Intermediário
 

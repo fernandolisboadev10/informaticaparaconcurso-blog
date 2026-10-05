@@ -1,10 +1,10 @@
 ---
 title: "Antivírus, Firewall e Anti-Spyware: Entenda os Limites de Cada Aplicativo de Segurança"
-description: "Entenda o que são aplicativos para segurança, veja as diferenças entre antivírus, firewall e anti-spyware e resolva questões sua prova."
+description: "Entenda a diferença entre antivírus, firewall e anti-spyware, o que cada aplicativo de segurança faz e treine com questões no estilo das bancas."
 category: "Segurança"
 date: 2026-07-29T20:17:18-03:00
-updated: 2026-09-25T13:36:32Z
-readingTime: "8 min"
+updated: 2026-10-05T10:30:00-03:00
+readingTime: "10 min"
 image: "./images/aplicativos-para-seguranca.webp"
 imageAlt: "aplicativos para segurança"
 ---
@@ -61,11 +61,17 @@ Em seguida, o **firewall** controla o tráfego de rede a partir de regras de seg
 
 Da mesma forma que o antivírus, o firewall existe tanto em software quanto em hardware, e funciona como uma barreira entre uma rede confiável e uma rede externa.
 
-### Antivírus x firewall: a diferença que a banca mais cobra
+### Diferença entre firewall e antivírus: o que a banca mais cobra
 
-Portanto, não confunda as duas ferramentas. O firewall filtra tráfego e controla acesso; ele não identifica nem remove malware. Quem cumpre esse papel é o antivírus.
+Portanto, não confunda as duas ferramentas. A diferença central está no alvo de atuação: o antivírus trabalha dentro do sistema, analisando arquivos e processos, enquanto o firewall trabalha na borda da rede, analisando conexões antes mesmo que cheguem ao sistema. O firewall filtra tráfego e controla acesso; ele não identifica nem remove malware. Quem cumpre esse papel é o antivírus.
 
-Na prova, quando você encontrar uma questão dizendo que o firewall “elimina vírus” ou “remove trojans do disco”, desconfie: essa afirmação, isoladamente, já indica erro na maioria das bancas.
+Na prática, o antivírus entra em ação quando você abre por engano um arquivo contaminado, e o firewall barra uma tentativa de acesso indevido vinda de fora, antes mesmo de qualquer arquivo chegar ao sistema.
+
+![Tabela comparativa entre firewall e antivírus: alvo de atuação, função e exemplos](./images/firewall-x-antivirus-tabela-1024x683.webp)
+
+Na prova, quando você encontrar uma questão dizendo que o firewall “elimina vírus” ou “remove trojans do disco”, desconfie: essa afirmação, isoladamente, já indica erro na maioria das bancas. O mesmo vale para o contrário: se a questão disser que o antivírus “controla o tráfego de rede”, a troca de funções também está errada.
+
+Lembre-se, por fim, de que as duas ferramentas trabalham juntas, e não uma no lugar da outra. Um computador seguro normalmente usa firewall e antivírus ao mesmo tempo, cada um cobrindo uma camada diferente da proteção.
 
 ### Anti-spyware e antimalware: abrangência específica x abrangência geral
 
@@ -179,7 +185,55 @@ Certo Errado
 
 Resposta correta: CERTO
 
- 
+### Mais questões: firewall x antivírus
+
+CEBRASPE (estilo)
+
+11\. A atualização de assinaturas de vírus é uma responsabilidade do firewall, que precisa reconhecer continuamente novas ameaças de malware.
+
+Certo Errado
+
+Resposta correta: ERRADO
+
+Comentário: a atualização de assinaturas é responsabilidade do antivírus, não do firewall.
+
+CEBRASPE (estilo)
+
+12\. Se uma questão afirmar que o firewall analisa o comportamento de programas em execução para identificar malware, essa afirmação estará correta, pois essa é uma das funções centrais do firewall.
+
+Certo Errado
+
+Resposta correta: ERRADO
+
+Comentário: analisar o comportamento de programas em execução é uma técnica de detecção do antivírus, não do firewall.
+
+VUNESP (estilo)
+
+13\. Assinale a alternativa que apresenta corretamente uma função exclusiva do firewall.
+
+-   A) Remover trojans já instalados no disco.
+-   B) Analisar o comportamento de programas em execução.
+-   C) Controlar o tráfego de entrada e saída de uma rede com base em regras de segurança.
+-   D) Atualizar assinaturas de vírus conhecidos.
+-   E) Detectar spyware instalado no sistema.
+
+Resposta correta: C
+
+Comentário: as alternativas A, B, D e E descrevem funções do antivírus ou do anti-spyware, não do firewall.
+
+FGV (estilo)
+
+14\. Um usuário mantém o firewall ativo em seu computador, mas ainda assim um arquivo malicioso baixado da internet infecta o sistema. Isso ocorre porque:
+
+-   A) o firewall só funciona quando o computador está desligado.
+-   B) o firewall não analisa o conteúdo de arquivos, apenas controla conexões de rede.
+-   C) o firewall e o antivírus são a mesma ferramenta.
+-   D) o firewall remove arquivos infectados automaticamente.
+-   E) o firewall substitui a necessidade de antivírus.
+
+Resposta correta: B
+
+Comentário: o firewall filtra conexões, não o conteúdo dos arquivos baixados. Essa análise é função do antivírus.
 
 ## Perguntas frequentes
 

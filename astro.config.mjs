@@ -36,6 +36,10 @@ export default defineConfig({
     '/author-sitemap.xml': '/sitemap-index.xml',
     '/author/fernando-lisboa': '/sobre-nos/',
     '/contato': '/fale-conosco/',
+    // Posts juntados a outros por canibalização (2026-10-05)
+    '/diferenca-firewall-antivirus': '/aplicativos-para-seguranca-antivirus-firewall-antispyware/',
+    '/revisao-de-powerpoint-para-concursos': '/powerpoint-o-que-cai-nos-concursos/',
+    '/revisao-do-word': '/microsoft-word-para-concursos/',
     // Slugs antigos que o WordPress redirecionava e que o Google ainda mostra
     '/linux-introducao-para-concursos': '/linux-para-concursos/',
     '/linux-introducao-para-concurso': '/linux-para-concursos/',

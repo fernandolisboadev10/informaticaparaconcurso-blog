@@ -26,7 +26,7 @@ Os atalhos de teclado também merecem atenção, principalmente na versão em po
 -   Ctrl+U: substituir um termo por outro em todo o texto.
 -   F7: iniciar a verificação ortográfica e gramatical.
 
-O [artigo sobre Microsoft Word para concursos](/microsoft-word-para-concursos/) e a [revisão do Word](/revisao-do-word/) trazem os atalhos e recursos mais cobrados, com exemplos comentados.
+O [artigo sobre Microsoft Word para concursos](/microsoft-word-para-concursos/) traz a revisão dos atalhos e recursos mais cobrados, com exemplos comentados.
 
 ## Excel: fórmulas e funções que a banca adora testar
 
@@ -48,7 +48,7 @@ O slide mestre concentra a formatação padrão de todos os slides da apresenta�
 
 Vale destacar também o modo de exibição de anotações, usado pelo apresentador para ver comentários que a plateia não enxerga na tela projetada. Além disso, a tecla F5 inicia a apresentação a partir do primeiro slide, enquanto Shift+F5 inicia a partir do slide atualmente selecionado, uma diferença pequena que já apareceu em prova.
 
-O [artigo sobre revisão de PowerPoint para concursos](/revisao-de-powerpoint-para-concursos/) e o [guia sobre o que cai de PowerPoint nos concursos](/powerpoint-o-que-cai-nos-concursos/) aprofundam esses recursos com questões comentadas.
+O [guia sobre o que cai de PowerPoint nos concursos](/powerpoint-o-que-cai-nos-concursos/) aprofunda esses recursos, com a revisão dos pontos mais cobrados e questões comentadas.
 
 ## LibreOffice x Microsoft Office: a comparação que a banca explora
 

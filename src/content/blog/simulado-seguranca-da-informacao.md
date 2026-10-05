@@ -33,7 +33,7 @@ O antivírus detecta, bloqueia e remove códigos maliciosos já conhecidos ou co
 
 Não confunda os dois conceitos: o antivírus cuida do que já está, ou tenta entrar, dentro do sistema, enquanto o firewall filtra o que passa pela porta de entrada da rede. Consequentemente, um sistema seguro depende dos dois trabalhando juntos, nunca de apenas um isoladamente.
 
-O [artigo com a diferença entre firewall e antivírus](/diferenca-firewall-antivirus/) e o [guia de aplicativos de segurança, antivírus, firewall e antispyware](/aplicativos-para-seguranca-antivirus-firewall-antispyware/) aprofundam essa comparação com exemplos que aparecem direto em prova.
+O [guia de aplicativos de segurança, antivírus, firewall e antispyware](/aplicativos-para-seguranca-antivirus-firewall-antispyware/) aprofunda essa comparação, com a diferença entre firewall e antivírus e exemplos que aparecem direto em prova.
 
 ## Criptografia: chave simétrica x chave assimétrica
 
