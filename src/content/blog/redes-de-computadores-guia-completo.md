@@ -5,7 +5,7 @@ category: "Redes"
 date: 2026-08-03T18:31:48-03:00
 updated: 2026-09-13T12:52:37Z
 readingTime: "11 min"
-image: "./images/redes-de-computadores.webp"
+image: "./images/Redes-de-Computadores.webp"
 imageAlt: "Redes de Computadores"
 ---
 
