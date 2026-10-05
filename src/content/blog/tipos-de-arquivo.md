@@ -73,7 +73,7 @@ Portanto, dominar os tipos de arquivo e extensões exige entender a lógica por 
 
 ### Questões: tipos de arquivo, extensões e formatos
 
-10 questões inéditas, elaboradas no estilo das principais bancas. Clique em uma alternativa para ver o gabarito e o comentário.
+10 questões inéditas, elaboradas no estilo das principais bancas. O gabarito e o comentário vêm logo abaixo de cada questão.
 
 Questão 1Estilo CEBRASPE
 

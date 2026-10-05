@@ -143,13 +143,11 @@ Depois de comparar arquitetura, comandos, atalhos e pacote de escritório, fica 
 
 Para fixar o conteúdo, aproveite a tabela comparativa acima como material de revisão rápida antes da prova e resolva as 30 questões comentadas logo abaixo, sendo 15 sobre Windows e 15 sobre Linux. Assim você identifica com precisão em quais pontos ainda precisa reforçar o estudo.
 
-  Simulado: Windows vs Linux para Concursos 
 
-# 🖥️🐧 Simulado: Windows vs Linux para Concursos
+## Simulado: Windows vs Linux para Concursos
 
 30 questões comentadas — 15 sobre Windows e 15 sobre Linux
 
-0 de 30 respondidas
 
 🖥️ Bloco 1 — Windows (Questões 1 a 15)
 
@@ -395,7 +393,6 @@ CERTO ERRADO
 
 Resposta correta: CERTODistribuições como Ubuntu, Debian e Fedora compartilham o mesmo kernel Linux, mas se diferenciam na escolha de pacotes, ambiente gráfico e público-alvo.
 
-Corrigir simulado
 
 ## Perguntas frequentes
 

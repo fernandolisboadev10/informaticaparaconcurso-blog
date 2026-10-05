@@ -208,7 +208,7 @@ Por fim, confira o seu saldo de acertos e erros em cada simulado. Se um bloco fi
 
 ## As 15 pegadinhas que mais enganam o concurseiro
 
-Antes de encerrar, chega o teste final. Reuni as 15 pegadinhas que mais derrubam candidato na prova de Informática da Cebraspe, uma de cada armadilha que você viu ao longo deste artigo: palavra absoluta, troca de conceito, definição invertida e mistura entre sistemas. Clique em Certo ou Errado e leia o comentário na hora, porque cada item mostra exatamente qual armadilha a banca usou.
+Antes de encerrar, chega o teste final. Reuni as 15 pegadinhas que mais derrubam candidato na prova de Informática da Cebraspe, uma de cada armadilha que você viu ao longo deste artigo: palavra absoluta, troca de conceito, definição invertida e mistura entre sistemas. Marque Certo ou Errado e leia o comentário logo abaixo, porque cada item mostra exatamente qual armadilha a banca usou.
 
  15 Pegadinhas de Informática – Cebraspe PM MA 2026 
 

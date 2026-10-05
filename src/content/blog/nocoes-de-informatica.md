@@ -127,13 +127,11 @@ Agora, escolha o primeiro bloco do seu edital, abra a aula correspondente e, ao 
 
 ### Simulado de Noções de Informática
 
-40 itens no estilo Certo ou Errado, distribuídos pelos 5 blocos da matéria. Clique na resposta e veja o gabarito comentado na hora.
+40 itens no estilo Certo ou Errado, distribuídos pelos 5 blocos da matéria. Cada item traz o gabarito comentado logo abaixo.
 
-Respondidas **0**/40 Acertos **0**
 
-Ver relatório ↓ Refazer
 
-🖥️ Módulo 01 · Sistemas Operacionais (Linux e Windows) 0/8
+🖥️ Módulo 01 · Sistemas Operacionais (Linux e Windows)
 
 CEBRASPE
 
@@ -199,7 +197,7 @@ Certo Errado
 
 Resposta correta: ErradoO Painel de Controle clássico ainda coexiste com o app Configurações no Windows 10/11; não foi removido.
 
-📝 Módulo 02 · Edição de Documentos (Word/Writer, Excel/Calc, PowerPoint/Impress) 0/8
+📝 Módulo 02 · Edição de Documentos (Word/Writer, Excel/Calc, PowerPoint/Impress)
 
 CEBRASPE
 
@@ -265,7 +263,7 @@ Certo Errado
 
 Resposta correta: ErradoO PowerPoint permite configurar transições individualmente por slide ou aplicar a todos de uma vez, à escolha do usuário.
 
-🌐 Módulo 03 · Redes de Computadores (Internet/Intranet, navegadores, e-mail, nuvem) 0/8
+🌐 Módulo 03 · Redes de Computadores (Internet/Intranet, navegadores, e-mail, nuvem)
 
 CEBRASPE
 
@@ -331,7 +329,7 @@ Certo Errado
 
 Resposta correta: ErradoNo IaaS o provedor fornece a infraestrutura; o cliente é quem instala e administra sistemas operacionais e aplicativos.
 
-📁 Módulo 04 · Organização e Gerenciamento de Informações 0/8
+📁 Módulo 04 · Organização e Gerenciamento de Informações
 
 CEBRASPE
 
@@ -397,7 +395,7 @@ Certo Errado
 
 Resposta correta: ErradoAs bibliotecas do Windows apenas agregam, em uma visualização única, arquivos que continuam fisicamente em suas pastas originais.
 
-🛡️ Módulo 05 · Segurança da Informação 0/8
+🛡️ Módulo 05 · Segurança da Informação
 
 CEBRASPE
 

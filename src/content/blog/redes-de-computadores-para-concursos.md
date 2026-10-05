@@ -259,7 +259,111 @@ Conjunto de protocolos que organiza o tráfego de dados entre dispositivos em re
 
 Mecanismo que filtra o tráfego de rede, permitindo ou bloqueando conexões conforme regras de segurança.
 
-### Treine com questões
+## Questões de Certo ou Errado: internet, intranet, extranet, HTTP, HTTPS e VPN
+
+Julgue cada item e confira o gabarito comentado logo abaixo.
+
+CEBRASPE (estilo)
+
+1\. A internet caracteriza-se como uma rede pública e mundial, sem um órgão central único responsável por todo o seu controle.
+
+CERTO ERRADO
+
+Resposta correta: CERTO
+
+Comentário: Não existe uma autoridade única que controle a internet. Ela é descentralizada, com provedores e organizações cooperando entre si.
+
+CEBRASPE (estilo)
+
+2\. A internet funciona de forma centralizada, estando sob o controle exclusivo de um único órgão internacional.
+
+CERTO ERRADO
+
+Resposta correta: ERRADO
+
+Comentário: É justamente o contrário: a internet é descentralizada e não está sob o controle exclusivo de nenhum órgão.
+
+CEBRASPE (estilo)
+
+3\. Uma intranet nunca pode ter qualquer ponto de conexão com a internet, sob pena de deixar de ser considerada intranet.
+
+CERTO ERRADO
+
+Resposta correta: ERRADO
+
+Comentário: A intranet pode se conectar à internet, desde que haja controle de acesso (firewall, VPN). O que a define é a restrição de quem entra, e não a ausência total de conexão externa.
+
+CEBRASPE (estilo)
+
+4\. A intranet pode se conectar à internet, desde que exista controle de acesso, como firewall, entre as duas redes.
+
+CERTO ERRADO
+
+Resposta correta: CERTO
+
+Comentário: Muitas intranets se conectam à internet por meio de firewalls e VPNs, sempre com controle rígido de acesso.
+
+CEBRASPE (estilo)
+
+5\. Fornecedores e parceiros comerciais autorizados são exemplos de usuários que podem acessar uma extranet.
+
+CERTO ERRADO
+
+Resposta correta: CERTO
+
+Comentário: A extranet estende parte da intranet a públicos externos específicos e autorizados, como fornecedores, parceiros e clientes.
+
+CEBRASPE (estilo)
+
+6\. Diferentemente da intranet, a extranet dispensa qualquer mecanismo de autenticação para o acesso externo.
+
+CERTO ERRADO
+
+Resposta correta: ERRADO
+
+Comentário: A extranet exige autenticação (login, senha, VPN ou certificado). Rede aberta a qualquer pessoa, sem login, é a definição de internet.
+
+CEBRASPE (estilo)
+
+7\. Uma comunicação feita exclusivamente por HTTP pode ser interceptada e lida por terceiros, caso não haja outra proteção.
+
+CERTO ERRADO
+
+Resposta correta: CERTO
+
+Comentário: O HTTP transmite os dados em texto claro, sem criptografia. Quem interceptar o tráfego consegue ler o conteúdo.
+
+CEBRASPE (estilo)
+
+8\. A presença do cadeado no navegador indica exclusivamente que o site é confiável e livre de golpes.
+
+CERTO ERRADO
+
+Resposta correta: ERRADO
+
+Comentário: O cadeado indica que a conexão usa HTTPS, ou seja, que os dados trafegam criptografados. Isso não garante que o site seja confiável: um site malicioso também pode usar HTTPS.
+
+CEBRASPE (estilo)
+
+9\. O HTTPS garante confidencialidade e integridade aos dados transmitidos entre navegador e servidor.
+
+CERTO ERRADO
+
+Resposta correta: CERTO
+
+Comentário: A criptografia via TLS/SSL protege o caminho dos dados, assegurando que não sejam lidos nem alterados no trajeto.
+
+CEBRASPE (estilo)
+
+10\. A VPN elimina totalmente qualquer risco de segurança, tornando dispensável o uso de firewall.
+
+CERTO ERRADO
+
+Resposta correta: ERRADO
+
+Comentário: A VPN protege o tráfego em trânsito, mas não substitui outras camadas, como firewall, antivírus e a própria autenticação do usuário. Palavras como “elimina totalmente” costumam indicar erro.
+
+### Treine com mais questões
 
 Para fixar o conteúdo, resolva o [simulado de redes de computadores](/simulado-redes/), com 30 questões comentadas no estilo das bancas, e depois revise os temas em que errar.
 

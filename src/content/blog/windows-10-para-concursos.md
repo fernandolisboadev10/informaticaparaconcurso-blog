@@ -236,7 +236,7 @@ Agora, o próximo passo é praticar. Resolva as questões abaixo e, depois, comp
 
 ### Questões de Certo ou Errado: Windows 10
 
-Clique em CERTO ou ERRADO para ver o gabarito comentado.
+Marque Certo ou Errado e confira o gabarito comentado logo abaixo de cada questão.
 
 CEBRASPEQuestão 1
 

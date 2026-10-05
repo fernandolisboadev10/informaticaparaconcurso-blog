@@ -123,7 +123,7 @@ Por esse motivo, a leitura atenta do enunciado faz toda a diferença. Pequenas t
 
 ### Questões de Certo ou Errado — nível intermediário
 
-Leia cada afirmação com atenção e marque se ela está **Certa** ou **Errada**. Depois de responder todas, clique em “Corrigir” para ver seu resultado e a explicação de cada item.
+Leia cada afirmação com atenção e marque se ela está **Certa** ou **Errada**. Depois de responder, confira a explicação logo abaixo de cada item.
 
 1
 
@@ -205,7 +205,6 @@ Certo Errado
 
 **✅ Certo.** As funções são fórmulas pré-programadas e nativas do software; já as fórmulas genéricas são expressões matemáticas que o próprio usuário elabora manualmente.
 
-Corrigir (0/10 respondidas) Refazer questões
 
 📝 Questão estilo Cebraspe
 

@@ -164,9 +164,8 @@ Agora, o próximo passo é praticar. Resolva questões da sua banca sobre o tema
 
 ### 🎯 Exercícios de fixação: LibreOffice para Concursos
 
-10 questões no estilo das principais bancas. Clique na alternativa para ver o gabarito comentado.
+10 questões no estilo das principais bancas. O gabarito comentado vem logo abaixo de cada questão.
 
-Acertos: **0** de 0 respondidas · Total: 10
 
 Questão 1Estilo CEBRASPECerto ou Errado
 

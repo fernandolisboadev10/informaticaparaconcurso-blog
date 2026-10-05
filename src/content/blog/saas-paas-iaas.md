@@ -113,7 +113,7 @@ Portanto, memorize este ponto: quem gerencia o sistema operacional define boa pa
 
 📝 Teste seus conhecimentos: SaaS, PaaS e IaaS
 
-10 questões comentadas. Clique na alternativa para ver a resposta.
+10 questões comentadas. Resposta e comentário logo abaixo de cada questão.
 
 Questão 1Estilo CEBRASPE
 

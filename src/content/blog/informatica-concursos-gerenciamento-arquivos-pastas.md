@@ -184,7 +184,7 @@ Agora, resolva as questões abaixo para fixar o conteúdo. Depois, avance para o
 
 ### Questões: organização de arquivos, pastas e programas
 
-40 questões inéditas, elaboradas no estilo das principais bancas. Clique em uma alternativa para ver o gabarito e o comentário.
+40 questões inéditas, elaboradas no estilo das principais bancas. O gabarito e o comentário vêm logo abaixo de cada questão.
 
 Questão 1Estilo CEBRASPE
 

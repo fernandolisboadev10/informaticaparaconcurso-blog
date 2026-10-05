@@ -145,7 +145,7 @@ Agora, escolha um edital do seu interesse e monte uma pesquisa que combine pelo 
 
 Questões de Certo ou Errado e múltipla escolha
 
-Teste o que você aprendeu sobre operadores de busca. Clique em uma alternativa para ver o gabarito comentado.
+Teste o que você aprendeu sobre operadores de busca. O gabarito comentado vem logo abaixo de cada questão.
 
 CEBRASPE
 
