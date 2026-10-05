@@ -1,6 +1,6 @@
 ---
 title: "Simulado Hardware"
-description: "Simulado de hardware com 20 questões comentadas de várias bancas. Revise memória, processador e armazenamento para o concurso."
+description: "Simulado de hardware com 40 questões comentadas de várias bancas. Revise memória, processador e armazenamento para o concurso."
 category: "Simulados"
 date: 2026-09-25T20:08:33-03:00
 updated: 2026-09-25T20:08:35Z

@@ -404,6 +404,111 @@
    ],
    "answer": "A",
    "comment": "O ‘msconfig’ é utilizado para gerenciar aplicativos que iniciam junto com o sistema. As demais opções não são funções dessa ferramenta."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O Linux é um sistema operacional livre e de código aberto.",
+   "answer": "C",
+   "comment": "Seu código-fonte está disponível para consulta e alteração, ao contrário do Windows, que é proprietário."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "No terminal do Linux, o comando que exibe o caminho completo do diretório atual é:",
+   "options": [
+    "ls",
+    "cd",
+    "pwd",
+    "mkdir",
+    "rm"
+   ],
+   "answer": "C",
+   "comment": "O pwd mostra o diretório de trabalho atual. O ls lista o conteúdo, e o cd muda de diretório."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O Linux diferencia letras maiúsculas e minúsculas em nomes de arquivos e comandos.",
+   "answer": "C",
+   "comment": "Os nomes Documentos e documentos são tratados como itens diferentes."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "No Windows, o atalho de teclado Windows + L serve para:",
+   "options": [
+    "abrir o Explorador de Arquivos",
+    "bloquear a sessão do usuário",
+    "minimizar todas as janelas",
+    "abrir o Gerenciador de Tarefas",
+    "abrir o Executar"
+   ],
+   "answer": "B",
+   "comment": "O Windows + L bloqueia a sessão, e o retorno exige autenticação. O Windows + E abre o Explorador de Arquivos."
+  },
+  {
+   "banca": "Estilo VUNESP",
+   "type": "mc",
+   "text": "Para abrir diretamente o Gerenciador de Tarefas do Windows, o usuário pode utilizar o atalho:",
+   "options": [
+    "Ctrl + Shift + Esc",
+    "Ctrl + Alt + L",
+    "Alt + F4",
+    "Windows + R",
+    "Ctrl + P"
+   ],
+   "answer": "A",
+   "comment": "O Ctrl + Shift + Esc abre o Gerenciador de Tarefas. O Alt + F4 fecha a janela ativa."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O Windows é um sistema operacional proprietário e comercial, desenvolvido pela Microsoft.",
+   "answer": "C",
+   "comment": "A Microsoft detém o código-fonte e cobra pela licença de uso."
+  },
+  {
+   "banca": "Estilo CESGRANRIO",
+   "type": "mc",
+   "text": "No Linux, o comando utilizado para criar um novo diretório é:",
+   "options": [
+    "touch",
+    "mkdir",
+    "cp",
+    "mv",
+    "cd"
+   ],
+   "answer": "B",
+   "comment": "O mkdir cria pastas. O touch cria um arquivo vazio."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A Segurança do Windows (antes chamada de Windows Defender) é a solução de proteção contra ameaças já integrada ao Windows 10.",
+   "answer": "C",
+   "comment": "O Windows 10 traz antivírus e outras proteções integradas, e a Microsoft explica que ele mantém a inteligência de segurança atualizada."
+  },
+  {
+   "banca": "Estilo IADES",
+   "type": "mc",
+   "text": "Dentre as opções a seguir, a que é uma distribuição Linux é:",
+   "options": [
+    "Ubuntu",
+    "Windows 10",
+    "macOS",
+    "Android Studio",
+    "Office 365"
+   ],
+   "answer": "A",
+   "comment": "Ubuntu, Debian e Fedora são distribuições Linux, que compartilham o mesmo kernel."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Linux, o comando rm apaga o arquivo diretamente, sem enviá-lo para a lixeira.",
+   "answer": "C",
+   "comment": "Não há chance de arrependimento depois do Enter, por isso é preciso conferir o nome antes de confirmar."
   }
  ]
 }

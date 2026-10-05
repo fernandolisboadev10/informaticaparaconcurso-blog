@@ -412,6 +412,111 @@
    ],
    "answer": "C",
    "comment": "A alternativa C está correta, pois um firewall filtra e controla o tráfego de dados entre a rede interna e a externa, atuando como uma barreira de segurança."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A tríade CID da segurança da informação é formada por confidencialidade, integridade e disponibilidade.",
+   "answer": "C",
+   "comment": "São os três pilares clássicos da segurança da informação."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "O princípio da segurança da informação que garante que os dados estejam acessíveis a quem tem autorização, quando necessário, é a:",
+   "options": [
+    "confidencialidade",
+    "integridade",
+    "disponibilidade",
+    "autenticidade",
+    "irretratabilidade"
+   ],
+   "answer": "C",
+   "comment": "A disponibilidade assegura o acesso quando preciso. O backup e a redundância protegem esse pilar."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O phishing é uma técnica de engenharia social em que o golpista usa mensagens ou páginas falsas para obter dados do usuário, como senhas e números de cartão.",
+   "answer": "C",
+   "comment": "O phishing se disfarça de uma comunicação legítima para enganar a vítima."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "O malware projetado para coletar informações do usuário sem o seu consentimento é o:",
+   "options": [
+    "spyware",
+    "firewall",
+    "antivírus",
+    "backup",
+    "cookie de sessão"
+   ],
+   "answer": "A",
+   "comment": "O spyware espiona a atividade do usuário. O anti-spyware é a ferramenta voltada a detectá-lo e removê-lo."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O worm precisa de um arquivo hospedeiro para se propagar, ao contrário do vírus, que se espalha sozinho pela rede.",
+   "answer": "E",
+   "comment": "É o contrário: o vírus precisa de um hospedeiro, e o worm se propaga sozinho pela rede."
+  },
+  {
+   "banca": "Estilo VUNESP",
+   "type": "mc",
+   "text": "Na regra 3-2-1 de backup, o número 2 se refere a:",
+   "options": [
+    "duas cópias fora do local",
+    "dois tipos de mídia diferentes",
+    "dois backups por dia",
+    "duas senhas",
+    "dois usuários autorizados"
+   ],
+   "answer": "B",
+   "comment": "A regra é: 3 cópias, 2 tipos de mídia diferentes e 1 cópia fora do local."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O backup diferencial copia todos os arquivos alterados desde o último backup completo.",
+   "answer": "C",
+   "comment": "Por isso a restauração normalmente exige apenas o último completo e o último diferencial."
+  },
+  {
+   "banca": "Estilo CESGRANRIO",
+   "type": "mc",
+   "text": "A autenticação multifator consiste em:",
+   "options": [
+    "usar uma senha muito longa",
+    "combinar dois ou mais fatores de verificação, como senha e código enviado ao celular",
+    "trocar a senha todos os dias",
+    "usar o mesmo login em todos os sistemas",
+    "instalar um antivírus"
+   ],
+   "answer": "B",
+   "comment": "A combinação de fatores (algo que você sabe, tem ou é) torna o acesso mais seguro do que uma senha isolada."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O firewall é capaz de identificar e remover vírus que já infectaram os arquivos do computador.",
+   "answer": "E",
+   "comment": "O firewall controla o tráfego de rede. A detecção e a remoção de malware são funções do antivírus."
+  },
+  {
+   "banca": "Estilo IADES",
+   "type": "mc",
+   "text": "A engenharia social, no contexto da segurança da informação, é uma técnica que:",
+   "options": [
+    "explora falhas apenas em equipamentos de rede",
+    "manipula pessoas para que revelem informações ou realizem ações em favor do atacante",
+    "criptografa os arquivos para pedir resgate",
+    "derruba um site com excesso de acessos",
+    "instala programas de forma automática"
+   ],
+   "answer": "B",
+   "comment": "O alvo é o fator humano. O phishing é um exemplo clássico."
   }
  ]
 }

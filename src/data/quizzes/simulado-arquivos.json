@@ -412,6 +412,118 @@
    ],
    "answer": "A",
    "comment": "O comando ‘dir’ é o utilizado para listar arquivos em um diretório no Windows. As outras opções não são comandos válidos nesse contexto."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Windows, o nome de um arquivo ou de uma pasta não pode conter caracteres como \\ / : * ? \" < > |.",
+   "answer": "C",
+   "comment": "Esses caracteres têm funções especiais no sistema e são proibidos em nomes de arquivos e pastas."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "No Windows, a tecla de atalho utilizada para renomear o arquivo ou a pasta selecionada é:",
+   "options": [
+    "F1",
+    "F2",
+    "F5",
+    "F10",
+    "F12"
+   ],
+   "answer": "B",
+   "comment": "A tecla F2 coloca o nome do item selecionado em modo de edição. F1 abre a ajuda e F5 atualiza a janela."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Para excluir um arquivo permanentemente no Windows, sem enviá-lo para a Lixeira, o usuário deve selecioná-lo e pressionar:",
+   "options": [
+    "Delete",
+    "Ctrl + Z",
+    "Shift + Delete",
+    "Alt + F4",
+    "Ctrl + X"
+   ],
+   "answer": "C",
+   "comment": "O Shift + Delete exclui sem passar pela Lixeira, e o Windows pede confirmação. Apenas Delete envia o arquivo para a Lixeira."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Os arquivos excluídos de um pendrive não são enviados para a Lixeira do Windows, sendo removidos definitivamente.",
+   "answer": "C",
+   "comment": "A Lixeira guarda apenas arquivos apagados de discos locais. Em mídias removíveis e unidades de rede, a exclusão é permanente."
+  },
+  {
+   "banca": "Estilo VUNESP",
+   "type": "mc",
+   "text": "Um arquivo com a extensão .zip é, normalmente, um arquivo:",
+   "options": [
+    "de planilha eletrônica",
+    "compactado, que pode conter outros arquivos e pastas",
+    "de imagem sem compressão",
+    "executável do sistema",
+    "de áudio"
+   ],
+   "answer": "B",
+   "comment": "A extensão .zip identifica arquivos compactados, que reúnem e reduzem o tamanho de arquivos e pastas."
+  },
+  {
+   "banca": "Estilo CESGRANRIO",
+   "type": "mc",
+   "text": "No Microsoft Excel, a extensão padrão de uma pasta de trabalho (arquivo de planilha) das versões mais recentes é:",
+   "options": [
+    ".docx",
+    ".pptx",
+    ".xlsx",
+    ".txt",
+    ".odt"
+   ],
+   "answer": "C",
+   "comment": "O .docx é do Word, o .pptx do PowerPoint e o .odt do Writer, do LibreOffice."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em uma mesma pasta do Windows, é possível manter dois arquivos com exatamente o mesmo nome e a mesma extensão.",
+   "answer": "E",
+   "comment": "Dentro de uma mesma pasta, cada arquivo precisa ter um nome único. Ao tentar duplicar, o Windows oferece substituir ou manter os dois com nomes diferentes."
+  },
+  {
+   "banca": "Estilo IADES",
+   "type": "mc",
+   "text": "O endereço C:\\Users\\Maria\\Documentos\\relatorio.docx representa um exemplo de:",
+   "options": [
+    "atalho de teclado",
+    "caminho (path) completo de um arquivo",
+    "extensão de arquivo executável",
+    "endereço de e-mail",
+    "URL de um site"
+   ],
+   "answer": "B",
+   "comment": "O caminho indica a unidade (C:), as pastas percorridas e o nome do arquivo com sua extensão."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Ao copiar um arquivo para outra unidade de disco, o arquivo original permanece no local de origem.",
+   "answer": "C",
+   "comment": "Copiar cria um duplicado e mantém o original. Já recortar e colar move o arquivo."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "No Windows, ao arrastar um arquivo com o botão esquerdo do mouse de uma pasta para outra pasta no mesmo disco, ocorre, por padrão:",
+   "options": [
+    "a cópia do arquivo",
+    "a movimentação do arquivo",
+    "a criação de um atalho",
+    "a exclusão definitiva do arquivo",
+    "a compactação do arquivo"
+   ],
+   "answer": "B",
+   "comment": "No mesmo disco, arrastar move o arquivo. Entre unidades diferentes, arrastar copia."
   }
  ]
 }

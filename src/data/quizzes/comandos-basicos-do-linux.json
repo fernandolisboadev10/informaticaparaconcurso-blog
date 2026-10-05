@@ -1,0 +1,95 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O comando pwd exibe o caminho completo do diretório em que o usuário se encontra.",
+   "answer": "C",
+   "comment": "O pwd funciona como um GPS: mostra a sua posição atual, algo como /home/fernando."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O comando ls -a lista apenas os arquivos ocultos, sem exibir os demais arquivos da pasta.",
+   "answer": "E",
+   "comment": "A opção -a faz os arquivos ocultos, aqueles que começam com ponto, também aparecerem na lista, junto com os demais."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "No terminal do Linux, o comando que permite voltar um nível, para a pasta imediatamente superior à pasta atual, é:",
+   "options": [
+    "cd ~",
+    "cd ..",
+    "pwd",
+    "ls -l",
+    "mkdir .."
+   ],
+   "answer": "B",
+   "comment": "Os dois pontos representam a pasta “de cima”. Já o cd ~ leva direto à pasta pessoal do usuário."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Linux, os comandos cd Documentos e cd documentos são equivalentes, pois o sistema não diferencia letras maiúsculas de minúsculas.",
+   "answer": "E",
+   "comment": "O Linux diferencia maiúsculas de minúsculas, então são dois comandos diferentes para o sistema."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Para copiar uma pasta inteira, com tudo o que ela contém, o comando cp deve ser usado com a opção -r.",
+   "answer": "C",
+   "comment": "Sem o -r, o cp recusa a cópia de uma pasta. Exemplo: cp -r Provas Provas_backup."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Considere o arquivo anotacoes.txt. O comando que o renomeia para notas_finais.txt é:",
+   "options": [
+    "cp anotacoes.txt notas_finais.txt",
+    "mv anotacoes.txt notas_finais.txt",
+    "rm anotacoes.txt notas_finais.txt",
+    "touch anotacoes.txt notas_finais.txt",
+    "mkdir notas_finais.txt"
+   ],
+   "answer": "B",
+   "comment": "O mv move o arquivo quando o destino é uma pasta existente e o renomeia quando o destino é um nome novo. O cp apenas cria uma cópia."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Ao contrário da exclusão feita pela interface gráfica, o comando rm envia o arquivo para a lixeira, de onde ele pode ser restaurado posteriormente.",
+   "answer": "E",
+   "comment": "O rm não manda nada para a lixeira: o arquivo desaparece direto, sem chance de arrependimento depois do Enter. Cuidado especial com o rm -r."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O comando mkdir é utilizado para criar pastas, enquanto o comando touch cria um arquivo vazio.",
+   "answer": "C",
+   "comment": "Exemplos: mkdir Provas cria uma pasta, e touch anotacoes.txt cria um arquivo em branco na pasta atual."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O comando sudo deve ser colocado antes de qualquer comando, por garantia, inclusive para criar uma pasta dentro da pasta pessoal do usuário.",
+   "answer": "E",
+   "comment": "O sudo concede privilégios administrativos e deve ser reservado para quando o sistema realmente pedir, como para instalar um programa ou editar uma configuração do sistema."
+  },
+  {
+   "banca": "Estilo VUNESP",
+   "type": "mc",
+   "text": "Em distribuições baseadas em Debian, como o Ubuntu, a sequência de comandos correta para atualizar a lista de programas e instalar um novo programa é:",
+   "options": [
+    "sudo apt install nome, e depois sudo apt update",
+    "sudo apt update, e depois sudo apt install nome",
+    "sudo rm nome, e depois sudo cp nome",
+    "cd nome, e depois ls nome",
+    "mkdir nome, e depois touch nome"
+   ],
+   "answer": "B",
+   "comment": "O apt update atualiza a lista de programas disponíveis nos repositórios, e o apt install instala o programa escolhido."
+  }
+ ]
+}

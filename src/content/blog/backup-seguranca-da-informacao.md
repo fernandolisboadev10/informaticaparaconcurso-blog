@@ -97,51 +97,6 @@ Além disso, as provas exploram bastante a lógica da restauração. A increment
 
 Por esse motivo, o candidato precisa memorizar não só a definição, mas também o comportamento de cada modelo em cenários práticos.
 
-## Questões de Certo ou Errado — nível intermediário
-
-**1.** Em um órgão público, a equipe de TI executa cópia completa aos domingos e cópias incrementais de segunda a sexta. Se ocorrer falha grave na sexta-feira, a restauração exigirá a cópia completa de domingo e todas as cópias incrementais realizadas após ela.  
-**Certo / Errado**
-
-**2.** Em uma estratégia diferencial, o sistema copia apenas os arquivos alterados desde o último diferencial, o que reduz progressivamente o tamanho das cópias ao longo da semana.  
-**Certo / Errado**
-
-**3.** Um servidor que mantém três cópias dos dados, em duas mídias diferentes, com uma cópia armazenada fora do local principal, segue a lógica da regra 3-2-1.  
-**Certo / Errado**
-
-**4.** Em um cenário de ransomware, cópias offline ou imutáveis aumentam a chance de recuperação, porque dificultam a alteração ou exclusão das informações pelo atacante.  
-**Certo / Errado**
-
-**5.** Uma cópia completa tende a consumir mais tempo e mais espaço de armazenamento do que uma cópia incremental.  
-**Certo / Errado**
-
-**6.** Em uma empresa que utiliza cópia diferencial, a restauração normalmente exige apenas o último backup completo e o último backup diferencial disponível.  
-**Certo / Errado**
-
-**7.** Copiar documentos importantes para outra pasta no mesmo disco rígido do computador já caracteriza, por si só, uma estratégia robusta de proteção para continuidade do negócio.  
-**Certo / Errado**
-
-**8.** O principal objetivo do backup é garantir a recuperação de dados e sistemas após incidentes, e não simplesmente duplicar arquivos sem planejamento.  
-**Certo / Errado**
-
-**9.** A cópia incremental costuma acelerar a rotina diária, mas pode tornar a restauração mais complexa, porque depende de uma sequência de procedimentos intermediários.  
-**Certo / Errado**
-
-**10.** Testar a restauração periodicamente faz parte das boas práticas de proteção, porque a existência da cópia não garante, sozinha, que os dados possam ser recuperados com sucesso.  
-**Certo / Errado**
-
-## Gabarito
-
-1.  **Certo**
-2.  **Errado**
-3.  **Certo**
-4.  **Certo**
-5.  **Certo**
-6.  **Certo**
-7.  **Errado**
-8.  **Certo**
-9.  **Certo**
-10.  **Certo**
-
 ## Conclusão
 
 Portanto, estudar **backup** para concursos públicos exige mais do que decorar definições. O candidato precisa entender como cada tipo funciona, como ocorre a restauração e por que boas práticas como a regra 3-2-1 e os testes periódicos fazem tanta diferença.

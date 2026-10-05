@@ -405,6 +405,111 @@
    "text": "A principal função do navegador é atuar como um cliente que solicita informações da web para que o usuário possa visualizá-las.",
    "answer": "C",
    "comment": "Os navegadores são softwares que processam e apresentam conteúdos solicitados na web."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O protocolo HTTP, por padrão, transmite os dados em texto claro, sem criptografia.",
+   "answer": "C",
+   "comment": "Quem intercepta uma comunicação HTTP consegue ler o conteúdo. O HTTPS acrescenta criptografia por meio do TLS."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "O protocolo responsável por atribuir automaticamente endereços IP aos dispositivos de uma rede é o:",
+   "options": [
+    "DNS",
+    "DHCP",
+    "FTP",
+    "SMTP",
+    "HTTPS"
+   ],
+   "answer": "B",
+   "comment": "O DHCP distribui endereços IP automaticamente. O DNS traduz nomes de domínio em endereços IP."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O modelo TCP/IP é organizado em quatro camadas: acesso à rede, internet, transporte e aplicação.",
+   "answer": "C",
+   "comment": "O TCP/IP condensa as sete camadas do modelo OSI em quatro e é o modelo efetivamente usado na internet."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "O equipamento que interliga redes diferentes e direciona os pacotes entre elas é o:",
+   "options": [
+    "hub",
+    "switch",
+    "roteador",
+    "repetidor",
+    "cabo coaxial"
+   ],
+   "answer": "C",
+   "comment": "O roteador atua na camada de rede e encaminha pacotes entre redes. O switch conecta dispositivos dentro da mesma rede local."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O switch conecta vários dispositivos dentro de uma mesma rede local.",
+   "answer": "C",
+   "comment": "O switch atua na camada de enlace e encaminha os dados ao dispositivo de destino dentro da rede local."
+  },
+  {
+   "banca": "Estilo VUNESP",
+   "type": "mc",
+   "text": "Um endereço IPv4 é formado por:",
+   "options": [
+    "16 bits",
+    "32 bits",
+    "64 bits",
+    "128 bits",
+    "256 bits"
+   ],
+   "answer": "B",
+   "comment": "O IPv4 usa 32 bits, e o IPv6 usa 128 bits."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Os endereços do protocolo IPv6 possuem 128 bits.",
+   "answer": "C",
+   "comment": "O IPv6 foi criado para ampliar a quantidade de endereços disponíveis em relação ao IPv4, que tem 32 bits."
+  },
+  {
+   "banca": "Estilo CESGRANRIO",
+   "type": "mc",
+   "text": "A topologia de rede mais utilizada nas redes locais modernas, em que os dispositivos se conectam a um equipamento central, é a:",
+   "options": [
+    "barramento",
+    "estrela",
+    "anel",
+    "malha completa",
+    "ponto a ponto"
+   ],
+   "answer": "B",
+   "comment": "Na estrela, o rompimento de um cabo isola apenas um computador, o que facilita a manutenção."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O hub encaminha o sinal apenas para o dispositivo de destino, sem replicá-lo para as demais portas.",
+   "answer": "E",
+   "comment": "O hub replica o sinal para todas as portas, sem inteligência alguma, e opera apenas na camada física."
+  },
+  {
+   "banca": "Estilo IADES",
+   "type": "mc",
+   "text": "A rede de computadores que cobre uma área do tamanho de uma cidade ou de uma região metropolitana é classificada como:",
+   "options": [
+    "PAN",
+    "LAN",
+    "MAN",
+    "WAN",
+    "WLAN"
+   ],
+   "answer": "C",
+   "comment": "A MAN é maior que uma LAN e menor que uma WAN."
   }
  ]
 }

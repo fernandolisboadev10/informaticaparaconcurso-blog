@@ -398,6 +398,118 @@
    ],
    "answer": "B",
    "comment": "O ‘Slide Mestre’ permite a modificação do layout e do design de todos os slides simultaneamente. As outras opções não estão relacionadas diretamente à sua função."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Microsoft Word, o atalho Ctrl + Z desfaz a última ação realizada no documento.",
+   "answer": "C",
+   "comment": "O Ctrl + Z desfaz a última ação, e o Ctrl + Y a refaz ou repete."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "No Microsoft Excel, a função que calcula a média aritmética de um intervalo de células é:",
+   "options": [
+    "SOMA",
+    "MÉDIA",
+    "MÁXIMO",
+    "CONT.SE",
+    "PROCV"
+   ],
+   "answer": "B",
+   "comment": "A função MÉDIA soma os valores e divide pela quantidade de células. A SOMA apenas soma."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Excel, uma referência escrita como $A$1 é absoluta e não se altera quando a fórmula é copiada para outras células.",
+   "answer": "C",
+   "comment": "O cifrão trava a coluna e a linha. Sem cifrão, a referência é relativa e se ajusta à nova posição."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "No Excel, toda fórmula deve ser iniciada com o sinal de:",
+   "options": [
+    "# (jogo da velha)",
+    "= (igual)",
+    "@ (arroba)",
+    "& (e comercial)",
+    "% (porcentagem)"
+   ],
+   "answer": "B",
+   "comment": "O Excel reconhece uma entrada como fórmula quando ela começa com o sinal de igual (também aceita + e -)."
+  },
+  {
+   "banca": "Estilo VUNESP",
+   "type": "mc",
+   "text": "No Microsoft PowerPoint, a tecla F5 é utilizada para:",
+   "options": [
+    "inserir um novo slide",
+    "iniciar a apresentação a partir do primeiro slide",
+    "salvar a apresentação",
+    "iniciar a apresentação a partir do slide atual",
+    "abrir o slide mestre"
+   ],
+   "answer": "B",
+   "comment": "O F5 inicia do primeiro slide, e o Shift + F5 inicia a partir do slide atual."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No PowerPoint, a transição é o efeito aplicado na passagem de um slide para o outro, enquanto a animação é aplicada aos objetos dentro do slide.",
+   "answer": "C",
+   "comment": "É a pegadinha clássica: transição atua entre slides, animação atua dentro do slide."
+  },
+  {
+   "banca": "Estilo CESGRANRIO",
+   "type": "mc",
+   "text": "No Excel, a mensagem de erro #DIV/0! indica que:",
+   "options": [
+    "o nome da função foi digitado errado",
+    "a fórmula tenta dividir um valor por zero",
+    "a referência de célula é inválida",
+    "o valor não está disponível",
+    "a coluna é estreita demais"
+   ],
+   "answer": "B",
+   "comment": "O #DIV/0! aparece quando há uma divisão por zero ou por uma célula vazia."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No LibreOffice Calc, o formato padrão de gravação das planilhas é o .ods.",
+   "answer": "C",
+   "comment": "O Calc usa o OpenDocument Spreadsheet (.ods). O Writer usa o .odt e o Impress usa o .odp."
+  },
+  {
+   "banca": "Estilo IADES",
+   "type": "mc",
+   "text": "No Microsoft Word, o recurso Controle de Alterações serve para:",
+   "options": [
+    "proteger o documento com senha",
+    "registrar inserções, exclusões e edições feitas por diferentes revisores",
+    "aumentar o tamanho da fonte",
+    "converter o texto em tabela",
+    "inserir uma imagem de fundo"
+   ],
+   "answer": "B",
+   "comment": "O Controle de Alterações facilita a revisão colaborativa, e cada alteração pode ser aceita ou rejeitada."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "No Word, a extensão padrão dos documentos de texto das versões mais recentes é:",
+   "options": [
+    ".doc",
+    ".docx",
+    ".odt",
+    ".pdf",
+    ".rtf"
+   ],
+   "answer": "B",
+   "comment": "O .docx é o formato moderno do Word. O .doc é o formato antigo e o .odt é o do Writer, do LibreOffice."
   }
  ]
 }

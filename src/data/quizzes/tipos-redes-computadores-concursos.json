@@ -1,0 +1,88 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Uma rede local (LAN) restringe-se ao uso exclusivo de cabos trançados ou de fibra óptica para a transmissão de dados.",
+   "answer": "E",
+   "comment": "Uma LAN pode ser baseada em conexão sem fio. Quando isso acontece, ela ganha o nome específico de WLAN, como o Wi-Fi doméstico."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A infraestrutura que conecta a sede de um órgão público em Brasília a uma superintendência em São Paulo é classificada como uma MAN.",
+   "answer": "E",
+   "comment": "Cidades e estados diferentes exigem redes de longa distância, ou seja, WAN. Seria MAN se a interligação ocorresse apenas dentro de Brasília."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A PAN é uma rede de alcance extremamente curto, voltada à conectividade de um único indivíduo, como a conexão Bluetooth entre um smartphone e um fone de ouvido sem fio.",
+   "answer": "C",
+   "comment": "A rede de área pessoal alcança poucos metros ao redor de uma pessoa. O Bluetooth entre celular e fone é o exemplo clássico."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A interligação entre a matriz de uma empresa e a sua filial, ambas localizadas na mesma cidade, é classificada como uma MAN.",
+   "answer": "C",
+   "comment": "A MAN cobre uma área intermediária, maior que a LAN e menor que a WAN. Se o enunciado fala em “mesmo município”, pense em MAN."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A Internet é classificada como uma LAN, por chegar à residência do usuário.",
+   "answer": "E",
+   "comment": "A Internet é o maior exemplo de WAN do mundo. Chegar a uma casa não a torna uma rede local."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O prefixo “W” (de Wireless) na sigla de uma rede, como em WLAN, indica que a rede abrange uma área geográfica menor do que a da rede sem o prefixo.",
+   "answer": "E",
+   "comment": "O “W” não muda o tamanho geográfico da rede, mas o meio de transmissão, que passa a ser sem fio, por radiofrequência ou infravermelho."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "O Wi-Fi de uma residência ou de um escritório é um exemplo de:",
+   "options": [
+    "WPAN",
+    "WLAN",
+    "WMAN",
+    "WWAN",
+    "WAN"
+   ],
+   "answer": "B",
+   "comment": "O Wi-Fi é uma rede local sem fio, a WLAN. A WPAN é exemplificada pelo Bluetooth, a WMAN pelo WiMAX e a WWAN pela rede de telefonia móvel (4G e 5G)."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em uma rede ponto a ponto (peer-to-peer), não existe hierarquia: os computadores possuem as mesmas permissões e podem atuar ora como clientes, ora como servidores.",
+   "answer": "C",
+   "comment": "É o modelo comum em pequenas redes residenciais. Todos os computadores têm o mesmo nível de permissão."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Na arquitetura cliente/servidor, todos os computadores possuem as mesmas permissões e nenhum deles é dedicado a fornecer serviços aos demais.",
+   "answer": "E",
+   "comment": "O modelo cliente/servidor tem um computador central, dedicado a fornecer serviços e regras de segurança, com hierarquia e controle de acesso centralizado."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Considerando a abrangência geográfica, a ordem correta das redes, do menor para o maior alcance, é:",
+   "options": [
+    "WAN, MAN, LAN, PAN",
+    "PAN, LAN, MAN, WAN",
+    "LAN, PAN, WAN, MAN",
+    "PAN, MAN, LAN, WAN",
+    "LAN, MAN, PAN, WAN"
+   ],
+   "answer": "B",
+   "comment": "A progressão que vale memorizar é PAN < LAN < MAN < WAN."
+  }
+ ]
+}

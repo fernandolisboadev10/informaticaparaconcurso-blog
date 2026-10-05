@@ -46,7 +46,6 @@ export default defineConfig({
     // Slugs antigos que o WordPress redirecionava e que o Google ainda mostra
     '/linux-introducao-para-concursos': '/linux-para-concursos/',
     '/linux-introducao-para-concurso': '/linux-para-concursos/',
-    '/linux.html': '/linux-para-concursos/',
     '/windows-x-linux-para-concursos': '/windows-vs-linux-para-concursos/',
     '/introducao-ao-windows-10-e-11': '/sistema-windows-7-10-11-para-concursos/',
     '/simulado-windows-10-11-questoes-resolvidas-cebraspe': '/simulado-sistemas/',

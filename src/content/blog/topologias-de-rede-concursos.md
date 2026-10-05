@@ -77,19 +77,6 @@ Em resumo, a tabela abaixo sintetiza as características críticas para sua memo
 | **Anel** | Não | Toda a rede para (sem redundância) | Médio |
 | **Malha** | Não | A rede continua (rotas alternativas) | Alto |
 
-## Pegadinhas Clássicas de Prova
-
-Para consolidar o conteúdo, veja como as bancas tentam confundir você:
-
--   **Pegadinha 1:** _“Na topologia em barramento, existe um switch central que gerencia o tráfego.”_  
-    **Gabarito: Errado.** Barramento não tem nó central. Todos compartilham o mesmo cabo.
--   **Pegadinha 2:** _“A topologia em estrela é a mais utilizada em redes locais (LANs) modernas.”_  
-    **Gabarito: Certo.** Devido à facilidade de manutenção e isolamento de falhas.
--   **Pegadinha 3:** _“Na topologia em anel, a falha de um único nó não afeta os demais dispositivos.”_  
-    **Gabarito: Errado.** No anel simples, a quebra de um nó interrompe todo o circuito.
--   **Pegadinha 4:** _“A topologia em malha completa exige que cada nó se conecte diretamente a todos os outros nós.”_  
-    **Gabarito: Certo.** Essa é a definição exata de Full Mesh.
-
 ## Conclusão
 
 Em resumo, dominar topologias de rede exige que você visualize o desenho de cada estrutura. Lembre-se: o **barramento** divide um cabo único; a **estrela** centraliza tudo em um switch; o **anel** forma um círculo; e a **malha** cria uma teia de conexões redundantes.

@@ -1,6 +1,6 @@
 ---
 title: "Simulado Office"
-description: "Simulado de Office com 30 questões comentadas sobre Word, Excel e PowerPoint. Teste seu preparo para o concurso agora."
+description: "Simulado de Office com 40 questões comentadas sobre Word, Excel e PowerPoint. Teste seu preparo para o concurso agora."
 category: "Simulados"
 date: 2026-08-23T12:55:50-03:00
 updated: 2026-09-25T20:06:58Z

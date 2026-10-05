@@ -1,0 +1,88 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Na topologia em barramento, existe um switch central que gerencia o tráfego.",
+   "answer": "E",
+   "comment": "O barramento não tem nó central. Todos os dispositivos compartilham o mesmo cabo."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A topologia em estrela é a mais utilizada em redes locais (LANs) modernas.",
+   "answer": "C",
+   "comment": "Por causa da facilidade de manutenção e do isolamento de falhas, a estrela é a topologia mais comum em LANs modernas."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Na topologia em anel, a falha de um único nó não afeta os demais dispositivos.",
+   "answer": "E",
+   "comment": "No anel simples, a quebra de um nó ou de um cabo interrompe todo o circuito, a menos que exista um anel redundante."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A topologia em malha completa exige que cada nó se conecte diretamente a todos os outros nós.",
+   "answer": "C",
+   "comment": "Essa é a definição exata de malha completa (Full Mesh)."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Na topologia em estrela, o rompimento do cabo de um computador deixa fora da rede apenas aquele computador, enquanto a falha do dispositivo central interrompe toda a rede.",
+   "answer": "C",
+   "comment": "A estrela isola falhas individuais, mas depende do equipamento central, como o switch."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A principal vantagem da topologia em malha é o baixo custo de implantação, pois ela utiliza poucos cabos e poucas portas.",
+   "answer": "E",
+   "comment": "A malha tem alta redundância e confiabilidade, mas o custo é elevado, justamente pela grande quantidade de cabos e portas."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Na topologia em anel simples, os dados trafegam em ambas as direções simultaneamente.",
+   "answer": "E",
+   "comment": "O padrão clássico do anel é unidirecional: os dados seguem em um único sentido, de nó em nó, até o destino."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A topologia de uma rede representa o desenho ou o layout da conexão entre os dispositivos, enquanto os tipos de rede, como LAN e WAN, definem o tamanho da rede.",
+   "answer": "C",
+   "comment": "Não confunda os dois critérios: tipos de rede falam de tamanho; topologia fala de desenho."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "Uma rede em que todos os dispositivos compartilham um único cabo central, e que deixa de funcionar por completo se esse cabo se romper, utiliza a topologia em:",
+   "options": [
+    "estrela",
+    "anel",
+    "malha",
+    "barramento",
+    "ponto a ponto"
+   ],
+   "answer": "D",
+   "comment": "No barramento, um único cabo (backbone) é compartilhado por todos. Se ele rompe, toda a rede para."
+  },
+  {
+   "banca": "Estilo VUNESP",
+   "type": "mc",
+   "text": "A topologia que oferece alta redundância e tolerância a falhas, por criar múltiplos caminhos para os dados, e que tem a Internet como seu maior exemplo, é a topologia em:",
+   "options": [
+    "barramento",
+    "estrela",
+    "anel",
+    "malha",
+    "árvore"
+   ],
+   "answer": "D",
+   "comment": "Na malha, se um caminho falha, os dados encontram rotas alternativas. O custo elevado é a desvantagem."
+  }
+ ]
+}

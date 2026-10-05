@@ -66,15 +66,6 @@ Nesse modelo arquitetônico, não existe hierarquia. Portanto, todos os computad
 
 Por outro lado, o modelo Cliente/Servidor exige um computador central robusto, dedicado exclusivamente a fornecer serviços e regras de segurança para os demais. Ou seja, existe hierarquia e controle de acesso centralizado (conceito muito cobrado para cargos específicos de TI, como analistas e técnicos).
 
-## Raio-X das Bancas: Como Esse Assunto Cai em Prova?
-
-Para consolidar o conteúdo, veja dois exemplos práticos de como o avaliador tenta confundir o candidato nos concursos de nível médio e superior:
-
--   **Pegadinha 1:** _“Uma rede local (LAN) restringe-se ao uso exclusivo de cabos trançados ou de fibra óptica para a transmissão de dados.”_  
-    **Gabarito: Errado.** Uma LAN pode perfeitamente ser baseada em conexão sem fio. Quando isso acontece, ela ganha o nome específico de WLAN (como o Wi-Fi doméstico).
--   **Pegadinha 2:** _“A infraestrutura que conecta a sede de um órgão público em Brasília a uma superintendência em São Paulo é classificada como uma MAN.”_  
-    **Gabarito: Errado.** Cidades e estados diferentes exigem redes de longa distância, ou seja, o correto é WAN. MAN seria se a interligação ocorresse apenas dentro de Brasília.
-
 ## Conclusão
 
 Em resumo, não deixe que conceitos simples de tecnologia tirem pontos preciosos de você na prova. Lembre-se sempre de mapear o conceito a partir do tamanho da área física: a PAN é voltada para a pessoa; a LAN domina os escritórios; a MAN conecta bairros e matrizes na mesma cidade; e a WAN abraça o mundo inteiro (Internet).

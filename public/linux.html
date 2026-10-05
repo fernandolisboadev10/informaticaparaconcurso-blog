@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador de Terminal Linux — Treino Cebraspe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #0b1220;
+    --bg-panel: #10192c;
+    --term-bg: #300a24;
+    --term-titlebar: #383734;
+    --accent: #4fd1a5;
+    --accent-dim: #0f2e26;
+    --trunk: #2a3448;
+    --text: #e8ecf4;
+    --text-muted: #8b97ae;
+    --err: #ff6b68;
+    --warn: #f0a339;
+    --ubuntu-green: #8ae234;
+    --ubuntu-blue: #729fcf;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+.header-bar {
+    padding: 18px 20px 10px;
+    background-image:
+        radial-gradient(circle at 15% 10%, rgba(79,209,165,0.05), transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(63,169,245,0.05), transparent 40%);
+}
+
+.top-nav {
+    background: var(--bg-panel);
+    border-top: 1px solid var(--trunk);
+    border-bottom: 1px solid var(--trunk);
+    padding: 12px 20px;
+}
+.nav-burger {
+    display: none;
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--trunk);
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+}
+.nav-burger:hover { border-color: var(--accent); color: var(--accent); }
+
+.controls-bar {
+    padding: 18px 20px 16px;
+    background-image:
+        radial-gradient(circle at 15% 90%, rgba(79,209,165,0.05), transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(63,169,245,0.05), transparent 40%);
+}
+
+.wrap { max-width: 920px; margin: 0 auto; }
+
+.page-title {
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.page-heading {
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.page-heading span { color: var(--accent); }
+
+.page-sub {
+    text-align: center;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.reset-note {
+    text-align: center;
+    font-size: 11.5px;
+    color: var(--warn);
+    margin-bottom: 22px;
+    letter-spacing: 0.2px;
+}
+
+.level-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 12px;
+}
+.level-btn {
+    background: var(--bg-panel);
+    border: 1px solid var(--trunk);
+    color: var(--text-muted);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    padding: 8px 22px;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.level-btn:first-child { border-radius: 999px 0 0 999px; border-right: none; }
+.level-btn:last-child { border-radius: 0 999px 999px 0; }
+.level-btn.active.basic { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+.level-btn.active.advanced { background: #3a1f0f; border-color: var(--warn); color: var(--warn); }
+.level-btn:not(.active) { border-color: var(--trunk); }
+
+.cat-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.cat-tab {
+    background: transparent;
+    border: 1px solid var(--trunk);
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.cat-tab:hover { border-color: var(--accent); color: var(--accent); }
+.cat-tab.active { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 4px;
+    min-height: 30px;
+}
+.chip {
+    background: var(--bg-panel);
+    border: 1px solid var(--trunk);
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+}
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+
+.desktop-frame {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    overflow: hidden;
+    border-top: 1px solid var(--trunk);
+    border-bottom: 1px solid var(--trunk);
+    box-shadow: none;
+}
+
+.gnome-topbar {
+    background: #1a1a1a;
+    color: #d5d3cf;
+    font-family: 'Ubuntu Mono', 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 14px;
+}
+.gnome-topbar .tb-left, .gnome-topbar .tb-right { display: flex; align-items: center; gap: 10px; opacity: 0.85; }
+.gnome-topbar .tb-center { font-weight: 500; }
+
+.desktop-surface {
+    position: relative;
+    display: flex;
+    min-height: 88vh;
+    background:
+        radial-gradient(circle at 80% 10%, rgba(255,255,255,0.05), transparent 40%),
+        linear-gradient(160deg, #7c1f6b 0%, #a3266b 35%, #c1442f 70%, #e0641f 100%);
+    overflow: hidden;
+}
+.desktop-surface::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+.gnome-dock {
+    width: 58px;
+    flex-shrink: 0;
+    background: rgba(15,13,17,0.6);
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 0;
+    gap: 10px;
+    z-index: 3;
+}
+.gnome-dock .dock-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: default;
+    transition: background 0.15s;
+}
+.gnome-dock .dock-icon svg { width: 26px; height: 26px; }
+.gnome-dock .dock-icon:hover { background: rgba(255,255,255,0.08); }
+.gnome-dock .dock-icon.active { background: rgba(255,255,255,0.12); }
+.gnome-dock .dock-icon.active::after {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 18px;
+    border-radius: 0 3px 3px 0;
+    background: #ffffff;
+}
+.gnome-dock .dock-spacer { flex: 1; }
+.gnome-dock .dock-icon.grid-icon { background: rgba(255,255,255,0.06); }
+
+.desktop-icons {
+    position: absolute;
+    top: 16px;
+    left: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 2;
+}
+#desktop-dynamic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+@keyframes iconAppear {
+    from { opacity: 0; transform: scale(0.6); }
+    60% { opacity: 1; transform: scale(1.12); }
+    to { opacity: 1; transform: scale(1); }
+}
+.desktop-icon {
+    width: 84px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 4px;
+    border-radius: 6px;
+    text-align: center;
+}
+.desktop-icon:not(.static-icon) {
+    animation: iconAppear 0.4s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+    .desktop-icon:not(.static-icon) { animation: none; }
+    .credit-banner { animation: none; }
+}
+
+@keyframes neonBlink {
+    0%, 100% { opacity: 1; text-shadow: 0 0 6px var(--accent), 0 0 14px var(--accent); }
+    50% { opacity: 0.35; text-shadow: none; }
+}
+.credit-banner {
+    text-align: center;
+    padding: 7px 10px;
+    background: #04120d;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: var(--accent);
+    animation: neonBlink 1.6s ease-in-out infinite;
+}
+.credit-banner a { color: inherit; text-decoration: none; }
+.credit-banner a:hover { text-decoration: underline; }
+.desktop-icon svg { width: 40px; height: 40px; margin-bottom: 4px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); }
+.desktop-icon span {
+    color: #fff;
+    font-size: 11px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+    word-break: break-word;
+    line-height: 1.25;
+    max-width: 80px;
+}
+.desktop-empty-hint {
+    color: rgba(255,255,255,0.6);
+    font-size: 11px;
+    max-width: 130px;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    margin-top: 6px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.desktop-terminal-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 24px 24px 10px;
+    z-index: 3;
+}
+
+.terminal-window {
+    background: var(--term-bg);
+    border-radius: 10px;
+    border: 1px solid #1f1e1c;
+    overflow: hidden;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 640px;
+}
+
+@media (max-width: 780px) {
+    .desktop-surface { flex-direction: column; min-height: 0; }
+    .gnome-dock { width: 100%; flex-direction: row; padding: 8px; justify-content: center; }
+    .gnome-dock .dock-spacer { display: none; }
+    .gnome-dock .dock-icon.active::after { left: 50%; top: -7px; transform: translateX(-50%); width: 18px; height: 4px; border-radius: 3px 3px 0 0; }
+    .desktop-icons { position: static; flex-direction: row; flex-wrap: wrap; padding: 12px; max-height: none; }
+    .desktop-empty-hint { position: static; padding: 12px; max-width: none; }
+    .desktop-terminal-wrap { padding: 12px; }
+}
+
+.term-titlebar {
+    background: var(--term-titlebar);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #1f1e1c;
+}
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.dot.red { background: #e95420; }
+.dot.yellow { background: #5c5b57; }
+.dot.green { background: #5c5b57; }
+.term-titlebar .title {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    color: #d5d3cf;
+    font-family: 'Ubuntu Mono', 'JetBrains Mono', monospace;
+}
+
+.term-body {
+    padding: 18px 20px;
+    height: 460px;
+    overflow-y: auto;
+    font-family: 'Ubuntu Mono', 'JetBrains Mono', monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    cursor: text;
+}
+.term-body::-webkit-scrollbar { width: 8px; }
+.term-body::-webkit-scrollbar-thumb { background: var(--trunk); border-radius: 4px; }
+
+.line { white-space: pre-wrap; word-break: break-word; }
+.line.out { color: #eeeeec; }
+.line.err { color: var(--err); }
+.line.info { color: var(--ubuntu-blue); }
+.line.sudo-msg { color: var(--warn); }
+
+.prompt-row { display: flex; align-items: baseline; }
+.prompt-label { color: var(--ubuntu-green); font-weight: 700; white-space: pre; flex-shrink: 0; }
+.prompt-label .path { color: var(--ubuntu-blue); font-weight: 700; }
+.cmd-echo { color: #eeeeec; white-space: pre-wrap; word-break: break-word; }
+
+.input-row { display: flex; align-items: baseline; }
+#cmd-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #eeeeec;
+    font-family: 'Ubuntu Mono', 'JetBrains Mono', monospace;
+    font-size: 15px;
+    caret-color: #eeeeec;
+    min-width: 20px;
+}
+
+.box-hint {
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
+    color: #cdf5e5;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.box-hint code {
+    background: rgba(0,0,0,0.25);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+}
+
+.quiz-panel { text-align: center; max-width: 620px; margin: 0 auto; }
+.quiz-score { font-family: 'Space Grotesk', sans-serif; font-size: 12px; color: var(--text-muted); letter-spacing: 0.3px; margin-bottom: 12px; }
+.quiz-statement { background: var(--accent-dim); border: 1px solid var(--accent); color: #cdf5e5; border-radius: 8px; padding: 14px 18px; font-size: 14px; line-height: 1.6; margin-bottom: 14px; }
+.quiz-actions { display: flex; justify-content: center; gap: 10px; margin-bottom: 12px; }
+.quiz-btn { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 12.5px; letter-spacing: 0.3px; padding: 8px 22px; border-radius: 999px; cursor: pointer; background: var(--bg-panel); border: 1px solid var(--trunk); color: var(--text-muted); transition: border-color 0.15s, color 0.15s; }
+.quiz-btn.certo:hover { border-color: var(--accent); color: var(--accent); }
+.quiz-btn.errado:hover { border-color: var(--err); color: var(--err); }
+.quiz-feedback { font-size: 13px; line-height: 1.6; min-height: 20px; margin-bottom: 4px; }
+.quiz-feedback.right { color: var(--accent); }
+.quiz-feedback.wrong { color: var(--err); }
+
+.footer { text-align: center; margin-top: 10px; font-size: 11px; letter-spacing: 1px; }
+.footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+.footer a:hover { color: var(--accent); border-color: var(--accent); }
+
+@media (max-width: 600px) {
+    .term-body { height: 380px; font-size: 12.5px; }
+    .page-heading { font-size: 21px; }
+}
+
+@media (max-width: 780px) {
+    .nav-burger { display: block; }
+    .nav-menu { display: none; margin-top: 14px; }
+    .nav-menu.open { display: block; }
+}
+</style>
+</head>
+<body>
+
+<div class="credit-banner">Simulador criado pelo professor · <a href="https://fernandolisboa.pro/" target="_blank" rel="noopener">fernandolisboa.pro</a></div>
+
+<div class="header-bar">
+<div class="wrap">
+    <div class="page-title">Treino prático · Cebraspe</div>
+    <div class="page-heading">Simulador de <span>terminal Linux</span></div>
+    <div class="page-sub">Pratique navegação, permissões, processos, texto e pipes, usuários e pacotes — os temas mais cobrados em provas de Linux da Cebraspe — direto no navegador, sem instalar nada.</div>
+    <div class="reset-note">⚠ Tudo o que você criar aqui é temporário: ao sair ou atualizar a página, o progresso se perde.</div>
+</div>
+</div>
+
+<nav class="top-nav">
+<div class="wrap">
+    <button class="nav-burger" id="nav-burger" type="button">☰ Menu</button>
+    <div class="nav-menu" id="nav-menu">
+        <div class="level-toggle" id="mode-toggle"></div>
+
+        <div id="practice-panel">
+            <div class="cat-tabs" id="cat-tabs"></div>
+            <div class="chips" id="chips"></div>
+        </div>
+
+        <div class="quiz-panel" id="quiz-panel" style="display:none;">
+            <div class="quiz-score" id="quiz-score"></div>
+            <div class="quiz-statement" id="quiz-statement"></div>
+            <div class="quiz-actions" id="quiz-actions"></div>
+            <div class="quiz-feedback" id="quiz-feedback"></div>
+        </div>
+    </div>
+</div>
+</nav>
+
+<div class="desktop-frame">
+    <div class="gnome-topbar">
+        <div class="tb-left">Atividades</div>
+        <div class="tb-center" id="gnome-clock">18 de jul 13:02</div>
+        <div class="tb-right">📶 🔊 🔋</div>
+    </div>
+    <div class="desktop-surface">
+        <div class="gnome-dock">
+            <span class="dock-icon" title="Firefox">
+                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#ff6611"/><path d="M32 14c3 3 4 7 3 12-1 6-6 10-12 10s-11-4-12-10c-1-4 1-8 3-9 0 3 1 5 3 6-2-4-1-9 2-12 0 2 1 4 3 5 0-3 2-6 5-6 1 2 2 3 5 4z" fill="#fff"/></svg>
+            </span>
+            <span class="dock-icon" title="Arquivos">
+                <svg viewBox="0 0 48 48"><path d="M6 14c0-1.1.9-2 2-2h11l4 4h17c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V14z" fill="#5aa9e6"/><path d="M6 18h36v14c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V18z" fill="#8ec4f0"/></svg>
+            </span>
+            <span class="dock-icon active" title="Terminal">
+                <svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="32" rx="3" fill="#2e2e2e"/><path d="M13 18l7 6-7 6" stroke="#4fd1a5" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="23" y1="30" x2="33" y2="30" stroke="#e8ecf4" stroke-width="2.5" stroke-linecap="round"/></svg>
+            </span>
+            <span class="dock-icon" title="Imagens">
+                <svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="32" rx="3" fill="#ffffff"/><circle cx="16" cy="18" r="4" fill="#f2b632"/><path d="M6 34l10-10 8 7 6-6 12 12v1c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2v-4z" fill="#5aa9e6"/></svg>
+            </span>
+            <span class="dock-icon" title="Editor de texto">
+                <svg viewBox="0 0 48 48"><path d="M12 4h16l8 8v32H12z" fill="#ffffff"/><path d="M28 4l8 8h-8z" fill="#cfcfcf"/><line x1="17" y1="22" x2="31" y2="22" stroke="#999" stroke-width="2"/><line x1="17" y1="28" x2="31" y2="28" stroke="#999" stroke-width="2"/><line x1="17" y1="34" x2="26" y2="34" stroke="#999" stroke-width="2"/></svg>
+            </span>
+            <span class="dock-icon" title="Ubuntu Software">
+                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#e95420"/><path d="M24 12l9 15H15z" fill="#fff"/><circle cx="24" cy="32" r="4" fill="#fff"/></svg>
+            </span>
+            <span class="dock-icon" title="Ajuda">
+                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#5a5a5a"/><text x="24" y="31" font-size="20" font-family="sans-serif" fill="#fff" text-anchor="middle" font-weight="bold">?</text></svg>
+            </span>
+            <div class="dock-spacer"></div>
+            <span class="dock-icon grid-icon" title="Mostrar aplicativos">
+                <svg viewBox="0 0 48 48"><circle cx="14" cy="14" r="4" fill="#d5d3cf"/><circle cx="24" cy="14" r="4" fill="#d5d3cf"/><circle cx="34" cy="14" r="4" fill="#d5d3cf"/><circle cx="14" cy="24" r="4" fill="#d5d3cf"/><circle cx="24" cy="24" r="4" fill="#d5d3cf"/><circle cx="34" cy="24" r="4" fill="#d5d3cf"/><circle cx="14" cy="34" r="4" fill="#d5d3cf"/><circle cx="24" cy="34" r="4" fill="#d5d3cf"/><circle cx="34" cy="34" r="4" fill="#d5d3cf"/></svg>
+            </span>
+        </div>
+        <div class="desktop-icons" id="desktop-icons">
+            <div class="desktop-icon static-icon">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="20" width="36" height="22" rx="2" fill="#e5e5e5"/><path d="M24 6L4 22h6v2h28v-2h6z" fill="#c9c9c9"/><rect x="19" y="28" width="10" height="14" fill="#a3266b"/></svg>
+                <span>aluno</span>
+            </div>
+            <div class="desktop-icon static-icon">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M14 16h20l-2 24H16z" fill="#cfd3d6"/><path d="M12 12h24v4H12z" fill="#9aa0a6"/><path d="M19 8h10l2 4H17z" fill="#9aa0a6"/><line x1="20" y1="20" x2="20" y2="36" stroke="#8a8f94" stroke-width="1.5"/><line x1="24" y1="20" x2="24" y2="36" stroke="#8a8f94" stroke-width="1.5"/><line x1="28" y1="20" x2="28" y2="36" stroke="#8a8f94" stroke-width="1.5"/></svg>
+                <span>Lixeira</span>
+            </div>
+            <div id="desktop-dynamic-list"></div>
+        </div>
+        <div class="desktop-terminal-wrap">
+            <div class="terminal-window">
+                <div class="term-titlebar">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="title">aluno@linux-treino: ~</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a19d94" stroke-width="2" style="margin-right:6px;flex-shrink:0;"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a19d94" stroke-width="2" style="flex-shrink:0;"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </div>
+                <div class="term-body" id="term-body" onclick="focusInput()"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="controls-bar">
+<div class="wrap">
+    <div class="box-hint">💡 O terminal já abre dentro de <code>~/Desktop</code>. Digite <code>mkdir Provas</code> e veja o ícone aparecer na área de trabalho acima. Use <code>cd ~</code> se quiser explorar outras pastas.</div>
+</div>
+</div>
+
+<div class="footer"><a href="https://fernandolisboa.pro/" target="_blank" rel="noopener">FERNANDOLISBOA.PRO</a></div>
+
+<div class="credit-banner">Simulador criado pelo professor · <a href="https://fernandolisboa.pro/" target="_blank" rel="noopener">fernandolisboa.pro</a></div>
+
+<script>
+function newDir(perm, owner) { return { type: 'dir', children: {}, perm: perm || '755', owner: owner || 'aluno' }; }
+function newFile(content, perm, owner) { return { type: 'file', content: content || [], perm: perm || '644', owner: owner || 'aluno' }; }
+function newLink(target) { return { type: 'link', target: target }; }
+
+function buildFS() {
+    return {
+        type: 'dir', perm: '755', owner: 'root',
+        children: {
+            etc: newDir('755', 'root'),
+            home: {
+                type: 'dir', perm: '755', owner: 'root',
+                children: {
+                    aluno: {
+                        type: 'dir', perm: '755', owner: 'aluno',
+                        children: {
+                            Documentos: (function () {
+                                const d = newDir();
+                                d.children = {
+                                    'relatorio.txt': newFile(['Sistema iniciado sem erro.', 'Backup concluido com sucesso.', 'erro: falha ao conectar ao servidor', 'Processo finalizado normalmente.', 'aviso: espaco em disco baixo'])
+                                };
+                                return d;
+                            })(),
+                            Desktop: newDir(),
+                            Downloads: newDir(),
+                            '.bashrc': newFile(['# configuracoes do bash'])
+                        }
+                    }
+                }
+            },
+            var: {
+                type: 'dir', perm: '755', owner: 'root',
+                children: {
+                    log: {
+                        type: 'dir', perm: '755', owner: 'root',
+                        children: {
+                            'syslog': newFile([
+                                'Jun 10 09:00:01 srv systemd: Started daily backup.',
+                                'Jun 10 09:15:22 srv sshd: erro de autenticacao para usuario teste',
+                                'Jun 10 10:02:10 srv kernel: disco /dev/sda1 90% utilizado',
+                                'Jun 10 10:30:00 srv cron: job executado com sucesso'
+                            ])
+                        }
+                    }
+                }
+            },
+            tmp: newDir('777', 'root')
+        }
+    };
+}
+
+let fakeUsers = ['root', 'aluno'];
+let fakeGroups = ['root', 'aluno', 'sudo'];
+function passwdContent() { return fakeUsers.map((u, i) => u + ':x:' + (i === 0 ? '0' : 1000 + i) + ':' + (i === 0 ? '0' : 1000 + i) + '::/home/' + u + ':/bin/bash'); }
+function shadowContent() { return fakeUsers.map(u => u + ':$6$simulado$hashFalsoDeSenha:19700:0:99999:7:::'); }
+function groupContent() { return fakeGroups.map((g, i) => g + ':x:' + i + ':'); }
+
+const HOME = ['home', 'aluno'];
+let cwd = HOME.concat(['Desktop']);
+let effectiveUser = 'aluno';
+let userStack = [];
+const hostname = 'linux-treino';
+let fs = buildFS();
+
+function initEtc() {
+    const etc = fs.children.etc;
+    etc.children['passwd'] = newFile(passwdContent(), '644', 'root');
+    etc.children['shadow'] = newFile(shadowContent(), '600', 'root');
+    etc.children['group'] = newFile(groupContent(), '644', 'root');
+}
+initEtc();
+function refreshEtc() {
+    fs.children.etc.children['passwd'].content = passwdContent();
+    fs.children.etc.children['shadow'].content = shadowContent();
+    fs.children.etc.children['group'].content = groupContent();
+}
+
+function resolveNodeRaw(pathArr) {
+    let node = fs;
+    for (const seg of pathArr) {
+        if (!node || node.type !== 'dir' || !node.children || !(seg in node.children)) return null;
+        node = node.children[seg];
+    }
+    return node;
+}
+function resolveNode(pathArr, depth) {
+    depth = depth || 0;
+    if (depth > 5) return null;
+    const node = resolveNodeRaw(pathArr);
+    if (node && node.type === 'link') {
+        const targetPath = parsePathFrom(node.target, pathArr.slice(0, -1));
+        return resolveNode(targetPath, depth + 1);
+    }
+    return node;
+}
+function parsePathFrom(input, baseArr) {
+    let base, rest;
+    if (input.startsWith('~')) { base = HOME.slice(); rest = input.slice(1); if (rest.startsWith('/')) rest = rest.slice(1); }
+    else if (input.startsWith('/')) { base = []; rest = input.slice(1); }
+    else { base = baseArr.slice(); rest = input; }
+    const parts = rest.split('/').filter(p => p.length > 0);
+    for (const part of parts) {
+        if (part === '.') continue;
+        if (part === '..') { if (base.length > 0) base.pop(); }
+        else base.push(part);
+    }
+    return base;
+}
+function parsePath(input) {
+    if (!input || input === '.') return cwd.slice();
+    return parsePathFrom(input, cwd);
+}
+function pathToStr(pathArr) {
+    if (pathArr.length === 0) return '/';
+    if (pathArr.length >= HOME.length && HOME.every((v, i) => pathArr[i] === v)) {
+        const rest = pathArr.slice(HOME.length).join('/');
+        return rest ? '~/' + rest : '~';
+    }
+    return '/' + pathArr.join('/');
+}
+function splitParentName(pathArr) {
+    const clone = pathArr.slice();
+    const name = clone.pop();
+    return { parent: clone, name };
+}
+function arrayStartsWith(arr, prefix) {
+    if (arr.length < prefix.length) return false;
+    return prefix.every((seg, i) => arr[i] === seg);
+}
+
+function octDigitToRwx(d) { d = Number(d); return (d & 4 ? 'r' : '-') + (d & 2 ? 'w' : '-') + (d & 1 ? 'x' : '-'); }
+function permString(node) {
+    const type = node.type === 'dir' ? 'd' : (node.type === 'link' ? 'l' : '-');
+    const oct = node.perm || (node.type === 'dir' ? '755' : '644');
+    return type + oct.split('').map(octDigitToRwx).join('');
+}
+// Checagem de permissao: dono vs "outros" (sem grupos reais atribuidos aos nos do FS).
+function hasPerm(node, action, ctx) {
+    if (!node) return true;
+    if (effectiveUser === 'root') return true;
+    if (ctx && ctx.sudo) return true;
+    const oct = node.perm || (node.type === 'dir' ? '755' : '644');
+    const digit = Number(oct[node.owner === effectiveUser ? 0 : 2]);
+    const bit = { r: 4, w: 2, x: 1 }[action];
+    return (digit & bit) === bit;
+}
+function permDeniedMsg(cmd, path) { return cmd + ': ' + path + ': Permissao negada'; }
+function applySymbolic(currentOct, expr) {
+    const m = expr.match(/^([ugoa]+)([+\-=])([rwx]+)$/);
+    if (!m) return null;
+    let who = m[1], op = m[2], perms = m[3];
+    if (who.indexOf('a') !== -1) who = 'ugo';
+    const digits = currentOct.split('').map(Number);
+    const idxMap = { u: 0, g: 1, o: 2 };
+    const bitMap = { r: 4, w: 2, x: 1 };
+    let bits = 0;
+    perms.split('').forEach(c => { bits |= bitMap[c]; });
+    for (const ch of who) {
+        const idx = idxMap[ch];
+        if (idx === undefined) continue;
+        if (op === '+') digits[idx] = digits[idx] | bits;
+        else if (op === '-') digits[idx] = digits[idx] & (~bits & 7);
+        else if (op === '=') digits[idx] = bits;
+    }
+    return digits.join('');
+}
+
+let fakeProcesses = [
+    { pid: 1, user: 'root', cmd: '/sbin/init' },
+    { pid: 842, user: 'root', cmd: 'sshd: /usr/sbin/sshd -D' },
+    { pid: 1190, user: 'aluno', cmd: '-bash' },
+    { pid: 2201, user: 'aluno', cmd: 'firefox' },
+    { pid: 2350, user: 'root', cmd: 'apache2 -DFOREGROUND' },
+    { pid: 2680, user: 'aluno', cmd: 'gedit anotacoes.txt' }
+];
+let fakeInstalledPackages = ['bash', 'coreutils', 'openssh-client'];
+let cmdHistory = [];
+let fakeAliases = {};
+let fakeEnv = {};
+
+function cmd_pwd() { return { out: ['/' + cwd.join('/')], err: [] }; }
+
+function cmd_ls(args, stdin, ctx) {
+    const showAll = args.includes('-a') || args.includes('-la') || args.includes('-al');
+    const longFmt = args.includes('-l') || args.includes('-la') || args.includes('-al');
+    const targetArg = args.find(a => !a.startsWith('-'));
+    const targetPath = targetArg ? parsePath(targetArg) : cwd;
+    const node = resolveNode(targetPath);
+    if (!node) return { out: [], err: ['ls: nao foi possivel acessar ' + (targetArg || '.') + ': Arquivo ou diretorio nao encontrado'] };
+    if (node.type !== 'dir') return { out: [targetArg || ''], err: [] };
+    if (!hasPerm(node, 'x', ctx)) return { out: [], err: [permDeniedMsg('ls', targetArg || '.')] };
+    let names = Object.keys(node.children);
+    if (!showAll) names = names.filter(n => !n.startsWith('.'));
+    names.sort();
+    if (names.length === 0) return { out: [], err: [] };
+    if (longFmt) {
+        const out = names.map(n => {
+            const child = node.children[n];
+            const suffix = child.type === 'dir' ? '/' : (child.type === 'link' ? (' -> ' + child.target) : '');
+            return permString(child) + '  ' + (child.owner || 'aluno') + ' ' + (child.owner || 'aluno') + '   ' + n + suffix;
+        });
+        return { out, err: [] };
+    }
+    return { out: [names.map(n => node.children[n].type === 'dir' ? n + '/' : n).join('   ')], err: [] };
+}
+
+function cmd_cd(args, stdin, ctx) {
+    if (args.length === 0) { cwd = HOME.slice(); return { out: [], err: [] }; }
+    const target = parsePath(args[0]);
+    const node = resolveNode(target);
+    if (!node) return { out: [], err: ['bash: cd: ' + args[0] + ': Arquivo ou diretorio nao encontrado'] };
+    if (node.type !== 'dir') return { out: [], err: ['bash: cd: ' + args[0] + ': Not a directory'] };
+    if (!hasPerm(node, 'x', ctx)) return { out: [], err: ['bash: cd: ' + args[0] + ': Permissao negada'] };
+    cwd = target;
+    return { out: [], err: [] };
+}
+
+function cmd_mkdir(args, stdin, ctx) {
+    const positional = args.filter(a => !a.startsWith('-'));
+    if (positional.length === 0) return { out: [], err: ['mkdir: faltando operando'] };
+    const err = [];
+    positional.forEach(a => {
+        const target = parsePath(a);
+        const parts = splitParentName(target);
+        const parentNode = resolveNode(parts.parent);
+        if (!parentNode || parentNode.type !== 'dir') { err.push('mkdir: nao foi possivel criar o diretorio "' + a + '": caminho invalido'); return; }
+        if (parts.name in parentNode.children) { err.push('mkdir: nao foi possivel criar o diretorio "' + a + '": Arquivo existe'); return; }
+        if (!hasPerm(parentNode, 'w', ctx)) { err.push('mkdir: nao foi possivel criar o diretorio "' + a + '": Permissao negada'); return; }
+        parentNode.children[parts.name] = newDir();
+    });
+    return { out: [], err };
+}
+
+function cmd_rmdir(args, stdin, ctx) {
+    if (args.length === 0) return { out: [], err: ['rmdir: faltando operando'] };
+    const err = [];
+    args.forEach(a => {
+        const target = parsePath(a);
+        const node = resolveNode(target);
+        if (!node) { err.push("rmdir: falha ao remover '" + a + "': Arquivo ou diretorio nao encontrado"); return; }
+        if (node.type !== 'dir') { err.push("rmdir: falha ao remover '" + a + "': Not a directory"); return; }
+        if (Object.keys(node.children).length > 0) { err.push("rmdir: falha ao remover '" + a + "': Diretorio nao vazio"); return; }
+        const parts = splitParentName(target);
+        const parentNode = resolveNode(parts.parent);
+        if (!hasPerm(parentNode, 'w', ctx)) { err.push("rmdir: falha ao remover '" + a + "': Permissao negada"); return; }
+        delete parentNode.children[parts.name];
+    });
+    return { out: [], err };
+}
+
+function cmd_touch(args, stdin, ctx) {
+    if (args.length === 0) return { out: [], err: ['touch: faltando operando'] };
+    const err = [];
+    args.forEach(a => {
+        const target = parsePath(a);
+        const parts = splitParentName(target);
+        const parentNode = resolveNode(parts.parent);
+        if (!parentNode || parentNode.type !== 'dir') { err.push('touch: nao foi possivel tocar em "' + a + '": caminho invalido'); return; }
+        if (!(parts.name in parentNode.children)) {
+            if (!hasPerm(parentNode, 'w', ctx)) { err.push('touch: nao foi possivel tocar em "' + a + '": Permissao negada'); return; }
+            parentNode.children[parts.name] = newFile();
+        }
+    });
+    return { out: [], err };
+}
+
+function deepCopy(node) {
+    if (node.type === 'file') return newFile(node.content.slice(), node.perm, node.owner);
+    if (node.type === 'link') return newLink(node.target);
+    const clone = newDir(node.perm, node.owner);
+    for (const key in node.children) clone.children[key] = deepCopy(node.children[key]);
+    return clone;
+}
+
+function cmd_cp(args, stdin, ctx) {
+    const recursive = args.includes('-r') || args.includes('-R');
+    const positional = args.filter(a => !a.startsWith('-'));
+    if (positional.length < 2) return { out: [], err: ['cp: faltando operando'] };
+    const srcArg = positional[0], destArg = positional[1];
+    const srcPath = parsePath(srcArg);
+    const srcNode = resolveNode(srcPath);
+    if (!srcNode) return { out: [], err: ['cp: nao foi possivel acessar "' + srcArg + '": Arquivo ou diretorio nao encontrado'] };
+    if (srcNode.type === 'dir' && !recursive) return { out: [], err: ['cp: omitindo diretorio "' + srcArg + '" (use -r)'] };
+    let destPath = parsePath(destArg);
+    let destNode = resolveNode(destPath);
+    let finalParent, finalName;
+    if (destNode && destNode.type === 'dir') { finalParent = destPath; finalName = srcPath[srcPath.length - 1]; }
+    else { const s = splitParentName(destPath); finalParent = s.parent; finalName = s.name; }
+    const parentNode = resolveNode(finalParent);
+    if (!parentNode || parentNode.type !== 'dir') return { out: [], err: ['cp: destino invalido'] };
+    if (!hasPerm(parentNode, 'w', ctx)) return { out: [], err: [permDeniedMsg('cp', destArg)] };
+    parentNode.children[finalName] = deepCopy(srcNode);
+    return { out: [], err: [] };
+}
+
+function cmd_mv(args, stdin, ctx) {
+    const positional = args.filter(a => !a.startsWith('-'));
+    if (positional.length < 2) return { out: [], err: ['mv: faltando operando'] };
+    const srcArg = positional[0], destArg = positional[1];
+    const srcPath = parsePath(srcArg);
+    const srcNode = resolveNode(srcPath);
+    if (!srcNode) return { out: [], err: ['mv: nao foi possivel mover "' + srcArg + '": Arquivo ou diretorio nao encontrado'] };
+    let destPath = parsePath(destArg);
+    let destNode = resolveNode(destPath);
+    let finalParent, finalName;
+    if (destNode && destNode.type === 'dir') { finalParent = destPath; finalName = srcPath[srcPath.length - 1]; }
+    else { const s = splitParentName(destPath); finalParent = s.parent; finalName = s.name; }
+    const parentNode = resolveNode(finalParent);
+    if (!parentNode || parentNode.type !== 'dir') return { out: [], err: ['mv: destino invalido'] };
+    const sp = splitParentName(srcPath);
+    const srcParentNode = resolveNode(sp.parent);
+    if (!hasPerm(srcParentNode, 'w', ctx) || !hasPerm(parentNode, 'w', ctx)) return { out: [], err: [permDeniedMsg('mv', srcArg)] };
+    parentNode.children[finalName] = srcNode;
+    delete srcParentNode.children[sp.name];
+    if (srcNode.type === 'dir' && arrayStartsWith(cwd, srcPath)) cwd = finalParent.concat([finalName]).concat(cwd.slice(srcPath.length));
+    return { out: [], err: [] };
+}
+
+function cmd_rm(args, stdin, ctx) {
+    const recursive = args.includes('-r') || args.includes('-R') || args.includes('-rf') || args.includes('-fr');
+    const positional = args.filter(a => !a.startsWith('-'));
+    if (positional.length === 0) return { out: [], err: ['rm: faltando operando'] };
+    const err = [];
+    positional.forEach(a => {
+        const target = parsePath(a);
+        const node = resolveNode(target);
+        if (!node) { err.push("rm: nao foi possivel remover '" + a + "': Arquivo ou diretorio nao encontrado"); return; }
+        if (node.type === 'dir' && !recursive) { err.push("rm: nao foi possivel remover '" + a + "': e um diretorio (use -r)"); return; }
+        const parts = splitParentName(target);
+        const parentNode = resolveNode(parts.parent);
+        if (!hasPerm(parentNode, 'w', ctx)) { err.push("rm: nao foi possivel remover '" + a + "': Permissao negada"); return; }
+        delete parentNode.children[parts.name];
+    });
+    return { out: [], err };
+}
+
+function cmd_ln(args) {
+    if (!args.includes('-s')) return { out: [], err: ['ln: links fisicos nao sao suportados neste simulador; use -s'] };
+    const positional = args.filter(a => a !== '-s');
+    if (positional.length < 2) return { out: [], err: ['ln: uso: ln -s <alvo> <nome_do_link>'] };
+    const target = positional[0], linkName = positional[1];
+    const linkPath = parsePath(linkName);
+    const parts = splitParentName(linkPath);
+    const parentNode = resolveNode(parts.parent);
+    if (!parentNode || parentNode.type !== 'dir') return { out: [], err: ['ln: caminho invalido'] };
+    parentNode.children[parts.name] = newLink(target);
+    return { out: [], err: [] };
+}
+
+function cmd_whoami() { return { out: [effectiveUser], err: [] }; }
+function cmd_echo(args) {
+    const expanded = args.map(a => a.replace(/\$(\w+)/g, (_, v) => fakeEnv[v] || ''));
+    return { out: [expanded.join(' ')], err: [] };
+}
+function cmd_alias(args) {
+    if (args.length === 0) return { out: Object.keys(fakeAliases).map(k => k + "='" + fakeAliases[k] + "'"), err: [] };
+    const err = [];
+    args.forEach(a => {
+        const eq = a.indexOf('=');
+        if (eq === -1) { err.push('alias: uso: alias nome=valor'); return; }
+        fakeAliases[a.slice(0, eq)] = a.slice(eq + 1).replace(/^"|"$/g, '');
+    });
+    return { out: [], err };
+}
+function cmd_export(args) {
+    const err = [];
+    args.forEach(a => {
+        const eq = a.indexOf('=');
+        if (eq === -1) { err.push('export: uso: export NOME=valor'); return; }
+        fakeEnv[a.slice(0, eq)] = a.slice(eq + 1).replace(/^"|"$/g, '');
+    });
+    return { out: [], err };
+}
+
+function cmd_cat(args, stdin, ctx) {
+    if (args.length === 0) return { out: stdin || [], err: [] };
+    const out = [], err = [];
+    args.forEach(a => {
+        const target = parsePath(a);
+        const node = resolveNode(target);
+        if (!node) { err.push('cat: ' + a + ': Arquivo ou diretorio nao encontrado'); return; }
+        if (node.type === 'dir') { err.push('cat: ' + a + ': E um diretorio'); return; }
+        if (!hasPerm(node, 'r', ctx)) { err.push(permDeniedMsg('cat', a)); return; }
+        out.push(...node.content);
+    });
+    return { out, err };
+}
+
+function cmd_head(args, stdin, ctx) {
+    const nIdx = args.indexOf('-n');
+    let n = 10;
+    if (nIdx !== -1 && args[nIdx + 1]) n = parseInt(args[nIdx + 1], 10) || 10;
+    const fileArg = args.find((a, i) => !a.startsWith('-') && args[i - 1] !== '-n');
+    let lines;
+    if (fileArg) {
+        const node = resolveNode(parsePath(fileArg));
+        if (!node) return { out: [], err: ['head: ' + fileArg + ': Arquivo ou diretorio nao encontrado'] };
+        if (!hasPerm(node, 'r', ctx)) return { out: [], err: [permDeniedMsg('head', fileArg)] };
+        lines = node.content || [];
+    } else lines = stdin || [];
+    return { out: lines.slice(0, n), err: [] };
+}
+function cmd_tail(args, stdin, ctx) {
+    const nIdx = args.indexOf('-n');
+    let n = 10;
+    if (nIdx !== -1 && args[nIdx + 1]) n = parseInt(args[nIdx + 1], 10) || 10;
+    const fileArg = args.find((a, i) => !a.startsWith('-') && args[i - 1] !== '-n');
+    let lines;
+    if (fileArg) {
+        const node = resolveNode(parsePath(fileArg));
+        if (!node) return { out: [], err: ['tail: ' + fileArg + ': Arquivo ou diretorio nao encontrado'] };
+        if (!hasPerm(node, 'r', ctx)) return { out: [], err: [permDeniedMsg('tail', fileArg)] };
+        lines = node.content || [];
+    } else lines = stdin || [];
+    return { out: lines.slice(-n), err: [] };
+}
+
+function cmd_wc(args, stdin, ctx) {
+    const onlyLines = args.includes('-l');
+    const fileArg = args.find(a => !a.startsWith('-'));
+    let lines;
+    if (fileArg) {
+        const node = resolveNode(parsePath(fileArg));
+        if (!node) return { out: [], err: ['wc: ' + fileArg + ': Arquivo ou diretorio nao encontrado'] };
+        if (!hasPerm(node, 'r', ctx)) return { out: [], err: [permDeniedMsg('wc', fileArg)] };
+        lines = node.content || [];
+    } else lines = stdin || [];
+    const lineCount = lines.length;
+    if (onlyLines) return { out: [String(lineCount) + (fileArg ? ' ' + fileArg : '')], err: [] };
+    const words = lines.reduce((acc, l) => acc + l.split(/\s+/).filter(Boolean).length, 0);
+    const chars = lines.reduce((acc, l) => acc + l.length + 1, 0);
+    return { out: [lineCount + ' ' + words + ' ' + chars + (fileArg ? ' ' + fileArg : '')], err: [] };
+}
+
+function cmd_grep(args, stdin, ctx) {
+    const ignoreCase = args.includes('-i');
+    const invert = args.includes('-v');
+    const countOnly = args.includes('-c');
+    const positional = args.filter(a => !a.startsWith('-'));
+    if (positional.length === 0) return { out: [], err: ['grep: faltando padrao'] };
+    const pattern = positional[0];
+    const fileArg = positional[1];
+    let lines;
+    if (fileArg) {
+        const node = resolveNode(parsePath(fileArg));
+        if (!node) return { out: [], err: ['grep: ' + fileArg + ': Arquivo ou diretorio nao encontrado'] };
+        if (!hasPerm(node, 'r', ctx)) return { out: [], err: [permDeniedMsg('grep', fileArg)] };
+        lines = node.content || [];
+    } else lines = stdin || [];
+    const test = l => ignoreCase ? l.toLowerCase().includes(pattern.toLowerCase()) : l.includes(pattern);
+    let matched = lines.filter(l => invert ? !test(l) : test(l));
+    if (countOnly) return { out: [String(matched.length)], err: [] };
+    return { out: matched, err: [] };
+}
+
+// ===== Texto: sort, uniq, cut, diff =====
+function readLinesArg(cmdName, args, stdin, ctx, skipFlags) {
+    const fileArg = args.find((a, i) => !a.startsWith('-') && !skipFlags.includes(args[i - 1]));
+    if (!fileArg) return { lines: stdin || [] };
+    const node = resolveNode(parsePath(fileArg));
+    if (!node) return { err: cmdName + ': ' + fileArg + ': Arquivo ou diretorio nao encontrado' };
+    if (!hasPerm(node, 'r', ctx)) return { err: permDeniedMsg(cmdName, fileArg) };
+    return { lines: node.content || [] };
+}
+function cmd_sort(args, stdin, ctx) {
+    const r = readLinesArg('sort', args, stdin, ctx, []);
+    if (r.err) return { out: [], err: [r.err] };
+    const numeric = args.includes('-n');
+    const sorted = r.lines.slice().sort((a, b) => numeric ? (Number(a) - Number(b)) : a.localeCompare(b));
+    if (args.includes('-r')) sorted.reverse();
+    return { out: sorted, err: [] };
+}
+function cmd_uniq(args, stdin, ctx) {
+    const r = readLinesArg('uniq', args, stdin, ctx, []);
+    if (r.err) return { out: [], err: [r.err] };
+    const withCount = args.includes('-c');
+    const grouped = [];
+    r.lines.forEach(l => {
+        const last = grouped[grouped.length - 1];
+        if (last && last.line === l) last.count++;
+        else grouped.push({ line: l, count: 1 });
+    });
+    return { out: grouped.map(g => withCount ? (String(g.count).padStart(4) + ' ' + g.line) : g.line), err: [] };
+}
+function cmd_cut(args, stdin, ctx) {
+    const r = readLinesArg('cut', args, stdin, ctx, ['-d', '-f']);
+    if (r.err) return { out: [], err: [r.err] };
+    const dIdx = args.indexOf('-d');
+    const fIdx = args.indexOf('-f');
+    const delim = dIdx !== -1 ? args[dIdx + 1] : '\t';
+    const field = fIdx !== -1 ? parseInt(args[fIdx + 1], 10) : 1;
+    return { out: r.lines.map(l => l.split(delim)[field - 1] || ''), err: [] };
+}
+function cmd_diff(args, stdin, ctx) {
+    const positional = args.filter(a => !a.startsWith('-'));
+    if (positional.length < 2) return { out: [], err: ['diff: uso: diff <arquivo1> <arquivo2>'] };
+    const [arg1, arg2] = positional;
+    const node1 = resolveNode(parsePath(arg1));
+    const node2 = resolveNode(parsePath(arg2));
+    if (!node1) return { out: [], err: ['diff: ' + arg1 + ': Arquivo ou diretorio nao encontrado'] };
+    if (!node2) return { out: [], err: ['diff: ' + arg2 + ': Arquivo ou diretorio nao encontrado'] };
+    if (!hasPerm(node1, 'r', ctx) || !hasPerm(node2, 'r', ctx)) return { out: [], err: [permDeniedMsg('diff', arg1)] };
+    const l1 = node1.content || [], l2 = node2.content || [];
+    const out = [];
+    l1.filter(l => !l2.includes(l)).forEach(l => out.push('< ' + l));
+    l2.filter(l => !l1.includes(l)).forEach(l => out.push('> ' + l));
+    return { out, err: [] };
+}
+
+function globToRegex(glob) {
+    const escaped = glob.replace(/[.+^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*').replace(/\?/g, '.');
+    return new RegExp('^' + escaped + '$');
+}
+function cmd_find(args) {
+    const nameIdx = args.indexOf('-name');
+    const startArg = args.find((a, i) => !a.startsWith('-') && args[i - 1] !== '-name') || '.';
+    const pattern = nameIdx !== -1 ? args[nameIdx + 1] : null;
+    const startPath = parsePath(startArg);
+    const startNode = resolveNode(startPath);
+    if (!startNode) return { out: [], err: ['find: "' + startArg + '": Arquivo ou diretorio nao encontrado'] };
+    const out = [];
+    const regex = pattern ? globToRegex(pattern) : null;
+    function walk(node, displayPath) {
+        if (!regex || regex.test(displayPath.split('/').pop())) out.push(displayPath);
+        if (node.type === 'dir') {
+            Object.keys(node.children).sort().forEach(name => walk(node.children[name], displayPath + '/' + name));
+        }
+    }
+    const baseDisplay = startArg === '.' ? '.' : startArg.replace(/\/$/, '');
+    walk(startNode, baseDisplay);
+    return { out, err: [] };
+}
+
+function cmd_chmod(args) {
+    if (args.length < 2) return { out: [], err: ['chmod: uso: chmod <modo> <arquivo>'] };
+    const mode = args[0];
+    const targets = args.slice(1);
+    const err = [];
+    targets.forEach(t => {
+        const node = resolveNodeRaw(parsePath(t));
+        if (!node) { err.push('chmod: nao foi possivel acessar "' + t + '": Arquivo ou diretorio nao encontrado'); return; }
+        if (/^[0-7]{3}$/.test(mode)) { node.perm = mode; return; }
+        const current = node.perm || (node.type === 'dir' ? '755' : '644');
+        const newOct = applySymbolic(current, mode);
+        if (!newOct) { err.push('chmod: modo invalido: "' + mode + '"'); return; }
+        node.perm = newOct;
+    });
+    return { out: [], err };
+}
+
+function cmd_chown(args) {
+    if (args.length < 2) return { out: [], err: ['chown: uso: chown <dono> <arquivo>'] };
+    const owner = args[0].split(':')[0];
+    const targets = args.slice(1);
+    const err = [];
+    targets.forEach(t => {
+        const node = resolveNodeRaw(parsePath(t));
+        if (!node) { err.push('chown: nao foi possivel acessar "' + t + '": Arquivo ou diretorio nao encontrado'); return; }
+        node.owner = owner;
+    });
+    return { out: [], err };
+}
+
+function countNodes(node) {
+    if (node.type !== 'dir') return 1;
+    let c = 1;
+    Object.keys(node.children).forEach(k => { c += countNodes(node.children[k]); });
+    return c;
+}
+function cmd_du(args) {
+    const pathArg = args.find(a => !a.startsWith('-')) || '.';
+    const node = resolveNode(parsePath(pathArg));
+    if (!node) return { out: [], err: ['du: nao foi possivel acessar "' + pathArg + '"'] };
+    const kb = countNodes(node) * 4;
+    return { out: [kb + 'K\t' + pathArg], err: [] };
+}
+function cmd_df() {
+    return {
+        out: [
+            'Sistema de arquivos   Tam.  Usado Disp. Uso% Montado em',
+            '/dev/sda1              20G   8.2G   11G  43%  /',
+            'tmpfs                 2.0G   1.2M  2.0G   1%  /tmp'
+        ], err: []
+    };
+}
+
+function cmd_ps(args) {
+    const showAll = args.includes('aux') || args.includes('-ef') || args.includes('-e');
+    const header = 'PID     USUARIO  COMANDO';
+    const rows = (showAll ? fakeProcesses : fakeProcesses.filter(p => p.user === effectiveUser && p.cmd === '-bash'))
+        .map(p => String(p.pid).padEnd(8) + p.user.padEnd(9) + p.cmd);
+    return { out: [header, ...rows], err: [] };
+}
+function cmd_kill(args, stdin, ctx) {
+    const sig9 = args.includes('-9');
+    const pidArg = args.find(a => /^\d+$/.test(a));
+    if (!pidArg) return { out: [], err: ['kill: uso: kill [-9] <pid>'] };
+    const pid = parseInt(pidArg, 10);
+    const idx = fakeProcesses.findIndex(p => p.pid === pid);
+    if (idx === -1) return { out: [], err: ['bash: kill: (' + pid + ') - Nenhum processo encontrado'] };
+    const proc = fakeProcesses[idx];
+    if (proc.user !== effectiveUser && !ctx.sudo) return { out: [], err: ['bash: kill: (' + pid + ') - Operacao nao permitida'] };
+    fakeProcesses.splice(idx, 1);
+    return { out: ['[processo ' + pid + ' finalizado' + (sig9 ? ' com SIGKILL' : ' com SIGTERM') + ']'], err: [] };
+}
+function cmd_killall(args, stdin, ctx) {
+    const name = args.find(a => !a.startsWith('-'));
+    if (!name) return { out: [], err: ['killall: informe o nome do processo'] };
+    const toKill = fakeProcesses.filter(p => p.cmd.includes(name));
+    if (toKill.length === 0) return { out: [], err: ['killall: ' + name + ': nenhum processo encontrado'] };
+    const err = [];
+    toKill.forEach(p => {
+        if (p.user !== effectiveUser && !ctx.sudo) { err.push('killall: nao foi possivel finalizar ' + p.pid + ' (' + name + '): Operacao nao permitida'); return; }
+        const idx = fakeProcesses.indexOf(p);
+        fakeProcesses.splice(idx, 1);
+    });
+    return { out: [], err };
+}
+
+function cmd_apt(args, stdin, ctx) {
+    const sub = args[0];
+    if (sub === 'update') return { out: ['Lendo listas de pacotes... Pronto', 'Todos os pacotes estao atualizados.'], err: [] };
+    if (sub === 'upgrade') {
+        if (!ctx.sudo) return { out: [], err: ['E: Nao foi possivel abrir o arquivo de trava - Permissao negada (use sudo)'] };
+        return { out: ['Calculando atualizacao... Pronto', '0 pacotes para atualizar.'], err: [] };
+    }
+    if (sub === 'install') {
+        const pkg = args[1];
+        if (!pkg) return { out: [], err: ['E: informe o nome do pacote'] };
+        if (!ctx.sudo) return { out: [], err: ['E: Nao foi possivel abrir o arquivo de trava - Permissao negada (use sudo)'] };
+        if (!fakeInstalledPackages.includes(pkg)) fakeInstalledPackages.push(pkg);
+        return { out: ['Lendo listas de pacotes... Pronto', 'Construindo arvore de dependencias... Pronto', pkg + ' instalado com sucesso (simulado).'], err: [] };
+    }
+    if (sub === 'remove') {
+        const pkg = args[1];
+        if (!pkg) return { out: [], err: ['E: informe o nome do pacote'] };
+        if (!ctx.sudo) return { out: [], err: ['E: Nao foi possivel abrir o arquivo de trava - Permissao negada (use sudo)'] };
+        const idx = fakeInstalledPackages.indexOf(pkg);
+        if (idx === -1) return { out: [], err: ['E: Pacote "' + pkg + '" nao esta instalado.'] };
+        fakeInstalledPackages.splice(idx, 1);
+        return { out: [pkg + ' removido (simulado).'], err: [] };
+    }
+    if (sub === 'list' && args[1] === '--installed') return { out: fakeInstalledPackages.map(p => p + '/agora [instalado]'), err: [] };
+    return { out: [], err: ['apt: subcomando nao reconhecido (use update, install, remove)'] };
+}
+
+function cmd_tar(args, stdin, ctx) {
+    if (args.includes('-czf') || args.includes('-cf')) {
+        const flagIdx = args.findIndex(a => a === '-czf' || a === '-cf');
+        const destArg = args[flagIdx + 1], srcArg = args[flagIdx + 2];
+        if (!destArg || !srcArg) return { out: [], err: ['tar: uso: tar -czf <destino> <origem>'] };
+        const srcNode = resolveNode(parsePath(srcArg));
+        if (!srcNode) return { out: [], err: ['tar: ' + srcArg + ': Arquivo ou diretorio nao encontrado'] };
+        const destPath = parsePath(destArg);
+        const parts = splitParentName(destPath);
+        const parentNode = resolveNode(parts.parent);
+        if (!parentNode || parentNode.type !== 'dir') return { out: [], err: ['tar: destino invalido'] };
+        if (!hasPerm(parentNode, 'w', ctx)) return { out: [], err: [permDeniedMsg('tar', destArg)] };
+        parentNode.children[parts.name] = newFile(['(arquivo compactado simulado de ' + srcArg + ')']);
+        return { out: [], err: [] };
+    }
+    if (args.includes('-xzf') || args.includes('-xf')) {
+        return { out: ['extracao simulada: nenhum conteudo real e extraido neste simulador'], err: [] };
+    }
+    return { out: [], err: ['tar: uso: tar -czf <destino> <origem> | tar -xzf <arquivo>'] };
+}
+
+function cmd_useradd(args, stdin, ctx) {
+    if (!ctx.sudo) return { out: [], err: ['useradd: Permissao negada (use sudo)'] };
+    const name = args.find(a => !a.startsWith('-'));
+    if (!name) return { out: [], err: ['useradd: informe o nome do usuario'] };
+    if (fakeUsers.includes(name)) return { out: [], err: ['useradd: o usuario "' + name + '" ja existe'] };
+    fakeUsers.push(name);
+    refreshEtc();
+    const homeNode = fs.children.home;
+    if (!(name in homeNode.children)) homeNode.children[name] = newDir('755', name);
+    return { out: [], err: [] };
+}
+function cmd_groupadd(args, stdin, ctx) {
+    if (!ctx.sudo) return { out: [], err: ['groupadd: Permissao negada (use sudo)'] };
+    const name = args.find(a => !a.startsWith('-'));
+    if (!name) return { out: [], err: ['groupadd: informe o nome do grupo'] };
+    if (fakeGroups.includes(name)) return { out: [], err: ['groupadd: o grupo "' + name + '" ja existe'] };
+    fakeGroups.push(name);
+    refreshEtc();
+    return { out: [], err: [] };
+}
+function cmd_passwd(args, stdin, ctx) {
+    const target = args.find(a => !a.startsWith('-'));
+    if (target && target !== effectiveUser && !ctx.sudo) return { out: [], err: ['passwd: Permissao negada (use sudo)'] };
+    if (target && !fakeUsers.includes(target)) return { out: [], err: ['passwd: usuario "' + target + '" nao encontrado'] };
+    return { out: ['senha atualizada com sucesso (simulado)'], err: [] };
+}
+
+function cmd_history() { return { out: cmdHistory.map((c, i) => (i + 1) + '  ' + c), err: [] }; }
+
+// ===== Descoberta: which, man =====
+const MAN_PAGES = {
+    pwd: 'Mostra o caminho absoluto do diretorio atual.',
+    ls: 'Lista arquivos e pastas do diretorio atual ou informado.',
+    cd: 'Muda o diretorio de trabalho atual.',
+    mkdir: 'Cria um novo diretorio.',
+    rmdir: 'Remove um diretorio vazio.',
+    touch: 'Cria um arquivo vazio ou atualiza sua data de modificacao.',
+    cp: 'Copia arquivos ou diretorios (use -r para diretorios).',
+    mv: 'Move ou renomeia arquivos e diretorios.',
+    rm: 'Remove arquivos (use -r para diretorios).',
+    ln: 'Cria links (use -s para link simbolico).',
+    whoami: 'Mostra o usuario efetivo da sessao atual.',
+    echo: 'Exibe um texto na saida padrao (expande $VAR).',
+    cat: 'Exibe o conteudo de um ou mais arquivos.',
+    head: 'Mostra as primeiras linhas de um arquivo.',
+    tail: 'Mostra as ultimas linhas de um arquivo.',
+    wc: 'Conta linhas, palavras e caracteres.',
+    grep: 'Filtra linhas que casam com um padrao.',
+    find: 'Busca arquivos por nome dentro de uma pasta.',
+    chmod: 'Altera as permissoes de um arquivo ou diretorio.',
+    chown: 'Altera o dono de um arquivo ou diretorio.',
+    du: 'Mostra o espaco em disco usado por um diretorio.',
+    df: 'Mostra o espaco livre e usado nos sistemas de arquivos.',
+    ps: 'Lista processos em execucao.',
+    kill: 'Envia um sinal de encerramento a um processo pelo PID.',
+    killall: 'Encerra processos pelo nome.',
+    apt: 'Gerencia pacotes (update, install, remove, list).',
+    tar: 'Cria ou extrai arquivos compactados (simulado).',
+    useradd: 'Cria um novo usuario no sistema.',
+    groupadd: 'Cria um novo grupo no sistema.',
+    passwd: 'Altera a senha de um usuario.',
+    history: 'Lista o historico de comandos digitados.',
+    su: 'Troca o usuario efetivo da sessao.',
+    exit: 'Encerra a sessao aberta pelo su e volta ao usuario anterior.',
+    ping: 'Testa conectividade de rede com um host.',
+    systemctl: 'Controla servicos do systemd (start, stop, status...).',
+    crontab: 'Gerencia tarefas agendadas do usuario.',
+    sort: 'Ordena as linhas de um arquivo ou entrada.',
+    uniq: 'Remove linhas duplicadas consecutivas.',
+    cut: 'Extrai campos de cada linha por delimitador.',
+    diff: 'Compara o conteudo de dois arquivos.',
+    alias: 'Define ou lista atalhos de comando.',
+    export: 'Define uma variavel de ambiente simulada.'
+};
+function cmd_which(args) {
+    const name = args[0];
+    if (!name) return { out: [], err: ['which: informe o comando'] };
+    if (DISPATCH[name] || ['ajuda', 'help', 'limpar', 'clear'].includes(name)) return { out: ['/usr/bin/' + name], err: [] };
+    return { out: [], err: [] };
+}
+function cmd_man(args) {
+    const name = args[0];
+    if (!name) return { out: [], err: ['man: informe o comando'] };
+    if (MAN_PAGES[name]) return { out: [name.toUpperCase() + '(1)', '    ' + MAN_PAGES[name]], err: [] };
+    return { out: [], err: ['Nenhuma entrada de manual para ' + name] };
+}
+
+function cmd_su(args) {
+    const target = args.find(a => !a.startsWith('-')) || 'root';
+    if (!fakeUsers.includes(target)) return { out: [], err: ['su: usuario "' + target + '" nao encontrado'] };
+    userStack.push(effectiveUser);
+    effectiveUser = target;
+    return { out: [], err: [] };
+}
+function cmd_exit() {
+    if (userStack.length === 0) return { out: [], err: ['bash: exit: nao ha sessao anterior neste simulador'] };
+    effectiveUser = userStack.pop();
+    return { out: [], err: [] };
+}
+
+function cmd_ping(args) {
+    const host = args.find(a => !a.startsWith('-')) || 'google.com';
+    return {
+        out: [
+            'PING ' + host + ' (simulado): 56 bytes de dados',
+            '64 bytes de ' + host + ': tempo=12.4 ms',
+            '64 bytes de ' + host + ': tempo=13.1 ms',
+            '--- ' + host + ' estatisticas de ping ---',
+            '2 pacotes transmitidos, 2 recebidos, 0% perda'
+        ], err: []
+    };
+}
+function cmd_systemctl(args, stdin, ctx) {
+    const action = args[0], service = args[1];
+    if (!action || !service) return { out: [], err: ['systemctl: uso: systemctl <acao> <servico>'] };
+    if (['start', 'stop', 'restart'].includes(action)) {
+        if (!ctx.sudo) return { out: [], err: ['Falha ao ' + action + ' ' + service + '.service: Permissao negada (use sudo)'] };
+        return { out: [service + '.service: ' + action + ' executado (estado atual alterado, simulado).'], err: [] };
+    }
+    if (['enable', 'disable'].includes(action)) {
+        if (!ctx.sudo) return { out: [], err: ['Falha ao ' + action + ' ' + service + '.service: Permissao negada (use sudo)'] };
+        return { out: [service + '.service: ' + (action === 'enable' ? 'habilitado para iniciar no boot' : 'removido da inicializacao no boot') + ' (simulado).'], err: [] };
+    }
+    if (action === 'status') return { out: [service + '.service - simulado', '   Active: active (running) desde o boot'], err: [] };
+    return { out: [], err: ['systemctl: acao nao reconhecida'] };
+}
+function cmd_crontab(args) {
+    if (args.includes('-l')) return { out: ['0 3 * * * /home/aluno/backup.sh'], err: [] };
+    if (args.includes('-e')) return { out: ['(edicao interativa nao suportada neste simulador)'], err: [] };
+    return { out: [], err: ['crontab: uso: crontab -l | -e'] };
+}
+
+function tokenize(str) {
+    const parts = str.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
+    return parts.map(p => p.replace(/^"|"$/g, ''));
+}
+
+const DISPATCH = {
+    pwd: cmd_pwd, ls: cmd_ls, cd: cmd_cd, mkdir: cmd_mkdir, rmdir: cmd_rmdir, touch: cmd_touch,
+    cp: cmd_cp, mv: cmd_mv, rm: cmd_rm, ln: cmd_ln, whoami: cmd_whoami, echo: cmd_echo, cat: cmd_cat,
+    head: cmd_head, tail: cmd_tail, wc: cmd_wc, grep: cmd_grep, find: cmd_find, chmod: cmd_chmod,
+    chown: cmd_chown, du: cmd_du, df: cmd_df, ps: cmd_ps, kill: cmd_kill, killall: cmd_killall,
+    apt: cmd_apt, useradd: cmd_useradd, groupadd: cmd_groupadd, passwd: cmd_passwd, history: cmd_history,
+    ping: cmd_ping, systemctl: cmd_systemctl, crontab: cmd_crontab, su: cmd_su, exit: cmd_exit, logout: cmd_exit,
+    sort: cmd_sort, uniq: cmd_uniq, cut: cmd_cut, diff: cmd_diff, less: cmd_cat, more: cmd_cat,
+    which: cmd_which, man: cmd_man, alias: cmd_alias, export: cmd_export, tar: cmd_tar
+};
+
+function runPipeline(raw) {
+    let line = raw;
+    let ctx = { sudo: false };
+    let sudoBanner = false;
+    if (/^sudo(\s+|$)/.test(line.trim())) {
+        ctx.sudo = true;
+        sudoBanner = true;
+        line = line.trim().replace(/^sudo\s*/, '');
+    }
+    if (line.trim() === '') return { out: [], err: [], sudoBanner, unknown: false };
+
+    const stages = line.split('|').map(s => s.trim()).filter(s => s.length > 0);
+    let stdin = null;
+    let allErr = [];
+    let redirectTarget = null, redirectAppend = false;
+    let finalOut = [];
+    let unknownCmd = null;
+
+    for (let idx = 0; idx < stages.length; idx++) {
+        const stage = stages[idx];
+        let tokens = tokenize(stage);
+        if (idx === stages.length - 1) {
+            const gtIdx = tokens.indexOf('>');
+            const gtgtIdx = tokens.indexOf('>>');
+            if (gtgtIdx !== -1 && (gtIdx === -1 || gtgtIdx < gtIdx)) {
+                redirectTarget = tokens[gtgtIdx + 1];
+                redirectAppend = true;
+                tokens = tokens.slice(0, gtgtIdx);
+            } else if (gtIdx !== -1) {
+                redirectTarget = tokens[gtIdx + 1];
+                redirectAppend = false;
+                tokens = tokens.slice(0, gtIdx);
+            }
+        }
+        const cmdName = tokens[0];
+        const args = tokens.slice(1);
+        const fn = DISPATCH[cmdName];
+        if (!fn) { unknownCmd = cmdName; finalOut = []; break; }
+        const result = fn(args, stdin, ctx);
+        allErr = allErr.concat(result.err || []);
+        stdin = result.out || [];
+        finalOut = stdin;
+    }
+
+    if (unknownCmd) return { out: [], err: allErr, sudoBanner, unknown: unknownCmd };
+
+    if (redirectTarget) {
+        const target = parsePath(redirectTarget);
+        const parts = splitParentName(target);
+        const parentNode = resolveNode(parts.parent);
+        if (!parentNode || parentNode.type !== 'dir') {
+            allErr.push('bash: ' + redirectTarget + ': caminho invalido');
+        } else if (!hasPerm(parentNode, 'w', ctx)) {
+            allErr.push('bash: ' + redirectTarget + ': Permissao negada');
+        } else {
+            let fileNode = parentNode.children[parts.name];
+            if (!fileNode || fileNode.type !== 'file') { fileNode = newFile([]); parentNode.children[parts.name] = fileNode; }
+            if (redirectAppend) fileNode.content = fileNode.content.concat(finalOut);
+            else fileNode.content = finalOut.slice();
+        }
+        return { out: [], err: allErr, sudoBanner, unknown: false };
+    }
+    return { out: finalOut, err: allErr, sudoBanner, unknown: false };
+}
+
+const termBody = document.getElementById('term-body');
+
+function appendLine(text, cls) {
+    const div = document.createElement('div');
+    div.className = 'line ' + (cls || 'out');
+    div.textContent = text;
+    termBody.appendChild(div);
+}
+function appendCmdEcho(promptText, cmdText) {
+    const row = document.createElement('div');
+    row.className = 'prompt-row';
+    const label = document.createElement('span');
+    label.className = 'prompt-label';
+    label.textContent = promptText + ' ';
+    const echo = document.createElement('span');
+    echo.className = 'cmd-echo';
+    echo.textContent = cmdText;
+    row.appendChild(label);
+    row.appendChild(echo);
+    termBody.appendChild(row);
+}
+function scrollToBottom() { termBody.scrollTop = termBody.scrollHeight; }
+
+function cmd_ajuda() {
+    appendLine('Comandos disponiveis neste simulador (use os niveis e categorias acima para exemplos):', 'info');
+    appendLine('--- BASICO ---', 'info');
+    appendLine('  Navegacao:          pwd, ls [-a -l], cd, cd ..');
+    appendLine('  Arquivos e pastas:  mkdir, rmdir, touch, cp [-r], mv, rm [-r], ln -s');
+    appendLine('  Pacotes:            sudo apt update / install <pkg> / remove <pkg>');
+    appendLine('--- AVANCADO ---', 'info');
+    appendLine('  Permissoes:  chmod (ex: 755 ou u+x), chown');
+    appendLine('  Processos:   ps [aux], kill [-9] <pid>, killall <nome>');
+    appendLine('  Texto/pipes: cat, less, echo, grep [-i -v -c], head/tail -n N, wc -l, sort [-r -n], uniq [-c], cut -d -f, diff, > e >>, |');
+    appendLine('  Busca:       find <pasta> -name "*.ext"');
+    appendLine('  Usuarios:    sudo useradd, groupadd, passwd, whoami, su <usuario>, exit, cat /etc/passwd');
+    appendLine('  Disco:       df -h, du -sh <pasta>');
+    appendLine('  Sistema:     sudo systemctl <start|stop|enable|disable|status> <servico>, tar -czf/-xzf');
+    appendLine('  Outros:      which, man <comando>, alias, export VAR=valor, ping <host>, crontab -l, history, limpar/clear, ajuda');
+}
+
+function runCommand(raw) {
+    const trimmed = raw.trim();
+    if (trimmed === '') return;
+    if (trimmed === 'ajuda' || trimmed === 'help') { cmd_ajuda(); return; }
+    if (trimmed === 'limpar' || trimmed === 'clear') { termBody.innerHTML = ''; return; }
+
+    const result = runPipeline(trimmed);
+    if (result.sudoBanner) {
+        appendLine('[sudo] senha para ' + effectiveUser + ': ********', 'sudo-msg');
+    }
+    if (result.unknown) {
+        appendLine('bash: ' + result.unknown + ': comando nao encontrado (digite "ajuda" para ver a lista)', 'err');
+        return;
+    }
+    result.err.forEach(l => appendLine(l, 'err'));
+    result.out.forEach(l => appendLine(l, 'out'));
+}
+
+function renderInputLine() {
+    const row = document.createElement('div');
+    row.className = 'input-row';
+    row.id = 'active-input-row';
+
+    const label = document.createElement('span');
+    label.className = 'prompt-label';
+    label.innerHTML = effectiveUser + '@' + hostname + ':<span class="path">' + pathToStr(cwd) + '</span>$&nbsp;';
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.id = 'cmd-input';
+    input.autocomplete = 'off';
+    input.autocapitalize = 'off';
+    input.spellcheck = false;
+
+    row.appendChild(label);
+    row.appendChild(input);
+    termBody.appendChild(row);
+    input.focus();
+
+    let historyIndex = cmdHistory.length;
+    let tabState = null;
+
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            const val = input.value;
+            const promptText = effectiveUser + '@' + hostname + ':' + pathToStr(cwd) + '$';
+            row.remove();
+            appendCmdEcho(promptText, val);
+            if (val.trim() !== '') { cmdHistory.push(val); historyIndex = cmdHistory.length; }
+            runCommand(val);
+            renderDesktopIcons();
+            renderInputLine();
+            scrollToBottom();
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            if (historyIndex > 0) { historyIndex--; input.value = cmdHistory[historyIndex]; }
+        } else if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            if (historyIndex < cmdHistory.length - 1) { historyIndex++; input.value = cmdHistory[historyIndex]; }
+            else { historyIndex = cmdHistory.length; input.value = ''; }
+        } else if (e.key === 'Tab') {
+            e.preventDefault();
+            const val = input.value;
+            const cycling = tabState && val === tabState.base + tabState.candidates[tabState.index];
+            if (cycling) {
+                tabState.index = (tabState.index + 1) % tabState.candidates.length;
+            } else {
+                const spaceIdx = val.lastIndexOf(' ');
+                const base = spaceIdx === -1 ? '' : val.slice(0, spaceIdx + 1);
+                const partial = spaceIdx === -1 ? val : val.slice(spaceIdx + 1);
+                let candidates;
+                if (spaceIdx === -1) {
+                    const names = Object.keys(DISPATCH).concat(['ajuda', 'help', 'limpar', 'clear']);
+                    candidates = names.filter(n => n.startsWith(partial)).sort();
+                } else {
+                    const slashIdx = partial.lastIndexOf('/');
+                    const dirPart = slashIdx === -1 ? '' : partial.slice(0, slashIdx);
+                    const namePart = slashIdx === -1 ? partial : partial.slice(slashIdx + 1);
+                    const parentNode = resolveNode(dirPart ? parsePath(dirPart) : cwd.slice());
+                    candidates = (parentNode && parentNode.type === 'dir')
+                        ? Object.keys(parentNode.children).filter(n => n.startsWith(namePart)).sort().map(n => (dirPart ? dirPart + '/' : '') + n)
+                        : [];
+                }
+                if (candidates.length === 0) return;
+                tabState = { base, candidates, index: 0 };
+            }
+            input.value = tabState.base + tabState.candidates[tabState.index];
+        } else if (e.ctrlKey && (e.key === 'l' || e.key === 'L')) {
+            e.preventDefault();
+            termBody.innerHTML = '';
+            renderInputLine();
+        } else if (e.ctrlKey && (e.key === 'c' || e.key === 'C')) {
+            e.preventDefault();
+            const promptText = effectiveUser + '@' + hostname + ':' + pathToStr(cwd) + '$';
+            row.remove();
+            appendCmdEcho(promptText, input.value + '^C');
+            renderInputLine();
+            scrollToBottom();
+        }
+    });
+}
+
+function focusInput() { const input = document.getElementById('cmd-input'); if (input) input.focus(); }
+function closeNavOnMobile() {
+    if (window.innerWidth <= 780) {
+        const menu = document.getElementById('nav-menu');
+        if (menu) menu.classList.remove('open');
+    }
+}
+function fillCmd(text) { const input = document.getElementById('cmd-input'); if (input) { input.value = text; input.focus(); } closeNavOnMobile(); }
+
+// ===== Desktop icons sync (mirrors ~/Desktop) =====
+const FOLDER_SVG = '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 12c0-1.1.9-2 2-2h12l4 4h20c1.1 0 2 .9 2 2v22c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V12z" fill="#5c9fd6"/><path d="M4 16h40v20c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V16z" fill="#8fc0e8"/></svg>';
+const FILE_SVG = '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M10 4h18l10 10v30H10z" fill="#f2f2f2"/><path d="M28 4l10 10H28z" fill="#cfcfcf"/><line x1="15" y1="24" x2="33" y2="24" stroke="#999" stroke-width="2"/><line x1="15" y1="30" x2="33" y2="30" stroke="#999" stroke-width="2"/><line x1="15" y1="36" x2="26" y2="36" stroke="#999" stroke-width="2"/></svg>';
+const LINK_SVG = '<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 12c0-1.1.9-2 2-2h12l4 4h20c1.1 0 2 .9 2 2v22c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V12z" fill="#5c9fd6"/><path d="M4 16h40v20c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V16z" fill="#8fc0e8"/><circle cx="34" cy="34" r="9" fill="#2e7d32"/><path d="M31 34l2.2 2.2L38 31" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+function renderDesktopIcons() {
+    const container = document.getElementById('desktop-dynamic-list');
+    if (!container) return;
+    const desktopNode = fs.children.home && fs.children.home.children.aluno && fs.children.home.children.aluno.children['Desktop'];
+    container.innerHTML = '';
+    if (!desktopNode) return;
+    const names = Object.keys(desktopNode.children).sort();
+    if (names.length === 0) {
+        const hint = document.createElement('div');
+        hint.className = 'desktop-empty-hint';
+        hint.textContent = 'A pasta "Desktop" está vazia. Crie algo ali para ver o ícone aparecer aqui.';
+        container.appendChild(hint);
+        return;
+    }
+    names.forEach(name => {
+        const node = desktopNode.children[name];
+        const icon = document.createElement('div');
+        icon.className = 'desktop-icon';
+        const svg = node.type === 'dir' ? FOLDER_SVG : (node.type === 'link' ? LINK_SVG : FILE_SVG);
+        const label = document.createElement('span');
+        label.textContent = name;
+        icon.innerHTML = svg;
+        icon.appendChild(label);
+        container.appendChild(icon);
+    });
+}
+
+const LEVELS = {
+    'Básico': {
+        'Navegação': ['pwd', 'ls -la', 'cd ~', 'cd Documentos'],
+        'Arquivos e pastas': ['mkdir Provas', 'touch notas.txt', 'cp -r Provas Backup', 'mv Backup Backup2', 'rm -r Backup2'],
+        'Pacotes': ['sudo apt update', 'sudo apt install gimp']
+    },
+    'Avançado': {
+        'Permissões': ['chmod 755 script.sh', 'chmod u+x script.sh', 'chown aluno script.sh', 'ls -l'],
+        'Processos': ['ps aux', 'kill -9 2201', 'killall firefox'],
+        'Texto e pipes': ['cat Documentos/relatorio.txt', 'grep erro Documentos/relatorio.txt', 'cat Documentos/relatorio.txt | grep -c erro', 'sort Documentos/relatorio.txt', 'uniq -c', 'cut -d: -f1 /etc/passwd', 'echo teste > saida.txt'],
+        'Busca': ['find . -name "*.txt"', 'which grep', 'man ls'],
+        'Usuários': ['whoami', 'cat /etc/passwd', 'sudo useradd joao', 'su joao', 'exit', 'sudo cat /etc/shadow'],
+        'Disco': ['df -h', 'du -sh Documentos'],
+        'Sistema': ['sudo systemctl start ssh', 'systemctl status ssh', 'crontab -l', 'ping google.com', 'tar -czf backup.tar.gz Documentos']
+    }
+};
+
+let currentLevel = 'Básico';
+
+function renderCategories() {
+    const tabsEl = document.getElementById('cat-tabs');
+    const chipsEl = document.getElementById('chips');
+    tabsEl.innerHTML = '';
+    const categories = LEVELS[currentLevel];
+    const names = Object.keys(categories);
+
+    function showCategory(name) {
+        chipsEl.innerHTML = '';
+        categories[name].forEach(cmdText => {
+            const chip = document.createElement('span');
+            chip.className = 'chip';
+            chip.textContent = cmdText;
+            chip.onclick = () => fillCmd(cmdText);
+            chipsEl.appendChild(chip);
+        });
+        Array.from(tabsEl.children).forEach(t => t.classList.remove('active'));
+        document.getElementById('tab-' + name).classList.add('active');
+    }
+
+    names.forEach(name => {
+        const tab = document.createElement('span');
+        tab.className = 'cat-tab';
+        tab.id = 'tab-' + name;
+        tab.textContent = name;
+        tab.onclick = () => showCategory(name);
+        tabsEl.appendChild(tab);
+    });
+
+    showCategory(names[0]);
+}
+
+// ===== Modo exercicio (Certo/Errado) =====
+const EXERCISES = [
+    { tema: 'Comandos básicos', enunciado: 'O comando "mkdir" é utilizado para criar diretórios no sistema Linux.', gabarito: true, explicacao: '"mkdir" vem de "make directory" e cria uma nova pasta.' },
+    { tema: 'Comandos básicos', enunciado: 'O comando "ls" exibe o conteúdo de um arquivo de texto na tela.', gabarito: false, explicacao: '"ls" lista os arquivos e pastas de um diretório; quem exibe o conteúdo de um arquivo é o "cat".' },
+    { tema: 'Comandos básicos', enunciado: 'O comando "pwd" mostra o caminho completo do diretório em que o usuário se encontra no momento.', gabarito: true, explicacao: '"pwd" significa "print working directory".' },
+    { tema: 'Comandos básicos', enunciado: 'O comando "cd", quando digitado sozinho, sem argumentos, leva o usuário para o diretório raiz "/".', gabarito: false, explicacao: '"cd" sem argumentos leva ao diretório pessoal (home) do usuário, não à raiz do sistema.' },
+    { tema: 'Comandos básicos', enunciado: 'O comando "rm" remove arquivos, mas é necessário usar a opção "-r" para remover diretórios.', gabarito: true, explicacao: 'Sem "-r" (recursivo), o "rm" recusa remover diretórios.' },
+    { tema: 'Extensões de arquivo', enunciado: 'No Linux, diferentemente do Windows, a extensão do nome do arquivo não é obrigatória para que o sistema o reconheça como executável.', gabarito: true, explicacao: 'No Linux, o que define se um arquivo pode ser executado é a permissão de execução (x), não a extensão do nome.' },
+    { tema: 'Extensões de arquivo', enunciado: 'Um arquivo com extensão ".sh" é necessariamente um script e será executado automaticamente sempre que for aberto no terminal.', gabarito: false, explicacao: 'A extensão ".sh" é apenas uma convenção de nomenclatura; o arquivo só executa se tiver permissão de execução e for chamado explicitamente.' },
+    { tema: 'Extensões de arquivo', enunciado: 'A extensão ".tar.gz" indica um arquivo agrupado com "tar" e depois comprimido com "gzip".', gabarito: true, explicacao: '"tar" agrupa vários arquivos em um só (arquivo .tar) e o "gzip" comprime esse resultado, gerando ".tar.gz".' },
+    { tema: 'Usuário root', enunciado: 'O usuário "root" é o superusuário do sistema Linux e possui, por padrão, UID igual a 0.', gabarito: true, explicacao: 'O UID 0 identifica o superusuário, que tem acesso irrestrito ao sistema.' },
+    { tema: 'Usuário root', enunciado: 'O diretório pessoal (home) do usuário "root" fica localizado em "/home/root".', gabarito: false, explicacao: 'O home do "root" fica em "/root", fora do diretório "/home" usado pelos demais usuários.' },
+    { tema: 'Usuário root', enunciado: 'Um usuário comum pode obter privilégios de "root" temporariamente, para executar um único comando, usando "sudo".', gabarito: true, explicacao: '"sudo" eleva o privilégio apenas para o comando executado, sem trocar de sessão.' },
+    { tema: 'Estrutura de diretórios', enunciado: 'O diretório "/home" armazena os diretórios pessoais dos usuários comuns do sistema.', gabarito: true, explicacao: 'Cada usuário comum tem sua pasta pessoal dentro de "/home", como "/home/aluno".' },
+    { tema: 'Estrutura de diretórios', enunciado: 'O diretório "/usr" contém exclusivamente arquivos temporários criados durante a execução dos programas.', gabarito: false, explicacao: 'Arquivos temporários ficam em "/tmp"; o "/usr" concentra a maior parte dos programas, bibliotecas e documentação do sistema.' },
+    { tema: 'Estrutura de diretórios', enunciado: 'O diretório "/etc" é o local padrão onde ficam armazenados os arquivos de configuração do sistema.', gabarito: true, explicacao: '"/etc" concentra os arquivos de configuração de todo o sistema, como "/etc/passwd".' },
+    { tema: 'Estrutura de diretórios', enunciado: 'O diretório "/bin" armazena os binários (executáveis) essenciais utilizados tanto por usuários comuns quanto pelo sistema.', gabarito: true, explicacao: '"/bin" reúne comandos essenciais como "ls", "cp" e "mv", necessários mesmo em modo de recuperação.' }
+];
+
+let quizOrder = [], quizIndex = 0, quizScore = 0, quizAnswered = 0;
+
+function shuffleArray(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+function startQuiz() {
+    quizOrder = shuffleArray(EXERCISES.map((_, i) => i));
+    quizIndex = 0; quizScore = 0; quizAnswered = 0;
+    renderQuiz();
+}
+
+function renderQuiz() {
+    const scoreEl = document.getElementById('quiz-score');
+    const statementEl = document.getElementById('quiz-statement');
+    const actionsEl = document.getElementById('quiz-actions');
+    const feedbackEl = document.getElementById('quiz-feedback');
+    feedbackEl.textContent = '';
+    feedbackEl.className = 'quiz-feedback';
+
+    if (quizIndex >= quizOrder.length) {
+        scoreEl.textContent = 'Resultado final: ' + quizScore + ' de ' + quizAnswered + ' acertos';
+        statementEl.textContent = 'Fim do questionário! Quer tentar de novo com as perguntas embaralhadas?';
+        actionsEl.innerHTML = '';
+        const again = document.createElement('button');
+        again.className = 'quiz-btn certo';
+        again.textContent = 'Reiniciar';
+        again.onclick = startQuiz;
+        actionsEl.appendChild(again);
+        return;
+    }
+
+    const ex = EXERCISES[quizOrder[quizIndex]];
+    scoreEl.textContent = 'Questão ' + (quizIndex + 1) + ' de ' + quizOrder.length + ' · ' + ex.tema + ' · placar: ' + quizScore + '/' + quizAnswered;
+    statementEl.textContent = ex.enunciado;
+    actionsEl.innerHTML = '';
+    ['Certo', 'Errado'].forEach(label => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-btn ' + (label === 'Certo' ? 'certo' : 'errado');
+        btn.textContent = label;
+        btn.onclick = () => answerQuiz(label === 'Certo');
+        actionsEl.appendChild(btn);
+    });
+}
+
+function answerQuiz(userSaysTrue) {
+    const ex = EXERCISES[quizOrder[quizIndex]];
+    const correct = userSaysTrue === ex.gabarito;
+    quizAnswered++;
+    if (correct) quizScore++;
+    const feedbackEl = document.getElementById('quiz-feedback');
+    feedbackEl.className = 'quiz-feedback ' + (correct ? 'right' : 'wrong');
+    feedbackEl.textContent = (correct ? 'Certo! ' : 'Errado — o gabarito é ' + (ex.gabarito ? 'CERTO' : 'ERRADO') + '. ') + ex.explicacao;
+    const actionsEl = document.getElementById('quiz-actions');
+    actionsEl.innerHTML = '';
+    const next = document.createElement('button');
+    next.className = 'quiz-btn certo';
+    next.textContent = (quizIndex + 1 >= quizOrder.length) ? 'Ver resultado' : 'Próxima';
+    next.onclick = () => { quizIndex++; renderQuiz(); };
+    actionsEl.appendChild(next);
+    document.getElementById('quiz-score').textContent = 'Questão ' + (quizIndex + 1) + ' de ' + quizOrder.length + ' · ' + ex.tema + ' · placar: ' + quizScore + '/' + quizAnswered;
+}
+
+let currentMode = 'practice';
+function afterTopToggleChange() {
+    renderTopToggle();
+    renderCategories();
+    document.getElementById('practice-panel').style.display = currentMode === 'practice' ? '' : 'none';
+    document.getElementById('quiz-panel').style.display = currentMode === 'quiz' ? '' : 'none';
+    if (currentMode === 'quiz' && quizOrder.length === 0) startQuiz();
+}
+function renderTopToggle() {
+    const el = document.getElementById('mode-toggle');
+    el.innerHTML = '';
+    const items = [
+        { label: 'Básico', cls: 'basic', active: currentMode === 'practice' && currentLevel === 'Básico', onClick: () => { currentMode = 'practice'; currentLevel = 'Básico'; afterTopToggleChange(); } },
+        { label: 'Avançado', cls: 'advanced', active: currentMode === 'practice' && currentLevel === 'Avançado', onClick: () => { currentMode = 'practice'; currentLevel = 'Avançado'; afterTopToggleChange(); } },
+        { label: 'Modo exercício', cls: 'advanced', active: currentMode === 'quiz', onClick: () => { currentMode = 'quiz'; afterTopToggleChange(); } }
+    ];
+    items.forEach(it => {
+        const btn = document.createElement('button');
+        btn.className = 'level-btn' + (it.active ? ' active ' + it.cls : '');
+        btn.textContent = it.label;
+        btn.onclick = it.onClick;
+        el.appendChild(btn);
+    });
+}
+
+renderTopToggle();
+renderCategories();
+renderDesktopIcons();
+
+const navBurger = document.getElementById('nav-burger');
+if (navBurger) navBurger.onclick = () => document.getElementById('nav-menu').classList.toggle('open');
+
+function updateClock() {
+    const el = document.getElementById('gnome-clock');
+    if (!el) return;
+    const now = new Date();
+    const meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+    const dia = now.getDate();
+    const mes = meses[now.getMonth()];
+    const hh = String(now.getHours()).padStart(2, '0');
+    const mm = String(now.getMinutes()).padStart(2, '0');
+    el.textContent = dia + ' de ' + mes + ' ' + hh + ':' + mm;
+}
+updateClock();
+setInterval(updateClock, 30000);
+
+appendLine('Simulador de terminal Linux — treino para provas Cebraspe. Digite "ajuda" para ver todos os comandos.', 'info');
+appendLine('Nada aqui e salvo: ao sair da pagina, tudo volta ao estado inicial.', 'info');
+appendLine('');
+renderInputLine();
+</script>
+
+</body>
+</html>

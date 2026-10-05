@@ -1,0 +1,88 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A regra 3-2-1 recomenda manter três cópias dos dados, o original e duas de backup, em dois tipos de mídia diferentes, com pelo menos uma cópia armazenada fora do local principal.",
+   "answer": "C",
+   "comment": "É exatamente o que significa cada número: 3 cópias, 2 tipos de mídia e 1 cópia fora do local (offsite)."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Para cumprir a regra 3-2-1, as três cópias dos dados podem ficar na mesma sala, desde que em dispositivos diferentes.",
+   "answer": "E",
+   "comment": "Um incêndio, um furto ou uma enchente atinge o ambiente inteiro. Por isso a regra exige que pelo menos uma cópia fique em outro local, em nuvem ou em uma unidade guardada em outro endereço."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O backup 3-2-1 exige, obrigatoriamente, o uso de fita magnética como uma das mídias.",
+   "answer": "E",
+   "comment": "A regra não prescreve tecnologia. Ela fala em mídias diferentes, e não em uma tecnologia específica. Palavras como “obrigatoriamente” são o alerta clássico."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Manter uma cópia em um HD externo e outra em um serviço de nuvem atende ao requisito de utilizar dois tipos de mídia diferentes da regra 3-2-1.",
+   "answer": "C",
+   "comment": "HD externo e nuvem são o exemplo clássico de mídias diferentes, o que reduz a chance de um único tipo de falha destruir todas as cópias."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A regra 3-2-1 define a periodicidade com que os backups completos, incrementais e diferenciais devem ser executados.",
+   "answer": "E",
+   "comment": "A regra trata da quantidade e da diversidade das cópias, e não de cronograma. Não confunda com os tipos de backup."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Um arquivo sincronizado em tempo real entre o computador e a nuvem equivale a um backup, pois a nuvem sempre mantém uma cópia atualizada dos dados.",
+   "answer": "E",
+   "comment": "Na sincronização, um erro de exclusão ou uma corrupção se propaga instantaneamente para todas as cópias. Backup pressupõe versões independentes."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Dois HDs externos idênticos compartilham as mesmas vulnerabilidades, como um surto de energia ou um defeito de fabricação, por isso a regra recomenda diversificar as mídias.",
+   "answer": "C",
+   "comment": "Ao distribuir as cópias entre mídias diferentes, a chance de um único tipo de falha atingir todas ao mesmo tempo diminui bastante."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "Na regra 3-2-1 de backup, o número 1 corresponde a:",
+   "options": [
+    "uma cópia armazenada em local externo ao do original",
+    "um único tipo de mídia",
+    "uma única cópia de backup",
+    "um backup completo por semana",
+    "uma cópia criptografada"
+   ],
+   "answer": "A",
+   "comment": "O “1” indica pelo menos uma cópia fora do local (offsite), como um data center remoto ou um serviço de nuvem."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "A variação 3-2-1-1-0 da regra de backup acrescenta ao modelo tradicional:",
+   "options": [
+    "duas cópias fora do local e nenhuma offline",
+    "uma cópia offline e zero erros nos testes de restauração",
+    "uma cópia a mais e um tipo de mídia a menos",
+    "um backup incremental diário",
+    "uma cópia sincronizada em tempo real"
+   ],
+   "answer": "B",
+   "comment": "A cópia offline é imune a ataques via rede, como o ransomware, e o “zero” indica nenhum erro nos testes de restauração."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Um backup mal planejado compromete diretamente a disponibilidade dos dados, que é um dos pilares da tríade CID: confidencialidade, integridade e disponibilidade.",
+   "answer": "C",
+   "comment": "Se os dados não podem ser recuperados após uma falha, a disponibilidade fica comprometida. Por isso o backup aparece nas questões de segurança da informação."
+  }
+ ]
+}

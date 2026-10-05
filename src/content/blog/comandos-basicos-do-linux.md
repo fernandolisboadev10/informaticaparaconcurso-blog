@@ -79,7 +79,7 @@ Depois que `pwd`, `ls`, `cd`, `mkdir`, `touch`, `cp`, `mv`, `rm` e `sudo` já es
 
 Ler sobre comandos e digitar comandos são duas habilidades diferentes — e só a segunda fica na memória. Abra o simulador de terminal interativo logo abaixo, escolha três ou quatro comandos deste guia e repita a sequência algumas vezes: crie uma pasta, entre nela, crie um arquivo, copie, mova, renomeie e apague. Errar ali não tem consequência nenhuma, porque a página apaga tudo quando você sai dela — então é o lugar ideal para testar à vontade, inclusive o `rm -r`, sem medo de perder nada de verdade.
 
-**[Pratique agora, sem instalar nada: clique aqui e abra o terminal Linux interativo.](/linux-para-concursos/)** Teste os comandos deste artigo direto no navegador — nada fica salvo, então pode errar à vontade.
+**[Pratique agora, sem instalar nada: clique aqui e abra o terminal Linux interativo.](/linux.html)** Teste os comandos deste artigo direto no navegador — nada fica salvo, então pode errar à vontade.
 
 📚 Mais conteúdos de Informática para concursos: [fernandolisboa.pro](https://fernandolisboa.pro)
 

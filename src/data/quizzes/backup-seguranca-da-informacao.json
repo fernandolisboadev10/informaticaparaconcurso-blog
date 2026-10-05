@@ -1,0 +1,74 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em um órgão público, a equipe de TI executa cópia completa aos domingos e cópias incrementais de segunda a sexta. Se ocorrer falha grave na sexta-feira, a restauração exigirá a cópia completa de domingo e todas as cópias incrementais realizadas após ela.",
+   "answer": "C",
+   "comment": "Na restauração com backup incremental, é preciso o último completo e todos os incrementais feitos depois dele. Por isso a recuperação é mais trabalhosa."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em uma estratégia diferencial, o sistema copia apenas os arquivos alterados desde o último diferencial, o que reduz progressivamente o tamanho das cópias ao longo da semana.",
+   "answer": "E",
+   "comment": "O diferencial copia tudo o que mudou desde o último backup completo, e não desde o último diferencial. Por isso o volume copiado cresce com o passar dos dias."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Um servidor que mantém três cópias dos dados, em duas mídias diferentes, com uma cópia armazenada fora do local principal, segue a lógica da regra 3-2-1.",
+   "answer": "C",
+   "comment": "Três cópias, duas mídias diferentes e uma fora do local é exatamente a regra 3-2-1."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em um cenário de ransomware, cópias offline ou imutáveis aumentam a chance de recuperação, porque dificultam a alteração ou exclusão das informações pelo atacante.",
+   "answer": "C",
+   "comment": "A cópia offline fica desconectada da rede e a imutável não pode ser alterada ou apagada por um período. Muitos atacantes tentam destruir os backups antes de criptografar os dados principais."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Uma cópia completa tende a consumir mais tempo e mais espaço de armazenamento do que uma cópia incremental.",
+   "answer": "C",
+   "comment": "O backup completo copia todos os arquivos selecionados, por isso é mais lento e ocupa mais espaço. O incremental copia só o que mudou."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em uma empresa que utiliza cópia diferencial, a restauração normalmente exige apenas o último backup completo e o último backup diferencial disponível.",
+   "answer": "C",
+   "comment": "Como o diferencial acumula tudo o que mudou desde o último completo, basta o último completo mais o último diferencial."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Copiar documentos importantes para outra pasta no mesmo disco rígido do computador já caracteriza, por si só, uma estratégia robusta de proteção para continuidade do negócio.",
+   "answer": "E",
+   "comment": "Se o disco falhar ou o equipamento for atingido por um incidente ou por malware, o original e a cópia se perdem juntos. É preciso considerar outro local, periodicidade, retenção e teste de restauração."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O principal objetivo do backup é garantir a recuperação de dados e sistemas após incidentes, e não simplesmente duplicar arquivos sem planejamento.",
+   "answer": "C",
+   "comment": "Backup é um processo planejado de cópias regulares para permitir a restauração futura quando o conteúdo original se perder, for corrompido ou ficar inacessível."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A cópia incremental costuma acelerar a rotina diária, mas pode tornar a restauração mais complexa, porque depende de uma sequência de procedimentos intermediários.",
+   "answer": "C",
+   "comment": "É o contrapeso clássico do incremental: copia pouco e rápido no dia a dia, mas a restauração exige a cadeia de cópias."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Testar a restauração periodicamente faz parte das boas práticas de proteção, porque a existência da cópia não garante, sozinha, que os dados possam ser recuperados com sucesso.",
+   "answer": "C",
+   "comment": "Cópias corrompidas ou incompletas muitas vezes só são descobertas no momento da crise. Só o teste de restauração prova que o backup funciona."
+  }
+ ]
+}

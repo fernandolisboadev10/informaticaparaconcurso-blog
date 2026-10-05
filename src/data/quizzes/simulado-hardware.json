@@ -244,6 +244,216 @@
    ],
    "answer": "B",
    "comment": "O USB-C é um formato de conector que pode carregar diferentes protocolos, incluindo o Thunderbolt, o que nem sempre está disponível em todo cabo ou porta USB-C. Por isso, é comum a banca explorar a diferença entre o conector físico (USB-C) e o protocolo de dados que ele efetivamente transporta."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Na CPU, a Unidade Lógica e Aritmética (ULA) é responsável por executar as operações aritméticas e lógicas.",
+   "answer": "C",
+   "comment": "A ULA realiza somas, subtrações, comparações e operações lógicas. A unidade de controle coordena a execução das instruções."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A unidade de controle da CPU é responsável por buscar e decodificar as instruções e coordenar a sua execução.",
+   "answer": "C",
+   "comment": "A unidade de controle comanda o funcionamento dos demais componentes do processador, enquanto a ULA calcula."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "Entre os dispositivos abaixo, aquele que é exclusivamente de entrada é o:",
+   "options": [
+    "monitor comum",
+    "impressora a laser (apenas impressão)",
+    "scanner",
+    "caixa de som",
+    "projetor multimídia"
+   ],
+   "answer": "C",
+   "comment": "O scanner envia imagens ao computador. Monitor, caixa de som, projetor e impressora comum são dispositivos de saída."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Um dispositivo que atua tanto como periférico de entrada quanto de saída é o:",
+   "options": [
+    "teclado",
+    "mouse",
+    "monitor comum",
+    "touchscreen (tela sensível ao toque)",
+    "microfone"
+   ],
+   "answer": "D",
+   "comment": "O touchscreen exibe informações (saída) e recebe o toque do usuário (entrada). O teclado, o mouse e o microfone só enviam dados; o monitor comum só exibe."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Os registradores da CPU formam a memória mais rápida da hierarquia de memória do computador, mais rápida do que a memória cache e do que a memória RAM.",
+   "answer": "C",
+   "comment": "Na hierarquia, a ordem decrescente de velocidade é registradores, cache, RAM e armazenamento secundário."
+  },
+  {
+   "banca": "Estilo VUNESP",
+   "type": "mc",
+   "text": "A resolução de um monitor, como 1920 × 1080, indica:",
+   "options": [
+    "a quantidade de pixels na largura e na altura da imagem",
+    "a taxa de atualização da tela, em hertz",
+    "o tamanho físico da tela, em polegadas",
+    "o consumo de energia do monitor",
+    "o tempo de resposta do painel"
+   ],
+   "answer": "A",
+   "comment": "A resolução é o número de pixels na horizontal por pixels na vertical. A taxa de atualização é medida em hertz e o tamanho da tela em polegadas."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Um byte é formado por 8 bits.",
+   "answer": "C",
+   "comment": "O bit é a menor unidade de informação, e o conjunto de 8 bits forma 1 byte."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O HD (disco rígido) possui partes mecânicas móveis, como pratos magnéticos e cabeça de leitura e gravação, o que o torna mais sujeito a falhas mecânicas do que o SSD.",
+   "answer": "C",
+   "comment": "O SSD não tem partes móveis, o que reduz o risco de falhas mecânicas, além de ser mais rápido."
+  },
+  {
+   "banca": "Estilo CESGRANRIO",
+   "type": "mc",
+   "text": "Um exemplo de dispositivo de armazenamento secundário, de memória não volátil, é:",
+   "options": [
+    "o registrador",
+    "a memória cache L3",
+    "a memória RAM",
+    "o SSD",
+    "o barramento"
+   ],
+   "answer": "D",
+   "comment": "O armazenamento secundário (HD, SSD, pendrive) mantém os dados mesmo sem energia. Registradores, cache e RAM são voláteis."
+  },
+  {
+   "banca": "Estilo IADES",
+   "type": "mc",
+   "text": "A função principal da GPU (placa de vídeo) em um computador é:",
+   "options": [
+    "armazenar os arquivos do usuário",
+    "processar e renderizar imagens, enviando o resultado ao monitor",
+    "fornecer energia aos componentes",
+    "controlar o acesso à internet",
+    "resfriar o processador"
+   ],
+   "answer": "B",
+   "comment": "A GPU é o processador gráfico, responsável por processar imagens e vídeos e alimentar o monitor."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A pasta térmica é aplicada entre o processador e o dissipador de calor para melhorar a transferência de calor entre eles.",
+   "answer": "C",
+   "comment": "Ela preenche as imperfeições microscópicas das superfícies e ajuda o dissipador a retirar o calor da CPU."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "Entre os dispositivos abaixo, o que armazena dados em memória flash é o:",
+   "options": [
+    "CD-ROM",
+    "disquete",
+    "pendrive",
+    "fita magnética",
+    "disco rígido (HD) tradicional"
+   ],
+   "answer": "C",
+   "comment": "Pendrives, cartões de memória e SSDs usam memória flash. CD, disquete, fita e HD tradicional usam outras tecnologias, ópticas ou magnéticas."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A capacidade de armazenamento típica de um DVD é maior do que a de um CD-ROM.",
+   "answer": "C",
+   "comment": "Um CD armazena cerca de 700 MB, enquanto um DVD comum armazena cerca de 4,7 GB."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "O chipset de uma placa-mãe tem como função principal:",
+   "options": [
+    "armazenar o sistema operacional",
+    "gerenciar a comunicação entre o processador, a memória e os demais componentes",
+    "converter energia elétrica para os componentes",
+    "refrigerar o processador",
+    "guardar os arquivos do usuário"
+   ],
+   "answer": "B",
+   "comment": "O chipset é o conjunto de circuitos que coordena o fluxo de dados entre CPU, memória, barramentos e periféricos."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Um processador de 64 bits consegue endereçar uma quantidade de memória RAM bem maior do que um processador de 32 bits.",
+   "answer": "C",
+   "comment": "Sistemas de 32 bits ficam limitados a cerca de 4 GB de memória endereçável, enquanto os de 64 bits suportam quantidades muito maiores."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Dispositivos plug and play são reconhecidos e configurados automaticamente pelo sistema operacional quando conectados ao computador.",
+   "answer": "C",
+   "comment": "Esse é o conceito de plug and play: o sistema identifica o dispositivo e instala os recursos necessários com pouca ou nenhuma intervenção do usuário."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Uma impressora multifuncional, que imprime e também digitaliza documentos, pode funcionar como dispositivo de entrada e de saída.",
+   "answer": "C",
+   "comment": "Ao imprimir, atua como saída. Ao digitalizar (scanner), atua como entrada."
+  },
+  {
+   "banca": "Estilo VUNESP",
+   "type": "mc",
+   "text": "O equipamento que fornece energia ao computador por um tempo limitado, em caso de queda no fornecimento, e ajuda a proteger contra variações da rede elétrica é o:",
+   "options": [
+    "no-break (UPS)",
+    "cooler",
+    "chipset",
+    "roteador",
+    "switch"
+   ],
+   "answer": "A",
+   "comment": "O no-break possui bateria e mantém o equipamento ligado por alguns minutos, o que permite salvar o trabalho e desligar corretamente."
+  },
+  {
+   "banca": "Estilo CESGRANRIO",
+   "type": "mc",
+   "text": "O cooler e o dissipador de calor (heatsink) têm como finalidade:",
+   "options": [
+    "aumentar a capacidade de armazenamento",
+    "retirar o calor gerado por componentes como o processador",
+    "ampliar o sinal de Wi-Fi",
+    "converter corrente alternada em contínua",
+    "proteger contra vírus"
+   ],
+   "answer": "B",
+   "comment": "Esses componentes dissipam o calor para evitar superaquecimento e perda de desempenho do processador."
+  },
+  {
+   "banca": "Estilo IADES",
+   "type": "mc",
+   "text": "A sequência de unidades de medida de armazenamento em ordem crescente de capacidade é:",
+   "options": [
+    "GB, MB, KB, TB",
+    "KB, MB, GB, TB",
+    "MB, KB, TB, GB",
+    "TB, GB, MB, KB",
+    "KB, GB, MB, TB"
+   ],
+   "answer": "B",
+   "comment": "A ordem crescente é KB, MB, GB e TB, e cada uma equivale a cerca de 1.024 vezes a anterior."
   }
  ]
 }
