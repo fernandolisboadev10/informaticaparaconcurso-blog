@@ -13,7 +13,7 @@ Você já perdeu meia hora procurando um edital em PDF e só encontrou blogs rep
 
 ## O que são operadores de busca e como usá-los
 
-Operadores de busca são símbolos e palavras-chave que refinam a pesquisa. Em outras palavras, eles transformam uma frase solta em uma instrução precisa para o buscador. Você já usa [sites de busca](/sitios-de-busca-para-concursos/) todos os dias, e agora vai usá-los com mais controle.
+Operadores de busca são símbolos e palavras-chave que refinam a pesquisa. Em outras palavras, eles transformam uma frase solta em uma instrução precisa para o buscador. Você já usa [sites de busca](/buscador-e-navegador/) todos os dias, e agora vai usá-los com mais controle.
 
 Não confunda buscador com navegador: o navegador abre as páginas, e o buscador encontra as páginas. Na prova, a banca pode explorar a [diferença entre buscador e navegador](/buscador-e-navegador/), então revise esse ponto.
 

@@ -158,9 +158,7 @@ O próximo passo é praticar com exercícios comentados, porque é na resoluçã
 
 ## Questões sobre Microsoft Word – Nível Intermediário
 
-Pratique agora com 10 questões comentadas no estilo Certo/Errado. Clique em uma alternativa para ver se acertou e conferir o comentário.
-
-Pratique agora: 10 questões comentadas sobre Microsoft Word para concursos.
+Pratique agora com 10 questões comentadas no estilo Certo/Errado, com o gabarito e o comentário logo abaixo de cada uma.
 
 CEBRASPE
 

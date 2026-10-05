@@ -40,6 +40,9 @@ export default defineConfig({
     '/diferenca-firewall-antivirus': '/aplicativos-para-seguranca-antivirus-firewall-antispyware/',
     '/revisao-de-powerpoint-para-concursos': '/powerpoint-o-que-cai-nos-concursos/',
     '/revisao-do-word': '/microsoft-word-para-concursos/',
+    '/internet-intranet-extranet': '/o-que-e-extranet/',
+    '/redes-de-computadores-guia-completo': '/redes-de-computadores-para-concursos/',
+    '/sitios-de-busca-para-concursos': '/buscador-e-navegador/',
     // Slugs antigos que o WordPress redirecionava e que o Google ainda mostra
     '/linux-introducao-para-concursos': '/linux-para-concursos/',
     '/linux-introducao-para-concurso': '/linux-para-concursos/',

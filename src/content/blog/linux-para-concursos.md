@@ -86,7 +86,7 @@ Além disso, aparecem com frequência os comandos de manipulação de arquivos e
 
 Repare bem nessa diferença, porque ela é clássica em prova: o `cp` copia e mantém o original no lugar; já o `mv` move (ou renomeia) e, nesse processo, o arquivo original deixa de existir na origem. A banca adora trocar esses dois verbos para confundir o candidato desatento. Você encontra a sintaxe completa e oficial de cada comando no manual do GNU Coreutils, que o próprio projeto GNU mantém, e uma lista mais completa, com mais exemplos práticos, no artigo [comandos básicos do Linux para concursos](/comandos-basicos-do-linux/).
 
-Aliás, de nada adianta memorizar a função de cada comando sem praticar a digitação real no terminal. Na hora da prova, o candidato que já treinou o comando na prática interpreta o enunciado com muito mais segurança do que quem apenas leu a definição uma vez. Por isso, [pratique agora mesmo no terminal Linux online](/linux-para-concursos/): digite os comandos deste artigo, observe o retorno do sistema e fixe a lógica de cada um antes de partir para os exercícios.
+Aliás, de nada adianta memorizar a função de cada comando sem praticar a digitação real no terminal. Na hora da prova, o candidato que já treinou o comando na prática interpreta o enunciado com muito mais segurança do que quem apenas leu a definição uma vez. Por isso, [pratique com o passo a passo dos comandos básicos do Linux](/comandos-basicos-do-linux/): digite os comandos deste artigo, observe o retorno do sistema e fixe a lógica de cada um antes de partir para os exercícios.
 
 ## Diretórios e arquivos ocultos
 

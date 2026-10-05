@@ -122,7 +122,7 @@ Principalmente, o Windows 11 trouxe os Snap Layouts, que permitem organizar vár
 
 Da mesma forma, os Snap Groups ajudam você a retornar a grupos de aplicativos usados em conjunto. O sistema também preserva recursos como Visão de Tarefas e áreas de trabalho virtuais.
 
-Para revisar os recursos cobrados nas versões atuais desse sistema operacional Windows, acesse também o conteúdo sobre [introdução ao Windows 10 e 11 para concursos](/sistema-windows-7-10-11-para-concursos/).
+Para revisar os recursos cobrados nas versões atuais desse sistema operacional Windows, acesse também o conteúdo sobre [guia completo de Windows 10 para concursos](/windows-10-para-concursos/).
 
 ### Segurança e requisitos do Windows 11
 

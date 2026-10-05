@@ -1,10 +1,10 @@
 ---
-title: "Buscador x Navegador: Qual a Diferença Que Cai na Prova?"
-description: "Entenda a diferença entre navegador e buscador com exemplos práticos (Chrome, Google, Firefox, Bing) e evite essa pegadinha nas provas."
+title: "Buscador x Navegador e Sítios de Busca: Qual a Diferença Que Cai na Prova?"
+description: "Entenda a diferença entre navegador e buscador (sítio de busca), como a busca funciona e as pegadinhas que as bancas mais cobram, com exemplos e questões comentadas."
 category: "Redes"
 date: 2026-09-17T13:18:46-03:00
-updated: 2026-09-17T13:29:12Z
-readingTime: "8 min"
+updated: 2026-10-05T11:40:00-03:00
+readingTime: "11 min"
 image: "./images/buscador-x-navegador.webp"
 imageAlt: "Buscador x Navegador"
 ---
@@ -78,6 +78,34 @@ A tabela abaixo reúne navegadores populares e o buscador padrão configurado em
 
 Note, dessa forma, que o navegador é o veículo e o buscador é o serviço de pesquisa que roda dentro dele. Um Chrome sem nenhum buscador configurado continua sendo um navegador funcional, mas praticamente inútil para encontrar conteúdo novo na web.
 
+### O que é um sítio de busca
+
+Nos editais, a banca costuma chamar o Google de **sítio de busca**, e não de “site de busca”. A escolha de palavra não é acaso: na linguagem das bancas, sítio é sinônimo de qualquer página hospedada na internet, seja ela institucional, de comércio eletrônico ou de busca. Um sítio de busca, portanto, é uma página criada para localizar outras páginas a partir de palavras-chave digitadas pelo usuário. Ele não guarda o conteúdo dos sites: apenas indica onde esse conteúdo está. É, na prática, o mesmo conceito de buscador que você viu acima.
+
+Essa ferramenta só existe porque está na internet, de forma aberta, e não dentro de uma rede fechada. Se você ainda confunde esses ambientes, revise a diferença entre [internet, intranet e extranet](/o-que-e-extranet/).
+
+### Como um sítio de busca funciona
+
+Por trás da busca simples existe um processo de três etapas, sempre nesta ordem:
+
+1.  **Rastreamento:** programas chamados robôs (crawlers) percorrem a internet, visitam páginas e seguem os links encontrados nelas.
+2.  **Indexação:** o sítio organiza o conteúdo rastreado em um banco de dados gigantesco, para consultá-lo depois com rapidez.
+3.  **Ranqueamento:** quando você digita uma palavra-chave, o algoritmo decide, entre milhões de páginas, quais aparecem primeiro.
+
+![Como um sítio de busca funciona: rastreamento, indexação e ranqueamento](./images/Como-um-sitio-de-busca-funciona-1024x683.webp)
+
+Esse processo depende da estrutura da internet e dos protocolos que conectam os computadores. Se tiver dúvida sobre como os dados trafegam entre servidores, revise a [aula de redes de computadores para concursos](/redes-de-computadores-para-concursos/).
+
+### Principais sítios de busca cobrados em prova
+
+O **Google** aparece disparado na frente, seguido por **Bing** e **Yahoo**. Provas mais recentes também citam alternativas focadas em privacidade, como o **DuckDuckGo**, que promete não rastrear o histórico do usuário, e o **Ecosia**, que reverte parte da receita em plantio de árvores. Existem ainda os buscadores verticais, voltados a um tipo específico de conteúdo, como o **Google Acadêmico**, direcionado a artigos científicos.
+
+A banca também testa os operadores de pesquisa, como as aspas duplas (termo exato), `site:` (restringe a um domínio) e `filetype:` (filtra por tipo de arquivo). Para treinar cada um com exemplos prontos, veja o artigo sobre [operadores de busca do Google](/operadores-de-busca/).
+
+### Sítios de busca e segurança da informação
+
+Nem todo resultado de busca é confiável. Páginas falsas, criadas para imitar sites legítimos, aparecem entre os resultados com o objetivo de aplicar phishing ou instalar malware, mesmo ocupando as primeiras posições. Desconfie de links com endereço estranho ou sem certificado de segurança e revise os [malwares e ameaças à segurança da informação](/malwares-e-ameacas-seguranca-da-informacao/). Na prova, resultado bem posicionado não é garantia de segurança.
+
 ### Por Que essa Confusão é Tão Comum
 
 No dia a dia, muita gente diz “vou entrar no Google” para se referir a abrir o navegador Chrome. Essa fala popular mistura os dois conceitos e reforça o erro na hora da prova.
@@ -106,7 +134,7 @@ Não confunda os dois conceitos mesmo quando o nome da empresa se repete nos doi
 
 Em resumo, o navegador é o programa que abre a internet, e o buscador é o serviço que organiza os resultados de uma pesquisa dentro dele. Essa distinção parece simples, mas continua sendo um dos temas mais explorados nas provas de informática para concursos.
 
-Agora que você fixou a diferença entre navegador e buscador, aproveite para revisar \[link interno: artigo sobre protocolos HTTP e HTTPS ou Internet x Intranet x Extranet\], já que esse assunto costuma aparecer ao lado desse tema nas provas.
+Agora que você fixou a diferença entre navegador e buscador, aproveite para revisar a [diferença entre internet, intranet e extranet](/o-que-e-extranet/) e a [aula de redes de computadores](/redes-de-computadores-para-concursos/), já que esses assuntos costumam aparecer ao lado desse tema nas provas.
 
 ## Teste Seus Conhecimentos: Buscador x Navegador
 
@@ -162,7 +190,41 @@ Resposta correta: ERRADO
 
 A Mozilla desenvolve o Firefox, mas não possui buscador próprio. O Firefox usa o Google, o Bing ou o DuckDuckGo como buscador configurável.
 
+CEBRASPE
+
+6\. Sítio de busca e navegador de internet são termos sinônimos, pois ambos permitem que o usuário acesse páginas na internet.
+
+CERTO ERRADO
+
+Resposta correta: ERRADO
+
+O navegador é o programa usado para acessar a internet (Chrome, Firefox, Edge). O sítio de busca é apenas uma das páginas acessadas por meio dele, dedicada a localizar outras páginas.
+
+FGV
+
+7\. Um sítio de busca localiza páginas na internet por meio de um processo que envolve, nessa ordem, as seguintes etapas:
+
+A) Indexação, rastreamento e ranqueamento B) Ranqueamento, indexação e rastreamento C) Rastreamento, indexação e ranqueamento D) Rastreamento, ranqueamento e indexação E) Indexação, ranqueamento e rastreamento
+
+Resposta correta: C
+
+O sítio de busca primeiro rastreia a internet com robôs (crawlers), depois indexa o conteúdo encontrado e, por fim, aplica o algoritmo de ranqueamento para ordenar os resultados.
+
+VUNESP
+
+8\. Uma página que aparece entre os primeiros resultados de um sítio de busca é, necessariamente, segura e confiável.
+
+CERTO ERRADO
+
+Resposta correta: ERRADO
+
+O ranqueamento de um sítio de busca não garante segurança. Páginas falsas, usadas em golpes de phishing, também podem aparecer bem posicionadas nos resultados.
+
 ## Perguntas Frequentes
+
+### O que é um sítio de busca?
+
+_É uma página da internet que localiza outras páginas a partir de palavras-chave. Ele rastreia, indexa e ranqueia o conteúdo, mas não o armazena: apenas indica onde encontrá-lo. Na linguagem das bancas, “sítio” significa qualquer página hospedada na internet._
 
 ### Qual a diferença entre navegador e buscador?
 

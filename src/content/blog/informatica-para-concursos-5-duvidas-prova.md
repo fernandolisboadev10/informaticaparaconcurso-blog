@@ -70,7 +70,7 @@ Em seguida, vamos a uma confusão que nasce de tratar os três termos como redes
 
 Aliás, a banca gosta de dois erros. O primeiro afirma que a intranet só existe em rede local (LAN). Porém, uma intranet pode alcançar filiais em outras cidades por meio de WAN ou VPN e continuar sendo intranet. O segundo diz que a extranet é pública, o que também está errado, pois o acesso continua controlado.
 
-Não confunda os dois conceitos: LAN, MAN e WAN classificam o alcance geográfico, e internet, intranet e extranet classificam quem tem acesso. Para ver essa distinção com mais exemplos, consulte o artigo sobre [internet, intranet e extranet](/internet-intranet-extranet/).
+Não confunda os dois conceitos: LAN, MAN e WAN classificam o alcance geográfico, e internet, intranet e extranet classificam quem tem acesso. Para ver essa distinção com mais exemplos, consulte o artigo sobre [internet, intranet e extranet](/o-que-e-extranet/).
 
 ## Excluir arquivo: Delete, Shift+Delete e Lixeira
 

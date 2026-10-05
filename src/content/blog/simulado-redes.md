@@ -23,7 +23,7 @@ Guarde esta ideia: quando a banca menciona “camadas de comunicação em rede�
 
 Vale destacar ainda a diferença entre HTTP e HTTPS, um clássico de prova: o HTTPS adiciona uma camada de criptografia à comunicação, protegendo os dados trocados entre o navegador e o servidor, o que o HTTP simples não oferece. Da mesma forma, não confunda DNS com DHCP: o primeiro traduz nomes de domínio em endereços IP, o segundo distribui esses endereços automaticamente para os dispositivos da rede.
 
-Para revisar cada camada com profundidade, o [guia completo de redes de computadores](/redes-de-computadores-guia-completo/) traz a função de cada uma delas com exemplos práticos.
+Para revisar cada camada com profundidade, o [guia completo de redes de computadores](/redes-de-computadores-para-concursos/) traz a função de cada uma delas com exemplos práticos.
 
 ## Tipos de rede: LAN, MAN, WAN e PAN
 
@@ -56,7 +56,7 @@ A internet é uma rede pública, aberta a qualquer usuário. A intranet é uma r
 
 Na sua prova, se a banca afirmar que “toda rede grande é automaticamente uma extranet”, desconfie: o critério não é o tamanho, é quem tem permissão de acesso.
 
-O [artigo sobre internet, intranet e extranet](/internet-intranet-extranet/) esclarece essa diferença com exemplos que costumam gerar dúvida na hora da prova.
+O [artigo sobre internet, intranet e extranet](/o-que-e-extranet/) esclarece essa diferença com exemplos que costumam gerar dúvida na hora da prova.
 
 ## Simulado de redes de computadores: hora de colocar em prática
 
