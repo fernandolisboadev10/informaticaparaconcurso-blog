@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/LegalLayout.astro
 title: "Política de Privacidade"
-description: "Como o Informática para Concursos coleta, usa e protege as suas informações."
+description: "Como o Informática para Concurso coleta, usa e protege as suas informações."
 ---
 
 ## **Política de Privacidade e Proteção de Dados**

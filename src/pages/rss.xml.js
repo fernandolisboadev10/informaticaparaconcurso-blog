@@ -8,7 +8,7 @@ export async function GET(context) {
   );
 
   return rss({
-    title: 'Informática para Concursos',
+    title: 'Informática para Concurso',
     description: 'Resumos, simulados e o que cai na prova de informática dos concursos, em linguagem simples e direta.',
     site: context.site,
     items: posts.map((post) => ({

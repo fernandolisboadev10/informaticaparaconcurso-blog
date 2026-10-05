@@ -1,0 +1,46 @@
+{
+ "questions": [
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Arquivos apagados de um pendrive conectado a um computador com Windows sempre são enviados à Lixeira e podem ser restaurados por ela.",
+   "answer": "E",
+   "comment": "Em regra, arquivos excluídos de mídias removíveis, como pendrives, não passam pela Lixeira. A palavra “sempre” torna o item absoluto e, portanto, incorreto."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "No Microsoft Excel, a fórmula =SOMA(A1:A3) retorna o resultado da soma dos valores contidos nas células A1, A2 e A3.",
+   "answer": "C",
+   "comment": "O operador de dois-pontos define um intervalo. Assim, A1:A3 inclui A1, A2 e A3, e a função SOMA adiciona os três valores."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Phishing é uma técnica de fraude em que o atacante tenta induzir a vítima a fornecer dados pessoais ou financeiros, em geral por meio de mensagens que imitam instituições legítimas.",
+   "answer": "C",
+   "comment": "O phishing usa engenharia social: a mensagem parece vir de um banco ou de um órgão conhecido e leva a vítima a informar dados em uma página falsa."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "A regra de backup 3-2-1 recomenda manter três cópias dos dados, armazenadas em dois tipos de mídia diferentes, com uma dessas cópias guardada fora do local principal.",
+   "answer": "C",
+   "comment": "Os números significam 3 cópias, 2 tipos de mídia e 1 cópia externa (off-site, como a nuvem ou outro local físico)."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Uma VPN serve exclusivamente para aumentar a velocidade da conexão com a internet.",
+   "answer": "E",
+   "comment": "A VPN cria um canal criptografado entre dispositivos ou redes pela internet. Seu objetivo principal é a segurança e o acesso remoto, e não a velocidade. O termo “exclusivamente” também entrega o erro."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "No Windows, o atalho Ctrl+C recorta o item selecionado e o remove do local de origem.",
+   "answer": "E",
+   "comment": "Ctrl+C copia o item e o mantém no local de origem. Quem recorta é o Ctrl+X."
+  }
+ ]
+}

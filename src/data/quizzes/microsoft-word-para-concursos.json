@@ -1,0 +1,74 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Microsoft Word, o recurso de Controle de Alterações permite que o usuário acompanhe inserções, exclusões e modificações feitas no documento, facilitando a revisão colaborativa.",
+   "answer": "C",
+   "comment": "O Controle de Alterações registra edições e ajuda diretamente na revisão colaborativa de documentos."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O atalho Ctrl + Shift + C copia a formatação de um trecho selecionado, enquanto Ctrl + Shift + V aplica essa mesma formatação a outro texto.",
+   "answer": "C",
+   "comment": "Esse par de atalhos copia e aplica formatação através do Pincel de Formatação."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A guia Inserir do Word é a área principal para configurar margens, orientação da página e tamanho do papel.",
+   "answer": "E",
+   "comment": "Margens, orientação e tamanho do papel ficam na guia Layout, não na guia Inserir."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O formato .docx é baseado em XML compactado, o que o torna mais leve e compatível com versões recentes do Word em comparação com o antigo .doc.",
+   "answer": "C",
+   "comment": "O .docx é o formato moderno do Word e usa estrutura XML compactada."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O recurso Cabeçalho e Rodapé só pode ser editado na primeira página do documento, não sendo possível repetir o conteúdo nas demais páginas.",
+   "answer": "E",
+   "comment": "Cabeçalho e rodapé se repetem ao longo de várias páginas e podem conter diferentes informações."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Ao pressionar Ctrl + S, o Word sempre exibe a janela Salvar como, independentemente de o arquivo já ter sido salvo anteriormente.",
+   "answer": "E",
+   "comment": "No Word em português, Ctrl + S sublinha o texto selecionado. Quem salva o arquivo é o Ctrl + B."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O comando Ctrl + H abre a ferramenta de localizar e substituir, muito usada para corrigir termos repetidos ou trocar palavras em todo o documento.",
+   "answer": "C",
+   "comment": "Ctrl + H abre o recurso de localizar e substituir."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A opção Pincel de Formatação copia apenas o texto selecionado, sem levar consigo atributos como fonte, cor ou tamanho.",
+   "answer": "E",
+   "comment": "O Pincel de Formatação copia justamente a formatação do texto, não apenas o conteúdo."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "É possível aplicar diferentes estilos de parágrafo em partes distintas do mesmo documento, como títulos, subtítulos e corpo do texto.",
+   "answer": "C",
+   "comment": "O Word permite aplicar estilos diferentes ao longo do mesmo documento, o que ajuda na padronização visual."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O Microsoft Word permite inserir tabelas, imagens, símbolos e hiperlinks, além de contar com ferramentas de revisão como comentários e verificação ortográfica.",
+   "answer": "C",
+   "comment": "Esses elementos e ferramentas fazem parte dos recursos nativos do Word."
+  }
+ ]
+}

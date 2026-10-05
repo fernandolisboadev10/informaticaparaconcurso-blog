@@ -1,0 +1,417 @@
+{
+ "questions": [
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual é a função de um firewall na proteção de uma rede?",
+   "options": [
+    "Armazenar dados considerados sensíveis",
+    "Atuar como antivírus para programas maliciosos",
+    "Bloquear ou permitir pacotes de dados",
+    "Fazer backup dos dados automaticamente",
+    "Criptografar as comunicações"
+   ],
+   "answer": "C",
+   "comment": "A função de um firewall é bloquear ou permitir pacotes de dados com base em regras de segurança estabelecidas. As outras opções estão relacionadas a outras funções de segurança."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual dos seguintes tipos de ataque é especificamente projetado para comprometer a confidencialidade de dados?",
+   "options": [
+    "Phishing",
+    "DDoS",
+    "SQL Injection",
+    "Ransomware",
+    "Malware"
+   ],
+   "answer": "A",
+   "comment": "Phishing é um ataque que visa enganar usuários para que entreguem informações confidenciais, como senhas. DDoS busca denegar serviço, SQL Injection compromete a integridade, Ransomware sequestra dados e Malware é um termo genérico."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Na perspectiva da segurança da informação, o que é criptografia?",
+   "options": [
+    "Otimização de velocidade de internet",
+    "Ação de backup de dados",
+    "Técnica de codificação de dados",
+    "Limitação de acesso a redes",
+    "Detecção de intrusos em redes"
+   ],
+   "answer": "C",
+   "comment": "A opção C está correta, pois criptografia é uma técnica utilizada para codificar dados, garantindo a segurança das informações. As outras opções não se referem a criptografia."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Qual a principal vantagem de um antivírus em tempo real?",
+   "options": [
+    "Aumenta a velocidade do computador",
+    "Remove vírus existentes rapidamente",
+    "Detecta e bloqueia ameaças antes que causem danos",
+    "Faz backup dos dados automaticamente",
+    "Melhora a conectividade com a internet"
+   ],
+   "answer": "C",
+   "comment": "A opção C é a correta, pois a principal vantagem de um antivírus em tempo real é a sua capacidade de detectar e bloquear ameaças antes que elas causem danos ao sistema."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual das alternativas a seguir caracteriza melhor a função de um antivírus?",
+   "options": [
+    "Detectar e eliminar malwares do sistema",
+    "Proteger a rede de ataques externos",
+    "Realizar backups automáticos de dados",
+    "Classificar e armazenar emails enviados",
+    "Garantir a privacidade online do usuário"
+   ],
+   "answer": "A",
+   "comment": "A função principal de um antivírus é detectar e eliminar malwares do sistema. As outras opções referem-se a funções de firewall, sistemas de backup, serviços de email e privacidade online."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Em que situação é mais indicado utilizar um firewall?",
+   "options": [
+    "Para realizar backup de dados",
+    "Para gerenciar senhas de usuários",
+    "Para monitorar a presença de malwares",
+    "Para controlar e filtrar o tráfego de rede",
+    "Para criptografar informações"
+   ],
+   "answer": "D",
+   "comment": "Um firewall é usado para controlar e filtrar o tráfego de rede, permitindo ou bloqueando pacotes de acordo com regras de segurança. As outras opções referem-se a funções de softwares diferentes, como backup, gerenciamento de senhas, antimalware e criptografia."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "As informações armazenadas na nuvem são protegidas por criptografia. Qual é a finalidade dessa prática?",
+   "options": [
+    "Facilitar o acesso por múltiplos usuários",
+    "Evitar que dados sejam acessados por pessoas não autorizadas",
+    "Aumentar a capacidade de armazenamento",
+    "Reduzir o custo de armazenamento",
+    "Melhorar a velocidade de upload"
+   ],
+   "answer": "B",
+   "comment": "A criptografia tem como finalidade proteger as informações contra acessos não autorizados, mantendo a confidencialidade. As demais opções tratam de benefícios não relacionados à segurança da informação."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual é a função do protocolo HTTPS em uma comunicação online?",
+   "options": [
+    "Bloquear invasões de malwares",
+    "Aumentar a velocidade de carregamento de páginas",
+    "Proteger a integridade e confidencialidade dos dados",
+    "Facilitar o armazenamento em nuvem",
+    "Substituir a necessidade de firewall"
+   ],
+   "answer": "C",
+   "comment": "HTTPS encripta a comunicação entre o cliente e o servidor, garantindo segurança. As outras opções se referem a funções que não estão diretamente relacionadas ao protocolo."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual das opções a seguir é um exemplo de um vírus que se propaga por anexos de e-mail?",
+   "options": [
+    "Cavalos de Troia",
+    "Ransomware",
+    "Worms",
+    "Spyware",
+    "Adware"
+   ],
+   "answer": "A",
+   "comment": "Os Cavalos de Troia são malwares que se disfarçam como programas legítimos e podem ser enviados como anexos em e-mails. Os outros tipos descritos têm outras formas de propagação."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "No contexto de Segurança da Informação, qual das alternativas abaixo descreve uma função principal de um firewall?",
+   "options": [
+    "Proteger dados contra perda em caso de falhas de hardware.",
+    "Monitorar e controlar o tráfego de rede de entrada e saída.",
+    "Detectar e remover vírus de sistemas infectados.",
+    "Fornecer armazenamento remoto para backup de dados.",
+    "Criptografar dados armazenados em discos rígidos."
+   ],
+   "answer": "B",
+   "comment": "A função principal de um firewall é monitorar e controlar o tráfego de rede de entrada e saída. As outras alternativas descrevem funções de outras tecnologias, como antivírus e soluções de backup."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Qual é o principal objetivo de um firewall em um sistema de rede?",
+   "options": [
+    "Proteger contra vírus e malware",
+    "Bloquear acessos não autorizados",
+    "Fazer backup dos dados",
+    "Armazenar dados em nuvem",
+    "Aumentar a velocidade da conexão"
+   ],
+   "answer": "B",
+   "comment": "A opção B está correta, pois o principal objetivo do firewall é bloquear acessos não autorizados à rede. As outras opções se referem a funções distintas e não são funções básicas de um firewall."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Qual das opções a seguir é considerada uma vantagem do uso de um software antivírus?",
+   "options": [
+    "Detecção e remoção de vírus conhecidos.",
+    "Aumento da velocidade de acesso à internet.",
+    "Eliminação de todos os tipos de malware.",
+    "Aumento da capacidade de armazenamento no dispositivo.",
+    "Impedir a desinstalação de software indesejado."
+   ],
+   "answer": "A",
+   "comment": "A resposta correta é a primeira alternativa, pois os softwares antivírus têm como finalidade principal a detecção e remoção de vírus conhecidos. As demais opções não são características reais de um antivírus."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual é a principal desvantagem do armazenamento em nuvem?",
+   "options": [
+    "Necessidade de conexão à internet",
+    "Aumento na segurança das informações",
+    "Acesso ilimitado aos dados",
+    "Facilidade no backup dos dados",
+    "Eliminação de custos de hardware"
+   ],
+   "answer": "A",
+   "comment": "Uma desvantagem do armazenamento em nuvem é a dependência de uma conexão com a internet para acessar os dados. As outras opções não são desvantagens, mas sim características e benefícios."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O armazenamento em nuvem elimina completamente a necessidade de backups locais dos dados.",
+   "answer": "E",
+   "comment": "É recomendável manter backups locais como cópia de segurança adicional aos dados em nuvem."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Qual é a diferença entre um vírus e um worm em termos de propagação?",
+   "options": [
+    "Os worms não se propagam",
+    "Os vírus precisam de um host para se propagar",
+    "Os worms afetam apenas softwares",
+    "Os vírus são mais perigosos que os worms",
+    "Os worms são lentos na propagação"
+   ],
+   "answer": "B",
+   "comment": "Os vírus precisam de um host (arquivo ou programa) para se multiplicar, enquanto os worms podem se propagar autonomamente. As outras afirmações são incorretas."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Em relação ao armazenamento em nuvem, qual dos itens a seguir é considerado uma vantagem?",
+   "options": [
+    "Requer hardware específico",
+    "Dependente de conexão com a internet",
+    "Segurança sempre garantida",
+    "Acesso apenas em dispositivos móveis",
+    "Facilita o compartilhamento de arquivos"
+   ],
+   "answer": "E",
+   "comment": "A principal vantagem do armazenamento em nuvem é que ele facilita o compartilhamento de arquivos entre usuários; as outras opções são desvantagens ou inverdades."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Em relação ao malware, qual é a definição correta de um Trojan?",
+   "options": [
+    "Um software antivírus",
+    "Uma ferramenta de segurança",
+    "Um malware que se disfarça como um programa legítimo",
+    "Um protocolo de segurança",
+    "Um tipo de firewall"
+   ],
+   "answer": "C",
+   "comment": "Trojan é um tipo de malware que se disfarça como software legítimo para enganar o usuário. As outras opções não representam um Trojan."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "Um firewall também pode ser utilizado para bloquear aplicativos específicos de acessar a internet com base em políticas definidas pelo usuário.",
+   "options": [
+    "Firewalls só controlam tráfego entre redes.",
+    "Isso é função exclusiva de antivírus.",
+    "Verdadeiro, pode bloquear aplicativos.",
+    "Somente firewalls de hardware fazem isso.",
+    "Os firewalls não têm controle granular."
+   ],
+   "answer": "C",
+   "comment": "Firewalls podem se configurar para permitir ou impedir que aplicativos específicos acessem recursos de rede com base em regras definidas."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "O que é um backup incremental?",
+   "options": [
+    "Copia todos os dados desde o último backup completo",
+    "Armazena arquivos somente se houver alteração",
+    "Faz cópia de todos os arquivos sem exceção",
+    "É feito diariamente sem planejamento",
+    "Realiza cópias de segurança de arquivos de sistema apenas"
+   ],
+   "answer": "B",
+   "comment": "A opção B é a correta, pois um backup incremental é aquele que copia apenas os arquivos que foram alterados desde o último backup, enquanto as outras opções não representam corretamente essa técnica."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Qual das opções a seguir é uma função primária de um antivírus?",
+   "options": [
+    "Monitorar o tráfego de redes",
+    "Remover malwares do sistema",
+    "Gerenciar backups automaticamente",
+    "Otimizar o desempenho do sistema",
+    "Armazenar dados na nuvem"
+   ],
+   "answer": "B",
+   "comment": "A função primária de um antivírus é remover malwares, incluindo vírus. As outras alternativas referem-se a funções de outros tipos de softwares."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Em relação ao conceito de firewall, qual das opções abaixo está incorreta?",
+   "options": [
+    "Controla o tráfego de rede com base em regras de segurança.",
+    "Protege a rede contra acessos não autorizados.",
+    "Pode funcionar tanto em hardware quanto em software.",
+    "Impedindo a instalação de softwares novos.",
+    "Registra tentativas de acesso não autorizadas."
+   ],
+   "answer": "D",
+   "comment": "A opção D é incorreta, pois um firewall não impede a instalação de softwares, mas sim controla o tráfego de rede. As outras opções descrevem corretamente funções do firewall."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "O que é um firewall?",
+   "options": [
+    "Um programa de backup de dados",
+    "Uma ferramenta que detecta e remove vírus",
+    "Um sistema que filtra o tráfego de rede",
+    "Um tipo de malware",
+    "Uma rede social"
+   ],
+   "answer": "C",
+   "comment": "A opção C é correta, pois um firewall serve para filtrar e controlar o tráfego de rede, enquanto as demais alternativas não definem corretamente o que é um firewall."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "O que deve ser considerado ao escolher um serviço de armazenamento em nuvem?",
+   "options": [
+    "A quantidade de espaço grátis offeredo",
+    "A reputação da empresa fornecedora",
+    "A velocidade de conexão à internet",
+    "O número de dados que será armazenado",
+    "O sistema operacional do usuário"
+   ],
+   "answer": "B",
+   "comment": "A opção B é correta, pois a reputação da empresa é fundamental para a segurança e disponibilidade dos dados. As outras opções são menos relevantes no contexto geral da segurança."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "Os firewalls impedem a entrada de qualquer tipo de dado suspeito na rede, sendo desnecessário o uso de um antivírus em conjunto.",
+   "options": [
+    "Firewalls são independentes de antivírus.",
+    "Ambos são necessários para uma proteção abrangente.",
+    "Firewalls são mais importantes que antivírus.",
+    "Antivírus protegidos contra trojans e firewalls contra worms.",
+    "Isso depende do firewall utilizado."
+   ],
+   "answer": "B",
+   "comment": "Firewalls e antivírus atuam em camadas de segurança diferentes e complementares para proteção de rede e sistema."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "O que é um backup incremental?",
+   "options": [
+    "Uma cópia total de todos os dados",
+    "Uma cópia apenas dos dados alterados desde o último backup",
+    "Uma cópia em fita magnética",
+    "Qualquer cópia de segurança feita semanalmente",
+    "Uma cópia em tempo real dos dados"
+   ],
+   "answer": "B",
+   "comment": "A opção B está correta, pois um backup incremental faz cópias apenas dos dados que foram alterados desde o último backup, otimizando espaço e tempo. As outras opções não descrevem corretamente um backup incremental."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "Vírus de computador podem ser detectados e removidos por softwares antivírus, que precisam estar sempre atualizados para garantir sua eficácia contra novas ameaças.",
+   "options": [
+    "Os antivírus detectam vírus sem necessidade de atualizações.",
+    "Antivírus sempre detectam todas as ameaças.",
+    "Atualizações são necessárias para eficácia.",
+    "Os antivírus apenas detectam, não removem vírus.",
+    "As atualizações são opcionais."
+   ],
+   "answer": "C",
+   "comment": "Antivírus atualizados possuem assinaturas para detectar e neutralizar novos vírus. Sem atualizações, a eficácia pode diminuir drasticamente."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Qual é a principal função de um sistema de backup em uma organização?",
+   "options": [
+    "Aumentar a velocidade da internet",
+    "Proteger dados contra perda",
+    "Reduzir o espaço de armazenamento",
+    "Eliminar a necessidade de software antivírus",
+    "Facilitar o acesso à internet"
+   ],
+   "answer": "B",
+   "comment": "A principal função do backup é proteger os dados contra perda devido a falhas, danos ou ataques. As outras alternativas não refletem a função do backup."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Na computação em nuvem, qual aspecto é considerado uma vantagem em relação ao armazenamento local?",
+   "options": [
+    "Maior segurança contra repositórios maliciosos",
+    "Acesso aos dados de qualquer lugar com conexão à internet",
+    "Necessidade de hardware específico",
+    "Armazenamento ilimitado",
+    "Confiabilidade em desastres naturais"
+   ],
+   "answer": "B",
+   "comment": "A principal vantagem do armazenamento em nuvem é o acesso remoto aos dados, o que facilita o trabalho remoto e a colaboração. As outras opções não se aplicam de forma geral como uma vantagem da nuvem."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "O que caracteriza um ransomware?",
+   "options": [
+    "Obtém senhas pessoais",
+    "Bloqueia o acesso aos dados até que um resgate seja pago",
+    "Anexa-se a e-mails",
+    "Duplicação de arquivos",
+    "Instala outros tipos de malware"
+   ],
+   "answer": "B",
+   "comment": "A alternativa B é a correta, pois um ransomware impede acesso a arquivos até que um pagamento seja realizado, enquanto as outras opções descrevem diferentes tipos de malware."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Um firewall tem como função principal:",
+   "options": [
+    "Proteger o computador contra vazamento de dados",
+    "Armazenar arquivos temporários",
+    "Filtrar e monitorar o tráfego de rede",
+    "Gerar backups automáticos",
+    "Desfragmentar o disco rígido"
+   ],
+   "answer": "C",
+   "comment": "A alternativa C está correta, pois um firewall filtra e controla o tráfego de dados entre a rede interna e a externa, atuando como uma barreira de segurança."
+  }
+ ]
+}

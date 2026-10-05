@@ -1,0 +1,417 @@
+{
+ "questions": [
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "No Windows, qual é a função da ferramenta ‘Gerenciador de Arquivos’?",
+   "options": [
+    "Executar programas automaticamente",
+    "Visualizar o uso da CPU",
+    "Gerenciar armazenamento de arquivos e pastas",
+    "Monitorar a rede",
+    "Realizar backups automáticos"
+   ],
+   "answer": "C",
+   "comment": "A alternativa C é correta, pois a ferramenta ‘Gerenciador de Arquivos’ permite que os usuários gerenciem arquivos e pastas. As demais opções não descrevem a função dessa ferramenta."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual dos seguintes formatos é geralmente mais adequado para armazenar documentos de texto?",
+   "options": [
+    ".jpg",
+    ".mp4",
+    ".pdf",
+    ".exe",
+    ".docx"
+   ],
+   "answer": "C",
+   "comment": "A opção C é correta, pois .pdf é um formato amplamente utilizado para documentos, enquanto os outros são para outros tipos de arquivo, como imagens e vídeos."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "No contexto de organização de informações, o que é um sistema de gerenciamento de arquivos?",
+   "options": [
+    "Um software de edição de textos",
+    "Uma ferramenta para backup automático",
+    "Um programa que organiza arquivos e pastas",
+    "Um software que apenas copia arquivos",
+    "Um aplicativo de redes sociais"
+   ],
+   "answer": "C",
+   "comment": "A opção C está correta, pois um sistema de gerenciamento de arquivos organiza e permite a manipulação de arquivos e pastas. As outras alternativas não refletem a função de um sistema de gerenciamento de arquivos."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Windows 10, é possível agendar a execução de programas usando o Agendador de Tarefas.",
+   "answer": "E",
+   "comment": "O Agendador de Tarefas permite agendar a execução de programas e scripts em horários definidos pelo usuário."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "No Explorador de Arquivos do Windows, ao “recortar” (Ctrl+X) um arquivo e depois “colar” (Ctrl+V) em outra pasta, o resultado é:",
+   "options": [
+    "É criada uma cópia do arquivo no destino, mantendo o original no local de origem",
+    "O arquivo é movido da pasta de origem para a pasta de destino, sendo removido do local original",
+    "O arquivo é excluído permanentemente, sem ser enviado à Lixeira",
+    "O arquivo é compactado automaticamente em um .zip",
+    "É criado um atalho (link) para o arquivo original, sem movê-lo"
+   ],
+   "answer": "B",
+   "comment": "Recortar e colar (Ctrl+X + Ctrl+V) move o arquivo — diferente de copiar e colar (Ctrl+C + Ctrl+V), que duplica o arquivo, mantendo o original no lugar."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Qual comando é usado para listar os arquivos em um diretório no Windows?",
+   "options": [
+    "ls",
+    "dir",
+    "list",
+    "files",
+    "show"
+   ],
+   "answer": "B",
+   "comment": "O comando ‘dir’ é o correto para listar arquivos no Windows. As outras opções não são comandos válidos no CMD do Windows."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "No Windows 10, onde você pode acessar rapidamente a opção de configuração de pastas?",
+   "options": [
+    "Painel de Controle",
+    "Explorador de Arquivos",
+    "Menu Iniciar",
+    "Terminal",
+    "Gerenciador de Tarefas"
+   ],
+   "answer": "B",
+   "comment": "A opção de configuração de pastas é acessível rapidamente através do Explorador de Arquivos. As outras opções não têm essa funcionalidade direta relacionada a pastas."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "O que é um atalho de desktop no Windows?",
+   "options": [
+    "Um arquivo temporário",
+    "Um link para acessar um arquivo ou programa rapidamente",
+    "Um tipo de diretório",
+    "Um software de segurança",
+    "Um registro de conexão"
+   ],
+   "answer": "B",
+   "comment": "Um atalho de desktop é um link que permite acessar rapidamente um arquivo ou programa. As outras opções não se relacionam com a função de um atalho."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Qual a diferença entre arquivos e pastas?",
+   "options": [
+    "Pastas são menores que arquivos",
+    "Arquivos armazenam dados, enquanto pastas organizam arquivos",
+    "Pastas podem conter arquivos, mas arquivos não podem conter pastas",
+    "Pastas são sempre arquivos compactados",
+    "Arquivos são sempre executáveis e pastas não"
+   ],
+   "answer": "B",
+   "comment": "A alternativa B é a correta, pois descreve exatamente a diferença entre arquivos e pastas. As outras alternativas não representam a realidade sobre arquivos e pastas."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual a função de um diretório em um sistema de arquivos?",
+   "options": [
+    "Executar programas diretamente",
+    "Armazenar arquivos temporários",
+    "Organizar arquivos em grupos",
+    "Aumentar a segurança do sistema",
+    "Proteger arquivos do acesso não autorizado"
+   ],
+   "answer": "C",
+   "comment": "Os diretórios servem para organizar arquivos em grupos, facilitando a localização e o gerenciamento. As outras opções não são funções primárias de diretórios."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Qual é a principal vantagem de usar pastas para organizar arquivos em um computador?",
+   "options": [
+    "Aumentar a velocidade do sistema",
+    "Facilitar o acesso e a localização de arquivos",
+    "Reduzir o espaço ocupado",
+    "Impedir a abertura de arquivos duplicados",
+    "Aumentar a segurança do sistema"
+   ],
+   "answer": "B",
+   "comment": "A principal vantagem de usar pastas é a organização, facilitando o acesso e a localização de arquivos. As outras opções não estão diretamente relacionadas à função das pastas."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Qual comando do Windows permite pesquisar arquivos no sistema?",
+   "options": [
+    "dir",
+    "search",
+    "explorer",
+    "find",
+    "cmd"
+   ],
+   "answer": "A",
+   "comment": "O comando ‘dir’ é usado no prompt de comando para listar arquivos e diretórios em uma pasta específica. ‘search’ não é um comando válido, ‘find’ é um comando para procurar texto em arquivos, e ‘cmd’ é para abrir o prompt de comando."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "O que caracteriza um sistema de gerenciamento de banco de dados (SGBD)?",
+   "options": [
+    "Integração de arquivos e pastas",
+    "Controle de acesso ao computador",
+    "Manipulação de dados estruturados",
+    "Aumento da capacidade do disco",
+    "Backup de arquivos automaticamente"
+   ],
+   "answer": "C",
+   "comment": "Um SGBD é projetado para manipular dados estruturados de forma eficaz. As demais opções não refletem a função de um SGBD."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Qual comando é utilizado no Windows para abrir o Gerenciador de Arquivos?",
+   "options": [
+    "dir",
+    "explorer",
+    "ls",
+    "cd",
+    "run"
+   ],
+   "answer": "B",
+   "comment": "A opção B é correta. O comando ‘explorer’ inicia o Gerenciador de Arquivos do Windows. As outras opções estão incorretas, pois são comandos de terminal ou não abrem o gerenciador de arquivos."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Em um sistema operacional, as pastas são utilizadas para:",
+   "options": [
+    "Organizar arquivos de forma hierárquica.",
+    "Armazenar apenas programas executáveis.",
+    "Impedir o acesso a arquivos pessoais.",
+    "Tempo de abertura dos arquivos.",
+    "Realizar cópias de segurança."
+   ],
+   "answer": "A",
+   "comment": "As pastas são fundamentais para a organização de arquivos, permitindo uma estrutura clara e hierárquica. As outras alternativas estão incorretas, pois, embora algumas possam envolver a gestão de arquivos, não refletem a função primária das pastas."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "O comando ‘df’ é usado no Windows para verificar o espaço utilizado e disponível em discos e sistemas de arquivos.",
+   "options": [
+    "Certo, é um comando universal.",
+    "Certo, mas não em versões mais novas do Windows.",
+    "Errado, ‘df’ é um comando do Linux.",
+    "Errado, o Windows usa ‘dir’ para isso.",
+    "Errado, para isso, é necessário software de terceiros."
+   ],
+   "answer": "C",
+   "comment": "O comando ‘df’ é utilizado em sistemas baseados em UNIX/Linux, não aplicável no Windows."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual dos seguintes comandos é utilizado para abrir um terminal de comandos em sistemas Windows?",
+   "options": [
+    "cmd",
+    "terminal",
+    "command",
+    "execute",
+    "run"
+   ],
+   "answer": "A",
+   "comment": "O comando ‘cmd’ é utilizado para abrir o terminal de comandos no Windows. As outras opções não são comandos válidos desse sistema."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "No sistema operacional Linux, qual comando é utilizado para listar arquivos e pastas no diretório atual?",
+   "options": [
+    "dir",
+    "ls",
+    "list",
+    "show",
+    "view"
+   ],
+   "answer": "B",
+   "comment": "A opção B é correta, pois ‘ls’ é o comando que lista arquivos e diretórios em Linux. As outras opções são incorretas ou de outros sistemas operacionais."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Em um sistema de arquivos, o que caracteriza um diretório?",
+   "options": [
+    "Armazena apenas arquivos executáveis",
+    "Contém referências a outros arquivos e diretórios",
+    "É sempre oculto para o usuário",
+    "Não pode ser nomeado pelo usuário",
+    "Não pode conter subdiretórios"
+   ],
+   "answer": "B",
+   "comment": "Um diretório serve para organizar arquivos e pode conter referências a outros arquivos e outros diretórios. As outras opções estão erradas, pois um diretório pode ser visível e personalizável."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual a função da extensão de um arquivo, como .txt ou .jpg?",
+   "options": [
+    "Especificar o tamanho do arquivo",
+    "Indicar a codificação do arquivo",
+    "Definir o tipo e o formato do arquivo",
+    "Aumentar a segurança do arquivo",
+    "Alterar a localização do arquivo"
+   ],
+   "answer": "C",
+   "comment": "A opção C está correta porque a extensão de um arquivo especifica seu tipo e formato, facilitando sua identificação pelo sistema operacional. As demais respostas não correspondem à função real das extensões."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "No Windows, a extensão de arquivo “.exe” identifica tipicamente:",
+   "options": [
+    "Um arquivo executável, capaz de iniciar um programa",
+    "Um arquivo de texto simples",
+    "Um arquivo de imagem comprimida",
+    "Um arquivo de planilha eletrônica",
+    "Um arquivo de áudio"
+   ],
+   "answer": "A",
+   "comment": "A extensão .exe identifica um arquivo executável do Windows — ao ser aberto, ele inicia a execução de um programa."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "O que significa o termo ‘backup’ em informática?",
+   "options": [
+    "Restaurar arquivos",
+    "Proteger arquivos contra vírus",
+    "Criação de cópias de segurança",
+    "Edição de arquivos",
+    "Compilação de programas"
+   ],
+   "answer": "C",
+   "comment": "A opção C é correta, pois ‘backup’ refere-se à criação de cópias de segurança para evitar a perda de dados. As outras opções não descrevem o conceito corretamente."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Em sistemas operacionais, o que é a extensão de um arquivo?",
+   "options": [
+    "Um método de compressão de dados",
+    "Uma parte opcional do nome do arquivo que indica seu tipo",
+    "Um tipo de segurança de arquivos",
+    "Uma unidade de medida de espaço",
+    "Um comando para abrir arquivos"
+   ],
+   "answer": "B",
+   "comment": "A alternativa correta indica que a extensão é uma parte do nome de um arquivo que ajuda a identificar seu formato. Os outros itens falham em descrever a função real da extensão."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Ao organizar arquivos em um sistema operacional, você deve considerar que a estrutura de pastas deve ser lógica e hierárquica. Qual é a principal vantagem de se utilizar pastas de forma estruturada ao armazenar arquivos?",
+   "options": [
+    "Facilita a busca por arquivos relevantes.",
+    "Aumenta o espaço em disco disponível.",
+    "Impede o acesso a arquivos indesejados.",
+    "Melhora a velocidade do sistema operacional.",
+    "Reduz a necessidade de backups frequentes."
+   ],
+   "answer": "A",
+   "comment": "A resposta correta é a alternativa A, pois uma estrutura de pastas organizada torna a localização e a gestão de arquivos mais eficiente. As outras alternativas, embora possam ter relação com a organização, não refletem diretamente a principal vantagem de uma boa estrutura de pastas."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual é o comando utilizado no Windows para renomear um arquivo?",
+   "options": [
+    "Ctrl + R",
+    "F2",
+    "Alt + R",
+    "Shift + R",
+    "Ctrl + N"
+   ],
+   "answer": "B",
+   "comment": "A opção B é correta; ao pressionar F2, o Windows permite que o usuário renomeie arquivos selecionados. As outras alternativas não têm essa função."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "No sistema operacional, o que é uma pasta?",
+   "options": [
+    "Um programa de edição de texto",
+    "Um arquivo de imagem",
+    "Um local onde arquivos são armazenados",
+    "Um dispositivo de armazenamento externo",
+    "Um componente de rede"
+   ],
+   "answer": "C",
+   "comment": "Uma pasta é um local onde arquivos são armazenados no sistema operacional, permitindo a organização dos mesmos. As outras opções descrevem outros tipos de elementos do sistema."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual a principal diferença entre um arquivo e uma pasta?",
+   "options": [
+    "Um arquivo contém dados, enquanto uma pasta contém arquivos",
+    "Uma pasta é um tipo de arquivo",
+    "Os arquivos são maiores que as pastas",
+    "Pastas não podem ser alteradas",
+    "Arquivos sempre possuem uma extensão"
+   ],
+   "answer": "A",
+   "comment": "Um arquivo contém dados específicos, enquanto uma pasta é uma estrutura de armazenamento que contém arquivos ou outras pastas. As outras afirmações não são corretas."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "Ao excluir um arquivo do disco rígido local no Windows usando apenas a tecla Delete (sem combinar com Shift), o arquivo é:",
+   "options": [
+    "Apagado permanentemente e de forma imediata, sem possibilidade de recuperação",
+    "Automaticamente enviado para um serviço de armazenamento em nuvem",
+    "Movido para a Lixeira, podendo ser restaurado posteriormente",
+    "Compactado e renomeado automaticamente",
+    "Bloqueado para edição, mas mantido na pasta original"
+   ],
+   "answer": "C",
+   "comment": "Por padrão, excluir um arquivo local com Delete o move para a Lixeira, de onde pode ser restaurado. Usar Shift+Delete é que causa exclusão permanente, pulando a Lixeira."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Que tipo de arquivo é normalmente utilizado para criar documentos de texto no Microsoft Word?",
+   "options": [
+    ".exe",
+    ".doc",
+    "jpg",
+    ".mp3",
+    ".html"
+   ],
+   "answer": "B",
+   "comment": "‘.doc’ é a extensão padrão para arquivos criados no Microsoft Word. As outras extensões não são usadas para documentos de texto nesse aplicativo."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "No Windows, qual comando é utilizado para exibir uma lista dos arquivos em um diretório através do prompt de comando?",
+   "options": [
+    "dir",
+    "list",
+    "show",
+    "files",
+    "display"
+   ],
+   "answer": "A",
+   "comment": "O comando ‘dir’ é o utilizado para listar arquivos em um diretório no Windows. As outras opções não são comandos válidos nesse contexto."
+  }
+ ]
+}

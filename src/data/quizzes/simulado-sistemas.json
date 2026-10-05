@@ -1,0 +1,409 @@
+{
+ "questions": [
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Em uma instalação padrão do Windows, qual é o formato de sistema de arquivos utilizado por padrão em uma nova partição?",
+   "options": [
+    "FAT32",
+    "NTFS",
+    "exFAT",
+    "HFS+",
+    "EXT4"
+   ],
+   "answer": "B",
+   "comment": "O NTFS (New Technology File System) é o sistema de arquivos padrão para novas partições em versões modernas do Windows. FAT32 é mais antigo e tem limitações, enquanto exFAT é usado em dispositivos removíveis. HFS+ e EXT4 são utilizados em sistemas Mac e Linux, respectivamente."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "Qual é o gerenciador de pacotes padrão no Ubuntu, uma popular distribuição Linux?",
+   "options": [
+    "RPM",
+    "YUM",
+    "DPKG",
+    "APT",
+    "ZYPPER"
+   ],
+   "answer": "D",
+   "comment": "O APT é o gerenciador de pacotes padrão no Ubuntu, que utiliza o DPKG como backend. RPM e YUM são usados em sistemas baseados em Red Hat, enquanto ZYPPER é do openSUSE."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "No sistema Linux, qual comando é utilizado para listar o conteúdo de um diretório?",
+   "options": [
+    "ls",
+    "dir",
+    "cd",
+    "list",
+    "show"
+   ],
+   "answer": "A",
+   "comment": "A resposta correta é ‘ls’, um comando utilizado em Linux para listar arquivos e diretórios. ‘dir’ é um comando do Windows, e ‘cd’ é usado para mudar de diretório, enquanto ‘list’ e ‘show’ não são comandos válidos para essa ação."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual comando no terminal Linux é utilizado para listar arquivos e diretórios de forma detalhada?",
+   "options": [
+    "ls -l",
+    "dir",
+    "list -a",
+    "cat -d",
+    "show -f"
+   ],
+   "answer": "A",
+   "comment": "O comando ‘ls -l’ é utilizado para listar todos os arquivos e diretórios com detalhes. ‘dir’ é um comando do DOS, ‘list -a’ e ‘cat -d’ não existem, e ‘show -f’ não é correto no contexto do Linux."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "No Linux, o que o símbolo ‘/’ representa?",
+   "options": [
+    "Diretório raiz",
+    "Diretório de usuário",
+    "Arquivo temporário",
+    "Sistema de backup",
+    "Comando de execução"
+   ],
+   "answer": "A",
+   "comment": "No Linux, ‘/’ é o diretório raiz do sistema de arquivos. As outras opções não correspondem ao que representa o símbolo."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual é a principal função do sistema operacional em um computador?",
+   "options": [
+    "Gerenciar hardware e software",
+    "Armazenar dados",
+    "Proteger contra virus",
+    "Pleitear direitos do usuário",
+    "Gerar relatórios"
+   ],
+   "answer": "A",
+   "comment": "O sistema operacional é responsável por gerenciar o hardware e software do computador. As outras opções são funções secundárias ou de softwares específicos."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Qual caminho representa um diretório no Windows?",
+   "options": [
+    "/home/user/",
+    "C:\\Users\\nome\\",
+    "C:/Documents/",
+    "C::Users:name",
+    "C|Users\\User"
+   ],
+   "answer": "B",
+   "comment": "O caminho correto no Windows utiliza barras invertidas e o formato ‘C:\\Users\\nome\\’. As outras opções usam sintaxes inválidas ou do Linux."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual é a principal diferença entre sistemas operacionais de 32 bits e 64 bits?",
+   "options": [
+    "A quantidade de dispositivos suportados",
+    "O tamanho máximo de memória RAM endereçada",
+    "O número de usuários que podem acessar",
+    "A velocidade de processamento",
+    "O tipo de software que pode ser executado"
+   ],
+   "answer": "B",
+   "comment": "A opção correta é ‘O tamanho máximo de memória RAM endereçada’, pois sistemas de 64 bits podem endereçar muito mais memória do que os de 32 bits. As outras opções não são verdadeiras."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "No Windows, qual é a função do registro do sistema?",
+   "options": [
+    "Armazenar arquivos temporários",
+    "Gerenciar configurações do sistema",
+    "Executar aplicações",
+    "Armazenar dados pessoais do usuário",
+    "Criar backups de sistema"
+   ],
+   "answer": "B",
+   "comment": "O registro do Windows é um banco de dados que armazena configurações do sistema e de aplicativos. As outras opções não representam a função do registro."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Qual sistema de arquivos é padrão no Linux?",
+   "options": [
+    "EXT4",
+    "NTFS",
+    "FAT32",
+    "HFS+",
+    "ext3"
+   ],
+   "answer": "A",
+   "comment": "O EXT4 é o sistema de arquivos mais utilizado atualmente no Linux. NTFS e FAT32 são usados principalmente no Windows, enquanto HFS+ é típico de sistemas Apple e ext3 é uma versão anterior ao EXT4."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Windows, os arquivos com extensões .dll são usados para armazenar bibliotecas de funções que podem ser utilizadas por múltiplos programas.",
+   "answer": "E",
+   "comment": "Arquivos .dll (Dynamic Link Library) contêm bibliotecas de funções e dados que podem ser usados simultaneamente por múltiplos aplicativos no Windows."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Qual é a principal função do firmware em um computador?",
+   "options": [
+    "Controlar o dispositivo de hardware",
+    "Executar programas de usuário",
+    "Gerenciar arquivos",
+    "Administrar recursos de rede",
+    "Fornecer interface gráfica"
+   ],
+   "answer": "A",
+   "comment": "A alternativa A é correta; o firmware é um software instalado em hardware e controla suas funções. As outras opções não descrevem a função do firmware corretamente."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Em Windows, qual é o propósito do comando ‘chkdsk’?",
+   "options": [
+    "Formatar o disco",
+    "Criar uma nova partição",
+    "Eliminar arquivos temporários",
+    "Reinstalar o sistema"
+   ],
+   "answer": "A",
+   "comment": "O comando ‘chkdsk’ é utilizado para verificar e corrigir erros nos sistemas de arquivos. As outras opções não são funções deste comando."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Qual comando no Linux é utilizado para listar arquivos e diretórios em um diretório?",
+   "options": [
+    "ls",
+    "dir",
+    "list",
+    "show",
+    "view"
+   ],
+   "answer": "A",
+   "comment": "O comando ‘ls’ é utilizado para listar arquivos e diretórios em Unix e Linux. As demais opções não são comandos válidos para esse propósito."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Qual das seguintes alternativas é um ambiente gráfico que pode ser usado no Linux?",
+   "options": [
+    "GNOME",
+    "Windows Explorer",
+    "Command Prompt",
+    "macOS Finder",
+    "DOS"
+   ],
+   "answer": "A",
+   "comment": "GNOME é um ambiente gráfico para Linux, enquanto os demais são interfaces de sistemas diferentes."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "O que acontece ao executar o comando ‘rm -rf /’ no Linux?",
+   "options": [
+    "Remove arquivos temporários",
+    "Desinstala o sistema operacional",
+    "Apaga todos os arquivos do sistema",
+    "Exclui arquivos em uma pasta específica",
+    "Nenhuma das alternativas acima"
+   ],
+   "answer": "C",
+   "comment": "A opção correta é ‘Apaga todos os arquivos do sistema’, pois esse comando deletará todos os arquivos e diretórios desde a raiz. As outras alternativas são incorretas."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual das seguintes opções é uma das características do sistema operacional Windows?",
+   "options": [
+    "Multitarefa",
+    "Código aberto",
+    "Baixa usabilidade",
+    "Requer hardware específico",
+    "Compatibilidade apenas com software Microsoft"
+   ],
+   "answer": "A",
+   "comment": "Windows é conhecido por sua capacidade de multitarefa, permitindo que vários programas sejam executados simultaneamente. As outras alternativas estão incorretas para esse sistema operacional."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "No Linux, qual é o significado do símbolo ‘~’ na linha de comando?",
+   "options": [
+    "Diretório raiz",
+    "Diretório pessoal do usuário",
+    "Diretório de sistema",
+    "Diretório temporário",
+    "Diretório de programas"
+   ],
+   "answer": "B",
+   "comment": "O símbolo ‘~’ representa o diretório pessoal do usuário logado no sistema. As outras opções não estão corretas para o significado deste símbolo."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "No Windows 10, o recurso ‘Área de Trabalho Remota’ permite que um usuário acesse outro computador através da rede, assumindo o controle como se estivesse fisicamente presente.",
+   "options": [
+    "Accesos apenas arquivos, não controla",
+    "Controla remotamente o computador",
+    "Desinstala programas remotamente",
+    "Apenas monitora a tela",
+    "Funciona apenas em rede local"
+   ],
+   "answer": "B",
+   "comment": "O recurso ‘Área de Trabalho Remota’ permite controle completo do computador remoto. Outras opções como ‘Accesos apenas arquivos, não controla’ ou ‘Apenas monitora a tela’ estão erradas, pois não descrevem corretamente o recurso."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Qual é a função do arquivo ‘hosts’ em sistemas operacionais?",
+   "options": [
+    "Mapear nomes de host a endereços IP",
+    "Armazenar senhas do sistema",
+    "Controlar processos do SO",
+    "Configurar drivers de dispositivos",
+    "Gerar logs do sistema"
+   ],
+   "answer": "A",
+   "comment": "O arquivo ‘hosts’ mapeia nomes de host para endereços IP, facilitando a tradução de endereços. As outras opções não correspondem à função deste arquivo."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "O comando ‘df’ no Linux exibe o uso de espaço em disco. Qual opção é usada para mostrar em formato legível por humanos?",
+   "options": [
+    "-h",
+    "-l",
+    "-k",
+    "-H",
+    "-m"
+   ],
+   "answer": "A",
+   "comment": "A opção ‘-h’ (human-readable) faz com que o comando ‘df’ mostre o uso de disco em unidades como MB e GB, tornando-o mais fácil de entender."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Qual sistema de arquivos é utilizado pelo padrão Linux?",
+   "options": [
+    "ext4",
+    "NTFS",
+    "FAT32",
+    "HFS",
+    "ReFS"
+   ],
+   "answer": "A",
+   "comment": "O sistema de arquivos padrão para muitas distribuições Linux é o ‘ext4’. NTFS é geralmente usado no Windows, e os outros tipos de sistemas de arquivos são adequados para contextos diferentes."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O GRUB é um gerenciador de inicialização, comumente usado em sistemas operacionais Linux.",
+   "answer": "E",
+   "comment": "O GRUB (GRand Unified Bootloader) é amplamente utilizado em distribuições Linux para gerenciar o processo de inicialização do sistema."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Qual o significado da sigla ‘BIOS’ em um sistema de computação?",
+   "options": [
+    "Basic Input Output System",
+    "Binary Integrated Operating System",
+    "Boot Input Operating System",
+    "Basic Internal Operating System",
+    "Binary Input Output Software"
+   ],
+   "answer": "A",
+   "comment": "A sigla ‘BIOS’ representa ‘Basic Input Output System’, que gerencia a comunicação entre o hardware e o sistema operacional. As demais opções são incorretas."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "No sistema operacional Windows, qual recurso é utilizado para recuperar arquivos que foram deletados da lixeira?",
+   "options": [
+    "Restaurar do backup",
+    "Armazenamento em nuvem",
+    "Recuperação de arquivos",
+    "Software antivírus",
+    "Restaurar o sistema"
+   ],
+   "answer": "C",
+   "comment": "A resposta correta é ‘Recuperação de arquivos’, que refere-se a ferramentas que podem tentar restaurar arquivos excluídos. As outras opções mencionadas têm funções diferentes e não são específicas para recuperação de arquivos deletados."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "No Windows, qual recurso é utilizado para gerenciar e organizar as janelas abertas?",
+   "options": [
+    "Painel de Controle",
+    "Explorador de Arquivos",
+    "Gerenciador de Tarefas",
+    "Área de Trabalho",
+    "Menu Iniciar"
+   ],
+   "answer": "C",
+   "comment": "O Gerenciador de Tarefas ajuda a monitorar e gerenciar as janelas e aplicativos em execução. Os demais recursos têm finalidades distintas, como configuração e navegação de arquivos."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual dos seguintes sistemas de arquivos é utilizado por padrão no Linux?",
+   "options": [
+    "NTFS",
+    "FAT32",
+    "EXT4",
+    "HFS+",
+    "APFS"
+   ],
+   "answer": "C",
+   "comment": "O sistema de arquivos EXT4 (Fourth Extended File System) é o padrão em muitas distribuições Linux. NTFS e FAT32 são utilizados por Windows, HFS+ por Mac e APFS é o sistema de arquivos mais recente para Mac."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Qual comando do Linux é usado para listar diretórios e arquivos, incluindo os ocultos?",
+   "options": [
+    "ls -a",
+    "ls -l",
+    "ls -la",
+    "ls -h",
+    "ls -r"
+   ],
+   "answer": "A",
+   "comment": "A alternativa A é correta porque ‘ls -a’ lista todos os arquivos, inclusive os ocultos. As outras opções fazem listagens com variações que não incluem todos os arquivos."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Qual é o nome do terminal padrão no Windows 10?",
+   "options": [
+    "Windows Terminal",
+    "Command Prompt",
+    "Powershell",
+    "Git Bash",
+    "Bash"
+   ],
+   "answer": "B",
+   "comment": "O ‘Command Prompt’, também conhecido como ‘cmd’, é o terminal padrão da versão clássica do Windows. ‘Windows Terminal’ é um novo aplicativo que pode incluir outros terminais, mas não é o tradicional."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "No Windows, o que a ferramenta ‘msconfig’ permite ao usuário fazer?",
+   "options": [
+    "Gerenciar aplicativos de inicialização",
+    "Instalar novos drivers",
+    "Limpar o registro",
+    "Formatar o disco",
+    "Atualizar o sistema"
+   ],
+   "answer": "A",
+   "comment": "O ‘msconfig’ é utilizado para gerenciar aplicativos que iniciam junto com o sistema. As demais opções não são funções dessa ferramenta."
+  }
+ ]
+}

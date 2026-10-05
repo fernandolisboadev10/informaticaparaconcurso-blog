@@ -1,0 +1,417 @@
+---
+export interface Question {
+  banca?: string;
+  type: 'ce' | 'mc';
+  text: string;
+  options?: string[];
+  answer: string;
+  comment?: string;
+}
+
+interface Props {
+  questions: Question[];
+  title?: string;
+}
+
+const { questions, title = 'Questões comentadas' } = Astro.props;
+const total = questions.length;
+const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+const answerLabel = (q: Question) =>
+  q.type === 'ce'
+    ? q.answer === 'C'
+      ? 'Certo'
+      : 'Errado'
+    : `${q.answer}) ${(q.options ?? [])[letters.indexOf(q.answer)] ?? ''}`.trim();
+---
+<section class="quiz" id="questoes" data-total={total} aria-labelledby="quiz-title">
+  <noscript><style>.quiz .q-fb[hidden] { display: block !important; } .quiz-bar, .quiz-reset { display: none; }</style></noscript>
+  <h2 id="quiz-title">{title}</h2>
+  <p class="quiz-intro">
+    {total} questões para você responder agora. Escolha uma alternativa para ver o gabarito e o comentário na hora.
+  </p>
+  <div class="quiz-bar" role="status" aria-live="polite">
+    <span><strong data-answered>0</strong> de {total} respondidas</span>
+    <span>Acertos: <strong data-hits>0</strong></span>
+  </div>
+
+  <ol class="quiz-list">
+    {questions.map((q, i) => (
+      <li class="q" data-answer={q.answer}>
+        <div class="q-head">
+          <span class="q-num">Questão {i + 1}</span>
+          {q.banca && <span class="q-banca">{q.banca}</span>}
+        </div>
+        <p class="q-text">{q.text}</p>
+        <div class="q-opts" role="group" aria-label={`Alternativas da questão ${i + 1}`}>
+          {q.type === 'ce'
+            ? [['C', 'Certo'], ['E', 'Errado']].map(([v, label]) => (
+                <button type="button" class="q-opt q-opt-ce" data-value={v}>{label}</button>
+              ))
+            : (q.options ?? []).map((opt, k) => (
+                <button type="button" class="q-opt q-opt-mc" data-value={letters[k]}>
+                  <span class="q-letter">{letters[k]}</span>
+                  <span>{opt}</span>
+                </button>
+              ))}
+        </div>
+        <div class="q-fb" hidden>
+          <p class="q-status"></p>
+          <p class="q-res"><strong>Resposta correta:</strong> {answerLabel(q)}</p>
+          {q.comment && <p class="q-com">{q.comment}</p>}
+        </div>
+      </li>
+    ))}
+  </ol>
+
+  <div class="quiz-result" hidden>
+    <p class="quiz-score"></p>
+    <p class="quiz-msg"></p>
+  </div>
+  <button type="button" class="quiz-reset" hidden>Refazer questões</button>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.quiz').forEach((quiz) => {
+    const items = Array.from(quiz.querySelectorAll<HTMLElement>('.q'));
+    const total = items.length;
+    const answeredEl = quiz.querySelector<HTMLElement>('[data-answered]')!;
+    const hitsEl = quiz.querySelector<HTMLElement>('[data-hits]')!;
+    const result = quiz.querySelector<HTMLElement>('.quiz-result')!;
+    const scoreEl = quiz.querySelector<HTMLElement>('.quiz-score')!;
+    const msgEl = quiz.querySelector<HTMLElement>('.quiz-msg')!;
+    const reset = quiz.querySelector<HTMLButtonElement>('.quiz-reset')!;
+    let answered = 0;
+    let hits = 0;
+
+    const update = () => {
+      answeredEl.textContent = String(answered);
+      hitsEl.textContent = String(hits);
+      reset.hidden = answered === 0;
+      if (answered === total) {
+        const pct = Math.round((hits / total) * 100);
+        scoreEl.textContent = `Você acertou ${hits} de ${total} questões (${pct}%).`;
+        msgEl.textContent =
+          pct >= 90
+            ? 'Excelente! Você domina esse conteúdo.'
+            : pct >= 70
+              ? 'Muito bom! Revise os comentários dos itens que errou.'
+              : pct >= 50
+                ? 'Bom caminho. Releia o artigo e refaça as questões.'
+                : 'Vale revisar o artigo com calma antes de tentar de novo.';
+        result.hidden = false;
+      } else {
+        result.hidden = true;
+      }
+    };
+
+    items.forEach((item) => {
+      const correct = item.dataset.answer;
+      item.querySelectorAll<HTMLButtonElement>('.q-opt').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if (item.classList.contains('done')) return;
+          item.classList.add('done');
+          const ok = btn.dataset.value === correct;
+          btn.classList.add(ok ? 'is-right' : 'is-wrong');
+          item.querySelectorAll<HTMLButtonElement>('.q-opt').forEach((b) => {
+            b.disabled = true;
+            if (b.dataset.value === correct) b.classList.add('is-right');
+          });
+          item.classList.add(ok ? 'right' : 'wrong');
+          item.querySelector<HTMLElement>('.q-status')!.textContent = ok ? '✓ Você acertou!' : '✗ Você errou.';
+          item.querySelector<HTMLElement>('.q-fb')!.hidden = false;
+          answered += 1;
+          if (ok) hits += 1;
+          update();
+        });
+      });
+    });
+
+    reset.addEventListener('click', () => {
+      answered = 0;
+      hits = 0;
+      items.forEach((item) => {
+        item.classList.remove('done', 'right', 'wrong');
+        item.querySelector<HTMLElement>('.q-fb')!.hidden = true;
+        item.querySelectorAll<HTMLButtonElement>('.q-opt').forEach((b) => {
+          b.disabled = false;
+          b.classList.remove('is-right', 'is-wrong');
+        });
+      });
+      update();
+      quiz.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+<style>
+  .quiz {
+    --ok: #0f9d6b;
+    --ok-bg: rgba(15, 157, 107, 0.1);
+    --bad: #d8344a;
+    --bad-bg: rgba(216, 52, 74, 0.1);
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+  }
+
+  :global(:root[data-theme='dark']) .quiz {
+    --ok: #34d399;
+    --bad: #fb7185;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme='light'])) .quiz {
+      --ok: #34d399;
+      --bad: #fb7185;
+    }
+  }
+
+  .quiz [hidden] {
+    display: none !important;
+  }
+
+  .quiz h2 {
+    margin: 0 0 8px;
+  }
+
+  .quiz-intro {
+    margin: 0 0 18px;
+    color: var(--ink-soft);
+  }
+
+  .quiz-bar {
+    position: sticky;
+    top: 64px;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  .quiz-bar strong {
+    color: var(--ink-strong);
+  }
+
+  .quiz-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .q {
+    padding: 18px 18px 16px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+  }
+
+  .q.right {
+    border-color: var(--ok);
+  }
+
+  .q.wrong {
+    border-color: var(--bad);
+  }
+
+  .q-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .q-num {
+    color: var(--violet);
+  }
+
+  .q-banca {
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: var(--line);
+    color: var(--ink-soft);
+  }
+
+  .q-text {
+    margin: 0 0 14px;
+    color: var(--ink-strong);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .q-opts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .q-opt-ce {
+    flex-direction: row;
+  }
+
+  .q-opts:has(.q-opt-ce) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .q-opt {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 11px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--ink);
+    font: inherit;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .q-opt-ce {
+    min-width: 130px;
+    justify-content: center;
+    font-weight: 600;
+  }
+
+  .q-opt:hover:not(:disabled) {
+    border-color: var(--violet);
+    background: var(--surface);
+  }
+
+  .q-opt:focus-visible {
+    outline: 2px solid var(--violet);
+    outline-offset: 2px;
+  }
+
+  .q-opt:disabled {
+    cursor: default;
+  }
+
+  .q-letter {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--line);
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .q-opt.is-right {
+    border-color: var(--ok);
+    background: var(--ok-bg);
+    color: var(--ink-strong);
+  }
+
+  .q-opt.is-wrong {
+    border-color: var(--bad);
+    background: var(--bad-bg);
+    color: var(--ink-strong);
+  }
+
+  .q-fb {
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: var(--bg);
+    font-size: 0.92rem;
+  }
+
+  .q-fb p {
+    margin: 0;
+  }
+
+  .q-fb p + p {
+    margin-top: 6px;
+    color: var(--ink-soft);
+  }
+
+  .q-status {
+    margin-bottom: 4px !important;
+    font-weight: 700;
+  }
+
+  .q.right .q-status {
+    color: var(--ok);
+  }
+
+  .q.wrong .q-status {
+    color: var(--bad);
+  }
+
+  .quiz-result {
+    margin-top: 22px;
+    padding: 18px;
+    border: 1px solid var(--violet);
+    border-radius: 14px;
+    background: var(--surface);
+    text-align: center;
+  }
+
+  .quiz-score {
+    margin: 0 0 4px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ink-strong);
+  }
+
+  .quiz-msg {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+
+  .quiz-reset {
+    display: block;
+    margin: 18px auto 0;
+    padding: 10px 22px;
+    border: 1px solid var(--violet);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--violet);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .quiz-reset:hover {
+    background: var(--violet);
+    color: #fff;
+  }
+
+  @media (max-width: 560px) {
+    .q {
+      padding: 14px;
+    }
+
+    .q-opt-ce {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .quiz-bar {
+      top: 58px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+    }
+  }
+</style>

@@ -98,52 +98,6 @@ Dessa forma, resolva provas anteriores do Cebraspe, de preferência de concursos
 
 Para não perder prazo, acompanhe o site oficial da banca, onde o Cebraspe publica editais, cronogramas, locais de prova e resultados. Aliás, o edital é o documento que manda: ele define conteúdo, formato de prova e critérios de pontuação. Leia o edital do seu concurso por inteiro e marque as datas no calendário.
 
-## Questões de Certo ou Errado sobre o Cebraspe
-
-### Questões de Certo ou Errado: Cebraspe
-
-Julgue cada item no estilo da banca. Ao clicar, a resposta é travada e o comentário aparece.
-
-CEBRASPEQuestão 1
-
-Em provas do Cebraspe no formato Certo ou Errado com regra de desconto, deixar um item em branco não reduz a nota do candidato.
-
-Certo Errado
-
-**Gabarito: CERTO.** O item em branco não soma nem desconta. O desconto acontece quando você marca errado e anula um acerto.
-
-CEBRASPEQuestão 2
-
-Quando o edital prevê o desconto, marcar errado um item tem o mesmo efeito de deixá-lo em branco.
-
-Certo Errado
-
-**Gabarito: ERRADO.** O erro anula um acerto, enquanto o branco não altera a nota. Os dois efeitos são diferentes.
-
-CEBRASPEQuestão 3
-
-O kernel do Linux é mantido exclusivamente por uma única empresa, que controla todas as alterações no código.
-
-Certo Errado
-
-**Gabarito: ERRADO.** O kernel é software livre e recebe contribuições de uma comunidade ampla de desenvolvedores e empresas. O termo “exclusivamente” derruba o item.
-
-CEBRASPEQuestão 4
-
-O backup incremental copia apenas os dados que mudaram desde o último backup realizado, seja ele completo ou incremental.
-
-Certo Errado
-
-**Gabarito: CERTO.** A referência do incremental é o último backup, de qualquer tipo. Já o diferencial usa como referência o último backup completo.
-
-CEBRASPEQuestão 5
-
-O phishing é um ataque que explora falhas de hardware para danificar a placa-mãe da vítima.
-
-Certo Errado
-
-**Gabarito: ERRADO.** O phishing usa engenharia social, como e-mails e páginas falsas, para enganar a vítima e roubar dados. Ele não depende de falha de hardware.
-
 ## Conclusão e próximo passo de estudo
 
 Em resumo, o Cebraspe não é uma banca impossível. Ela exige leitura atenta, domínio de conceito e disciplina para decidir quando responder. Quem entende a regra do desconto e treina a análise de cada palavra reduz muito o risco de errar por descuido.

@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/LegalLayout.astro
 title: "Sobre nós"
-description: "Conheça o Informática para Concursos, portal de Fernando Lisboa com resumos, simulados e análises das bancas de informática."
+description: "Conheça o Informática para Concurso, portal de Fernando Lisboa com resumos, simulados e análises das bancas de informática."
 ---
 
 ## **O Seu Mapa da Mina na Informática**

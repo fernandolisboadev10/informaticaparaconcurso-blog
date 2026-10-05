@@ -1,0 +1,344 @@
+{
+ "questions": [
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "O Windows é classificado, quanto ao modelo de licenciamento, como um sistema operacional:",
+   "options": [
+    "Livre e de código aberto",
+    "Proprietário e comercial",
+    "De domínio público",
+    "Gratuito e de código aberto"
+   ],
+   "answer": "B",
+   "comment": "O Windows é desenvolvido e mantido exclusivamente pela Microsoft, que detém o código-fonte e cobra pela licença de uso."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "A primeira versão do Windows foi lançada pela Microsoft em:",
+   "options": [
+    "1985",
+    "1991",
+    "1995",
+    "2001"
+   ],
+   "answer": "A",
+   "comment": "O Windows 1.0 foi lançado em 1985 como uma interface gráfica que rodava sobre o MS-DOS."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "No Prompt de Comando do Windows, o comando utilizado para listar os arquivos e pastas de um diretório é:",
+   "options": [
+    "ls",
+    "cd",
+    "dir",
+    "grep"
+   ],
+   "answer": "C",
+   "comment": "O comando “dir” lista o conteúdo do diretório atual no CMD. “ls” é o equivalente usado no Linux."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "O atalho de teclado Windows + E tem a seguinte função no sistema:",
+   "options": [
+    "Bloqueia a estação de trabalho",
+    "Abre o Gerenciador de Tarefas",
+    "Minimiza todas as janelas",
+    "Abre o Explorador de Arquivos"
+   ],
+   "answer": "D",
+   "comment": "Windows + E abre diretamente o Explorador de Arquivos (File Explorer)."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O código-fonte do Windows está disponível publicamente para consulta e alteração por qualquer usuário.",
+   "answer": "E",
+   "comment": "O código-fonte do Windows é fechado e controlado exclusivamente pela Microsoft, característica de um software proprietário."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "No CMD do Windows, o comando responsável por exibir as configurações de rede do computador é:",
+   "options": [
+    "tasklist",
+    "ipconfig",
+    "chmod",
+    "taskkill"
+   ],
+   "answer": "B",
+   "comment": "“ipconfig” exibe informações de rede como endereço IP, máscara de sub-rede e gateway padrão."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "O atalho Ctrl + Alt + Del no Windows é utilizado para:",
+   "options": [
+    "Acessar o Gerenciador de Tarefas ou a tela de segurança",
+    "Fechar o programa em uso imediatamente",
+    "Abrir o Explorador de Arquivos"
+   ],
+   "answer": "A",
+   "comment": "Esse atalho abre a tela de segurança do Windows, de onde é possível acessar o Gerenciador de Tarefas, bloquear a tela ou trocar de usuário."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O Windows Server é uma versão do sistema operacional da Microsoft voltada especificamente para a administração de redes e servidores corporativos.",
+   "answer": "C",
+   "comment": "O Windows Server oferece recursos voltados à gestão de domínios, contas de rede e serviços corporativos, diferente das versões domésticas."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Assinale a alternativa que apresenta apenas versões do Windows lançadas pela Microsoft:",
+   "options": [
+    "Ubuntu, Debian e Windows 11",
+    "Fedora, Windows 10 e Kali Linux",
+    "Windows 7, Windows 10 e Windows 11",
+    "Linux Mint, Windows XP e Debian"
+   ],
+   "answer": "C",
+   "comment": "Windows 7, 10 e 11 são todas versões numeradas lançadas pela Microsoft. As demais opções misturam distribuições Linux."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "O comando “taskkill” no Prompt de Comando do Windows tem como função:",
+   "options": [
+    "Listar os processos em execução",
+    "Exibir as configurações de rede",
+    "Copiar arquivos entre pastas",
+    "Encerrar um processo em execução"
+   ],
+   "answer": "D",
+   "comment": "“taskkill” finaliza um processo específico, geralmente indicado pelo seu PID ou nome. “tasklist” é o comando que lista os processos."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O Microsoft Office é um pacote de aplicativos que roda exclusivamente no sistema operacional Windows.",
+   "answer": "E",
+   "comment": "O Microsoft Office também está disponível para macOS e, em versões web ou mobile, para outras plataformas. A afirmação de exclusividade é o erro da questão."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Ao pressionar Alt + Tab no Windows, o usuário consegue:",
+   "options": [
+    "Bloquear a tela do computador",
+    "Alternar entre as janelas abertas",
+    "Abrir o Gerenciador de Tarefas",
+    "Fechar o programa ativo"
+   ],
+   "answer": "B",
+   "comment": "Alt + Tab exibe as janelas abertas e permite alternar entre elas mantendo a tecla Alt pressionada."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "No Windows, o comando “del” utilizado no Prompt de Comando serve para:",
+   "options": [
+    "Apagar arquivos",
+    "Copiar arquivos",
+    "Listar diretórios",
+    "Alterar permissões"
+   ],
+   "answer": "A",
+   "comment": "O comando “del” remove um ou mais arquivos especificados. Não deve ser confundido com “dir”, que apenas lista o conteúdo do diretório."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "A licença do Windows 11 pode variar de preço conforme a edição do sistema, como Home ou Pro.",
+   "answer": "C",
+   "comment": "A Microsoft comercializa diferentes edições do Windows 11, cada uma com recursos e valores próprios, sendo a Pro voltada a recursos profissionais adicionais."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Assinale a alternativa que indica corretamente quem fundou a empresa responsável pelo desenvolvimento do Windows:",
+   "options": [
+    "Steve Jobs e Steve Wozniak",
+    "Linus Torvalds",
+    "Bill Gates e Paul Allen",
+    "Mark Zuckerberg"
+   ],
+   "answer": "C",
+   "comment": "Bill Gates e Paul Allen fundaram a Microsoft em 1975, empresa responsável pelo desenvolvimento do Windows."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "O kernel Linux foi criado em 1991 por:",
+   "options": [
+    "Richard Stallman",
+    "Linus Torvalds",
+    "Bill Gates",
+    "Dennis Ritchie"
+   ],
+   "answer": "B",
+   "comment": "O finlandês Linus Torvalds criou o kernel Linux em 1991 e o distribuiu como um projeto de código aberto."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "O Linux é distribuído sob qual tipo de licença?",
+   "options": [
+    "GPL (software livre)",
+    "Licença comercial proprietária",
+    "Licença OEM exclusiva",
+    "Licença de avaliação por 30 dias"
+   ],
+   "answer": "A",
+   "comment": "O kernel Linux é distribuído sob a GNU General Public License (GPL), que permite consultar, modificar e redistribuir o código-fonte."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "No terminal Linux, o comando utilizado para listar arquivos e pastas do diretório atual é:",
+   "options": [
+    "dir",
+    "ls",
+    "tasklist"
+   ],
+   "answer": "C",
+   "comment": "O comando “ls” lista o conteúdo do diretório atual no Linux. “dir” é o equivalente utilizado no Windows."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "O comando “chmod” no Linux é utilizado para:",
+   "options": [
+    "Listar processos em execução",
+    "Exibir o caminho do diretório atual",
+    "Buscar um padrão de texto em arquivos",
+    "Alterar permissões de arquivos e pastas"
+   ],
+   "answer": "D",
+   "comment": "“chmod” (change mode) modifica as permissões de leitura, escrita e execução de um arquivo ou diretório."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O termo Linux refere-se, tecnicamente, ao sistema operacional completo, incluindo interface gráfica e aplicativos de escritório.",
+   "answer": "E",
+   "comment": "Tecnicamente, Linux é apenas o kernel. O sistema completo, com interface gráfica e aplicativos, é formado pelas distribuições, como Ubuntu e Fedora."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "A distribuição Linux mantida pela empresa Canonical, muito utilizada como porta de entrada para novos usuários, é o:",
+   "options": [
+    "Fedora",
+    "Ubuntu",
+    "Kali Linux",
+    "Windows Subsystem"
+   ],
+   "answer": "B",
+   "comment": "O Ubuntu é mantido pela Canonical e é conhecido por ser uma das distribuições mais acessíveis para quem está começando no Linux."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "O comando “sudo” no Linux tem como principal função:",
+   "options": [
+    "Executar um comando com privilégios de administrador",
+    "Buscar um padrão de texto em arquivos",
+    "Criar uma nova pasta",
+    "Encerrar a sessão do terminal"
+   ],
+   "answer": "A",
+   "comment": "“sudo” (superuser do) concede privilégio elevado temporário para a execução de um comando específico, sem exigir login direto como root."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O LibreOffice é um pacote de escritório de código aberto que normalmente já vem pré-instalado nas principais distribuições Linux.",
+   "answer": "C",
+   "comment": "O LibreOffice, mantido pela The Document Foundation, é distribuído gratuitamente e acompanha a maioria das distribuições Linux por padrão."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "A distribuição Linux mais utilizada em testes de segurança e pentest é o:",
+   "options": [
+    "Debian",
+    "Ubuntu",
+    "Kali Linux",
+    "Windows Server"
+   ],
+   "answer": "C",
+   "comment": "O Kali Linux reúne diversas ferramentas voltadas a testes de invasão e auditoria de segurança, sendo referência nessa área."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "No terminal Linux, o comando “pwd” tem como função:",
+   "options": [
+    "Criar uma nova pasta",
+    "Remover um arquivo",
+    "Alterar permissões",
+    "Mostrar o caminho do diretório atual"
+   ],
+   "answer": "D",
+   "comment": "“pwd” significa “print working directory” e exibe o caminho completo do diretório em que o usuário está posicionado."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Todas as distribuições Linux são, sem exceção, totalmente gratuitas e não possuem qualquer modelo de suporte pago.",
+   "answer": "E",
+   "comment": "Embora o download seja gratuito na maioria dos casos, empresas como a Red Hat cobram por serviços de suporte técnico sobre suas distribuições. A palavra “sem exceção” torna a afirmação errada."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "O atalho de teclado utilizado para abrir um terminal na maioria das distribuições Linux com interface gráfica é:",
+   "options": [
+    "Windows + E",
+    "Ctrl + Alt + T",
+    "Ctrl + Alt + Del",
+    "Alt + F4"
+   ],
+   "answer": "B",
+   "comment": "Ctrl + Alt + T é o atalho padrão para abrir um terminal na maioria das distribuições Linux com ambiente gráfico."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "A empresa Red Hat patrocina o desenvolvimento de qual distribuição Linux, utilizada como laboratório de novas tecnologias?",
+   "options": [
+    "Fedora",
+    "Ubuntu",
+    "Linux Mint",
+    "Windows 11"
+   ],
+   "answer": "A",
+   "comment": "O Fedora é patrocinado pela Red Hat e funciona como uma espécie de laboratório de tecnologias que, mais tarde, chegam ao Red Hat Enterprise Linux."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "No terminal Linux, o comando “grep” é utilizado para:",
+   "options": [
+    "Criar uma pasta nova",
+    "Alterar permissões de arquivos",
+    "Encerrar a sessão do terminal",
+    "Buscar um padrão de texto dentro de arquivos"
+   ],
+   "answer": "D",
+   "comment": "“grep” pesquisa por um padrão de texto específico dentro de um ou mais arquivos, sendo uma das ferramentas mais usadas no terminal Linux."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Cada distribuição Linux utiliza o mesmo kernel, mas pode diferir quanto aos pacotes de software, à interface gráfica e à filosofia de uso.",
+   "answer": "C",
+   "comment": "Distribuições como Ubuntu, Debian e Fedora compartilham o mesmo kernel Linux, mas se diferenciam na escolha de pacotes, ambiente gráfico e público-alvo."
+  }
+ ]
+}

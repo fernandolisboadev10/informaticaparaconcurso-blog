@@ -1,0 +1,109 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Windows, um arquivo excluído de um pendrive é sempre enviado para a Lixeira, podendo ser restaurado normalmente a partir dela.",
+   "answer": "E",
+   "comment": "Pegadinha: palavra absoluta Arquivos apagados de pendrives, cartões de memória ou pastas de rede não passam pela Lixeira do Windows: a exclusão é definitiva. A palavra “sempre” já é o sinal de alerta nesse tipo de item."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Linux, os nomes de arquivos diferenciam letras maiúsculas de minúsculas, de modo que relatorio.txt e Relatorio.txt são considerados arquivos distintos.",
+   "answer": "C",
+   "comment": "Pegadinha: mistura entre sistemas O Linux é case sensitive nos nomes de arquivos e pastas. Já o Windows não faz essa distinção, e a banca adora testar se o candidato troca o comportamento de um sistema pelo do outro."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O firewall é o programa responsável por localizar e eliminar vírus já instalados no computador.",
+   "answer": "E",
+   "comment": "Pegadinha: troca de conceito O firewall filtra o tráfego de rede e bloqueia acessos não autorizados. Quem localiza e remove vírus é o antivírus. O item troca a função de uma ferramenta pela função da outra, o erro mais clássico do bloco de segurança."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Um worm necessita de um arquivo hospedeiro e depende da ação do usuário para se propagar entre computadores.",
+   "answer": "E",
+   "comment": "Pegadinha: definições trocadas A descrição é do vírus, não do worm. O worm se replica sozinho, principalmente pela rede, sem precisar de hospedeiro nem de ação do usuário. Essa troca de definições é recorrente em provas de Informática."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Armazenar os arquivos em um serviço de nuvem, como Google Drive ou OneDrive, dispensa a necessidade de manter uma rotina de backup.",
+   "answer": "E",
+   "comment": "Pegadinha: nuvem vira sinônimo de backup Armazenamento na nuvem é conveniência de acesso, e backup é segurança contra perda de dados. Se um arquivo é excluído em uma pasta sincronizada, a exclusão costuma se replicar na nuvem também."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Na definição do NIST, o SaaS (Software as a Service) corresponde ao modelo em que o usuário utiliza aplicações diretamente pela internet, sem precisar instalar ou gerenciar a infraestrutura por trás delas.",
+   "answer": "C",
+   "comment": "Pegadinha: troca de sigla (IaaS/PaaS/SaaS) O SaaS entrega o software pronto para uso no navegador, como e-mail e editores online. Quem gerencia servidores é o IaaS, e quem fornece o ambiente de desenvolvimento é o PaaS. A banca costuma inverter essas três siglas."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Excel, em português, os argumentos de uma função como =SOMA(A1;A2;A3) devem ser separados por vírgula.",
+   "answer": "E",
+   "comment": "Pegadinha: idioma da interface Na versão em português do Excel e do Calc, os argumentos se separam por ponto e vírgula. A vírgula é o padrão da versão em inglês, e essa troca é uma das mais repetidas em prova de Informática."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A navegação anônima em um navegador como o Chrome impede que o provedor de internet e os sites visitados identifiquem a atividade do usuário.",
+   "answer": "E",
+   "comment": "Pegadinha: alcance exagerado da ferramenta A janela anônima apenas evita salvar o histórico e os cookies no computador. Ela não esconde a atividade do usuário do provedor de internet nem dos sites visitados, ao contrário do que o item sugere."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Em um backup incremental, a restauração completa dos dados exige o backup completo mais todos os backups incrementais realizados desde então, na ordem em que foram gerados.",
+   "answer": "C",
+   "comment": "Pegadinha: incremental x diferencial O backup incremental copia apenas o que mudou desde o último backup, de qualquer tipo. Por isso, a restauração precisa do completo e de cada incremental subsequente, em ordem, para reconstruir os dados."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A intranet e a extranet de uma organização utilizam tecnologias diferentes das empregadas na internet, o que garante isoladamente a segurança dos dados corporativos.",
+   "answer": "E",
+   "comment": "Pegadinha: tecnologia x controle de acesso Intranet e extranet usam as mesmas tecnologias da internet, como HTTP e TCP/IP. O que muda é o controle de acesso: a intranet restringe o uso aos membros da organização, e a extranet libera parceiros externos autorizados."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Microsoft Word configurado em português, o atalho Ctrl + N aplica negrito ao texto selecionado, diferentemente da versão em inglês do programa, em que esse mesmo atalho é usado para criar um novo documento.",
+   "answer": "C",
+   "comment": "Pegadinha: atalho PT-BR x EN-US No Word em português, Ctrl + N aplica negrito (de “Negrito”), enquanto no inglês esse atalho abre um novo documento (de “New”). Essa é uma das pegadinhas mais exploradas em atalhos de teclado."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Ao inserir um destinatário no campo Cco (cópia oculta) de uma mensagem de e-mail, esse destinatário terá seu endereço visível para os demais destinatários que constam nos campos Para e Cc.",
+   "answer": "E",
+   "comment": "Pegadinha: Cc x Cco invertidos O campo Cco esconde o destinatário dos demais, é exatamente o oposto do que o item afirma. Quem fica visível para todos é quem está nos campos Para e Cc, nunca quem está no Cco."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A extensão de um arquivo, como .docx ou .pdf, determina exclusivamente qual programa poderá abri-lo, de modo que apenas um único software é capaz de abrir arquivos de determinada extensão.",
+   "answer": "E",
+   "comment": "Pegadinha: palavra absoluta (exclusivamente, apenas) A extensão indica o formato do arquivo, mas vários programas diferentes podem abrir a mesma extensão, como um PDF que abre no navegador ou em leitores diversos. As palavras “exclusivamente” e “apenas” denunciam o exagero do item."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Um backup diferencial copia somente os arquivos alterados desde o último backup diferencial realizado, e não desde o último backup completo.",
+   "answer": "E",
+   "comment": "Pegadinha: diferencial x incremental invertidos Essa é a definição do backup incremental. O backup diferencial sempre copia o que mudou desde o último backup completo, e não desde o último diferencial. Trocar essas duas definições é a armadilha número um do assunto."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Basta manter um programa antivírus instalado e atualizado no computador para garantir proteção total contra ataques de ransomware.",
+   "answer": "E",
+   "comment": "Pegadinha: palavra absoluta (basta, total) Nenhuma ferramenta isolada garante proteção total. O antivírus reduz o risco, mas a segurança depende também de backup, atualizações e cuidado do usuário. Expressões como “basta” e “proteção total” são o alerta desse item."
+  }
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O Linux é o kernel, isto é, o componente central do sistema responsável por conectar programas ao hardware.",
+   "answer": "C",
+   "comment": "É exatamente a definição de kernel, sem exagero nem restrição indevida no enunciado."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Uma distribuição Linux é formada apenas pelo kernel, sem programas adicionais, interface ou configurações específicas.",
+   "answer": "E",
+   "comment": "A distribuição combina o kernel com aplicativos, interface gráfica e ferramentas próprias; portanto, ela vai muito além do núcleo isolado."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Linus Torvalds iniciou o projeto do Linux como uma alternativa livre baseada no Unix, compartilhando o código com outros desenvolvedores pela internet.",
+   "answer": "C",
+   "comment": "Resume corretamente a história de criação do Linux, sem inventar detalhes."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Ubuntu, Debian, Fedora, Red Hat e Slackware são exemplos de distribuições Linux.",
+   "answer": "C",
+   "comment": "Todas são distribuições reais, e a banca as cobra com frequência em prova."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O shell permite ao usuário interagir com o sistema operacional por meio de comandos digitados no teclado.",
+   "answer": "C",
+   "comment": "Essa é justamente a função do shell, que traduz comandos digitados em ações do sistema."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O comando pwd exibe o nome do usuário atual logado no sistema.",
+   "answer": "E",
+   "comment": "O pwd mostra o diretório atual; quem exibe o usuário logado é o whoami. Aqui, a banca trocou as funções dos dois comandos."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O comando ls lista arquivos e diretórios, enquanto o comando cd permite navegar entre diretórios.",
+   "answer": "C",
+   "comment": "Os comandos básicos de listagem e navegação funcionam exatamente assim, sem restrição indevida."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Arquivos ocultos no Linux costumam começar com ponto no início do nome.",
+   "answer": "C",
+   "comment": "No Linux, iniciar o nome com ponto indica, de fato, um arquivo oculto."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O comando cp move arquivos de um diretório para outro, apagando automaticamente o original.",
+   "answer": "E",
+   "comment": "O cp copia, e o original permanece no lugar; para mover, o comando correto é o mv."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Linux, temas como permissões, grupos, compactação e manipulação de arquivos costumam aparecer em questões de concurso.",
+   "answer": "C",
+   "comment": "São os temas clássicos e recorrentes em provas da Cebraspe e de outras bancas."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O comando chmod altera o proprietário de um arquivo, enquanto o chown altera as permissões de leitura, escrita e execução.",
+   "answer": "E",
+   "comment": "A banca inverteu as funções: o chmod altera as permissões e o chown altera o dono do arquivo."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Na sequência de permissões -rwxr-xr–, o grupo associado ao arquivo pode ler e executar, mas não pode escrever.",
+   "answer": "C",
+   "comment": "Na sequência -rwxr-xr–, o segundo bloco (r-x) representa o grupo, que pode ler e executar, mas não escrever."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Em distribuições como o Ubuntu, o LibreOffice Writer funciona como editor de texto, ocupando papel equivalente ao Microsoft Word.",
+   "answer": "C",
+   "comment": "O Writer é, de fato, o editor de texto da suíte LibreOffice, com função equivalente à do Word."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O comando find serve exclusivamente para localizar arquivos pelo nome, não aceitando outros critérios de busca.",
+   "answer": "E",
+   "comment": "O termo “exclusivamente” torna o item errado: o find também localiza arquivos por tamanho e por data de modificação, entre outros critérios."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O comando unzip descompacta arquivos no formato .zip, enquanto o gzip comprime arquivos e pacotes.",
+   "answer": "C",
+   "comment": "Cada utilitário cumpre exatamente essa função, sem inversão entre compactar e descompactar."
+  }
+ ]
+}

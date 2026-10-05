@@ -1,0 +1,39 @@
+{
+ "questions": [
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Em provas do Cebraspe no formato Certo ou Errado com regra de desconto, deixar um item em branco não reduz a nota do candidato.",
+   "answer": "C",
+   "comment": "Gabarito: CERTO. O item em branco não soma nem desconta. O desconto acontece quando você marca errado e anula um acerto."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Quando o edital prevê o desconto, marcar errado um item tem o mesmo efeito de deixá-lo em branco.",
+   "answer": "E",
+   "comment": "Gabarito: ERRADO. O erro anula um acerto, enquanto o branco não altera a nota. Os dois efeitos são diferentes."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O kernel do Linux é mantido exclusivamente por uma única empresa, que controla todas as alterações no código.",
+   "answer": "E",
+   "comment": "Gabarito: ERRADO. O kernel é software livre e recebe contribuições de uma comunidade ampla de desenvolvedores e empresas. O termo “exclusivamente” derruba o item."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O backup incremental copia apenas os dados que mudaram desde o último backup realizado, seja ele completo ou incremental.",
+   "answer": "C",
+   "comment": "Gabarito: CERTO. A referência do incremental é o último backup, de qualquer tipo. Já o diferencial usa como referência o último backup completo."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O phishing é um ataque que explora falhas de hardware para danificar a placa-mãe da vítima.",
+   "answer": "E",
+   "comment": "Gabarito: ERRADO. O phishing usa engenharia social, como e-mails e páginas falsas, para enganar a vítima e roubar dados. Ele não depende de falha de hardware."
+  }
+ ]
+}

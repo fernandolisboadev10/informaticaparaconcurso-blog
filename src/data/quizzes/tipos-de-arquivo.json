@@ -1,0 +1,109 @@
+{
+ "questions": [
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Julgue o item a seguir. Ao escolher outro programa na opção Abrir com, o Windows altera o conteúdo do arquivo para o formato desse programa.",
+   "answer": "E",
+   "comment": "A opção Abrir com muda apenas o programa usado para abrir o arquivo (a associação de arquivo). O conteúdo e a extensão permanecem os mesmos."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Os arquivos com extensões .odt, .ods e .odp, do formato OpenDocument, correspondem, respectivamente, a documentos de:",
+   "options": [
+    "Aplanilha, texto e apresentação.",
+    "Bapresentação, texto e planilha.",
+    "Ctexto, apresentação e planilha.",
+    "Dtexto, planilha e apresentação.",
+    "Eimagem, planilha e texto."
+   ],
+   "answer": "D",
+   "comment": "No OpenDocument, .odt é texto, .ods é planilha e .odp é apresentação. O ODF é um padrão aberto, usado pelo LibreOffice."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Julgue o item a seguir. Arquivos com extensão .docx não contêm macros, enquanto arquivos com extensão .docm podem conter macros.",
+   "answer": "C",
+   "comment": "O \"x\" final indica um arquivo XML sem macros, e o \"m\" indica um arquivo XML que pode conter macros. O mesmo vale para .xlsx e .xlsm."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Sobre os formatos de imagem, é correto afirmar que:",
+   "options": [
+    "Ao formato .png usa compressão sem perda e permite transparência.",
+    "Bo formato .jpg usa compressão sem perda, preservando a imagem original a cada salvamento.",
+    "Co formato .bmp costuma gerar arquivos menores que o .jpg.",
+    "Do formato .gif aceita milhões de cores e não permite animação.",
+    "Etodos os formatos de imagem usam compressão com perda."
+   ],
+   "answer": "A",
+   "comment": "O .png comprime sem perda e aceita transparência. O .jpg usa compressão com perda, o .bmp costuma ser grande por não comprimir e o .gif limita-se a 256 cores e permite animações simples."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Julgue o item a seguir. Arquivos que já vêm comprimidos, como as imagens .jpg, costumam reduzir bastante de tamanho quando o usuário os compacta em um arquivo .zip.",
+   "answer": "E",
+   "comment": "Formatos já comprimidos, como o .jpg, quase não diminuem ao entrar em um ZIP. O ganho maior aparece em arquivos de texto, por exemplo."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Considerando a base binária adotada pelo Windows, 1 MB equivale a:",
+   "options": [
+    "A1.000 bytes.",
+    "B1.024 bytes.",
+    "C8 bits.",
+    "D1.024 GB.",
+    "E1.024 KB."
+   ],
+   "answer": "E",
+   "comment": "Na base binária, 1 KB são 1.024 bytes, 1 MB são 1.024 KB e 1 GB são 1.024 MB. Já 8 bits formam 1 byte."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Julgue o item a seguir. O atributo Oculto faz com que o arquivo deixe de aparecer na visualização normal do Explorador de Arquivos, mas não o exclui do disco.",
+   "answer": "C",
+   "comment": "O arquivo oculto continua gravado e ocupando espaço. O atributo apenas o esconde da visualização padrão."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Um arquivo com extensão .txt é um arquivo:",
+   "options": [
+    "Acom formatação de negrito e itálico, criado pelo Word.",
+    "Bde texto simples, sem formatação como negrito ou diferentes fontes.",
+    "Cde planilha eletrônica com fórmulas.",
+    "Dde imagem compactada.",
+    "Ede apresentação de slides."
+   ],
+   "answer": "B",
+   "comment": "O .txt guarda apenas caracteres. Textos com negrito, fontes e imagens exigem formatos como .docx ou .odt."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Julgue o item a seguir. Um arquivo com extensão .zip só pode ser criado com programas de terceiros, pois o Windows não possui recurso nativo de compactação.",
+   "answer": "E",
+   "comment": "O Windows compacta arquivos em ZIP diretamente pelo menu de contexto, com a opção de pasta compactada. Programas de terceiros ampliam os formatos e recursos, como a criptografia."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Assinale a alternativa que apresenta apenas extensões de arquivos de áudio ou vídeo.",
+   "options": [
+    "jpg, .png e .gif",
+    "docx, .xlsx e .pptx",
+    "mp3, .wav e .mp4",
+    "zip, .rar e .7z",
+    "exe, .msi e .txt"
+   ],
+   "answer": "C",
+   "comment": ".mp3 e .wav são áudio, e .mp4 é vídeo. As demais alternativas trazem imagens, documentos do Office, compactados e executáveis."
+  }
+ ]
+}

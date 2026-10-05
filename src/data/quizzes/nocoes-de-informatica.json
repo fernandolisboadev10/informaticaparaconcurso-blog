@@ -1,0 +1,284 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O atalho de teclado Windows + L bloqueia a sessão do usuário no Windows 10, exigindo autenticação para retomar o uso do computador.",
+   "answer": "C",
+   "comment": "O atalho Windows + L é o padrão do sistema para bloquear a estação de trabalho, exigindo login novamente."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Windows 10, o recurso Visão de Tarefas permite criar múltiplas áreas de trabalho virtuais, mas exige a criação de uma nova conta de usuário para cada uma delas.",
+   "answer": "E",
+   "comment": "As áreas de trabalho virtuais funcionam dentro da mesma conta de usuário; não é necessário criar contas adicionais."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "É possível pausar temporariamente as atualizações automáticas do Windows Update por um período determinado, adiando sua instalação.",
+   "answer": "C",
+   "comment": "O Windows permite pausar atualizações automáticas por um período, geralmente configurável em semanas."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A alteração manual da extensão de um arquivo pelo Explorador de Arquivos do Windows converte automaticamente seu conteúdo interno para o novo formato indicado.",
+   "answer": "E",
+   "comment": "Renomear a extensão só muda o nome/associação do arquivo; o conteúdo interno (formato real) permanece o mesmo."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Diferentes distribuições Linux, como Ubuntu e Fedora, podem compartilhar o mesmo núcleo do sistema, ainda que ofereçam ferramentas e ambientes gráficos distintos.",
+   "answer": "C",
+   "comment": "Distribuições Linux (Ubuntu, Fedora, Debian etc.) usam o mesmo núcleo Linux, variando ferramentas, gerenciador de pacotes e ambiente gráfico."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Linux, um processo iniciado a partir do terminal é obrigatoriamente encerrado quando a janela do terminal é fechada, não podendo ser executado em segundo plano.",
+   "answer": "E",
+   "comment": "É possível executar processos em segundo plano (nohup, &, screen, tmux) que continuam mesmo após o terminal ser fechado."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Uma conta de usuário padrão, sem privilégios de administrador, pode ter restrições para instalar programas ou alterar configurações do sistema, tanto no Windows quanto no Linux.",
+   "answer": "C",
+   "comment": "Contas sem privilégio administrativo normalmente não podem instalar programas nem alterar configurações críticas do sistema."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O menu Configurações do Windows substituiu integralmente o Painel de Controle, que foi removido a partir do Windows 10.",
+   "answer": "E",
+   "comment": "O Painel de Controle clássico ainda coexiste com o app Configurações no Windows 10/11; não foi removido."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A aplicação de um estilo predefinido a um título, no Microsoft Word, permite atualizar sua aparência em todo o documento apenas modificando a definição desse estilo.",
+   "answer": "C",
+   "comment": "Ao alterar a definição de um estilo, todos os textos que o usam são atualizados automaticamente."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O recurso Controlar Alterações do Microsoft Word impede que qualquer novo texto seja inserido no documento enquanto estiver ativado.",
+   "answer": "E",
+   "comment": "O recurso apenas registra as edições feitas; o usuário continua podendo digitar normalmente, com as mudanças marcadas para revisão."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Os estilos de página do LibreOffice Writer permitem configurar, para uma mesma seção do documento, elementos como cabeçalho, rodapé e orientação da folha.",
+   "answer": "C",
+   "comment": "Estilos de página no Writer permitem configurar cabeçalho, rodapé, margens e orientação por seção do documento."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O recurso de mala direta do LibreOffice Writer exige que a fonte de dados esteja obrigatoriamente em formato de banco de dados do LibreOffice Base, não sendo possível utilizar planilhas.",
+   "answer": "E",
+   "comment": "A mala direta aceita diversas fontes de dados, incluindo planilhas do Calc/Excel, não apenas bancos do Base."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Uma referência absoluta de célula, identificada pelo símbolo cifrão ($), permanece fixa quando a fórmula que a contém é copiada para outras células do Microsoft Excel.",
+   "answer": "C",
+   "comment": "O cifrão fixa a linha e/ou coluna, impedindo que a referência mude ao copiar a fórmula."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A função SOMA do Microsoft Excel gera erro ao encontrar uma célula vazia dentro do intervalo somado.",
+   "answer": "E",
+   "comment": "A função SOMA ignora células vazias e de texto no intervalo, somando apenas os valores numéricos, sem gerar erro."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A ferramenta de validação de dados do LibreOffice Calc permite restringir os valores que podem ser inseridos em uma célula, como aceitar apenas números dentro de um intervalo definido.",
+   "answer": "C",
+   "comment": "A validação de dados permite restringir o que pode ser digitado em uma célula, como intervalos numéricos ou listas."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Microsoft PowerPoint, os efeitos de transição entre slides aplicam-se obrigatoriamente a toda a apresentação de uma só vez, não podendo ser configurados individualmente para cada slide.",
+   "answer": "E",
+   "comment": "O PowerPoint permite configurar transições individualmente por slide ou aplicar a todos de uma vez, à escolha do usuário."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A intranet utiliza tecnologias semelhantes às da Internet, como o conjunto de protocolos TCP/IP, mas seu acesso é restrito a usuários autorizados de uma organização.",
+   "answer": "C",
+   "comment": "A intranet usa a mesma pilha de protocolos da Internet, mas com acesso limitado a usuários autorizados da organização."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Redes classificadas como LAN, MAN e WAN diferenciam-se principalmente pelo tipo de cabo utilizado na conexão, e não pela área geográfica de abrangência.",
+   "answer": "E",
+   "comment": "A classificação é feita principalmente pela área geográfica de cobertura e distância entre os dispositivos, não pelo tipo de cabo."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O gerenciamento de permissões de sites, disponível em navegadores como o Google Chrome, permite controlar o acesso de páginas da web a recursos do dispositivo, como câmera e localização.",
+   "answer": "C",
+   "comment": "Navegadores modernos permitem gerenciar, por site, o acesso a câmera, microfone, localização e notificações."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O recurso de sincronização de navegadores, como o Microsoft Edge, compartilha automaticamente os dados de navegação de um usuário com qualquer outro usuário do mesmo navegador, sem exigir autenticação em uma conta.",
+   "answer": "E",
+   "comment": "A sincronização exige login em uma conta (Microsoft, Google etc.); não ocorre automaticamente para qualquer usuário."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O encaminhamento de uma mensagem de e-mail cria, por padrão, uma nova mensagem que preserva o conteúdo original e os arquivos anexados pelo remetente inicial.",
+   "answer": "C",
+   "comment": "Ao encaminhar um e-mail, o conteúdo original e os anexos são preservados por padrão na nova mensagem."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Mecanismos de busca na Internet apresentam sempre os mesmos resultados para todos os usuários, independentemente dos termos pesquisados.",
+   "answer": "E",
+   "comment": "Resultados de busca variam conforme os termos digitados, localização, histórico e outros fatores."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "As configurações de privacidade de uma rede social podem restringir a visualização de publicações, mas não eliminam o risco de que o conteúdo seja copiado por terceiros autorizados a vê-lo.",
+   "answer": "C",
+   "comment": "Mesmo com publicações restritas, pessoas autorizadas a ver o conteúdo podem copiá-lo ou compartilhá-lo por fora da plataforma."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No modelo de computação em nuvem IaaS, o provedor é responsável por instalar e configurar os aplicativos utilizados pelo cliente, sem que este tenha acesso à infraestrutura.",
+   "answer": "E",
+   "comment": "No IaaS o provedor fornece a infraestrutura; o cliente é quem instala e administra sistemas operacionais e aplicativos."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A organização de arquivos em pastas e subpastas facilita a localização e o gerenciamento das informações armazenadas em um computador.",
+   "answer": "C",
+   "comment": "Estruturar arquivos em pastas e subpastas melhora a localização e o gerenciamento das informações."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A exclusão de uma pasta pelo sistema operacional remove permanentemente, e sem possibilidade de recuperação, todos os arquivos nela contidos.",
+   "answer": "E",
+   "comment": "Ao excluir uma pasta pelo método padrão, ela costuma ir para a Lixeira, de onde pode ser restaurada antes do esvaziamento definitivo."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A compactação de arquivos em um único pacote, como um arquivo no formato zip, pode reduzir o espaço de armazenamento ocupado e facilitar o envio conjunto de vários arquivos.",
+   "answer": "C",
+   "comment": "Arquivos compactados em .zip ocupam menos espaço e facilitam o envio de múltiplos arquivos em um único pacote."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Mover um arquivo de uma pasta para outra, dentro da mesma unidade de disco, cria uma cópia adicional do arquivo na pasta de destino, mantendo o original na pasta de origem.",
+   "answer": "E",
+   "comment": "Mover um arquivo dentro da mesma unidade apenas altera sua localização; não cria uma cópia adicional."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A desinstalação de um programa, por meio das ferramentas do sistema operacional, busca remover seus arquivos e configurações associadas do computador.",
+   "answer": "C",
+   "comment": "As ferramentas de desinstalação do sistema tentam remover os arquivos e configurações associados ao programa."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Arquivos só podem ser localizados em um computador se o usuário souber exatamente o caminho completo da pasta em que estão armazenados, não sendo possível pesquisá-los pelo nome.",
+   "answer": "E",
+   "comment": "As ferramentas de busca do sistema permitem localizar arquivos pelo nome, extensão ou conteúdo, sem precisar saber o caminho completo."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Dispositivos como pendrives e discos rígidos externos podem ser conectados a um computador para ampliar a capacidade de armazenamento disponível.",
+   "answer": "C",
+   "comment": "Pendrives e HDs/SSDs externos são formas comuns de aumentar a capacidade de armazenamento de um computador."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "As bibliotecas do Windows duplicam fisicamente, em um novo local do disco, os arquivos que são exibidos em sua visualização.",
+   "answer": "E",
+   "comment": "As bibliotecas do Windows apenas agregam, em uma visualização única, arquivos que continuam fisicamente em suas pastas originais."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A realização periódica de becapes, associada à verificação da possibilidade de restauração dos dados, é uma prática recomendada para reduzir o impacto de perdas acidentais de arquivos.",
+   "answer": "C",
+   "comment": "Realizar e testar becapes regularmente é a prática recomendada para reduzir o impacto de perda de dados."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O becape incremental copia integralmente todos os arquivos a cada execução, independentemente de terem sido modificados desde o último becape.",
+   "answer": "E",
+   "comment": "O becape incremental copia apenas os arquivos criados ou alterados desde o último becape, não tudo novamente."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Worms são capazes de se propagar automaticamente por uma rede, explorando vulnerabilidades, sem depender necessariamente da execução manual de um arquivo pelo usuário.",
+   "answer": "C",
+   "comment": "Worms exploram vulnerabilidades e se replicam automaticamente pela rede, sem depender da execução manual de um arquivo."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O pagamento do resgate exigido em um ataque de ransomware garante a recuperação integral dos dados sequestrados.",
+   "answer": "E",
+   "comment": "Não há garantia de que os criminosos entreguem a chave de descriptografia após o pagamento do resgate."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O firewall atua controlando o tráfego de rede que entra e sai de um computador, com base em regras definidas, sendo uma ferramenta distinta do antivírus.",
+   "answer": "C",
+   "comment": "O firewall controla o tráfego de rede por regras; o antivírus foca na detecção e remoção de malware. São ferramentas complementares."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Um antivírus moderno é capaz de identificar ameaças apenas por meio de listas de assinaturas conhecidas, sem recorrer a análises comportamentais.",
+   "answer": "E",
+   "comment": "Antivírus atuais combinam assinaturas conhecidas com análise comportamental/heurística para detectar ameaças novas."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A utilização de senhas distintas e complexas para diferentes serviços, associada à autenticação em duas etapas quando disponível, reduz o risco de comprometimento de contas.",
+   "answer": "C",
+   "comment": "Usar senhas únicas por serviço e ativar a autenticação em duas etapas reduz bastante o risco de invasão de contas."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Reutilizar a mesma senha em diversos serviços é uma prática recomendada, pois facilita o gerenciamento das credenciais pelo usuário.",
+   "answer": "E",
+   "comment": "Reutilizar senhas facilita que uma única violação comprometa vários serviços ao mesmo tempo; não é uma prática recomendada."
+  }
+ ]
+}

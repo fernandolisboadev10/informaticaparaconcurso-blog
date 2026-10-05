@@ -1,0 +1,88 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A memória RAM mantém os dados armazenados mesmo após o desligamento do computador.",
+   "answer": "E",
+   "comment": "A RAM é volátil: ela perde os dados sem energia."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A RAM armazena temporariamente os dados e programas em execução na máquina.",
+   "answer": "C",
+   "comment": "Essa é a principal função da RAM."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A ROM é uma memória não volátil, pois preserva dados sem energia elétrica.",
+   "answer": "C",
+   "comment": "A ROM preserva as informações mesmo com o equipamento desligado."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "BIOS e UEFI são exemplos de firmware ligados ao processo de inicialização do computador.",
+   "answer": "C",
+   "comment": "BIOS e UEFI participam diretamente da inicialização da máquina."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A memória cache substitui completamente a memória RAM em computadores modernos.",
+   "answer": "E",
+   "comment": "A cache complementa a RAM; ela não a substitui."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A cache auxilia o processador ao manter dados e instruções acessados com frequência.",
+   "answer": "C",
+   "comment": "A cache reduz o tempo que a CPU leva para acessar dados frequentes."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "HD e SSD são exemplos de memória cache utilizada pelo processador.",
+   "answer": "E",
+   "comment": "HD e SSD funcionam como armazenamento permanente, não como cache."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A memória ROM pode estar associada ao armazenamento do firmware do equipamento.",
+   "answer": "C",
+   "comment": "O firmware costuma ocupar uma memória não volátil, como a ROM."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A cache tende a ser menor e mais rápida do que a memória RAM.",
+   "answer": "C",
+   "comment": "A cache oferece menor capacidade, mas acesso muito mais rápido."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Documentos salvos em um SSD permanecem disponíveis mesmo após o desligamento do computador.",
+   "answer": "C",
+   "comment": "O SSD é um meio de armazenamento não volátil."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Assim como a ROM, a memória cache é não volátil e preserva seus dados quando o computador é desligado.",
+   "answer": "E",
+   "comment": "A cache é volátil, assim como a RAM; ela perde os dados ao desligar o computador."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A memória virtual corresponde a um chip de memória física instalado na placa-mãe, separado da RAM.",
+   "answer": "E",
+   "comment": "A memória virtual é uma técnica que usa espaço do disco para simular RAM extra, não um chip físico separado."
+  }
+ ]
+}

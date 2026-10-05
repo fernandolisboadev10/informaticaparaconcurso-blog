@@ -1,0 +1,74 @@
+{
+ "questions": [
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "A memória RAM é volátil, ou seja, perde seu conteúdo quando o computador desliga.",
+   "answer": "C",
+   "comment": "A RAM depende de energia para manter os dados. Por isso, um arquivo não salvo desaparece em uma queda de energia."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Por estar mais próxima do processador, a memória cache possui capacidade de armazenamento superior à da memória RAM.",
+   "answer": "E",
+   "comment": "A cache trabalha mais rápido que a RAM, mas guarda bem menos dados. Na hierarquia de memória, velocidade e capacidade andam em sentidos opostos."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Na arquitetura de Von Neumann, instruções e dados compartilham a mesma memória.",
+   "answer": "C",
+   "comment": "Esse é o conceito de programa armazenado, a principal característica do modelo de Von Neumann."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "A Unidade Lógica e Aritmética é o componente da CPU que busca e decodifica as instruções dos programas.",
+   "answer": "E",
+   "comment": "Quem busca e decodifica as instruções é a Unidade de Controle. A ULA executa as operações aritméticas e lógicas."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Os SSDs armazenam dados em memória flash e não possuem partes móveis.",
+   "answer": "C",
+   "comment": "Justamente por não ter partes mecânicas, o SSD oferece acesso mais rápido e resiste melhor a impactos que o HD."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Todo SSD no formato M.2 utiliza exclusivamente o protocolo NVMe.",
+   "answer": "E",
+   "comment": "M.2 é um formato físico. Existem SSDs M.2 que trabalham com SATA e outros que trabalham com NVMe. Repare no “exclusivamente”."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Por ficar gravado em um chip da placa-mãe, o firmware pertence à categoria de hardware.",
+   "answer": "E",
+   "comment": "Firmware é software. O chip é hardware, mas o programa gravado nele continua sendo software."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "A impressora multifuncional com scanner pertence ao grupo dos dispositivos de entrada e saída.",
+   "answer": "C",
+   "comment": "Ela imprime (saída) e digitaliza (entrada), por isso atua nas duas direções."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Uma conexão de internet de 100 Mbps permite transferir 100 megabytes por segundo.",
+   "answer": "E",
+   "comment": "Mbps mede megabits por segundo. Como 1 byte tem 8 bits, 100 Mbps equivalem a cerca de 12,5 MB por segundo."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O UEFI, sucessor do BIOS, oferece recursos como Secure Boot e inicialização por discos com tabela de partição GPT.",
+   "answer": "C",
+   "comment": "Além desses recursos, o UEFI também permite interface gráfica na configuração do firmware."
+  }
+ ]
+}

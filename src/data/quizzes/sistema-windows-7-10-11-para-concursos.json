@@ -1,0 +1,102 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O suporte estendido do Windows 7 foi encerrado em 14 de janeiro de 2020, data a partir da qual o sistema deixou de receber atualizações de segurança regulares, embora continue funcionando normalmente.",
+   "answer": "C",
+   "comment": "O fim do suporte não desliga o computador. Ele apenas para de receber correções de segurança, o que aumenta o risco de vulnerabilidades ao longo do tempo."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O Windows 10 teve o Painel de Controle completamente removido, restando ao usuário apenas o aplicativo Configurações para ajustar o sistema.",
+   "answer": "E",
+   "comment": "Fique atento a esse tipo de afirmação absoluta. O Windows 10 passou a priorizar o Configurações, mas o Painel de Controle continuou disponível no sistema."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "No Windows 7, o recurso responsável por oferecer transparência nas bordas das janelas, animações e miniaturas de aplicativos na barra de tarefas é conhecido como:",
+   "options": [
+    "Snap Layouts",
+    "Windows Aero",
+    "Live Tiles",
+    "Central de Ações",
+    "Visão de Tarefas"
+   ],
+   "answer": "B",
+   "comment": "O Windows Aero é a marca registrada visual do Windows 7. Associe sempre transparência e Gadgets de Área de Trabalho a essa versão."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "ce",
+   "text": "O Menu Iniciar do Windows 11 mantém os blocos dinâmicos (Live Tiles) herdados do Windows 10, exibindo informações atualizadas como clima e notícias.",
+   "answer": "E",
+   "comment": "O Windows 11 removeu os Live Tiles. O Menu Iniciar passou a exibir aplicativos fixados, recomendações e arquivos recentes."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Assinale a alternativa que apresenta corretamente a data de encerramento do suporte geral do Windows 10:",
+   "options": [
+    "14/01/2020",
+    "05/10/2021",
+    "29/07/2015",
+    "14/10/2025",
+    "Não possui data definida"
+   ],
+   "answer": "D",
+   "comment": "Memorize as três datas do artigo: 22/10/2009 (lançamento do Windows 7), 14/01/2020 (fim do suporte do Windows 7) e 14/10/2025 (fim do suporte geral do Windows 10)."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Windows 11, os ícones da barra de tarefas ficam centralizados por padrão, mas o usuário pode alterar esse alinhamento para a esquerda.",
+   "answer": "C",
+   "comment": "A centralização é o padrão de fábrica do Windows 11, mas o alinhamento à esquerda continua disponível nas configurações da barra de tarefas."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "O recurso do Windows 11 que permite organizar várias janelas simultaneamente em modelos predefinidos de tela, favorecendo a multitarefa, é denominado:",
+   "options": [
+    "Central de Ações",
+    "Bibliotecas",
+    "Snap Layouts",
+    "Gadgets",
+    "Windows Explorer"
+   ],
+   "answer": "C",
+   "comment": "Não confunda os dois conceitos: Snap Layouts organiza as janelas em modelos de tela, enquanto Snap Groups ajuda a retornar a um grupo de janelas já organizado."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Um dos requisitos de segurança mais exigentes do Windows 11 em relação às versões anteriores é a presença do TPM 2.0 e da Inicialização Segura (Secure Boot).",
+   "answer": "C",
+   "comment": "Guarde esta ideia: se a banca relacionar TPM 2.0 ao Windows 11, a tendência é a afirmação estar correta. O mesmo requisito não existia no Windows 7."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Em relação à central de notificações e atalhos rápidos introduzida no Windows 10, reunindo recursos como Wi-Fi, Bluetooth e modo avião, assinale a denominação correta:",
+   "options": [
+    "Painel de Controle",
+    "Explorador de Arquivos",
+    "Central de Ações",
+    "Snap Groups",
+    "Bibliotecas"
+   ],
+   "answer": "C",
+   "comment": "A Central de Ações é uma novidade do Windows 10. Na prova, associe esse nome a notificações e atalhos rápidos como brilho da tela e modo avião."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "ce",
+   "text": "Todas as edições do Windows 11 compartilham exatamente a mesma data de encerramento do suporte, independentemente da versão instalada.",
+   "answer": "E",
+   "comment": "Essa é uma pegadinha clássica. O Windows 11 não tem data única de fim de suporte: cada versão e edição segue um ciclo próprio, com Home e Pro recebendo normalmente 24 meses e Enterprise e Education, 36 meses."
+  }
+ ]
+}

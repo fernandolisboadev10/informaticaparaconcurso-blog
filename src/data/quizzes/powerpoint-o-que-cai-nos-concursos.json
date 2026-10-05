@@ -1,0 +1,74 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No PowerPoint, a tecla F5 inicia a apresentação de slides a partir do primeiro slide.",
+   "answer": "C",
+   "comment": "O F5 é o atalho clássico para iniciar a apresentação desde o primeiro slide."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O atalho Shift + F5 inicia a apresentação a partir do slide atual.",
+   "answer": "C",
+   "comment": "O Shift + F5 abre a apresentação a partir do slide atual."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No PowerPoint, animação e transição são sinônimos, pois ambos se referem aos efeitos aplicados entre slides.",
+   "answer": "E",
+   "comment": "Transição e animação são recursos diferentes no PowerPoint."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A transição é o efeito aplicado aos elementos internos de um slide, como textos e imagens.",
+   "answer": "E",
+   "comment": "Animação é aplicada a objetos do slide; transição é aplicada entre slides."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O formato .pptx é o padrão de salvamento das versões mais recentes do PowerPoint.",
+   "answer": "C",
+   "comment": "O .pptx é o formato padrão nas versões mais novas do programa."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O formato .ppsx é normalmente associado à apresentação de slides em modo de exibição.",
+   "answer": "C",
+   "comment": "O .ppsx está ligado à exibição direta da apresentação."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O PowerPoint não permite a inserção de imagens, vídeos e gráficos em uma apresentação.",
+   "answer": "E",
+   "comment": "O PowerPoint permite inserir mídia como imagens, vídeos e gráficos."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O tema e o modelo de uma apresentação servem para padronizar aspectos visuais dos slides.",
+   "answer": "C",
+   "comment": "Tema e modelo ajudam a manter identidade visual e padronização."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O comando Ctrl + M é usado, em geral, para inserir um novo slide.",
+   "answer": "C",
+   "comment": "Esse é um atalho bastante cobrado em informática para concursos."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Em provas de concursos, o conteúdo de PowerPoint costuma cobrar mais conceitos básicos e atalhos do que recursos avançados de edição.",
+   "answer": "C",
+   "comment": "As bancas priorizam fundamentos, atalhos e interpretação de funções."
+  }
+ ]
+}

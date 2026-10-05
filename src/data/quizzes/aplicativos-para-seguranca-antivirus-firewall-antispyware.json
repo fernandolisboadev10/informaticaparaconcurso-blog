@@ -1,0 +1,116 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O antivírus é um aplicativo de segurança que identifica, bloqueia e remove malware, como vírus, worms e trojans.",
+   "answer": "C",
+   "comment": "O antivírus detecta, bloqueia e remove malware, como vírus, worms e trojans."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O firewall tem como função principal controlar o tráfego de rede com base em regras de segurança, podendo permitir ou bloquear conexões.",
+   "answer": "C",
+   "comment": "O firewall permite ou bloqueia conexões de entrada e de saída conforme regras de segurança."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O firewall elimina diretamente vírus e trojans do disco rígido, atuando da mesma forma que um antivírus.",
+   "answer": "E",
+   "comment": "O firewall não analisa nem remove arquivos infectados. Essa função é do antivírus."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O anti-spyware é voltado para detectar e remover programas espiões que coletam informações sem o conhecimento do usuário.",
+   "answer": "C",
+   "comment": "O anti-spyware é especializado em detectar e remover programas espiões, que coletam dados sem consentimento."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O antivírus dispensa atualizações, porque as ameaças permanecem estáveis ao longo do tempo.",
+   "answer": "E",
+   "comment": "Novas ameaças surgem todos os dias. Sem atualização de assinaturas, o antivírus perde eficácia rapidamente."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A proteção digital pode incluir backup, VPN, gerenciador de senhas e autenticação multifator, além de antivírus e firewall.",
+   "answer": "C",
+   "comment": "Backup, VPN, gerenciador de senhas e autenticação multifator complementam o antivírus e o firewall, em camadas."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O termo antimalware é mais amplo do que antivírus e pode abranger a detecção de diferentes tipos de software malicioso.",
+   "answer": "C",
+   "comment": "Antimalware é um termo mais amplo: abrange vírus, spyware, adware e outras pragas. O antivírus é mais específico."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O firewall pode existir em forma de software ou hardware, e sua função está relacionada ao controle de comunicação entre redes.",
+   "answer": "C",
+   "comment": "O firewall existe tanto em software quanto em hardware e controla a comunicação entre redes."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O anti-spyware protege o computador contra espionagem digital, mas não se relaciona com a privacidade do usuário.",
+   "answer": "E",
+   "comment": "Ao combater programas espiões, o anti-spyware protege diretamente a privacidade do usuário."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Em uma suíte de segurança, diferentes ferramentas podem atuar em camadas complementares, pois uma única solução não resolve todos os riscos.",
+   "answer": "C",
+   "comment": "Nenhuma ferramenta resolve todos os riscos sozinha. Por isso a proteção é feita em camadas complementares."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A atualização de assinaturas de vírus é uma responsabilidade do firewall, que precisa reconhecer continuamente novas ameaças de malware.",
+   "answer": "E",
+   "comment": "A atualização de assinaturas é responsabilidade do antivírus, não do firewall."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Se uma questão afirmar que o firewall analisa o comportamento de programas em execução para identificar malware, essa afirmação estará correta, pois essa é uma das funções centrais do firewall.",
+   "answer": "E",
+   "comment": "Analisar o comportamento de programas em execução é uma técnica de detecção do antivírus, não do firewall."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Assinale a alternativa que apresenta corretamente uma função exclusiva do firewall.",
+   "options": [
+    "Remover trojans já instalados no disco.",
+    "Analisar o comportamento de programas em execução.",
+    "Controlar o tráfego de entrada e saída de uma rede com base em regras de segurança.",
+    "Atualizar assinaturas de vírus conhecidos.",
+    "Detectar spyware instalado no sistema."
+   ],
+   "answer": "C",
+   "comment": "As alternativas A, B, D e E descrevem funções do antivírus ou do anti-spyware, não do firewall."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Um usuário mantém o firewall ativo em seu computador, mas ainda assim um arquivo malicioso baixado da internet infecta o sistema. Isso ocorre porque:",
+   "options": [
+    "o firewall só funciona quando o computador está desligado.",
+    "o firewall não analisa o conteúdo de arquivos, apenas controla conexões de rede.",
+    "o firewall e o antivírus são a mesma ferramenta.",
+    "o firewall remove arquivos infectados automaticamente.",
+    "o firewall substitui a necessidade de antivírus."
+   ],
+   "answer": "B",
+   "comment": "O firewall filtra conexões, não o conteúdo dos arquivos baixados. Essa análise é função do antivírus."
+  }
+ ]
+}

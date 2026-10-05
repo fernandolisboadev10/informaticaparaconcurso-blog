@@ -1,18 +1,18 @@
 ---
 layout: ../layouts/LegalLayout.astro
 title: "Política de Cookies"
-description: "Como o Informática para Concursos (informaticaparaconcurso.com.br) usa cookies."
+description: "Como o Informática para Concurso (informaticaparaconcurso.com.br) usa cookies."
 ---
 
 **Última atualização: 16 de setembro de 2026**
 
-Esta Política de Cookies explica o que são cookies, como o Informática para Concursos os utiliza e quais são as suas opções em relação ao uso deles. Ao usar nosso site ([https://techonplay.com.br](https://techonplay.com.br)), você concorda com o uso de cookies conforme descrito nesta política.
+Esta Política de Cookies explica o que são cookies, como o Informática para Concurso os utiliza e quais são as suas opções em relação ao uso deles. Ao usar nosso site ([https://techonplay.com.br](https://techonplay.com.br)), você concorda com o uso de cookies conforme descrito nesta política.
 
 ## 1. O Que São Cookies?
 Cookies são pequenos arquivos de texto armazenados no seu computador ou dispositivo móvel quando você visita um site. Eles são amplamente usados para fazer os sites funcionarem de forma mais eficiente e para fornecer informações aos proprietários do site.
 
 ## 2. Como Usamos Cookies
-O Informática para Concursos usa cookies por vários motivos:
+O Informática para Concurso usa cookies por vários motivos:
 
 - **Cookies Essenciais**: necessários para o funcionamento correto do site.
 - **Cookies de Análise**: usamos ferramentas como o Google Analytics para entender como os visitantes interagem com nosso conteúdo (por exemplo, quais páginas são mais populares). Esses dados são anônimos.
@@ -22,7 +22,7 @@ O Informática para Concursos usa cookies por vários motivos:
 **Google AdSense**  
 Usamos o Google AdSense para exibir anúncios. O Google utiliza cookies para exibir anúncios com base em visitas anteriores ao nosso site ou a outros sites.
 
-- O uso de cookies de publicidade pelo Google permite que ele e seus parceiros exibam anúncios com base na sua visita ao Informática para Concursos e/ou a outros sites na internet.
+- O uso de cookies de publicidade pelo Google permite que ele e seus parceiros exibam anúncios com base na sua visita ao Informática para Concurso e/ou a outros sites na internet.
 - Você pode desativar a publicidade personalizada visitando as [Configurações de Anúncios do Google](https://www.google.com/settings/ads).
 
 **Links de Afiliados**  

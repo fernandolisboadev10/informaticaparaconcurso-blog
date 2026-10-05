@@ -1,0 +1,109 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O armazenamento de dados na nuvem elimina a necessidade de o usuário aplicar mecanismos de autenticação, pois o provedor assume integralmente a responsabilidade pela segurança dos dados hospedados.",
+   "answer": "E",
+   "comment": "A segurança na nuvem é responsabilidade compartilhada. O provedor cuida da infraestrutura física, mas o usuário continua responsável por senhas fortes, autenticação multifator e controle de acesso à própria conta."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Na nuvem pública, a infraestrutura é disponibilizada para uso do público em geral ou de um grande grupo de organizações, sendo operada por uma empresa que vende esse serviço.",
+   "answer": "C",
+   "comment": "É exatamente essa a definição de nuvem pública segundo o NIST: infraestrutura aberta ao público em geral ou a um grande grupo de organizações, operada por um provedor externo."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Segundo a classificação do NIST, o modelo de implantação de nuvem em que a infraestrutura é utilizada exclusivamente por uma única organização, podendo ser gerenciada por ela mesma ou por terceiros, denomina-se:",
+   "options": [
+    "Nuvem pública",
+    "Nuvem privada",
+    "Nuvem híbrida",
+    "Nuvem comunitária",
+    "Nuvem federada"
+   ],
+   "answer": "B",
+   "comment": "A nuvem privada opera exclusivamente para uma única organização, gerenciada por ela mesma ou por uma equipe terceirizada. Não confunda com a nuvem comunitária, compartilhada por várias organizações."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Assinale a alternativa que apresenta corretamente uma vantagem do cloud storage amplamente reconhecida em provas de concursos:",
+   "options": [
+    "Eliminação total dos riscos de segurança da informação",
+    "Dispensa de conexão com a internet para acesso aos arquivos",
+    "Redução dos custos com aquisição e manutenção de servidores físicos",
+    "Substituição completa das rotinas de backup",
+    "Impossibilidade de colaboração simultânea entre usuários"
+   ],
+   "answer": "C",
+   "comment": "O cloud storage reduz custos porque elimina a necessidade de comprar e manter servidores físicos locais. As demais alternativas descrevem afirmações absolutas e falsas, um padrão clássico de pegadinha."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A nuvem híbrida combina duas ou mais infraestruturas de nuvem distintas, que permanecem como entidades únicas, mas são conectadas por tecnologia que possibilita a portabilidade de dados e aplicações entre elas.",
+   "answer": "C",
+   "comment": "Essa é a definição de nuvem híbrida do NIST: infraestruturas distintas que continuam separadas, mas conectadas por tecnologia que permite portabilidade de dados e aplicações."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "No modelo de nuvem comunitária, a infraestrutura é compartilhada por:",
+   "options": [
+    "Um único usuário doméstico",
+    "Uma única organização com múltiplas filiais",
+    "Várias organizações com interesses ou requisitos de segurança e conformidade em comum",
+    "Qualquer pessoa física ou jurídica, sem restrição",
+    "Exclusivamente órgãos públicos federais"
+   ],
+   "answer": "C",
+   "comment": "A nuvem comunitária reúne organizações que compartilham requisitos de segurança ou conformidade semelhantes, e os próprios membros administram o ambiente, assim como ocorre na nuvem privada."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O uso de cloud storage dispensa o administrador de sistemas de configurar políticas de retenção e versionamento, uma vez que a sincronização automática já garante a recuperação de qualquer arquivo excluído.",
+   "answer": "E",
+   "comment": "A sincronização espelha as ações do usuário, inclusive exclusões. Sem uma política de retenção e versionamento, o arquivo apagado localmente também some do servidor remoto."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Um administrador realiza um backup completo no domingo e, nos dias seguintes, realiza backups incrementais diariamente. Para restaurar os dados na quinta-feira, esse administrador vai precisar:",
+   "options": [
+    "Apenas do backup completo de domingo",
+    "Apenas do último backup incremental",
+    "Do backup completo de domingo e de todos os incrementais realizados até quarta-feira, em ordem",
+    "De um backup diferencial adicional, feito à parte",
+    "Não é possível restaurar os dados nesse esquema"
+   ],
+   "answer": "C",
+   "comment": "O backup incremental copia só o que mudou desde o último backup, completo ou incremental. Por isso, a restauração exige o completo e todos os incrementais seguintes, aplicados em ordem cronológica."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "ce",
+   "text": "O backup diferencial copia todas as alterações realizadas desde o último backup completo, o que faz com que ele ocupe mais espaço em disco que o backup incremental, mas agilize o processo de restauração.",
+   "answer": "C",
+   "comment": "O diferencial acumula tudo desde o último completo, por isso cresce mais a cada dia. Em compensação, a restauração precisa de apenas dois arquivos: o completo e o último diferencial."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "A característica do cloud storage que permite ao usuário aumentar ou diminuir rapidamente o espaço de armazenamento contratado, conforme a demanda, é conhecida tecnicamente como:",
+   "options": [
+    "Portabilidade",
+    "Virtualização",
+    "Elasticidade (ou escalabilidade)",
+    "Replicação",
+    "Federação"
+   ],
+   "answer": "C",
+   "comment": "As bancas tratam elasticidade e escalabilidade como sinônimos para essa capacidade de ajustar o espaço contratado rapidamente, sob demanda, sem intervenção manual na infraestrutura física."
+  }
+ ]
+}

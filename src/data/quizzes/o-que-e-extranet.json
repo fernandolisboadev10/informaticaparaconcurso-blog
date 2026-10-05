@@ -1,0 +1,127 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A extranet é uma rede totalmente aberta ao público, podendo ser acessada livremente por qualquer usuário conectado à internet, sem necessidade de autenticação.",
+   "answer": "E",
+   "comment": "O acesso à extranet sempre exige autenticação e depende de uma relação comercial prévia entre a empresa e o parceiro externo. Rede aberta a qualquer pessoa, sem login, é a definição de internet."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Uma indústria disponibiliza, para seus fornecedores cadastrados, um portal autenticado onde eles consultam estoque e enviam notas fiscais. Esse portal, restrito a parceiros externos autorizados, caracteriza uma:",
+   "options": [
+    "Internet",
+    "Extranet",
+    "Intranet",
+    "LAN"
+   ],
+   "answer": "B",
+   "comment": "O acesso liberado a fornecedores externos, com autenticação e permissões limitadas, é a definição clássica de extranet. Intranet ficaria restrita aos funcionários da própria indústria."
+  },
+  {
+   "banca": "FGV",
+   "type": "ce",
+   "text": "A extranet permite que colaboradores internos acessem, exclusivamente, os sistemas corporativos restritos à própria empresa, sem qualquer interação com usuários externos.",
+   "answer": "E",
+   "comment": "Essa é a definição de intranet, não de extranet. A extranet existe justamente para abrir uma parte da rede a parceiros externos autenticados, como fornecedores e clientes."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Um banco libera, mediante login e senha, uma área do seu sistema para que escritórios de contabilidade parceiros consultem extratos de clientes autorizados. Essa liberação de acesso caracteriza:",
+   "options": [
+    "Uma WAN",
+    "Uma intranet",
+    "Uma extranet",
+    "Uma internet"
+   ],
+   "answer": "C",
+   "comment": "Acesso autenticado, liberado a um parceiro externo específico, é a marca registrada da extranet. WAN e LAN classificam alcance geográfico, um critério diferente e que não deve ser confundido com este."
+  },
+  {
+   "banca": "IADES",
+   "type": "ce",
+   "text": "O acesso a uma extranet dispensa qualquer mecanismo de autenticação, bastando que o usuário externo esteja conectado à mesma rede física da empresa.",
+   "answer": "E",
+   "comment": "Estar na mesma rede física não basta. A extranet exige autenticação (login, senha, VPN ou certificado digital), justamente porque conecta a empresa a usuários de fora dos seus domínios."
+  },
+  {
+   "banca": "IBFC",
+   "type": "ce",
+   "text": "A extranet é uma extensão da intranet que permite a parceiros externos, como fornecedores e clientes, acessarem, de forma autenticada, uma parte específica da rede corporativa.",
+   "answer": "C",
+   "comment": "A definição está correta: a extranet estende parte da intranet a um público externo autorizado, sempre com autenticação e permissões limitadas ao que esse parceiro precisa acessar."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Uma empresa disponibiliza, para escritórios de contabilidade parceiros, uma área do seu sistema financeiro, acessível somente mediante certificado digital. Essa solução caracteriza uma:",
+   "options": [
+    "Intranet",
+    "LAN",
+    "Extranet",
+    "Internet",
+    "WAN"
+   ],
+   "answer": "C",
+   "comment": "O uso de certificado digital para autenticar um parceiro externo específico é típico de extranet. LAN e WAN classificam alcance geográfico, não quem acessa a rede."
+  },
+  {
+   "banca": "AOCP",
+   "type": "ce",
+   "text": "Ampliar o acesso da rede corporativa por meio de uma extranet aumenta a superfície de ataque da organização, o que exige controles adicionais de autenticação e monitoramento.",
+   "answer": "C",
+   "comment": "Correto. Quanto mais pontos de acesso externo uma rede tem, maior o risco de exploração. Por isso a extranet depende de perfis de acesso bem definidos e de monitoramento constante das conexões."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "Em uma extranet, o acesso de parceiros externos à rede corporativa ocorre, tipicamente, por meio de:",
+   "options": [
+    "Endereço IP público sem restrições",
+    "Rede Wi-Fi aberta da empresa",
+    "Login, VPN ou certificado digital",
+    "Compartilhamento de arquivos sem senha"
+   ],
+   "answer": "C",
+   "comment": "A extranet sempre depende de algum mecanismo de autenticação, como login e senha, VPN ou certificado digital. Sem isso, a rede deixa de ser uma extranet e passa a ser um acesso público comum."
+  },
+  {
+   "banca": "FGV",
+   "type": "ce",
+   "text": "Basta que o parceiro externo esteja conectado à internet para acessar automaticamente a extranet de uma empresa, sem qualquer processo de autenticação prévio.",
+   "answer": "E",
+   "comment": "Estar conectado à internet não dá acesso automático a nada. A extranet exige um processo de autenticação prévio, vinculado a uma relação comercial já estabelecida com a empresa."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A intranet constitui uma rede de computadores restrita a uma organização, que utiliza os mesmos protocolos empregados na internet.",
+   "answer": "C",
+   "comment": "A intranet usa o TCP/IP, mas restringe o acesso aos membros da organização."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A internet é uma rede de alcance mundial que depende de uma autoridade central única para funcionar.",
+   "answer": "E",
+   "comment": "Nenhuma entidade controla a internet como um todo, embora organizações específicas administrem recursos pontuais, como a distribuição de domínios."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Uma intranet, por definição, não pode ser acessada remotamente por um funcionário fora das dependências físicas da empresa.",
+   "answer": "E",
+   "comment": "O funcionário consegue acessar a intranet remotamente, geralmente por meio de uma VPN, desde que a autenticação confirme sua identidade."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A extranet e a intranet compartilham a mesma base tecnológica, e a diferença entre elas está relacionada ao público autorizado a acessar cada rede.",
+   "answer": "C",
+   "comment": "A tecnologia é a mesma; o que muda é o critério de quem pode entrar."
+  }
+ ]
+}

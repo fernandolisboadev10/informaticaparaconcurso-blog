@@ -66,7 +66,7 @@ Além disso, entram nesse grupo:
 -   **Headset:** o fone reproduz o áudio (saída) e o microfone capta a voz (entrada).
 -   **Pendrive, HD e SSD:** você grava um arquivo neles e depois lê esse mesmo arquivo.
 
-Vale destacar que algumas bancas tratam pendrive, HD e SSD como dispositivos de armazenamento, uma categoria própria. A Cebraspe, porém, já classificou em prova oficial a unidade de disco rígido, o modem e o pendrive como periféricos de entrada e saída. Por isso, na sua prova, siga essa lógica quando o enunciado falar em fluxo de dados. Se quiser entender como esses dispositivos se conectam à máquina, veja também a aula sobre [barramentos e interfaces](#link-barramentos-e-interfaces).
+Vale destacar que algumas bancas tratam pendrive, HD e SSD como dispositivos de armazenamento, uma categoria própria. A Cebraspe, porém, já classificou em prova oficial a unidade de disco rígido, o modem e o pendrive como periféricos de entrada e saída. Por isso, na sua prova, siga essa lógica quando o enunciado falar em fluxo de dados. Se quiser entender como esses dispositivos se conectam à máquina, veja também a aula sobre barramentos e interfaces.
 
 ## Periféricos em concursos: as pegadinhas mais comuns da Cebraspe
 
@@ -88,111 +88,7 @@ Em resumo, dominar os periféricos em concursos exige mais compreensão do que m
 
 Por fim, touchscreen, multifuncional, modem, headset e pendrive atuam nos dois sentidos. Quando a banca tentar confundir você, volte à pergunta central: para onde a informação está indo?
 
-Agora, resolva as questões abaixo. Depois, teste seus conhecimentos no [simulado de Hardware](#link-simulado-hardware) antes de seguir para o próximo tema.
-
-Questões de Certo ou Errado: Periféricos
-
-Julgue cada item e confira o comentário logo abaixo.
-
-Questão 1Estilo CEBRASPE
-
-O teclado é um periférico de entrada porque envia comandos ao computador.
-
-Certo Errado
-
-Resposta correta: Certo
-
-O teclado envia caracteres e comandos ao sistema, por isso pertence ao grupo de entrada.
-
-Questão 2Estilo CEBRASPE
-
-O monitor comum é um periférico de entrada e saída, pois exibe imagens e recebe sinais da CPU.
-
-Certo Errado
-
-Resposta correta: Errado
-
-Receber sinais da CPU para exibir imagens é justamente a função de saída. O monitor comum só apresenta informações; a exceção é o touchscreen.
-
-Questão 3Estilo CEBRASPE
-
-O scanner permite inserir no computador documentos e imagens em formato digital.
-
-Certo Errado
-
-Resposta correta: Certo
-
-O scanner digitaliza o conteúdo físico e o envia à máquina, o que o torna um periférico de entrada.
-
-Questão 4Estilo CEBRASPE
-
-A impressora comum pertence ao grupo dos periféricos de saída.
-
-Certo Errado
-
-Resposta correta: Certo
-
-Ela apresenta no papel a informação que o computador processou, sem enviar dados à máquina.
-
-Questão 5Estilo CEBRASPE
-
-A impressora multifuncional pode atuar como periférico de entrada e saída.
-
-Certo Errado
-
-Resposta correta: Certo
-
-Ela imprime (saída) e também digitaliza documentos pelo scanner integrado (entrada).
-
-Questão 6Estilo CEBRASPE
-
-O mouse é um periférico de saída porque move o cursor na tela.
-
-Certo Errado
-
-Resposta correta: Errado
-
-Quem desenha o cursor na tela é o monitor. O mouse envia movimentos e cliques ao computador, por isso é de entrada.
-
-Questão 7Estilo CEBRASPE
-
-A tela touchscreen recebe comandos do usuário e também exibe informações.
-
-Certo Errado
-
-Resposta correta: Certo
-
-Ela funciona como monitor (saída) e como dispositivo de toque (entrada) ao mesmo tempo.
-
-Questão 8Estilo CEBRASPE
-
-O pendrive é exclusivamente um periférico de entrada de dados.
-
-Certo Errado
-
-Resposta correta: Errado
-
-O computador grava e lê arquivos no pendrive. Repare no “exclusivamente”: ele atua nos dois sentidos.
-
-Questão 9Estilo CEBRASPE
-
-As caixas de som são periféricos de entrada, pois captam o áudio do computador.
-
-Certo Errado
-
-Resposta correta: Errado
-
-Caixas de som reproduzem o áudio que o computador gera, por isso são periféricos de saída.
-
-Questão 10Estilo CEBRASPE
-
-Todo periférico deve ficar obrigatoriamente fora do gabinete do computador.
-
-Certo Errado
-
-Resposta correta: Errado
-
-Placas de rede, placas de som e unidades de armazenamento internas também são periféricos. Desconfie do “todo” e do “obrigatoriamente”.
+Agora, resolva as questões abaixo. Depois, teste seus conhecimentos no [simulado de Hardware](/simulado-hardware/) antes de seguir para o próximo tema.
 
 ## Fontes e Referências
 

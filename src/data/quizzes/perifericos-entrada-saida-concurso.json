@@ -1,0 +1,74 @@
+{
+ "questions": [
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O teclado é um periférico de entrada porque envia comandos ao computador.",
+   "answer": "C",
+   "comment": "O teclado envia caracteres e comandos ao sistema, por isso pertence ao grupo de entrada."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O monitor comum é um periférico de entrada e saída, pois exibe imagens e recebe sinais da CPU.",
+   "answer": "E",
+   "comment": "Receber sinais da CPU para exibir imagens é justamente a função de saída. O monitor comum só apresenta informações; a exceção é o touchscreen."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O scanner permite inserir no computador documentos e imagens em formato digital.",
+   "answer": "C",
+   "comment": "O scanner digitaliza o conteúdo físico e o envia à máquina, o que o torna um periférico de entrada."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "A impressora comum pertence ao grupo dos periféricos de saída.",
+   "answer": "C",
+   "comment": "Ela apresenta no papel a informação que o computador processou, sem enviar dados à máquina."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "A impressora multifuncional pode atuar como periférico de entrada e saída.",
+   "answer": "C",
+   "comment": "Ela imprime (saída) e também digitaliza documentos pelo scanner integrado (entrada)."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O mouse é um periférico de saída porque move o cursor na tela.",
+   "answer": "E",
+   "comment": "Quem desenha o cursor na tela é o monitor. O mouse envia movimentos e cliques ao computador, por isso é de entrada."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "A tela touchscreen recebe comandos do usuário e também exibe informações.",
+   "answer": "C",
+   "comment": "Ela funciona como monitor (saída) e como dispositivo de toque (entrada) ao mesmo tempo."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "O pendrive é exclusivamente um periférico de entrada de dados.",
+   "answer": "E",
+   "comment": "O computador grava e lê arquivos no pendrive. Repare no “exclusivamente”: ele atua nos dois sentidos."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "As caixas de som são periféricos de entrada, pois captam o áudio do computador.",
+   "answer": "E",
+   "comment": "Caixas de som reproduzem o áudio que o computador gera, por isso são periféricos de saída."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Todo periférico deve ficar obrigatoriamente fora do gabinete do computador.",
+   "answer": "E",
+   "comment": "Placas de rede, placas de som e unidades de armazenamento internas também são periféricos. Desconfie do “todo” e do “obrigatoriamente”."
+  }
+ ]
+}

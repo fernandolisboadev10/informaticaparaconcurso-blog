@@ -166,58 +166,6 @@ O item está **errado**. A palavra “todo”, somada a “qualquer unidade”, 
 
 É aqui que aparece uma das principais pegadinhas: o candidato reconhece o conceito (a Lixeira guarda arquivos excluídos) e marca certo sem notar o exagero. Na sua prova, a banca pode explorar justamente essa diferença.
 
-## Questões de Certo ou Errado
-
-Agora é a sua vez de treinar. Resolva as seis questões abaixo no estilo Cebraspe, clique na alternativa e confira o comentário de cada item.
-
-CEBRASPEQuestão 1
-
-Arquivos apagados de um pendrive conectado a um computador com Windows sempre são enviados à Lixeira e podem ser restaurados por ela.
-
-CERTOERRADO
-
-Gabarito: ERRADOEm regra, arquivos excluídos de mídias removíveis, como pendrives, não passam pela Lixeira. A palavra “sempre” torna o item absoluto e, portanto, incorreto.
-
-CEBRASPEQuestão 2
-
-No Microsoft Excel, a fórmula =SOMA(A1:A3) retorna o resultado da soma dos valores contidos nas células A1, A2 e A3.
-
-CERTOERRADO
-
-Gabarito: CERTOO operador de dois-pontos define um intervalo. Assim, A1:A3 inclui A1, A2 e A3, e a função SOMA adiciona os três valores.
-
-CEBRASPEQuestão 3
-
-Phishing é uma técnica de fraude em que o atacante tenta induzir a vítima a fornecer dados pessoais ou financeiros, em geral por meio de mensagens que imitam instituições legítimas.
-
-CERTOERRADO
-
-Gabarito: CERTOO phishing usa engenharia social: a mensagem parece vir de um banco ou de um órgão conhecido e leva a vítima a informar dados em uma página falsa.
-
-CEBRASPEQuestão 4
-
-A regra de backup 3-2-1 recomenda manter três cópias dos dados, armazenadas em dois tipos de mídia diferentes, com uma dessas cópias guardada fora do local principal.
-
-CERTOERRADO
-
-Gabarito: CERTOOs números significam 3 cópias, 2 tipos de mídia e 1 cópia externa (off-site, como a nuvem ou outro local físico).
-
-CEBRASPEQuestão 5
-
-Uma VPN serve exclusivamente para aumentar a velocidade da conexão com a internet.
-
-CERTOERRADO
-
-Gabarito: ERRADOA VPN cria um canal criptografado entre dispositivos ou redes pela internet. Seu objetivo principal é a segurança e o acesso remoto, e não a velocidade. O termo “exclusivamente” também entrega o erro.
-
-CEBRASPEQuestão 6
-
-No Windows, o atalho Ctrl+C recorta o item selecionado e o remove do local de origem.
-
-CERTOERRADO
-
-Gabarito: ERRADOCtrl+C copia o item e o mantém no local de origem. Quem recorta é o Ctrl+X.
-
 ## Conclusão: seu plano para os próximos 15 dias
 
 Em síntese, como estudar para concurso faltando menos de 15 dias se resume a quatro decisões. Leia o edital, priorize o que mais cai, treine com questões da sua banca e revise os próprios erros todos os dias.

@@ -1,0 +1,102 @@
+{
+ "questions": [
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "No modelo IaaS, o cliente é responsável por gerenciar o sistema operacional das máquinas virtuais que contrata.",
+   "answer": "C",
+   "comment": "No IaaS, o provedor entrega a infraestrutura virtualizada, e o cliente instala e administra o sistema operacional, as aplicações e os dados."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "No modelo PaaS, o cliente gerencia o sistema operacional e os servidores, enquanto o provedor fornece apenas as ferramentas de desenvolvimento.",
+   "answer": "E",
+   "comment": "No PaaS, o provedor gerencia servidores, rede, armazenamento e sistema operacional. O cliente cuida apenas das aplicações que implanta e dos dados."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Serviços de correio eletrônico acessados pelo navegador, como o Gmail, são exemplos do modelo SaaS.",
+   "answer": "C",
+   "comment": "O usuário consome uma aplicação pronta pela internet, sem gerenciar infraestrutura ou plataforma. Essa é a definição de SaaS."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Nuvem pública, nuvem privada e nuvem híbrida são exemplos de modelos de serviço em computação em nuvem.",
+   "answer": "E",
+   "comment": "Pública, privada, híbrida e comunitária são modelos de implantação. Os modelos de serviço são SaaS, PaaS e IaaS."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "No modelo SaaS, o usuário pode ajustar configurações específicas da aplicação, como preferências da própria conta, mas não controla a infraestrutura subjacente.",
+   "answer": "C",
+   "comment": "Segundo o NIST, no SaaS o consumidor tem, no máximo, acesso a configurações limitadas da aplicação voltadas ao próprio usuário."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "No modelo IaaS, o provedor gerencia exclusivamente as aplicações do cliente, e este fica responsável pelo hardware físico do data center.",
+   "answer": "E",
+   "comment": "A lógica está invertida. No IaaS, o provedor mantém o hardware físico e a virtualização, e o cliente gerencia sistema operacional e aplicações. Repare no termo absoluto \"exclusivamente\"."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Uma equipe de desenvolvimento quer publicar uma aplicação web sem se preocupar com a instalação e a atualização do sistema operacional dos servidores. O modelo de serviço mais adequado é:",
+   "options": [
+    "SaaS",
+    "PaaS",
+    "IaaS",
+    "Nuvem privada",
+    "Nuvem híbrida"
+   ],
+   "answer": "B",
+   "comment": "O PaaS entrega a plataforma pronta. A equipe envia o código, e o provedor cuida do sistema operacional e da infraestrutura. As alternativas D e E são modelos de implantação."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Uma empresa contratou máquinas virtuais em um provedor de nuvem e instalou nelas o sistema operacional e o banco de dados de sua preferência. Trata-se do modelo:",
+   "options": [
+    "SaaS",
+    "DaaS",
+    "PaaS",
+    "IaaS",
+    "FaaS"
+   ],
+   "answer": "D",
+   "comment": "Quando o cliente instala e controla o sistema operacional sobre máquinas virtuais alugadas, o modelo é IaaS."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Assinale a alternativa que apresenta apenas exemplos de SaaS.",
+   "options": [
+    "Amazon EC2 e Google Compute Engine",
+    "Google App Engine e Heroku",
+    "Microsoft 365 e Google Drive",
+    "Azure Virtual Machines e Heroku",
+    "Amazon EC2 e Microsoft 365"
+   ],
+   "answer": "C",
+   "comment": "Microsoft 365 e Google Drive são aplicações prontas acessadas pela internet. EC2, Compute Engine e Azure VM são IaaS; App Engine e Heroku são PaaS."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Em relação à divisão de responsabilidades entre cliente e provedor nos modelos de serviço em nuvem, é correto afirmar que:",
+   "options": [
+    "no SaaS, o cliente gerencia a aplicação e o sistema operacional",
+    "no PaaS, o cliente gerencia a virtualização",
+    "no IaaS, o provedor gerencia o sistema operacional do cliente",
+    "quanto mais se avança de IaaS para SaaS, maior é a parcela gerenciada pelo provedor",
+    "nos três modelos, o cliente é responsável pelo hardware físico"
+   ],
+   "answer": "D",
+   "comment": "Do IaaS ao SaaS, o provedor assume cada vez mais camadas, e o cliente, cada vez menos. Em nenhum dos três modelos o cliente cuida do hardware físico."
+  }
+ ]
+}

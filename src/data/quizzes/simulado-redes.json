@@ -1,0 +1,410 @@
+{
+ "questions": [
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Qual é a função do DNS na Internet?",
+   "options": [
+    "Converter endereços IP em nomes de domínio.",
+    "Aumentar a largura de banda da rede.",
+    "Proteger a rede contra malwares.",
+    "Gerenciar cookies no navegador.",
+    "Armazenar arquivos em nuvem."
+   ],
+   "answer": "A",
+   "comment": "A opção A está correta; o DNS (Domain Name System) tem a função de converter endereços IP em nomes de domínio que são mais fáceis de lembrar. As outras opções não refletem as funções do DNS."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "O que é a rede WAN?",
+   "options": [
+    "Rede de Área Local",
+    "Rede de longa distância",
+    "Rede sem fio",
+    "Rede de Área Metropolitana",
+    "Rede Privada Virtual"
+   ],
+   "answer": "B",
+   "comment": "WAN significa Wide Area Network, que se refere a redes que cobrem grandes distâncias. As outras opções são definições de outros tipos de rede."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Qual protocolo é utilizado para a transmissão de e-mails?",
+   "options": [
+    "FTP",
+    "HTTP",
+    "SMTP",
+    "POP3",
+    "IMAP"
+   ],
+   "answer": "C",
+   "comment": "A opção C está correta, pois o SMTP (Simple Mail Transfer Protocol) é o protocolo padrão para envio de e-mails na internet. As outras opções referem-se a outros serviços ou transferências de dados."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual é a principal função do protocolo FTP?",
+   "options": [
+    "Transferir arquivos entre computadores",
+    "Proteger a rede interna",
+    "Enviar e-mails",
+    "Conectar dispositivos em rede",
+    "Acompanhamento de dados na nuvem"
+   ],
+   "answer": "A",
+   "comment": "A opção A é a correta, pois o FTP (File Transfer Protocol) é usado principalmente para a transferência de arquivos entre sistemas. As outras opções não são funções do FTP."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "No contexto da segurança da informação nas redes, o que é phishing?",
+   "options": [
+    "Método de transferência segura de arquivos",
+    "Técnica de fraude para obter dados pessoais",
+    "Protocolo utilizado para enviar e-mails seguros",
+    "Software para proteção contra vírus",
+    "Um tipo de servidor de e-mails"
+   ],
+   "answer": "B",
+   "comment": "Phishing é uma técnica de fraude online que visa enganar usuários para que revelem informações pessoais, como senhas e números de cartões de crédito. As outras definições não estão corretas."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual a função do protocolo IMAP em relação ao e-mail?",
+   "options": [
+    "Enviar e-mails",
+    "Armazenar e-mails localmente",
+    "Gerenciar mensagens em um servidor",
+    "Conectar navegadores à internet",
+    "Transferir arquivos entre computadores"
+   ],
+   "answer": "C",
+   "comment": "IMAP (Internet Message Access Protocol) permite que usuários gerenciem e-mails diretamente no servidor. As outras opções não descrevem sua função corretamente."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "No contexto da computação em nuvem, o que caracteriza o modelo SaaS (Software as a Service)?",
+   "options": [
+    "O usuário controla a infraestrutura",
+    "O software é instalado localmente",
+    "O software é acessível via internet",
+    "O usuário precisa pagar licenças fixas",
+    "O software não pode ser atualizado"
+   ],
+   "answer": "C",
+   "comment": "O modelo SaaS permite que o usuário acesse o software pela internet, sem a necessidade de instalação local. As outras opções descrevem características de diferentes modelos de serviços de computação em nuvem."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "O que caracteriza a computação em nuvem?",
+   "options": [
+    "Distribuição de software apenas localmente",
+    "Acesso remoto a recursos de TI",
+    "Dependência total de servidores locais",
+    "Uso exclusivo de redes privadas",
+    "Transferência física de dados"
+   ],
+   "answer": "B",
+   "comment": "A resposta correta é a opção B, pois a computação em nuvem se caracteriza pelo acesso remoto a recursos de tecnologia da informação. As outras opções falham em descrever essa característica."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Qual é a principal diferença entre o protocolo IMAP e o protocolo POP3 na recuperação de e-mails?",
+   "options": [
+    "POP3 armazena e-mails no servidor; IMAP não",
+    "IMAP permite acessar e-mails de múltiplos dispositivos; POP3 não",
+    "POP3 é mais seguro que IMAP",
+    "IMAP só permite o envio de e-mails",
+    "Não há diferença entre eles"
+   ],
+   "answer": "B",
+   "comment": "A principal diferença é que o IMAP permite que os e-mails sejam acessados de múltiplos dispositivos, enquanto o POP3, geralmente, baixa e remove os e-mails do servidor."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "Um navegador de internet (browser), como Google Chrome, Mozilla Firefox ou Microsoft Edge, tem como função principal:",
+   "options": [
+    "Interpretar código HTML, CSS e JavaScript para exibir páginas da web ao usuário",
+    "Enviar e receber e-mails diretamente, sem uso de servidores",
+    "Compilar programas escritos em linguagens de programação",
+    "Gerenciar o sistema de arquivos do computador",
+    "Proteger a rede contra vírus, substituindo o antivírus"
+   ],
+   "answer": "A",
+   "comment": "O navegador é o software responsável por requisitar páginas a servidores web e renderizar (interpretar e exibir) o HTML, CSS e JavaScript recebidos."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual protocolo é utilizado para enviar e-mails?",
+   "options": [
+    "HTTP",
+    "FTP",
+    "SMTP",
+    "IMAP",
+    "DNS"
+   ],
+   "answer": "C",
+   "comment": "SMTP (Simple Mail Transfer Protocol) é o protocolo padrão para envio de e-mails. HTTP é para web, FTP para transferência de arquivos, IMAP e DNS servem para gerenciar e-mails e resolução de domínios, respectivamente."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Qual a importância de um firewall em redes de computadores?",
+   "options": [
+    "Aumentar a velocidade de conexão",
+    "Criar cópias de segurança",
+    "Bloquear acessos não autorizados",
+    "Gerenciar servidores de e-mail",
+    "Atualizar o software automaticamente"
+   ],
+   "answer": "C",
+   "comment": "Um firewall serve para filtrar e controlar o tráfego da rede, bloqueando acessos não autorizados e protegendo a rede interna. As outras opções não refletem sua função principal."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "O que significa a sigla URL na web?",
+   "options": [
+    "Universal Resource Locator",
+    "Uniform Resource Locator",
+    "Universal Resource Link",
+    "Uniform Resource Link",
+    "United Resource Locator"
+   ],
+   "answer": "B",
+   "comment": "URL significa Uniform Resource Locator, que é um sistema de endereçamento utilizado para localizar recursos na web. As outras opções contêm erros de terminologia."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "Um firewall tem como principal função:",
+   "options": [
+    "Monitorar e controlar o tráfego de rede (entrada e saída), permitindo ou bloqueando conexões com base em regras de segurança predefinidas",
+    "Remover vírus já instalados no computador",
+    "Armazenar backups automáticos de arquivos",
+    "Traduzir endereços IP em nomes de domínio",
+    "Acelerar a velocidade de download de arquivos"
+   ],
+   "answer": "A",
+   "comment": "O firewall atua como uma barreira de filtragem de tráfego de rede, decidindo o que pode entrar e sair com base em regras — ele não remove vírus já instalados (essa é função do antivírus)."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Quando você acessa um site, que tipo de endereço é utilizado?",
+   "options": [
+    "URL",
+    "IP",
+    "DOM",
+    "HTTP",
+    "FTP"
+   ],
+   "answer": "A",
+   "comment": "O URL (Uniform Resource Locator) é o endereço que aponta para um recurso na web. Os outros termos são relacionados, mas não são especificamente a forma de endereço de um site."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "O que é um firewall?",
+   "options": [
+    "Um tipo de navegador",
+    "Um dispositivo de armazenamento",
+    "Um sistema de segurança de rede",
+    "Um aplicativo de edição de texto",
+    "Um controlador de hardware"
+   ],
+   "answer": "C",
+   "comment": "Um firewall é um sistema de segurança de rede que monitoriza e controla o tráfego de entrada e saída. As outras opções não são funções de um firewall."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "A sigla VPN (Virtual Private Network) se refere a uma tecnologia que:",
+   "options": [
+    "Cria uma conexão criptografada e privada sobre uma rede pública (como a internet), permitindo acesso seguro a uma rede remota",
+    "Aumenta permanentemente a velocidade da conexão à internet",
+    "Substitui totalmente a necessidade de um antivírus no computador",
+    "É um tipo de navegador especializado em compras online",
+    "Bloqueia fisicamente o acesso à internet de um dispositivo"
+   ],
+   "answer": "A",
+   "comment": "A VPN estabelece um “túnel” criptografado sobre uma rede pública, permitindo que um dispositivo acesse uma rede privada remota (como a rede interna de uma empresa) com segurança."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Qual é a função do protocolo FTP?",
+   "options": [
+    "Enviar e receber e-mails",
+    "Transferir arquivos entre computadores",
+    "Acessar páginas web",
+    "Conectar dispositivos a uma rede",
+    "Administrar servidores de e-mail"
+   ],
+   "answer": "B",
+   "comment": "O FTP (File Transfer Protocol) é especificamente utilizado para transferir arquivos entre um cliente e um servidor. As outras opções não correspondem à sua função."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Qual é um dos principais benefícios da computação em nuvem para empresas?",
+   "options": [
+    "Aumento do custo com licenças de software.",
+    "Necessidade de investimento em hardware.",
+    "Acesso remoto a recursos e escalabilidade.",
+    "Maior vulnerabilidade a ataques.",
+    "Dependência total de provedores de Internet."
+   ],
+   "answer": "C",
+   "comment": "A opção C é a correta, pois a computação em nuvem facilita o acesso a recursos remotamente e permite a escalabilidade. As outras opções são contrárias aos benefícios da nuvem."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "O que é computação em nuvem?",
+   "options": [
+    "Um tipo de dispositivo de armazenamento externo.",
+    "A entrega de serviços de computação via Internet.",
+    "Um software de segurança para redes.",
+    "Um método de compressão de dados.",
+    "Uma forma de instalação local de programas."
+   ],
+   "answer": "B",
+   "comment": "A opção ‘B’ é correta, pois computação em nuvem refere-se à entrega de serviços, como armazenamento e processamento, pela Internet. As demais opções são definições incorretas."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Cookies armazenados por um navegador web são utilizados para rastrear a atividade do usuário e aprimorar a experiência de navegação baseada nas preferências do usuário.",
+   "answer": "C",
+   "comment": "Cookies ajudam a personalizar a experiência do usuário, armazenando informações sobre as atividades e preferências de navegação."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual é a vantagem do uso de computação em nuvem?",
+   "options": [
+    "Maior custo com hardware",
+    "Dependência de acesso à internet",
+    "Dificuldade no gerenciamento de dados",
+    "Aumento da capacidade de armazenamento sem investimento em hardware",
+    "Necessidade de configurar servidores pessoais"
+   ],
+   "answer": "D",
+   "comment": "A resposta correta é a letra D, pois a computação em nuvem permite aumentar a capacidade de armazenamento sem necessidade de investimentos pesados em hardware. As demais opções descrevem desvantagens ou confusões sobre o conceito."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual é a principal função de um navegador de internet?",
+   "options": [
+    "Prover serviço de e-mail",
+    "Gerenciar redes locais",
+    "Interpretar e exibir páginas web",
+    "Executar aplicativos de desktop",
+    "Armazenar arquivos na nuvem"
+   ],
+   "answer": "C",
+   "comment": "O navegador de internet é projetado para interpretar e exibir conteúdo da web. As outras respostas não correspondem à função principal de um navegador."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual é a principal característica de uma rede Intranet?",
+   "options": [
+    "É uma rede pública e acessível à internet",
+    "É utilizada apenas para comunicação externa",
+    "Acesso restrito a uma organização específica",
+    "Utiliza o protocolo FTP exclusivamente",
+    "Interconecta várias redes de computadores públicas"
+   ],
+   "answer": "C",
+   "comment": "A opção C é a resposta correta, pois a Intranet serve como uma rede interna restrita a membros de uma organização. As outras opções não descrevem corretamente a natureza de uma Intranet."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Em relação à computação em nuvem, qual das seguintes afirmações é verdadeira?",
+   "options": [
+    "A computação em nuvem exige que todas as aplicações sejam instaladas localmente.",
+    "A computação em nuvem permite o acesso a recursos de TI via internet, sem necessidade de infraestrutura local.",
+    "Na computação em nuvem, os dados são armazenados exclusivamente em dispositivos físicos do usuário.",
+    "A computação em nuvem é mais segura do que qualquer forma de armazenamento local e não apresenta riscos.",
+    "A computação em nuvem oferece serviços que podem ser acessados apenas de forma offline."
+   ],
+   "answer": "B",
+   "comment": "A alternativa B está correta, pois a computação em nuvem oferece acesso a recursos através da internet, eliminando a necessidade de infraestrutura local. As outras alternativas estão erradas, pois a nuvem não exige instalação local, pode ter riscos de segurança e permite o acesso online, ao contrário do que afirmam."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "O que é a Intranet?",
+   "options": [
+    "Uma rede privada que utiliza a infraestrutura da internet",
+    "Um tipo de portal público na internet",
+    "Um sistema de e-mails corporativos",
+    "Uma rede de computadores que cobre grandes áreas",
+    "Um serviço de armazenamento em nuvem"
+   ],
+   "answer": "A",
+   "comment": "A opção A é a correta, pois Intranet se refere a uma rede privada que utiliza a tecnologia da internet para comunicação interna em organizações. As outras opções não representam a definição de Intranet."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Em um contexto de redes, o que significa a sigla VPN?",
+   "options": [
+    "Virtual Public Network",
+    "Virtual Private Network",
+    "Variable Protected Network",
+    "Visual Private Network",
+    "Virtual Protocol Network"
+   ],
+   "answer": "B",
+   "comment": "A opção B é a correta, pois VPN significa Virtual Private Network, uma tecnologia que cria uma conexão segura através da internet. As demais alternativas são incorretas por não representarem a definição correta da sigla."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Qual é a principal vantagem da virtualização em data centers?",
+   "options": [
+    "Aumento da temperatura",
+    "Redução do custo de hardware",
+    "Aumento do tráfego de rede",
+    "Complexidade na gestão",
+    "Aumento do consumo de energia"
+   ],
+   "answer": "B",
+   "comment": "A virtualização permite que vários ambientes virtuais sejam executados em um único hardware, reduzindo assim os custos com servidores físicos. As outras alternativas são contrárias aos benefícios da virtualização."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Ao acessar um site, o navegador armazena informações para otimizar futuras visitas. Que tipo de dado é geralmente armazenado nesse processo?",
+   "options": [
+    "Cookies",
+    "Backups",
+    "Histórico",
+    "Cache",
+    "Logs"
+   ],
+   "answer": "A",
+   "comment": "Cookies são pequenos arquivos que armazenam dados de navegação e preferências do usuário. Histórico registra páginas acessadas, cache armazena dados temporários, logs são registros de atividades e backups são cópias. Cada um tem funções distintas, mas não são usados para otimizar visitas da mesma forma que cookies."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A principal função do navegador é atuar como um cliente que solicita informações da web para que o usuário possa visualizá-las.",
+   "answer": "C",
+   "comment": "Os navegadores são softwares que processam e apresentam conteúdos solicitados na web."
+  }
+ ]
+}

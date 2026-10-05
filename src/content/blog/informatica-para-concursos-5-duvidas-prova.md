@@ -114,58 +114,6 @@ Assim, siga três passos em cada item:
 2.  Descubra qual conceito o item trocou, por exemplo worm por vírus ou incremental por diferencial.
 3.  Teste a afirmação com um exemplo curto, como o backup de domingo a quinta.
 
-### Questões de Certo ou Errado
-
-Estilo CEBRASPEQuestão 1 · Malware
-
-O worm é um tipo de malware que precisa de um programa hospedeiro para se propagar, ao passo que o cavalo de troia se replica de forma autônoma pela rede.
-
-CERTO ERRADO
-
-Resposta correta: ERRADO
-
-Os conceitos estão trocados. O worm se propaga sozinho pela rede e não precisa de hospedeiro. O cavalo de troia engana o usuário e não se replica por conta própria.
-
-Estilo CEBRASPEQuestão 2 · Backup
-
-Em uma rotina com backup normal no domingo e backups incrementais de segunda a quinta, a restauração dos dados na sexta-feira exige o backup normal e todos os incrementais feitos até quinta.
-
-CERTO ERRADO
-
-Resposta correta: CERTO
-
-O incremental copia só o que mudou desde o último backup de qualquer tipo. Por isso, a restauração usa o backup normal mais toda a sequência de incrementais, na ordem.
-
-Estilo CEBRASPEQuestão 3 · Redes
-
-Uma intranet é uma rede privada que usa as mesmas tecnologias da Internet e pode ser acessada por funcionários de filiais em outras cidades, por meio de VPN, sem deixar de ser uma intranet.
-
-CERTO ERRADO
-
-Resposta correta: CERTO
-
-A intranet se define pelo acesso restrito à organização, e não pelo alcance geográfico. A VPN apenas estende o acesso a usuários autorizados.
-
-Estilo CEBRASPEQuestão 4 · Exclusão de arquivos
-
-Quando o usuário exclui um arquivo de um pen drive com a tecla Delete, o Windows sempre envia esse arquivo para a Lixeira, de onde ele pode ser restaurado ao local original.
-
-CERTO ERRADO
-
-Resposta correta: ERRADO
-
-O termo “sempre” torna o item errado. Em regra, os arquivos apagados de unidades removíveis, como pen drives, não passam pela Lixeira.
-
-Estilo CEBRASPEQuestão 5 · Excel
-
-Se a fórmula =B2\*$E$1 for copiada da célula C2 para a célula D3, ela passará a ser =C3\*$E$1.
-
-CERTO ERRADO
-
-Resposta correta: CERTO
-
-A referência relativa B2 acompanha o deslocamento de uma coluna e uma linha e vira C3. Já $E$1 é absoluta e permanece igual.
-
 ## Conclusão: o que levar para a prova de informática para concursos
 
 Em síntese, informática para concursos se resolve comparando conceitos parecidos. O vírus depende de hospedeiro, e o worm não. O incremental exige a cadeia de backups, e o diferencial só o último. A intranet é privada, a extranet libera o acesso a convidados, e o cifrão trava a referência no Excel.

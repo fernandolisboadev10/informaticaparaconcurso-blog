@@ -1,0 +1,403 @@
+{
+ "questions": [
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "No Google Sheets, a função IMPORTRANGE permite importar dados de uma planilha diferente para a atual, facilitando a integração de informações.",
+   "options": [
+    "Certo",
+    "Errado, a função não existe",
+    "Certo, mas só entre pastas diferentes",
+    "Errado, só funciona no Microsoft Excel",
+    "Certo, mas não em planilhas compartilhadas"
+   ],
+   "answer": "A",
+   "comment": "A afirmativa está correta. A função IMPORTRANGE efetivamente permite o importamento de dados entre diferentes planilhas no Google Sheets. As alternativas erradas dão informações falsas sobre as limitações da função."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual função no Excel retorna o maior valor dentro de um intervalo de células?",
+   "options": [
+    "=MÁXIMO()",
+    "=MÍNIMO()",
+    "=SOMA()",
+    "=MAIOR()",
+    "=VALOR()"
+   ],
+   "answer": "A",
+   "comment": "A função =MÁXIMO() retorna o maior valor de um conjunto de dados. As outras funções servem para outros propósitos, como retornar o menor valor ou somar números."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No PowerPoint, para exibir o modo de exibição de anotações, deve-se selecionar ‘Exibir’ e, em seguida, ‘Mestre das Anotações’.",
+   "answer": "E",
+   "comment": "Para exibir o modo de anotações, deve-se ir em ‘Exibir’ e clicar em ‘Página de Anotações’, não ‘Mestre das Anotações’."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Qual é a função do recurso ‘Mesclar Células’ no Excel?",
+   "options": [
+    "Dividir uma célula em várias partes",
+    "Somar o conteúdo de várias células",
+    "Combinar várias células em uma única célula",
+    "Alterar o tamanho da linha",
+    "Copiar uma célula para outra"
+   ],
+   "answer": "C",
+   "comment": "A alternativa C está correta, uma vez que ‘Mesclar Células’ combina várias células em uma única célula. As outras opções descrevem funções diferentes."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Em apresentações no PowerPoint, qual a função do ‘Mestre de Slides’?",
+   "options": [
+    "Armazenar conteúdos de texto",
+    "Definir a formatação e layout geral dos slides",
+    "Exibir animações de forma automática",
+    "Controlar a transição entre slides",
+    "Gerar gráficos dinâmicos"
+   ],
+   "answer": "B",
+   "comment": "O ‘Mestre de Slides’ é utilizado para definir a formatação e layout dos slides de uma apresentação. As outras opções não descrevem a função do mestre de slides."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "No Word, como você pode numeração automática de páginas incluir no rodapé?",
+   "options": [
+    "Inserir -> Número de Página",
+    "Layout -> Páginas",
+    "Design -> Rodapé",
+    "Referências -> Páginas",
+    "Inserir -> Rodapé"
+   ],
+   "answer": "A",
+   "comment": "A opção ‘Inserir -> Número de Página’ permite incluir a numeração no rodapé automaticamente. As outras alternativas não permitem esse comando específico."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Ao inserir a função =PROCV(10;A1:B10;2;FALSO) no Excel, ela busca exatamente o valor 10 na primeira coluna do intervalo.",
+   "answer": "C",
+   "comment": "A função PROCV com o parâmetro FALSO realiza uma busca exata pela primeira coluna do intervalo especificado."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "No LibreOffice Writer, para alterar a orientação da página de Retrato para Paisagem, qual é a sequência correta de ações?",
+   "options": [
+    "Arquivo > Imprimir > Configurar",
+    "Formato > Página > Colunas",
+    "Formato > Página > Orientação",
+    "Configuração > Página > Layout",
+    "Visualizar > Orientação > Definir"
+   ],
+   "answer": "C",
+   "comment": "A opção correta para alterar a orientação da página é ‘Formato > Página > Orientação’. As demais alternativas não levam à alteração da orientação."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "No Excel, qual é o atalho para inserir uma nova planilha?",
+   "options": [
+    "Ctrl + N",
+    "Shift + F11",
+    "Alt + N",
+    "Ctrl + T",
+    "Shift + Ctrl + P"
+   ],
+   "answer": "B",
+   "comment": "O atalho Shift + F11 cria uma nova planilha dentro da pasta de trabalho do Excel. As outras opções não têm esta função específica."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "No LibreOffice Writer, como você pode adicionar um cabeçalho a um documento?",
+   "options": [
+    "Selecionando a opção ‘Inserir > Cabeçalho’",
+    "Clicando com o botão direito do mouse",
+    "Ajustando as margens do documento",
+    "Usando o menu ‘Arquivo’",
+    "Alterando o estilo de parágrafo"
+   ],
+   "answer": "A",
+   "comment": "A alternativa A está correta, pois a adição de um cabeçalho é feita por meio de ‘Inserir > Cabeçalho’. As outras opções não são caminhos corretos para realizar essa tarefa."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "Para inserir uma quebra de página manual no Word, sem usar o mouse, qual atalho de teclado deve ser utilizado?",
+   "options": [
+    "Shift+Enter",
+    "Ctrl+Shift+Enter",
+    "Alt+Enter",
+    "Enter",
+    "Ctrl+Enter"
+   ],
+   "answer": "E",
+   "comment": "Ctrl+Enter insere uma quebra de página, forçando o texto seguinte a começar em uma nova página. Shift+Enter insere uma quebra de linha (sem novo parágrafo); Enter sozinho cria um novo parágrafo."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "No LibreOffice Writer, qual formato é adequado para criar um índice automático?",
+   "options": [
+    "Negrito",
+    "Apagar formatação",
+    "Estilo de parágrafo",
+    "Numeração",
+    "Cor do texto"
+   ],
+   "answer": "C",
+   "comment": "Utilizar estilos de parágrafo corretos permite ao usuário criar um índice automático. As outras opções não influenciam a criação de um índice."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "mc",
+   "text": "No PowerPoint e no Impress, o recurso de “Transição de Slides” controla:",
+   "options": [
+    "A animação de entrada e saída de elementos dentro de um mesmo slide",
+    "A cor de fundo padrão aplicada a todos os slides da apresentação",
+    "O tempo total de duração da apresentação inteira",
+    "O efeito visual/animação que ocorre na troca entre um slide e o próximo durante a apresentação",
+    "A ordem alfabética dos slides dentro do arquivo"
+   ],
+   "answer": "D",
+   "comment": "Transição de Slides é o efeito aplicado na TROCA entre slides (ex.: dissolver, cortar, empurrar). Já a Animação controla elementos DENTRO de um mesmo slide (ex.: um texto que aparece aos poucos)."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Qual é o formato padrão de arquivo do LibreOffice Impress para apresentações?",
+   "options": [
+    ".docx",
+    ".pptx",
+    ".odp",
+    ".odt",
+    ".xls"
+   ],
+   "answer": "C",
+   "comment": "O formato padrão do LibreOffice Impress é ‘.odp’. Os outros formatos pertencem a outros aplicativos, como o MS Word e Excel."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Em PowerPoint, a transição ‘Desvanecer’ cria um efeito visual nas slides quando um se aproxima do outro.",
+   "options": [
+    "Certo",
+    "Errado",
+    "Somente em slides animados",
+    "Certo, mas só no Mac",
+    "Certo apenas na versão online"
+   ],
+   "answer": "A",
+   "comment": "A afirmativa está correta. A transição ‘Desvanecer’ é de fato um efeito visual que suaviza a mudança entre os slides. As demais opções são falsas porque a transição não está restrita a características específicas de versões ou animações."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "No Excel, a função =SOMA.SE(A1:A10, “>5”, B1:B10) soma os valores no intervalo B1:B10 que estão alinhados a valores maiores que 5 em A1:A10.",
+   "answer": "C",
+   "comment": "A função SOMA.SE condicionalmente soma valores que correspondem a um critério específico inserido em outras células."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "No PowerPoint, qual é a função principal dos ‘Notas do Apresentador’?",
+   "options": [
+    "Exibir slide secundário durante a apresentação",
+    "Registrar feedback do público",
+    "Adicionar conteúdo extra para apresentação",
+    "Ajudar o apresentador com dicas específicas",
+    "Facilitar a criação de gráficos"
+   ],
+   "answer": "D",
+   "comment": "As Notas do Apresentador servem para ajudar durante a apresentação, proporcionando informações adicionais que não aparecem para o público. As demais opções não refletem a verdadeira função das notas."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Em um documento do Microsoft Word, qual é a função da ferramenta ‘Espaçamento de Parágrafo’?",
+   "options": [
+    "Aumenta o espaço entre linhas dentro de um parágrafo.",
+    "Aumenta o espaço entre os parágrafos do texto.",
+    "Adiciona bordas ao parágrafo selecionado.",
+    "Altera o tamanho da fonte do parágrafo selecionado.",
+    "Ajusta o recuo do texto na margem do documento."
+   ],
+   "answer": "B",
+   "comment": "A opção B está correta, pois a ferramenta ‘Espaçamento de Parágrafo’ define o espaço entre dois parágrafos. As outras opções falham em descrever corretamente essa função, pois não se referem especificamente ao espaçamento entre parágrafos."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "No LibreOffice Impress, qual é a função de adicionar uma animação a um objeto?",
+   "options": [
+    "Criar um novo slide",
+    "Dar ênfase ou destaque ao objeto",
+    "Salvar a apresentação",
+    "Alterar a cor do objeto",
+    "Copiar o objeto para outro slide"
+   ],
+   "answer": "B",
+   "comment": "Adicionar uma animação a um objeto serve para destacar ou dar ênfase a ele durante a apresentação. As outras funções não têm relação direta com animações."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "No Microsoft PowerPoint, como você pode adicionar um vídeo a um slide?",
+   "options": [
+    "Inserir > Vídeo da Web",
+    "Inserir > Mídia",
+    "Adicionar > Vídeo",
+    "Formatar > Vídeo",
+    "Desenho > Inserir Vídeo"
+   ],
+   "answer": "A",
+   "comment": "A ação correta é ‘Inserir > Vídeo da Web’, onde o usuário pode escolher a origem do vídeo. As demais opções não representam os passos corretos para esta função."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Qual a função do recurso ‘Filtro’ no Microsoft Excel?",
+   "options": [
+    "Oculta dados não selecionados temporariamente",
+    "Aplica formatação específica nas células",
+    "Ordena automaticamente os dados",
+    "Cria gráficos dinâmicos com as informações",
+    "Faz a impressão apenas de linhas selecionadas"
+   ],
+   "answer": "A",
+   "comment": "A função correta do recurso ‘Filtro’ é ocultar dados que não atendem aos critérios selecionados. As outras opções não estão ligadas à função correta do filtro."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Qual recurso do PowerPoint permite adicionar transições entre os slides de uma apresentação?",
+   "options": [
+    "Temas",
+    "Animações",
+    "Slides Mestre",
+    "Transições",
+    "Design"
+   ],
+   "answer": "D",
+   "comment": "O recurso ‘Transições’ no PowerPoint é especificamente destinado a mudar a forma como um slide aparece ou desaparece. As outras opções estão relacionadas a diferentes aspectos do design da apresentação."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Na criação de uma apresentação no PowerPoint, como você pode adicionar uma nova seção a uma apresentação existente?",
+   "options": [
+    "Clicando com o botão direito no painel de slides e escolhendo ‘Nova seção’",
+    "Selecionando ‘Inserir’ e depois ‘Seção’",
+    "Arrastando um slide para a posição de seção",
+    "Clicando em ‘Design’ e escolhendo ‘Adicionar Seção’",
+    "Esse recurso não é disponível no PowerPoint"
+   ],
+   "answer": "A",
+   "comment": "Clicar com o botão direito no painel de slides e selecionar ‘Nova seção’ permite que você inicie uma seção em sua apresentação. As outras opções não são válidas."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Qual é a função da tecla F12 em um documento do Word?",
+   "options": [
+    "Salvar como",
+    "Abrir o arquivo atual",
+    "Inserir uma tabela",
+    "Imprimir o documento",
+    "Fechar o Word"
+   ],
+   "answer": "A",
+   "comment": "A alternativa A está correta, pois a tecla F12 no Word abre a janela ‘Salvar Como’. As outras opções correspondem a ações diferentes ou não têm relação com a tecla F12."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "mc",
+   "text": "Na planilha do Excel, qual a diferença entre ‘SOMA’ e ‘SOMASE’?",
+   "options": [
+    "SOMA é usada para somar somente inteiros, enquanto SOMASE pode somar qualquer tipo",
+    "SOMA soma um intervalo, enquanto SOMASE soma baseado em critérios especificados",
+    "Ambas funcionam da mesma forma",
+    "SOMA pode incluir referências externas, enquanto SOMASE não",
+    "SOMA é mais rápida que SOMASE"
+   ],
+   "answer": "B",
+   "comment": "A ‘SOMA’ soma intervalos sem critérios, enquanto ‘SOMASE’ inclui critérios para a soma, tornando sua função mais específica."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "Para criar um gráfico no Excel, qual é o primeiro passo a ser realizado?",
+   "options": [
+    "Selecionar os dados a serem representados",
+    "Escolher o tipo de gráfico desejado",
+    "Clicar com o botão direito na planilha",
+    "Salvar a planilha",
+    "Inserir uma nova aba"
+   ],
+   "answer": "A",
+   "comment": "O primeiro passo para criar um gráfico é selecionar os dados. As outras opções vêm em etapas posteriores."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "No PowerPoint, qual das seguintes opções não é um formato suportado de vídeo para inserção em uma apresentação?",
+   "options": [
+    "MP4",
+    "AVI",
+    "WMV",
+    "MOV",
+    "TXT"
+   ],
+   "answer": "E",
+   "comment": "TXT é um formato de texto e não de vídeo. Os outros formatos são todos suportados pelo PowerPoint."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "No Microsoft Word, qual das seguintes opções é a mais apropriada para aplicar um estilo predefinido a um bloco de texto já digitado?",
+   "options": [
+    "Clique na guia ‘Início’ e selecione um estilo no grupo ‘Estilos’.",
+    "Utilize o atalho Ctrl + P para aplicar o estilo.",
+    "Copie o texto e cole no documento com formatação.",
+    "Selecione o texto e altere a fonte diretamente na barra de ferramentas.",
+    "Aplique um novo estilo através do menu ‘Arquivo’."
+   ],
+   "answer": "A",
+   "comment": "A resposta correta é a alternativa A, pois para aplicar um estilo predefinido, devemos acessar a guia ‘Início’ e escolher um estilo do grupo ‘Estilos’. As outras opções não se referem diretamente à aplicação de estilos predefinidos, tornando-as incorretas."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "No Excel, o que acontece quando você utiliza a função PROCV?",
+   "options": [
+    "Copia células entre planilhas",
+    "Cria gráficos automaticamente",
+    "Busca um valor em uma coluna e retorna um valor em outra coluna",
+    "Soma valores de uma coluna",
+    "Aplica formatação de células"
+   ],
+   "answer": "C",
+   "comment": "A função PROCV busca um valor em uma coluna e retorna um valor correspondente em outra coluna. As outras opções não representam a funcionalidade do PROCV."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Qual é a função do recurso ‘Slide Mestre’ no PowerPoint?",
+   "options": [
+    "Alterar o layout de um único slide",
+    "Modificar o fundo de todos os slides ao mesmo tempo",
+    "Inserir gráficos e tabelas",
+    "Criar animações de transição entre slides",
+    "Ajustar o tempo de exibição de slides"
+   ],
+   "answer": "B",
+   "comment": "O ‘Slide Mestre’ permite a modificação do layout e do design de todos os slides simultaneamente. As outras opções não estão relacionadas diretamente à sua função."
+  }
+ ]
+}

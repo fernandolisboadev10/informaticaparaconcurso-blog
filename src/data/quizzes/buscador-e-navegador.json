@@ -1,0 +1,67 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O navegador é o programa responsável por interpretar o código das páginas da web e exibi-las ao usuário.",
+   "answer": "C",
+   "comment": "O navegador interpreta HTML, CSS e JavaScript para exibir a página. Essa é a definição central do que é um browser."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O Google Chrome é considerado o buscador mais utilizado atualmente.",
+   "answer": "E",
+   "comment": "O Chrome é um navegador. O buscador mais utilizado do mundo é o Google Search, acessado através do navegador."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Um buscador pode ser acessado sem a necessidade de um navegador instalado no dispositivo, em qualquer situação.",
+   "answer": "E",
+   "comment": "A expressão “em qualquer situação” é o alerta clássico do Cebraspe. Na prática comum, o acesso a um buscador depende de um navegador ou de um aplicativo com motor de navegação embutido."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O Bing é o mecanismo de busca padrão do navegador Microsoft Edge.",
+   "answer": "C",
+   "comment": "A Microsoft desenvolve tanto o navegador Edge quanto o buscador Bing, e o Bing vem configurado como padrão no Edge."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Toda empresa que desenvolve um navegador também desenvolve um buscador próprio.",
+   "answer": "E",
+   "comment": "A Mozilla desenvolve o Firefox, mas não possui buscador próprio. O Firefox usa o Google, o Bing ou o DuckDuckGo como buscador configurável."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Sítio de busca e navegador de internet são termos sinônimos, pois ambos permitem que o usuário acesse páginas na internet.",
+   "answer": "E",
+   "comment": "O navegador é o programa usado para acessar a internet (Chrome, Firefox, Edge). O sítio de busca é apenas uma das páginas acessadas por meio dele, dedicada a localizar outras páginas."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Um sítio de busca localiza páginas na internet por meio de um processo que envolve, nessa ordem, as seguintes etapas:",
+   "options": [
+    "Indexação, rastreamento e ranqueamento",
+    "Ranqueamento, indexação e rastreamento",
+    "Rastreamento, indexação e ranqueamento",
+    "Rastreamento, ranqueamento e indexação",
+    "Indexação, ranqueamento e rastreamento"
+   ],
+   "answer": "C",
+   "comment": "O sítio de busca primeiro rastreia a internet com robôs (crawlers), depois indexa o conteúdo encontrado e, por fim, aplica o algoritmo de ranqueamento para ordenar os resultados."
+  },
+  {
+   "banca": "VUNESP",
+   "type": "ce",
+   "text": "Uma página que aparece entre os primeiros resultados de um sítio de busca é, necessariamente, segura e confiável.",
+   "answer": "E",
+   "comment": "O ranqueamento de um sítio de busca não garante segurança. Páginas falsas, usadas em golpes de phishing, também podem aparecer bem posicionadas nos resultados."
+  }
+ ]
+}

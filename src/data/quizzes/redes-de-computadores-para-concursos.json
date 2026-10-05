@@ -1,0 +1,74 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A internet caracteriza-se como uma rede pública e mundial, sem um órgão central único responsável por todo o seu controle.",
+   "answer": "C",
+   "comment": "Não existe uma autoridade única que controle a internet. Ela é descentralizada, com provedores e organizações cooperando entre si."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A internet funciona de forma centralizada, estando sob o controle exclusivo de um único órgão internacional.",
+   "answer": "E",
+   "comment": "É justamente o contrário: a internet é descentralizada e não está sob o controle exclusivo de nenhum órgão."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Uma intranet nunca pode ter qualquer ponto de conexão com a internet, sob pena de deixar de ser considerada intranet.",
+   "answer": "E",
+   "comment": "A intranet pode se conectar à internet, desde que haja controle de acesso (firewall, VPN). O que a define é a restrição de quem entra, e não a ausência total de conexão externa."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A intranet pode se conectar à internet, desde que exista controle de acesso, como firewall, entre as duas redes.",
+   "answer": "C",
+   "comment": "Muitas intranets se conectam à internet por meio de firewalls e VPNs, sempre com controle rígido de acesso."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Fornecedores e parceiros comerciais autorizados são exemplos de usuários que podem acessar uma extranet.",
+   "answer": "C",
+   "comment": "A extranet estende parte da intranet a públicos externos específicos e autorizados, como fornecedores, parceiros e clientes."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Diferentemente da intranet, a extranet dispensa qualquer mecanismo de autenticação para o acesso externo.",
+   "answer": "E",
+   "comment": "A extranet exige autenticação (login, senha, VPN ou certificado). Rede aberta a qualquer pessoa, sem login, é a definição de internet."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "Uma comunicação feita exclusivamente por HTTP pode ser interceptada e lida por terceiros, caso não haja outra proteção.",
+   "answer": "C",
+   "comment": "O HTTP transmite os dados em texto claro, sem criptografia. Quem interceptar o tráfego consegue ler o conteúdo."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A presença do cadeado no navegador indica exclusivamente que o site é confiável e livre de golpes.",
+   "answer": "E",
+   "comment": "O cadeado indica que a conexão usa HTTPS, ou seja, que os dados trafegam criptografados. Isso não garante que o site seja confiável: um site malicioso também pode usar HTTPS."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O HTTPS garante confidencialidade e integridade aos dados transmitidos entre navegador e servidor.",
+   "answer": "C",
+   "comment": "A criptografia via TLS/SSL protege o caminho dos dados, assegurando que não sejam lidos nem alterados no trajeto."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "A VPN elimina totalmente qualquer risco de segurança, tornando dispensável o uso de firewall.",
+   "answer": "E",
+   "comment": "A VPN protege o tráfego em trânsito, mas não substitui outras camadas, como firewall, antivírus e a própria autenticação do usuário. Palavras como “elimina totalmente” costumam indicar erro."
+  }
+ ]
+}

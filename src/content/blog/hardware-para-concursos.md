@@ -150,7 +150,7 @@ Da mesma forma, você precisa conhecer as mídias removíveis:
 -   **Pendrive e cartões de memória (SD, microSD):** usam memória flash, são não voláteis e se conectam por USB ou por leitores de cartão.
 -   **Mídias ópticas:** CD (cerca de 700 MB), DVD (4,7 GB em camada simples) e Blu-ray (25 GB em camada simples). Nelas, um feixe de laser faz a leitura e a gravação.
 
-Cabe destacar que HDs e SSDs externos também entram nesse grupo quando você os liga por USB. Aliás, combinar esses dispositivos com o [armazenamento em nuvem](#link-armazenamento-em-nuvem) é a base da [regra 3-2-1 de backup](#link-regra-3-2-1-backup), que protege seus arquivos contra falhas e perdas.
+Cabe destacar que HDs e SSDs externos também entram nesse grupo quando você os liga por USB. Aliás, combinar esses dispositivos com o [armazenamento em nuvem](/cloud-storage-armazenamento-de-dados-na-nuvem/) é a base da [regra 3-2-1 de backup](/regra-3-2-1/), que protege seus arquivos contra falhas e perdas.
 
 ## Placa-mãe, chipset, barramentos e interfaces
 
@@ -165,7 +165,7 @@ Já os barramentos formam os caminhos por onde os dados trafegam. Na prova, os m
 -   **USB:** conecta periféricos externos e permite ligar e desligar dispositivos com o computador em funcionamento (hot swap);
 -   **HDMI e DisplayPort:** transmitem vídeo e áudio digitais para monitores e TVs.
 
-Esse tema tem muitos detalhes de versões e velocidades. Por esse motivo, preparei um artigo exclusivo sobre [barramentos e interfaces de hardware](#link-barramentos-e-interfaces), com as comparações que mais aparecem nas provas.
+Esse tema tem muitos detalhes de versões e velocidades. Por esse motivo, preparei um artigo exclusivo sobre barramentos e interfaces de hardware, com as comparações que mais aparecem nas provas.
 
 ## Periféricos de entrada, saída e entrada/saída
 
@@ -217,121 +217,13 @@ Agora que você conhece os componentes, veja os erros que as bancas mais explora
 
 Em síntese, a banca raramente cobra definições isoladas. Ela cobra comparações. Portanto, estude cada componente sempre ao lado do componente que a banca costuma usar como armadilha para ele.
 
-## Questões de Certo ou Errado
-
-Hora de testar o que você aprendeu. Os itens abaixo seguem o estilo Cebraspe: julgue cada afirmação como certa ou errada e, em seguida, confira o comentário.
-
-Questões de Certo ou Errado: Hardware
-
-Julgue cada item e confira o comentário logo abaixo.
-
-Questão 1Estilo CEBRASPE
-
-A memória RAM é volátil, ou seja, perde seu conteúdo quando o computador desliga.
-
-Certo Errado
-
-Resposta correta: Certo
-
-A RAM depende de energia para manter os dados. Por isso, um arquivo não salvo desaparece em uma queda de energia.
-
-Questão 2Estilo CEBRASPE
-
-Por estar mais próxima do processador, a memória cache possui capacidade de armazenamento superior à da memória RAM.
-
-Certo Errado
-
-Resposta correta: Errado
-
-A cache trabalha mais rápido que a RAM, mas guarda bem menos dados. Na hierarquia de memória, velocidade e capacidade andam em sentidos opostos.
-
-Questão 3Estilo CEBRASPE
-
-Na arquitetura de Von Neumann, instruções e dados compartilham a mesma memória.
-
-Certo Errado
-
-Resposta correta: Certo
-
-Esse é o conceito de programa armazenado, a principal característica do modelo de Von Neumann.
-
-Questão 4Estilo CEBRASPE
-
-A Unidade Lógica e Aritmética é o componente da CPU que busca e decodifica as instruções dos programas.
-
-Certo Errado
-
-Resposta correta: Errado
-
-Quem busca e decodifica as instruções é a Unidade de Controle. A ULA executa as operações aritméticas e lógicas.
-
-Questão 5Estilo CEBRASPE
-
-Os SSDs armazenam dados em memória flash e não possuem partes móveis.
-
-Certo Errado
-
-Resposta correta: Certo
-
-Justamente por não ter partes mecânicas, o SSD oferece acesso mais rápido e resiste melhor a impactos que o HD.
-
-Questão 6Estilo CEBRASPE
-
-Todo SSD no formato M.2 utiliza exclusivamente o protocolo NVMe.
-
-Certo Errado
-
-Resposta correta: Errado
-
-M.2 é um formato físico. Existem SSDs M.2 que trabalham com SATA e outros que trabalham com NVMe. Repare no “exclusivamente”.
-
-Questão 7Estilo CEBRASPE
-
-Por ficar gravado em um chip da placa-mãe, o firmware pertence à categoria de hardware.
-
-Certo Errado
-
-Resposta correta: Errado
-
-Firmware é software. O chip é hardware, mas o programa gravado nele continua sendo software.
-
-Questão 8Estilo CEBRASPE
-
-A impressora multifuncional com scanner pertence ao grupo dos dispositivos de entrada e saída.
-
-Certo Errado
-
-Resposta correta: Certo
-
-Ela imprime (saída) e digitaliza (entrada), por isso atua nas duas direções.
-
-Questão 9Estilo CEBRASPE
-
-Uma conexão de internet de 100 Mbps permite transferir 100 megabytes por segundo.
-
-Certo Errado
-
-Resposta correta: Errado
-
-Mbps mede megabits por segundo. Como 1 byte tem 8 bits, 100 Mbps equivalem a cerca de 12,5 MB por segundo.
-
-Questão 10Estilo CEBRASPE
-
-O UEFI, sucessor do BIOS, oferece recursos como Secure Boot e inicialização por discos com tabela de partição GPT.
-
-Certo Errado
-
-Resposta correta: Certo
-
-Além desses recursos, o UEFI também permite interface gráfica na configuração do firmware.
-
 ## Conclusão
 
 Em resumo, estudar hardware para concursos exige mais compreensão do que memorização. Quando você entende o caminho dos dados, da entrada ao processamento e da memória à saída, as questões deixam de ser um jogo de siglas.
 
 Além disso, você viu que a banca gosta de comparações: RAM e ROM, cache e RAM, HD e SSD, M.2 e NVMe, bits e bytes. Revise esses pares até conseguir explicá-los sem consultar o material.
 
-Como próximo passo, resolva o [simulado de Hardware](#link-simulado-hardware) com 30 questões comentadas. É ali que você descobre quais pontos ainda precisam de revisão antes da prova.
+Como próximo passo, resolva o [simulado de Hardware](/simulado-hardware/) com 30 questões comentadas. É ali que você descobre quais pontos ainda precisam de revisão antes da prova.
 
 ## Fontes e Referências
 

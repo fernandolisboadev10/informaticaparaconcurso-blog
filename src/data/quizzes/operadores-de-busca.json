@@ -1,0 +1,109 @@
+{
+ "questions": [
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O operador de busca site: permite restringir os resultados a um domínio específico, sendo necessário inserir um espaço entre o operador e o domínio pesquisado.",
+   "answer": "E",
+   "comment": "Não pode haver espaço entre o operador e o termo. site:gov.br funciona, mas site: gov.br não funciona, exatamente como a Central de Ajuda do Google descreve."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O uso de aspas em uma pesquisa no Google faz com que o buscador retorne apenas páginas que contenham a expressão exatamente como foi digitada, na mesma ordem.",
+   "answer": "C",
+   "comment": "As aspas forçam a busca pela frase exata, na ordem digitada. Sem elas, o Google procura as palavras soltas e pode até trocar termos por sinônimos."
+  },
+  {
+   "banca": "FGV",
+   "type": "mc",
+   "text": "Qual operador de busca exclui um termo específico dos resultados de uma pesquisa no Google?",
+   "options": [
+    "OR",
+    "filetype:",
+    "– (hífen)",
+    "site:",
+    "after:"
+   ],
+   "answer": "C",
+   "comment": "O hífen colado antes de uma palavra remove das buscas as páginas que contêm esse termo, como em navegador -chrome."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Para restringir uma pesquisa apenas a arquivos em formato PDF, qual operador deve ser utilizado?",
+   "options": [
+    "filetype:pdf",
+    "type:pdf",
+    "format:pdf",
+    "ext:pdf",
+    "doc:pdf"
+   ],
+   "answer": "A",
+   "comment": "O filetype: seguido da extensão filtra os resultados por tipo de arquivo, e é um dos operadores mais úteis para localizar editais em PDF."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O operador OR, quando digitado em letras minúsculas (or), continua funcionando normalmente como operador booleano de disjunção na Pesquisa Google.",
+   "answer": "E",
+   "comment": "Escrito em minúsculas, o “or” é tratado como uma palavra comum da pesquisa, não como operador. Ele só funciona em maiúsculas, regra que o próprio Google mantém em outras ferramentas, como o Vault."
+  },
+  {
+   "banca": "IADES",
+   "type": "mc",
+   "text": "O operador que localiza documentos atualizados antes de uma data específica é:",
+   "options": [
+    "after:",
+    "before:",
+    "date:",
+    "until:",
+    "old:"
+   ],
+   "answer": "B",
+   "comment": "O before: filtra documentos atualizados antes de uma data ou ano informado. O after: faz o oposto, e os dois podem ser combinados na mesma busca."
+  },
+  {
+   "banca": "FCC",
+   "type": "mc",
+   "text": "Entre os operadores a seguir, assinale o único que está nomeado atualmente na página oficial “Refinar pesquisas do Google”, da Central de Ajuda da Pesquisa Google.",
+   "options": [
+    "intitle:",
+    "OR",
+    "filetype:",
+    "inurl:",
+    "* (asterisco)"
+   ],
+   "answer": "C",
+   "comment": "A página oficial de refinamento de pesquisas cita hoje apenas seis operadores: aspas, site:, hífen, before:, after: e filetype:. Os demais continuam funcionando, mas não aparecem mais nomeados ali."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O operador cache:, que permitia acessar a versão em cache de uma página armazenada pelo Google, foi removido e não está mais disponível.",
+   "answer": "C",
+   "comment": "O Google removeu o link “em cache” e a documentação do operador cache: em 2024. O comando deixou de funcionar desde então."
+  },
+  {
+   "banca": "CESGRANRIO",
+   "type": "mc",
+   "text": "Assinale a sintaxe correta para combinar dois operadores em uma única pesquisa, buscando um edital em PDF dentro de um domínio específico.",
+   "options": [
+    "site:cebraspe.org.br filetype:pdf edital",
+    "site: cebraspe.org.br filetype: pdf edital",
+    "site=cebraspe.org.br filetype=pdf edital",
+    "[site:cebraspe.org.br] filetype:pdf edital",
+    "site:cebraspe.org.br OR filetype:pdf edital"
+   ],
+   "answer": "A",
+   "comment": "Cada operador fica colado ao seu termo, sem espaço, e os operadores são separados entre si por espaço simples, sem parênteses, sinais de igual ou OR entre eles."
+  },
+  {
+   "banca": "CEBRASPE",
+   "type": "ce",
+   "text": "O asterisco (*), quando usado dentro de uma expressão entre aspas, funciona como coringa e é substituído automaticamente pelo termo que o Google considerar mais adequado ao contexto da frase.",
+   "answer": "C",
+   "comment": "Dentro de aspas, o asterisco ocupa o lugar de um termo desconhecido, e o Google preenche a lacuna com a palavra que julgar mais provável para completar a frase."
+  }
+ ]
+}

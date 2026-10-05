@@ -1,6 +1,6 @@
 # informaticaparaconcurso.com.br
 
-Blog Informática para Concursos, feito em Astro e publicado no GitHub Pages. Migrado do WordPress.
+Blog Informática para Concurso, feito em Astro e publicado no GitHub Pages. Migrado do WordPress.
 
 ```bash
 npm install
