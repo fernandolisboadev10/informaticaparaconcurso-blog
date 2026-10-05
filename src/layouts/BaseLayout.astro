@@ -49,12 +49,13 @@ const organizationSchema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-adsense-account" content="ca-pub-1196503092730158" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1196503092730158" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="description" content={description} />
     <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
-    <meta name="google-site-verification" content="OPPy-qCCStTp6SR-W42LNnfGC23bPU-NjbMeEF3mBA0" />
+    <meta name="google-site-verification" content="X0WtOXNS9hrK5eG-BF29jRIgMf6yj20Xu1gEDDW6Whc" />
 
     <script is:inline>
       // Consent: EU/UK-style timezones start denied (opt-in); everywhere else starts granted (opt-out).
@@ -69,23 +70,11 @@ const organizationSchema = {
         var stored = null;
         try { stored = localStorage.getItem('cookie-consent'); } catch (e) {}
         var state = (stored === 'granted' || stored === 'denied') ? stored : (strict ? 'denied' : 'granted');
-        var adsLoaded = false;
-
-        function loadAds() {
-          if (adsLoaded) return;
-          adsLoaded = true;
-          var s = document.createElement('script');
-          s.async = true;
-          s.crossOrigin = 'anonymous';
-          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1196503092730158';
-          document.head.appendChild(s);
-        }
-
         gtag('consent', 'default', {
           ad_storage: state, analytics_storage: state, ad_user_data: state, ad_personalization: state
         });
         gtag('js', new Date());
-        gtag('config', 'G-6EQYV5G6JN');
+        gtag('config', 'G-0JD2BJEBBS');
 
         // Third-party scripts (analytics and ads) load on the first interaction, or a few seconds
         // after the page finished loading, so they never compete with the first paint.
@@ -95,9 +84,8 @@ const organizationSchema = {
           thirdPartyLoaded = true;
           var g = document.createElement('script');
           g.async = true;
-          g.src = 'https://www.googletagmanager.com/gtag/js?id=G-6EQYV5G6JN';
+          g.src = 'https://www.googletagmanager.com/gtag/js?id=G-0JD2BJEBBS';
           document.head.appendChild(g);
-          if (state === 'granted') loadAds();
         }
         ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (ev) {
           window.addEventListener(ev, loadThirdParty, { once: true, passive: true });
@@ -112,7 +100,6 @@ const organizationSchema = {
             gtag('consent', 'update', {
               ad_storage: value, analytics_storage: value, ad_user_data: value, ad_personalization: value
             });
-            if (value === 'granted' && thirdPartyLoaded) loadAds();
           }
         };
       })();
