@@ -8,8 +8,8 @@ export async function GET(context) {
   );
 
   return rss({
-    title: 'TechOnPlay',
-    description: 'Guias, reviews e notícias sobre IA, jogos, tutoriais e curiosidades.',
+    title: 'Informática para Concursos',
+    description: 'Resumos, simulados e o que cai na prova de informática dos concursos, em linguagem simples e direta.',
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,

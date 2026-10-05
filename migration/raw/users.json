@@ -1,21 +1,20 @@
 [
   {
-    "id": 1,
+    "id": 4,
     "name": "Fernando Lisboa",
-    "url": "https://techonplay.com.br",
-    "description": "",
-    "link": "https://techonplay.com.br/author/fernandolisboa-devgmail-com/",
-    "slug": "fernandolisboa-devgmail-com",
+    "url": "https://informaticaparaconcurso.com.br/",
+    "description": "Sou professor de robótica e informática, especialista em inteligência artificial, redator e proprietário do site Informática para Concurso. Meu objetivo é ajudar estudantes e concurseiros de todo o país com conteúdo gratuito, prático e atualizado para fortalecer a aprendizagem e a preparação para provas.",
+    "link": "https://informaticaparaconcurso.com.br/author/fernando-lisboa/",
+    "slug": "fernando-lisboa",
     "avatar_urls": {
       "24": "https://secure.gravatar.com/avatar/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=24&d=mm&r=g",
       "48": "https://secure.gravatar.com/avatar/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=48&d=mm&r=g",
       "96": "https://secure.gravatar.com/avatar/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=96&d=mm&r=g"
     },
     "meta": [],
-    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Fernando Lisboa, Autor em TechOnPlayBr ▶</title>\n<meta name=\"description\" content=\"I am a systems analyst, professor, and technology researcher with a strong focus on digital innovation, tools, and emerging technologies. I am the founder and lead editor of TechOnPlay, where I publish in-depth articles, guides, and analysis on technology, productivity, and AI. My work combines technical expertise with a practical approach, helping readers understand and apply technology in real-world scenarios. Artificial Intelligence is part of my broader portfolio, used to enhance research, analysis, and digital solutions.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://techonplay.com.br/author/fernandolisboa-devgmail-com/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"profile\" />\n<meta property=\"og:title\" content=\"Fernando Lisboa, Autor em TechOnPlayBr ▶\" />\n<meta property=\"og:description\" content=\"I am a systems analyst, professor, and technology researcher with a strong focus on digital innovation, tools, and emerging technologies. I am the founder and lead editor of TechOnPlay, where I publish in-depth articles, guides, and analysis on technology, productivity, and AI. My work combines technical expertise with a practical approach, helping readers understand and apply technology in real-world scenarios. Artificial Intelligence is part of my broader portfolio, used to enhance research, analysis, and digital solutions.\" />\n<meta property=\"og:url\" content=\"https://techonplay.com.br/author/fernandolisboa-devgmail-com/\" />\n<meta property=\"og:site_name\" content=\"TechOnPlayBr ▶\" />\n<meta property=\"og:image\" content=\"https://secure.gravatar.com/avatar/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=500&d=mm&r=g\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"ProfilePage\",\"@id\":\"https:\\/\\/techonplay.com.br\\/author\\/fernandolisboa-devgmail-com\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/author\\/fernandolisboa-devgmail-com\\/\",\"name\":\"Fernando Lisboa, Autor em TechOnPlayBr ▶\",\"isPartOf\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\"},\"description\":\"I am a systems analyst, professor, and technology researcher with a strong focus on digital innovation, tools, and emerging technologies. I am the founder and lead editor of TechOnPlay, where I publish in-depth articles, guides, and analysis on technology, productivity, and AI. My work combines technical expertise with a practical approach, helping readers understand and apply technology in real-world scenarios. Artificial Intelligence is part of my broader portfolio, used to enhance research, analysis, and digital solutions.\",\"breadcrumb\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/author\\/fernandolisboa-devgmail-com\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/techonplay.com.br\\/author\\/fernandolisboa-devgmail-com\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/techonplay.com.br\\/author\\/fernandolisboa-devgmail-com\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https:\\/\\/techonplay.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Arquivos para Fernando Lisboa\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"name\":\"TechOnPlayBr ▶\",\"description\":\"https:\\/\\/techonplay.com.br\\/\",\"publisher\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/techonplay.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\",\"name\":\"TechOnPlayBr ▶\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"contentUrl\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"width\":538,\"height\":91,\"caption\":\"TechOnPlayBr ▶\"},\"image\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\"}},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/person\\/f2a598a5199231226d2801b894b24100\",\"name\":\"Fernando Lisboa\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=96&d=mm&r=g\",\"url\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=96&d=mm&r=g\",\"contentUrl\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=96&d=mm&r=g\",\"caption\":\"Fernando Lisboa\"},\"sameAs\":[\"https:\\/\\/techonplay.com.br\"],\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/author\\/fernandolisboa-devgmail-com\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Fernando Lisboa, Autor em Informática para Concursos</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://informaticaparaconcurso.com.br/author/fernando-lisboa/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"profile\" />\n<meta property=\"og:title\" content=\"Fernando Lisboa, Autor em Informática para Concursos\" />\n<meta property=\"og:url\" content=\"https://informaticaparaconcurso.com.br/author/fernando-lisboa/\" />\n<meta property=\"og:site_name\" content=\"Informática para Concursos\" />\n<meta property=\"og:image\" content=\"https://secure.gravatar.com/avatar/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=500&d=mm&r=g\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"ProfilePage\",\"@id\":\"https://informaticaparaconcurso.com.br/author/fernando-lisboa/\",\"url\":\"https://informaticaparaconcurso.com.br/author/fernando-lisboa/\",\"name\":\"Fernando Lisboa, Autor em Informática para Concursos\",\"isPartOf\":{\"@id\":\"https://informaticaparaconcurso.com.br/#website\"},\"breadcrumb\":{\"@id\":\"https://informaticaparaconcurso.com.br/author/fernando-lisboa/#breadcrumb\"},\"inLanguage\":\"pt-BR\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://informaticaparaconcurso.com.br/author/fernando-lisboa/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://informaticaparaconcurso.com.br/author/fernando-lisboa/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https://informaticaparaconcurso.com.br/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Arquivos para Fernando Lisboa\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://informaticaparaconcurso.com.br/#website\",\"url\":\"https://informaticaparaconcurso.com.br/\",\"name\":\"Informática para Concursos\",\"description\":\"O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://informaticaparaconcurso.com.br/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Person\",\"@id\":\"https://informaticaparaconcurso.com.br/#/schema/person/c9261cb44c079dd88c7e56b02c4e429d\",\"name\":\"Fernando Lisboa\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https://informaticaparaconcurso.com.br/#/schema/person/image/\",\"url\":\"https://secure.gravatar.com/avatar/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=96&d=mm&r=g\",\"contentUrl\":\"https://secure.gravatar.com/avatar/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=96&d=mm&r=g\",\"caption\":\"Fernando Lisboa\"},\"description\":\"Sou professor de robótica e informática, especialista em inteligência artificial, redator e proprietário do site Informática para Concurso. Meu objetivo é ajudar estudantes e concurseiros de todo o país com conteúdo gratuito, prático e atualizado para fortalecer a aprendizagem e a preparação para provas.\",\"sameAs\":[\"https://informaticaparaconcurso.com.br/\"],\"mainEntityOfPage\":{\"@id\":\"https://informaticaparaconcurso.com.br/author/fernando-lisboa/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
     "yoast_head_json": {
-      "title": "Fernando Lisboa, Autor em TechOnPlayBr ▶",
-      "description": "I am a systems analyst, professor, and technology researcher with a strong focus on digital innovation, tools, and emerging technologies. I am the founder and lead editor of TechOnPlay, where I publish in-depth articles, guides, and analysis on technology, productivity, and AI. My work combines technical expertise with a practical approach, helping readers understand and apply technology in real-world scenarios. Artificial Intelligence is part of my broader portfolio, used to enhance research, analysis, and digital solutions.",
+      "title": "Fernando Lisboa, Autor em Informática para Concursos",
       "robots": {
         "index": "index",
         "follow": "follow",
@@ -23,13 +22,12 @@
         "max-image-preview": "max-image-preview:large",
         "max-video-preview": "max-video-preview:-1"
       },
-      "canonical": "https://techonplay.com.br/author/fernandolisboa-devgmail-com/",
+      "canonical": "https://informaticaparaconcurso.com.br/author/fernando-lisboa/",
       "og_locale": "pt_BR",
       "og_type": "profile",
-      "og_title": "Fernando Lisboa, Autor em TechOnPlayBr ▶",
-      "og_description": "I am a systems analyst, professor, and technology researcher with a strong focus on digital innovation, tools, and emerging technologies. I am the founder and lead editor of TechOnPlay, where I publish in-depth articles, guides, and analysis on technology, productivity, and AI. My work combines technical expertise with a practical approach, helping readers understand and apply technology in real-world scenarios. Artificial Intelligence is part of my broader portfolio, used to enhance research, analysis, and digital solutions.",
-      "og_url": "https://techonplay.com.br/author/fernandolisboa-devgmail-com/",
-      "og_site_name": "TechOnPlayBr ▶",
+      "og_title": "Fernando Lisboa, Autor em Informática para Concursos",
+      "og_url": "https://informaticaparaconcurso.com.br/author/fernando-lisboa/",
+      "og_site_name": "Informática para Concursos",
       "og_image": [
         {
           "url": "https://secure.gravatar.com/avatar/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=500&d=mm&r=g",
@@ -44,35 +42,34 @@
         "@graph": [
           {
             "@type": "ProfilePage",
-            "@id": "https://techonplay.com.br/author/fernandolisboa-devgmail-com/",
-            "url": "https://techonplay.com.br/author/fernandolisboa-devgmail-com/",
-            "name": "Fernando Lisboa, Autor em TechOnPlayBr ▶",
+            "@id": "https://informaticaparaconcurso.com.br/author/fernando-lisboa/",
+            "url": "https://informaticaparaconcurso.com.br/author/fernando-lisboa/",
+            "name": "Fernando Lisboa, Autor em Informática para Concursos",
             "isPartOf": {
-              "@id": "https://techonplay.com.br/#website"
+              "@id": "https://informaticaparaconcurso.com.br/#website"
             },
-            "description": "I am a systems analyst, professor, and technology researcher with a strong focus on digital innovation, tools, and emerging technologies. I am the founder and lead editor of TechOnPlay, where I publish in-depth articles, guides, and analysis on technology, productivity, and AI. My work combines technical expertise with a practical approach, helping readers understand and apply technology in real-world scenarios. Artificial Intelligence is part of my broader portfolio, used to enhance research, analysis, and digital solutions.",
             "breadcrumb": {
-              "@id": "https://techonplay.com.br/author/fernandolisboa-devgmail-com/#breadcrumb"
+              "@id": "https://informaticaparaconcurso.com.br/author/fernando-lisboa/#breadcrumb"
             },
             "inLanguage": "pt-BR",
             "potentialAction": [
               {
                 "@type": "ReadAction",
                 "target": [
-                  "https://techonplay.com.br/author/fernandolisboa-devgmail-com/"
+                  "https://informaticaparaconcurso.com.br/author/fernando-lisboa/"
                 ]
               }
             ]
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://techonplay.com.br/author/fernandolisboa-devgmail-com/#breadcrumb",
+            "@id": "https://informaticaparaconcurso.com.br/author/fernando-lisboa/#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Início",
-                "item": "https://techonplay.com.br/"
+                "item": "https://informaticaparaconcurso.com.br/"
               },
               {
                 "@type": "ListItem",
@@ -83,19 +80,16 @@
           },
           {
             "@type": "WebSite",
-            "@id": "https://techonplay.com.br/#website",
-            "url": "https://techonplay.com.br/",
-            "name": "TechOnPlayBr ▶",
-            "description": "https://techonplay.com.br/",
-            "publisher": {
-              "@id": "https://techonplay.com.br/#organization"
-            },
+            "@id": "https://informaticaparaconcurso.com.br/#website",
+            "url": "https://informaticaparaconcurso.com.br/",
+            "name": "Informática para Concursos",
+            "description": "O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.",
             "potentialAction": [
               {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://techonplay.com.br/?s={search_term_string}"
+                  "urlTemplate": "https://informaticaparaconcurso.com.br/?s={search_term_string}"
                 },
                 "query-input": {
                   "@type": "PropertyValueSpecification",
@@ -107,41 +101,23 @@
             "inLanguage": "pt-BR"
           },
           {
-            "@type": "Organization",
-            "@id": "https://techonplay.com.br/#organization",
-            "name": "TechOnPlayBr ▶",
-            "url": "https://techonplay.com.br/",
-            "logo": {
-              "@type": "ImageObject",
-              "inLanguage": "pt-BR",
-              "@id": "https://techonplay.com.br/#/schema/logo/image/",
-              "url": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "contentUrl": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "width": 538,
-              "height": 91,
-              "caption": "TechOnPlayBr ▶"
-            },
-            "image": {
-              "@id": "https://techonplay.com.br/#/schema/logo/image/"
-            }
-          },
-          {
             "@type": "Person",
-            "@id": "https://techonplay.com.br/#/schema/person/f2a598a5199231226d2801b894b24100",
+            "@id": "https://informaticaparaconcurso.com.br/#/schema/person/c9261cb44c079dd88c7e56b02c4e429d",
             "name": "Fernando Lisboa",
             "image": {
               "@type": "ImageObject",
               "inLanguage": "pt-BR",
-              "@id": "https://secure.gravatar.com/avatar/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=96&d=mm&r=g",
+              "@id": "https://informaticaparaconcurso.com.br/#/schema/person/image/",
               "url": "https://secure.gravatar.com/avatar/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=96&d=mm&r=g",
               "contentUrl": "https://secure.gravatar.com/avatar/6369bae48e9b2fc2b27642574de4b1758959bf0bad3232d179a3157d82151656?s=96&d=mm&r=g",
               "caption": "Fernando Lisboa"
             },
+            "description": "Sou professor de robótica e informática, especialista em inteligência artificial, redator e proprietário do site Informática para Concurso. Meu objetivo é ajudar estudantes e concurseiros de todo o país com conteúdo gratuito, prático e atualizado para fortalecer a aprendizagem e a preparação para provas.",
             "sameAs": [
-              "https://techonplay.com.br"
+              "https://informaticaparaconcurso.com.br/"
             ],
             "mainEntityOfPage": {
-              "@id": "https://techonplay.com.br/author/fernandolisboa-devgmail-com/"
+              "@id": "https://informaticaparaconcurso.com.br/author/fernando-lisboa/"
             }
           }
         ]
@@ -149,15 +125,12 @@
     },
     "elementor_introduction": {
       "ai-get-started-announcement": true,
-      "yoast-introduction-editor-v2": true,
-      "globals_introduction": true,
-      "conversion_banner_go_pro": true,
-      "atomic_elements_promo": true
+      "globals_introduction": true
     },
     "_links": {
       "self": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/users/1",
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/users/4",
           "targetHints": {
             "allow": [
               "GET"
@@ -167,7 +140,7 @@
       ],
       "collection": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/users"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/users"
         }
       ]
     }

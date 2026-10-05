@@ -13,7 +13,7 @@
 
 <script>
   const banner = document.getElementById('cookie-banner');
-  const consent = (window as any).techonplayConsent;
+  const consent = (window as any).siteConsent;
 
   if (banner && consent) {
     if (!consent.hasChoice()) banner.hidden = false;

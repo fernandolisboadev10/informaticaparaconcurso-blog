@@ -6,83 +6,83 @@ export interface Category {
   intro: string;
 }
 
-// Category pages are real, indexable URLs (/categoria/<slug>/). `name` must match the `category` field in the posts' frontmatter.
+// Category pages are real, indexable URLs (/category/<slug>/), the same ones the old WordPress site used. `name` must match the `category` field in the posts' frontmatter.
 export const categories: Category[] = [
-  {
-    slug: 'noticias',
-    name: 'Notícias',
-    title: 'Notícias de tecnologia, IA e games no Brasil',
-    description:
-      'Notícias de tecnologia, IA, jogos e celulares com o que muda para o leitor brasileiro: preço em reais, disponibilidade e como usar a novidade.',
-    intro:
-      'O que aconteceu hoje no mundo da tecnologia, explicado de forma direta: lançamentos, atualizações e anúncios, sempre com o que muda para quem usa no Brasil.',
-  },
-  {
-    slug: 'inteligencia-artificial',
-    name: 'Inteligência Artificial',
-    title: 'Inteligência Artificial: notícias, guias e comandos',
-    description:
-      'Notícias, tutoriais e guias sobre ChatGPT, Gemini, Claude e ferramentas de IA de vídeo e imagem, em português e com passo a passo simples.',
-    intro:
-      'Tudo sobre IA em linguagem simples: como entrar e usar o ChatGPT, comandos prontos para gerar imagens e vídeos, novidades do Google e da Anthropic e explicações sobre como essas ferramentas funcionam.',
-  },
-  {
-    slug: 'jogos',
-    name: 'Jogos',
-    title: 'Jogos: lançamentos, requisitos de PC e hardware',
-    description:
-      'Lançamentos, requisitos de PC, hardware e novidades do mundo dos games, como Steam Machine, GTA 6 e Subway Surfers, com preço e data no Brasil.',
-    intro:
-      'Notícias e guias para quem joga no PC, no console e no celular: requisitos, preços em reais, ficha técnica de hardware e o que muda em cada atualização.',
-  },
-  {
-    slug: 'tutoriais',
-    name: 'Tutoriais',
-    title: 'Tutoriais: passo a passo para Windows e tecnologia',
-    description:
-      'Passo a passo para Windows e tecnologia do dia a dia: comandos do CMD, limpeza do PC e dicas práticas para resolver problemas sem complicação.',
-    intro:
-      'Guias práticos, com etapas numeradas, para resolver problemas comuns no computador sem instalar programas nem depender de terceiros.',
-  },
   {
     slug: 'dicas',
     name: 'Dicas',
-    title: 'Dicas de tecnologia para o dia a dia',
+    title: 'Dicas de estudo para concursos de informática',
     description:
-      'Dicas para escolher e usar melhor a tecnologia: navegadores, planos de IA para estudantes, educação e ferramentas úteis do dia a dia.',
+      'Dicas de estudo para a prova de informática: como se organizar, o que cada banca cobra e como não perder pontos por descuido.',
     intro:
-      'Comparativos e recomendações para decidir melhor: qual navegador usar, como aproveitar ofertas para estudantes e como a tecnologia entra na escola.',
+      'Estratégias para estudar informática com foco no que cai: como funcionam as bancas, como dividir o tempo e como evitar as pegadinhas mais comuns.',
   },
   {
-    slug: 'curiosidades',
-    name: 'Curiosidades',
-    title: 'Curiosidades sobre tecnologia, IA e cultura digital',
+    slug: 'sistemas',
+    name: 'Sistemas',
+    title: 'Sistemas operacionais para concursos: Windows e Linux',
     description:
-      'Curiosidades sobre tecnologia, IA, cinema e cultura digital: do significado do GPT ao filme sobre Sam Altman, em textos rápidos e diretos.',
+      'Windows, Linux e conceitos de sistemas operacionais explicados do jeito que as bancas cobram, com comandos, atalhos e comparações.',
     intro:
-      'Histórias e explicações curtas sobre o que está por trás da tecnologia que usamos, de siglas famosas a filmes, sistemas e equipamentos.',
+      'Tudo sobre sistemas operacionais para a prova: diferenças entre Windows e Linux, comandos, atalhos e o que mais aparece nas questões.',
   },
   {
-    slug: 'reviews',
-    name: 'Reviews',
-    title: 'Reviews de celulares e gadgets: preço e ficha técnica',
+    slug: 'hardware',
+    name: 'Hardware',
+    title: 'Hardware para concursos: memórias, periféricos e componentes',
     description:
-      'Reviews e análises de celulares e gadgets, com ficha técnica, preço no Brasil e se vale a pena: Galaxy A57, iPhone Duo e mais.',
+      'Hardware para concursos: memórias RAM, ROM e cache, periféricos de entrada e saída e os componentes do computador.',
     intro:
-      'Análises com ficha técnica, comparativos com a geração anterior e preço atualizado no Brasil, para você decidir se o aparelho vale o investimento.',
+      'Os componentes do computador explicados para a prova, com foco nas memórias, nos periféricos e nas confusões que as bancas exploram.',
   },
   {
-    slug: 'apps',
-    name: 'Apps',
-    title: 'Apps e plugins: guias de instalação e uso',
+    slug: 'office',
+    name: 'Office',
+    title: 'Office para concursos: Word, Excel, PowerPoint e LibreOffice',
     description:
-      'Aplicativos, plugins e ferramentas para usar no dia a dia, com guias de instalação e uso, como o plugin Higgsfield no ChatGPT.',
+      'Word, Excel, PowerPoint e LibreOffice para concursos: funções, atalhos e o que mais cai nas provas de informática.',
     intro:
-      'Guias de aplicativos e plugins úteis, com instalação, custos e os erros mais comuns explicados.',
+      'Os pacotes de escritório que mais aparecem nas provas, com as funções, os recursos e os atalhos que as bancas costumam cobrar.',
+  },
+  {
+    slug: 'arquivos',
+    name: 'Arquivos',
+    title: 'Arquivos e pastas para concursos: tipos, extensões e organização',
+    description:
+      'Gerenciamento de arquivos e pastas, extensões e tipos de arquivo explicados para a prova de informática.',
+    intro:
+      'Como arquivos e pastas são organizados, quais extensões existem e o que as bancas perguntam sobre esse assunto.',
+  },
+  {
+    slug: 'redes',
+    name: 'Redes',
+    title: 'Redes de computadores para concursos: internet, intranet e nuvem',
+    description:
+      'Redes de computadores para concursos: tipos de rede, topologias, internet, intranet, extranet, navegadores e computação em nuvem.',
+    intro:
+      'Internet, intranet, extranet, topologias, navegadores e nuvem, com a linguagem e os exemplos que aparecem na prova.',
+  },
+  {
+    slug: 'seguranca',
+    name: 'Segurança',
+    title: 'Segurança da informação para concursos: malwares, backup e firewall',
+    description:
+      'Segurança da informação para concursos: malwares, antivírus, firewall, backup e a regra 3-2-1 explicados para a prova.',
+    intro:
+      'Ameaças, defesas e boas práticas de segurança, com as diferenças entre ferramentas que as bancas adoram cobrar.',
+  },
+  {
+    slug: 'simulados',
+    name: 'Simulados',
+    title: 'Simulados de informática para concursos',
+    description:
+      'Simulados de informática por assunto, com questões no estilo das bancas para testar o que você estudou.',
+    intro:
+      'Questões no estilo das bancas para praticar cada assunto e descobrir onde ainda falta revisar.',
   },
 ];
 
 export const categoryHref = (name: string): string => {
   const c = categories.find((x) => x.name === name);
-  return c ? `/categoria/${c.slug}/` : '/blog/';
+  return c ? `/category/${c.slug}/` : '/blog/';
 };

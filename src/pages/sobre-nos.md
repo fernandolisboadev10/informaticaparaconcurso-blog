@@ -1,34 +1,23 @@
 ---
 layout: ../layouts/LegalLayout.astro
-title: "Sobre Nós"
-description: "Conheça o TechOnPlay: tecnologia simplificada, com reviews imparciais, tutoriais práticos e notícias que importam."
+title: "Sobre nós"
+description: "Conheça o Informática para Concursos, portal de Fernando Lisboa com resumos, simulados e análises das bancas de informática."
 ---
 
-**Tecnologia, Simplificada.**
+## **O Seu Mapa da Mina na Informática**
 
-Sejamos sinceros: acompanhar a tecnologia pode ser cansativo. Novos gadgets chegam toda semana, e a IA parece mudar tudo da noite para o dia. É aí que entra o TechOnPlay. Somos a sua referência para entender o mundo digital sem dor de cabeça.
+O **Informática para Concurso** é um portal fundado por **Fernando Lisboa**, professor, analista de sistemas e especialista em tecnologia educacional. O projeto nasceu com um objetivo claro: traduzir o “tecniquês” da informática e transformá-lo em conhecimento prático, simples e direto ao ponto para quem precisa gabaritar em provas de concurso público.
+
+Aqui publicamos resumos esquematizados, análise do perfil das bancas, questões comentadas e as famosas “pegadinhas” de prova para que você pare de perder pontos preciosos na disciplina que mais reprova candidatos no Brasil.
 
 ## Nossa Missão
 
-Acreditamos que a tecnologia deve resolver problemas, não criá-los.
+Nosso compromisso é entregar conteúdos 100% focados em editais, sempre atualizados e baseados no histórico real de cobrança das bancas. Escrevemos pensando em concurseiros iniciantes e avançados que precisam otimizar o tempo de estudo e ir direto ao que interessa.
 
-Você não devia precisar de um manual para entender as últimas tendências. Nosso objetivo é cortar o jargão e o exagero para trazer conselhos práticos e com os pés no chão. Seja para trocar de smartphone ou só para entender o que o ChatGPT realmente pode fazer por você, pode contar com a gente.
+Acreditamos firmemente que a informática não precisa ser um bicho de sete cabeças. Com a metodologia certa e foco na resolução de questões, ela pode se tornar o seu grande diferencial estratégico para alcançar a aprovação e a tão sonhada estabilidade.
 
-## O Que Oferecemos
+## Conecte-se com a Gente
 
-Criamos conteúdo para pessoas de verdade, com foco em:
+Estamos sempre abertos a sugestões de novos temas, dúvidas sobre editais e parcerias educacionais para fazer deste espaço a maior comunidade de estudos de informática do Brasil.
 
-- **Guia de Compra**: reviews imparciais que mostram se aquele gadget novo realmente vale o seu dinheiro suado.
-- **Tutoriais Práticos**: passo a passo para você dominar seus dispositivos e aplicativos em minutos.
-- **Tecnologia Explicada**: simplificamos temas complexos — como IA e cibersegurança — em uma linguagem clara.
-- **Notícias Diárias**: as atualizações mais importantes do mundo da tecnologia, filtradas pelo que realmente importa para você.
-
-## Por Que Confiar em Nós?
-
-Porque somos usuários antes de tudo. Testamos os produtos no mundo real — no trajeto para o trabalho, no home office, na sala de casa — para ver como eles se comportam no dia a dia. Fazemos as perguntas que importam: a bateria realmente dura o dia todo? Essa atualização vale mesmo a pena?
-
-## Vamos Nos Conectar
-
-A tecnologia fica mais interessante quando exploramos ela juntos. Entre para a nossa comunidade, assine a newsletter e vamos tornar o futuro um pouco menos confuso.
-
-**TechOnPlay – Brinque com o Futuro.**
+Se você quiser bater um papo, sugerir uma pauta ou tirar dúvidas sobre o nosso gerador de simulados, visite a nossa [página de contato](/fale-conosco/).

@@ -1,22 +1,13 @@
 ---
 import { categories as categoryList } from '../data/categories';
 
-const categories = [
-  { label: 'Notícias', category: 'Notícias' },
-  { label: 'IA', category: 'Inteligência Artificial' },
-  { label: 'Jogos', category: 'Jogos' },
-  { label: 'Tutoriais', category: 'Tutoriais' },
-  { label: 'Dicas', category: 'Dicas' },
-  { label: 'Curiosidades', category: 'Curiosidades' },
-  { label: 'Reviews', category: 'Reviews' },
-  { label: 'Apps', category: 'Apps' },
-];
+const categories = categoryList.map((c) => ({ label: c.name, category: c.name }));
 
 const nav = [
   { label: 'Início', href: '/' },
   ...categories.map((c) => ({
     label: c.label,
-    href: `/categoria/${categoryList.find((x) => x.name === c.category)?.slug}/`,
+    href: `/category/${categoryList.find((x) => x.name === c.category)?.slug}/`,
   })),
 ];
 
@@ -31,8 +22,8 @@ const currentHref = Astro.url.pathname + Astro.url.search;
         <line x1="3" y1="18" x2="21" y2="18" />
       </svg>
     </button>
-    <a href="/" class="brand" aria-label="TechOnPlay - Início">
-      <img class="brand-logo" src="/images/logo.webp" alt="TechOnPlay" width="197" height="30" />
+    <a href="/" class="brand" aria-label="Informática para Concursos - Início">
+      <span class="brand-mark"><img class="brand-logo" src="/images/logo-icon.webp" alt="" width="32" height="32" /><span class="brand-name">Informática<small>para Concursos</small></span></span>
     </a>
     <nav class="nav">
       {nav.map((item) => (
@@ -138,12 +129,41 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     gap: 8px;
     text-decoration: none;
     white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .brand-logo {
     display: block;
-    height: 30px;
-    width: auto;
+    height: 34px;
+    width: 34px;
+    image-rendering: pixelated;
+  }
+
+  .brand-name {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1;
+    color: var(--ink-strong);
+    letter-spacing: -0.01em;
+  }
+
+  .brand-name small {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--violet);
   }
 
   .nav {
@@ -158,11 +178,11 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     text-decoration: none;
     font-family: var(--font-body);
     font-weight: 600;
-    font-size: 0.78rem;
-    letter-spacing: 0.04em;
+    font-size: 0.74rem;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--ink-soft);
-    padding: 8px 12px;
+    padding: 8px 9px;
     border-radius: 20px;
     white-space: nowrap;
   }
@@ -350,9 +370,6 @@ const currentHref = Astro.url.pathname + Astro.url.search;
       justify-self: center;
     }
 
-    .brand-logo {
-      height: 30px;
-    }
 
     .theme-toggle,
     .search-toggle {
@@ -386,7 +403,8 @@ const currentHref = Astro.url.pathname + Astro.url.search;
 
   @media (max-width: 360px) {
     .brand-logo {
-      height: 22px;
+      height: 26px;
+      width: 26px;
     }
   }
 </style>

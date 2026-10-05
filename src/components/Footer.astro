@@ -1,30 +1,25 @@
 ---
+import { categories as categoryList } from "../data/categories";
+
 const categories = [
-  { label: 'Início', href: '/' },
-  { label: 'Notícias', href: '/categoria/noticias/' },
-  { label: 'Inteligência Artificial', href: '/categoria/inteligencia-artificial/' },
-  { label: 'Jogos', href: '/categoria/jogos/' },
-  { label: 'Tutoriais', href: '/categoria/tutoriais/' },
-  { label: 'Dicas', href: '/categoria/dicas/' },
-  { label: 'Curiosidades', href: '/categoria/curiosidades/' },
-  { label: 'Reviews', href: '/categoria/reviews/' },
-  { label: 'Apps', href: '/categoria/apps/' },
+  { label: "Início", href: "/" },
+  ...categoryList.map((c) => ({ label: c.name, href: `/category/${c.slug}/` })),
 ];
 
 const quickLinks = [
-  { label: 'Sobre Nós', href: '/sobre-nos' },
-  { label: 'Contato', href: '/contate-nos' },
-  { label: 'Anuncie', href: '/anuncie' },
+  { label: 'Sobre nós', href: '/sobre-nos/' },
+  { label: 'Fale conosco', href: '/fale-conosco/' },
+  { label: 'Transparência', href: '/transparencia/' },
 ];
 ---
 <footer class="site-footer">
   <div class="container grid">
     <div class="about-col">
-      <a href="/" class="brand" aria-label="TechOnPlay - Início">
-        <img class="brand-logo" src="/images/logo.webp" alt="TechOnPlay" width="171" height="26" />
+      <a href="/" class="brand" aria-label="Informática para Concursos - Início">
+        <span class="brand-mark"><img class="brand-logo" src="/images/logo-icon.webp" alt="" width="28" height="28" /><span class="brand-name">Informática<small>para Concursos</small></span></span>
       </a>
       <p class="tagline">
-        O TechOnPlay reúne guias, reviews e notícias sobre IA, jogos, tutoriais e curiosidades, sempre em linguagem simples, para você aproveitar melhor a tecnologia do dia a dia.
+        Resumos, simulados e análises das bancas para você estudar informática com foco no que realmente cai nas provas de concursos públicos.
       </p>
     </div>
 
@@ -50,11 +45,10 @@ const quickLinks = [
 
   <div class="bottom">
     <div class="container bottom-inner">
-      <p>© {new Date().getFullYear()} TechOnPlay. Todos os direitos reservados.</p>
+      <p>© {new Date().getFullYear()} Informática para Concursos. Todos os direitos reservados.</p>
       <div class="legal-links">
-        <a href="/politica-de-privacidade">Política de Privacidade</a>
-        <a href="/termos-de-uso">Termos de Uso</a>
-        <a href="/politica-de-cookies">Política de Cookies</a>
+        <a href="/politica-de-privacidade/">Política de Privacidade</a>
+        <a href="/politica-de-cookies/">Política de Cookies</a>
         <a href="#" data-open-cookie-settings>Configurações de cookies</a>
       </div>
     </div>
@@ -81,10 +75,38 @@ const quickLinks = [
     margin: 0 0 16px;
   }
 
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
   .brand-logo {
     display: block;
-    height: 26px;
-    width: auto;
+    height: 28px;
+    width: 28px;
+    image-rendering: pixelated;
+  }
+
+  .brand-name {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1;
+    color: var(--ink-strong);
+    letter-spacing: -0.01em;
+  }
+
+  .brand-name small {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--violet);
   }
 
   .tagline {

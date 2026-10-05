@@ -23,23 +23,19 @@ for (const file of readdirSync(blogDir)) {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://techonplay.com.br',
-  // URLs herdadas do WordPress (categorias, feed e sitemaps do Yoast)
+  site: 'https://informaticaparaconcurso.com.br',
+  // URLs herdadas do WordPress (feed, sitemaps do Yoast, autor e contato)
   redirects: {
-    '/category/inteligencia-artificial': '/categoria/inteligencia-artificial/',
-    '/category/jogos': '/categoria/jogos/',
-    '/category/tutoriais': '/categoria/tutoriais/',
-    '/category/dicas': '/categoria/dicas/',
-    '/category/curiosidades': '/categoria/curiosidades/',
-    '/category/reviews': '/categoria/reviews/',
-    '/category/apps': '/categoria/apps/',
     '/category/sem-categoria': '/blog',
     '/feed': '/rss.xml',
     '/sitemap_index.xml': '/sitemap-index.xml',
     '/wp-sitemap.xml': '/sitemap-index.xml',
-    '/post-sitemap.xml': '/sitemap-0.xml',
-    '/page-sitemap.xml': '/sitemap-0.xml',
+    '/post-sitemap.xml': '/sitemap-index.xml',
+    '/page-sitemap.xml': '/sitemap-index.xml',
     '/category-sitemap.xml': '/sitemap-index.xml',
+    '/author-sitemap.xml': '/sitemap-index.xml',
+    '/author/fernando-lisboa': '/sobre-nos/',
+    '/contato': '/fale-conosco/',
   },
   // Self-hosted fonts: no Google Fonts round trips, preloaded and with metric-matched fallbacks.
   fonts: [

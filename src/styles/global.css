@@ -1,19 +1,19 @@
 :root {
   color-scheme: light;
-  --bg: #faf8ff;
+  --bg: #f5f8ff;
   --surface: #ffffff;
-  --ink-strong: #241e3d;
-  --ink-deep: #180f2e;
-  --ink: #2a2440;
-  --ink-soft: #6b6383;
-  --line: #e4defa;
+  --ink-strong: #101a3d;
+  --ink-deep: #0b1230;
+  --ink: #1c2747;
+  --ink-soft: #5a6788;
+  --line: #d9e4fa;
 
-  --violet: #7c3aed;
-  --violet-soft: #c4b5fd;
-  --violet-deep: #5b21b6;
+  --violet: #2a14b4;
+  --violet-soft: #a5b4fc;
+  --violet-deep: #1b0d82;
 
-  --rose: #e11d48;
-  --rose-soft: #fb7185;
+  --rose: #2563eb;
+  --rose-soft: #60a5fa;
 
   --teal: #0d9488;
   --teal-soft: #5eead4;
@@ -26,8 +26,8 @@
   --font-read: var(--f-lexend), var(--f-inter);
   --link: #0a6bd0;
   --link-line: rgba(11, 111, 204, 0.13);
-  --code-bg: #efe9fd;
-  --code-ink: #3b1d8f;
+  --code-bg: #e6eeff;
+  --code-ink: #1a2f8f;
 
   --measure: 68ch;
 }
@@ -37,24 +37,24 @@
     color-scheme: dark;
     --bg: #0d1117;
     --surface: #161b22;
-    --ink-strong: #f5f3ff;
-    --ink: #ded9f0;
-    --ink-soft: #9d94bd;
+    --ink-strong: #f2f6ff;
+    --ink: #d4def2;
+    --ink-soft: #93a3c9;
     --line: #30363d;
 
-    --violet: #a78bfa;
-    --violet-soft: #c4b5fd;
-    --violet-deep: #8b5cf6;
+    --violet: #7c8cff;
+    --violet-soft: #a5b4fc;
+    --violet-deep: #5a6bf0;
 
-    --rose: #fb7185;
-    --rose-soft: #fda4af;
+    --rose: #60a5fa;
+    --rose-soft: #93c5fd;
 
     --teal: #2dd4bf;
 
     --link: #6cb2ff;
     --link-line: rgba(108, 178, 255, 0.22);
     --code-bg: #262c36;
-    --code-ink: #e2d9ff;
+    --code-ink: #d6e4ff;
   }
 }
 
@@ -62,24 +62,24 @@
   color-scheme: dark;
   --bg: #0d1117;
   --surface: #161b22;
-  --ink-strong: #f5f3ff;
-  --ink: #ded9f0;
-  --ink-soft: #9d94bd;
+  --ink-strong: #f2f6ff;
+  --ink: #d4def2;
+  --ink-soft: #93a3c9;
   --line: #30363d;
 
-  --violet: #a78bfa;
-  --violet-soft: #c4b5fd;
-  --violet-deep: #8b5cf6;
+  --violet: #7c8cff;
+  --violet-soft: #a5b4fc;
+  --violet-deep: #5a6bf0;
 
-  --rose: #fb7185;
-  --rose-soft: #fda4af;
+  --rose: #60a5fa;
+  --rose-soft: #93c5fd;
 
   --teal: #2dd4bf;
 
   --link: #6cb2ff;
   --link-line: rgba(108, 178, 255, 0.22);
   --code-bg: #262c36;
-  --code-ink: #e2d9ff;
+  --code-ink: #d6e4ff;
 }
 
 * {
@@ -330,7 +330,7 @@ img {
 }
 
 :root[data-theme='dark'] .prose .copy-btn {
-  color: #180f2e;
+  color: #0b1230;
   background: var(--violet);
   border-color: var(--violet);
 }
@@ -342,7 +342,7 @@ img {
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .prose .copy-btn {
-    color: #180f2e;
+    color: #0b1230;
     background: var(--violet);
     border-color: var(--violet);
   }

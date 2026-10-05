@@ -1,74 +1,65 @@
 ---
 layout: ../layouts/LegalLayout.astro
 title: "Política de Privacidade"
-description: "Como o TechOnPlay (techonplay.com.br) coleta, usa e protege as suas informações."
+description: "Como o Informática para Concursos coleta, usa e protege as suas informações."
 ---
 
-**Última atualização: 16 de setembro de 2026**
+## **Política de Privacidade e Proteção de Dados**
 
-No TechOnPlay, acessível em [https://techonplay.com.br](https://techonplay.com.br), uma das nossas principais prioridades é a privacidade dos nossos visitantes. Este documento de Política de Privacidade contém os tipos de informações que são coletadas e registradas pelo TechOnPlay e como as utilizamos.
+A sua privacidade é algo que levamos muito a sério. Esta Política de Privacidade detalha como o site **Informática para Concurso** coleta, armazena, utiliza e protege as informações pessoais dos seus usuários, bem como a maneira como gerenciamos cookies e outras ferramentas de publicidade.
 
-Se você tiver dúvidas adicionais ou precisar de mais informações sobre nossa Política de Privacidade, não hesite em entrar em contato conosco.
+Ao navegar e utilizar este site, você concorda com os termos descritos abaixo.
 
-## 1. Arquivos de Log
-O TechOnPlay segue o procedimento padrão de uso de arquivos de log. Esses arquivos registram os visitantes quando eles acessam o site. Todas as empresas de hospedagem fazem isso como parte das análises dos serviços de hospedagem. As informações coletadas pelos arquivos de log incluem endereços de protocolo de internet (IP), tipo de navegador, provedor de serviços de internet (ISP), data e hora de acesso, páginas de referência/saída e, possivelmente, o número de cliques. Essas informações não estão vinculadas a nenhum dado pessoalmente identificável. A finalidade dessas informações é analisar tendências, administrar o site, rastrear a movimentação dos usuários e reunir informações demográficas.
+## Coleta de Informações
 
-## 2. Cookies e Web Beacons
-Como qualquer outro site, o TechOnPlay usa “cookies”. Esses cookies são usados para armazenar informações, incluindo as preferências dos visitantes e as páginas do site que foram acessadas. As informações são usadas para otimizar a experiência dos usuários, personalizando o conteúdo da nossa página com base no tipo de navegador e/ou em outras informações dos visitantes.
+As informações pessoais que coletamos podem incluir:
 
-## 3. Cookie DoubleClick DART do Google
-O Google é um dos fornecedores terceirizados em nosso site. Ele também usa cookies, conhecidos como cookies DART, para exibir anúncios aos visitantes do nosso site com base na visita deles ao TechOnPlay e a outros sites na internet. No entanto, os visitantes podem optar por recusar o uso dos cookies DART visitando a Política de Privacidade da rede de conteúdo e anúncios do Google no seguinte endereço: [https://policies.google.com/technologies/ads](https://policies.google.com/technologies/ads)
+-   Nome, endereço de e-mail, número de telefone e dados de contato que você fornece em nossos formulários (como no cadastro para o gerador de simulados).
+    
+-   Endereço IP, navegador utilizado, provedor de serviços de internet (ISP, como Claro, Vivo, etc.), data, hora e páginas visitadas.
+    
+-   Preferências de navegação e interações dentro do site.
+    
 
-## 4. Nossos Parceiros de Publicidade
-Alguns dos anunciantes do nosso site podem usar cookies e web beacons. Nossos parceiros de publicidade estão listados abaixo. Cada um deles tem sua própria Política de Privacidade sobre o tratamento de dados dos usuários. Para facilitar o acesso, disponibilizamos os links para essas políticas abaixo.
+Utilizamos essas informações para otimizar a sua experiência de usuário, personalizar o conteúdo das questões e tornar a sua visita o mais produtiva e agradável possível.
 
-- Google: [https://policies.google.com/technologies/ads](https://policies.google.com/technologies/ads)
+## Uso de Cookies e Publicidade
 
-## 5. Políticas de Privacidade dos Parceiros de Publicidade
-Você pode consultar esta lista para encontrar a Política de Privacidade de cada um dos parceiros de publicidade do TechOnPlay.
+No **Informática para Concurso**, utilizamos cookies para melhorar a navegação, lembrar de suas preferências e oferecer anúncios relevantes.
 
-Servidores ou redes de anúncios de terceiros usam tecnologias como cookies, JavaScript ou Web Beacons em seus respectivos anúncios e links exibidos no TechOnPlay, que são enviados diretamente ao navegador do usuário. Nesse processo, eles recebem automaticamente o seu endereço IP. Essas tecnologias são usadas para medir a eficácia de suas campanhas publicitárias e/ou personalizar o conteúdo dos anúncios exibidos nos sites que você visita.
+-   **Fornecedores externos:** Plataformas como o Google utilizam cookies (como os do Google AdSense e Google Analytics) para exibir anúncios baseados em suas visitas anteriores ao nosso site ou a outros sites na internet.
+    
+-   **Personalização:** O Google e seus parceiros podem mostrar anúncios personalizados com base no seu comportamento de navegação.
+    
 
-Observação: o TechOnPlay não tem acesso nem controle sobre os cookies utilizados por anunciantes terceiros.
+Se preferir, você pode desativar a publicidade personalizada nas [Configurações de Anúncios do Google](https://www.google.com/settings/ads) ou acessando o site [www.aboutads.info](http://www.aboutads.info/choices/).
 
-## 6. Direitos de Privacidade CCPA (Não Venda Minhas Informações Pessoais)
-De acordo com a CCPA (lei de privacidade do estado da Califórnia, EUA), entre outros direitos, os consumidores californianos têm o direito de:
+## Cookie DoubleClick e Remarketing
 
-- Solicitar que uma empresa que coleta dados pessoais de um consumidor divulgue as categorias e os dados específicos coletados sobre ele.
-- Solicitar que uma empresa exclua quaisquer dados pessoais do consumidor que tenha coletado.
-- Solicitar que uma empresa que vende dados pessoais de um consumidor não venda esses dados.
+O Google, como fornecedor de terceiros, utiliza o cookie **DoubleClick DART** para veicular anúncios baseados nos interesses do usuário.
 
-Se você fizer uma solicitação, temos até um mês para responder. Se quiser exercer qualquer um desses direitos, entre em contato conosco.
+Além disso, nosso site pode utilizar ferramentas de **Remarketing com o Google Analytics**. Isso nos permite exibir anúncios personalizados em outros sites da web com base em suas visitas anteriores ao Informática para Concurso.
 
-## 7. Direitos de Proteção de Dados do GDPR
-Queremos garantir que você esteja plenamente ciente de todos os seus direitos de proteção de dados. Todo usuário tem direito a:
+**Importante:** Esses dados não identificam você individualmente (não revelam seu nome, e-mail ou telefone), apenas analisam o comportamento de navegação.
 
-- Direito de acesso – solicitar cópias dos seus dados pessoais.
-- Direito de retificação – solicitar a correção de informações incorretas ou a complementação de informações incompletas.
-- Direito ao apagamento – solicitar que apaguemos seus dados pessoais, sob determinadas condições.
-- Direito à limitação do tratamento – solicitar que limitemos o tratamento dos seus dados pessoais, sob determinadas condições.
-- Direito de oposição ao tratamento – opor-se ao tratamento dos seus dados pessoais, sob determinadas condições.
-- Direito à portabilidade dos dados – solicitar que transfiramos os dados coletados para outra organização, ou diretamente para você, sob determinadas condições.
+## Como Administrar seus Cookies
 
-## 8. Seus Direitos sob a LGPD (Lei Geral de Proteção de Dados)
-Como o TechOnPlay opera no Brasil e trata dados de visitantes brasileiros, seguimos a Lei Geral de Proteção de Dados (Lei nº 13.709/2018). De acordo com a LGPD, você tem os seguintes direitos sobre os seus dados pessoais:
+Você tem o controle. É possível escolher desativar os cookies nas configurações do seu navegador (Chrome, Edge, Firefox) ou por meio de programas de segurança (como o seu antivírus). No entanto, tenha em mente que isso pode afetar a sua interação com o nosso site e outros serviços web, como o login automático na área de simulados.
 
-- Confirmação da existência de tratamento de dados.
-- Acesso aos dados que temos sobre você.
-- Correção de dados incompletos, inexatos ou desatualizados.
-- Anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desacordo com a lei.
-- Portabilidade dos dados a outro fornecedor de serviço ou produto, mediante requisição.
-- Eliminação dos dados pessoais tratados com o seu consentimento, exceto nas hipóteses previstas em lei.
-- Informação sobre as entidades públicas e privadas com as quais compartilhamos seus dados.
-- Revogação do consentimento a qualquer momento.
+## Links e Conteúdos de Terceiros
 
-Para exercer qualquer um desses direitos, entre em contato pelo e-mail abaixo.
+Este site pode conter links para páginas, bancas organizadoras e serviços de terceiros que operam sob suas próprias políticas de privacidade. O **Informática para Concurso** não se responsabiliza pelas práticas de privacidade nem pelos conteúdos desses sites externos.
 
-## 9. Informações de Crianças
-Outra prioridade nossa é reforçar a proteção das crianças no uso da internet. Incentivamos pais e responsáveis a observar, participar e/ou monitorar e orientar as atividades online de seus filhos.
+## Segurança e Confidencialidade
 
-O TechOnPlay não coleta intencionalmente nenhuma informação pessoal identificável de crianças menores de 13 anos. Se você acredita que seu filho forneceu esse tipo de informação em nosso site, recomendamos fortemente que entre em contato conosco imediatamente, e faremos o possível para remover essas informações dos nossos registros o mais rápido possível.
+Todos os dados coletados são tratados em rigorosa conformidade com a **Lei Geral de Proteção de Dados (LGPD – Lei nº 13.709/18)** do Brasil, garantindo o sigilo e a proteção contra acessos não autorizados.
 
-## 10. Informações de Contato
-Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco por e-mail:  
-E-mail: [techonplay@gmail.com](mailto:techonplay@gmail.com)
+O **Informática para Concurso** não comercializa, troca ou compartilha informações pessoais dos usuários sem o devido consentimento, exceto quando exigido por obrigação legal.
+
+## Contato e Seus Direitos
+
+Se você tiver dúvidas, solicitações ou desejar exercer seus direitos de privacidade (acesso, correção ou exclusão de dados), por favor, entre em contato conosco através do formulário disponível na nossa página de Contato.
+
+## Alterações nesta Política
+
+O **Informática para Concurso** reserva-se o direito de modificar esta Política de Privacidade a qualquer momento e sem aviso prévio. Recomendamos consultar esta página periodicamente para se manter atualizado.

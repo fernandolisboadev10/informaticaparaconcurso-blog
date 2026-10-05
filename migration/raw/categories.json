@@ -1,18 +1,17 @@
 [
   {
-    "id": 36,
-    "count": 1,
-    "description": "Apps é a seção do TechOnPlay dedicada aos aplicativos que fazem diferença no dia a dia: reviews, tutoriais e comparativos dos apps mais baixados, das ferramentas de produtividade aos plugins que ganham espaço nas grandes plataformas. Aqui você confere como instalar, o que vale testar e quais Apps merecem espaço no seu celular ou computador",
-    "link": "https://techonplay.com.br/category/apps/",
-    "name": "Apps",
-    "slug": "apps",
+    "id": 570,
+    "count": 2,
+    "description": "",
+    "link": "https://informaticaparaconcurso.com.br/category/arquivos/",
+    "name": "Arquivos",
+    "slug": "arquivos",
     "taxonomy": "category",
     "parent": 0,
     "meta": [],
-    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Arquivo de Apps - TechOnPlayBr ▶</title>\n<meta name=\"description\" content=\"Apps: reviews, tutoriais e novidades sobre os aplicativos mais usados do momento. Veja como instalar, testar e aproveitar cada app aqui no TechOnPlay.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://techonplay.com.br/category/apps/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Apps - TechOnPlayBr ▶\" />\n<meta property=\"og:description\" content=\"Apps: reviews, tutoriais e novidades sobre os aplicativos mais usados do momento. Veja como instalar, testar e aproveitar cada app aqui no TechOnPlay.\" />\n<meta property=\"og:url\" content=\"https://techonplay.com.br/category/apps/\" />\n<meta property=\"og:site_name\" content=\"TechOnPlayBr ▶\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/apps\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/category\\/apps\\/\",\"name\":\"Arquivo de Apps - TechOnPlayBr ▶\",\"isPartOf\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\"},\"description\":\"Apps: reviews, tutoriais e novidades sobre os aplicativos mais usados do momento. Veja como instalar, testar e aproveitar cada app aqui no TechOnPlay.\",\"breadcrumb\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/apps\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/apps\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https:\\/\\/techonplay.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Apps\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"name\":\"TechOnPlayBr ▶\",\"description\":\"https:\\/\\/techonplay.com.br\\/\",\"publisher\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/techonplay.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\",\"name\":\"TechOnPlayBr ▶\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"contentUrl\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"width\":538,\"height\":91,\"caption\":\"TechOnPlayBr ▶\"},\"image\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Arquivo de Arquivos - Informática para Concursos</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://informaticaparaconcurso.com.br/category/arquivos/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Arquivos - Informática para Concursos\" />\n<meta property=\"og:url\" content=\"https://informaticaparaconcurso.com.br/category/arquivos/\" />\n<meta property=\"og:site_name\" content=\"Informática para Concursos\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://informaticaparaconcurso.com.br/category/arquivos/\",\"url\":\"https://informaticaparaconcurso.com.br/category/arquivos/\",\"name\":\"Arquivo de Arquivos - Informática para Concursos\",\"isPartOf\":{\"@id\":\"https://informaticaparaconcurso.com.br/#website\"},\"breadcrumb\":{\"@id\":\"https://informaticaparaconcurso.com.br/category/arquivos/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://informaticaparaconcurso.com.br/category/arquivos/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https://informaticaparaconcurso.com.br/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Arquivos\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://informaticaparaconcurso.com.br/#website\",\"url\":\"https://informaticaparaconcurso.com.br/\",\"name\":\"Informática para Concursos\",\"description\":\"O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://informaticaparaconcurso.com.br/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
     "yoast_head_json": {
-      "title": "Arquivo de Apps - TechOnPlayBr ▶",
-      "description": "Apps: reviews, tutoriais e novidades sobre os aplicativos mais usados do momento. Veja como instalar, testar e aproveitar cada app aqui no TechOnPlay.",
+      "title": "Arquivo de Arquivos - Informática para Concursos",
       "robots": {
         "index": "index",
         "follow": "follow",
@@ -20,63 +19,58 @@
         "max-image-preview": "max-image-preview:large",
         "max-video-preview": "max-video-preview:-1"
       },
-      "canonical": "https://techonplay.com.br/category/apps/",
+      "canonical": "https://informaticaparaconcurso.com.br/category/arquivos/",
       "og_locale": "pt_BR",
       "og_type": "article",
-      "og_title": "Arquivo de Apps - TechOnPlayBr ▶",
-      "og_description": "Apps: reviews, tutoriais e novidades sobre os aplicativos mais usados do momento. Veja como instalar, testar e aproveitar cada app aqui no TechOnPlay.",
-      "og_url": "https://techonplay.com.br/category/apps/",
-      "og_site_name": "TechOnPlayBr ▶",
+      "og_title": "Arquivo de Arquivos - Informática para Concursos",
+      "og_url": "https://informaticaparaconcurso.com.br/category/arquivos/",
+      "og_site_name": "Informática para Concursos",
       "twitter_card": "summary_large_image",
       "schema": {
         "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "CollectionPage",
-            "@id": "https://techonplay.com.br/category/apps/",
-            "url": "https://techonplay.com.br/category/apps/",
-            "name": "Arquivo de Apps - TechOnPlayBr ▶",
+            "@id": "https://informaticaparaconcurso.com.br/category/arquivos/",
+            "url": "https://informaticaparaconcurso.com.br/category/arquivos/",
+            "name": "Arquivo de Arquivos - Informática para Concursos",
             "isPartOf": {
-              "@id": "https://techonplay.com.br/#website"
+              "@id": "https://informaticaparaconcurso.com.br/#website"
             },
-            "description": "Apps: reviews, tutoriais e novidades sobre os aplicativos mais usados do momento. Veja como instalar, testar e aproveitar cada app aqui no TechOnPlay.",
             "breadcrumb": {
-              "@id": "https://techonplay.com.br/category/apps/#breadcrumb"
+              "@id": "https://informaticaparaconcurso.com.br/category/arquivos/#breadcrumb"
             },
             "inLanguage": "pt-BR"
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://techonplay.com.br/category/apps/#breadcrumb",
+            "@id": "https://informaticaparaconcurso.com.br/category/arquivos/#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Início",
-                "item": "https://techonplay.com.br/"
+                "item": "https://informaticaparaconcurso.com.br/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Apps"
+                "name": "Arquivos"
               }
             ]
           },
           {
             "@type": "WebSite",
-            "@id": "https://techonplay.com.br/#website",
-            "url": "https://techonplay.com.br/",
-            "name": "TechOnPlayBr ▶",
-            "description": "https://techonplay.com.br/",
-            "publisher": {
-              "@id": "https://techonplay.com.br/#organization"
-            },
+            "@id": "https://informaticaparaconcurso.com.br/#website",
+            "url": "https://informaticaparaconcurso.com.br/",
+            "name": "Informática para Concursos",
+            "description": "O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.",
             "potentialAction": [
               {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://techonplay.com.br/?s={search_term_string}"
+                  "urlTemplate": "https://informaticaparaconcurso.com.br/?s={search_term_string}"
                 },
                 "query-input": {
                   "@type": "PropertyValueSpecification",
@@ -86,25 +80,6 @@
               }
             ],
             "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://techonplay.com.br/#organization",
-            "name": "TechOnPlayBr ▶",
-            "url": "https://techonplay.com.br/",
-            "logo": {
-              "@type": "ImageObject",
-              "inLanguage": "pt-BR",
-              "@id": "https://techonplay.com.br/#/schema/logo/image/",
-              "url": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "contentUrl": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "width": 538,
-              "height": 91,
-              "caption": "TechOnPlayBr ▶"
-            },
-            "image": {
-              "@id": "https://techonplay.com.br/#/schema/logo/image/"
-            }
           }
         ]
       }
@@ -112,7 +87,7 @@
     "_links": {
       "self": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories/36",
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories/570",
           "targetHints": {
             "allow": [
               "GET"
@@ -122,17 +97,17 @@
       ],
       "collection": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories"
         }
       ],
       "about": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/taxonomies/category"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/taxonomies/category"
         }
       ],
       "wp:post_type": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/posts?categories=36"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/posts?categories=570"
         }
       ],
       "curies": [
@@ -145,164 +120,18 @@
     }
   },
   {
-    "id": 30,
-    "count": 5,
-    "description": "Curiosidades de tecnologia: fatos inusitados, descobertas recentes e tendências que estão mudando o mundo digital. Aqui reunimos os assuntos que viraram notícia — do lançamento inesperado ao dado que ninguém esperava.",
-    "link": "https://techonplay.com.br/category/curiosidades/",
-    "name": "Curiosidades",
-    "slug": "curiosidades",
-    "taxonomy": "category",
-    "parent": 0,
-    "meta": [],
-    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Arquivo de Curiosidades - TechOnPlayBr ▶</title>\n<meta name=\"description\" content=\"Curiosidades de tecnologia: fatos, descobertas e tendências que viraram assunto no mundo digital, atualizado toda semana.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://techonplay.com.br/category/curiosidades/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Curiosidades - TechOnPlayBr ▶\" />\n<meta property=\"og:description\" content=\"Curiosidades de tecnologia: fatos, descobertas e tendências que viraram assunto no mundo digital, atualizado toda semana.\" />\n<meta property=\"og:url\" content=\"https://techonplay.com.br/category/curiosidades/\" />\n<meta property=\"og:site_name\" content=\"TechOnPlayBr ▶\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/curiosidades\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/category\\/curiosidades\\/\",\"name\":\"Arquivo de Curiosidades - TechOnPlayBr ▶\",\"isPartOf\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\"},\"description\":\"Curiosidades de tecnologia: fatos, descobertas e tendências que viraram assunto no mundo digital, atualizado toda semana.\",\"breadcrumb\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/curiosidades\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/curiosidades\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https:\\/\\/techonplay.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Curiosidades\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"name\":\"TechOnPlayBr ▶\",\"description\":\"https:\\/\\/techonplay.com.br\\/\",\"publisher\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/techonplay.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\",\"name\":\"TechOnPlayBr ▶\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"contentUrl\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"width\":538,\"height\":91,\"caption\":\"TechOnPlayBr ▶\"},\"image\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
-    "yoast_head_json": {
-      "title": "Arquivo de Curiosidades - TechOnPlayBr ▶",
-      "description": "Curiosidades de tecnologia: fatos, descobertas e tendências que viraram assunto no mundo digital, atualizado toda semana.",
-      "robots": {
-        "index": "index",
-        "follow": "follow",
-        "max-snippet": "max-snippet:-1",
-        "max-image-preview": "max-image-preview:large",
-        "max-video-preview": "max-video-preview:-1"
-      },
-      "canonical": "https://techonplay.com.br/category/curiosidades/",
-      "og_locale": "pt_BR",
-      "og_type": "article",
-      "og_title": "Arquivo de Curiosidades - TechOnPlayBr ▶",
-      "og_description": "Curiosidades de tecnologia: fatos, descobertas e tendências que viraram assunto no mundo digital, atualizado toda semana.",
-      "og_url": "https://techonplay.com.br/category/curiosidades/",
-      "og_site_name": "TechOnPlayBr ▶",
-      "twitter_card": "summary_large_image",
-      "schema": {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "CollectionPage",
-            "@id": "https://techonplay.com.br/category/curiosidades/",
-            "url": "https://techonplay.com.br/category/curiosidades/",
-            "name": "Arquivo de Curiosidades - TechOnPlayBr ▶",
-            "isPartOf": {
-              "@id": "https://techonplay.com.br/#website"
-            },
-            "description": "Curiosidades de tecnologia: fatos, descobertas e tendências que viraram assunto no mundo digital, atualizado toda semana.",
-            "breadcrumb": {
-              "@id": "https://techonplay.com.br/category/curiosidades/#breadcrumb"
-            },
-            "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://techonplay.com.br/category/curiosidades/#breadcrumb",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Início",
-                "item": "https://techonplay.com.br/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Curiosidades"
-              }
-            ]
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://techonplay.com.br/#website",
-            "url": "https://techonplay.com.br/",
-            "name": "TechOnPlayBr ▶",
-            "description": "https://techonplay.com.br/",
-            "publisher": {
-              "@id": "https://techonplay.com.br/#organization"
-            },
-            "potentialAction": [
-              {
-                "@type": "SearchAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://techonplay.com.br/?s={search_term_string}"
-                },
-                "query-input": {
-                  "@type": "PropertyValueSpecification",
-                  "valueRequired": true,
-                  "valueName": "search_term_string"
-                }
-              }
-            ],
-            "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://techonplay.com.br/#organization",
-            "name": "TechOnPlayBr ▶",
-            "url": "https://techonplay.com.br/",
-            "logo": {
-              "@type": "ImageObject",
-              "inLanguage": "pt-BR",
-              "@id": "https://techonplay.com.br/#/schema/logo/image/",
-              "url": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "contentUrl": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "width": 538,
-              "height": 91,
-              "caption": "TechOnPlayBr ▶"
-            },
-            "image": {
-              "@id": "https://techonplay.com.br/#/schema/logo/image/"
-            }
-          }
-        ]
-      }
-    },
-    "_links": {
-      "self": [
-        {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories/30",
-          "targetHints": {
-            "allow": [
-              "GET"
-            ]
-          }
-        }
-      ],
-      "collection": [
-        {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories"
-        }
-      ],
-      "about": [
-        {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/taxonomies/category"
-        }
-      ],
-      "wp:post_type": [
-        {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/posts?categories=30"
-        }
-      ],
-      "curies": [
-        {
-          "name": "wp",
-          "href": "https://api.w.org/{rel}",
-          "templated": true
-        }
-      ]
-    }
-  },
-  {
-    "id": 35,
+    "id": 593,
     "count": 4,
-    "description": "Dicas rápidas de tecnologia para o dia a dia: atalhos, truques e pequenos ajustes que economizam tempo e resolvem problemas comuns em celulares, computadores e aplicativos, sem precisar de um tutorial completo.",
-    "link": "https://techonplay.com.br/category/dicas/",
+    "description": "",
+    "link": "https://informaticaparaconcurso.com.br/category/dicas/",
     "name": "Dicas",
     "slug": "dicas",
     "taxonomy": "category",
     "parent": 0,
     "meta": [],
-    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Arquivo de Dicas - TechOnPlayBr ▶</title>\n<meta name=\"description\" content=\"Dicas de tecnologia rápidas e práticas: atalhos, truques e ajustes simples para celular, computador e apps, testados no dia a dia pelo TechOnPlay.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://techonplay.com.br/category/dicas/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Dicas - TechOnPlayBr ▶\" />\n<meta property=\"og:description\" content=\"Dicas de tecnologia rápidas e práticas: atalhos, truques e ajustes simples para celular, computador e apps, testados no dia a dia pelo TechOnPlay.\" />\n<meta property=\"og:url\" content=\"https://techonplay.com.br/category/dicas/\" />\n<meta property=\"og:site_name\" content=\"TechOnPlayBr ▶\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/dicas\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/category\\/dicas\\/\",\"name\":\"Arquivo de Dicas - TechOnPlayBr ▶\",\"isPartOf\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\"},\"description\":\"Dicas de tecnologia rápidas e práticas: atalhos, truques e ajustes simples para celular, computador e apps, testados no dia a dia pelo TechOnPlay.\",\"breadcrumb\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/dicas\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/dicas\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https:\\/\\/techonplay.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Dicas\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"name\":\"TechOnPlayBr ▶\",\"description\":\"https:\\/\\/techonplay.com.br\\/\",\"publisher\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/techonplay.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\",\"name\":\"TechOnPlayBr ▶\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"contentUrl\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"width\":538,\"height\":91,\"caption\":\"TechOnPlayBr ▶\"},\"image\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Arquivo de Dicas - Informática para Concursos</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://informaticaparaconcurso.com.br/category/dicas/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Dicas - Informática para Concursos\" />\n<meta property=\"og:url\" content=\"https://informaticaparaconcurso.com.br/category/dicas/\" />\n<meta property=\"og:site_name\" content=\"Informática para Concursos\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://informaticaparaconcurso.com.br/category/dicas/\",\"url\":\"https://informaticaparaconcurso.com.br/category/dicas/\",\"name\":\"Arquivo de Dicas - Informática para Concursos\",\"isPartOf\":{\"@id\":\"https://informaticaparaconcurso.com.br/#website\"},\"breadcrumb\":{\"@id\":\"https://informaticaparaconcurso.com.br/category/dicas/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://informaticaparaconcurso.com.br/category/dicas/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https://informaticaparaconcurso.com.br/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Dicas\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://informaticaparaconcurso.com.br/#website\",\"url\":\"https://informaticaparaconcurso.com.br/\",\"name\":\"Informática para Concursos\",\"description\":\"O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://informaticaparaconcurso.com.br/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
     "yoast_head_json": {
-      "title": "Arquivo de Dicas - TechOnPlayBr ▶",
-      "description": "Dicas de tecnologia rápidas e práticas: atalhos, truques e ajustes simples para celular, computador e apps, testados no dia a dia pelo TechOnPlay.",
+      "title": "Arquivo de Dicas - Informática para Concursos",
       "robots": {
         "index": "index",
         "follow": "follow",
@@ -310,40 +139,38 @@
         "max-image-preview": "max-image-preview:large",
         "max-video-preview": "max-video-preview:-1"
       },
-      "canonical": "https://techonplay.com.br/category/dicas/",
+      "canonical": "https://informaticaparaconcurso.com.br/category/dicas/",
       "og_locale": "pt_BR",
       "og_type": "article",
-      "og_title": "Arquivo de Dicas - TechOnPlayBr ▶",
-      "og_description": "Dicas de tecnologia rápidas e práticas: atalhos, truques e ajustes simples para celular, computador e apps, testados no dia a dia pelo TechOnPlay.",
-      "og_url": "https://techonplay.com.br/category/dicas/",
-      "og_site_name": "TechOnPlayBr ▶",
+      "og_title": "Arquivo de Dicas - Informática para Concursos",
+      "og_url": "https://informaticaparaconcurso.com.br/category/dicas/",
+      "og_site_name": "Informática para Concursos",
       "twitter_card": "summary_large_image",
       "schema": {
         "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "CollectionPage",
-            "@id": "https://techonplay.com.br/category/dicas/",
-            "url": "https://techonplay.com.br/category/dicas/",
-            "name": "Arquivo de Dicas - TechOnPlayBr ▶",
+            "@id": "https://informaticaparaconcurso.com.br/category/dicas/",
+            "url": "https://informaticaparaconcurso.com.br/category/dicas/",
+            "name": "Arquivo de Dicas - Informática para Concursos",
             "isPartOf": {
-              "@id": "https://techonplay.com.br/#website"
+              "@id": "https://informaticaparaconcurso.com.br/#website"
             },
-            "description": "Dicas de tecnologia rápidas e práticas: atalhos, truques e ajustes simples para celular, computador e apps, testados no dia a dia pelo TechOnPlay.",
             "breadcrumb": {
-              "@id": "https://techonplay.com.br/category/dicas/#breadcrumb"
+              "@id": "https://informaticaparaconcurso.com.br/category/dicas/#breadcrumb"
             },
             "inLanguage": "pt-BR"
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://techonplay.com.br/category/dicas/#breadcrumb",
+            "@id": "https://informaticaparaconcurso.com.br/category/dicas/#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Início",
-                "item": "https://techonplay.com.br/"
+                "item": "https://informaticaparaconcurso.com.br/"
               },
               {
                 "@type": "ListItem",
@@ -354,19 +181,16 @@
           },
           {
             "@type": "WebSite",
-            "@id": "https://techonplay.com.br/#website",
-            "url": "https://techonplay.com.br/",
-            "name": "TechOnPlayBr ▶",
-            "description": "https://techonplay.com.br/",
-            "publisher": {
-              "@id": "https://techonplay.com.br/#organization"
-            },
+            "@id": "https://informaticaparaconcurso.com.br/#website",
+            "url": "https://informaticaparaconcurso.com.br/",
+            "name": "Informática para Concursos",
+            "description": "O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.",
             "potentialAction": [
               {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://techonplay.com.br/?s={search_term_string}"
+                  "urlTemplate": "https://informaticaparaconcurso.com.br/?s={search_term_string}"
                 },
                 "query-input": {
                   "@type": "PropertyValueSpecification",
@@ -376,25 +200,6 @@
               }
             ],
             "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://techonplay.com.br/#organization",
-            "name": "TechOnPlayBr ▶",
-            "url": "https://techonplay.com.br/",
-            "logo": {
-              "@type": "ImageObject",
-              "inLanguage": "pt-BR",
-              "@id": "https://techonplay.com.br/#/schema/logo/image/",
-              "url": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "contentUrl": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "width": 538,
-              "height": 91,
-              "caption": "TechOnPlayBr ▶"
-            },
-            "image": {
-              "@id": "https://techonplay.com.br/#/schema/logo/image/"
-            }
           }
         ]
       }
@@ -402,7 +207,7 @@
     "_links": {
       "self": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories/35",
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories/593",
           "targetHints": {
             "allow": [
               "GET"
@@ -412,17 +217,17 @@
       ],
       "collection": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories"
         }
       ],
       "about": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/taxonomies/category"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/taxonomies/category"
         }
       ],
       "wp:post_type": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/posts?categories=35"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/posts?categories=593"
         }
       ],
       "curies": [
@@ -435,164 +240,18 @@
     }
   },
   {
-    "id": 31,
-    "count": 6,
-    "description": "Inteligência Artificial explicada na prática: ferramentas como ChatGPT, Claude e Midjourney, automação e estratégias de uso real. O TechOnPlay traduz os avanços da IA em conteúdo aplicável para quem quer usar a tecnologia sem enrolação.",
-    "link": "https://techonplay.com.br/category/inteligencia-artificial/",
-    "name": "Inteligência Artificial",
-    "slug": "inteligencia-artificial",
-    "taxonomy": "category",
-    "parent": 0,
-    "meta": [],
-    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Arquivo de Inteligência Artificial - TechOnPlayBr ▶</title>\n<meta name=\"description\" content=\"Inteligência Artificial na prática: ferramentas, automação e estratégias de uso real, testadas e explicadas pelo TechOnPlay.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://techonplay.com.br/category/inteligencia-artificial/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Inteligência Artificial - TechOnPlayBr ▶\" />\n<meta property=\"og:description\" content=\"Inteligência Artificial na prática: ferramentas, automação e estratégias de uso real, testadas e explicadas pelo TechOnPlay.\" />\n<meta property=\"og:url\" content=\"https://techonplay.com.br/category/inteligencia-artificial/\" />\n<meta property=\"og:site_name\" content=\"TechOnPlayBr ▶\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/inteligencia-artificial\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/category\\/inteligencia-artificial\\/\",\"name\":\"Arquivo de Inteligência Artificial - TechOnPlayBr ▶\",\"isPartOf\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\"},\"description\":\"Inteligência Artificial na prática: ferramentas, automação e estratégias de uso real, testadas e explicadas pelo TechOnPlay.\",\"breadcrumb\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/inteligencia-artificial\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/inteligencia-artificial\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https:\\/\\/techonplay.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Inteligência Artificial\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"name\":\"TechOnPlayBr ▶\",\"description\":\"https:\\/\\/techonplay.com.br\\/\",\"publisher\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/techonplay.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\",\"name\":\"TechOnPlayBr ▶\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"contentUrl\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"width\":538,\"height\":91,\"caption\":\"TechOnPlayBr ▶\"},\"image\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
-    "yoast_head_json": {
-      "title": "Arquivo de Inteligência Artificial - TechOnPlayBr ▶",
-      "description": "Inteligência Artificial na prática: ferramentas, automação e estratégias de uso real, testadas e explicadas pelo TechOnPlay.",
-      "robots": {
-        "index": "index",
-        "follow": "follow",
-        "max-snippet": "max-snippet:-1",
-        "max-image-preview": "max-image-preview:large",
-        "max-video-preview": "max-video-preview:-1"
-      },
-      "canonical": "https://techonplay.com.br/category/inteligencia-artificial/",
-      "og_locale": "pt_BR",
-      "og_type": "article",
-      "og_title": "Arquivo de Inteligência Artificial - TechOnPlayBr ▶",
-      "og_description": "Inteligência Artificial na prática: ferramentas, automação e estratégias de uso real, testadas e explicadas pelo TechOnPlay.",
-      "og_url": "https://techonplay.com.br/category/inteligencia-artificial/",
-      "og_site_name": "TechOnPlayBr ▶",
-      "twitter_card": "summary_large_image",
-      "schema": {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "CollectionPage",
-            "@id": "https://techonplay.com.br/category/inteligencia-artificial/",
-            "url": "https://techonplay.com.br/category/inteligencia-artificial/",
-            "name": "Arquivo de Inteligência Artificial - TechOnPlayBr ▶",
-            "isPartOf": {
-              "@id": "https://techonplay.com.br/#website"
-            },
-            "description": "Inteligência Artificial na prática: ferramentas, automação e estratégias de uso real, testadas e explicadas pelo TechOnPlay.",
-            "breadcrumb": {
-              "@id": "https://techonplay.com.br/category/inteligencia-artificial/#breadcrumb"
-            },
-            "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://techonplay.com.br/category/inteligencia-artificial/#breadcrumb",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Início",
-                "item": "https://techonplay.com.br/"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Inteligência Artificial"
-              }
-            ]
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://techonplay.com.br/#website",
-            "url": "https://techonplay.com.br/",
-            "name": "TechOnPlayBr ▶",
-            "description": "https://techonplay.com.br/",
-            "publisher": {
-              "@id": "https://techonplay.com.br/#organization"
-            },
-            "potentialAction": [
-              {
-                "@type": "SearchAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://techonplay.com.br/?s={search_term_string}"
-                },
-                "query-input": {
-                  "@type": "PropertyValueSpecification",
-                  "valueRequired": true,
-                  "valueName": "search_term_string"
-                }
-              }
-            ],
-            "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://techonplay.com.br/#organization",
-            "name": "TechOnPlayBr ▶",
-            "url": "https://techonplay.com.br/",
-            "logo": {
-              "@type": "ImageObject",
-              "inLanguage": "pt-BR",
-              "@id": "https://techonplay.com.br/#/schema/logo/image/",
-              "url": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "contentUrl": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "width": 538,
-              "height": 91,
-              "caption": "TechOnPlayBr ▶"
-            },
-            "image": {
-              "@id": "https://techonplay.com.br/#/schema/logo/image/"
-            }
-          }
-        ]
-      }
-    },
-    "_links": {
-      "self": [
-        {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories/31",
-          "targetHints": {
-            "allow": [
-              "GET"
-            ]
-          }
-        }
-      ],
-      "collection": [
-        {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories"
-        }
-      ],
-      "about": [
-        {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/taxonomies/category"
-        }
-      ],
-      "wp:post_type": [
-        {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/posts?categories=31"
-        }
-      ],
-      "curies": [
-        {
-          "name": "wp",
-          "href": "https://api.w.org/{rel}",
-          "templated": true
-        }
-      ]
-    }
-  },
-  {
-    "id": 34,
+    "id": 567,
     "count": 3,
-    "description": "Jogos e a tecnologia por trás deles: hardware, desempenho e as novidades que estão mudando a experiência gamer. O TechOnPlay cobre o universo tecnológico com foco moderno, não só nos títulos, mas na tecnologia que os move.",
-    "link": "https://techonplay.com.br/category/jogos/",
-    "name": "Jogos",
-    "slug": "jogos",
+    "description": "",
+    "link": "https://informaticaparaconcurso.com.br/category/hardware/",
+    "name": "Hardware",
+    "slug": "hardware",
     "taxonomy": "category",
     "parent": 0,
     "meta": [],
-    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Arquivo de Jogos - TechOnPlayBr ▶</title>\n<meta name=\"description\" content=\"Jogos e tecnologia: hardware, desempenho, novidades e tendências que estão mudando a experiência do mundo gamer por todo o Brasil.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://techonplay.com.br/category/jogos/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Jogos - TechOnPlayBr ▶\" />\n<meta property=\"og:description\" content=\"Jogos e tecnologia: hardware, desempenho, novidades e tendências que estão mudando a experiência do mundo gamer por todo o Brasil.\" />\n<meta property=\"og:url\" content=\"https://techonplay.com.br/category/jogos/\" />\n<meta property=\"og:site_name\" content=\"TechOnPlayBr ▶\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/jogos\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/category\\/jogos\\/\",\"name\":\"Arquivo de Jogos - TechOnPlayBr ▶\",\"isPartOf\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\"},\"description\":\"Jogos e tecnologia: hardware, desempenho, novidades e tendências que estão mudando a experiência do mundo gamer por todo o Brasil.\",\"breadcrumb\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/jogos\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/jogos\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https:\\/\\/techonplay.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Jogos\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"name\":\"TechOnPlayBr ▶\",\"description\":\"https:\\/\\/techonplay.com.br\\/\",\"publisher\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/techonplay.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\",\"name\":\"TechOnPlayBr ▶\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"contentUrl\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"width\":538,\"height\":91,\"caption\":\"TechOnPlayBr ▶\"},\"image\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Arquivo de Hardware - Informática para Concursos</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://informaticaparaconcurso.com.br/category/hardware/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Hardware - Informática para Concursos\" />\n<meta property=\"og:url\" content=\"https://informaticaparaconcurso.com.br/category/hardware/\" />\n<meta property=\"og:site_name\" content=\"Informática para Concursos\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://informaticaparaconcurso.com.br/category/hardware/\",\"url\":\"https://informaticaparaconcurso.com.br/category/hardware/\",\"name\":\"Arquivo de Hardware - Informática para Concursos\",\"isPartOf\":{\"@id\":\"https://informaticaparaconcurso.com.br/#website\"},\"breadcrumb\":{\"@id\":\"https://informaticaparaconcurso.com.br/category/hardware/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://informaticaparaconcurso.com.br/category/hardware/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https://informaticaparaconcurso.com.br/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Hardware\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://informaticaparaconcurso.com.br/#website\",\"url\":\"https://informaticaparaconcurso.com.br/\",\"name\":\"Informática para Concursos\",\"description\":\"O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://informaticaparaconcurso.com.br/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
     "yoast_head_json": {
-      "title": "Arquivo de Jogos - TechOnPlayBr ▶",
-      "description": "Jogos e tecnologia: hardware, desempenho, novidades e tendências que estão mudando a experiência do mundo gamer por todo o Brasil.",
+      "title": "Arquivo de Hardware - Informática para Concursos",
       "robots": {
         "index": "index",
         "follow": "follow",
@@ -600,63 +259,58 @@
         "max-image-preview": "max-image-preview:large",
         "max-video-preview": "max-video-preview:-1"
       },
-      "canonical": "https://techonplay.com.br/category/jogos/",
+      "canonical": "https://informaticaparaconcurso.com.br/category/hardware/",
       "og_locale": "pt_BR",
       "og_type": "article",
-      "og_title": "Arquivo de Jogos - TechOnPlayBr ▶",
-      "og_description": "Jogos e tecnologia: hardware, desempenho, novidades e tendências que estão mudando a experiência do mundo gamer por todo o Brasil.",
-      "og_url": "https://techonplay.com.br/category/jogos/",
-      "og_site_name": "TechOnPlayBr ▶",
+      "og_title": "Arquivo de Hardware - Informática para Concursos",
+      "og_url": "https://informaticaparaconcurso.com.br/category/hardware/",
+      "og_site_name": "Informática para Concursos",
       "twitter_card": "summary_large_image",
       "schema": {
         "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "CollectionPage",
-            "@id": "https://techonplay.com.br/category/jogos/",
-            "url": "https://techonplay.com.br/category/jogos/",
-            "name": "Arquivo de Jogos - TechOnPlayBr ▶",
+            "@id": "https://informaticaparaconcurso.com.br/category/hardware/",
+            "url": "https://informaticaparaconcurso.com.br/category/hardware/",
+            "name": "Arquivo de Hardware - Informática para Concursos",
             "isPartOf": {
-              "@id": "https://techonplay.com.br/#website"
+              "@id": "https://informaticaparaconcurso.com.br/#website"
             },
-            "description": "Jogos e tecnologia: hardware, desempenho, novidades e tendências que estão mudando a experiência do mundo gamer por todo o Brasil.",
             "breadcrumb": {
-              "@id": "https://techonplay.com.br/category/jogos/#breadcrumb"
+              "@id": "https://informaticaparaconcurso.com.br/category/hardware/#breadcrumb"
             },
             "inLanguage": "pt-BR"
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://techonplay.com.br/category/jogos/#breadcrumb",
+            "@id": "https://informaticaparaconcurso.com.br/category/hardware/#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Início",
-                "item": "https://techonplay.com.br/"
+                "item": "https://informaticaparaconcurso.com.br/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Jogos"
+                "name": "Hardware"
               }
             ]
           },
           {
             "@type": "WebSite",
-            "@id": "https://techonplay.com.br/#website",
-            "url": "https://techonplay.com.br/",
-            "name": "TechOnPlayBr ▶",
-            "description": "https://techonplay.com.br/",
-            "publisher": {
-              "@id": "https://techonplay.com.br/#organization"
-            },
+            "@id": "https://informaticaparaconcurso.com.br/#website",
+            "url": "https://informaticaparaconcurso.com.br/",
+            "name": "Informática para Concursos",
+            "description": "O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.",
             "potentialAction": [
               {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://techonplay.com.br/?s={search_term_string}"
+                  "urlTemplate": "https://informaticaparaconcurso.com.br/?s={search_term_string}"
                 },
                 "query-input": {
                   "@type": "PropertyValueSpecification",
@@ -666,25 +320,6 @@
               }
             ],
             "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://techonplay.com.br/#organization",
-            "name": "TechOnPlayBr ▶",
-            "url": "https://techonplay.com.br/",
-            "logo": {
-              "@type": "ImageObject",
-              "inLanguage": "pt-BR",
-              "@id": "https://techonplay.com.br/#/schema/logo/image/",
-              "url": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "contentUrl": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "width": 538,
-              "height": 91,
-              "caption": "TechOnPlayBr ▶"
-            },
-            "image": {
-              "@id": "https://techonplay.com.br/#/schema/logo/image/"
-            }
           }
         ]
       }
@@ -692,7 +327,7 @@
     "_links": {
       "self": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories/34",
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories/567",
           "targetHints": {
             "allow": [
               "GET"
@@ -702,17 +337,17 @@
       ],
       "collection": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories"
         }
       ],
       "about": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/taxonomies/category"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/taxonomies/category"
         }
       ],
       "wp:post_type": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/posts?categories=34"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/posts?categories=567"
         }
       ],
       "curies": [
@@ -725,19 +360,18 @@
     }
   },
   {
-    "id": 29,
-    "count": 2,
-    "description": "Reviews completos e imparciais de gadgets, apps e softwares de tecnologia. A equipe do TechOnPlay testa cada produto na prática antes de recomendar, com foco em desempenho real e custo-benefício para o público brasileiro.",
-    "link": "https://techonplay.com.br/category/reviews/",
-    "name": "Reviews",
-    "slug": "reviews",
+    "id": 568,
+    "count": 7,
+    "description": "",
+    "link": "https://informaticaparaconcurso.com.br/category/office/",
+    "name": "Office",
+    "slug": "office",
     "taxonomy": "category",
     "parent": 0,
     "meta": [],
-    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Arquivo de Reviews - TechOnPlayBr ▶</title>\n<meta name=\"description\" content=\"Reviews de tecnologia testados na prática: gadgets, apps e softwares avaliados com foco em desempenho real e custo-benefício.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://techonplay.com.br/category/reviews/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Reviews - TechOnPlayBr ▶\" />\n<meta property=\"og:description\" content=\"Reviews de tecnologia testados na prática: gadgets, apps e softwares avaliados com foco em desempenho real e custo-benefício.\" />\n<meta property=\"og:url\" content=\"https://techonplay.com.br/category/reviews/\" />\n<meta property=\"og:site_name\" content=\"TechOnPlayBr ▶\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/reviews\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/category\\/reviews\\/\",\"name\":\"Arquivo de Reviews - TechOnPlayBr ▶\",\"isPartOf\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\"},\"description\":\"Reviews de tecnologia testados na prática: gadgets, apps e softwares avaliados com foco em desempenho real e custo-benefício.\",\"breadcrumb\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/reviews\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/reviews\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https:\\/\\/techonplay.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Reviews\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"name\":\"TechOnPlayBr ▶\",\"description\":\"https:\\/\\/techonplay.com.br\\/\",\"publisher\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/techonplay.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\",\"name\":\"TechOnPlayBr ▶\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"contentUrl\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"width\":538,\"height\":91,\"caption\":\"TechOnPlayBr ▶\"},\"image\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Arquivo de Office - Informática para Concursos</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://informaticaparaconcurso.com.br/category/office/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Office - Informática para Concursos\" />\n<meta property=\"og:url\" content=\"https://informaticaparaconcurso.com.br/category/office/\" />\n<meta property=\"og:site_name\" content=\"Informática para Concursos\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://informaticaparaconcurso.com.br/category/office/\",\"url\":\"https://informaticaparaconcurso.com.br/category/office/\",\"name\":\"Arquivo de Office - Informática para Concursos\",\"isPartOf\":{\"@id\":\"https://informaticaparaconcurso.com.br/#website\"},\"breadcrumb\":{\"@id\":\"https://informaticaparaconcurso.com.br/category/office/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://informaticaparaconcurso.com.br/category/office/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https://informaticaparaconcurso.com.br/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Office\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://informaticaparaconcurso.com.br/#website\",\"url\":\"https://informaticaparaconcurso.com.br/\",\"name\":\"Informática para Concursos\",\"description\":\"O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://informaticaparaconcurso.com.br/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
     "yoast_head_json": {
-      "title": "Arquivo de Reviews - TechOnPlayBr ▶",
-      "description": "Reviews de tecnologia testados na prática: gadgets, apps e softwares avaliados com foco em desempenho real e custo-benefício.",
+      "title": "Arquivo de Office - Informática para Concursos",
       "robots": {
         "index": "index",
         "follow": "follow",
@@ -745,63 +379,58 @@
         "max-image-preview": "max-image-preview:large",
         "max-video-preview": "max-video-preview:-1"
       },
-      "canonical": "https://techonplay.com.br/category/reviews/",
+      "canonical": "https://informaticaparaconcurso.com.br/category/office/",
       "og_locale": "pt_BR",
       "og_type": "article",
-      "og_title": "Arquivo de Reviews - TechOnPlayBr ▶",
-      "og_description": "Reviews de tecnologia testados na prática: gadgets, apps e softwares avaliados com foco em desempenho real e custo-benefício.",
-      "og_url": "https://techonplay.com.br/category/reviews/",
-      "og_site_name": "TechOnPlayBr ▶",
+      "og_title": "Arquivo de Office - Informática para Concursos",
+      "og_url": "https://informaticaparaconcurso.com.br/category/office/",
+      "og_site_name": "Informática para Concursos",
       "twitter_card": "summary_large_image",
       "schema": {
         "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "CollectionPage",
-            "@id": "https://techonplay.com.br/category/reviews/",
-            "url": "https://techonplay.com.br/category/reviews/",
-            "name": "Arquivo de Reviews - TechOnPlayBr ▶",
+            "@id": "https://informaticaparaconcurso.com.br/category/office/",
+            "url": "https://informaticaparaconcurso.com.br/category/office/",
+            "name": "Arquivo de Office - Informática para Concursos",
             "isPartOf": {
-              "@id": "https://techonplay.com.br/#website"
+              "@id": "https://informaticaparaconcurso.com.br/#website"
             },
-            "description": "Reviews de tecnologia testados na prática: gadgets, apps e softwares avaliados com foco em desempenho real e custo-benefício.",
             "breadcrumb": {
-              "@id": "https://techonplay.com.br/category/reviews/#breadcrumb"
+              "@id": "https://informaticaparaconcurso.com.br/category/office/#breadcrumb"
             },
             "inLanguage": "pt-BR"
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://techonplay.com.br/category/reviews/#breadcrumb",
+            "@id": "https://informaticaparaconcurso.com.br/category/office/#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Início",
-                "item": "https://techonplay.com.br/"
+                "item": "https://informaticaparaconcurso.com.br/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Reviews"
+                "name": "Office"
               }
             ]
           },
           {
             "@type": "WebSite",
-            "@id": "https://techonplay.com.br/#website",
-            "url": "https://techonplay.com.br/",
-            "name": "TechOnPlayBr ▶",
-            "description": "https://techonplay.com.br/",
-            "publisher": {
-              "@id": "https://techonplay.com.br/#organization"
-            },
+            "@id": "https://informaticaparaconcurso.com.br/#website",
+            "url": "https://informaticaparaconcurso.com.br/",
+            "name": "Informática para Concursos",
+            "description": "O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.",
             "potentialAction": [
               {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://techonplay.com.br/?s={search_term_string}"
+                  "urlTemplate": "https://informaticaparaconcurso.com.br/?s={search_term_string}"
                 },
                 "query-input": {
                   "@type": "PropertyValueSpecification",
@@ -811,25 +440,6 @@
               }
             ],
             "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://techonplay.com.br/#organization",
-            "name": "TechOnPlayBr ▶",
-            "url": "https://techonplay.com.br/",
-            "logo": {
-              "@type": "ImageObject",
-              "inLanguage": "pt-BR",
-              "@id": "https://techonplay.com.br/#/schema/logo/image/",
-              "url": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "contentUrl": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "width": 538,
-              "height": 91,
-              "caption": "TechOnPlayBr ▶"
-            },
-            "image": {
-              "@id": "https://techonplay.com.br/#/schema/logo/image/"
-            }
           }
         ]
       }
@@ -837,7 +447,7 @@
     "_links": {
       "self": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories/29",
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories/568",
           "targetHints": {
             "allow": [
               "GET"
@@ -847,17 +457,257 @@
       ],
       "collection": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories"
         }
       ],
       "about": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/taxonomies/category"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/taxonomies/category"
         }
       ],
       "wp:post_type": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/posts?categories=29"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/posts?categories=568"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 569,
+    "count": 10,
+    "description": "",
+    "link": "https://informaticaparaconcurso.com.br/category/redes/",
+    "name": "Redes",
+    "slug": "redes",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Arquivo de Redes - Informática para Concursos</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://informaticaparaconcurso.com.br/category/redes/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Redes - Informática para Concursos\" />\n<meta property=\"og:url\" content=\"https://informaticaparaconcurso.com.br/category/redes/\" />\n<meta property=\"og:site_name\" content=\"Informática para Concursos\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://informaticaparaconcurso.com.br/category/redes/\",\"url\":\"https://informaticaparaconcurso.com.br/category/redes/\",\"name\":\"Arquivo de Redes - Informática para Concursos\",\"isPartOf\":{\"@id\":\"https://informaticaparaconcurso.com.br/#website\"},\"breadcrumb\":{\"@id\":\"https://informaticaparaconcurso.com.br/category/redes/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://informaticaparaconcurso.com.br/category/redes/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https://informaticaparaconcurso.com.br/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Redes\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://informaticaparaconcurso.com.br/#website\",\"url\":\"https://informaticaparaconcurso.com.br/\",\"name\":\"Informática para Concursos\",\"description\":\"O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://informaticaparaconcurso.com.br/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Arquivo de Redes - Informática para Concursos",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://informaticaparaconcurso.com.br/category/redes/",
+      "og_locale": "pt_BR",
+      "og_type": "article",
+      "og_title": "Arquivo de Redes - Informática para Concursos",
+      "og_url": "https://informaticaparaconcurso.com.br/category/redes/",
+      "og_site_name": "Informática para Concursos",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://informaticaparaconcurso.com.br/category/redes/",
+            "url": "https://informaticaparaconcurso.com.br/category/redes/",
+            "name": "Arquivo de Redes - Informática para Concursos",
+            "isPartOf": {
+              "@id": "https://informaticaparaconcurso.com.br/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://informaticaparaconcurso.com.br/category/redes/#breadcrumb"
+            },
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://informaticaparaconcurso.com.br/category/redes/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://informaticaparaconcurso.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Redes"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://informaticaparaconcurso.com.br/#website",
+            "url": "https://informaticaparaconcurso.com.br/",
+            "name": "Informática para Concursos",
+            "description": "O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://informaticaparaconcurso.com.br/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "pt-BR"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories/569",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/posts?categories=569"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 571,
+    "count": 6,
+    "description": "",
+    "link": "https://informaticaparaconcurso.com.br/category/seguranca/",
+    "name": "Segurança",
+    "slug": "seguranca",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Arquivo de Segurança - Informática para Concursos</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://informaticaparaconcurso.com.br/category/seguranca/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Segurança - Informática para Concursos\" />\n<meta property=\"og:url\" content=\"https://informaticaparaconcurso.com.br/category/seguranca/\" />\n<meta property=\"og:site_name\" content=\"Informática para Concursos\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://informaticaparaconcurso.com.br/category/seguranca/\",\"url\":\"https://informaticaparaconcurso.com.br/category/seguranca/\",\"name\":\"Arquivo de Segurança - Informática para Concursos\",\"isPartOf\":{\"@id\":\"https://informaticaparaconcurso.com.br/#website\"},\"breadcrumb\":{\"@id\":\"https://informaticaparaconcurso.com.br/category/seguranca/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://informaticaparaconcurso.com.br/category/seguranca/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https://informaticaparaconcurso.com.br/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Segurança\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://informaticaparaconcurso.com.br/#website\",\"url\":\"https://informaticaparaconcurso.com.br/\",\"name\":\"Informática para Concursos\",\"description\":\"O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://informaticaparaconcurso.com.br/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Arquivo de Segurança - Informática para Concursos",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://informaticaparaconcurso.com.br/category/seguranca/",
+      "og_locale": "pt_BR",
+      "og_type": "article",
+      "og_title": "Arquivo de Segurança - Informática para Concursos",
+      "og_url": "https://informaticaparaconcurso.com.br/category/seguranca/",
+      "og_site_name": "Informática para Concursos",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://informaticaparaconcurso.com.br/category/seguranca/",
+            "url": "https://informaticaparaconcurso.com.br/category/seguranca/",
+            "name": "Arquivo de Segurança - Informática para Concursos",
+            "isPartOf": {
+              "@id": "https://informaticaparaconcurso.com.br/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://informaticaparaconcurso.com.br/category/seguranca/#breadcrumb"
+            },
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://informaticaparaconcurso.com.br/category/seguranca/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://informaticaparaconcurso.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Segurança"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://informaticaparaconcurso.com.br/#website",
+            "url": "https://informaticaparaconcurso.com.br/",
+            "name": "Informática para Concursos",
+            "description": "O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://informaticaparaconcurso.com.br/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "pt-BR"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories/571",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/posts?categories=571"
         }
       ],
       "curies": [
@@ -873,16 +723,15 @@
     "id": 1,
     "count": 0,
     "description": "",
-    "link": "https://techonplay.com.br/category/sem-categoria/",
-    "name": "Sem categoria",
+    "link": "https://informaticaparaconcurso.com.br/category/sem-categoria/",
+    "name": "Sem Categoria",
     "slug": "sem-categoria",
     "taxonomy": "category",
     "parent": 0,
     "meta": [],
-    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Arquivo de Sem categoria - TechOnPlayBr ▶</title>\n<meta name=\"description\" content=\"categoria\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://techonplay.com.br/category/sem-categoria/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Sem categoria - TechOnPlayBr ▶\" />\n<meta property=\"og:description\" content=\"categoria\" />\n<meta property=\"og:url\" content=\"https://techonplay.com.br/category/sem-categoria/\" />\n<meta property=\"og:site_name\" content=\"TechOnPlayBr ▶\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/sem-categoria\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/category\\/sem-categoria\\/\",\"name\":\"Arquivo de Sem categoria - TechOnPlayBr ▶\",\"isPartOf\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\"},\"description\":\"categoria\",\"breadcrumb\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/sem-categoria\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/sem-categoria\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https:\\/\\/techonplay.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Sem categoria\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"name\":\"TechOnPlayBr ▶\",\"description\":\"https:\\/\\/techonplay.com.br\\/\",\"publisher\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/techonplay.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\",\"name\":\"TechOnPlayBr ▶\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"contentUrl\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"width\":538,\"height\":91,\"caption\":\"TechOnPlayBr ▶\"},\"image\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Arquivo de Sem Categoria - Informática para Concursos</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://informaticaparaconcurso.com.br/category/sem-categoria/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Sem Categoria - Informática para Concursos\" />\n<meta property=\"og:url\" content=\"https://informaticaparaconcurso.com.br/category/sem-categoria/\" />\n<meta property=\"og:site_name\" content=\"Informática para Concursos\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://informaticaparaconcurso.com.br/category/sem-categoria/\",\"url\":\"https://informaticaparaconcurso.com.br/category/sem-categoria/\",\"name\":\"Arquivo de Sem Categoria - Informática para Concursos\",\"isPartOf\":{\"@id\":\"https://informaticaparaconcurso.com.br/#website\"},\"breadcrumb\":{\"@id\":\"https://informaticaparaconcurso.com.br/category/sem-categoria/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://informaticaparaconcurso.com.br/category/sem-categoria/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https://informaticaparaconcurso.com.br/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Sem Categoria\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://informaticaparaconcurso.com.br/#website\",\"url\":\"https://informaticaparaconcurso.com.br/\",\"name\":\"Informática para Concursos\",\"description\":\"O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://informaticaparaconcurso.com.br/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
     "yoast_head_json": {
-      "title": "Arquivo de Sem categoria - TechOnPlayBr ▶",
-      "description": "categoria",
+      "title": "Arquivo de Sem Categoria - Informática para Concursos",
       "robots": {
         "index": "index",
         "follow": "follow",
@@ -890,63 +739,58 @@
         "max-image-preview": "max-image-preview:large",
         "max-video-preview": "max-video-preview:-1"
       },
-      "canonical": "https://techonplay.com.br/category/sem-categoria/",
+      "canonical": "https://informaticaparaconcurso.com.br/category/sem-categoria/",
       "og_locale": "pt_BR",
       "og_type": "article",
-      "og_title": "Arquivo de Sem categoria - TechOnPlayBr ▶",
-      "og_description": "categoria",
-      "og_url": "https://techonplay.com.br/category/sem-categoria/",
-      "og_site_name": "TechOnPlayBr ▶",
+      "og_title": "Arquivo de Sem Categoria - Informática para Concursos",
+      "og_url": "https://informaticaparaconcurso.com.br/category/sem-categoria/",
+      "og_site_name": "Informática para Concursos",
       "twitter_card": "summary_large_image",
       "schema": {
         "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "CollectionPage",
-            "@id": "https://techonplay.com.br/category/sem-categoria/",
-            "url": "https://techonplay.com.br/category/sem-categoria/",
-            "name": "Arquivo de Sem categoria - TechOnPlayBr ▶",
+            "@id": "https://informaticaparaconcurso.com.br/category/sem-categoria/",
+            "url": "https://informaticaparaconcurso.com.br/category/sem-categoria/",
+            "name": "Arquivo de Sem Categoria - Informática para Concursos",
             "isPartOf": {
-              "@id": "https://techonplay.com.br/#website"
+              "@id": "https://informaticaparaconcurso.com.br/#website"
             },
-            "description": "categoria",
             "breadcrumb": {
-              "@id": "https://techonplay.com.br/category/sem-categoria/#breadcrumb"
+              "@id": "https://informaticaparaconcurso.com.br/category/sem-categoria/#breadcrumb"
             },
             "inLanguage": "pt-BR"
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://techonplay.com.br/category/sem-categoria/#breadcrumb",
+            "@id": "https://informaticaparaconcurso.com.br/category/sem-categoria/#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Início",
-                "item": "https://techonplay.com.br/"
+                "item": "https://informaticaparaconcurso.com.br/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Sem categoria"
+                "name": "Sem Categoria"
               }
             ]
           },
           {
             "@type": "WebSite",
-            "@id": "https://techonplay.com.br/#website",
-            "url": "https://techonplay.com.br/",
-            "name": "TechOnPlayBr ▶",
-            "description": "https://techonplay.com.br/",
-            "publisher": {
-              "@id": "https://techonplay.com.br/#organization"
-            },
+            "@id": "https://informaticaparaconcurso.com.br/#website",
+            "url": "https://informaticaparaconcurso.com.br/",
+            "name": "Informática para Concursos",
+            "description": "O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.",
             "potentialAction": [
               {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://techonplay.com.br/?s={search_term_string}"
+                  "urlTemplate": "https://informaticaparaconcurso.com.br/?s={search_term_string}"
                 },
                 "query-input": {
                   "@type": "PropertyValueSpecification",
@@ -956,25 +800,6 @@
               }
             ],
             "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://techonplay.com.br/#organization",
-            "name": "TechOnPlayBr ▶",
-            "url": "https://techonplay.com.br/",
-            "logo": {
-              "@type": "ImageObject",
-              "inLanguage": "pt-BR",
-              "@id": "https://techonplay.com.br/#/schema/logo/image/",
-              "url": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "contentUrl": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "width": 538,
-              "height": 91,
-              "caption": "TechOnPlayBr ▶"
-            },
-            "image": {
-              "@id": "https://techonplay.com.br/#/schema/logo/image/"
-            }
           }
         ]
       }
@@ -982,7 +807,7 @@
     "_links": {
       "self": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories/1",
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories/1",
           "targetHints": {
             "allow": [
               "GET"
@@ -992,17 +817,17 @@
       ],
       "collection": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories"
         }
       ],
       "about": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/taxonomies/category"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/taxonomies/category"
         }
       ],
       "wp:post_type": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/posts?categories=1"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/posts?categories=1"
         }
       ],
       "curies": [
@@ -1015,19 +840,18 @@
     }
   },
   {
-    "id": 32,
-    "count": 2,
-    "description": "Tutoriais passo a passo para tirar mais proveito da tecnologia no dia a dia. Do básico ao avançado, cada tutorial do TechOnPlay traz instruções claras, capturas de tela e dicas testadas na prática.",
-    "link": "https://techonplay.com.br/category/tutoriais/",
-    "name": "Tutoriais",
-    "slug": "tutoriais",
+    "id": 573,
+    "count": 7,
+    "description": "",
+    "link": "https://informaticaparaconcurso.com.br/category/simulados/",
+    "name": "Simulados",
+    "slug": "simulados",
     "taxonomy": "category",
     "parent": 0,
     "meta": [],
-    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Arquivo de Tutoriais - TechOnPlayBr ▶</title>\n<meta name=\"description\" content=\"Tutoriais de tecnologia passo a passo, do básico ao avançado, com instruções claras e testadas na prática.\" />\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://techonplay.com.br/category/tutoriais/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Tutoriais - TechOnPlayBr ▶\" />\n<meta property=\"og:description\" content=\"Tutoriais de tecnologia passo a passo, do básico ao avançado, com instruções claras e testadas na prática.\" />\n<meta property=\"og:url\" content=\"https://techonplay.com.br/category/tutoriais/\" />\n<meta property=\"og:site_name\" content=\"TechOnPlayBr ▶\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/tutoriais\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/category\\/tutoriais\\/\",\"name\":\"Arquivo de Tutoriais - TechOnPlayBr ▶\",\"isPartOf\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\"},\"description\":\"Tutoriais de tecnologia passo a passo, do básico ao avançado, com instruções claras e testadas na prática.\",\"breadcrumb\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/tutoriais\\/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/techonplay.com.br\\/category\\/tutoriais\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https:\\/\\/techonplay.com.br\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tutoriais\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#website\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"name\":\"TechOnPlayBr ▶\",\"description\":\"https:\\/\\/techonplay.com.br\\/\",\"publisher\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/techonplay.com.br\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#organization\",\"name\":\"TechOnPlayBr ▶\",\"url\":\"https:\\/\\/techonplay.com.br\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"pt-BR\",\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"contentUrl\":\"https:\\/\\/techonplay.com.br\\/wp-content\\/uploads\\/2025\\/12\\/cropped-logo-oficial-1.png\",\"width\":538,\"height\":91,\"caption\":\"TechOnPlayBr ▶\"},\"image\":{\"@id\":\"https:\\/\\/techonplay.com.br\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Arquivo de Simulados - Informática para Concursos</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://informaticaparaconcurso.com.br/category/simulados/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Simulados - Informática para Concursos\" />\n<meta property=\"og:url\" content=\"https://informaticaparaconcurso.com.br/category/simulados/\" />\n<meta property=\"og:site_name\" content=\"Informática para Concursos\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://informaticaparaconcurso.com.br/category/simulados/\",\"url\":\"https://informaticaparaconcurso.com.br/category/simulados/\",\"name\":\"Arquivo de Simulados - Informática para Concursos\",\"isPartOf\":{\"@id\":\"https://informaticaparaconcurso.com.br/#website\"},\"breadcrumb\":{\"@id\":\"https://informaticaparaconcurso.com.br/category/simulados/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://informaticaparaconcurso.com.br/category/simulados/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https://informaticaparaconcurso.com.br/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Simulados\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://informaticaparaconcurso.com.br/#website\",\"url\":\"https://informaticaparaconcurso.com.br/\",\"name\":\"Informática para Concursos\",\"description\":\"O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://informaticaparaconcurso.com.br/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
     "yoast_head_json": {
-      "title": "Arquivo de Tutoriais - TechOnPlayBr ▶",
-      "description": "Tutoriais de tecnologia passo a passo, do básico ao avançado, com instruções claras e testadas na prática.",
+      "title": "Arquivo de Simulados - Informática para Concursos",
       "robots": {
         "index": "index",
         "follow": "follow",
@@ -1035,63 +859,58 @@
         "max-image-preview": "max-image-preview:large",
         "max-video-preview": "max-video-preview:-1"
       },
-      "canonical": "https://techonplay.com.br/category/tutoriais/",
+      "canonical": "https://informaticaparaconcurso.com.br/category/simulados/",
       "og_locale": "pt_BR",
       "og_type": "article",
-      "og_title": "Arquivo de Tutoriais - TechOnPlayBr ▶",
-      "og_description": "Tutoriais de tecnologia passo a passo, do básico ao avançado, com instruções claras e testadas na prática.",
-      "og_url": "https://techonplay.com.br/category/tutoriais/",
-      "og_site_name": "TechOnPlayBr ▶",
+      "og_title": "Arquivo de Simulados - Informática para Concursos",
+      "og_url": "https://informaticaparaconcurso.com.br/category/simulados/",
+      "og_site_name": "Informática para Concursos",
       "twitter_card": "summary_large_image",
       "schema": {
         "@context": "https://schema.org",
         "@graph": [
           {
             "@type": "CollectionPage",
-            "@id": "https://techonplay.com.br/category/tutoriais/",
-            "url": "https://techonplay.com.br/category/tutoriais/",
-            "name": "Arquivo de Tutoriais - TechOnPlayBr ▶",
+            "@id": "https://informaticaparaconcurso.com.br/category/simulados/",
+            "url": "https://informaticaparaconcurso.com.br/category/simulados/",
+            "name": "Arquivo de Simulados - Informática para Concursos",
             "isPartOf": {
-              "@id": "https://techonplay.com.br/#website"
+              "@id": "https://informaticaparaconcurso.com.br/#website"
             },
-            "description": "Tutoriais de tecnologia passo a passo, do básico ao avançado, com instruções claras e testadas na prática.",
             "breadcrumb": {
-              "@id": "https://techonplay.com.br/category/tutoriais/#breadcrumb"
+              "@id": "https://informaticaparaconcurso.com.br/category/simulados/#breadcrumb"
             },
             "inLanguage": "pt-BR"
           },
           {
             "@type": "BreadcrumbList",
-            "@id": "https://techonplay.com.br/category/tutoriais/#breadcrumb",
+            "@id": "https://informaticaparaconcurso.com.br/category/simulados/#breadcrumb",
             "itemListElement": [
               {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Início",
-                "item": "https://techonplay.com.br/"
+                "item": "https://informaticaparaconcurso.com.br/"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
-                "name": "Tutoriais"
+                "name": "Simulados"
               }
             ]
           },
           {
             "@type": "WebSite",
-            "@id": "https://techonplay.com.br/#website",
-            "url": "https://techonplay.com.br/",
-            "name": "TechOnPlayBr ▶",
-            "description": "https://techonplay.com.br/",
-            "publisher": {
-              "@id": "https://techonplay.com.br/#organization"
-            },
+            "@id": "https://informaticaparaconcurso.com.br/#website",
+            "url": "https://informaticaparaconcurso.com.br/",
+            "name": "Informática para Concursos",
+            "description": "O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.",
             "potentialAction": [
               {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://techonplay.com.br/?s={search_term_string}"
+                  "urlTemplate": "https://informaticaparaconcurso.com.br/?s={search_term_string}"
                 },
                 "query-input": {
                   "@type": "PropertyValueSpecification",
@@ -1101,25 +920,6 @@
               }
             ],
             "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://techonplay.com.br/#organization",
-            "name": "TechOnPlayBr ▶",
-            "url": "https://techonplay.com.br/",
-            "logo": {
-              "@type": "ImageObject",
-              "inLanguage": "pt-BR",
-              "@id": "https://techonplay.com.br/#/schema/logo/image/",
-              "url": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "contentUrl": "https://techonplay.com.br/wp-content/uploads/2025/12/cropped-logo-oficial-1.png",
-              "width": 538,
-              "height": 91,
-              "caption": "TechOnPlayBr ▶"
-            },
-            "image": {
-              "@id": "https://techonplay.com.br/#/schema/logo/image/"
-            }
           }
         ]
       }
@@ -1127,7 +927,7 @@
     "_links": {
       "self": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories/32",
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories/573",
           "targetHints": {
             "allow": [
               "GET"
@@ -1137,17 +937,137 @@
       ],
       "collection": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/categories"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories"
         }
       ],
       "about": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/taxonomies/category"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/taxonomies/category"
         }
       ],
       "wp:post_type": [
         {
-          "href": "https://techonplay.com.br/wp-json/wp/v2/posts?categories=32"
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/posts?categories=573"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 566,
+    "count": 5,
+    "description": "",
+    "link": "https://informaticaparaconcurso.com.br/category/sistemas/",
+    "name": "Sistemas",
+    "slug": "sistemas",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Arquivo de Sistemas - Informática para Concursos</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://informaticaparaconcurso.com.br/category/sistemas/\" />\n<meta property=\"og:locale\" content=\"pt_BR\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Arquivo de Sistemas - Informática para Concursos\" />\n<meta property=\"og:url\" content=\"https://informaticaparaconcurso.com.br/category/sistemas/\" />\n<meta property=\"og:site_name\" content=\"Informática para Concursos\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://informaticaparaconcurso.com.br/category/sistemas/\",\"url\":\"https://informaticaparaconcurso.com.br/category/sistemas/\",\"name\":\"Arquivo de Sistemas - Informática para Concursos\",\"isPartOf\":{\"@id\":\"https://informaticaparaconcurso.com.br/#website\"},\"breadcrumb\":{\"@id\":\"https://informaticaparaconcurso.com.br/category/sistemas/#breadcrumb\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://informaticaparaconcurso.com.br/category/sistemas/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Início\",\"item\":\"https://informaticaparaconcurso.com.br/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Sistemas\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://informaticaparaconcurso.com.br/#website\",\"url\":\"https://informaticaparaconcurso.com.br/\",\"name\":\"Informática para Concursos\",\"description\":\"O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://informaticaparaconcurso.com.br/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"pt-BR\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Arquivo de Sistemas - Informática para Concursos",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://informaticaparaconcurso.com.br/category/sistemas/",
+      "og_locale": "pt_BR",
+      "og_type": "article",
+      "og_title": "Arquivo de Sistemas - Informática para Concursos",
+      "og_url": "https://informaticaparaconcurso.com.br/category/sistemas/",
+      "og_site_name": "Informática para Concursos",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://informaticaparaconcurso.com.br/category/sistemas/",
+            "url": "https://informaticaparaconcurso.com.br/category/sistemas/",
+            "name": "Arquivo de Sistemas - Informática para Concursos",
+            "isPartOf": {
+              "@id": "https://informaticaparaconcurso.com.br/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://informaticaparaconcurso.com.br/category/sistemas/#breadcrumb"
+            },
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://informaticaparaconcurso.com.br/category/sistemas/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Início",
+                "item": "https://informaticaparaconcurso.com.br/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Sistemas"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://informaticaparaconcurso.com.br/#website",
+            "url": "https://informaticaparaconcurso.com.br/",
+            "name": "Informática para Concursos",
+            "description": "O portal definitivo para você dominar a informática, fugir das pegadinhas das bancas e gabaritar no seu concurso.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://informaticaparaconcurso.com.br/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "pt-BR"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories/566",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://informaticaparaconcurso.com.br/wp-json/wp/v2/posts?categories=566"
         }
       ],
       "curies": [

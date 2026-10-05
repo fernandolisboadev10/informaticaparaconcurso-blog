@@ -35,12 +35,12 @@ for (const slug of slugs) {
 
   const links = [...body.matchAll(/(?<!!)\[[^\]]*\]\(([^)\s]+)/g)].map((m) => m[1]);
   const internal = links.filter((u) => u.startsWith('/'));
-  const external = [...new Set(links)].filter((u) => /^https?:\/\//.test(u) && !/^https?:\/\/(www\.)?techonplay\.com\.br/.test(u));
-  const stale = links.filter((u) => /^https?:\/\/(www\.)?techonplay\.com(?!\.br)/.test(u));
+  const external = [...new Set(links)].filter((u) => /^https?:\/\//.test(u) && !/^https?:\/\/(www\.)?informaticaparaconcurso.com\.br/.test(u));
+  const stale = links.filter((u) => /^https?:\/\/(www\.)?informaticaparaconcurso.com(?!\.br)/.test(u));
 
   if (internal.length < MIN_INTERNAL) issues.push(`${internal.length} internal links (min ${MIN_INTERNAL})`);
   if (external.length > MAX_EXTERNAL) issues.push(`${external.length} external links (max ${MAX_EXTERNAL})`);
-  if (links.some((u) => /^https?:\/\/(www\.)?techonplay\.com\.br/.test(u)))
+  if (links.some((u) => /^https?:\/\/(www\.)?informaticaparaconcurso.com\.br/.test(u)))
     issues.push('absolute internal link (use relative /slug/)');
   if (stale.length) issues.push('link to old domain techonplay.com');
   for (const u of internal) {

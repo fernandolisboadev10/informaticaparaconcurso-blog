@@ -7,7 +7,7 @@ import TurndownService from 'turndown';
 import { gfm } from 'turndown-plugin-gfm';
 import he from 'he';
 
-const SITE = 'https://techonplay.com.br';
+const SITE = 'https://informaticaparaconcurso.com.br';
 const API = `${SITE}/wp-json/wp/v2`;
 const UA = { 'User-Agent': 'Mozilla/5.0' };
 const BLOG = 'src/content/blog';
@@ -95,8 +95,8 @@ for (const p of posts) {
     `title: ${q(title)}`,
     `description: ${q(description)}`,
     `category: ${q(category)}`,
-    `date: ${p.date.slice(0, 10)}`,
-    `updated: ${p.modified.slice(0, 10)}`,
+    `date: ${p.date}-03:00`,
+    `updated: ${p.modified_gmt}Z`,
     `readingTime: ${q(`${Math.max(1, Math.round(words / 200))} min`)}`,
     ...(postTags.length ? [`tags: ${JSON.stringify(postTags)}`] : []),
     ...(cover ? [`image: ${q(`./images/${cover}`)}`, `imageAlt: ${q(featured.alt_text || title)}`] : []),
@@ -117,23 +117,3 @@ for (const pg of pages) {
 await writeFile('migration/urls.txt', redirects.join('\n') + '\n');
 console.log(`\nConcluído: ${posts.length} posts, ${pages.length} páginas, ${downloaded.size} imagens.`);
 
-// --- Extras: biblioteca de mídia completa, comentários e configurações do site ---
-const UPLOADS = 'public/wp-content/uploads';
-let mirrored = 0;
-for (const m of media) {
-  const urls = [m.source_url, ...Object.values(m.media_details?.sizes ?? {}).map((s) => s.source_url)];
-  for (const url of new Set(urls)) {
-    const dest = path.join('public', decodeURIComponent(new URL(url).pathname));
-    if (existsSync(dest)) continue;
-    const res = await fetch(url, { headers: UA });
-    if (!res.ok) continue;
-    await mkdir(path.dirname(dest), { recursive: true });
-    await writeFile(dest, Buffer.from(await res.arrayBuffer()));
-    mirrored++;
-  }
-}
-const comments = await getAll('comments').catch(() => []);
-const site = await fetch(`${SITE}/wp-json/`, { headers: UA }).then((r) => r.json());
-await writeFile(`${RAW}/comments.json`, JSON.stringify(comments, null, 2));
-await writeFile(`${RAW}/site.json`, JSON.stringify({ name: site.name, description: site.description, url: site.url, home: site.home }, null, 2));
-console.log(`Mídia espelhada em ${UPLOADS}: ${mirrored} arquivos. Comentários: ${comments.length}. Site: ${site.name}`);

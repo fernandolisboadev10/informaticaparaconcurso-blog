@@ -7,7 +7,7 @@ const args = Object.fromEntries(process.argv.slice(2).map((a) => a.replace(/^--/
 const HOURS = Number(args.hours ?? 72);
 const TOP = Number(args.top ?? 25);
 const BLOG_DIR = 'src/content/blog';
-const UA = { 'user-agent': 'Mozilla/5.0 (techonplay-radar)' };
+const UA = { 'user-agent': 'Mozilla/5.0 (informatica-radar)' };
 
 const FEEDS = [
   { name: 'Tecnoblog', url: 'https://tecnoblog.net/feed/' },
