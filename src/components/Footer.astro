@@ -34,7 +34,7 @@ const quickLinks = [
 
     <div>
       <p class="col-title">Categorias</p>
-      <ul>
+      <ul class="cats">
         {categories.map((c) => (
           <li><a href={c.href}>{c.label}</a></li>
         ))}
@@ -57,14 +57,14 @@ const quickLinks = [
 
 <style>
   .site-footer {
-    margin-top: 80px;
+    margin-top: 56px;
   }
 
   .grid {
     display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr;
-    gap: 40px;
-    padding-block: 56px 40px;
+    grid-template-columns: 1.6fr 1fr 1.5fr;
+    gap: 32px;
+    padding-block: 36px 28px;
   }
 
   .brand {
@@ -121,8 +121,8 @@ const quickLinks = [
     font-size: 0.95rem;
     color: var(--ink-strong);
     font-weight: 700;
-    margin: 0 0 20px;
-    padding-bottom: 12px;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
   }
 
   .col-title::after {
@@ -143,7 +143,15 @@ const quickLinks = [
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 9px;
+  }
+
+  ul.cats {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 32px;
+    row-gap: 9px;
   }
 
   ul a {
