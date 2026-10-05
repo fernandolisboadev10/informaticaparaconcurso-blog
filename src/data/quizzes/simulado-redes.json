@@ -5,14 +5,14 @@
    "type": "mc",
    "text": "Qual é a função do DNS na Internet?",
    "options": [
-    "Converter endereços IP em nomes de domínio.",
-    "Aumentar a largura de banda da rede.",
-    "Proteger a rede contra malwares.",
-    "Gerenciar cookies no navegador.",
-    "Armazenar arquivos em nuvem."
+    "Converter nomes de domínio em endereços IP",
+    "Aumentar a largura de banda da rede",
+    "Proteger a rede contra malwares",
+    "Gerenciar cookies no navegador",
+    "Armazenar arquivos em nuvem"
    ],
    "answer": "A",
-   "comment": "A opção A está correta; o DNS (Domain Name System) tem a função de converter endereços IP em nomes de domínio que são mais fáceis de lembrar. As outras opções não refletem as funções do DNS."
+   "comment": "O DNS (Domain Name System) traduz nomes de domínio, fáceis de lembrar, em endereços IP, que os computadores usam para se localizar na rede."
   },
   {
    "banca": "FGV",
@@ -29,18 +29,18 @@
    "comment": "WAN significa Wide Area Network, que se refere a redes que cobrem grandes distâncias. As outras opções são definições de outros tipos de rede."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo VUNESP",
    "type": "mc",
-   "text": "Qual protocolo é utilizado para a transmissão de e-mails?",
+   "text": "O protocolo utilizado para a transferência de páginas web entre o servidor e o navegador é o:",
    "options": [
     "FTP",
     "HTTP",
     "SMTP",
     "POP3",
-    "IMAP"
+    "DHCP"
    ],
-   "answer": "C",
-   "comment": "A opção C está correta, pois o SMTP (Simple Mail Transfer Protocol) é o protocolo padrão para envio de e-mails na internet. As outras opções referem-se a outros serviços ou transferências de dados."
+   "answer": "B",
+   "comment": "O HTTP define as regras de comunicação entre o navegador e o servidor web. O SMTP envia e-mails, e o FTP transfere arquivos."
   },
   {
    "banca": "CESGRANRIO",
@@ -197,32 +197,32 @@
    "comment": "O firewall atua como uma barreira de filtragem de tráfego de rede, decidindo o que pode entrar e sair com base em regras — ele não remove vírus já instalados (essa é função do antivírus)."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
-   "text": "Quando você acessa um site, que tipo de endereço é utilizado?",
+   "text": "O protocolo que acrescenta uma camada de criptografia ao HTTP, por meio de TLS/SSL, é o:",
    "options": [
-    "URL",
-    "IP",
-    "DOM",
-    "HTTP",
-    "FTP"
+    "FTP",
+    "HTTPS",
+    "SMTP",
+    "DNS",
+    "IMAP"
    ],
-   "answer": "A",
-   "comment": "O URL (Uniform Resource Locator) é o endereço que aponta para um recurso na web. Os outros termos são relacionados, mas não são especificamente a forma de endereço de um site."
+   "answer": "B",
+   "comment": "O HTTPS protege o caminho dos dados entre o navegador e o servidor. Ele não garante, por si só, que o site seja confiável."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
-   "text": "O que é um firewall?",
+   "text": "Um ataque de negação de serviço distribuído (DDoS) tem por objetivo:",
    "options": [
-    "Um tipo de navegador",
-    "Um dispositivo de armazenamento",
-    "Um sistema de segurança de rede",
-    "Um aplicativo de edição de texto",
-    "Um controlador de hardware"
+    "roubar senhas por meio de e-mails falsos",
+    "tornar um serviço indisponível por meio de um volume excessivo de requisições",
+    "criptografar os arquivos da vítima para exigir resgate",
+    "instalar um programa espião no computador",
+    "copiar arquivos de forma automática"
    ],
-   "answer": "C",
-   "comment": "Um firewall é um sistema de segurança de rede que monitoriza e controla o tráfego de entrada e saída. As outras opções não são funções de um firewall."
+   "answer": "B",
+   "comment": "No DDoS, muitos dispositivos enviam requisições ao mesmo tempo para sobrecarregar o alvo. O pilar atingido é a disponibilidade."
   },
   {
    "banca": "CEBRASPE",
@@ -239,18 +239,11 @@
    "comment": "A VPN estabelece um “túnel” criptografado sobre uma rede pública, permitindo que um dispositivo acesse uma rede privada remota (como a rede interna de uma empresa) com segurança."
   },
   {
-   "banca": "FCC",
-   "type": "mc",
-   "text": "Qual é a função do protocolo FTP?",
-   "options": [
-    "Enviar e receber e-mails",
-    "Transferir arquivos entre computadores",
-    "Acessar páginas web",
-    "Conectar dispositivos a uma rede",
-    "Administrar servidores de e-mail"
-   ],
-   "answer": "B",
-   "comment": "O FTP (File Transfer Protocol) é especificamente utilizado para transferir arquivos entre um cliente e um servidor. As outras opções não correspondem à sua função."
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O Wi-Fi é uma tecnologia de rede local sem fio que segue a família de padrões IEEE 802.11.",
+   "answer": "C",
+   "comment": "O Wi-Fi é a WLAN, rede local sem fio, baseada nos padrões IEEE 802.11."
   },
   {
    "banca": "FGV",
@@ -267,18 +260,18 @@
    "comment": "A opção C é a correta, pois a computação em nuvem facilita o acesso a recursos remotamente e permite a escalabilidade. As outras opções são contrárias aos benefícios da nuvem."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
-   "text": "O que é computação em nuvem?",
+   "text": "Na computação em nuvem, o modelo de serviço que fornece infraestrutura virtualizada, como servidores e armazenamento, para que o cliente gerencie o sistema operacional e as aplicações é o:",
    "options": [
-    "Um tipo de dispositivo de armazenamento externo.",
-    "A entrega de serviços de computação via Internet.",
-    "Um software de segurança para redes.",
-    "Um método de compressão de dados.",
-    "Uma forma de instalação local de programas."
+    "SaaS",
+    "PaaS",
+    "IaaS",
+    "DaaS",
+    "BPaaS"
    ],
-   "answer": "B",
-   "comment": "A opção ‘B’ é correta, pois computação em nuvem refere-se à entrega de serviços, como armazenamento e processamento, pela Internet. As demais opções são definições incorretas."
+   "answer": "C",
+   "comment": "No IaaS, o provedor entrega a infraestrutura e o cliente gerencia o sistema operacional. No PaaS, o provedor entrega a plataforma de desenvolvimento, e no SaaS, o software pronto."
   },
   {
    "banca": "CEBRASPE",
@@ -302,18 +295,18 @@
    "comment": "A resposta correta é a letra D, pois a computação em nuvem permite aumentar a capacidade de armazenamento sem necessidade de investimentos pesados em hardware. As demais opções descrevem desvantagens ou confusões sobre o conceito."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
-   "text": "Qual é a principal função de um navegador de internet?",
+   "text": "Na URL https://www.exemplo.com.br/contato, o trecho “https” representa:",
    "options": [
-    "Prover serviço de e-mail",
-    "Gerenciar redes locais",
-    "Interpretar e exibir páginas web",
-    "Executar aplicativos de desktop",
-    "Armazenar arquivos na nuvem"
+    "o domínio do site",
+    "o protocolo de comunicação utilizado",
+    "o nome do arquivo acessado",
+    "o endereço IP do servidor",
+    "o nome do usuário"
    ],
-   "answer": "C",
-   "comment": "O navegador de internet é projetado para interpretar e exibir conteúdo da web. As outras respostas não correspondem à função principal de um navegador."
+   "answer": "B",
+   "comment": "O https é o protocolo. O www.exemplo.com.br é o domínio, e /contato é o caminho do recurso no servidor."
   },
   {
    "banca": "CESGRANRIO",
@@ -330,46 +323,39 @@
    "comment": "A opção C é a resposta correta, pois a Intranet serve como uma rede interna restrita a membros de uma organização. As outras opções não descrevem corretamente a natureza de uma Intranet."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo VUNESP",
    "type": "mc",
-   "text": "Em relação à computação em nuvem, qual das seguintes afirmações é verdadeira?",
+   "text": "Na computação em nuvem, o modelo de serviço em que o provedor entrega uma plataforma para desenvolver e executar aplicações, sem que o cliente gerencie a infraestrutura, é o:",
    "options": [
-    "A computação em nuvem exige que todas as aplicações sejam instaladas localmente.",
-    "A computação em nuvem permite o acesso a recursos de TI via internet, sem necessidade de infraestrutura local.",
-    "Na computação em nuvem, os dados são armazenados exclusivamente em dispositivos físicos do usuário.",
-    "A computação em nuvem é mais segura do que qualquer forma de armazenamento local e não apresenta riscos.",
-    "A computação em nuvem oferece serviços que podem ser acessados apenas de forma offline."
+    "SaaS",
+    "PaaS",
+    "IaaS",
+    "LAN",
+    "VPN"
    ],
    "answer": "B",
-   "comment": "A alternativa B está correta, pois a computação em nuvem oferece acesso a recursos através da internet, eliminando a necessidade de infraestrutura local. As outras alternativas estão erradas, pois a nuvem não exige instalação local, pode ter riscos de segurança e permite o acesso online, ao contrário do que afirmam."
+   "comment": "O PaaS (Platform as a Service) entrega a plataforma de desenvolvimento. No SaaS o cliente usa o software pronto, e no IaaS gerencia o sistema operacional."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo VUNESP",
    "type": "mc",
-   "text": "O que é a Intranet?",
+   "text": "A extranet é uma rede que:",
    "options": [
-    "Uma rede privada que utiliza a infraestrutura da internet",
-    "Um tipo de portal público na internet",
-    "Um sistema de e-mails corporativos",
-    "Uma rede de computadores que cobre grandes áreas",
-    "Um serviço de armazenamento em nuvem"
-   ],
-   "answer": "A",
-   "comment": "A opção A é a correta, pois Intranet se refere a uma rede privada que utiliza a tecnologia da internet para comunicação interna em organizações. As outras opções não representam a definição de Intranet."
-  },
-  {
-   "banca": "VUNESP",
-   "type": "mc",
-   "text": "Em um contexto de redes, o que significa a sigla VPN?",
-   "options": [
-    "Virtual Public Network",
-    "Virtual Private Network",
-    "Variable Protected Network",
-    "Visual Private Network",
-    "Virtual Protocol Network"
+    "é aberta a qualquer usuário da internet, sem autenticação",
+    "estende parte da intranet a parceiros, fornecedores ou clientes autorizados, mediante autenticação",
+    "cobre uma cidade inteira",
+    "conecta apenas dispositivos pessoais por Bluetooth",
+    "substitui o uso da internet na empresa"
    ],
    "answer": "B",
-   "comment": "A opção B é a correta, pois VPN significa Virtual Private Network, uma tecnologia que cria uma conexão segura através da internet. As demais alternativas são incorretas por não representarem a definição correta da sigla."
+   "comment": "A extranet é uma extensão controlada da intranet, com acesso restrito a públicos externos autorizados."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A conexão Bluetooth entre um smartphone e um fone de ouvido sem fio é um exemplo de rede PAN.",
+   "answer": "C",
+   "comment": "A PAN é a rede de área pessoal, de alcance de poucos metros ao redor de uma pessoa."
   },
   {
    "banca": "FCC",
@@ -386,25 +372,25 @@
    "comment": "A virtualização permite que vários ambientes virtuais sejam executados em um único hardware, reduzindo assim os custos com servidores físicos. As outras alternativas são contrárias aos benefícios da virtualização."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo CESGRANRIO",
    "type": "mc",
-   "text": "Ao acessar um site, o navegador armazena informações para otimizar futuras visitas. Que tipo de dado é geralmente armazenado nesse processo?",
+   "text": "O recurso do navegador que guarda cópias de arquivos de páginas já visitadas, como imagens e scripts, para que elas carreguem mais rápido em futuras visitas é o:",
    "options": [
-    "Cookies",
-    "Backups",
-    "Histórico",
-    "Cache",
-    "Logs"
+    "cache",
+    "histórico",
+    "firewall",
+    "favoritos",
+    "complemento"
    ],
    "answer": "A",
-   "comment": "Cookies são pequenos arquivos que armazenam dados de navegação e preferências do usuário. Histórico registra páginas acessadas, cache armazena dados temporários, logs são registros de atividades e backups são cópias. Cada um tem funções distintas, mas não são usados para otimizar visitas da mesma forma que cookies."
+   "comment": "O cache guarda arquivos temporários para acelerar o carregamento. O histórico apenas registra as páginas visitadas, e os cookies guardam preferências e informações de sessão."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "ce",
-   "text": "A principal função do navegador é atuar como um cliente que solicita informações da web para que o usuário possa visualizá-las.",
+   "text": "O endereço IP identifica um dispositivo em uma rede e é utilizado para localizá-lo e encaminhar dados até ele.",
    "answer": "C",
-   "comment": "Os navegadores são softwares que processam e apresentam conteúdos solicitados na web."
+   "comment": "O IP funciona como o endereço de um dispositivo na rede, e o DNS ajuda a associar nomes a esses endereços."
   },
   {
    "banca": "Estilo Cebraspe",

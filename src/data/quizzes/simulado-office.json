@@ -1,18 +1,11 @@
 {
  "questions": [
   {
-   "banca": "FGV",
-   "type": "mc",
-   "text": "No Google Sheets, a função IMPORTRANGE permite importar dados de uma planilha diferente para a atual, facilitando a integração de informações.",
-   "options": [
-    "Certo",
-    "Errado, a função não existe",
-    "Certo, mas só entre pastas diferentes",
-    "Errado, só funciona no Microsoft Excel",
-    "Certo, mas não em planilhas compartilhadas"
-   ],
-   "answer": "A",
-   "comment": "A afirmativa está correta. A função IMPORTRANGE efetivamente permite o importamento de dados entre diferentes planilhas no Google Sheets. As alternativas erradas dão informações falsas sobre as limitações da função."
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Google Planilhas (Google Sheets), a função IMPORTRANGE permite importar dados de outra planilha para a planilha atual.",
+   "answer": "C",
+   "comment": "A IMPORTRANGE traz um intervalo de outra planilha do Google Planilhas, desde que o usuário tenha acesso a ela."
   },
   {
    "banca": "CESGRANRIO",
@@ -22,7 +15,7 @@
     "=MÁXIMO()",
     "=MÍNIMO()",
     "=SOMA()",
-    "=MAIOR()",
+    "=TOTAL()",
     "=VALOR()"
    ],
    "answer": "A",
@@ -85,18 +78,18 @@
    "comment": "A função PROCV com o parâmetro FALSO realiza uma busca exata pela primeira coluna do intervalo especificado."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
-   "text": "No LibreOffice Writer, para alterar a orientação da página de Retrato para Paisagem, qual é a sequência correta de ações?",
+   "text": "No Microsoft Word, o comando que permite alternar a orientação da página entre Retrato e Paisagem está na guia:",
    "options": [
-    "Arquivo > Imprimir > Configurar",
-    "Formato > Página > Colunas",
-    "Formato > Página > Orientação",
-    "Configuração > Página > Layout",
-    "Visualizar > Orientação > Definir"
+    "Página Inicial",
+    "Inserir",
+    "Layout",
+    "Revisão",
+    "Exibir"
    ],
    "answer": "C",
-   "comment": "A opção correta para alterar a orientação da página é ‘Formato > Página > Orientação’. As demais alternativas não levam à alteração da orientação."
+   "comment": "A orientação, as margens e o tamanho do papel ficam na guia Layout. A guia Inserir adiciona elementos como tabelas e imagens."
   },
   {
    "banca": "CESGRANRIO",
@@ -117,14 +110,14 @@
    "type": "mc",
    "text": "No LibreOffice Writer, como você pode adicionar um cabeçalho a um documento?",
    "options": [
-    "Selecionando a opção ‘Inserir > Cabeçalho’",
+    "Selecionando a opção ‘Inserir > Cabeçalho e rodapé’",
     "Clicando com o botão direito do mouse",
     "Ajustando as margens do documento",
     "Usando o menu ‘Arquivo’",
     "Alterando o estilo de parágrafo"
    ],
    "answer": "A",
-   "comment": "A alternativa A está correta, pois a adição de um cabeçalho é feita por meio de ‘Inserir > Cabeçalho’. As outras opções não são caminhos corretos para realizar essa tarefa."
+   "comment": "No LibreOffice Writer, o cabeçalho é adicionado pelo menu Inserir > Cabeçalho e rodapé."
   },
   {
    "banca": "CEBRASPE",
@@ -143,7 +136,7 @@
   {
    "banca": "CESGRANRIO",
    "type": "mc",
-   "text": "No LibreOffice Writer, qual formato é adequado para criar um índice automático?",
+   "text": "No LibreOffice Writer, qual recurso de formatação deve ser aplicado aos títulos para que o índice (sumário) seja gerado automaticamente?",
    "options": [
     "Negrito",
     "Apagar formatação",
@@ -183,25 +176,18 @@
    "comment": "O formato padrão do LibreOffice Impress é ‘.odp’. Os outros formatos pertencem a outros aplicativos, como o MS Word e Excel."
   },
   {
-   "banca": "FGV",
-   "type": "mc",
-   "text": "Em PowerPoint, a transição ‘Desvanecer’ cria um efeito visual nas slides quando um se aproxima do outro.",
-   "options": [
-    "Certo",
-    "Errado",
-    "Somente em slides animados",
-    "Certo, mas só no Mac",
-    "Certo apenas na versão online"
-   ],
-   "answer": "A",
-   "comment": "A afirmativa está correta. A transição ‘Desvanecer’ é de fato um efeito visual que suaviza a mudança entre os slides. As demais opções são falsas porque a transição não está restrita a características específicas de versões ou animações."
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No PowerPoint, a transição Desvanecer suaviza a passagem de um slide para o slide seguinte.",
+   "answer": "C",
+   "comment": "A transição é o efeito aplicado na troca entre slides, e o Desvanecer faz essa troca de forma gradual."
   },
   {
    "banca": "CEBRASPE",
    "type": "ce",
-   "text": "No Excel, a função =SOMA.SE(A1:A10, “>5”, B1:B10) soma os valores no intervalo B1:B10 que estão alinhados a valores maiores que 5 em A1:A10.",
+   "text": "No Excel em português, a fórmula =SOMASE(A1:A10;\">5\";B1:B10) soma os valores do intervalo B1:B10 que correspondem, na mesma linha, a valores maiores que 5 no intervalo A1:A10.",
    "answer": "C",
-   "comment": "A função SOMA.SE condicionalmente soma valores que correspondem a um critério específico inserido em outras células."
+   "comment": "A SOMASE soma apenas os valores que atendem a um critério. Aqui, o critério é testado em A1:A10 e a soma é feita em B1:B10."
   },
   {
    "banca": "FGV",
@@ -246,18 +232,18 @@
    "comment": "Adicionar uma animação a um objeto serve para destacar ou dar ênfase a ele durante a apresentação. As outras funções não têm relação direta com animações."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
-   "text": "No Microsoft PowerPoint, como você pode adicionar um vídeo a um slide?",
+   "text": "No Microsoft PowerPoint, a guia que contém o comando para inserir um vídeo em um slide é:",
    "options": [
-    "Inserir > Vídeo da Web",
-    "Inserir > Mídia",
-    "Adicionar > Vídeo",
-    "Formatar > Vídeo",
-    "Desenho > Inserir Vídeo"
+    "Página Inicial",
+    "Inserir",
+    "Design",
+    "Transições",
+    "Exibição"
    ],
-   "answer": "A",
-   "comment": "A ação correta é ‘Inserir > Vídeo da Web’, onde o usuário pode escolher a origem do vídeo. As demais opções não representam os passos corretos para esta função."
+   "answer": "B",
+   "comment": "A guia Inserir reúne os comandos para adicionar tabelas, imagens, vídeos, áudio e outros elementos ao slide."
   },
   {
    "banca": "IADES",
@@ -386,18 +372,18 @@
    "comment": "A função PROCV busca um valor em uma coluna e retorna um valor correspondente em outra coluna. As outras opções não representam a funcionalidade do PROCV."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo CESGRANRIO",
    "type": "mc",
-   "text": "Qual é a função do recurso ‘Slide Mestre’ no PowerPoint?",
+   "text": "No Microsoft Excel, a guia que contém os comandos Classificar e Filtrar é a:",
    "options": [
-    "Alterar o layout de um único slide",
-    "Modificar o fundo de todos os slides ao mesmo tempo",
-    "Inserir gráficos e tabelas",
-    "Criar animações de transição entre slides",
-    "Ajustar o tempo de exibição de slides"
+    "Página Inicial",
+    "Inserir",
+    "Dados",
+    "Exibir",
+    "Layout da Página"
    ],
-   "answer": "B",
-   "comment": "O ‘Slide Mestre’ permite a modificação do layout e do design de todos os slides simultaneamente. As outras opções não estão relacionadas diretamente à sua função."
+   "answer": "C",
+   "comment": "A guia Dados reúne os recursos de classificação, filtro, validação e importação de dados. O botão Classificar e Filtrar também aparece na guia Página Inicial."
   },
   {
    "banca": "Estilo Cebraspe",
@@ -458,9 +444,9 @@
   {
    "banca": "Estilo Cebraspe",
    "type": "ce",
-   "text": "No PowerPoint, a transição é o efeito aplicado na passagem de um slide para o outro, enquanto a animação é aplicada aos objetos dentro do slide.",
+   "text": "No Excel, a formatação condicional altera a aparência de uma célula conforme regras definidas, sem modificar o valor nela contido.",
    "answer": "C",
-   "comment": "É a pegadinha clássica: transição atua entre slides, animação atua dentro do slide."
+   "comment": "A formatação condicional muda cores, ícones e destaques, mas o conteúdo da célula continua o mesmo."
   },
   {
    "banca": "Estilo CESGRANRIO",

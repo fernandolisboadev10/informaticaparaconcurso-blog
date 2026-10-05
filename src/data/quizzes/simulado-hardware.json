@@ -248,16 +248,16 @@
   {
    "banca": "Estilo Cebraspe",
    "type": "ce",
-   "text": "Na CPU, a Unidade Lógica e Aritmética (ULA) é responsável por executar as operações aritméticas e lógicas.",
+   "text": "Os módulos de memória DDR4 e DDR5 não são fisicamente compatíveis entre si, pois possuem encaixes diferentes.",
    "answer": "C",
-   "comment": "A ULA realiza somas, subtrações, comparações e operações lógicas. A unidade de controle coordena a execução das instruções."
+   "comment": "Cada geração de memória DDR tem seu próprio encaixe e tensão de operação, e a placa-mãe aceita apenas o tipo para o qual foi projetada."
   },
   {
    "banca": "Estilo Cebraspe",
    "type": "ce",
-   "text": "A unidade de controle da CPU é responsável por buscar e decodificar as instruções e coordenar a sua execução.",
+   "text": "Uma taxa de transferência de 1 MB/s (megabyte por segundo) equivale a 8 Mbps (megabits por segundo).",
    "answer": "C",
-   "comment": "A unidade de controle comanda o funcionamento dos demais componentes do processador, enquanto a ULA calcula."
+   "comment": "Como 1 byte tem 8 bits, 1 MB/s corresponde a 8 Mbps. Velocidades de rede costumam ser dadas em bits, e tamanhos de arquivo em bytes."
   },
   {
    "banca": "Estilo FGV",
@@ -276,16 +276,16 @@
   {
    "banca": "Estilo FCC",
    "type": "mc",
-   "text": "Um dispositivo que atua tanto como periférico de entrada quanto de saída é o:",
+   "text": "Um leitor biométrico de impressão digital, usado para identificar o usuário, é classificado como um periférico de:",
    "options": [
-    "teclado",
-    "mouse",
-    "monitor comum",
-    "touchscreen (tela sensível ao toque)",
-    "microfone"
+    "entrada",
+    "saída",
+    "entrada e saída",
+    "processamento",
+    "armazenamento"
    ],
-   "answer": "D",
-   "comment": "O touchscreen exibe informações (saída) e recebe o toque do usuário (entrada). O teclado, o mouse e o microfone só enviam dados; o monitor comum só exibe."
+   "answer": "A",
+   "comment": "Ele apenas envia dados (a leitura da digital) ao computador, por isso é um dispositivo de entrada."
   },
   {
    "banca": "Estilo Cebraspe",
@@ -318,9 +318,9 @@
   {
    "banca": "Estilo Cebraspe",
    "type": "ce",
-   "text": "O HD (disco rígido) possui partes mecânicas móveis, como pratos magnéticos e cabeça de leitura e gravação, o que o torna mais sujeito a falhas mecânicas do que o SSD.",
+   "text": "O barramento é o conjunto de linhas de comunicação que permite a troca de dados entre componentes do computador, como o processador, a memória e os dispositivos de entrada e saída.",
    "answer": "C",
-   "comment": "O SSD não tem partes móveis, o que reduz o risco de falhas mecânicas, além de ser mais rápido."
+   "comment": "É por meio dos barramentos, como o PCIe, que os componentes da placa-mãe se comunicam."
   },
   {
    "banca": "Estilo CESGRANRIO",
@@ -409,9 +409,9 @@
   {
    "banca": "Estilo Cebraspe",
    "type": "ce",
-   "text": "Uma impressora multifuncional, que imprime e também digitaliza documentos, pode funcionar como dispositivo de entrada e de saída.",
-   "answer": "C",
-   "comment": "Ao imprimir, atua como saída. Ao digitalizar (scanner), atua como entrada."
+   "text": "O disco rígido (HD) é um exemplo de memória volátil, pois perde os dados armazenados quando o computador é desligado.",
+   "answer": "E",
+   "comment": "O HD é um armazenamento secundário e não volátil: mantém os dados sem energia. A memória volátil clássica é a RAM."
   },
   {
    "banca": "Estilo VUNESP",

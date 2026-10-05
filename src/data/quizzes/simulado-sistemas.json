@@ -77,8 +77,8 @@
    "options": [
     "Gerenciar hardware e software",
     "Armazenar dados",
-    "Proteger contra virus",
-    "Pleitear direitos do usuário",
+    "Proteger contra vírus",
+    "Editar imagens e vídeos",
     "Gerar relatórios"
    ],
    "answer": "A",
@@ -144,8 +144,8 @@
    "banca": "CEBRASPE",
    "type": "ce",
    "text": "No Windows, os arquivos com extensões .dll são usados para armazenar bibliotecas de funções que podem ser utilizadas por múltiplos programas.",
-   "answer": "E",
-   "comment": "Arquivos .dll (Dynamic Link Library) contêm bibliotecas de funções e dados que podem ser usados simultaneamente por múltiplos aplicativos no Windows."
+   "answer": "C",
+   "comment": "Os arquivos .dll (Dynamic Link Library) guardam bibliotecas de funções e dados que podem ser usadas ao mesmo tempo por vários programas no Windows. Portanto, o item está certo."
   },
   {
    "banca": "FCC",
@@ -167,26 +167,27 @@
    "text": "Em Windows, qual é o propósito do comando ‘chkdsk’?",
    "options": [
     "Formatar o disco",
+    "Verificar e corrigir erros no disco e no sistema de arquivos",
     "Criar uma nova partição",
     "Eliminar arquivos temporários",
     "Reinstalar o sistema"
    ],
-   "answer": "A",
-   "comment": "O comando ‘chkdsk’ é utilizado para verificar e corrigir erros nos sistemas de arquivos. As outras opções não são funções deste comando."
+   "answer": "B",
+   "comment": "O chkdsk verifica o disco e corrige erros do sistema de arquivos. Formatar o disco é função do comando format."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
-   "text": "Qual comando no Linux é utilizado para listar arquivos e diretórios em um diretório?",
+   "text": "No Linux, o comando utilizado para exibir a lista de processos em execução no sistema é:",
    "options": [
+    "ps",
     "ls",
-    "dir",
-    "list",
-    "show",
-    "view"
+    "cd",
+    "pwd",
+    "mkdir"
    ],
    "answer": "A",
-   "comment": "O comando ‘ls’ é utilizado para listar arquivos e diretórios em Unix e Linux. As demais opções não são comandos válidos para esse propósito."
+   "comment": "O ps lista os processos. O top mostra os processos em tempo real, de forma semelhante ao Gerenciador de Tarefas do Windows."
   },
   {
    "banca": "VUNESP",
@@ -205,16 +206,16 @@
   {
    "banca": "IADES",
    "type": "mc",
-   "text": "O que acontece ao executar o comando ‘rm -rf /’ no Linux?",
+   "text": "No Linux, o comando rm -rf / tem por objetivo:",
    "options": [
-    "Remove arquivos temporários",
-    "Desinstala o sistema operacional",
-    "Apaga todos os arquivos do sistema",
-    "Exclui arquivos em uma pasta específica",
-    "Nenhuma das alternativas acima"
+    "Remover apenas os arquivos temporários",
+    "Desinstalar um programa específico",
+    "Apagar recursivamente, e sem pedir confirmação, todos os arquivos a partir do diretório raiz",
+    "Excluir os arquivos de uma pasta específica",
+    "Listar os arquivos do diretório raiz"
    ],
    "answer": "C",
-   "comment": "A opção correta é ‘Apaga todos os arquivos do sistema’, pois esse comando deletará todos os arquivos e diretórios desde a raiz. As outras alternativas são incorretas."
+   "comment": "O -r apaga recursivamente e o -f dispensa confirmação, a partir da raiz (/). É um comando perigoso: versões atuais do rm recusam executá-lo por segurança."
   },
   {
    "banca": "CESGRANRIO",
@@ -245,18 +246,11 @@
    "comment": "O símbolo ‘~’ representa o diretório pessoal do usuário logado no sistema. As outras opções não estão corretas para o significado deste símbolo."
   },
   {
-   "banca": "CEBRASPE",
-   "type": "mc",
-   "text": "No Windows 10, o recurso ‘Área de Trabalho Remota’ permite que um usuário acesse outro computador através da rede, assumindo o controle como se estivesse fisicamente presente.",
-   "options": [
-    "Accesos apenas arquivos, não controla",
-    "Controla remotamente o computador",
-    "Desinstala programas remotamente",
-    "Apenas monitora a tela",
-    "Funciona apenas em rede local"
-   ],
-   "answer": "B",
-   "comment": "O recurso ‘Área de Trabalho Remota’ permite controle completo do computador remoto. Outras opções como ‘Accesos apenas arquivos, não controla’ ou ‘Apenas monitora a tela’ estão erradas, pois não descrevem corretamente o recurso."
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Windows 10, em edições compatíveis, o recurso Área de Trabalho Remota permite que um usuário acesse outro computador pela rede e assuma o controle dele como se estivesse fisicamente presente.",
+   "answer": "C",
+   "comment": "A Área de Trabalho Remota dá controle completo do computador remoto, desde que o acesso remoto esteja habilitado e o usuário esteja autorizado."
   },
   {
    "banca": "FGV",
@@ -275,7 +269,7 @@
   {
    "banca": "CEBRASPE",
    "type": "mc",
-   "text": "O comando ‘df’ no Linux exibe o uso de espaço em disco. Qual opção é usada para mostrar em formato legível por humanos?",
+   "text": "O comando df, no Linux, exibe o uso de espaço em disco. A opção usada para mostrar os tamanhos em formato legível por humanos, com unidades em potências de 1024 (como MB e GB), é:",
    "options": [
     "-h",
     "-l",
@@ -287,25 +281,25 @@
    "comment": "A opção ‘-h’ (human-readable) faz com que o comando ‘df’ mostre o uso de disco em unidades como MB e GB, tornando-o mais fácil de entender."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
-   "text": "Qual sistema de arquivos é utilizado pelo padrão Linux?",
+   "text": "No Linux, o comando utilizado para alterar as permissões de um arquivo ou diretório é:",
    "options": [
-    "ext4",
-    "NTFS",
-    "FAT32",
-    "HFS",
-    "ReFS"
+    "chmod",
+    "chdir",
+    "perm",
+    "ls -p",
+    "mkdir -m"
    ],
    "answer": "A",
-   "comment": "O sistema de arquivos padrão para muitas distribuições Linux é o ‘ext4’. NTFS é geralmente usado no Windows, e os outros tipos de sistemas de arquivos são adequados para contextos diferentes."
+   "comment": "O chmod (change mode) define quem pode ler, escrever e executar. O chown altera o dono do arquivo."
   },
   {
    "banca": "CEBRASPE",
    "type": "ce",
    "text": "O GRUB é um gerenciador de inicialização, comumente usado em sistemas operacionais Linux.",
-   "answer": "E",
-   "comment": "O GRUB (GRand Unified Bootloader) é amplamente utilizado em distribuições Linux para gerenciar o processo de inicialização do sistema."
+   "answer": "C",
+   "comment": "O GRUB (GRand Unified Bootloader) é amplamente usado nas distribuições Linux para gerenciar a inicialização do sistema. Portanto, o item está certo."
   },
   {
    "banca": "VUNESP",
@@ -322,46 +316,46 @@
    "comment": "A sigla ‘BIOS’ representa ‘Basic Input Output System’, que gerencia a comunicação entre o hardware e o sistema operacional. As demais opções são incorretas."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
-   "text": "No sistema operacional Windows, qual recurso é utilizado para recuperar arquivos que foram deletados da lixeira?",
+   "text": "No Windows 10, o recurso que permite desfazer alterações recentes do sistema, voltando a um ponto de restauração anterior, é:",
    "options": [
-    "Restaurar do backup",
-    "Armazenamento em nuvem",
-    "Recuperação de arquivos",
-    "Software antivírus",
-    "Restaurar o sistema"
+    "Restauração do Sistema",
+    "Gerenciador de Dispositivos",
+    "Desfragmentador de disco",
+    "Limpeza de Disco",
+    "Monitor de Recursos"
    ],
-   "answer": "C",
-   "comment": "A resposta correta é ‘Recuperação de arquivos’, que refere-se a ferramentas que podem tentar restaurar arquivos excluídos. As outras opções mencionadas têm funções diferentes e não são específicas para recuperação de arquivos deletados."
+   "answer": "A",
+   "comment": "A Restauração do Sistema retorna as configurações do Windows a um ponto anterior, sem afetar os documentos pessoais."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo VUNESP",
    "type": "mc",
-   "text": "No Windows, qual recurso é utilizado para gerenciar e organizar as janelas abertas?",
+   "text": "No Windows 10, o recurso que permite visualizar todas as janelas abertas e criar múltiplas áreas de trabalho virtuais é a:",
    "options": [
     "Painel de Controle",
     "Explorador de Arquivos",
-    "Gerenciador de Tarefas",
-    "Área de Trabalho",
-    "Menu Iniciar"
+    "Visão de Tarefas",
+    "Central de Ações",
+    "Barra de Pesquisa"
    ],
    "answer": "C",
-   "comment": "O Gerenciador de Tarefas ajuda a monitorar e gerenciar as janelas e aplicativos em execução. Os demais recursos têm finalidades distintas, como configuração e navegação de arquivos."
+   "comment": "A Visão de Tarefas (atalho Windows + Tab) mostra as janelas abertas e as áreas de trabalho virtuais. O Gerenciador de Tarefas monitora processos."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo CESGRANRIO",
    "type": "mc",
-   "text": "Qual dos seguintes sistemas de arquivos é utilizado por padrão no Linux?",
+   "text": "No terminal do Linux, o comando utilizado para exibir o conteúdo de um arquivo de texto é:",
    "options": [
-    "NTFS",
-    "FAT32",
-    "EXT4",
-    "HFS+",
-    "APFS"
+    "cat",
+    "cd",
+    "mkdir",
+    "touch",
+    "chmod"
    ],
-   "answer": "C",
-   "comment": "O sistema de arquivos EXT4 (Fourth Extended File System) é o padrão em muitas distribuições Linux. NTFS e FAT32 são utilizados por Windows, HFS+ por Mac e APFS é o sistema de arquivos mais recente para Mac."
+   "answer": "A",
+   "comment": "O cat exibe o conteúdo do arquivo na tela. O touch cria um arquivo vazio."
   },
   {
    "banca": "FCC",
@@ -380,16 +374,16 @@
   {
    "banca": "VUNESP",
    "type": "mc",
-   "text": "Qual é o nome do terminal padrão no Windows 10?",
+   "text": "Qual é o nome do interpretador de comandos clássico do Windows, executado pelo comando cmd?",
    "options": [
     "Windows Terminal",
-    "Command Prompt",
-    "Powershell",
+    "Command Prompt (Prompt de Comando)",
+    "PowerShell",
     "Git Bash",
     "Bash"
    ],
    "answer": "B",
-   "comment": "O ‘Command Prompt’, também conhecido como ‘cmd’, é o terminal padrão da versão clássica do Windows. ‘Windows Terminal’ é um novo aplicativo que pode incluir outros terminais, mas não é o tradicional."
+   "comment": "O Prompt de Comando (Command Prompt) é executado pelo cmd. O PowerShell é outro interpretador, mais recente, e o Windows Terminal é um aplicativo que hospeda ambos."
   },
   {
    "banca": "IADES",

@@ -21,12 +21,12 @@
    "options": [
     "Phishing",
     "DDoS",
-    "SQL Injection",
+    "Defacement (alteração visual de um site)",
     "Ransomware",
-    "Malware"
+    "Botnet"
    ],
    "answer": "A",
-   "comment": "Phishing é um ataque que visa enganar usuários para que entreguem informações confidenciais, como senhas. DDoS busca denegar serviço, SQL Injection compromete a integridade, Ransomware sequestra dados e Malware é um termo genérico."
+   "comment": "O phishing engana usuários para que entreguem informações confidenciais, como senhas. O DDoS atinge a disponibilidade, e o defacement atinge a integridade."
   },
   {
    "banca": "VUNESP",
@@ -57,32 +57,32 @@
    "comment": "A opção C é a correta, pois a principal vantagem de um antivírus em tempo real é a sua capacidade de detectar e bloquear ameaças antes que elas causem danos ao sistema."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo CESGRANRIO",
    "type": "mc",
-   "text": "Qual das alternativas a seguir caracteriza melhor a função de um antivírus?",
+   "text": "O malware que registra as teclas digitadas pelo usuário, com o objetivo de capturar senhas e outros dados, é o:",
    "options": [
-    "Detectar e eliminar malwares do sistema",
-    "Proteger a rede de ataques externos",
-    "Realizar backups automáticos de dados",
-    "Classificar e armazenar emails enviados",
-    "Garantir a privacidade online do usuário"
+    "keylogger",
+    "firewall",
+    "antispyware",
+    "cookie",
+    "proxy"
    ],
    "answer": "A",
-   "comment": "A função principal de um antivírus é detectar e eliminar malwares do sistema. As outras opções referem-se a funções de firewall, sistemas de backup, serviços de email e privacidade online."
+   "comment": "O keylogger é um tipo de spyware que monitora o teclado. Já o antispyware é a ferramenta usada para combatê-lo."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
-   "text": "Em que situação é mais indicado utilizar um firewall?",
+   "text": "O princípio da segurança da informação que garante que a informação não foi modificada de forma indevida ou não autorizada é a:",
    "options": [
-    "Para realizar backup de dados",
-    "Para gerenciar senhas de usuários",
-    "Para monitorar a presença de malwares",
-    "Para controlar e filtrar o tráfego de rede",
-    "Para criptografar informações"
+    "confidencialidade",
+    "integridade",
+    "disponibilidade",
+    "privacidade",
+    "redundância"
    ],
-   "answer": "D",
-   "comment": "Um firewall é usado para controlar e filtrar o tráfego de rede, permitindo ou bloqueando pacotes de acordo com regras de segurança. As outras opções referem-se a funções de softwares diferentes, como backup, gerenciamento de senhas, antimalware e criptografia."
+   "answer": "B",
+   "comment": "A integridade assegura que os dados se mantêm exatos e completos. A confidencialidade restringe o acesso, e a disponibilidade garante o acesso quando necessário."
   },
   {
    "banca": "FCC",
@@ -113,18 +113,18 @@
    "comment": "HTTPS encripta a comunicação entre o cliente e o servidor, garantindo segurança. As outras opções se referem a funções que não estão diretamente relacionadas ao protocolo."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
-   "text": "Qual das opções a seguir é um exemplo de um vírus que se propaga por anexos de e-mail?",
+   "text": "O malware que se propaga automaticamente pela rede, inclusive por e-mail, sem precisar de um arquivo hospedeiro, é o:",
    "options": [
-    "Cavalos de Troia",
-    "Ransomware",
-    "Worms",
-    "Spyware",
-    "Adware"
+    "cavalo de troia",
+    "ransomware",
+    "worm",
+    "spyware",
+    "adware"
    ],
-   "answer": "A",
-   "comment": "Os Cavalos de Troia são malwares que se disfarçam como programas legítimos e podem ser enviados como anexos em e-mails. Os outros tipos descritos têm outras formas de propagação."
+   "answer": "C",
+   "comment": "O worm se copia sozinho e se espalha pela rede. O cavalo de troia depende de o usuário executá-lo e não se replica."
   },
   {
    "banca": "CEBRASPE",
@@ -141,18 +141,18 @@
    "comment": "A função principal de um firewall é monitorar e controlar o tráfego de rede de entrada e saída. As outras alternativas descrevem funções de outras tecnologias, como antivírus e soluções de backup."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo VUNESP",
    "type": "mc",
-   "text": "Qual é o principal objetivo de um firewall em um sistema de rede?",
+   "text": "O mecanismo que permite comprovar a autoria e a integridade de um documento eletrônico é:",
    "options": [
-    "Proteger contra vírus e malware",
-    "Bloquear acessos não autorizados",
-    "Fazer backup dos dados",
-    "Armazenar dados em nuvem",
-    "Aumentar a velocidade da conexão"
+    "o firewall",
+    "a assinatura digital",
+    "o backup incremental",
+    "o cookie",
+    "a desfragmentação"
    ],
    "answer": "B",
-   "comment": "A opção B está correta, pois o principal objetivo do firewall é bloquear acessos não autorizados à rede. As outras opções se referem a funções distintas e não são funções básicas de um firewall."
+   "comment": "A assinatura digital, baseada em criptografia de chave pública, garante a autoria e a integridade, e impede que o autor negue o ato (não repúdio)."
   },
   {
    "banca": "FGV",
@@ -232,46 +232,39 @@
    "comment": "Trojan é um tipo de malware que se disfarça como software legítimo para enganar o usuário. As outras opções não representam um Trojan."
   },
   {
-   "banca": "CEBRASPE",
-   "type": "mc",
-   "text": "Um firewall também pode ser utilizado para bloquear aplicativos específicos de acessar a internet com base em políticas definidas pelo usuário.",
-   "options": [
-    "Firewalls só controlam tráfego entre redes.",
-    "Isso é função exclusiva de antivírus.",
-    "Verdadeiro, pode bloquear aplicativos.",
-    "Somente firewalls de hardware fazem isso.",
-    "Os firewalls não têm controle granular."
-   ],
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Um firewall pode ser configurado para bloquear que aplicativos específicos acessem a internet, com base em políticas definidas pelo usuário.",
    "answer": "C",
-   "comment": "Firewalls podem se configurar para permitir ou impedir que aplicativos específicos acessem recursos de rede com base em regras definidas."
+   "comment": "Os firewalls pessoais permitem criar regras por aplicativo, porta ou endereço, liberando ou bloqueando o acesso à rede."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo CESGRANRIO",
    "type": "mc",
-   "text": "O que é um backup incremental?",
+   "text": "O tipo de backup que copia todos os arquivos alterados desde o último backup completo é o:",
    "options": [
-    "Copia todos os dados desde o último backup completo",
-    "Armazena arquivos somente se houver alteração",
-    "Faz cópia de todos os arquivos sem exceção",
-    "É feito diariamente sem planejamento",
-    "Realiza cópias de segurança de arquivos de sistema apenas"
+    "incremental",
+    "diferencial",
+    "completo",
+    "espelhado",
+    "em tempo real"
    ],
    "answer": "B",
-   "comment": "A opção B é a correta, pois um backup incremental é aquele que copia apenas os arquivos que foram alterados desde o último backup, enquanto as outras opções não representam corretamente essa técnica."
+   "comment": "O diferencial olha sempre para o último completo. O incremental olha para o último backup de qualquer tipo."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
-   "text": "Qual das opções a seguir é uma função primária de um antivírus?",
+   "text": "Uma rede de computadores infectados, controlados remotamente por um atacante e usados, por exemplo, em ataques de negação de serviço, é chamada de:",
    "options": [
-    "Monitorar o tráfego de redes",
-    "Remover malwares do sistema",
-    "Gerenciar backups automaticamente",
-    "Otimizar o desempenho do sistema",
-    "Armazenar dados na nuvem"
+    "intranet",
+    "botnet",
+    "VPN",
+    "proxy",
+    "cluster"
    ],
    "answer": "B",
-   "comment": "A função primária de um antivírus é remover malwares, incluindo vírus. As outras alternativas referem-se a funções de outros tipos de softwares."
+   "comment": "Os computadores infectados (bots) formam a botnet, que pode ser usada em ataques DDoS e no envio de spam."
   },
   {
    "banca": "FGV",
@@ -288,46 +281,32 @@
    "comment": "A opção D é incorreta, pois um firewall não impede a instalação de softwares, mas sim controla o tráfego de rede. As outras opções descrevem corretamente funções do firewall."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
-   "text": "O que é um firewall?",
+   "text": "Uma senha considerada forte deve:",
    "options": [
-    "Um programa de backup de dados",
-    "Uma ferramenta que detecta e remove vírus",
-    "Um sistema que filtra o tráfego de rede",
-    "Um tipo de malware",
-    "Uma rede social"
+    "ser curta, para ser lembrada com facilidade",
+    "combinar letras maiúsculas e minúsculas, números e símbolos, com comprimento adequado",
+    "usar datas de nascimento e nomes de familiares",
+    "ser a mesma em todos os serviços",
+    "ser compartilhada com a equipe de TI"
    ],
+   "answer": "B",
+   "comment": "Quanto mais longa e variada, mais difícil de ser adivinhada. Reutilizar a mesma senha em vários serviços aumenta o risco."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Na criptografia assimétrica, são utilizadas duas chaves diferentes: uma pública e uma privada.",
    "answer": "C",
-   "comment": "A opção C é correta, pois um firewall serve para filtrar e controlar o tráfego de rede, enquanto as demais alternativas não definem corretamente o que é um firewall."
+   "comment": "O que uma chave cifra, apenas a outra do par consegue decifrar. A criptografia simétrica usa a mesma chave para cifrar e decifrar."
   },
   {
-   "banca": "FCC",
-   "type": "mc",
-   "text": "O que deve ser considerado ao escolher um serviço de armazenamento em nuvem?",
-   "options": [
-    "A quantidade de espaço grátis offeredo",
-    "A reputação da empresa fornecedora",
-    "A velocidade de conexão à internet",
-    "O número de dados que será armazenado",
-    "O sistema operacional do usuário"
-   ],
-   "answer": "B",
-   "comment": "A opção B é correta, pois a reputação da empresa é fundamental para a segurança e disponibilidade dos dados. As outras opções são menos relevantes no contexto geral da segurança."
-  },
-  {
-   "banca": "CEBRASPE",
-   "type": "mc",
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
    "text": "Os firewalls impedem a entrada de qualquer tipo de dado suspeito na rede, sendo desnecessário o uso de um antivírus em conjunto.",
-   "options": [
-    "Firewalls são independentes de antivírus.",
-    "Ambos são necessários para uma proteção abrangente.",
-    "Firewalls são mais importantes que antivírus.",
-    "Antivírus protegidos contra trojans e firewalls contra worms.",
-    "Isso depende do firewall utilizado."
-   ],
-   "answer": "B",
-   "comment": "Firewalls e antivírus atuam em camadas de segurança diferentes e complementares para proteção de rede e sistema."
+   "answer": "E",
+   "comment": "Firewall e antivírus atuam em camadas diferentes e complementares. O firewall controla o tráfego, e o antivírus detecta e remove malware."
   },
   {
    "banca": "VUNESP",
@@ -344,18 +323,11 @@
    "comment": "A opção B está correta, pois um backup incremental faz cópias apenas dos dados que foram alterados desde o último backup, otimizando espaço e tempo. As outras opções não descrevem corretamente um backup incremental."
   },
   {
-   "banca": "CEBRASPE",
-   "type": "mc",
-   "text": "Vírus de computador podem ser detectados e removidos por softwares antivírus, que precisam estar sempre atualizados para garantir sua eficácia contra novas ameaças.",
-   "options": [
-    "Os antivírus detectam vírus sem necessidade de atualizações.",
-    "Antivírus sempre detectam todas as ameaças.",
-    "Atualizações são necessárias para eficácia.",
-    "Os antivírus apenas detectam, não removem vírus.",
-    "As atualizações são opcionais."
-   ],
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Vírus de computador podem ser detectados e removidos por antivírus, que precisam estar sempre atualizados para serem eficazes contra novas ameaças.",
    "answer": "C",
-   "comment": "Antivírus atualizados possuem assinaturas para detectar e neutralizar novos vírus. Sem atualizações, a eficácia pode diminuir drasticamente."
+   "comment": "As atualizações trazem novas assinaturas e regras. Sem elas, o antivírus perde eficácia rapidamente."
   },
   {
    "banca": "FGV",
@@ -400,18 +372,18 @@
    "comment": "A alternativa B é a correta, pois um ransomware impede acesso a arquivos até que um pagamento seja realizado, enquanto as outras opções descrevem diferentes tipos de malware."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo CESGRANRIO",
    "type": "mc",
-   "text": "Um firewall tem como função principal:",
+   "text": "O certificado digital é um documento eletrônico que serve para:",
    "options": [
-    "Proteger o computador contra vazamento de dados",
-    "Armazenar arquivos temporários",
-    "Filtrar e monitorar o tráfego de rede",
-    "Gerar backups automáticos",
-    "Desfragmentar o disco rígido"
+    "acelerar a conexão com a internet",
+    "identificar uma pessoa, empresa ou site e associá-la a uma chave pública",
+    "fazer o backup automático dos arquivos",
+    "remover vírus do computador",
+    "bloquear acessos não autorizados à rede"
    ],
-   "answer": "C",
-   "comment": "A alternativa C está correta, pois um firewall filtra e controla o tráfego de dados entre a rede interna e a externa, atuando como uma barreira de segurança."
+   "answer": "B",
+   "comment": "O certificado, emitido por uma autoridade certificadora, vincula uma identidade a uma chave pública e é a base da assinatura digital e do HTTPS."
   },
   {
    "banca": "Estilo Cebraspe",
@@ -479,9 +451,9 @@
   {
    "banca": "Estilo Cebraspe",
    "type": "ce",
-   "text": "O backup diferencial copia todos os arquivos alterados desde o último backup completo.",
+   "text": "Em uma estratégia com backup completo e backups incrementais, a restauração exige o último backup completo e todos os incrementais realizados depois dele.",
    "answer": "C",
-   "comment": "Por isso a restauração normalmente exige apenas o último completo e o último diferencial."
+   "comment": "É o contrapeso do incremental: faz cópias rápidas e pequenas, mas a recuperação depende de toda a cadeia de cópias."
   },
   {
    "banca": "Estilo CESGRANRIO",
