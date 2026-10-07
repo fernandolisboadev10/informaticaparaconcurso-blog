@@ -29,6 +29,8 @@ Por isso, uma estratégia eficiente precisa considerar local de armazenamento, p
 
 Em seguida, o candidato precisa dominar os tipos mais cobrados em prova: completo, incremental e diferencial. As bancas costumam inverter conceitos ou trocar vantagens e desvantagens entre eles.
 
+![Infográfico dos tipos de backup: completo, incremental e diferencial, com o que cada um copia e o que é necessário para restaurar](./images/tipos-de-backup-completo-incremental-diferencial.webp)
+
 ## Backup completo
 
 Primeiramente, o **backup completo** copia todos os arquivos selecionados, independentemente de terem mudado ou não desde a última execução. Esse modelo cria uma imagem integral do conjunto de dados naquele momento.
@@ -63,7 +65,7 @@ Além disso, uma estratégia eficiente não depende apenas do tipo de cópia. El
 
 ## Regra 3-2-1
 
-Primeiramente, a regra **3-2-1** recomenda manter três cópias dos dados: uma principal e duas reservas. Essas cópias devem ficar em pelo menos dois tipos de mídia, e uma delas deve permanecer fora do local principal.
+Primeiramente, a [regra **3-2-1**](/regra-3-2-1/) recomenda manter três cópias dos dados: uma principal e duas reservas. Essas cópias devem ficar em pelo menos dois tipos de mídia, e uma delas deve permanecer fora do local principal.
 
 Essa prática reduz o risco de perda simultânea por falha física, desastre ambiental ou ataque. Em cenários modernos, muitas organizações ainda ampliam essa lógica com cópias offline ou imutáveis.
 
