@@ -109,7 +109,7 @@ Padrão ODF (ISO/IEC 26300) · Arraste para o lado no celular
 | 🗄️ Base | Banco de dados | Access | .odb |
 | ➗ Math | Editor de fórmulas | Editor de Equações | .odf |
 
-**⚠️ Pegadinha:** ODF é o nome do padrão aberto que reúne todos os formatos da suíte. Já `.odf` é a extensão específica do Math.
+<strong class="cai-prova">⚠️ Pegadinha:</strong> ODF é o nome do padrão aberto que reúne todos os formatos da suíte. Já `.odf` é a extensão específica do Math.
 
 ## Compatibilidade com o Microsoft Office e exportação para PDF
 

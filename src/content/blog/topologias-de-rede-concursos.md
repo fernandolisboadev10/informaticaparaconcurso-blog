@@ -37,7 +37,7 @@ Nessa configuração, todos os dispositivos compartilham um **único cabo centra
 -   **Como funciona:** Quando um computador envia dados, o sinal viaja pelo cabo e passa por todos os dispositivos. Cada máquina verifica se o pacote é destinado a ela.
 -   **Vantagem:** Custo baixo e instalação simples.
 -   **Desvantagem crítica:** Se o cabo principal romper, **toda a rede para**. Além disso, apenas um dispositivo transmite por vez, o que causa lentidão em redes grandes.
--   **Como cai na prova:** A banca afirma que “no barramento, existe um dispositivo central que gerencia a comunicação”. Isso está **Errado**. No barramento, não há nó central; todos dividem o mesmo meio.
+-   <strong class="cai-prova">Como cai na prova:</strong> A banca afirma que “no barramento, existe um dispositivo central que gerencia a comunicação”. Isso está **Errado**. No barramento, não há nó central; todos dividem o mesmo meio.
 
 ## 2\. Topologia em Estrela (Star)
 
@@ -46,7 +46,7 @@ Nessa topologia, todos os dispositivos conectam-se a um **equipamento central**,
 -   **Como funciona:** Toda a comunicação passa obrigatoriamente pelo nó central. Se o computador A quer falar com o computador B, os dados vão de A para o switch, e do switch para B.
 -   **Vantagem:** Se um cabo quebrar, **apenas aquele computador fica offline**. A rede continua funcionando. Facilita a identificação de falhas.
 -   **Desvantagem:** Se o **dispositivo central (switch) falhar**, toda a rede para.
--   **Como cai na prova:** É a topologia mais comum em [LANs](/tipos-redes-computadores-concursos/) modernas. A banca costuma dizer que “a topologia em estrela utiliza um concentrador central”. Isso está **Certo**.
+-   <strong class="cai-prova">Como cai na prova:</strong> É a topologia mais comum em [LANs](/tipos-redes-computadores-concursos/) modernas. A banca costuma dizer que “a topologia em estrela utiliza um concentrador central”. Isso está **Certo**.
 
 ## 3\. Topologia em Anel (Ring)
 
@@ -55,7 +55,7 @@ Nessa estrutura, os dispositivos conectam-se em **círculo fechado**, formando u
 -   **Como funciona:** Os dados trafegam em **uma única direção** (sentido horário ou anti-horário), passando de nó em nó até alcançar o destino. Cada estação recebe e retransmite o sinal para o próximo.
 -   **Vantagem:** Organização previsível do tráfego.
 -   **Desvantagem crítica:** Se um único nó falhar ou um cabo romper, **o anel se quebra e a rede inteira para** (a menos que exista um anel redundante).
--   **Como cai na prova:** A banca afirma que “no anel, os dados trafegam em ambas as direções simultaneamente”. Isso geralmente está **Errado**. O padrão clássico é unidirecional.
+-   <strong class="cai-prova">Como cai na prova:</strong> A banca afirma que “no anel, os dados trafegam em ambas as direções simultaneamente”. Isso geralmente está **Errado**. O padrão clássico é unidirecional.
 
 ## 4\. Topologia em Malha (Mesh)
 
@@ -64,7 +64,7 @@ Nessa topologia, os dispositivos interconectam-se entre si, criando múltiplos c
 -   **Como funciona:** Cada nó conecta-se a vários outros nós. Na **Malha Completa (Full Mesh)**, cada dispositivo liga-se diretamente a **todos os demais**.
 -   **Vantagem:** **Alta redundância e confiabilidade**. Se um caminho falha, os dados encontram rotas alternativas. A rede não para.
 -   **Desvantagem:** **Custo elevado** devido à grande quantidade de cabos e portas necessárias.
--   **Como cai na prova:** A Internet é o maior exemplo de topologia em malha. A banca diz que “a topologia em malha oferece múltiplos caminhos e tolerância a falhas”. Isso está **Certo**.
+-   <strong class="cai-prova">Como cai na prova:</strong> A Internet é o maior exemplo de topologia em malha. A banca diz que “a topologia em malha oferece múltiplos caminhos e tolerância a falhas”. Isso está **Certo**.
 
 ## Resumo Rápido para Revisão
 

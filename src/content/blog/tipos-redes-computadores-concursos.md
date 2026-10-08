@@ -25,25 +25,25 @@ A partir disso, a divisão é feita tradicionalmente em quatro tipos principais,
 
 A Rede de Área Pessoal é voltada para a conectividade individual. Isso significa que o alcance é extremamente curto, geralmente restrito a poucos metros ao redor de uma única pessoa.
 
--   **Como cai na prova:** Conexões via Bluetooth entre um smartphone e um fone de ouvido sem fio, ou a transferência de dados via cabo USB entre um celular e um notebook (veja os [periféricos e portas](/perifericos-entrada-saida-concurso/)).
+-   <strong class="cai-prova">Como cai na prova:</strong> Conexões via Bluetooth entre um smartphone e um fone de ouvido sem fio, ou a transferência de dados via cabo USB entre um celular e um notebook (veja os [periféricos e portas](/perifericos-entrada-saida-concurso/)).
 
 ## LAN (Local Area Network)
 
 A Rede de Área Local é a mais presente no nosso cotidiano corporativo e doméstico. Em síntese, ela conecta computadores que estão em uma mesma área geográfica fisicamente limitada.
 
--   **Como cai na prova:** As bancas costumam usar palavras-chave como “mesmo prédio”, “mesmo escritório”, “sala”, ou “campus de uma escola” para descrever uma LAN.
+-   <strong class="cai-prova">Como cai na prova:</strong> As bancas costumam usar palavras-chave como “mesmo prédio”, “mesmo escritório”, “sala”, ou “campus de uma escola” para descrever uma LAN.
 
 ## MAN (Metropolitan Area Network)
 
 A Rede de Área Metropolitana abrange uma área geográfica intermediária, maior que uma LAN e menor que uma WAN.
 
--   **A Pegadinha de Prova:** O cenário clássico cobrado é a interligação entre a matriz de uma empresa e sua filial localizadas na **mesma cidade** ou região metropolitana. Se o enunciado falar “mesmo município”, marque como MAN.
+-   <strong class="cai-prova">A Pegadinha de Prova:</strong> O cenário clássico cobrado é a interligação entre a matriz de uma empresa e sua filial localizadas na **mesma cidade** ou região metropolitana. Se o enunciado falar “mesmo município”, marque como MAN.
 
 ## WAN (Wide Area Network)
 
 A Rede de Longa Distância não possui restrições geográficas fixas. Dessa forma, ela pode interligar cidades diferentes, estados, países e até continentes inteiros.
 
--   **Como cai na prova:** A [Internet](/o-que-e-extranet/) é o maior e mais famoso exemplo de WAN do mundo. Se a banca afirmar que a Internet é uma LAN por chegar à sua casa, a questão está completamente errada.
+-   <strong class="cai-prova">Como cai na prova:</strong> A [Internet](/o-que-e-extranet/) é o maior e mais famoso exemplo de WAN do mundo. Se a banca afirmar que a Internet é uma LAN por chegar à sua casa, a questão está completamente errada.
 
 ## O “W” que Muda Tudo: Redes Sem Fio (Wireless)
 

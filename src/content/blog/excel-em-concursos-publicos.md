@@ -26,7 +26,7 @@ Em seguida, vale entender dois conceitos que a banca adora confundir:
 
 Em outras palavras, quando você salva um arquivo do Excel (veja as [extensões como .xlsx](/tipos-de-arquivo/)), você salva uma pasta de trabalho. Dentro dela, você organiza quantas planilhas quiser, cada uma com um conteúdo diferente: um mês, um setor, um tipo de dado.
 
-⚠️ **Pegadinha clássica:** a banca troca “planilha” por “pasta de trabalho” na mesma frase justamente para testar se você decorou a diferença ou só leu por cima. Não caia nessa.
+<strong class="cai-prova">⚠️ Pegadinha clássica:</strong> a banca troca “planilha” por “pasta de trabalho” na mesma frase justamente para testar se você decorou a diferença ou só leu por cima. Não caia nessa.
 
 ## Interface do Excel
 
@@ -46,7 +46,7 @@ Além disso, a faixa de opções organiza os comandos em abas como Página Inici
 | **Absoluta** | `$A$1` | Não muda nada | “Cifrão duplo prende tudo” |
 | **Mista** | `A$1` ou `$A1` | Trava só linha OU só coluna | “Um cifrão, uma trava” |
 
-⚠️ **Pegadinha:** a banca costuma descrever o comportamento de um tipo de referência e pedir pra você identificar o símbolo, ou o contrário. Decore os dois sentidos.
+<strong class="cai-prova">⚠️ Pegadinha:</strong> a banca costuma descrever o comportamento de um tipo de referência e pedir pra você identificar o símbolo, ou o contrário. Decore os dois sentidos.
 
 O Excel usa referências para localizar valores dentro da planilha. Por padrão, a referência é **relativa**, o que significa que ela muda quando você copia a fórmula para outra célula.
 
@@ -84,7 +84,7 @@ Além das funções, você também precisa conhecer os recursos de análise e or
 
 A **formatação condicional**, por sua vez, destaca automaticamente células com base em regras que você define. Segundo a Microsoft, esse recurso torna padrões e tendências mais visíveis, e você pode aplicá-lo a intervalos, tabelas e até relatórios de Tabela Dinâmica.
 
-✅ **Fixe esse ponto:** a formatação condicional muda apenas a aparência (cor, fonte, ícone). Ela nunca altera o valor real da célula, e essa é justamente a casca de banana que aparece em questão de certo ou errado.
+<strong class="cai-prova">✅ Fixe esse ponto:</strong> a formatação condicional muda apenas a aparência (cor, fonte, ícone). Ela nunca altera o valor real da célula, e essa é justamente a casca de banana que aparece em questão de certo ou errado.
 
 Vale destacar, ainda, a **AutoSoma**, que insere rapidamente a função de soma. O atalho **Alt + =** executa esse comando diretamente, sem que você precise digitar a fórmula manualmente.
 
