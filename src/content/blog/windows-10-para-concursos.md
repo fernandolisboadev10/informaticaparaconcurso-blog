@@ -100,7 +100,7 @@ Os atalhos das áreas virtuais aparecem com frequência em prova:
 -   **Win + Ctrl + F4:** fecha a área atual
 -   **Win + Ctrl + setas:** alterna entre as áreas
 
-É aqui que aparece uma das principais <strong class="cai-prova">pegadinhas</strong>: Alt + Tab não abre a Visão de Tarefas. Ele apenas alterna entre as janelas abertas.
+É aqui que aparece uma das principais **pegadinhas**: Alt + Tab não abre a Visão de Tarefas. Ele apenas alterna entre as janelas abertas.
 
 ## Explorador de Arquivos e organização de dados
 
@@ -211,7 +211,7 @@ Comparativo direto, ponto a ponto, dos itens mais cobrados em prova.
 | Requisito de TPM 2.0 | ✗ Não exigia | ✗ Não exige |
 | Fim do suporte | 14/01/2020 Encerrado | 14/10/2025 Encerrado |
 
-## <strong class="cai-prova">Pegadinhas</strong> mais cobradas sobre o Windows 10
+## Pegadinhas mais cobradas sobre o Windows 10
 
 Antes de resolver as questões, revise estas afirmações:
 

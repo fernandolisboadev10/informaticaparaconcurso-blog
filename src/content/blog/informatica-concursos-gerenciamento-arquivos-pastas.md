@@ -125,7 +125,7 @@ Em resumo, a extensão diz ao sistema que tipo de arquivo ele tem diante de si. 
 -   **Compactados:** `.zip`, `.rar`
 -   **Executáveis:** `.exe`
 
-Contudo, existe uma <strong class="cai-prova">pegadinha</strong> clássica aqui. O Windows oculta, por padrão, as extensões dos tipos de arquivo conhecidos. Além disso, renomear `foto.txt` para `foto.jpg` não converte nada: o conteúdo continua sendo texto, e o arquivo deixa de abrir corretamente. Para aprofundar o tema, leia o artigo sobre [tipos de arquivo, extensões e formatos](/tipos-de-arquivo/).
+Contudo, existe uma **pegadinha** clássica aqui. O Windows oculta, por padrão, as extensões dos tipos de arquivo conhecidos. Além disso, renomear `foto.txt` para `foto.jpg` não converte nada: o conteúdo continua sendo texto, e o arquivo deixa de abrir corretamente. Para aprofundar o tema, leia o artigo sobre [tipos de arquivo, extensões e formatos](/tipos-de-arquivo/).
 
 ## Programas e atalhos: o que muda ao instalar, executar e excluir
 
@@ -148,7 +148,7 @@ Na prática, funciona assim: o atalho é só um endereço. Ele ocupa muito pouco
 
 Para remover um programa da forma correta, você abre Configurações, entra em Aplicativos e escolhe Aplicativos instalados. O Painel de Controle também resolve, pelo caminho Programas e Recursos. Alguns aplicativos que já vêm no Windows não permitem desinstalação.
 
-É aqui que aparece uma das principais <strong class="cai-prova">pegadinhas</strong>: apagar a pasta do programa não equivale a desinstalá-lo. Sobram entradas no sistema, atalhos e arquivos de configuração. Quando um programa trava, você usa o Gerenciador de Tarefas (Ctrl+Shift+Esc) para encerrá-lo. Para conhecer o assunto em detalhes, veja também o guia do [Windows 10 para concursos](/windows-10-para-concursos/), que cobre atalhos de teclado e ferramentas do sistema.
+É aqui que aparece uma das principais **pegadinhas**: apagar a pasta do programa não equivale a desinstalá-lo. Sobram entradas no sistema, atalhos e arquivos de configuração. Quando um programa trava, você usa o Gerenciador de Tarefas (Ctrl+Shift+Esc) para encerrá-lo. Para conhecer o assunto em detalhes, veja também o guia do [Windows 10 para concursos](/windows-10-para-concursos/), que cobre atalhos de teclado e ferramentas do sistema.
 
 ## Boas práticas na organização de arquivos, pastas e programas
 
@@ -160,7 +160,7 @@ Além do que a prova cobra, a organização de arquivos, pastas e programas faz 
 -   Instale programas apenas de fontes confiáveis e mantenha-os atualizados.
 -   Faça backup seguindo a [regra 3-2-1](/regra-3-2-1/): três cópias, em duas mídias diferentes, com uma delas fora do local principal.
 
-## <strong class="cai-prova">Pegadinhas</strong> da banca sobre arquivos, pastas e programas
+## Pegadinhas da banca sobre arquivos, pastas e programas
 
 Cabe destacar que a banca costuma trocar uma palavra e inverter o sentido da afirmação. Estas afirmações aparecem com frequência, e todas estão erradas:
 

@@ -13,7 +13,7 @@ imageAlt: "Linux para Concursos"
 
 Você já deve ter percebido que o Linux para concursos aparece com uma frequência incômoda nas provas de Informática, e isso não é acaso. Afinal, o sistema domina boa parte dos servidores, dos serviços de rede e dos ambientes corporativos do mundo real, e por isso a banca encontra ali um terreno fértil para cobrar conceitos de sistema operacional, terminal, arquivos e permissões em poucas linhas de enunciado.
 
-Muitos candidatos travam diante desse assunto logo no início da preparação. Contudo, a lógica de cobrança é bem mais simples do que parece à primeira vista: em vez de exigir domínio técnico de administrador de redes, a prova normalmente avalia se você entende o papel do sistema, reconhece os comandos básicos e identifica as <strong class="cai-prova">pegadinhas</strong> conceituais que a banca gosta de armar.
+Muitos candidatos travam diante desse assunto logo no início da preparação. Contudo, a lógica de cobrança é bem mais simples do que parece à primeira vista: em vez de exigir domínio técnico de administrador de redes, a prova normalmente avalia se você entende o papel do sistema, reconhece os comandos básicos e identifica as **pegadinhas** conceituais que a banca gosta de armar.
 
 Nesta aula, você vai entender por que o Linux cai tanto, como ele surgiu, o que a Cebraspe mais explora e quais pontos merecem prioridade na sua revisão para o concurso. Se ainda ficou alguma dúvida sobre como esse sistema se compara ao concorrente mais cobrado em edital, o artigo [Windows x Linux para concursos](/windows-vs-linux-para-concursos/) traz esse comparativo direto. Além disso, você vai encontrar links oficiais para consultar a documentação real de cada distribuição e de cada comando: o tipo de material que separa quem decora do candidato que realmente entende o assunto.
 
@@ -57,7 +57,7 @@ Além disso, o tema rende muito: em uma única questão, a banca consegue cobrar
 
 Já que você conhece o motivo da cobrança, entenda agora o estilo da banca. A [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) prefere itens de certo ou errado, então ela costuma misturar um conceito verdadeiro com uma palavra mal colocada, criando uma armadilha quase invisível para quem lê rápido demais.
 
-Por esse motivo, preste atenção redobrada em expressões como “sempre”, “somente”, “exclusivamente” e “necessariamente”. Em Linux, uma frase 90% correta pode virar errada por causa de um único exagero no enunciado, e esse é exatamente o tipo de <strong class="cai-prova">pegadinha</strong> que separa quem passa de quem fica na fila de espera.
+Por esse motivo, preste atenção redobrada em expressões como “sempre”, “somente”, “exclusivamente” e “necessariamente”. Em Linux, uma frase 90% correta pode virar errada por causa de um único exagero no enunciado, e esse é exatamente o tipo de **pegadinha** que separa quem passa de quem fica na fila de espera.
 
 ## Shell e terminal: a porta de entrada do sistema
 
@@ -112,7 +112,7 @@ Principalmente, usuários, grupos e permissões formam um dos blocos mais cobrad
 
 Veja como isso aparece na prática: ao digitar `ls -l`, você enxerga algo como `-rwxr-xr--`. Essa sequência parece confusa à primeira vista, mas segue uma lógica fixa: os três primeiros caracteres definem a permissão do dono, os três seguintes definem a permissão do grupo e os três últimos definem a permissão para os demais usuários do sistema. Assim, nesse exemplo, o dono pode ler, escrever e executar; o grupo pode ler e executar; e os demais só podem ler.
 
-Guarde esta ideia, porque ela costuma render questão isolada: o comando `chmod` altera essas permissões, enquanto o `chown` altera o dono do arquivo. Não confunda os dois: essa é justamente uma das principais <strong class="cai-prova">pegadinhas</strong> que a banca explora nesse bloco. Para consultar a sintaxe completa e oficial, o manual do GNU Coreutils sobre o chmod traz a documentação detalhada do comando.
+Guarde esta ideia, porque ela costuma render questão isolada: o comando `chmod` altera essas permissões, enquanto o `chown` altera o dono do arquivo. Não confunda os dois: essa é justamente uma das principais **pegadinhas** que a banca explora nesse bloco. Para consultar a sintaxe completa e oficial, o manual do GNU Coreutils sobre o chmod traz a documentação detalhada do comando.
 
 A tabela abaixo resume os comandos mais cobrados sobre esse bloco. Consulte-a sempre que precisar revisar rapidamente antes da prova.
 

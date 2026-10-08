@@ -11,7 +11,7 @@ imageAlt: "Buscador x Navegador"
 
 Você abre o navegador, digita uma pergunta na barra de busca e a resposta aparece em segundos. Nesse processo simples, dois elementos distintos entram em ação, e a maioria dos candidatos não sabe separar um do outro.
 
-Essa confusão vira armadilha de prova com frequência. Por isso, você vai entender agora a diferença entre navegador e buscador, com exemplos reais e as <strong class="cai-prova">pegadinhas</strong> que as bancas mais exploram nesse tema.
+Essa confusão vira armadilha de prova com frequência. Por isso, você vai entender agora a diferença entre navegador e buscador, com exemplos reais e as **pegadinhas** que as bancas mais exploram nesse tema.
 
 ### O Que É um Navegador de Internet (Browser)
 

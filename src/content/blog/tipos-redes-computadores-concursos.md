@@ -13,7 +13,7 @@ Primeiramente, dominar o tema de informática tornou-se um verdadeiro fator de d
 
 No entanto, muitos candidatos perdem pontos preciosos ao confundir pequenos detalhes sobre a abrangência geográfica das redes. Uma palavra trocada no enunciado transforma o gabarito de “Certo” para “Errado”.
 
-Dessa forma, este artigo vai detalhar a classificação dos tipos de redes de computadores exatamente como as principais bancas exigem. Ou seja, você aprenderá as diferenças entre PAN, LAN, MAN e WAN de forma direta, blindando-se contra as famosas “<strong class="cai-prova">pegadinhas</strong>” de prova.
+Dessa forma, este artigo vai detalhar a classificação dos tipos de redes de computadores exatamente como as principais bancas exigem. Ou seja, você aprenderá as diferenças entre PAN, LAN, MAN e WAN de forma direta, blindando-se contra as famosas “**pegadinhas**” de prova.
 
 ## A Classificação de Redes por Abrangência Geográfica (A Favorita das Bancas)
 

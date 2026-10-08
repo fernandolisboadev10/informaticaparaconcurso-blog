@@ -13,7 +13,7 @@ Hardware aparece em praticamente todo edital que cobra Informática. Às vezes o
 
 No entanto, muita gente estuda hardware decorando listas de siglas. Esse método falha justamente na hora da prova, porque as bancas raramente perguntam “o que é RAM”. Em vez disso, elas perguntam se a RAM perde os dados ao desligar o computador, se a cache fica mais perto do processador ou se todo SSD M.2 é NVMe.
 
-Por isso, preparei este guia de hardware para concursos seguindo a lógica da prova. Você vai entender o papel de cada componente, como eles se conectam e, principalmente, onde estão as <strong class="cai-prova">pegadinhas</strong> que mais derrubam candidatos.
+Por isso, preparei este guia de hardware para concursos seguindo a lógica da prova. Você vai entender o papel de cada componente, como eles se conectam e, principalmente, onde estão as **pegadinhas** que mais derrubam candidatos.
 
 ## O que é hardware e por que esse tema cai tanto em concursos
 
@@ -141,7 +141,7 @@ A interface também faz diferença:
 -   **SATA:** padrão presente em HDs e SSDs de 2,5 polegadas, com limite de 6 Gb/s na versão III (cerca de 600 MB/s de taxa útil).
 -   **NVMe:** protocolo criado para SSDs que usa as linhas PCI Express e, por isso, alcança velocidades bem superiores ao SATA.
 
-É aqui que aparece uma das principais <strong class="cai-prova">pegadinhas</strong>: M.2 é um formato físico (o encaixe), e não um protocolo. Um SSD M.2 pode trabalhar tanto em SATA quanto em NVMe. Portanto, se a banca afirmar que todo SSD M.2 é NVMe, o item está errado.
+É aqui que aparece uma das principais **pegadinhas**: M.2 é um formato físico (o encaixe), e não um protocolo. Um SSD M.2 pode trabalhar tanto em SATA quanto em NVMe. Portanto, se a banca afirmar que todo SSD M.2 é NVMe, o item está errado.
 
 ### Mídias removíveis: pendrive, cartões de memória e mídias ópticas
 
@@ -201,7 +201,7 @@ Na prática, porém, muitas bancas e apostilas ainda usam 1 KB = 1.024 bytes. Po
 
 Essa diferença também explica por que um HD vendido como 1 TB aparece com cerca de 931 GB no Windows. O fabricante calcula em base decimal, enquanto o sistema exibe o valor em base binária.
 
-## Hardware para concursos: as <strong class="cai-prova">pegadinhas</strong> mais comuns das bancas
+## Hardware para concursos: as pegadinhas mais comuns das bancas
 
 Agora que você conhece os componentes, veja os erros que as bancas mais exploram. Principalmente nas provas do Cebraspe, termos absolutos como “sempre”, “somente” e “exclusivamente” costumam sinalizar um item errado.
 

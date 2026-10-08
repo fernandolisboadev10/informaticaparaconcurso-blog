@@ -9,7 +9,7 @@ image: "./images/hardware-1.webp"
 imageAlt: "Hardware"
 ---
 
-Muitos candidatos travam justamente nos detalhes técnicos de hardware, e este simulado de hardware existe para reverter esse cenário. Ao resolver as questões comentadas, você revisa barramentos, memória RAM e ROM, processador, armazenamento (HD e SSD) e periféricos, temas recorrentes nas provas de Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Cada questão vem acompanhada de um comentário que explica o conceito correto e destaca a <strong class="cai-prova">pegadinha</strong> explorada pela banca, o que torna o aprendizado mais sólido. Assim, você identifica rapidamente os pontos que ainda precisam de revisão. Por isso, faça este simulado com calma e anote os temas que mais errar.
+Muitos candidatos travam justamente nos detalhes técnicos de hardware, e este simulado de hardware existe para reverter esse cenário. Ao resolver as questões comentadas, você revisa barramentos, memória RAM e ROM, processador, armazenamento (HD e SSD) e periféricos, temas recorrentes nas provas de Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Cada questão vem acompanhada de um comentário que explica o conceito correto e destaca a **pegadinha** explorada pela banca, o que torna o aprendizado mais sólido. Assim, você identifica rapidamente os pontos que ainda precisam de revisão. Por isso, faça este simulado com calma e anote os temas que mais errar.
 
 ## Barramentos: a via que conecta todo o hardware
 
@@ -26,7 +26,7 @@ Esse é um dos temas mais cobrados, e não à toa: é fácil confundir os dois c
 -   **RAM (Random Access Memory)**: volátil, perde todo o conteúdo quando o computador desliga, permite leitura e escrita, armazena os dados dos programas em execução no momento.
 -   **ROM (Read Only Memory)**: não volátil, mantém as informações mesmo sem energia, grava em geral as instruções de inicialização e o firmware do sistema.
 
-Aqui está um ponto que merece atenção: quando a banca descreve uma memória que “perde os dados ao desligar o equipamento”, ela está falando de RAM, não de ROM. Não confunda os dois conceitos na hora da prova, essa troca é uma das <strong class="cai-prova">pegadinhas</strong> mais repetidas em concursos de informática.
+Aqui está um ponto que merece atenção: quando a banca descreve uma memória que “perde os dados ao desligar o equipamento”, ela está falando de RAM, não de ROM. Não confunda os dois conceitos na hora da prova, essa troca é uma das **pegadinhas** mais repetidas em concursos de informática.
 
 Se quiser aprofundar, o [artigo completo sobre memórias RAM, ROM e cache](/aula-hardware-memorias-ram-rom-cache/) detalha ainda a hierarquia de cache (L1, L2 e L3) e como ela impacta o desempenho do processador.
 

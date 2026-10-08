@@ -19,7 +19,7 @@ Na prática, você já usa redes de computadores o tempo todo, seja ao imprimir 
 
 ## Por que redes de computadores cai tanto nas provas?
 
-As principais bancas (Cebraspe, FGV, FCC, IBFC, Vunesp e AOCP, entre outras) cobram redes porque o assunto conecta teoria e a rotina do servidor público. Cada banca tem um estilo: o Cebraspe usa o formato certo ou errado e explora pequenos deslizes conceituais, como trocar “roteador” por “switch” ou confundir LAN com WAN; a FGV prefere múltipla escolha com cenários práticos; a FCC tende a cobrar definições mais literais; e o IBFC e a Vunesp equilibram teoria e aplicação. Por isso, não adianta decorar definições isoladas: é preciso entender o raciocínio para reconhecer a <strong class="cai-prova">pegadinha</strong>, qualquer que seja a banca.
+As principais bancas (Cebraspe, FGV, FCC, IBFC, Vunesp e AOCP, entre outras) cobram redes porque o assunto conecta teoria e a rotina do servidor público. Cada banca tem um estilo: o Cebraspe usa o formato certo ou errado e explora pequenos deslizes conceituais, como trocar “roteador” por “switch” ou confundir LAN com WAN; a FGV prefere múltipla escolha com cenários práticos; a FCC tende a cobrar definições mais literais; e o IBFC e a Vunesp equilibram teoria e aplicação. Por isso, não adianta decorar definições isoladas: é preciso entender o raciocínio para reconhecer a **pegadinha**, qualquer que seja a banca.
 
 ## Tipos de rede: do seu quarto ao mundo inteiro
 
@@ -75,7 +75,7 @@ Além do tamanho, uma rede também se organiza segundo uma topologia, ou seja, o
 -   **Anel:** os dispositivos formam um círculo lógico, e os dados circulam nessa sequência até chegar ao destino.
 -   **Malha:** cada dispositivo se conecta a vários outros diretamente, o que aumenta a redundância, mas também eleva o custo de implementação.
 
-Para ver cada uma dessas topologias comentada em detalhes, com as <strong class="cai-prova">pegadinhas</strong> mais cobradas pela banca, confira o artigo específico sobre [topologias de rede](/topologias-de-rede-concursos/).
+Para ver cada uma dessas topologias comentada em detalhes, com as **pegadinhas** mais cobradas pela banca, confira o artigo específico sobre [topologias de rede](/topologias-de-rede-concursos/).
 
 #### As quatro topologias mais cobradas em prova
 
@@ -98,7 +98,7 @@ Para que a comunicação aconteça, vários elementos atuam em conjunto:
 -   **Meios de transmissão:** cabos de par trançado, fibra óptica e o espectro de radiofrequência, nas redes sem fio.
 -   **Protocolos:** conjuntos de regras padronizadas, como o TCP/IP, que definem como os dados são formatados, transmitidos e entregues.
 
-A <strong class="cai-prova">pegadinha</strong> frequente é a banca trocar “roteador” por “switch” ou “hub” na mesma frase. Memorize: **hub replica, switch direciona dentro da rede local, e roteador direciona entre redes diferentes**.
+A **pegadinha** frequente é a banca trocar “roteador” por “switch” ou “hub” na mesma frase. Memorize: **hub replica, switch direciona dentro da rede local, e roteador direciona entre redes diferentes**.
 
 ## Modelos de referência: OSI e TCP/IP
 
@@ -184,7 +184,7 @@ A VPN (Virtual Private Network, ou Rede Privada Virtual) cria um túnel criptogr
 
 A palavra-chave aqui é “túnel”: os dados saem criptografados do dispositivo do usuário, atravessam a internet pública dentro desse túnel protegido e só são decriptografados ao chegar ao destino autorizado. Consequentemente, mesmo trafegando por uma rede pública, a comunicação mantém as características de privacidade de uma rede interna.
 
-Na prova, fique atento a mais uma <strong class="cai-prova">pegadinha</strong>: a banca pode afirmar que a VPN “elimina totalmente” qualquer risco de segurança ou que “substitui” o firewall. Nenhuma das duas coisas é verdadeira. A VPN protege o tráfego em trânsito, mas não substitui outras camadas de proteção, como [firewall e antivírus](/aplicativos-para-seguranca-antivirus-firewall-antispyware/), além da própria autenticação do usuário.
+Na prova, fique atento a mais uma **pegadinha**: a banca pode afirmar que a VPN “elimina totalmente” qualquer risco de segurança ou que “substitui” o firewall. Nenhuma das duas coisas é verdadeira. A VPN protege o tráfego em trânsito, mas não substitui outras camadas de proteção, como [firewall e antivírus](/aplicativos-para-seguranca-antivirus-firewall-antispyware/), além da própria autenticação do usuário.
 
 #### Como o túnel da VPN atravessa a internet pública
 

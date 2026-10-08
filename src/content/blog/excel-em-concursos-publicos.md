@@ -9,7 +9,7 @@ image: "./images/excel.webp"
 imageAlt: "Excel"
 ---
 
-🎯 **Cai muito em prova!** O Excel costuma render de 3 a 6 questões nas provas de Informática do [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/), FGV, FCC e Vunesp. Referência relativa x absoluta, a diferença entre fórmula e função e a confusão entre planilha e pasta de trabalho são os campeões de <strong class="cai-prova">pegadinha</strong>, e é exatamente por aí que você vai começar a estudar hoje.
+🎯 **Cai muito em prova!** O Excel costuma render de 3 a 6 questões nas provas de Informática do [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/), FGV, FCC e Vunesp. Referência relativa x absoluta, a diferença entre fórmula e função e a confusão entre planilha e pasta de trabalho são os campeões de **pegadinha**, e é exatamente por aí que você vai começar a estudar hoje.
 
 O Excel organiza dados, executa cálculos e facilita a análise de informações em planilhas eletrônicas. Justamente por isso, ele aparece com tanta frequência em concursos públicos: reúne, em um único programa, funções matemáticas, ferramentas de produtividade e recursos que o dia a dia da administração pública exige constantemente.
 
@@ -108,7 +108,7 @@ Vale destacar, ainda, a **AutoSoma**, que insere rapidamente a função de soma.
 | `Ctrl + Page Down` | Próxima planilha | Navegar entre abas na mesma pasta |
 | `Ctrl + Page Up` | Planilha anterior | Navegar entre abas na mesma pasta |
 
-## <strong class="cai-prova">Pegadinhas</strong> comuns em prova
+## Pegadinhas comuns em prova
 
 Vale destacar algumas confusões frequentes, porque a banca explora justamente essas trocas de termo:
 
@@ -130,9 +130,9 @@ Por esse motivo, a leitura atenta do enunciado faz toda a diferença. Pequenas t
 -   Formatação condicional muda a aparência, nunca o valor.
 -   SOMA soma; MÉDIA calcula a média. A banca adora trocar os dois.
 
-Por fim, estudar Excel para concursos públicos exige atenção aos conceitos básicos, às funções mais cobradas e às <strong class="cai-prova">pegadinhas</strong> sobre referências, interface e recursos de análise. Quando você domina esses pontos, responde melhor às questões objetivas e interpreta comandos com mais segurança.
+Por fim, estudar Excel para concursos públicos exige atenção aos conceitos básicos, às funções mais cobradas e às **pegadinhas** sobre referências, interface e recursos de análise. Quando você domina esses pontos, responde melhor às questões objetivas e interpreta comandos com mais segurança.
 
-Portanto, revise as funções essenciais, memorize os atalhos mais frequentes e pratique questões de certo ou errado para consolidar o conteúdo. Assim, na hora da prova, você reconhece a <strong class="cai-prova">pegadinha</strong> antes mesmo de terminar de ler o enunciado. Para continuar no bloco de Office, veja [Word](/microsoft-word-para-concursos/), [PowerPoint](/powerpoint-o-que-cai-nos-concursos/) e [LibreOffice](/libreoffice-para-concursos/), e resolva o [simulado de Office](/simulado-office/).
+Portanto, revise as funções essenciais, memorize os atalhos mais frequentes e pratique questões de certo ou errado para consolidar o conteúdo. Assim, na hora da prova, você reconhece a **pegadinha** antes mesmo de terminar de ler o enunciado. Para continuar no bloco de Office, veja [Word](/microsoft-word-para-concursos/), [PowerPoint](/powerpoint-o-que-cai-nos-concursos/) e [LibreOffice](/libreoffice-para-concursos/), e resolva o [simulado de Office](/simulado-office/).
 
 ## Fontes e referências
 

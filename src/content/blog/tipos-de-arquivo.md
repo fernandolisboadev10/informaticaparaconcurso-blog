@@ -9,7 +9,7 @@ image: "./images/tipos-de-arquivos.webp"
 imageAlt: "tipos de arquivos"
 ---
 
-Você já viu uma questão perguntar qual programa abre um arquivo `.ods`, ou se uma imagem `.jpg` mantém a qualidade depois de salva várias vezes? A banca adora esse tipo de detalhe, porque ele separa quem decorou uma lista de quem entendeu a lógica. Ao longo do texto, você vai entender como o Windows identifica cada arquivo, quais tipos de arquivo e extensões aparecem em prova e onde ficam as <strong class="cai-prova">pegadinhas</strong>. Para rever o contexto geral, consulte o artigo sobre [organização de arquivos, pastas e programas](/informatica-concursos-gerenciamento-arquivos-pastas/).
+Você já viu uma questão perguntar qual programa abre um arquivo `.ods`, ou se uma imagem `.jpg` mantém a qualidade depois de salva várias vezes? A banca adora esse tipo de detalhe, porque ele separa quem decorou uma lista de quem entendeu a lógica. Ao longo do texto, você vai entender como o Windows identifica cada arquivo, quais tipos de arquivo e extensões aparecem em prova e onde ficam as **pegadinhas**. Para rever o contexto geral, consulte o artigo sobre [organização de arquivos, pastas e programas](/informatica-concursos-gerenciamento-arquivos-pastas/).
 
 ## O que é um arquivo e como o Windows o identifica
 
@@ -53,7 +53,7 @@ Dando continuidade, observe como o sistema mede o tamanho. O bit é a menor unid
 
 Além disso, as Propriedades (Alt+Enter) mostram tipo, local, tamanho e as datas de criação, modificação e último acesso. Também exibem atributos como Somente leitura e Oculto. O primeiro protege o arquivo contra alterações acidentais, e o segundo o esconde da visualização normal, mas não o exclui do disco.
 
-## <strong class="cai-prova">Pegadinhas</strong> da banca sobre arquivos
+## Pegadinhas da banca sobre arquivos
 
 Cabe destacar que a banca costuma trocar uma palavra para inverter o sentido. Estas afirmações aparecem com frequência, e todas estão erradas:
 

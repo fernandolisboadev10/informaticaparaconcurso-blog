@@ -9,7 +9,7 @@ image: "./images/informatica-para-concursos.webp"
 imageAlt: "Informática para concursos: 5 confusões clássicas e como a banca as cobra"
 ---
 
-Em informática para concursos, a banca raramente pede uma definição solta. O que derruba o candidato é a diferença entre dois conceitos parecidos, e é justamente nesse ponto que o item de Certo ou Errado esconde a <strong class="cai-prova">pegadinha</strong>.
+Em informática para concursos, a banca raramente pede uma definição solta. O que derruba o candidato é a diferença entre dois conceitos parecidos, e é justamente nesse ponto que o item de Certo ou Errado esconde a **pegadinha**.
 
 Por isso, separei cinco dúvidas que aparecem prova após prova: malware, backup, redes, exclusão de arquivos e referências no Excel. Em cada bloco, você vai ver o raciocínio, um exemplo prático e o ponto exato que a banca costuma explorar.
 
@@ -27,7 +27,7 @@ Primeiramente, use uma pergunta que resolve boa parte das questões: como esse p
 
 Dando continuidade, observe o efeito prático de cada um. O worm sobrecarrega a rede e os servidores, porque se multiplica sem parar. O vírus altera ou danifica arquivos, e o trojan costuma abrir caminho para o roubo de dados.
 
-### A <strong class="cai-prova">pegadinha</strong> do “precisa de hospedeiro”
+### A pegadinha do “precisa de hospedeiro”
 
 Aqui está um ponto que merece atenção: a banca troca as características entre os três. Um item afirma que o worm precisa de programa hospedeiro. Outro diz que o cavalo de troia se multiplica sozinho. Os dois estão errados.
 
@@ -76,7 +76,7 @@ Não confunda os dois conceitos: LAN, MAN e WAN classificam o alcance geográfic
 
 ### O que realmente sai do computador
 
-Além disso, poucos assuntos rendem tantas <strong class="cai-prova">pegadinhas</strong> quanto a exclusão de arquivos no Windows. O raciocínio começa com uma pergunta: o item passou pela Lixeira?
+Além disso, poucos assuntos rendem tantas **pegadinhas** quanto a exclusão de arquivos no Windows. O raciocínio começa com uma pergunta: o item passou pela Lixeira?
 
 -   **Delete:** envia o arquivo para a Lixeira, de onde você pode restaurá-lo ao local original.
 -   **Shift+Delete:** exclui o arquivo sem passar pela Lixeira, depois de uma confirmação. Não existe botão Restaurar.

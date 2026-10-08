@@ -9,7 +9,7 @@ image: "./images/Perifericos.webp"
 imageAlt: "Periféricos"
 ---
 
-Periféricos aparecem em quase toda prova de Informática, tanto em questões diretas quanto em itens com <strong class="cai-prova">pegadinha</strong>. A banca troca a função de um monitor, de um scanner ou de um pendrive e espera que você caia na armadilha.
+Periféricos aparecem em quase toda prova de Informática, tanto em questões diretas quanto em itens com **pegadinha**. A banca troca a função de um monitor, de um scanner ou de um pendrive e espera que você caia na armadilha.
 
 Por isso, não adianta decorar uma lista de equipamentos. Você precisa responder a uma única pergunta: a informação entra no computador, sai dele ou faz os dois caminhos?
 
@@ -68,7 +68,7 @@ Além disso, entram nesse grupo:
 
 Vale destacar que algumas bancas tratam pendrive, HD e SSD como dispositivos de armazenamento, uma categoria própria. A Cebraspe, porém, já classificou em prova oficial a unidade de disco rígido, o modem e o pendrive como periféricos de entrada e saída. Por isso, na sua prova, siga essa lógica quando o enunciado falar em fluxo de dados. Se quiser entender como esses dispositivos se conectam à máquina, veja também a aula sobre barramentos e interfaces.
 
-## Periféricos em concursos: as <strong class="cai-prova">pegadinhas</strong> mais comuns da Cebraspe
+## Periféricos em concursos: as pegadinhas mais comuns da Cebraspe
 
 A [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) gosta de palavras absolutas, como “somente”, “sempre” e “exclusivamente”, para tornar um item errado. Assim, sempre que encontrar uma delas, analise a função do dispositivo com calma.
 

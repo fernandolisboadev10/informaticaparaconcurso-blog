@@ -55,7 +55,7 @@ Aqui entra um raciocínio que a banca adora explorar. Se você salva o backup em
 
 ### Por que uma cópia precisa estar fora do local
 
-Esse é o ponto que mais gera <strong class="cai-prova">pegadinha</strong> em prova, já que candidatos costumam esquecer o motivo por trás dessa exigência. Não adianta ter três cópias em três dispositivos diferentes se todos ficam na mesma sala. Um incêndio, um furto ou uma enchente, por exemplo, afeta o ambiente inteiro, e não apenas um dispositivo isolado. Por isso, a regra exige que pelo menos uma cópia fique em outro local, seja em nuvem, seja em uma unidade física guardada em outro endereço.
+Esse é o ponto que mais gera **pegadinha** em prova, já que candidatos costumam esquecer o motivo por trás dessa exigência. Não adianta ter três cópias em três dispositivos diferentes se todos ficam na mesma sala. Um incêndio, um furto ou uma enchente, por exemplo, afeta o ambiente inteiro, e não apenas um dispositivo isolado. Por isso, a regra exige que pelo menos uma cópia fique em outro local, seja em nuvem, seja em uma unidade física guardada em outro endereço.
 
 ### Como as bancas costumam explorar esse tema
 
