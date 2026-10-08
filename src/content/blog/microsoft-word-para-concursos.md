@@ -95,7 +95,7 @@ Atalhos organizados por bloco de função, com destaque em rosa para as pegadinh
 | Ctrl + Y | Refazer / repetir | Repete a última ação ou refaz o que foi desfeito. |
 | Ctrl + N | Negrito | Trio N / I / S: memorize os três juntos para não confundir com o atalho de salvar. |
 | Ctrl + I | Itálico | Segue a mesma lógica de mapeamento pela letra em português. |
-| Ctrl + S | Sublinhado | Pegadinha clássica: Ctrl + S NÃO salva o documento no Word em português. |
+| Ctrl + S | Sublinhado | <strong class="cai-prova">Pegadinha clássica:</strong> Ctrl + S NÃO salva o documento no Word em português. |
 | Ctrl + B | Salvar | É este atalho, e não o Ctrl + S, que salva o arquivo. |
 | Ctrl + O | Novo documento | Cria um documento em branco, não abre um existente. |
 | Ctrl + A | Abrir documento existente | Não seleciona todo o texto, apesar do nome sugerir isso. |

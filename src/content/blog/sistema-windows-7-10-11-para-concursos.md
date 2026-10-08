@@ -110,7 +110,7 @@ Posteriormente, o Windows 11 trouxe uma mudança visual significativa para esse 
 
 Além disso, o Windows 11 removeu os blocos dinâmicos do Menu Iniciar. Em vez deles, a interface passou a exibir aplicativos fixados, recomendações e arquivos recentes.
 
-| Recurso | Windows 10 | Windows 11 | Pegadinha de prova |
+| Recurso | Windows 10 | Windows 11 | <strong class="cai-prova">Pegadinha de prova</strong> |
 | --- | --- | --- | --- |
 | Menu Iniciar | Alinhado à esquerda, com blocos dinâmicos | Centralizado por padrão, sem blocos dinâmicos | Windows 11 não utiliza Live Tiles |
 | Barra de Tarefas | Ícones à esquerda por padrão | Ícones centralizados por padrão | O alinhamento pode ser alterado pelo usuário |

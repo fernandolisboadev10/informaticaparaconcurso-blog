@@ -120,7 +120,7 @@ A tabela abaixo resume os comandos mais cobrados sobre esse bloco. Consulte-a se
 
 Comandos e permissões de Linux mais cobrados em concurso
 
-| Comando | Função | Exemplo | Pegadinha comum |
+| Comando | Função | Exemplo | <strong class="cai-prova">Pegadinha comum</strong> |
 | --- | --- | --- | --- |
 | `pwd` | Mostra o diretório atual em que o usuário está | `pwd` | Confundir com whoami |
 | `whoami` | Exibe o nome do usuário logado | `whoami` | Confundir com pwd |

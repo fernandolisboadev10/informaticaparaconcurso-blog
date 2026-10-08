@@ -80,7 +80,7 @@ Os dois convivem no sistema, mas cada um tem um papel diferente na prova.
 | Papel no Windows 10 | Recebe os ajustes novos  
 Prioridade da Microsoft | Continua disponível  
 Mantido por compatibilidade |
-| Pegadinha de prova | ❌ “O Windows 10 removeu o Painel de Controle.” **Errado.** Os dois convivem no sistema. |
+| <strong class="cai-prova">Pegadinha de prova</strong> | ❌ “O Windows 10 removeu o Painel de Controle.” **Errado.** Os dois convivem no sistema. |
 
 Nas Configurações, você encontra categorias como Sistema, Dispositivos, Rede e Internet, Personalização, Aplicativos, Contas, Hora e Idioma, Privacidade e Atualização e Segurança.
 
