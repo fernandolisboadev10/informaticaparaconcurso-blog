@@ -1,4 +1,5 @@
 ---
+import { socials } from '../data/socials';
 ---
 <aside class="author-bio">
   <img
@@ -17,6 +18,15 @@
       ajudar concurseiros de todo o país com conteúdo gratuito, prático e
       atualizado.
     </p>
+    <ul class="author-social" aria-label="Redes sociais de Fernando Lisboa">
+      {socials.map((s) => (
+        <li>
+          <a href={s.href} target="_blank" rel="noopener noreferrer me" aria-label={s.label} title={s.label}>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d={s.path} /></svg>
+          </a>
+        </li>
+      ))}
+    </ul>
   </div>
 </aside>
 
@@ -54,6 +64,33 @@
     .author-bio {
       align-items: flex-start;
     }
+  }
+
+  .author-social {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 0 0;
+    padding: 0;
+  }
+
+  .author-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--ink-soft);
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .author-social a:hover,
+  .author-social a:focus-visible {
+    color: var(--ink-strong);
+    border-color: var(--ink-soft);
   }
 
   .author-body p:not(.author-name) {
