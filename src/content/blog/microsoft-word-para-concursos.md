@@ -19,7 +19,7 @@ O Microsoft Word é um editor de textos. Ele serve para criar, editar, revisar, 
 
 Na prática, o Word é voltado para textos, embora também permita inserir tabelas, imagens, símbolos, hiperlinks e outros elementos visuais dentro do documento. Não confunda essa flexibilidade com a função principal do programa.
 
-As questões de Word costumam seguir três caminhos. Primeiramente, aparecem conceitos diretos: função do programa, formatos de arquivo, principais guias. Em seguida, o foco recai sobre produtividade, com atalhos de teclado e comandos de revisão. Por fim, o caminho mais perigoso são as pegadinhas de interface: colagem, cabeçalho, rodapé, quebra de página e formatação.
+As questões de Word costumam seguir três caminhos. Primeiramente, aparecem conceitos diretos: função do programa, [formatos de arquivo](/tipos-de-arquivo/), principais guias. Em seguida, o foco recai sobre produtividade, com atalhos de teclado e comandos de revisão. Por fim, o caminho mais perigoso são as pegadinhas de interface: colagem, cabeçalho, rodapé, quebra de página e formatação.
 
 Por isso, estudar Word para concurso não significa decorar comandos. Significa entender o que cada ferramenta faz dentro do documento e, principalmente, identificar como a banca tenta confundir o candidato trocando nomes de guias, atalhos ou funções.
 
@@ -74,7 +74,7 @@ Esses quatro recursos são clássicos de “onde fica cada comando”:
 
 -   **Colunas**: ficam na guia Layout, e não na Inserir. Dividem o texto em colunas lado a lado, como em um jornal.
 -   **Marca d’água e bordas de página**: ficam na guia Design, grupo frequentemente confundido com Layout. A marca d’água pode ser um texto, como “CONFIDENCIAL”, ou uma imagem posicionada atrás do conteúdo.
--   **Mala direta**: acessada em Correspondências ▸ Iniciar Mala Direta. Combina um documento principal com uma fonte de dados (uma planilha do Excel, uma lista do Outlook ou uma lista digitada no próprio Word) para gerar cartas, etiquetas ou e-mails personalizados.
+-   **Mala direta**: acessada em Correspondências ▸ Iniciar Mala Direta. Combina um documento principal com uma fonte de dados (uma planilha do [Excel](/excel-em-concursos-publicos/), uma lista do Outlook ou uma lista digitada no próprio Word) para gerar cartas, etiquetas ou e-mails personalizados.
 
 A banca costuma trocar a localização desses comandos entre guias para testar sua memória da interface, então confira sempre a guia certa antes de marcar a resposta.
 
@@ -154,7 +154,7 @@ Estudar Microsoft Word para concursos de forma estratégica significa compreende
 
 Em vez de estudar o Word como usuário casual, trate o programa como conteúdo de prova: observe os nomes exatos das guias, as funções dos comandos e as diferenças entre atalhos básicos e avançados. Com esta aula, você já tem uma base bem mais sólida para enfrentar questões intermediárias sobre o editor.
 
-O próximo passo é praticar com exercícios comentados, porque é na resolução que as pegadinhas ficam realmente visíveis. Se quiser consolidar tudo o que foi visto nesta aula antes de seguir para Excel e PowerPoint, vale passar pelo nosso [simulado de Office](/simulado-office/).
+O próximo passo é praticar com exercícios comentados, porque é na resolução que as pegadinhas ficam realmente visíveis. Se quiser consolidar tudo o que foi visto nesta aula antes de seguir para [Excel](/excel-em-concursos-publicos/) e [PowerPoint](/powerpoint-o-que-cai-nos-concursos/), vale passar pelo nosso [simulado de Office](/simulado-office/).
 
 -   ![Cebraspe](./images/Cebraspe-150x150.webp)
     

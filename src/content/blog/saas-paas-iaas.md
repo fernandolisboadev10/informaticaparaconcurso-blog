@@ -23,7 +23,7 @@ Guarde esta ideia: quanto mais você sobe de IaaS para SaaS, menos controle o cl
 
 ## IaaS: infraestrutura como serviço
 
-Inicialmente, pense no nível mais baixo. No IaaS (Infrastructure as a Service), o provedor entrega processamento, armazenamento e rede. Em outras palavras, você aluga uma máquina virtual e faz o resto.
+Inicialmente, pense no nível mais baixo. No IaaS (Infrastructure as a Service), o provedor entrega processamento, armazenamento e [rede](/redes-de-computadores-para-concursos/). Em outras palavras, você aluga uma máquina virtual e faz o resto.
 
 Dessa forma, o cliente instala e gerencia o sistema operacional, as aplicações e os dados. Por outro lado, o provedor cuida do hardware físico, da virtualização e do data center.
 
@@ -51,7 +51,7 @@ Esse é um detalhe que costuma confundir o candidato. Se a questão afirmar que,
 
 ## SaaS: software como serviço
 
-Por fim, chegamos ao topo. No SaaS (Software as a Service), você usa uma aplicação completa pela internet, geralmente pelo navegador. Não instala nada no servidor e não programa nada.
+Por fim, chegamos ao topo. No SaaS (Software as a Service), você usa uma aplicação completa pela internet, geralmente pelo [navegador](/buscador-e-navegador/). Não instala nada no servidor e não programa nada.
 
 Consequentemente, o provedor gerencia tudo: infraestrutura, plataforma e a própria aplicação. O usuário ajusta, no máximo, configurações pessoais, como preferências da conta.
 
@@ -101,7 +101,7 @@ A primeira troca as responsabilidades. A banca atribui ao cliente do PaaS a gest
 
 A segunda mistura categorias. Não confunda os dois conceitos: SaaS, PaaS e IaaS são **modelos de serviço**, enquanto nuvem pública, privada, híbrida e comunitária são **modelos de implantação**. Se o item disser que “nuvem híbrida é um modelo de serviço”, está errado.
 
-A terceira usa palavras absolutas. No estilo Cebraspe, termos como “sempre”, “somente” e “exclusivamente” costumam indicar erro. Por exemplo: “No IaaS, o provedor gerencia exclusivamente o sistema operacional” está errado, porque quem gerencia o sistema operacional é o cliente.
+A terceira usa palavras absolutas. No estilo [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/), termos como “sempre”, “somente” e “exclusivamente” costumam indicar erro. Por exemplo: “No IaaS, o provedor gerencia exclusivamente o sistema operacional” está errado, porque quem gerencia o sistema operacional é o cliente.
 
 É aqui que aparece uma das principais pegadinhas: a banca descreve um cenário e pede o modelo. Então identifique o que o cliente controla. Se ele controla o sistema operacional, é IaaS. Se controla só o código, é PaaS. Se apenas usa o software, é SaaS.
 

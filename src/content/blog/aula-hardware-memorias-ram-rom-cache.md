@@ -9,7 +9,7 @@ image: "./images/memorias.webp"
 imageAlt: "Memórias"
 ---
 
-Antes de tudo, imagine a seguinte situação na sua prova: a banca troca RAM por ROM, afirma que a cache guarda arquivos permanentemente ou diz que o HD substitui a memória principal. Você marcaria certo ou errado sem pensar duas vezes?
+Antes de tudo, imagine a seguinte situação na sua prova: a banca [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) troca RAM por ROM, afirma que a cache guarda arquivos permanentemente ou diz que o HD substitui a memória principal. Você marcaria certo ou errado sem pensar duas vezes?
 
 Se a resposta não veio de forma imediata, este é o momento de fechar essa lacuna. Nas próximas linhas, você vai entender a função de cada tipo de memória, a diferença entre memória RAM, ROM e cache, e ainda a relação delas com a memória virtual e o desempenho do computador.
 
@@ -25,7 +25,7 @@ Nesse sentido, a melhor forma de não errar em prova é observar três pontos: s
 
 ### RAM: memória de trabalho
 
-Em seguida, vamos falar da RAM, sigla de Random Access Memory. Ela funciona como a área de trabalho temporária do computador.
+Em seguida, vamos falar da RAM, sigla de Random Access Memory. Ela funciona como a área de trabalho temporária do computador, e o [HD e o SSD](/hardware-para-concursos/) cumprem outro papel, o de armazenamento.
 
 Quando você abre o navegador, um editor de texto ou uma videoaula, o sistema carrega parte desses dados na RAM. Dessa forma, o processador acessa as informações necessárias com muito mais agilidade do que buscaria no HD ou no SSD.
 
@@ -63,7 +63,7 @@ Na prática, funciona assim: o sistema move para o disco os dados menos usados n
 
 Não confunda os dois conceitos: a memória virtual não é um tipo de memória física, e sim uma técnica que usa o armazenamento em disco para simular mais RAM do que a máquina realmente tem instalada.
 
-Para entender melhor como a CPU se comunica com todos esses componentes, veja também o nosso guia sobre [barramentos e interfaces de hardware](URL-A-DEFINIR-BARRAMENTOS).
+Para entender melhor como a CPU se comunica com todos esses componentes, veja também o guia de [hardware para concursos](/hardware-para-concursos/), que reúne processador, placa-mãe e demais componentes.
 
 ### RAM, ROM e cache lado a lado
 
@@ -84,7 +84,7 @@ Principalmente, memorize estas trocas que a banca costuma fazer:
 
 -   RAM não é armazenamento permanente.
 -   ROM não é memória volátil.
--   Cache não é HD, SSD ou pendrive, e também não guarda arquivos pessoais do usuário.
+-   Cache não é HD, SSD ou pendrive (veja os [dispositivos de armazenamento e periféricos](/perifericos-entrada-saida-concurso/)), e também não guarda arquivos pessoais do usuário.
 -   Cache é volátil, assim como a RAM, apesar de muita gente achar que ela se comporta como a ROM.
 -   HD e SSD armazenam dados permanentemente, mas não substituem a RAM.
 -   Memória virtual usa espaço do disco; não é um chip de memória separado dentro do computador.
@@ -99,7 +99,7 @@ Além disso, não deixe de revisar a memória virtual, porque a banca gosta de t
 
 Consequentemente, sempre que a prova trouxer um item sobre hardware, volte a estes três pontos: volatilidade, função e velocidade. Esse hábito evita a maioria das pegadinhas e fortalece sua preparação para essa parte da prova.
 
-Para continuar essa preparação, salve esta aula, resolva o quiz abaixo e treine mais no [simulado de hardware para concursos](URL-A-DEFINIR-SIMULADO-HARDWARE).
+Para continuar essa preparação, salve esta aula, resolva o quiz abaixo e treine mais no [simulado de hardware para concursos](/simulado-hardware/).
 
 ## Fontes e referências
 

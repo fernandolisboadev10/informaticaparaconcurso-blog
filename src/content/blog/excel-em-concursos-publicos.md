@@ -9,11 +9,11 @@ image: "./images/excel.webp"
 imageAlt: "Excel"
 ---
 
-🎯 **Cai muito em prova!** O Excel costuma render de 3 a 6 questões nas provas de Informática do Cebraspe, FGV, FCC e Vunesp. Referência relativa x absoluta, a diferença entre fórmula e função e a confusão entre planilha e pasta de trabalho são os campeões de pegadinha, e é exatamente por aí que você vai começar a estudar hoje.
+🎯 **Cai muito em prova!** O Excel costuma render de 3 a 6 questões nas provas de Informática do [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/), FGV, FCC e Vunesp. Referência relativa x absoluta, a diferença entre fórmula e função e a confusão entre planilha e pasta de trabalho são os campeões de pegadinha, e é exatamente por aí que você vai começar a estudar hoje.
 
 O Excel organiza dados, executa cálculos e facilita a análise de informações em planilhas eletrônicas. Justamente por isso, ele aparece com tanta frequência em concursos públicos: reúne, em um único programa, funções matemáticas, ferramentas de produtividade e recursos que o dia a dia da administração pública exige constantemente.
 
-Além disso, as bancas costumam cobrar tanto a teoria da interface quanto o uso prático de células, fórmulas, funções, referências e recursos como ordenação, filtro e formatação condicional. Por isso, dominar o Excel ajuda você a acertar tanto questões teóricas quanto itens que simulam situações reais de trabalho. Nesta aula, você vai revisar, um de cada vez, os pontos que mais caem em prova.
+Além disso, as bancas costumam cobrar tanto a teoria da interface quanto o uso prático de células, fórmulas, funções, referências e recursos como ordenação, filtro e formatação condicional. Por isso, dominar o Excel ajuda você a acertar tanto questões teóricas quanto itens que simulam situações reais de trabalho. Nesta aula, você vai revisar, um de cada vez, os pontos que mais caem em prova. Depois, aplique tudo na [revisão de fórmulas do Excel](/formulas-do-excel/), com 15 questões comentadas.
 
 ## O que é o Excel, afinal?
 
@@ -24,7 +24,7 @@ Em seguida, vale entender dois conceitos que a banca adora confundir:
 -   A **planilha** corresponde a cada aba de trabalho.
 -   A **pasta de trabalho**, por sua vez, é o arquivo completo (.xlsx), que pode conter uma ou várias planilhas.
 
-Em outras palavras, quando você salva um arquivo do Excel, você salva uma pasta de trabalho. Dentro dela, você organiza quantas planilhas quiser, cada uma com um conteúdo diferente: um mês, um setor, um tipo de dado.
+Em outras palavras, quando você salva um arquivo do Excel (veja as [extensões como .xlsx](/tipos-de-arquivo/)), você salva uma pasta de trabalho. Dentro dela, você organiza quantas planilhas quiser, cada uma com um conteúdo diferente: um mês, um setor, um tipo de dado.
 
 ⚠️ **Pegadinha clássica:** a banca troca “planilha” por “pasta de trabalho” na mesma frase justamente para testar se você decorou a diferença ou só leu por cima. Não caia nessa.
 
@@ -132,7 +132,7 @@ Por esse motivo, a leitura atenta do enunciado faz toda a diferença. Pequenas t
 
 Por fim, estudar Excel para concursos públicos exige atenção aos conceitos básicos, às funções mais cobradas e às pegadinhas sobre referências, interface e recursos de análise. Quando você domina esses pontos, responde melhor às questões objetivas e interpreta comandos com mais segurança.
 
-Portanto, revise as funções essenciais, memorize os atalhos mais frequentes e pratique questões de certo ou errado para consolidar o conteúdo. Assim, na hora da prova, você reconhece a pegadinha antes mesmo de terminar de ler o enunciado.
+Portanto, revise as funções essenciais, memorize os atalhos mais frequentes e pratique questões de certo ou errado para consolidar o conteúdo. Assim, na hora da prova, você reconhece a pegadinha antes mesmo de terminar de ler o enunciado. Para continuar no bloco de Office, veja [Word](/microsoft-word-para-concursos/), [PowerPoint](/powerpoint-o-que-cai-nos-concursos/) e [LibreOffice](/libreoffice-para-concursos/), e resolva o [simulado de Office](/simulado-office/).
 
 ## Fontes e referências
 

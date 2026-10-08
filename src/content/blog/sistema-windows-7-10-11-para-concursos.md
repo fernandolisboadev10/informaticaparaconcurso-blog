@@ -30,7 +30,7 @@ Em provas de informática, os temas mais recorrentes sobre o sistema operacional
 -   Painel de Controle
 -   Aplicativo Configurações
 -   Atualizações e segurança
--   Arquivos, pastas e extensões
+-   [Arquivos, pastas e extensões](/informatica-concursos-gerenciamento-arquivos-pastas/)
 -   Recursos de multitarefa
 
 Vale destacar que você precisa saber identificar os nomes corretos dos recursos. Por exemplo, é comum a banca perguntar sobre a função da Lixeira, o uso da Barra de Tarefas ou o local para alterar configurações do sistema.
@@ -49,7 +49,7 @@ Antes de tudo, não confunda data de lançamento com fim do suporte. Quando uma 
 
 O suporte estendido do Windows 7 terminou em 14 de janeiro de 2020. Depois dessa data, a Microsoft deixou de fornecer atualizações de segurança e suporte técnico regular para usuários domésticos dessa versão.
 
-Na sequência, o suporte geral do Windows 10 chegou ao fim em 14 de outubro de 2025. A versão 22H2 marcou a última atualização de recursos para a linha tradicional do sistema.
+Na sequência, o suporte geral do [Windows 10](/windows-10-para-concursos/) chegou ao fim em 14 de outubro de 2025. A versão 22H2 marcou a última atualização de recursos para a linha tradicional do sistema.
 
 Por outro lado, o Windows 11 não segue uma data única de encerramento para todo o sistema operacional. Cada edição tem prazo próprio: as versões Home e Pro recebem, normalmente, 24 meses de suporte, enquanto Enterprise e Education recebem 36 meses.
 
@@ -92,7 +92,7 @@ As principais mudanças do Windows 7 para o Windows 10 foram:
 -   Retorno do Menu Iniciar com blocos dinâmicos
 -   Introdução da Central de Ações
 -   Aplicativo Configurações com maior destaque
--   Microsoft Edge como navegador padrão
+-   Microsoft Edge como [navegador](/buscador-e-navegador/) padrão
 -   Visão de Tarefas (Task View)
 -   Áreas de trabalho virtuais
 -   Cortana, assistente virtual introduzida no sistema

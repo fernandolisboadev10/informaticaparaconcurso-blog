@@ -9,7 +9,7 @@ image: "./images/libreoffice.webp"
 imageAlt: "LibreOffice"
 ---
 
-Se o seu edital cita “editores de texto, planilhas e apresentações”, a banca pode cobrar tanto o Microsoft Office quanto o LibreOffice. Aliás, muitos órgãos públicos adotam a suíte livre no dia a dia, e por isso ela aparece com frequência nas provas de informática.
+Se o seu edital cita “editores de texto, planilhas e apresentações”, a banca pode cobrar tanto o Microsoft Office quanto o LibreOffice. Para comparar, veja também o guia de [Word](/microsoft-word-para-concursos/), o de [Excel](/excel-em-concursos-publicos/) e o de [PowerPoint](/powerpoint-o-que-cai-nos-concursos/). Aliás, muitos órgãos públicos adotam a suíte livre no dia a dia, e por isso ela aparece com frequência nas provas de informática.
 
 Nesta aula de **LibreOffice para concursos**, você vai entender o que é a suíte, como ela nasceu (incluindo a troca de nome de BrOffice para LibreOffice), o que faz cada um dos seis aplicativos e quais atalhos a banca mais explora. Em outras palavras, você sai daqui com a base teórica que sustenta qualquer questão sobre o tema.
 
@@ -17,11 +17,11 @@ Nesta aula de **LibreOffice para concursos**, você vai entender o que é a suí
 
 Em primeiro lugar, guarde a definição que a banca costuma usar: o LibreOffice é uma **suíte de escritório livre e de código aberto**. A The Document Foundation, uma organização sem fins lucrativos, coordena o desenvolvimento do projeto em escala mundial.
 
-Além disso, a suíte é **multiplataforma**, ou seja, roda no Windows, no Linux e no macOS. Esse detalhe costuma aparecer em questões que tentam associar o LibreOffice apenas ao Linux, o que está errado.
+Além disso, a suíte é **multiplataforma**, ou seja, roda no [Windows](/windows-10-para-concursos/), no [Linux](/linux-para-concursos/) e no macOS. Esse detalhe costuma aparecer em questões que tentam associar o LibreOffice apenas ao Linux, o que está errado.
 
 ### O formato ODF
 
-Outro ponto que merece atenção é o formato padrão dos arquivos. O LibreOffice salva seus documentos no **ODF (OpenDocument Format)**, um padrão aberto que a ISO e a IEC reconhecem na norma internacional **ISO/IEC 26300**.
+Outro ponto que merece atenção é o formato padrão dos arquivos (veja mais em [tipos de arquivo e extensões](/tipos-de-arquivo/)). O LibreOffice salva seus documentos no **ODF (OpenDocument Format)**, um padrão aberto que a ISO e a IEC reconhecem na norma internacional **ISO/IEC 26300**.
 
 Na prova, a banca pode chamar o ODF de “formato aberto”, “padrão OpenDocument” ou simplesmente citar a norma. Portanto, quando você encontrar qualquer uma dessas expressões, lembre imediatamente do LibreOffice.
 
@@ -59,7 +59,7 @@ O Writer é o processador de texto da suíte, equivalente ao Microsoft Word. Com
 
 ### Calc: a planilha eletrônica
 
-O Calc é o aplicativo de planilhas, equivalente ao Microsoft Excel. Nele, você organiza dados em células, monta fórmulas e funções (como SOMA, SE e PROCV), aplica filtros e cria gráficos.
+O Calc é o aplicativo de planilhas, equivalente ao Microsoft Excel (veja as [fórmulas do Excel](/formulas-do-excel/) para comparar). Nele, você organiza dados em células, monta fórmulas e funções (como SOMA, SE e PROCV), aplica filtros e cria gráficos.
 
 -   **Extensão padrão:** `.ods` (OpenDocument Spreadsheet)
 

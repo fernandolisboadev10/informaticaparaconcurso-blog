@@ -25,7 +25,7 @@ Hoje, o próprio kernel.org hospeda o código-fonte oficial do kernel Linux e re
 
 ## O que é Linux, afinal?
 
-Aqui está um ponto que costuma confundir o candidato: Linux, tecnicamente, é apenas o kernel, ou seja, o núcleo do sistema responsável por conectar os programas ao hardware. Sozinho, porém, ele não entrega uma experiência completa, porque ainda precisa de programas, drivers, configurações e interface para formar um sistema operacional utilizável.
+Aqui está um ponto que costuma confundir o candidato: Linux, tecnicamente, é apenas o kernel, ou seja, o núcleo do sistema responsável por conectar os programas ao [hardware](/hardware-para-concursos/). Sozinho, porém, ele não entrega uma experiência completa, porque ainda precisa de programas, drivers, configurações e interface para formar um sistema operacional utilizável.
 
 Na prova, a banca costuma explorar justamente essa diferença. Ela pode afirmar que “Linux é apenas o núcleo” e, em seguida, citar uma distribuição como o Ubuntu para representar o sistema em uso completo. Esse detalhe parece pequeno, mas derruba com frequência quem estuda só por decoreba, sem entender a lógica por trás do conceito.
 
@@ -55,7 +55,7 @@ Além disso, o tema rende muito: em uma única questão, a banca consegue cobrar
 
 ## Como a Cebraspe costuma cobrar
 
-Já que você conhece o motivo da cobrança, entenda agora o estilo da banca. A Cebraspe prefere itens de certo ou errado, então ela costuma misturar um conceito verdadeiro com uma palavra mal colocada, criando uma armadilha quase invisível para quem lê rápido demais.
+Já que você conhece o motivo da cobrança, entenda agora o estilo da banca. A [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) prefere itens de certo ou errado, então ela costuma misturar um conceito verdadeiro com uma palavra mal colocada, criando uma armadilha quase invisível para quem lê rápido demais.
 
 Por esse motivo, preste atenção redobrada em expressões como “sempre”, “somente”, “exclusivamente” e “necessariamente”. Em Linux, uma frase 90% correta pode virar errada por causa de um único exagero no enunciado, e esse é exatamente o tipo de pegadinha que separa quem passa de quem fica na fila de espera.
 
@@ -67,7 +67,7 @@ Na prova, a banca pode cobrar o significado do prompt, o uso do histórico de co
 
 ## Comandos essenciais que caem em prova
 
-Primeiramente, a banca gosta de cobrar os comandos mais básicos de terminal, aqueles que qualquer usuário usa no dia a dia:
+Primeiramente, a banca gosta de cobrar os [comandos mais básicos de terminal](/comandos-basicos-do-linux/), aqueles que qualquer usuário usa no dia a dia:
 
 -   `pwd`: mostra o diretório atual em que você está;
 -   `whoami`: exibe o nome do usuário logado;

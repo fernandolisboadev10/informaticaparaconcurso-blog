@@ -9,13 +9,13 @@ image: "./images/linux.webp"
 imageAlt: "Comandos Básicos do Linux: Guia Passo a Passo para Quem Nunca Usou o Terminal"
 ---
 
-Você abre o terminal pela primeira vez e encontra uma tela preta com um cursor piscando. Nenhum ícone, nenhum menu, nenhuma pista visual — só aquele espaço vazio esperando você digitar alguma coisa. Essa sensação de travamento é normal. Praticamente todo mundo que hoje domina os comandos básicos do Linux passou exatamente por esse momento antes de perder o medo do terminal.
+Você abre o terminal pela primeira vez e encontra uma tela preta com um cursor piscando. Nenhum ícone, nenhum menu, nenhuma pista visual — só aquele espaço vazio esperando você digitar alguma coisa. Essa sensação de travamento é normal. Praticamente todo mundo que hoje domina os comandos básicos do [Linux](/linux-para-concursos/) passou exatamente por esse momento antes de perder o medo do terminal.
 
 Este guia resolve esse travamento. Você vai aprender os comandos básicos do Linux na ordem certa, um de cada vez, com exemplos que pode testar agora mesmo no seu computador. Ao final, você navega entre pastas, cria arquivos e organiza seus documentos direto pelo terminal, sem precisar consultar nada — e ainda encontra, logo abaixo, um simulador para praticar tudo sem instalar nada na sua máquina.
 
 ## Por que vale a pena aprender pelo terminal
 
-Interfaces gráficas escondem a lógica por trás de cada ação: você clica em “copiar”, clica em “colar”, e o sistema faz o resto sem explicar nada. O terminal funciona ao contrário — cada ação vira um comando explícito, visível, que você digita e entende. É justamente por isso que concursos de TI e vagas de suporte técnico cobram esse conhecimento com tanta frequência.
+Interfaces gráficas escondem a lógica por trás de cada ação: você clica em “copiar”, clica em “colar”, e o sistema faz o resto sem explicar nada. O terminal funciona ao contrário — cada ação vira um comando explícito, visível, que você digita e entende. É justamente por isso que concursos de TI e vagas de suporte técnico cobram esse conhecimento com tanta frequência. Para ver como as bancas comparam os dois sistemas, leia [Windows vs Linux para concursos](/windows-vs-linux-para-concursos/).
 
 Existe também um motivo bem prático: os servidores que hospedam a maior parte da internet quase nunca têm interface gráfica. Ou seja, quem administra um sistema de verdade trabalha pelo terminal, não pelo mouse. Aprender os comandos básicos do Linux agora poupa você de um segundo aprendizado — bem mais estressante — depois, sob pressão, direto em produção.
 
@@ -35,7 +35,7 @@ Em seguida vem o `ls`, que lista tudo o que existe dentro da pasta atual. Sozinh
 
 Você usa o `cd` para entrar em uma pasta específica. Digite `cd Documentos` e você se move para dentro dela, desde que ela exista na pasta atual. Para voltar um nível, digite `cd ..` — os dois pontos representam a pasta “de cima”. Já para ir direto à sua pasta pessoal, de qualquer lugar do sistema, digite `cd ~`.
 
-Um erro comum de quem está começando é digitar o nome da pasta com letra maiúscula ou minúscula trocada. Afinal, o Linux diferencia essas letras, então `cd documentos` e `cd Documentos` são dois comandos completamente diferentes para o sistema. Por isso, se aparecer uma mensagem de pasta não encontrada, confira a escrita antes de suspeitar de qualquer outra coisa.
+Um erro comum de quem está começando é digitar o nome da pasta com letra maiúscula ou minúscula trocada. Afinal, o Linux diferencia essas letras (diferente do que ocorre ao [organizar arquivos e pastas no Windows](/informatica-concursos-gerenciamento-arquivos-pastas/)), então `cd documentos` e `cd Documentos` são dois comandos completamente diferentes para o sistema. Por isso, se aparecer uma mensagem de pasta não encontrada, confira a escrita antes de suspeitar de qualquer outra coisa.
 
 Pratique agora: digite `pwd`, depois `ls`, escolha uma pasta e entre nela com `cd`. Confirme com `pwd` de novo e volte com `cd ..`. Repetir essa sequência grava o padrão na memória muito mais rápido do que só ler sobre ela — e é exatamente esse ciclo que o simulador no final deste artigo permite treinar, sem nenhum risco de bagunçar arquivos de verdade.
 
@@ -73,7 +73,7 @@ Você não precisa decorar todos os comandos básicos do Linux de uma vez. Escol
 
 Se você ainda não tem o Linux instalado, ou só quer treinar antes de mexer no seu computador de verdade, use o simulador de terminal logo abaixo. Ele roda direto no navegador, sem instalação, e reproduz o comportamento dos comandos que você acabou de aprender.
 
-Depois que `pwd`, `ls`, `cd`, `mkdir`, `touch`, `cp`, `mv`, `rm` e `sudo` já estiverem confortáveis na sua rotina, você estará pronto para o próximo nível: permissões de arquivo, processos e os comandos que administram o sistema por trás das telas.
+Depois que `pwd`, `ls`, `cd`, `mkdir`, `touch`, `cp`, `mv`, `rm` e `sudo` já estiverem confortáveis na sua rotina, você estará pronto para o próximo nível: permissões de arquivo, processos e os comandos que administram o sistema por trás das telas. Para a visão geral do que cai em prova, siga para o guia [Linux para concursos](/linux-para-concursos/) e treine no [simulado de Sistemas Operacionais](/simulado-sistemas/).
 
 ## Agora é a sua vez
 

@@ -9,7 +9,7 @@ image: "./images/tipos-de-arquivos.webp"
 imageAlt: "tipos de arquivos"
 ---
 
-Você já viu uma questão perguntar qual programa abre um arquivo `.ods`, ou se uma imagem `.jpg` mantém a qualidade depois de salva várias vezes? A banca adora esse tipo de detalhe, porque ele separa quem decorou uma lista de quem entendeu a lógica. Ao longo do texto, você vai entender como o Windows identifica cada arquivo, quais tipos de arquivo e extensões aparecem em prova e onde ficam as pegadinhas. Para rever o contexto geral, consulte o artigo sobre [organização de arquivos, pastas e programas](https://claude.ai/cowork/URL-PILAR-ORGANIZACAO).
+Você já viu uma questão perguntar qual programa abre um arquivo `.ods`, ou se uma imagem `.jpg` mantém a qualidade depois de salva várias vezes? A banca adora esse tipo de detalhe, porque ele separa quem decorou uma lista de quem entendeu a lógica. Ao longo do texto, você vai entender como o Windows identifica cada arquivo, quais tipos de arquivo e extensões aparecem em prova e onde ficam as pegadinhas. Para rever o contexto geral, consulte o artigo sobre [organização de arquivos, pastas e programas](/informatica-concursos-gerenciamento-arquivos-pastas/).
 
 ## O que é um arquivo e como o Windows o identifica
 
@@ -23,9 +23,9 @@ Vale destacar um detalhe: o Explorador oculta, por padrão, as extensões dos ti
 
 Em seguida, veja os grupos que mais aparecem nas provas:
 
--   **Texto e documentos:** `.txt` (texto sem formatação), `.docx` (Word) e `.pdf`.
--   **Planilhas:** `.xlsx` e `.csv` (valores separados por delimitador).
--   **Apresentações:** `.pptx`.
+-   **Texto e documentos:** `.txt` (texto sem formatação), `.docx` ([Word](/microsoft-word-para-concursos/)) e `.pdf`.
+-   **Planilhas:** `.xlsx` ([Excel](/excel-em-concursos-publicos/)) e `.csv` (valores separados por delimitador).
+-   **Apresentações:** `.pptx` ([PowerPoint](/powerpoint-o-que-cai-nos-concursos/)).
 -   **Imagens:** `.jpg`, `.png`, `.gif` e `.bmp`.
 -   **Áudio e vídeo:** `.mp3`, `.wav` e `.mp4`.
 -   **Compactados:** `.zip`, `.rar` e `.7z`.
@@ -35,7 +35,7 @@ Guarde esta ideia: o “x” final em `.docx`, `.xlsx` e `.pptx` indica um arqui
 
 ## Formatos do Office e formatos abertos
 
-O Office grava, por padrão, nos formatos `.docx`, `.xlsx` e `.pptx`. O LibreOffice, no entanto, usa o OpenDocument (ODF): `.odt` para texto, `.ods` para planilhas e `.odp` para apresentações.
+O Office grava, por padrão, nos formatos `.docx`, `.xlsx` e `.pptx`. O [LibreOffice](/libreoffice-para-concursos/), no entanto, usa o OpenDocument (ODF): `.odt` para texto, `.ods` para planilhas e `.odp` para apresentações.
 
 Aqui está um ponto que merece atenção: o ODF é um padrão aberto, que a OASIS mantém e a ISO/IEC publicou como a norma 26300. Na prática, os dois pacotes de escritório abrem os formatos um do outro, embora a formatação possa mudar um pouco.
 
@@ -49,7 +49,7 @@ Consequentemente, a compactação funciona de outro modo. Formatos como `.zip` r
 
 ## Tamanho e propriedades do arquivo
 
-Dando continuidade, observe como o sistema mede o tamanho. O bit é a menor unidade, e 8 bits formam 1 byte. Na base binária que o Windows adota, 1 KB equivale a 1.024 bytes, 1 MB a 1.024 KB e 1 GB a 1.024 MB.
+Dando continuidade, observe como o sistema mede o tamanho. O bit é a menor unidade, e 8 bits formam 1 byte. Na base binária que o Windows adota (veja também [hardware para concursos](/hardware-para-concursos/)), 1 KB equivale a 1.024 bytes, 1 MB a 1.024 KB e 1 GB a 1.024 MB.
 
 Além disso, as Propriedades (Alt+Enter) mostram tipo, local, tamanho e as datas de criação, modificação e último acesso. Também exibem atributos como Somente leitura e Oculto. O primeiro protege o arquivo contra alterações acidentais, e o segundo o esconde da visualização normal, mas não o exclui do disco.
 
@@ -67,7 +67,7 @@ Repare no padrão: palavras como “todo”, “sempre” e “somente” funcio
 
 ## Conclusão: seu próximo passo de estudo
 
-Portanto, dominar os tipos de arquivo e extensões exige entender a lógica por trás da lista: a extensão indica o tipo, o formato define como os dados ficam gravados, e a compressão altera o tamanho. Agora, resolva as questões abaixo para fixar o conteúdo. Depois, volte ao artigo sobre [organização de arquivos, pastas e programas](https://claude.ai/cowork/URL-PILAR-ORGANIZACAO) e avance para o texto sobre [programas e atalhos](https://claude.ai/cowork/URL-PROGRAMAS-E-ATALHOS).
+Portanto, dominar os tipos de arquivo e extensões exige entender a lógica por trás da lista: a extensão indica o tipo, o formato define como os dados ficam gravados, e a compressão altera o tamanho. Agora, resolva as questões abaixo para fixar o conteúdo. Depois, volte ao artigo sobre [organização de arquivos, pastas e programas](/informatica-concursos-gerenciamento-arquivos-pastas/), teste-se no [simulado de Arquivos](/simulado-arquivos/) e avance para o [Windows 10 para concursos](/windows-10-para-concursos/).
 
 ## Fontes e referências
 

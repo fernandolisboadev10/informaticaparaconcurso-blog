@@ -25,7 +25,7 @@ A partir disso, a divisão é feita tradicionalmente em quatro tipos principais,
 
 A Rede de Área Pessoal é voltada para a conectividade individual. Isso significa que o alcance é extremamente curto, geralmente restrito a poucos metros ao redor de uma única pessoa.
 
--   **Como cai na prova:** Conexões via Bluetooth entre um smartphone e um fone de ouvido sem fio, ou a transferência de dados via cabo USB entre um celular e um notebook.
+-   **Como cai na prova:** Conexões via Bluetooth entre um smartphone e um fone de ouvido sem fio, ou a transferência de dados via cabo USB entre um celular e um notebook (veja os [periféricos e portas](/perifericos-entrada-saida-concurso/)).
 
 ## LAN (Local Area Network)
 
@@ -43,7 +43,7 @@ A Rede de Área Metropolitana abrange uma área geográfica intermediária, maio
 
 A Rede de Longa Distância não possui restrições geográficas fixas. Dessa forma, ela pode interligar cidades diferentes, estados, países e até continentes inteiros.
 
--   **Como cai na prova:** A Internet é o maior e mais famoso exemplo de WAN do mundo. Se a banca afirmar que a Internet é uma LAN por chegar à sua casa, a questão está completamente errada.
+-   **Como cai na prova:** A [Internet](/o-que-e-extranet/) é o maior e mais famoso exemplo de WAN do mundo. Se a banca afirmar que a Internet é uma LAN por chegar à sua casa, a questão está completamente errada.
 
 ## O “W” que Muda Tudo: Redes Sem Fio (Wireless)
 
@@ -56,7 +56,7 @@ Dando continuidade, as bancas adoram cobrar o prefixo **“W”** (de _Wireless_
 
 ## Topologias Lógicas de Interação (Par-a-Par vs. Cliente/Servidor)
 
-Além do espaço físico, as redes de computadores podem ser classificadas pelo modo de interação ou hierarquia entre as máquinas. Para concursos, você deve dominar dois conceitos lógicos:
+Além do espaço físico (para o desenho dos cabos, veja as [topologias de rede](/topologias-de-rede-concursos/)), as redes de computadores podem ser classificadas pelo modo de interação ou hierarquia entre as máquinas. Para concursos, você deve dominar dois conceitos lógicos:
 
 ## Redes Ponto-a-Ponto (Par-a-Par / Peer-to-Peer)
 
@@ -70,7 +70,7 @@ Por outro lado, o modelo Cliente/Servidor exige um computador central robusto, d
 
 Em resumo, não deixe que conceitos simples de tecnologia tirem pontos preciosos de você na prova. Lembre-se sempre de mapear o conceito a partir do tamanho da área física: a PAN é voltada para a pessoa; a LAN domina os escritórios; a MAN conecta bairros e matrizes na mesma cidade; e a WAN abraça o mundo inteiro (Internet).
 
-Por fim, a chave para dominar o estilo de cobrança das principais bancas é treinar. Faça muitas questões de “Certo e Errado” focadas nessas nomenclaturas e consolide sua leitura com revisões periódicas deste material. Bons estudos e rumo à aprovação!
+Por fim, a chave para dominar o estilo de cobrança das principais bancas é treinar. Faça muitas questões de “Certo e Errado” focadas nessas nomenclaturas e consolide sua leitura com revisões periódicas deste material, o guia de [redes de computadores](/redes-de-computadores-para-concursos/) e o [simulado de Redes](/simulado-redes/). Bons estudos e rumo à aprovação!
 
 ## Fontes e Referências
 

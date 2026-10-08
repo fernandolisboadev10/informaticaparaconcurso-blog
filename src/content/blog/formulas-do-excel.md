@@ -9,7 +9,7 @@ image: "./images/revisao-excel.webp"
 imageAlt: "Revisão de Fórmulas do Excel"
 ---
 
-Toda vez que o CEBRASPE cobra fórmulas do Excel, a banca costuma montar o mesmo tipo de armadilha: apresenta uma planilha pequena e espera que você resolva a fórmula mentalmente, célula por célula, sem apoio de computador. Por isso, decorar sintaxe isolada ajuda pouco. O caminho mais eficiente é treinar em cima de uma única tabela, exatamente como a prova cobra. É justamente esse o formato deste artigo, atualizado para quem está se preparando para os concursos de 2026: uma planilha de exemplo e, a partir dela, 15 questões comentadas, cobrindo as fórmulas do Excel que mais aparecem em prova. 🎯
+Toda vez que o [CEBRASPE](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) cobra fórmulas do Excel, a banca costuma montar o mesmo tipo de armadilha: apresenta uma planilha pequena e espera que você resolva a fórmula mentalmente, célula por célula, sem apoio de computador. Por isso, decorar sintaxe isolada ajuda pouco. O caminho mais eficiente é treinar em cima de uma única tabela, exatamente como a prova cobra. É justamente esse o formato deste artigo, atualizado para quem está se preparando para os concursos de 2026: uma planilha de exemplo e, a partir dela, 15 questões comentadas, cobrindo as fórmulas do Excel que mais aparecem em prova. 🎯
 
 ## 🧮 A planilha que você vai usar em todas as questões
 
@@ -35,7 +35,7 @@ Todas as questões ao final do artigo usam a planilha acima. Antes de resolvê-l
 
 **PROCV.** Busca o valor na primeira coluna do intervalo e retorna um dado de uma coluna à direita, na mesma linha. O número da coluna é contado dentro do intervalo, recomeçando do 1, e não pela letra da planilha. O último argumento 0 (ou FALSO) pede correspondência exata, e é o recomendado.
 
-**Ordem das operações e separador.** Os parênteses fazem o Excel calcular primeiro o que está dentro deles. Em português do Brasil, a vírgula é o separador decimal e o ponto e vírgula separa os argumentos das funções, como também ocorre no LibreOffice Calc.
+**Ordem das operações e separador.** Os parênteses fazem o Excel calcular primeiro o que está dentro deles. Em português do Brasil, a vírgula é o separador decimal e o ponto e vírgula separa os argumentos das funções, como também ocorre no [LibreOffice](/libreoffice-para-concursos/) Calc.
 
 ## 📋 Cola rápida das fórmulas do Excel de hoje
 
@@ -52,7 +52,7 @@ Depois de passar pelas 15 questões, vale reunir tudo em um resumo curto. Menos 
 | 🔒 `$A$1` · `A$1` · `$A1` | Absoluta · mista (linha) · mista (coluna) |
 | ⌨️ `;` | Separador de argumentos em português |
 
-💬 **Para a próxima revisão:** refaça mentalmente cada fórmula do Excel usando os dados reais da planilha antes de julgar um item como certo ou errado. É assim que a banca verifica se você realmente entendeu o funcionamento da fórmula, e não apenas decorou a sintaxe. 🎓
+💬 **Para a próxima revisão:** refaça mentalmente cada fórmula do Excel usando os dados reais da planilha antes de julgar um item como certo ou errado. É assim que a banca verifica se você realmente entendeu o funcionamento da fórmula, e não apenas decorou a sintaxe. Para ampliar, leia o guia [Excel para concursos](/excel-em-concursos-publicos/) e treine no [simulado de Office](/simulado-office/). 🎓
 
 -   ![Cebraspe](./images/Cebraspe-150x150.webp)
     

@@ -11,7 +11,7 @@ imageAlt: "Topologia de Redes"
 
 Primeiramente, você já se perguntou como os computadores se organizam dentro de uma rede? A resposta está nas **topologias de rede**. Esse tema aparece com frequência em provas de nível médio e superior, especialmente em cargos de TI, tribunais e carreiras policiais.
 
-No entanto, muitos candidatos confundem topologia com tipos de rede (como LAN e WAN). Em síntese, a diferença é simples: enquanto os tipos definem o **tamanho** da rede, a topologia define o **desenho** ou o **layout** da conexão.
+No entanto, muitos candidatos confundem topologia com [tipos de rede (como LAN e WAN)](/tipos-redes-computadores-concursos/). Em síntese, a diferença é simples: enquanto os tipos definem o **tamanho** da rede, a topologia define o **desenho** ou o **layout** da conexão.
 
 Dessa forma, este artigo explica cada topologia de forma clara, com exemplos práticos e alertas sobre como as bancas cobram esse assunto. Assim, você vai dominar Estrela, Barramento, Anel e Malha sem complicações.
 
@@ -21,7 +21,7 @@ Antes de tudo, a topologia de rede representa a forma como os dispositivos (nós
 
 Além disso, as bancas dividem a topologia em duas categorias principais:
 
--   **Topologia Física:** Descreve o layout real dos cabos, switches e equipamentos.
+-   **Topologia Física:** Descreve o layout real dos cabos, switches e equipamentos (veja mais em [redes de computadores para concursos](/redes-de-computadores-para-concursos/)).
 -   **Topologia Lógica:** Descreve como os dados fluem pela rede, independentemente da conexão física.
 
 Para concursos, você deve focar principalmente na **topologia física**, pois é a mais cobrada em questões objetivas.
@@ -46,7 +46,7 @@ Nessa topologia, todos os dispositivos conectam-se a um **equipamento central**,
 -   **Como funciona:** Toda a comunicação passa obrigatoriamente pelo nó central. Se o computador A quer falar com o computador B, os dados vão de A para o switch, e do switch para B.
 -   **Vantagem:** Se um cabo quebrar, **apenas aquele computador fica offline**. A rede continua funcionando. Facilita a identificação de falhas.
 -   **Desvantagem:** Se o **dispositivo central (switch) falhar**, toda a rede para.
--   **Como cai na prova:** É a topologia mais comum em LANs modernas. A banca costuma dizer que “a topologia em estrela utiliza um concentrador central”. Isso está **Certo**.
+-   **Como cai na prova:** É a topologia mais comum em [LANs](/tipos-redes-computadores-concursos/) modernas. A banca costuma dizer que “a topologia em estrela utiliza um concentrador central”. Isso está **Certo**.
 
 ## 3\. Topologia em Anel (Ring)
 
@@ -81,7 +81,7 @@ Em resumo, a tabela abaixo sintetiza as características críticas para sua memo
 
 Em resumo, dominar topologias de rede exige que você visualize o desenho de cada estrutura. Lembre-se: o **barramento** divide um cabo único; a **estrela** centraliza tudo em um switch; o **anel** forma um círculo; e a **malha** cria uma teia de conexões redundantes.
 
-Por fim, treine com questões de concursos anteriores. Identifique palavras-chave como “cabo central”, “nó concentrador”, “circuito fechado” e “múltiplos caminhos”. Dessa maneira, essa prática garante que você acerte questões de topologia em qualquer prova. Bons estudos!
+Por fim, treine com questões de concursos anteriores, como as do [simulado de Redes de Computadores](/simulado-redes/). Identifique palavras-chave como “cabo central”, “nó concentrador”, “circuito fechado” e “múltiplos caminhos”. Dessa maneira, essa prática garante que você acerte questões de topologia em qualquer prova. Bons estudos!
 
 ## Fontes e Referências
 

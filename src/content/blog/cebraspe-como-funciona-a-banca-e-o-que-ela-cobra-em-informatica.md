@@ -51,17 +51,17 @@ Em Informática, o Cebraspe gosta de testar o conceito e a precisão da linguage
 
 Um observador experiente da banca avisa que o Cebraspe costuma trocar apenas um termo da afirmativa, o que a torna falsa por causa de uma palavra. Esse é o coração da pegadinha. A frase inteira parece correta, mas um termo muda o sentido.
 
-Na prova, a banca pode explorar justamente essa diferença entre dois conceitos parecidos. Por isso, estude os conceitos em pares: backup incremental e diferencial, vírus e worm, IMAP e POP3.
+Na prova, a banca pode explorar justamente essa diferença entre dois conceitos parecidos. Por isso, estude os conceitos em pares: [backup incremental e diferencial](/backup-seguranca-da-informacao/), [vírus e worm](/malwares-e-ameacas-seguranca-da-informacao/), IMAP e POP3.
 
 ### Temas mais recorrentes
 
 Em geral, o edital de Informática reúne os mesmos blocos:
 
--   Sistemas operacionais, principalmente Windows e Linux
--   Redes de computadores e navegação na internet
--   Segurança da informação e malware
--   Pacote Office e editores de texto, planilhas e apresentações
--   Computação em nuvem e backup
+-   Sistemas operacionais, principalmente [Windows](/windows-10-para-concursos/) e [Linux](/linux-para-concursos/)
+-   [Redes de computadores](/redes-de-computadores-para-concursos/) e [navegação na internet](/buscador-e-navegador/)
+-   Segurança da informação e [malware](/malwares-e-ameacas-seguranca-da-informacao/)
+-   Pacote Office e editores de [texto](/microsoft-word-para-concursos/), [planilhas](/excel-em-concursos-publicos/) e [apresentações](/powerpoint-o-que-cai-nos-concursos/)
+-   [Computação em nuvem](/cloud-storage-armazenamento-de-dados-na-nuvem/) e [backup](/regra-3-2-1/)
 -   Conceitos novos, como inteligência artificial e dados
 
 Cada edital muda a lista, então trate esses temas como ponto de partida.
@@ -76,7 +76,7 @@ Veja um item no estilo da banca:
 
 > O firewall do Windows impede qualquer comunicação de entrada no computador, mesmo que o usuário crie regras de exceção.
 
-O gabarito é **ERRADO**. O firewall bloqueia conexões de entrada que não atendem às regras, mas o usuário pode criar exceções para liberar programas e portas. A expressão “mesmo que o usuário crie regras de exceção” derruba a afirmação.
+O gabarito é **ERRADO**. O [firewall](/aplicativos-para-seguranca-antivirus-firewall-antispyware/) bloqueia conexões de entrada que não atendem às regras, mas o usuário pode criar exceções para liberar programas e portas. A expressão “mesmo que o usuário crie regras de exceção” derruba a afirmação.
 
 Observe o caminho de análise. Primeiro, identifique a ideia central: o firewall filtra o tráfego. Em seguida, localize a palavra de risco: “qualquer”. Por fim, teste a exceção: se existe uma situação em que a frase falha, o item está errado.
 
@@ -92,7 +92,7 @@ Mesmo assim, não confunda cautela com medo. Se você elimina com segurança met
 
 ### Como treinar com questões da própria banca
 
-Dessa forma, resolva provas anteriores do Cebraspe, de preferência de concursos parecidos com o seu. Esse treino ajuda a se familiarizar com o estilo das perguntas e a identificar os temas mais recorrentes. Depois de cada item, explique por que o gabarito está certo ou errado. Essa revisão ativa fixa o conceito muito mais do que a simples contagem de acertos.
+Dessa forma, resolva provas anteriores do Cebraspe, de preferência de concursos parecidos com o seu. Esse treino, somado aos [simulados do site](/nocoes-de-informatica/), ajuda a se familiarizar com o estilo das perguntas e a identificar os temas mais recorrentes. Depois de cada item, explique por que o gabarito está certo ou errado. Essa revisão ativa fixa o conceito muito mais do que a simples contagem de acertos.
 
 ## Como acompanhar editais, inscrições e resultados do Cebraspe
 
@@ -102,7 +102,7 @@ Para não perder prazo, acompanhe o site oficial da banca, onde o Cebraspe publi
 
 Em resumo, o Cebraspe não é uma banca impossível. Ela exige leitura atenta, domínio de conceito e disciplina para decidir quando responder. Quem entende a regra do desconto e treina a análise de cada palavra reduz muito o risco de errar por descuido.
 
-Portanto, o seu próximo passo é simples: pegue uma prova anterior do Cebraspe sobre Informática, resolva sem pressa e comente cada item por escrito. Depois, reforce os temas em que você mais marcou em branco. Para continuar a preparação, acesse mais conteúdos de Informática para concursos em [informaticaparaconcurso.com.br](/).
+Portanto, o seu próximo passo é simples: pegue uma prova anterior do Cebraspe sobre Informática, resolva sem pressa e comente cada item por escrito. Depois, reforce os temas em que você mais marcou em branco, e veja as [10 dicas para a prova da Cebraspe PM MA 2026](/informatica-cebraspe-pm-ma-2026/). Para continuar a preparação, acesse mais conteúdos de Informática para concursos em [informaticaparaconcurso.com.br](/).
 
 ## Fontes e Referências
 

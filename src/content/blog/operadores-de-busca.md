@@ -25,7 +25,7 @@ Além disso, o Google ajusta os resultados por conta própria. Por isso, um oper
 
 ### Aspas: frase exata
 
-Inicialmente, use aspas quando quiser que o Google procure a expressão exatamente como você digitou, na mesma ordem. Sem aspas, o buscador procura as palavras soltas. Na prática, funciona assim: com aspas, você recebe apenas páginas que trazem a expressão inteira. Consequentemente, somem os resultados que citam as mesmas palavras em pontos diferentes do texto.
+Inicialmente, use aspas quando quiser que o Google procure a expressão exatamente como você digitou, na mesma ordem. Sem aspas, o [buscador](/buscador-e-navegador/) procura as palavras soltas. Na prática, funciona assim: com aspas, você recebe apenas páginas que trazem a expressão inteira. Consequentemente, somem os resultados que citam as mesmas palavras em pontos diferentes do texto.
 
 Aspas `"noções de informática"`
 
@@ -69,7 +69,7 @@ Copiar comando [Testar no Google](https://www.google.com/search?q=%22a+sigla+HTT
 
 Dando continuidade, o operador `site:` limita a pesquisa a um único domínio. Assim, você busca direto na fonte oficial, sem passar por resumos de terceiros. Guarde esta ideia: quando o assunto é edital, a fonte oficial vale mais que qualquer resumo.
 
-site: `site:cebraspe.org.br edital`
+site: `site:cebraspe.org.br edital` (conheça a [banca Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/))
 
 Todos os resultados pertencem ao domínio informado.
 
@@ -81,7 +81,7 @@ Na sequência, o `filetype:` filtra pelo formato, como PDF, DOCX ou XLSX. Como e
 
 filetype: `edital informática filetype:pdf`
 
-Os resultados aparecem como arquivos PDF.
+Os resultados aparecem como arquivos PDF (veja os [tipos de arquivo](/tipos-de-arquivo/)).
 
 Copiar comando [Testar no Google](https://www.google.com/search?q=edital+inform%C3%A1tica+filetype%3Apdf)
 

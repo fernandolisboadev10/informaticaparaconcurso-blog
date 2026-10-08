@@ -23,7 +23,7 @@ Na prática, funciona assim: quando você digita um texto, usa um periférico pa
 
 Esse é um detalhe que costuma confundir o candidato: nem todo periférico fica fora do gabinete. Placas de rede, placas de som e unidades de armazenamento internas também entram nesse grupo, porque ampliam a capacidade de comunicação do sistema.
 
-Se você ainda não domina a relação entre processador, memória e dispositivos, vale revisar antes o guia completo de [hardware para concursos](/hardware-para-concursos/).
+Se você ainda não domina a relação entre processador, [memória](/aula-hardware-memorias-ram-rom-cache/) e dispositivos, vale revisar antes o guia completo de [hardware para concursos](/hardware-para-concursos/).
 
 ## Periféricos de entrada
 
@@ -33,7 +33,7 @@ O teclado é o exemplo mais conhecido: cada tecla envia letras, números ou coma
 
 Além disso, memorize estes exemplos de entrada:
 
--   **Scanner:** transforma documentos e imagens físicas em arquivos digitais.
+-   **Scanner:** transforma documentos e imagens físicas em [arquivos digitais](/tipos-de-arquivo/).
 -   **Microfone:** capta a voz e envia o áudio ao computador.
 -   **Webcam:** captura imagens e vídeo.
 -   **Leitor de código de barras:** lê o código e envia a informação ao sistema.
@@ -62,7 +62,7 @@ Outro exemplo importante é a tela sensível ao toque (touchscreen). Ela mostra 
 
 Além disso, entram nesse grupo:
 
--   **Modem e placa de rede:** enviam e recebem dados pela rede.
+-   **Modem e placa de rede:** enviam e recebem dados pela [rede](/redes-de-computadores-para-concursos/).
 -   **Headset:** o fone reproduz o áudio (saída) e o microfone capta a voz (entrada).
 -   **Pendrive, HD e SSD:** você grava um arquivo neles e depois lê esse mesmo arquivo.
 
@@ -70,7 +70,7 @@ Vale destacar que algumas bancas tratam pendrive, HD e SSD como dispositivos de 
 
 ## Periféricos em concursos: as pegadinhas mais comuns da Cebraspe
 
-A Cebraspe gosta de palavras absolutas, como “somente”, “sempre” e “exclusivamente”, para tornar um item errado. Assim, sempre que encontrar uma delas, analise a função do dispositivo com calma.
+A [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) gosta de palavras absolutas, como “somente”, “sempre” e “exclusivamente”, para tornar um item errado. Assim, sempre que encontrar uma delas, analise a função do dispositivo com calma.
 
 Veja os erros mais comuns:
 

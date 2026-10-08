@@ -27,7 +27,7 @@ O Linux segue uma lógica bem diferente desde a raiz. Em 1991, o finlandês Linu
 
 Diferente do Windows, o Linux é um software livre e de código aberto. Isso quer dizer que qualquer pessoa pode consultar, modificar e redistribuir o código-fonte, respeitando a licença [GPL (GNU General Public License)](https://www.gnu.org/licenses/gpl-3.0.html), que rege a distribuição do kernel.
 
-Por isso, quando você ouve falar em Linux, é essencial lembrar que ele é apenas o kernel, o núcleo do sistema. As distribuições (ou distros), como Ubuntu, Debian e Fedora, reúnem esse kernel a outros programas e formam o sistema operacional completo que o usuário instala.
+Por isso, quando você ouve falar em [Linux](/linux-para-concursos/), é essencial lembrar que ele é apenas o kernel, o núcleo do sistema. As distribuições (ou distros), como Ubuntu, Debian e Fedora, reúnem esse kernel a outros programas e formam o sistema operacional completo que o usuário instala.
 
 ## Arquitetura e código-fonte
 
@@ -59,7 +59,7 @@ Enquanto o Windows lança poucas versões numeradas ao longo dos anos, o Linux s
 
 ### Principais versões do Windows
 
-O Windows evoluiu de forma linear: XP, Vista, 7, 8, 10 e, mais recentemente, o Windows 11, lançado em 2021. Além das versões voltadas ao usuário final, a Microsoft mantém o Windows Server, direcionado à administração de redes e servidores corporativos.
+O Windows evoluiu de forma linear: XP, Vista, 7, 8, 10 e, mais recentemente, o [Windows 11](/sistema-windows-7-10-11-para-concursos/), lançado em 2021. Além das versões voltadas ao usuário final, a Microsoft mantém o Windows Server, direcionado à administração de redes e servidores corporativos.
 
 ### Principais distribuições Linux
 
@@ -75,7 +75,7 @@ Na prova, os comandos do Windows aparecem tanto no Prompt de Comando (CMD) quant
 
 -   Ctrl + C / Ctrl + V: copiar e colar
 -   Ctrl + Alt + Del: abre o Gerenciador de Tarefas ou a tela de segurança
--   Windows + E: abre o Explorador de Arquivos
+-   Windows + E: abre o [Explorador de Arquivos](/informatica-concursos-gerenciamento-arquivos-pastas/)
 -   Windows + L: bloqueia a estação de trabalho
 -   Alt + Tab: alterna entre janelas abertas
 -   Windows + D: minimiza todas as janelas e mostra a área de trabalho
@@ -86,14 +86,14 @@ Na prova, os comandos do Windows aparecem tanto no Prompt de Comando (CMD) quant
 -   `cd`: muda de diretório
 -   `copy` e `move`: copiam ou movem arquivos
 -   `del`: apaga arquivos
--   `ipconfig`: exibe as configurações de rede
+-   `ipconfig`: exibe as configurações de [rede](/redes-de-computadores-para-concursos/)
 -   `tasklist` e `taskkill`: listam e encerram processos em execução
 
 Se a banca afirmar que o comando `dir` serve para apagar arquivos, desconfie na hora: essa é uma pegadinha clássica que troca a função de comandos parecidos.
 
 ## Comandos e atalhos no Linux
 
-No Linux, o terminal ocupa um espaço muito maior do dia a dia do que no Windows, e por isso a banca cobra bastante comando de texto.
+No Linux, o terminal ocupa um espaço muito maior do dia a dia do que no Windows, e por isso a banca cobra bastante comando de texto. Para praticar, veja os [comandos básicos do Linux](/comandos-basicos-do-linux/).
 
 **Atalhos de teclado:**
 
@@ -127,11 +127,11 @@ O Microsoft Office reúne Word, Excel, PowerPoint e Outlook como aplicativos nat
 
 Nas distribuições Linux, o [LibreOffice](https://www.libreoffice.org/) normalmente já vem pré-instalado e oferece equivalentes gratuitos ao Word (Writer), Excel (Calc) e PowerPoint (Impress). A The Document Foundation mantém esse pacote e o distribui sob licença de software livre.
 
-Aqui está um detalhe que cai bastante: o LibreOffice consegue abrir e salvar arquivos .docx e .xlsx, mas a compatibilidade não chega a 100%. Formatações mais complexas, como macros em VBA, podem se perder na conversão entre os dois pacotes. Memorize este ponto, porque questões sobre interoperabilidade de formatos são recorrentes.
+Aqui está um detalhe que cai bastante: o [LibreOffice](/libreoffice-para-concursos/) consegue abrir e salvar arquivos .docx e .xlsx, mas a compatibilidade não chega a 100%. Formatações mais complexas, como macros em VBA, podem se perder na conversão entre os dois pacotes. Memorize este ponto, porque questões sobre interoperabilidade de formatos são recorrentes.
 
 ## Pegadinhas mais cobradas em prova
 
-Bancas como o Cebraspe costumam usar palavras absolutas como “sempre”, “somente” e “exclusivamente” para transformar uma afirmação correta em errada. Fique atento quando o enunciado disser algo como “o Linux é sempre gratuito” ou “o Windows é exclusivamente proprietário e nunca tem componentes de código aberto”, porque as duas afirmações têm exceções.
+Bancas como o [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) costumam usar palavras absolutas como “sempre”, “somente” e “exclusivamente” para transformar uma afirmação correta em errada. Fique atento quando o enunciado disser algo como “o Linux é sempre gratuito” ou “o Windows é exclusivamente proprietário e nunca tem componentes de código aberto”, porque as duas afirmações têm exceções.
 
 Por exemplo, existem distribuições Linux com suporte pago, como o Red Hat Enterprise Linux, e o próprio Windows incorpora componentes de código aberto em partes específicas do sistema, como o Windows Subsystem for Linux (WSL). Por isso, generalizações fechadas costumam ser a armadilha, não a regra.
 

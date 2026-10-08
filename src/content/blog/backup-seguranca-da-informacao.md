@@ -21,7 +21,7 @@ Nesta aula, você vai entender o conceito, revisar os principais tipos e resolve
 
 Inicialmente, backup é o processo de criar cópias planejadas e regulares de informações relevantes para permitir sua restauração futura. O objetivo não é apenas duplicar arquivos, mas garantir recuperação quando o conteúdo original se perder, for corrompido ou ficar inacessível.
 
-Em outras palavras, não basta copiar documentos para a mesma unidade de armazenamento e chamar isso de proteção. Se o equipamento falhar, sofrer um incidente ou for atingido por malware, a cópia local pode ser perdida junto com os arquivos originais.
+Em outras palavras, não basta copiar documentos para a mesma unidade de armazenamento e chamar isso de proteção. Se o equipamento falhar, sofrer um incidente ou for atingido por [malware](/malwares-e-ameacas-seguranca-da-informacao/), a cópia local pode ser perdida junto com os arquivos originais.
 
 Por isso, uma estratégia eficiente precisa considerar local de armazenamento, periodicidade, retenção e teste de restauração.
 
@@ -73,7 +73,7 @@ Essa prática reduz o risco de perda simultânea por falha física, desastre amb
 
 Em seguida, a cópia **offline** permanece desconectada da rede quando não está em uso. Já a cópia **imutável** impede alteração ou exclusão durante um período definido.
 
-Por isso, esses modelos ajudam muito na defesa contra ransomware. Muitos atacantes tentam localizar e destruir as cópias de segurança antes de criptografar os dados principais.
+Por isso, esses modelos ajudam muito na defesa contra [ransomware](/malwares-e-ameacas-seguranca-da-informacao/). Muitos atacantes tentam localizar e destruir as cópias de segurança antes de criptografar os dados principais.
 
 ## Teste de restauração
 
@@ -85,7 +85,7 @@ Principalmente, a cópia de segurança protege a **disponibilidade** da informa�
 
 Além disso, essa prática reforça a resiliência contra erro humano, falha de hardware e incidentes de segurança. Em ataques de ransomware, por exemplo, cópias seguras e isoladas podem permitir a retomada do ambiente sem pagamento de resgate.
 
-No entanto, essa medida não substitui outras camadas de proteção. Ela complementa antivírus, controle de acesso, atualização de sistemas, criptografia e monitoramento.
+No entanto, essa medida não substitui outras camadas de proteção. Ela complementa [antivírus](/aplicativos-para-seguranca-antivirus-firewall-antispyware/), controle de acesso, atualização de sistemas, criptografia e monitoramento.
 
 ## O que mais cai em concursos
 
@@ -103,7 +103,7 @@ Por esse motivo, o candidato precisa memorizar não só a definição, mas tamb�
 
 Portanto, estudar **backup** para concursos públicos exige mais do que decorar definições. O candidato precisa entender como cada tipo funciona, como ocorre a restauração e por que boas práticas como a regra 3-2-1 e os testes periódicos fazem tanta diferença.
 
-Por fim, revise os conceitos de completo, incremental e diferencial, compare suas vantagens e treine questões contextualizadas. Esse é o caminho mais seguro para acertar as pegadinhas de prova sobre segurança da informação.
+Por fim, revise os conceitos de completo, incremental e diferencial, compare suas vantagens e treine [questões contextualizadas](/simulado-seguranca-da-informacao/). Esse é o caminho mais seguro para acertar as pegadinhas de prova sobre segurança da informação.
 
 ## Fontes e Referências
 

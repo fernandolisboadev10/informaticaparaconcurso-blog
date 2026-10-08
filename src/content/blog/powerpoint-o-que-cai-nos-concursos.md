@@ -15,7 +15,7 @@ Além disso, o candidato não precisa dominar o programa como um designer de apr
 
 ## O que é cobrado em PowerPoint nos concursos
 
-Em primeiro lugar, o PowerPoint costuma aparecer dentro do bloco de informática, ao lado de Word, Excel, internet e sistemas operacionais. O conteúdo normalmente envolve criação, edição e exclusão de slides, formatação de textos e objetos, inserção de imagens, tabelas, gráficos e elementos multimídia.
+Em primeiro lugar, o PowerPoint costuma aparecer dentro do bloco de informática, ao lado de [Word](/microsoft-word-para-concursos/), [Excel](/excel-em-concursos-publicos/), internet e sistemas operacionais. O conteúdo normalmente envolve criação, edição e exclusão de slides, formatação de textos e objetos, inserção de imagens, tabelas, gráficos e elementos multimídia.
 
 Em seguida, também são frequentes questões sobre modos de exibição, apresentação de slides, uso de temas e modelos, além de compatibilidade entre formatos de salvamento. As bancas costumam explorar esses tópicos em perguntas conceituais e em situações práticas do dia a dia do programa.
 
@@ -68,9 +68,9 @@ Inicialmente, entre os atalhos mais cobrados está o **F5**, usado para iniciar 
 
 Além disso, materiais voltados para concursos também destacam o **Ctrl + M** para inserir novo slide e o **Ctrl + S** para salvar a apresentação. Esses comandos aparecem como atalhos básicos e recorrentes em resumos de informática para provas.
 
-Em relação aos arquivos, o formato padrão mais citado é o **.pptx**, usado nas versões mais recentes do PowerPoint. Já o formato **.ppsx** costuma ser associado à apresentação de slides aberta diretamente em modo de exibição, e essa distinção é bastante explorada pelas bancas.
+Em relação aos [arquivos](/tipos-de-arquivo/), o formato padrão mais citado é o **.pptx**, usado nas versões mais recentes do PowerPoint. Já o formato **.ppsx** costuma ser associado à apresentação de slides aberta diretamente em modo de exibição, e essa distinção é bastante explorada pelas bancas.
 
-Não apenas isso, questões também podem mencionar formatos antigos, como **.ppt**, e formatos compatíveis com outras suítes. O objetivo da banca, nesse caso, é verificar se o candidato sabe diferenciar arquivo editável, arquivo de apresentação e compatibilidade entre versões.
+Não apenas isso, questões também podem mencionar formatos antigos, como **.ppt**, e formatos compatíveis com outras suítes, como o [LibreOffice Impress](/libreoffice-para-concursos/). O objetivo da banca, nesse caso, é verificar se o candidato sabe diferenciar arquivo editável, arquivo de apresentação e compatibilidade entre versões.
 
 Os formatos mais cobrados, lado a lado:
 
@@ -116,7 +116,7 @@ Além disso, muitos candidatos também confundem transição com animação. Em 
 
 Para começar, o melhor caminho é estudar por blocos: estrutura dos slides, inserção de elementos, transições e animações, modos de exibição, atalhos e formatos de arquivo. Essa divisão ajuda a organizar o conteúdo e evita revisão aleatória.
 
-Em seguida, vale praticar com questões comentadas, porque PowerPoint é um tema em que a banca repete padrões. Itens como F5, Shift + F5, extensão .pptx, extensão .ppsx e diferença entre animação e transição aparecem com frequência em materiais e bancos de questões.
+Em seguida, vale praticar com questões comentadas e com o [simulado de Office](/simulado-office/), porque PowerPoint é um tema em que a banca repete padrões. Itens como F5, Shift + F5, extensão .pptx, extensão .ppsx e diferença entre animação e transição aparecem com frequência em materiais e bancos de questões.
 
 Por fim, **PowerPoint o que cai nos concursos** quase sempre envolve os fundamentos do programa, e não recursos avançados. Portanto, quem domina atalhos, modos de apresentação, tipos de arquivo e funções básicas já sai na frente em informática.
 
