@@ -89,7 +89,7 @@ Backup e armazenamento em nuvem
 
 **Exemplo prático:** no domingo, você faz um backup completo (copia tudo). Na segunda, um incremental (só o que mudou desde domingo). Na terça, outro incremental (só o que mudou desde segunda). Se precisar restaurar na quarta, você vai precisar do completo e dos dois incrementais, nessa ordem.
 
-💡 **Cai na prova:** o backup incremental é mais rápido de fazer, mas mais lento para restaurar, porque exige todos os incrementos em ordem. Já o backup diferencial ocupa mais espaço em disco, mas restaura mais rápido, pois basta o completo somado ao último diferencial.
+<strong class="cai-prova">💡 Cai na prova:</strong> o backup incremental é mais rápido de fazer, mas mais lento para restaurar, porque exige todos os incrementos em ordem. Já o backup diferencial ocupa mais espaço em disco, mas restaura mais rápido, pois basta o completo somado ao último diferencial.
 
 Não confunda os dois conceitos na hora da prova: se a banca afirmar que o backup incremental restaura os dados mais rápido que o diferencial, desconfie, porque geralmente ocorre o oposto.
 

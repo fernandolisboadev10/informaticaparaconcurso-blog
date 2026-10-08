@@ -158,6 +158,32 @@ img {
   background-size: 100% 100%;
 }
 
+/* Destaque amarelo "Cai na prova": mesmo efeito do link, em amarelo */
+.prose .cai-prova {
+  --cai-line: rgba(250, 204, 21, 0.6);
+  background-image: linear-gradient(var(--cai-line), var(--cai-line));
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 100% 0.5em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-size 0.2s ease;
+}
+
+.prose .cai-prova:hover {
+  background-size: 100% 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .prose .cai-prova {
+    --cai-line: rgba(250, 204, 21, 0.55);
+  }
+}
+
+:root[data-theme='dark'] .prose .cai-prova {
+  --cai-line: rgba(250, 204, 21, 0.55);
+}
+
 .prose h2 {
   margin-top: 2.5em;
   font-size: 1.6rem;

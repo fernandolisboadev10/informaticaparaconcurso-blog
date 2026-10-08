@@ -45,7 +45,7 @@ nuvem ou outro prédio
 
 💻 notebook (original) → 💾 HD externo (backup 1) → ☁️ nuvem (backup 2)
 
-💡 **Cai na prova:** a regra 3-2-1 trata da **quantidade e da diversidade de cópias**, não de um cronograma. Portanto, não confunda esse conceito com os [tipos de backup (completo, incremental e diferencial)](/backup-seguranca-da-informacao/) vistos no tópico anterior.
+<strong class="cai-prova">💡 Cai na prova:</strong> a regra 3-2-1 trata da **quantidade e da diversidade de cópias**, não de um cronograma. Portanto, não confunda esse conceito com os [tipos de backup (completo, incremental e diferencial)](/backup-seguranca-da-informacao/) vistos no tópico anterior.
 
 Uma cópia sozinha não é backup, é apenas o arquivo original. Duas cópias já reduzem o risco, mas ainda deixam uma brecha. Se as duas ficam no mesmo tipo de mídia e no mesmo ambiente, um único incidente pode atingir ambas ao mesmo tempo. Por isso, manter três cópias no total cria uma margem de segurança maior, já que a chance de as três falharem juntas é bem menor.
 
