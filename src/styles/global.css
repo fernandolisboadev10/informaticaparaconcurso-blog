@@ -160,7 +160,7 @@ img {
 
 /* Destaque amarelo "Cai na prova": mesmo efeito do link, em amarelo */
 .prose .cai-prova {
-  --cai-line: rgba(255, 235, 59, 0.7);
+  --cai-line: #ffff00;
   background-image: linear-gradient(var(--cai-line), var(--cai-line));
   background-repeat: no-repeat;
   background-position: 0 92%;
@@ -176,12 +176,12 @@ img {
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .prose .cai-prova {
-    --cai-line: rgba(255, 235, 59, 0.4);
+    --cai-line: rgba(255, 255, 0, 0.45);
   }
 }
 
 :root[data-theme='dark'] .prose .cai-prova {
-  --cai-line: rgba(255, 235, 59, 0.4);
+  --cai-line: rgba(255, 255, 0, 0.45);
 }
 
 .prose h2 {
