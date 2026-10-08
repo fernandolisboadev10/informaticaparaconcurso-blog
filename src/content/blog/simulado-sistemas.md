@@ -9,7 +9,7 @@ image: "./images/sistemas.webp"
 imageAlt: "Sistemas Operacionais"
 ---
 
-Se você já sentiu dificuldade para fixar os conceitos de sistemas operacionais, este simulado de sistemas operacionais foi pensado justamente para resolver esse problema. Ao longo de trinta questões comentadas, você revisa os tópicos mais cobrados por bancas como Cebraspe, FGV, FCC, IADES, Cesgranrio e Vunesp, entre eles gerenciamento de processos, memória virtual, permissões e diferenças entre Windows e Linux. Além disso, cada questão traz um comentário detalhado, que explica o raciocínio correto e aponta as pegadinhas mais frequentes em prova. Dessa forma, você não apenas treina a resolução de questões, mas também consolida a teoria. Portanto, aproveite este simulado de sistemas operacionais para medir seu nível antes da prova.
+Se você já sentiu dificuldade para fixar os conceitos de sistemas operacionais, este simulado de sistemas operacionais foi pensado justamente para resolver esse problema. Ao longo de trinta questões comentadas, você revisa os tópicos mais cobrados por bancas como Cebraspe, FGV, FCC, IADES, Cesgranrio e Vunesp, entre eles gerenciamento de processos, memória virtual, permissões e diferenças entre Windows e Linux. Além disso, cada questão traz um comentário detalhado, que explica o raciocínio correto e aponta as <strong class="cai-prova">pegadinhas</strong> mais frequentes em prova. Dessa forma, você não apenas treina a resolução de questões, mas também consolida a teoria. Portanto, aproveite este simulado de sistemas operacionais para medir seu nível antes da prova.
 
 ## Gerenciamento de processos: como o sistema organiza as tarefas
 

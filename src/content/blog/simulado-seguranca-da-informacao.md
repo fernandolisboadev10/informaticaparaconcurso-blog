@@ -9,7 +9,7 @@ image: "./images/seguranca.webp"
 imageAlt: "segurança da informação"
 ---
 
-Vírus, malware, criptografia e backup são só alguns dos assuntos que aparecem neste simulado de segurança da informação, pensado para candidatos que já estudaram a teoria e querem testar a prática. Nas trinta questões comentadas, você revisa os principais conceitos cobrados por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp, sempre com foco nas situações mais exploradas em prova. Cada questão vem acompanhada de um comentário que esclarece o motivo da resposta correta, o que evita a decoreba sem compreensão. Assim, você aprende a reconhecer os termos técnicos e as pegadinhas mais comuns dessa disciplina. Portanto, aproveite este simulado de segurança da informação para reforçar exatamente os pontos que ainda geram dúvida.
+Vírus, malware, criptografia e backup são só alguns dos assuntos que aparecem neste simulado de segurança da informação, pensado para candidatos que já estudaram a teoria e querem testar a prática. Nas trinta questões comentadas, você revisa os principais conceitos cobrados por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp, sempre com foco nas situações mais exploradas em prova. Cada questão vem acompanhada de um comentário que esclarece o motivo da resposta correta, o que evita a decoreba sem compreensão. Assim, você aprende a reconhecer os termos técnicos e as <strong class="cai-prova">pegadinhas</strong> mais comuns dessa disciplina. Portanto, aproveite este simulado de segurança da informação para reforçar exatamente os pontos que ainda geram dúvida.
 
 ## Malware: os tipos que mais caem na prova
 
@@ -21,7 +21,7 @@ Antes de tudo, vale separar bem os principais tipos de malware, porque a banca a
 -   Ransomware: sequestra os arquivos com criptografia e exige pagamento para liberar o acesso.
 -   Spyware: coleta informações do usuário sem o seu conhecimento, muitas vezes senhas e dados bancários.
 
-Esse é um detalhe que costuma confundir o candidato: o worm não precisa de arquivo hospedeiro, o vírus precisa. Guarde essa diferença, ela é uma das pegadinhas mais repetidas nas provas de Cebraspe e FGV.
+Esse é um detalhe que costuma confundir o candidato: o worm não precisa de arquivo hospedeiro, o vírus precisa. Guarde essa diferença, ela é uma das <strong class="cai-prova">pegadinhas</strong> mais repetidas nas provas de Cebraspe e FGV.
 
 Se quiser revisar cada ameaça com mais profundidade, o [artigo sobre malwares e ameaças de segurança da informação](/malwares-e-ameacas-seguranca-da-informacao/) traz exemplos reais de cada categoria.
 

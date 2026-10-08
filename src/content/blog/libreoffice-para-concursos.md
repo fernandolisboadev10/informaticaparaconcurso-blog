@@ -33,7 +33,7 @@ Por isso, se a banca afirmar que “software livre é sinônimo de software grat
 
 ## História do LibreOffice: do OpenOffice ao BrOffice
 
-Para não cair em pegadinhas, você precisa conhecer a linha do tempo da suíte. Tudo começa no **OpenOffice.org**, projeto de código aberto que a Sun Microsystems mantinha.
+Para não cair em <strong class="cai-prova">pegadinhas</strong>, você precisa conhecer a linha do tempo da suíte. Tudo começa no **OpenOffice.org**, projeto de código aberto que a Sun Microsystems mantinha.
 
 Em 2010, a Oracle concluiu a compra da Sun. A partir disso, parte da comunidade temeu que o projeto perdesse seu caráter aberto e decidiu criar um **fork** (uma derivação do código original). Assim, em setembro de 2010, esses desenvolvedores fundaram a The Document Foundation e lançaram o LibreOffice.
 
@@ -41,7 +41,7 @@ Depois disso, em 2011, a Oracle entregou o OpenOffice.org à Apache Software Fou
 
 ### Por que o Brasil usava o nome BrOffice
 
-É aqui que aparece uma das pegadinhas preferidas das bancas. No Brasil, a comunidade não podia distribuir a suíte com o nome OpenOffice, porque uma empresa do Rio de Janeiro já tinha registrado uma marca semelhante. Como resultado, a versão brasileira passou a circular como **BrOffice.org**.
+É aqui que aparece uma das <strong class="cai-prova">pegadinhas</strong> preferidas das bancas. No Brasil, a comunidade não podia distribuir a suíte com o nome OpenOffice, porque uma empresa do Rio de Janeiro já tinha registrado uma marca semelhante. Como resultado, a versão brasileira passou a circular como **BrOffice.org**.
 
 Em seguida, com o crescimento do LibreOffice no mundo, a comunidade brasileira anunciou em 2011 o fim da associação BrOffice e adotou oficialmente o nome **LibreOffice**. Dessa forma, o Brasil unificou a marca com o restante do mundo.
 
@@ -121,7 +121,7 @@ Por outro lado, cuidado com afirmações absolutas. Uma questão que diga que a 
 
 ## Atalhos do LibreOffice que mais caem na prova
 
-Antes de decorar a lista, entenda a lógica. O LibreOffice mantém atalhos baseados nos comandos em inglês, mesmo na versão em português. Por isso, ele se comporta de forma diferente do Microsoft Office em português, e essa diferença é uma das pegadinhas mais cobradas em provas de informática.
+Antes de decorar a lista, entenda a lógica. O LibreOffice mantém atalhos baseados nos comandos em inglês, mesmo na versão em português. Por isso, ele se comporta de forma diferente do Microsoft Office em português, e essa diferença é uma das <strong class="cai-prova">pegadinhas</strong> mais cobradas em provas de informática.
 
 ### Atalhos gerais (Writer, Calc e Impress)
 
@@ -146,7 +146,7 @@ Antes de decorar a lista, entenda a lógica. O LibreOffice mantém atalhos basea
 -   **Ctrl + J:** justificar
 -   **Ctrl + Enter:** quebra de página
 
-### A pegadinha LibreOffice x Word em português
+### A <strong class="cai-prova">pegadinha</strong> LibreOffice x Word em português
 
 Memorize este ponto. No Word em português, **Ctrl + N** aplica negrito, **Ctrl + O** cria um novo documento, **Ctrl + A** abre um arquivo e **Ctrl + B** salva. No LibreOffice, esses mesmos atalhos têm funções diferentes, conforme a lista acima.
 

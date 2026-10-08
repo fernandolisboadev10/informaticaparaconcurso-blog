@@ -11,7 +11,7 @@ imageAlt: "sistema windows"
 
 Primeiramente, estudar o **sistema operacional Windows** para concursos exige reconhecer as diferenças entre Windows 7, Windows 10 e Windows 11. As bancas costumam cobrar elementos da interface, configurações, recursos de produtividade, segurança, gerenciamento de arquivos e datas de encerramento do suporte.
 
-Além disso, uma questão pode apresentar uma imagem da Área de Trabalho, citar um recurso do Menu Iniciar ou afirmar que determinada versão ainda recebe atualizações. Por isso, você precisa entender a evolução visual e funcional de cada versão para não cair em pegadinhas na hora da prova.
+Além disso, uma questão pode apresentar uma imagem da Área de Trabalho, citar um recurso do Menu Iniciar ou afirmar que determinada versão ainda recebe atualizações. Por isso, você precisa entender a evolução visual e funcional de cada versão para não cair em <strong class="cai-prova">pegadinhas</strong> na hora da prova.
 
 Aqui você verá os pontos que mais aparecem nas provas, as datas oficiais de suporte e os detalhes que costumam confundir o candidato.
 
@@ -100,7 +100,7 @@ As principais mudanças do Windows 7 para o Windows 10 foram:
 
 Além disso, a Central de Ações reúne notificações e atalhos rápidos. Você pode acessar recursos como Wi-Fi, Bluetooth, modo avião, brilho da tela e economia de bateria diretamente por ela.
 
-Aqui está um ponto que merece atenção: uma pegadinha frequente afirma que o Windows 10 substituiu totalmente o Painel de Controle pelo aplicativo Configurações. Essa afirmação está errada. O sistema operacional Windows passou a priorizar o aplicativo Configurações, mas manteve o Painel de Controle disponível.
+Aqui está um ponto que merece atenção: uma <strong class="cai-prova">pegadinha</strong> frequente afirma que o Windows 10 substituiu totalmente o Painel de Controle pelo aplicativo Configurações. Essa afirmação está errada. O sistema operacional Windows passou a priorizar o aplicativo Configurações, mas manteve o Painel de Controle disponível.
 
 ## Windows 11: interface renovada e produtividade
 
@@ -132,7 +132,7 @@ Em outras palavras, o TPM é um componente voltado à segurança. Ele auxilia na
 
 Por isso, se uma questão relacionar TPM 2.0 e Windows 11, a afirmação tende a estar correta. Por outro lado, afirmar que o Windows 7 exigia TPM 2.0 para instalação é incorreto.
 
-### Pegadinhas sobre o sistema operacional Windows
+### <strong class="cai-prova">Pegadinhas</strong> sobre o sistema operacional Windows
 
 Antes de finalizar, revise estas afirmações:
 

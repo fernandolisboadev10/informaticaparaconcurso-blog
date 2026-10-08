@@ -11,7 +11,7 @@ imageAlt: "SaaS, PaaS e IaaS"
 
 Poucos assuntos de computação em nuvem aparecem tanto em prova quanto **SaaS, PaaS e IaaS**. Além disso, a banca raramente pergunta só o significado da sigla. Ela quer saber quem gerencia o quê, e é justamente aí que o candidato perde pontos.
 
-Por isso, vou mostrar o conceito de cada modelo, exemplos reais, uma tabela comparativa e as pegadinhas mais comuns. No final, você testa o conhecimento com 10 questões comentadas.
+Por isso, vou mostrar o conceito de cada modelo, exemplos reais, uma tabela comparativa e as <strong class="cai-prova">pegadinhas</strong> mais comuns. No final, você testa o conhecimento com 10 questões comentadas.
 
 ## O que são os modelos de serviço em nuvem
 
@@ -103,7 +103,7 @@ A segunda mistura categorias. Não confunda os dois conceitos: SaaS, PaaS e IaaS
 
 A terceira usa palavras absolutas. No estilo [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/), termos como “sempre”, “somente” e “exclusivamente” costumam indicar erro. Por exemplo: “No IaaS, o provedor gerencia exclusivamente o sistema operacional” está errado, porque quem gerencia o sistema operacional é o cliente.
 
-É aqui que aparece uma das principais pegadinhas: a banca descreve um cenário e pede o modelo. Então identifique o que o cliente controla. Se ele controla o sistema operacional, é IaaS. Se controla só o código, é PaaS. Se apenas usa o software, é SaaS.
+É aqui que aparece uma das principais <strong class="cai-prova">pegadinhas</strong>: a banca descreve um cenário e pede o modelo. Então identifique o que o cliente controla. Se ele controla o sistema operacional, é IaaS. Se controla só o código, é PaaS. Se apenas usa o software, é SaaS.
 
 ## Conclusão
 

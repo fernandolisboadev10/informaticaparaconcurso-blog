@@ -41,7 +41,7 @@ Da mesma forma, a banca pode cobrar formatação de objetos, alinhamento de elem
 
 ## Transições e animações
 
-Vale destacar que esse é um dos pontos com mais pegadinhas. Em concursos, é comum cair a diferença entre **transição**, que é o efeito aplicado na passagem entre slides, e **animação**, que é o efeito aplicado em objetos dentro do slide.
+Vale destacar que esse é um dos pontos com mais <strong class="cai-prova">pegadinhas</strong>. Em concursos, é comum cair a diferença entre **transição**, que é o efeito aplicado na passagem entre slides, e **animação**, que é o efeito aplicado em objetos dentro do slide.
 
 Por isso, confundir esses dois conceitos é um erro clássico. Muitas bancas montam alternativas muito parecidas justamente para verificar se o candidato sabe separar efeito do slide e efeito do elemento.
 
@@ -126,13 +126,13 @@ Por fim, **PowerPoint o que cai nos concursos** quase sempre envolve os fundamen
 -   O .ppsx abre direto em apresentação, o .pptx abre em edição e o .potx funciona como modelo reutilizável.
 -   O F5 inicia a apresentação do começo, enquanto o Shift + F5 inicia a partir do slide atual.
 -   O Slide Mestre propaga alterações de layout para todos os slides vinculados a ele.
--   Fique atento a palavras como “sempre”, “somente” e “exclusivamente”, pois elas costumam indicar pegadinha.
+-   Fique atento a palavras como “sempre”, “somente” e “exclusivamente”, pois elas costumam indicar <strong class="cai-prova">pegadinha</strong>.
 
 ## Conclusão
 
 Em resumo, estudar **PowerPoint o que cai nos concursos** significa focar no que a banca realmente repete: criação e edição de slides, inserção de objetos, transições, animações, modos de exibição, atalhos e formatos de arquivo.
 
-Portanto, ao revisar o tema, concentre seu esforço nos conceitos básicos com maior incidência e resolva questões para fixar. Isso aumenta sua velocidade de resposta e reduz os erros em temas com pegadinhas clássicas.
+Portanto, ao revisar o tema, concentre seu esforço nos conceitos básicos com maior incidência e resolva questões para fixar. Isso aumenta sua velocidade de resposta e reduz os erros em temas com <strong class="cai-prova">pegadinhas</strong> clássicas.
 
 ## Fontes e Referências
 

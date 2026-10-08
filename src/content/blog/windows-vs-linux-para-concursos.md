@@ -89,7 +89,7 @@ Na prova, os comandos do Windows aparecem tanto no Prompt de Comando (CMD) quant
 -   `ipconfig`: exibe as configurações de [rede](/redes-de-computadores-para-concursos/)
 -   `tasklist` e `taskkill`: listam e encerram processos em execução
 
-Se a banca afirmar que o comando `dir` serve para apagar arquivos, desconfie na hora: essa é uma pegadinha clássica que troca a função de comandos parecidos.
+Se a banca afirmar que o comando `dir` serve para apagar arquivos, desconfie na hora: essa é uma <strong class="cai-prova">pegadinha</strong> clássica que troca a função de comandos parecidos.
 
 ## Comandos e atalhos no Linux
 
@@ -129,7 +129,7 @@ Nas distribuições Linux, o [LibreOffice](https://www.libreoffice.org/) normalm
 
 Aqui está um detalhe que cai bastante: o [LibreOffice](/libreoffice-para-concursos/) consegue abrir e salvar arquivos .docx e .xlsx, mas a compatibilidade não chega a 100%. Formatações mais complexas, como macros em VBA, podem se perder na conversão entre os dois pacotes. Memorize este ponto, porque questões sobre interoperabilidade de formatos são recorrentes.
 
-## Pegadinhas mais cobradas em prova
+## <strong class="cai-prova">Pegadinhas</strong> mais cobradas em prova
 
 Bancas como o [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) costumam usar palavras absolutas como “sempre”, “somente” e “exclusivamente” para transformar uma afirmação correta em errada. Fique atento quando o enunciado disser algo como “o Linux é sempre gratuito” ou “o Windows é exclusivamente proprietário e nunca tem componentes de código aberto”, porque as duas afirmações têm exceções.
 
@@ -159,7 +159,7 @@ _Uma distribuição, ou distro, é o conjunto formado pelo kernel Linux mais out
 
 ### O Windows tem componentes de código aberto?
 
-_Sim, e essa é uma pegadinha comum em prova. O Windows incorpora recursos como o WSL (Windows Subsystem for Linux), que permite executar um ambiente Linux dentro do próprio Windows. Por isso, cuidado com enunciados que afirmam que o Windows é “exclusivamente” fechado, sem qualquer componente aberto._
+_Sim, e essa é uma <strong class="cai-prova">pegadinha</strong> comum em prova. O Windows incorpora recursos como o WSL (Windows Subsystem for Linux), que permite executar um ambiente Linux dentro do próprio Windows. Por isso, cuidado com enunciados que afirmam que o Windows é “exclusivamente” fechado, sem qualquer componente aberto._
 
 ### O LibreOffice consegue abrir arquivos do Microsoft Office sem problemas?
 

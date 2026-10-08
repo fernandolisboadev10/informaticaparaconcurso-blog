@@ -11,7 +11,7 @@ imageAlt: "O Que É Extranet"
 
 Você já parou para pensar em como uma empresa consegue dar acesso ao sistema interno para um fornecedor, sem abrir a rede inteira para qualquer pessoa? É exatamente aí que entra a extranet, um dos conceitos mais cobrados pelas bancas quando o assunto é redes de computadores.
 
-Antes de entrar nos detalhes, vale fixar uma ideia central que vale para internet, intranet e extranet: as três usam a mesma tecnologia, o conjunto de protocolos TCP/IP que sustenta a web inteira. Portanto, a diferença não está na tecnologia, mas em **quem pode acessar a rede**. Esse critério de acesso é o que você precisa gravar para não cair em pegadinha.
+Antes de entrar nos detalhes, vale fixar uma ideia central que vale para internet, intranet e extranet: as três usam a mesma tecnologia, o conjunto de protocolos TCP/IP que sustenta a web inteira. Portanto, a diferença não está na tecnologia, mas em **quem pode acessar a rede**. Esse critério de acesso é o que você precisa gravar para não cair em <strong class="cai-prova">pegadinha</strong>.
 
 ## O que é extranet, na prática
 
@@ -69,13 +69,13 @@ Por esse motivo, é fundamental separar bem os três conceitos antes da prova. A
 
 Aliás, essa classificação trata de quem pode acessar a rede, não do alcance geográfico dela. Não misture esse critério com a classificação de LAN, MAN e WAN, que trata de outra coisa: a distância física coberta pela rede.
 
-## Pegadinhas de prova sobre esse tema
+## <strong class="cai-prova">Pegadinhas</strong> de prova sobre esse tema
 
 Cabe destacar que as bancas adoram testar esse conceito com afirmações absolutas. Se a questão disser que a extranet é “totalmente aberta ao público” ou que “qualquer usuário da internet pode acessá-la livremente”, desconfie: a afirmação está errada.
 
-Se a questão disser que a intranet usa uma tecnologia diferente da internet, desconfie: ambas se baseiam no TCP/IP. Quando a banca usar termos como “exclusivamente” ou “somente” para limitar o conceito de uma das três redes, leia com atenção redobrada, porque esse tipo de linguagem absoluta costuma esconder a pegadinha.
+Se a questão disser que a intranet usa uma tecnologia diferente da internet, desconfie: ambas se baseiam no TCP/IP. Quando a banca usar termos como “exclusivamente” ou “somente” para limitar o conceito de uma das três redes, leia com atenção redobrada, porque esse tipo de linguagem absoluta costuma esconder a <strong class="cai-prova">pegadinha</strong>.
 
-Outra pegadinha frequente inverte extranet e intranet, apostando na distração do candidato. Se a banca afirmar que essa rede serve exclusivamente ao público interno da empresa, marque a questão como incorreta, porque essa é justamente a definição de intranet.
+Outra <strong class="cai-prova">pegadinha</strong> frequente inverte extranet e intranet, apostando na distração do candidato. Se a banca afirmar que essa rede serve exclusivamente ao público interno da empresa, marque a questão como incorreta, porque essa é justamente a definição de intranet.
 
 Na sua prova, sempre relacione a extranet à ideia de parceria externa autenticada. Esse é um detalhe que costuma confundir o candidato, mas que se resolve com uma pergunta simples: quem está acessando tem vínculo direto com a empresa, e esse acesso passa por login?
 

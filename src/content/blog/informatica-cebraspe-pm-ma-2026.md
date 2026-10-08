@@ -72,7 +72,7 @@ Guarde também estes pontos do Linux:
 -   Comandos básicos: `ls` lista, `cd` muda de pasta, `pwd` mostra o diretório atual, `cp` copia, `mv` move ou renomeia, `rm` remove e `mkdir` cria pasta.
 -   As permissões usam r (leitura), w (escrita) e x (execução), e o comando `chmod` altera esses valores.
 
-Não confunda os dois conceitos: a frase “o Linux funciona apenas em modo texto” é uma pegadinha clássica, e ela está errada. Além disso, note a palavra “apenas”, que acende o alerta.
+Não confunda os dois conceitos: a frase “o Linux funciona apenas em modo texto” é uma <strong class="cai-prova">pegadinha</strong> clássica, e ela está errada. Além disso, note a palavra “apenas”, que acende o alerta.
 
 Ainda no Windows, dê atenção ao Gerenciador de Tarefas (Ctrl + Shift + Esc), ao Explorador de Arquivos (Win + E) e à troca de janelas com Alt + Tab.
 
@@ -88,7 +88,7 @@ Revise estes pontos com calma:
 -   Extensão: ela aparece depois do ponto e indica o formato do arquivo, como .docx, .xlsx, .pdf e .jpg.
 -   Atalhos: Ctrl + C copia, Ctrl + X recorta, Ctrl + V cola, F2 renomeia e F5 atualiza a janela.
 
-Cuidado com a palavra “sempre”. Um item que afirme que todo arquivo apagado vai para a Lixeira está errado, e a banca costuma explorar exatamente isso. É aqui que aparece uma das principais pegadinhas do bloco.
+Cuidado com a palavra “sempre”. Um item que afirme que todo arquivo apagado vai para a Lixeira está errado, e a banca costuma explorar exatamente isso. É aqui que aparece uma das principais <strong class="cai-prova">pegadinhas</strong> do bloco.
 
 ## Dica 5: Treine o Office e o BrOffice lado a lado
 
@@ -102,7 +102,7 @@ Vale destacar que o Calc abre arquivos .xlsx e o Word abre arquivos .odt. Logo, 
 
 Nas planilhas, revise as funções que mais aparecem: SOMA, MÉDIA, MÁXIMO, MÍNIMO e SE. Em português, o Excel e o Calc separam os argumentos com ponto e vírgula, como em `=SOMA(A1:A5)`. Também guarde que o cifrão cria referência absoluta (`$A$1`) e que a tecla F4 alterna entre os tipos de referência.
 
-Outra pegadinha frequente envolve os atalhos em português. No Word em português, Ctrl + N aplica negrito e Ctrl + S aplica sublinhado, enquanto no inglês esses atalhos são Ctrl + B e Ctrl + U. Assim, memorize este ponto: a banca pode explorar justamente essa diferença.
+Outra <strong class="cai-prova">pegadinha</strong> frequente envolve os atalhos em português. No Word em português, Ctrl + N aplica negrito e Ctrl + S aplica sublinhado, enquanto no inglês esses atalhos são Ctrl + B e Ctrl + U. Assim, memorize este ponto: a banca pode explorar justamente essa diferença.
 
 ## Dica 6: Estude redes, Internet e navegadores pelo conceito, não pela versão
 

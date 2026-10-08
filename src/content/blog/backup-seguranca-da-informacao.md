@@ -103,7 +103,7 @@ Por esse motivo, o candidato precisa memorizar não só a definição, mas tamb�
 
 Portanto, estudar **backup** para concursos públicos exige mais do que decorar definições. O candidato precisa entender como cada tipo funciona, como ocorre a restauração e por que boas práticas como a regra 3-2-1 e os testes periódicos fazem tanta diferença.
 
-Por fim, revise os conceitos de completo, incremental e diferencial, compare suas vantagens e treine [questões contextualizadas](/simulado-seguranca-da-informacao/). Esse é o caminho mais seguro para acertar as pegadinhas de prova sobre segurança da informação.
+Por fim, revise os conceitos de completo, incremental e diferencial, compare suas vantagens e treine [questões contextualizadas](/simulado-seguranca-da-informacao/). Esse é o caminho mais seguro para acertar as <strong class="cai-prova">pegadinhas</strong> de prova sobre segurança da informação.
 
 ## Fontes e Referências
 

@@ -47,9 +47,9 @@ Esse é um erro clássico. O candidato vê uma afirmação que “parece” cert
 
 Em Informática, o Cebraspe gosta de testar o conceito e a precisão da linguagem. Ele raramente cobra decoreba pura.
 
-### Cobrança literal, conceitual e de pegadinha
+### Cobrança literal, conceitual e de <strong class="cai-prova">pegadinha</strong>
 
-Um observador experiente da banca avisa que o Cebraspe costuma trocar apenas um termo da afirmativa, o que a torna falsa por causa de uma palavra. Esse é o coração da pegadinha. A frase inteira parece correta, mas um termo muda o sentido.
+Um observador experiente da banca avisa que o Cebraspe costuma trocar apenas um termo da afirmativa, o que a torna falsa por causa de uma palavra. Esse é o coração da <strong class="cai-prova">pegadinha</strong>. A frase inteira parece correta, mas um termo muda o sentido.
 
 Na prova, a banca pode explorar justamente essa diferença entre dois conceitos parecidos. Por isso, estude os conceitos em pares: [backup incremental e diferencial](/backup-seguranca-da-informacao/), [vírus e worm](/malwares-e-ameacas-seguranca-da-informacao/), IMAP e POP3.
 

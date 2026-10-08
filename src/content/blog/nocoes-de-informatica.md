@@ -39,9 +39,9 @@ Na banca Cebraspe, você julga cada afirmação como certa ou errada. Aqui está
 
 Veja um exemplo. Se a banca afirma que o antivírus, sozinho, protege o computador contra qualquer ameaça, o item está errado. Nenhum programa oferece proteção total, e o termo “qualquer” ajuda você a desconfiar.
 
-### As pegadinhas que mais se repetem
+### As <strong class="cai-prova">pegadinhas</strong> que mais se repetem
 
-Dando continuidade, guarde estas quatro pegadinhas, porque elas aparecem em todos os blocos:
+Dando continuidade, guarde estas quatro <strong class="cai-prova">pegadinhas</strong>, porque elas aparecem em todos os blocos:
 
 -   Versão do programa: a função pode existir em uma versão e faltar em outra, então confira sempre o que a questão informa.
 -   Idioma do atalho: no Word em português, Ctrl+N aplica negrito, enquanto no inglês o negrito é Ctrl+B.
@@ -58,7 +58,7 @@ Inicialmente, o bloco de sistemas operacionais cobra o funcionamento do Windows 
 
 Comece pela introdução ao Windows 10 e 11 e pela aula sobre o sistema Windows 7, 10 e 11 para concursos. Depois, avance para o Linux: introdução para concursos e para os comandos básicos do Linux. Para fechar, compare os dois sistemas em Windows x Linux para concursos.
 
-Na prova, a pegadinha costuma estar na diferença entre eles. Guarde esta ideia: o Linux diferencia maiúsculas de minúsculas em nomes de arquivos e comandos, e o Windows não. Quando terminar, teste-se no [simulado de sistemas operacionais](/simulado-sistemas/).
+Na prova, a <strong class="cai-prova">pegadinha</strong> costuma estar na diferença entre eles. Guarde esta ideia: o Linux diferencia maiúsculas de minúsculas em nomes de arquivos e comandos, e o Windows não. Quando terminar, teste-se no [simulado de sistemas operacionais](/simulado-sistemas/).
 
 ### Edição de documentos: Word, Excel, PowerPoint e LibreOffice
 
@@ -115,11 +115,11 @@ Primeiramente, muitos candidatos decoram atalhos sem entender a função. Quando
 
 Além disso, alguns candidatos ignoram o Linux porque usam Windows no dia a dia. No entanto, o Linux aparece nos editais, e a matéria pede pelo menos os comandos básicos e a estrutura de diretórios.
 
-Da mesma forma, quem estuda por materiais antigos pode se confundir quando a prova cita a versão atual do programa. Por fim, o erro mais caro é estudar sem resolver questões. A teoria explica o assunto, mas só o treino mostra como a banca transforma esse assunto em pegadinha.
+Da mesma forma, quem estuda por materiais antigos pode se confundir quando a prova cita a versão atual do programa. Por fim, o erro mais caro é estudar sem resolver questões. A teoria explica o assunto, mas só o treino mostra como a banca transforma esse assunto em <strong class="cai-prova">pegadinha</strong>.
 
 ## Seu próximo passo nos estudos de noções de informática
 
-Portanto, as noções de informática funcionam como uma disciplina de base: cinco blocos, muita precisão e pegadinhas que se repetem. Quem entende a lógica de cada bloco e treina com questões enxerga o padrão da banca.
+Portanto, as noções de informática funcionam como uma disciplina de base: cinco blocos, muita precisão e <strong class="cai-prova">pegadinhas</strong> que se repetem. Quem entende a lógica de cada bloco e treina com questões enxerga o padrão da banca.
 
 Agora, escolha o primeiro bloco do seu edital, abra a aula correspondente e, ao terminar, resolva o simulado logo abaixo. São 40 itens no estilo Certo ou Errado, com gabarito comentado a cada clique e um relatório final que mostra em qual bloco você mais errou. Repita o ciclo até completar o mapa e volte a este guia sempre que precisar reorganizar os estudos.
 

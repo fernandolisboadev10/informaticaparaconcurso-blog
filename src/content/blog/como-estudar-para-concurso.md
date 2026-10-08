@@ -72,7 +72,7 @@ Em Informática, a ordem costuma seguir o peso que a banca dá a cada bloco, mas
 
 Comece pelo Windows, porque a banca gosta de cobrar o comportamento de arquivos e pastas. Se esse tema ainda gera dúvida, revise o conteúdo sobre [gerenciamento de arquivos e pastas](/informatica-concursos-gerenciamento-arquivos-pastas/) e treine com questões em seguida.
 
-Na sequência, vá para as planilhas e os editores de texto. O [Excel](/excel-em-concursos-publicos/) rende muitas questões de fórmula, e o [Word](/microsoft-word-para-concursos/) costuma trazer pegadinhas de atalho e formatação.
+Na sequência, vá para as planilhas e os editores de texto. O [Excel](/excel-em-concursos-publicos/) rende muitas questões de fórmula, e o [Word](/microsoft-word-para-concursos/) costuma trazer <strong class="cai-prova">pegadinhas</strong> de atalho e formatação.
 
 Por fim, reserve tempo para segurança e redes. Na segurança, a [regra de backup 3-2-1](/regra-3-2-1/) aparece com frequência, e em redes vale dominar a diferença entre [VPN, HTTP e HTTPS](/redes-de-computadores-para-concursos/). Se o edital cobra Linux, inclua também os [comandos e permissões do sistema](/linux-para-concursos/).
 
@@ -158,13 +158,13 @@ Esse é um detalhe que costuma custar caro. Veja os erros mais comuns e evite ca
 
 ## Como isso aparece na sua prova
 
-Agora veja como a banca transforma um assunto simples em pegadinha. Considere o item abaixo, no estilo Certo ou Errado:
+Agora veja como a banca transforma um assunto simples em <strong class="cai-prova">pegadinha</strong>. Considere o item abaixo, no estilo Certo ou Errado:
 
 “Em um computador com Windows, todo arquivo excluído de qualquer unidade é enviado à Lixeira e pode ser restaurado.”
 
 O item está **errado**. A palavra “todo”, somada a “qualquer unidade”, cria um absoluto. Arquivos apagados de um pendrive ou de uma pasta de rede, por exemplo, em geral não passam pela Lixeira.
 
-É aqui que aparece uma das principais pegadinhas: o candidato reconhece o conceito (a Lixeira guarda arquivos excluídos) e marca certo sem notar o exagero. Na sua prova, a banca pode explorar justamente essa diferença.
+É aqui que aparece uma das principais <strong class="cai-prova">pegadinhas</strong>: o candidato reconhece o conceito (a Lixeira guarda arquivos excluídos) e marca certo sem notar o exagero. Na sua prova, a banca pode explorar justamente essa diferença.
 
 ## Conclusão: seu plano para os próximos 15 dias
 

@@ -13,7 +13,7 @@ Antes de tudo, imagine a seguinte situação na sua prova: a banca [Cebraspe](/c
 
 Se a resposta não veio de forma imediata, este é o momento de fechar essa lacuna. Nas próximas linhas, você vai entender a função de cada tipo de memória, a diferença entre memória RAM, ROM e cache, e ainda a relação delas com a memória virtual e o desempenho do computador.
 
-Ao final, você vai resolver questões comentadas no estilo Cebraspe e treinar o olhar para identificar a pegadinha antes de marcar a resposta.
+Ao final, você vai resolver questões comentadas no estilo Cebraspe e treinar o olhar para identificar a <strong class="cai-prova">pegadinha</strong> antes de marcar a resposta.
 
 ### O que são memórias do computador?
 
@@ -78,7 +78,7 @@ Para entender melhor como a CPU se comunica com todos esses componentes, veja ta
 | Tecnologia comum | DRAM | Flash/EEPROM (nas versões atualizáveis) | SRAM |
 | Perde dados ao desligar? | Sim | Não | Sim |
 
-### Pegadinhas para evitar
+### <strong class="cai-prova">Pegadinhas</strong> para evitar
 
 Principalmente, memorize estas trocas que a banca costuma fazer:
 
@@ -97,7 +97,7 @@ Por fim, as memórias RAM, ROM e cache pedem que você estude pela função de c
 
 Além disso, não deixe de revisar a memória virtual, porque a banca gosta de testar se você sabe separar memória física de técnica de gerenciamento de memória.
 
-Consequentemente, sempre que a prova trouxer um item sobre hardware, volte a estes três pontos: volatilidade, função e velocidade. Esse hábito evita a maioria das pegadinhas e fortalece sua preparação para essa parte da prova.
+Consequentemente, sempre que a prova trouxer um item sobre hardware, volte a estes três pontos: volatilidade, função e velocidade. Esse hábito evita a maioria das <strong class="cai-prova">pegadinhas</strong> e fortalece sua preparação para essa parte da prova.
 
 Para continuar essa preparação, salve esta aula, resolva o quiz abaixo e treine mais no [simulado de hardware para concursos](/simulado-hardware/).
 

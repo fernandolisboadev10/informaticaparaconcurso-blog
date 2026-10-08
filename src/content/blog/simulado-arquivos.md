@@ -9,7 +9,7 @@ image: "./images/arquivos.webp"
 imageAlt: "Arquivos"
 ---
 
-Organização e gerenciamento de arquivos parecem simples à primeira vista, mas concentram diversas pegadinhas de prova, e este simulado de organização de arquivos comprova isso na prática. Ao longo de trinta questões comentadas, você revisa estrutura de pastas, extensões, compactação, backup e boas práticas de armazenamento, sempre no formato adotado por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Cada questão traz um comentário que esclarece o conceito por trás da resposta correta, o que ajuda a fixar o conteúdo de forma definitiva. Assim, você entende não apenas o que decorar, mas também o porquê de cada regra. Portanto, resolva este simulado de organização de arquivos antes de considerar o assunto encerrado.
+Organização e gerenciamento de arquivos parecem simples à primeira vista, mas concentram diversas <strong class="cai-prova">pegadinhas</strong> de prova, e este simulado de organização de arquivos comprova isso na prática. Ao longo de trinta questões comentadas, você revisa estrutura de pastas, extensões, compactação, backup e boas práticas de armazenamento, sempre no formato adotado por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Cada questão traz um comentário que esclarece o conceito por trás da resposta correta, o que ajuda a fixar o conteúdo de forma definitiva. Assim, você entende não apenas o que decorar, mas também o porquê de cada regra. Portanto, resolva este simulado de organização de arquivos antes de considerar o assunto encerrado.
 
 ## Estrutura de pastas e hierarquia: como o sistema organiza tudo
 

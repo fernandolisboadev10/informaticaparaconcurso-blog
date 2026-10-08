@@ -23,7 +23,7 @@ Repare que essa regra não aparece em nenhuma célula visível da tabela, ela mo
 
 ## O que a banca testa em cada função
 
-Todas as questões ao final do artigo usam a planilha acima. Antes de resolvê-las, revise os pontos em que a banca mais arma pegadinha.
+Todas as questões ao final do artigo usam a planilha acima. Antes de resolvê-las, revise os pontos em que a banca mais arma <strong class="cai-prova">pegadinha</strong>.
 
 **SOMA e MÉDIA.** A SOMA percorre o intervalo informado e soma os valores, e a MÉDIA divide o total pela quantidade de células. As duas só enxergam as células que você digitou entre parênteses. Um intervalo errado, como B2:F2 em vez de B2:E2, faz o Total ser contado dentro do próprio Total. Na MÉDIA, células vazias são ignoradas, e não contadas como zero.
 

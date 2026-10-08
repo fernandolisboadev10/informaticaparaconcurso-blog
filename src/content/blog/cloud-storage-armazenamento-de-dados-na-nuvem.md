@@ -66,7 +66,7 @@ Além do mais, o vazamento de credenciais expõe informações sigilosas a invas
 
 ## Cloud storage não é sinônimo de backup
 
-Vale destacar a relação entre nuvem e rotinas de contingência, porque essa é uma das principais pegadinhas das provas. Muitas vezes, a banca afirma que a nuvem cria cópias automáticas indestrutíveis dos seus arquivos. Essa afirmação, porém, está errada.
+Vale destacar a relação entre nuvem e rotinas de contingência, porque essa é uma das principais <strong class="cai-prova">pegadinhas</strong> das provas. Muitas vezes, a banca afirma que a nuvem cria cópias automáticas indestrutíveis dos seus arquivos. Essa afirmação, porém, está errada.
 
 Na prática, o cloud storage facilita as rotinas de [backup e segurança da informação](/backup-seguranca-da-informacao/), mas não substitui um backup planejado. Se você deletar um arquivo na pasta local por engano, o sistema de sincronização também apaga esse mesmo item no servidor remoto, já que ele apenas espelha as suas ações.
 
@@ -113,7 +113,7 @@ A responsabilidade é compartilhada. O provedor cuida da segurança física dos 
 
 Dominar o cloud storage exige atenção aos detalhes que separam um conceito do outro. Afinal, você precisa reconhecer os tipos de nuvem, distinguir as responsabilidades de segurança e entender por que a elasticidade é a característica que mais aparece em prova.
 
-Revise os conceitos do NIST com frequência e desconfie de qualquer alternativa que trate a nuvem como solução mágica e infalível contra perda de dados. Assim, você treina a interpretação e evita cair nas pegadinhas mais comuns das bancas.
+Revise os conceitos do NIST com frequência e desconfie de qualquer alternativa que trate a nuvem como solução mágica e infalível contra perda de dados. Assim, você treina a interpretação e evita cair nas <strong class="cai-prova">pegadinhas</strong> mais comuns das bancas.
 
 Agora que você já domina os conceitos de cloud storage, backup e segurança da informação, coloque o conhecimento à prova: resolva as dez questões comentadas logo abaixo e, na sequência, avance para o [simulado de Segurança da Informação](/simulado-seguranca-da-informacao/) com questões no estilo das principais bancas.
 

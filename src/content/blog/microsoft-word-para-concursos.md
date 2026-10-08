@@ -11,7 +11,7 @@ imageAlt: "Microsoft Word para Concursos"
 
 Se você estuda Microsoft Word para concursos, já percebeu que decorar botão por botão não resolve. A banca não quer saber se você usa o Word no dia a dia, quer saber se você entende a lógica do programa e se percebe quando uma afirmação está errada por um detalhe só.
 
-O Word aparece com frequência nas provas porque está presente na rotina administrativa de órgãos públicos, empresas e instituições de ensino. Nesta aula, você vai revisar interface, formatação, revisão colaborativa, atalhos e os pontos que mais geram pegadinha, sempre com o olhar de quem vai responder questão, não de quem só usa o editor no trabalho.
+O Word aparece com frequência nas provas porque está presente na rotina administrativa de órgãos públicos, empresas e instituições de ensino. Nesta aula, você vai revisar interface, formatação, revisão colaborativa, atalhos e os pontos que mais geram <strong class="cai-prova">pegadinha</strong>, sempre com o olhar de quem vai responder questão, não de quem só usa o editor no trabalho.
 
 ## O que é o Word e como ele aparece na prova
 
@@ -19,15 +19,15 @@ O Microsoft Word é um editor de textos. Ele serve para criar, editar, revisar, 
 
 Na prática, o Word é voltado para textos, embora também permita inserir tabelas, imagens, símbolos, hiperlinks e outros elementos visuais dentro do documento. Não confunda essa flexibilidade com a função principal do programa.
 
-As questões de Word costumam seguir três caminhos. Primeiramente, aparecem conceitos diretos: função do programa, [formatos de arquivo](/tipos-de-arquivo/), principais guias. Em seguida, o foco recai sobre produtividade, com atalhos de teclado e comandos de revisão. Por fim, o caminho mais perigoso são as pegadinhas de interface: colagem, cabeçalho, rodapé, quebra de página e formatação.
+As questões de Word costumam seguir três caminhos. Primeiramente, aparecem conceitos diretos: função do programa, [formatos de arquivo](/tipos-de-arquivo/), principais guias. Em seguida, o foco recai sobre produtividade, com atalhos de teclado e comandos de revisão. Por fim, o caminho mais perigoso são as <strong class="cai-prova">pegadinhas</strong> de interface: colagem, cabeçalho, rodapé, quebra de página e formatação.
 
 Por isso, estudar Word para concurso não significa decorar comandos. Significa entender o que cada ferramenta faz dentro do documento e, principalmente, identificar como a banca tenta confundir o candidato trocando nomes de guias, atalhos ou funções.
 
-## Interface do Word: onde as bancas escondem as pegadinhas
+## Interface do Word: onde as bancas escondem as <strong class="cai-prova">pegadinhas</strong>
 
 A interface do Word reúne elementos que aparecem com frequência nas questões: barra de título, barra de ferramentas de acesso rápido, faixa de opções, régua, área de edição e barra de status.
 
-A faixa de opções organiza os recursos em guias como Página Inicial, Inserir, Layout, Referências, Correspondências, Revisão e Exibir. Guarde esta ideia, porque é justamente aqui que mora uma das pegadinhas mais repetidas: a banca afirma que margens e orientação da página são configuradas na guia Inserir. Está errado.
+A faixa de opções organiza os recursos em guias como Página Inicial, Inserir, Layout, Referências, Correspondências, Revisão e Exibir. Guarde esta ideia, porque é justamente aqui que mora uma das <strong class="cai-prova">pegadinhas</strong> mais repetidas: a banca afirma que margens e orientação da página são configuradas na guia Inserir. Está errado.
 
 Esses comandos ficam em Layout (ou Layout da Página, dependendo da versão), enquanto a guia Inserir serve para adicionar elementos como tabelas, imagens, cabeçalhos, rodapés e hiperlinks. Na sua prova, sempre que a questão misturar “configurar página” com “inserir elemento”, desconfie: são guias diferentes.
 
@@ -84,7 +84,7 @@ Os atalhos são campeões de cobrança em informática, mas decorar combinação
 
 ### Tabela de comandos: Microsoft Word para concursos
 
-Atalhos organizados por bloco de função, com destaque em rosa para as pegadinhas clássicas de concurso.
+Atalhos organizados por bloco de função, com destaque em rosa para as <strong class="cai-prova">pegadinhas</strong> clássicas de concurso.
 
 | Atalho | Função | Observação para a prova |
 | --- | --- | --- |
@@ -113,7 +113,7 @@ Atalhos organizados por bloco de função, com destaque em rosa para as pegadinh
 | F9 | Atualizar sumário | Atualiza campos, como o sumário automático. |
 | Ctrl + Shift + E | Controle de Alterações | Ativa ou desativa o registro de alterações. |
 
-Atalho consolidado Pegadinha recorrente de prova
+Atalho consolidado <strong class="cai-prova">Pegadinha</strong> recorrente de prova
 
 Aqui está um ponto que merece atenção redobrada: no Word em português, Ctrl + S não salva o documento. Ele sublinha o texto selecionado. Essa troca acontece porque o programa mapeia as teclas pela primeira letra da função em português, então Negrito fica em Ctrl + N, Itálico em Ctrl + I e Sublinhado em Ctrl + S, enquanto salvar herdou o Ctrl + B. Não confunda os dois conceitos: se a banca apresentar Ctrl + S como atalho de salvar, a questão está errada.
 
@@ -121,7 +121,7 @@ O mesmo raciocínio vale para abrir e criar documentos. Na sua prova, se aparece
 
 ### Atalhos em português x inglês
 
-A pegadinha vem de os atalhos mudarem com o idioma do programa. Compare os que mais diferem:
+A <strong class="cai-prova">pegadinha</strong> vem de os atalhos mudarem com o idioma do programa. Compare os que mais diferem:
 
 | Ação | Word em português | Word em inglês |
 | --- | --- | --- |
@@ -136,7 +136,7 @@ O Itálico (Ctrl + I), o Copiar (Ctrl + C), o Colar (Ctrl + V), o Recortar (Ctrl
 
 No entanto, se o seu foco é nível intermediário, vale dominar também o Pincel de Formatação, acionado por Ctrl + Shift + C e Ctrl + Shift + V, que copia e aplica formatação dentro do próprio documento. A melhor postura para concurso é entender que versões e configurações diferentes do Word podem alterar o comportamento de certos atalhos. Aliás, o programa também permite personalizar atalhos de teclado, o que pode virar questão em provas mais detalhistas.
 
-## Colagem de texto: onde mora a pegadinha atualizada
+## Colagem de texto: onde mora a <strong class="cai-prova">pegadinha</strong> atualizada
 
 Um dos temas mais atuais no Word é o comportamento da colagem. O programa mantém opções para controlar como o texto será colado, permitindo escolher entre manter a formatação original, mesclar formatação ou colar apenas texto.
 
@@ -154,7 +154,7 @@ Estudar Microsoft Word para concursos de forma estratégica significa compreende
 
 Em vez de estudar o Word como usuário casual, trate o programa como conteúdo de prova: observe os nomes exatos das guias, as funções dos comandos e as diferenças entre atalhos básicos e avançados. Com esta aula, você já tem uma base bem mais sólida para enfrentar questões intermediárias sobre o editor.
 
-O próximo passo é praticar com exercícios comentados, porque é na resolução que as pegadinhas ficam realmente visíveis. Se quiser consolidar tudo o que foi visto nesta aula antes de seguir para [Excel](/excel-em-concursos-publicos/) e [PowerPoint](/powerpoint-o-que-cai-nos-concursos/), vale passar pelo nosso [simulado de Office](/simulado-office/).
+O próximo passo é praticar com exercícios comentados, porque é na resolução que as <strong class="cai-prova">pegadinhas</strong> ficam realmente visíveis. Se quiser consolidar tudo o que foi visto nesta aula antes de seguir para [Excel](/excel-em-concursos-publicos/) e [PowerPoint](/powerpoint-o-que-cai-nos-concursos/), vale passar pelo nosso [simulado de Office](/simulado-office/).
 
 -   ![Cebraspe](./images/Cebraspe-150x150.webp)
     

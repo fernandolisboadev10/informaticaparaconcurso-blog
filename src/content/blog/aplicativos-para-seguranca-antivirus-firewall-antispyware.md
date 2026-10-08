@@ -15,7 +15,7 @@ Primeiramente, se você estuda para concurso já percebeu: a banca não pergunta
 
 Por isso, dominar os aplicativos de segurança vai muito além de decorar uma definição solta. Você precisa saber, com segurança, onde termina a função de cada ferramenta e onde começa a próxima.
 
-Nesta aula, você vai entender como antivírus, firewall e anti-spyware se complementam, quais são os limites de cada um e onde normalmente aparece a pegadinha na hora da prova.
+Nesta aula, você vai entender como antivírus, firewall e anti-spyware se complementam, quais são os limites de cada um e onde normalmente aparece a <strong class="cai-prova">pegadinha</strong> na hora da prova.
 
 ![](./images/Camadas-de-Protecao-Digital-1024x683.webp)
 
@@ -29,7 +29,7 @@ Cabe destacar, ainda, que a atualização constante faz parte da proteção. Com
 
 Guarde esta ideia: a banca costuma testar exatamente essa lógica de camadas, cobrando se você sabe separar a função de uma ferramenta da função da outra.
 
-### Antivírus: como funciona e onde mora a pegadinha
+### Antivírus: como funciona e onde mora a <strong class="cai-prova">pegadinha</strong>
 
 Para começar, o antivírus é o aplicativo responsável por identificar, bloquear e remover [malware](/malwares-e-ameacas-seguranca-da-informacao/), entre eles vírus, worms, trojans e outras pragas digitais. Ele reconhece essas ameaças por três caminhos principais.
 
@@ -101,7 +101,7 @@ Consequentemente, essas soluções não substituem o antivírus nem o firewall. 
 
 Em resumo, as bancas costumam cobrar três funções centrais: o antivírus protege contra malware, o firewall controla o tráfego de rede, e o anti-spyware combate programas espiões.
 
-Não apenas isso, também aparecem pegadinhas sobre atualização, sobre abrangência da proteção e sobre a diferença entre prevenção e remoção. Sempre que a questão afirmar que uma ferramenta “garante” ou “elimina totalmente” algum risco, vale desconfiar.
+Não apenas isso, também aparecem <strong class="cai-prova">pegadinhas</strong> sobre atualização, sobre abrangência da proteção e sobre a diferença entre prevenção e remoção. Sempre que a questão afirmar que uma ferramenta “garante” ou “elimina totalmente” algum risco, vale desconfiar.
 
 ## Perguntas frequentes
 
@@ -129,7 +129,7 @@ _Não. O antivírus reduz o risco de infecção, mas não substitui firewall, ba
 
 Por fim, os aplicativos de segurança formam uma rede de proteção em camadas, e cada um assume uma responsabilidade diferente dentro dessa rede. O **antivírus** cuida do malware, o **firewall** cuida do tráfego, e o **anti-spyware** cuida da espionagem digital.
 
-Portanto, revise as funções de cada ferramenta, treine as pegadinhas mais comuns e teste o que você aprendeu no [simulado de segurança da informação](/simulado-seguranca-da-informacao/) para chegar mais seguro na sua prova.
+Portanto, revise as funções de cada ferramenta, treine as <strong class="cai-prova">pegadinhas</strong> mais comuns e teste o que você aprendeu no [simulado de segurança da informação](/simulado-seguranca-da-informacao/) para chegar mais seguro na sua prova.
 
 ## Fontes e referências
 
