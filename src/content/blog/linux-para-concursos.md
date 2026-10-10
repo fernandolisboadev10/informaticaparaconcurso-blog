@@ -37,13 +37,13 @@ Em seguida, você precisa entender o que são as distribuições. Cada uma reún
 
 Na prática, isso significa que o Linux nunca aparece de uma única forma. Embora todas as distribuições mantenham a mesma lógica central, cada uma organiza pacotes, interface e filosofia de um jeito próprio. Conheça as principais, com o link oficial de cada uma; vale a pena visitar ao menos uma vez, para associar o nome à cara real do sistema:
 
--   Ubuntu: distribuição popular, amigável e muito usada por iniciantes;
--   Debian: distribuição estável, conhecida por servir de base para outros projetos (o próprio Ubuntu deriva dela);
--   Fedora: distribuição moderna, com foco em tecnologias recentes;
--   Red Hat Enterprise Linux: distribuição comercial, muito presente em ambientes corporativos e servidores;
--   Slackware: uma das distribuições mais antigas ainda ativas, citada com frequência em materiais introdutórios;
--   Linux Mint: distribuição amigável, bastante usada em desktops;
--   Arch Linux: voltada para usuários experientes, com foco em personalização total do sistema.
+-   <span class="cai-prova">Ubuntu</span>: distribuição popular, amigável e muito usada por iniciantes;
+-   <span class="cai-prova">Debian</span>: distribuição estável, conhecida por servir de base para outros projetos (o próprio Ubuntu deriva dela);
+-   <span class="cai-prova">Fedora</span>: distribuição moderna, com foco em tecnologias recentes;
+-   <span class="cai-prova">Red Hat Enterprise Linux</span>: distribuição comercial, muito presente em ambientes corporativos e servidores;
+-   <span class="cai-prova">Slackware</span>: uma das distribuições mais antigas ainda ativas, citada com frequência em materiais introdutórios;
+-   <span class="cai-prova">Linux Mint</span>: distribuição amigável, bastante usada em desktops;
+-   <span class="cai-prova">Arch Linux</span>: voltada para usuários experientes, com foco em personalização total do sistema.
 
 Guarde este ponto: quando a banca cita “distribuições Linux” como sinônimo de “Linux”, ela normalmente está certa em um sentido amplo, afinal, é assim que o usuário comum se refere ao sistema. O erro só aparece quando o enunciado confunde o conceito técnico de kernel com o conceito comercial de distribuição.
 
