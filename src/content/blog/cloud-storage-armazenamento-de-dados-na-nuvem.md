@@ -3,7 +3,7 @@ title: "Cloud Storage: o Guia Completo de Armazenamento de Dados na Nuvem para C
 description: "Entenda armazenamento de dados na nuvem para concursos: tipos NIST, vantagens, riscos de segurança e questões comentadas de bancas reais."
 category: "Segurança"
 date: 2026-07-30T20:24:59-03:00
-updated: 2026-09-28T23:29:49Z
+updated: 2026-10-10T10:30:00-03:00
 readingTime: "12 min"
 image: "./images/Cloud-Storage.webp"
 imageAlt: "Cloud Storage"
@@ -27,7 +27,7 @@ Justamente por isso, o cloud storage oferece grande flexibilidade: você aumenta
 
 ## Formas de implantação: os tipos de nuvem segundo o NIST
 
-![tipos de nuvem segundo o NIST](./images/tipos-de-nuvem-1024x683.webp)
+![Infográfico dos tipos de nuvem segundo o NIST: pública, privada, híbrida e comunitária, com quem usa, quem administra e exemplos reais de cada uma](./images/tipos-de-nuvem-publica-privada-hibrida-comunitaria.webp)
 
 Em seguida, você precisa conhecer as formas de implantação que o NIST (National Institute of Standards and Technology) descreve na sua arquitetura de referência para computação em nuvem. Com essa base teórica, fica muito mais fácil acertar as questões conceituais, já que a maioria delas cobra justamente a definição de cada modelo.
 

@@ -3,7 +3,7 @@ title: "SaaS, PaaS e IaaS: diferenças e como cai em concurso"
 description: "SaaS, PaaS e IaaS: entenda a diferença entre os modelos de serviço em nuvem, quem gerencia cada camada e as pegadinhas que cobram na prova."
 category: "Redes"
 date: 2026-09-24T00:17:25-03:00
-updated: 2026-09-24T00:46:56Z
+updated: 2026-10-10T10:45:00-03:00
 readingTime: "8 min"
 image: "./images/saas-paas-e-iaas.webp"
 imageAlt: "SaaS, PaaS e IaaS"
@@ -62,11 +62,13 @@ Você usa SaaS todos os dias:
 -   Google Drive
 -   Dropbox
 
-![](./images/saas-paas-iaas-exemplos-1024x683.webp)
+![Exemplos reais de SaaS (Gmail, Microsoft 365, Google Drive), PaaS (Vercel, Heroku, Google App Engine) e IaaS (Amazon EC2, Azure Virtual Machines, Google Compute Engine)](./images/saas-paas-iaas-exemplos-1024x683.webp)
 
 ## SaaS, PaaS e IaaS lado a lado
 
 Agora, compare os três modelos na mesma tela. Na prova, a banca pode explorar justamente essa diferença de responsabilidades.
+
+![Infográfico de SaaS, PaaS e IaaS mostrando, camada por camada, o que o cliente gerencia e o que fica com o provedor, com exemplos reais de cada modelo](./images/saas-paas-iaas-quem-gerencia-cada-camada.webp)
 
 ### Tabela comparativa
 
