@@ -1,6 +1,7 @@
 ---
 export interface Question {
   banca?: string;
+  module?: string;
   type: 'ce' | 'mc';
   text: string;
   options?: string[];
@@ -11,32 +12,44 @@ export interface Question {
 interface Props {
   questions: Question[];
   title?: string;
+  // 'instant': feedback right after each answer. 'final': nothing is revealed until the reader
+  // finishes; then score, per-module performance and the commented answer key appear below.
+  mode?: 'instant' | 'final';
 }
 
-const { questions, title = 'Questões comentadas' } = Astro.props;
+const { questions, title = 'Questões comentadas', mode = 'instant' } = Astro.props;
+const final = mode === 'final';
 const total = questions.length;
 const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
-const answerLabel = (q: Question) =>
+const optionLabel = (q: Question, value: string) =>
   q.type === 'ce'
-    ? q.answer === 'C'
+    ? value === 'C'
       ? 'Certo'
       : 'Errado'
-    : `${q.answer}) ${(q.options ?? [])[letters.indexOf(q.answer)] ?? ''}`.trim();
+    : `${value}) ${(q.options ?? [])[letters.indexOf(value)] ?? ''}`.trim();
+const answerLabel = (q: Question) => optionLabel(q, q.answer);
 ---
-<section class="quiz" id="questoes" data-total={total} aria-labelledby="quiz-title">
-  <noscript><style>.quiz .q-fb[hidden] { display: block !important; } .quiz-bar, .quiz-reset { display: none; }</style></noscript>
+<section class="quiz" id="questoes" data-total={total} data-mode={mode} aria-labelledby="quiz-title">
+  <noscript><style>.quiz .q-fb[hidden], .quiz .gabarito[hidden] { display: block !important; } .quiz-bar, .quiz-reset, .quiz-submit { display: none; }</style></noscript>
   <h2 id="quiz-title">{title}</h2>
-  <p class="quiz-intro">
-    {total} questões para você responder agora. Escolha uma alternativa para ver o gabarito e o comentário na hora.
-  </p>
+  {final ? (
+    <p class="quiz-intro">
+      {total} questões para você responder do início ao fim. Escolha uma alternativa em cada item, ou deixe em branco se
+      não souber. O resultado, a sua nota e o gabarito comentado só aparecem depois que você clicar em “Ver resultado”.
+    </p>
+  ) : (
+    <p class="quiz-intro">
+      {total} questões para você responder agora. Escolha uma alternativa para ver o gabarito e o comentário na hora.
+    </p>
+  )}
   <div class="quiz-bar" role="status" aria-live="polite">
     <span><strong data-answered>0</strong> de {total} respondidas</span>
-    <span>Acertos: <strong data-hits>0</strong></span>
+    {!final && <span>Acertos: <strong data-hits>0</strong></span>}
   </div>
 
   <ol class="quiz-list">
     {questions.map((q, i) => (
-      <li class="q" data-answer={q.answer}>
+      <li class="q" data-answer={q.answer} data-module={q.module}>
         <div class="q-head">
           <span class="q-num">Questão {i + 1}</span>
           {q.banca && <span class="q-banca">{q.banca}</span>}
@@ -45,29 +58,73 @@ const answerLabel = (q: Question) =>
         <div class="q-opts" role="group" aria-label={`Alternativas da questão ${i + 1}`}>
           {q.type === 'ce'
             ? [['C', 'Certo'], ['E', 'Errado']].map(([v, label]) => (
-                <button type="button" class="q-opt q-opt-ce" data-value={v}>{label}</button>
+                <button type="button" class="q-opt q-opt-ce" data-value={v} data-label={label} aria-pressed="false">{label}</button>
               ))
             : (q.options ?? []).map((opt, k) => (
-                <button type="button" class="q-opt q-opt-mc" data-value={letters[k]}>
+                <button type="button" class="q-opt q-opt-mc" data-value={letters[k]} data-label={optionLabel(q, letters[k])} aria-pressed="false">
                   <span class="q-letter">{letters[k]}</span>
                   <span>{opt}</span>
                 </button>
               ))}
         </div>
-        <div class="q-fb" hidden>
-          <p class="q-status"></p>
-          <p class="q-res"><strong>Resposta correta:</strong> {answerLabel(q)}</p>
-          {q.comment && <p class="q-com">{q.comment}</p>}
-        </div>
+        {!final && (
+          <div class="q-fb" hidden>
+            <p class="q-status"></p>
+            <p class="q-res"><strong>Resposta correta:</strong> {answerLabel(q)}</p>
+            {q.comment && <p class="q-com">{q.comment}</p>}
+          </div>
+        )}
       </li>
     ))}
   </ol>
 
+  {final && (
+    <div class="quiz-submit">
+      <p class="quiz-hint" data-hint>Responda no seu ritmo. Itens em branco valem zero.</p>
+      <button type="button" class="quiz-finish">Ver resultado</button>
+    </div>
+  )}
+
   <div class="quiz-result" hidden>
     <p class="quiz-score"></p>
     <p class="quiz-msg"></p>
+    {final && (
+      <>
+        <dl class="quiz-stats">
+          <div><dt>Acertos</dt><dd data-stat="hits">0</dd></div>
+          <div><dt>Erros</dt><dd data-stat="wrong">0</dd></div>
+          <div><dt>Em branco</dt><dd data-stat="blank">0</dd></div>
+          <div><dt>Nota (acertos − erros)</dt><dd data-stat="net">0</dd></div>
+        </dl>
+        <h3 class="quiz-sub">Desempenho por módulo</h3>
+        <ul class="quiz-modules"></ul>
+        <p class="quiz-focus"></p>
+      </>
+    )}
   </div>
-  <button type="button" class="quiz-reset" hidden>Refazer questões</button>
+
+  {final && (
+    <section class="gabarito" hidden aria-labelledby="gabarito-title">
+      <h2 id="gabarito-title">Gabarito comentado</h2>
+      <label class="g-filter"><input type="checkbox" data-only-wrong /> Mostrar só os itens que errei ou deixei em branco</label>
+      <ol class="g-list">
+        {questions.map((q, i) => (
+          <li class="g">
+            <div class="g-head">
+              <span class="q-num">Questão {i + 1}</span>
+              {q.module && <span class="q-banca">{q.module}</span>}
+              <span class="g-chip"></span>
+            </div>
+            <p class="q-text">{q.text}</p>
+            <p class="g-line"><strong>Sua resposta:</strong> <span class="g-yours"></span></p>
+            <p class="g-line"><strong>Gabarito:</strong> {answerLabel(q)}</p>
+            {q.comment && <p class="q-com">{q.comment}</p>}
+          </li>
+        ))}
+      </ol>
+    </section>
+  )}
+  <button type="button" class="quiz-reset" hidden>{final ? 'Refazer simulado' : 'Refazer questões'}</button>
 </section>
 
 <script>
@@ -82,6 +139,169 @@ const answerLabel = (q: Question) =>
     const reset = quiz.querySelector<HTMLButtonElement>('.quiz-reset')!;
     let answered = 0;
     let hits = 0;
+
+    if (quiz.dataset.mode === 'final') {
+      const picks = new Map<HTMLElement, string>();
+      const finish = quiz.querySelector<HTMLButtonElement>('.quiz-finish')!;
+      const hint = quiz.querySelector<HTMLElement>('[data-hint]')!;
+      const gabarito = quiz.querySelector<HTMLElement>('.gabarito')!;
+      const gList = quiz.querySelector<HTMLElement>('.g-list')!;
+      const onlyWrong = quiz.querySelector<HTMLInputElement>('[data-only-wrong]')!;
+      const gItems = Array.from(quiz.querySelectorAll<HTMLElement>('.g'));
+      const modulesEl = quiz.querySelector<HTMLElement>('.quiz-modules')!;
+      const focusEl = quiz.querySelector<HTMLElement>('.quiz-focus')!;
+      const stat = (k: string) => quiz.querySelector<HTMLElement>(`[data-stat="${k}"]`)!;
+      let finished = false;
+
+      const refresh = () => {
+        const left = total - picks.size;
+        answeredEl.textContent = String(picks.size);
+        hint.textContent =
+          left === 0
+            ? 'Tudo respondido. Pode conferir o seu resultado.'
+            : `Faltam ${left} ${left === 1 ? 'questão' : 'questões'}. Itens em branco valem zero, e você pode finalizar quando quiser.`;
+        reset.hidden = picks.size === 0 && !finished;
+      };
+
+      items.forEach((item) => {
+        const buttons = Array.from(item.querySelectorAll<HTMLButtonElement>('.q-opt'));
+        buttons.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            if (finished) return;
+            const value = btn.dataset.value!;
+            const again = picks.get(item) === value;
+            if (again) picks.delete(item);
+            else picks.set(item, value);
+            buttons.forEach((b) => {
+              const on = !again && b === btn;
+              b.classList.toggle('is-selected', on);
+              b.setAttribute('aria-pressed', String(on));
+            });
+            refresh();
+          });
+        });
+      });
+
+      onlyWrong.addEventListener('change', () => gList.classList.toggle('only-wrong', onlyWrong.checked));
+
+      finish.addEventListener('click', () => {
+        if (finished) return;
+        finished = true;
+        let wrong = 0;
+        let blank = 0;
+        const mods = new Map<string, { hits: number; total: number }>();
+
+        items.forEach((item, i) => {
+          const pick = picks.get(item);
+          const correct = item.dataset.answer;
+          const state = pick === undefined ? 'blank' : pick === correct ? 'right' : 'wrong';
+          if (state === 'right') hits += 1;
+          else if (state === 'wrong') wrong += 1;
+          else blank += 1;
+          const mod = item.dataset.module;
+          if (mod) {
+            const m = mods.get(mod) ?? { hits: 0, total: 0 };
+            m.total += 1;
+            if (state === 'right') m.hits += 1;
+            mods.set(mod, m);
+          }
+          item.classList.add('done');
+          if (state !== 'blank') item.classList.add(state);
+          item.querySelectorAll<HTMLButtonElement>('.q-opt').forEach((b) => {
+            b.disabled = true;
+            if (b.dataset.value === correct) b.classList.add('is-right');
+            else if (b.dataset.value === pick) b.classList.add('is-wrong');
+          });
+          const g = gItems[i];
+          g.classList.add(state === 'right' ? 'ok' : state);
+          g.querySelector<HTMLElement>('.g-chip')!.textContent =
+            state === 'right' ? '✓ Acertou' : state === 'wrong' ? '✗ Errou' : '— Em branco';
+          g.querySelector<HTMLElement>('.g-yours')!.textContent =
+            pick === undefined
+              ? 'não respondida'
+              : (item.querySelector<HTMLElement>(`.q-opt[data-value="${pick}"]`)?.dataset.label ?? pick);
+        });
+
+        const net = hits - wrong;
+        const pct = Math.round((hits / total) * 100);
+        const netPct = (net / total) * 100;
+        scoreEl.textContent = `Você acertou ${hits} de ${total} questões (${pct}%).`;
+        msgEl.textContent =
+          netPct >= 75
+            ? 'Excelente! Você chega à prova com o conteúdo na ponta da língua.'
+            : netPct >= 50
+              ? 'Muito bom! Releia os comentários dos itens que errou e fique atento às palavras absolutas.'
+              : netPct >= 25
+                ? 'Bom caminho, mas ainda há pontos a ganhar. Revise os módulos mais fracos antes da prova.'
+                : 'Atenção: revise o conteúdo dos módulos com mais erros e refaça o simulado depois.';
+        stat('hits').textContent = String(hits);
+        stat('wrong').textContent = String(wrong);
+        stat('blank').textContent = String(blank);
+        stat('net').textContent = String(net);
+
+        modulesEl.textContent = '';
+        let weakName = '';
+        let weakRatio = 1;
+        mods.forEach((m, name) => {
+          const ratio = m.hits / m.total;
+          if (ratio < weakRatio) {
+            weakRatio = ratio;
+            weakName = name;
+          }
+          const li = document.createElement('li');
+          const label = document.createElement('span');
+          label.className = 'mod-name';
+          label.textContent = name;
+          const val = document.createElement('span');
+          val.className = 'mod-val';
+          val.textContent = `${m.hits} de ${m.total}`;
+          const bar = document.createElement('span');
+          bar.className = 'mod-bar';
+          const fill = document.createElement('span');
+          fill.className = 'mod-fill ' + (ratio >= 0.7 ? 'hi' : ratio >= 0.5 ? 'mid' : 'lo');
+          fill.style.width = `${Math.round(ratio * 100)}%`;
+          bar.appendChild(fill);
+          li.append(label, val, bar);
+          modulesEl.appendChild(li);
+        });
+        focusEl.textContent = weakName
+          ? `Por onde recomeçar a revisão: ${weakName}.`
+          : 'Você acertou todos os módulos. Mantenha o ritmo e descanse bem.';
+
+        result.hidden = false;
+        gabarito.hidden = false;
+        finish.hidden = true;
+        hint.hidden = true;
+        reset.hidden = false;
+        result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      reset.addEventListener('click', () => {
+        finished = false;
+        hits = 0;
+        picks.clear();
+        items.forEach((item) => {
+          item.classList.remove('done', 'right', 'wrong');
+          item.querySelectorAll<HTMLButtonElement>('.q-opt').forEach((b) => {
+            b.disabled = false;
+            b.classList.remove('is-selected', 'is-right', 'is-wrong');
+            b.setAttribute('aria-pressed', 'false');
+          });
+        });
+        gItems.forEach((g) => g.classList.remove('ok', 'wrong', 'blank'));
+        onlyWrong.checked = false;
+        gList.classList.remove('only-wrong');
+        result.hidden = true;
+        gabarito.hidden = true;
+        finish.hidden = false;
+        hint.hidden = false;
+        refresh();
+        quiz.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      refresh();
+      return;
+    }
 
     const update = () => {
       answeredEl.textContent = String(answered);
@@ -380,6 +600,239 @@ const answerLabel = (q: Question) =>
     color: var(--ink-soft);
   }
 
+  .quiz-result {
+    scroll-margin-top: 120px;
+  }
+
+  .q-opt.is-selected {
+    border-color: var(--violet);
+    background: var(--surface);
+    color: var(--ink-strong);
+    box-shadow: inset 0 0 0 1px var(--violet);
+  }
+
+  .q-opt.is-selected .q-letter {
+    background: var(--violet);
+    color: #fff;
+  }
+
+  .quiz-submit {
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .quiz-hint {
+    margin: 0 0 12px;
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+  }
+
+  .quiz-finish {
+    padding: 12px 28px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--violet);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .quiz-finish:hover {
+    filter: brightness(1.1);
+  }
+
+  .quiz-finish:focus-visible {
+    outline: 2px solid var(--violet);
+    outline-offset: 3px;
+  }
+
+  .quiz-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 18px 0 0;
+  }
+
+  .quiz-stats div {
+    padding: 10px 6px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--bg);
+  }
+
+  .quiz-stats dt {
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+  }
+
+  .quiz-stats dd {
+    margin: 2px 0 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--ink-strong);
+  }
+
+  .quiz-sub {
+    margin: 22px 0 10px;
+    font-size: 1rem;
+  }
+
+  .quiz-modules {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .quiz-modules :global(li) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 12px;
+    font-size: 0.92rem;
+  }
+
+  .quiz-modules :global(.mod-name) {
+    color: var(--ink-strong);
+  }
+
+  .quiz-modules :global(.mod-val) {
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .quiz-modules :global(.mod-bar) {
+    grid-column: 1 / -1;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--line);
+    overflow: hidden;
+  }
+
+  .quiz-modules :global(.mod-fill) {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+  }
+
+  .quiz-modules :global(.mod-fill.hi) {
+    background: var(--ok);
+  }
+
+  .quiz-modules :global(.mod-fill.mid) {
+    background: var(--violet);
+  }
+
+  .quiz-modules :global(.mod-fill.lo) {
+    background: var(--bad);
+  }
+
+  .quiz-focus {
+    margin: 16px 0 0;
+    font-weight: 600;
+    color: var(--ink-strong);
+  }
+
+  .gabarito {
+    margin-top: 36px;
+  }
+
+  .g-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+
+  .g-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .g-list.only-wrong .g.ok {
+    display: none;
+  }
+
+  .g {
+    padding: 16px 18px;
+    border: 1px solid var(--line);
+    border-left-width: 4px;
+    border-radius: 12px;
+    background: var(--surface);
+  }
+
+  .g.ok {
+    border-left-color: var(--ok);
+  }
+
+  .g.wrong {
+    border-left-color: var(--bad);
+  }
+
+  .g.blank {
+    border-left-color: var(--ink-soft);
+  }
+
+  .g-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .g-chip {
+    margin-left: auto;
+    letter-spacing: 0;
+    text-transform: none;
+    font-size: 0.85rem;
+  }
+
+  .g.ok .g-chip {
+    color: var(--ok);
+  }
+
+  .g.wrong .g-chip {
+    color: var(--bad);
+  }
+
+  .g.blank .g-chip {
+    color: var(--ink-soft);
+  }
+
+  .g-line {
+    margin: 0 0 4px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  .g .q-text {
+    margin-bottom: 10px;
+  }
+
+  .g .q-com {
+    margin: 10px 0 0;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: var(--bg);
+    font-size: 0.92rem;
+    color: var(--ink);
+  }
+
   .quiz-reset {
     display: block;
     margin: 18px auto 0;
@@ -406,6 +859,10 @@ const answerLabel = (q: Question) =>
     .q-opt-ce {
       flex: 1;
       min-width: 0;
+    }
+
+    .quiz-stats {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .quiz-bar {

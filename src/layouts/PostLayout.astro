@@ -28,7 +28,7 @@ interface Props {
 const { title, description, category, date, updated, related, tags, readingTime, image, imageAlt, prev, next } = Astro.props;
 
 // Questões interativas ficam em src/data/quizzes/<slug>.json e são exibidas no final do artigo.
-const quizzes = import.meta.glob<{ default: { questions: Question[] } }>('../data/quizzes/*.json', { eager: true });
+const quizzes = import.meta.glob<{ default: { questions: Question[]; mode?: 'instant' | 'final'; title?: string } }>('../data/quizzes/*.json', { eager: true });
 const quiz = quizzes[`../data/quizzes/${Astro.props.slug}.json`]?.default;
 
 const formattedDate = date.toLocaleDateString('pt-BR', {
@@ -88,7 +88,7 @@ const articleSchema = {
       <slot />
     </div>
 
-    {quiz && <Quiz questions={quiz.questions} />}
+    {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
 
     <PostNav prev={prev} next={next} />
 

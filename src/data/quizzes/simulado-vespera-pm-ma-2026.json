@@ -1,0 +1,326 @@
+{
+ "mode": "final",
+ "title": "Simulado de véspera: 40 questões",
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Sistemas operacionais",
+   "type": "ce",
+   "text": "No Linux, o comando ls é utilizado para remover arquivos e diretórios do sistema de arquivos.",
+   "answer": "E",
+   "comment": "O comando ls lista o conteúdo de um diretório. A remoção de arquivos é feita com rm (e rmdir ou rm -r para diretórios). A banca costuma trocar a função de comandos que têm nomes curtos e parecidos."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Sistemas operacionais",
+   "type": "ce",
+   "text": "No Windows, ao selecionar um arquivo do disco local e pressionar Shift + Delete, o arquivo é excluído de forma permanente, sem ser enviado para a Lixeira.",
+   "answer": "C",
+   "comment": "Shift + Delete ignora a Lixeira e apaga o arquivo definitivamente, depois de uma confirmação. Já o Delete simples envia o arquivo para a Lixeira, de onde ele pode ser restaurado."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Sistemas operacionais",
+   "type": "ce",
+   "text": "No Linux, o diretório /home é o diretório raiz do sistema, ou seja, aquele no qual estão contidos todos os demais diretórios.",
+   "answer": "E",
+   "comment": "A raiz do sistema de arquivos do Linux é representada pela barra (/). O /home guarda as pastas pessoais dos usuários, como /home/maria. Pegadinha clássica: confundir a raiz do sistema com a pasta pessoal."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Sistemas operacionais",
+   "type": "ce",
+   "text": "O Gerenciador de Tarefas do Windows permite encerrar um programa que parou de responder e também acompanhar o uso de processador e de memória pelos processos em execução.",
+   "answer": "C",
+   "comment": "É exatamente essa a função do Gerenciador de Tarefas, aberto com Ctrl + Shift + Esc. Ele lista processos, mostra o consumo de CPU, memória, disco e rede e permite finalizar tarefas."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Sistemas operacionais",
+   "type": "ce",
+   "text": "No Linux, o usuário root é um usuário comum com privilégios restritos, que só pode alterar arquivos dentro da própria pasta pessoal.",
+   "answer": "E",
+   "comment": "O root é o superusuário (administrador) do Linux e tem controle total sobre o sistema, podendo alterar qualquer arquivo e configuração. Por isso o uso dessa conta exige cuidado."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Sistemas operacionais",
+   "type": "ce",
+   "text": "No Windows, o atalho de teclado Windows + D minimiza todas as janelas abertas e exibe a área de trabalho.",
+   "answer": "C",
+   "comment": "Windows + D mostra a área de trabalho e, ao ser pressionado novamente, restaura as janelas. Não confunda com Windows + L, que bloqueia o computador, e com Windows + E, que abre o Explorador de Arquivos."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Sistemas operacionais",
+   "type": "ce",
+   "text": "No Linux, o comando mv pode ser utilizado tanto para mover um arquivo para outro diretório quanto para renomeá-lo.",
+   "answer": "C",
+   "comment": "O mv (move) altera o local de um arquivo e, quando o destino está no mesmo diretório, funciona como renomeação. Para copiar, o comando é cp."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Edição de documentos",
+   "type": "ce",
+   "text": "No Microsoft Word, o recurso Controlar Alterações registra as modificações feitas no documento e permite que elas sejam posteriormente aceitas ou rejeitadas.",
+   "answer": "C",
+   "comment": "O controle de alterações marca inserções, exclusões e formatações feitas por cada revisor, e o autor decide o que aceitar ou rejeitar. É recurso típico de revisão colaborativa."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Edição de documentos",
+   "type": "ce",
+   "text": "No Microsoft Excel, a fórmula =SOMA(A1:A5) retorna a quantidade de células preenchidas no intervalo de A1 até A5.",
+   "answer": "E",
+   "comment": "A função SOMA adiciona os valores numéricos do intervalo. Para contar células preenchidas, usam-se CONT.VALORES (qualquer conteúdo) ou CONT.NÚM (apenas números)."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Edição de documentos",
+   "type": "ce",
+   "text": "No Microsoft Excel, uma referência escrita como $A$1 é absoluta: ao copiar a fórmula para outra célula, ela continua apontando para A1.",
+   "answer": "C",
+   "comment": "O cifrão trava a coluna e a linha. Sem cifrões (A1) a referência é relativa e se ajusta ao copiar; com um cifrão só (A$1 ou $A1), a referência é mista."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Edição de documentos",
+   "type": "ce",
+   "text": "No Microsoft PowerPoint, a tecla F5 inicia a apresentação a partir do slide atual, enquanto o atalho Shift + F5 inicia a apresentação a partir do primeiro slide.",
+   "answer": "E",
+   "comment": "A situação é a inversa: F5 inicia a apresentação do primeiro slide, e Shift + F5 inicia a partir do slide em que você está. A banca gosta de inverter os atalhos para testar a memorização."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Edição de documentos",
+   "type": "ce",
+   "text": "No pacote LibreOffice (BrOffice), o Writer, o Calc e o Impress correspondem, respectivamente, aos editores de texto, de planilhas e de apresentações, equivalentes ao Word, ao Excel e ao PowerPoint.",
+   "answer": "C",
+   "comment": "Writer é o editor de textos, Calc é a planilha e Impress é o programa de apresentações. O edital cita BrOffice, nome antigo do LibreOffice, e cobra a equivalência entre os dois pacotes."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Edição de documentos",
+   "type": "ce",
+   "text": "O formato nativo (padrão) dos documentos de texto criados no LibreOffice Writer é o .docx, o mesmo utilizado pelo Microsoft Word.",
+   "answer": "E",
+   "comment": "O formato nativo do Writer é o .odt (OpenDocument Text). O Writer abre e salva arquivos .docx, mas esse é o formato padrão do Word. Na planilha, o padrão é .ods, e na apresentação, .odp."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Edição de documentos",
+   "type": "ce",
+   "text": "No Microsoft Excel, considerando que a célula A1 contém o valor 6, a fórmula =SE(A1>=5;\"Aprovado\";\"Reprovado\") retorna o texto Aprovado.",
+   "answer": "C",
+   "comment": "A função SE testa a condição A1>=5. Como 6 é maior que 5, o teste é verdadeiro e a função devolve o segundo argumento, Aprovado. Se fosse falso, devolveria o terceiro."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Edição de documentos",
+   "type": "ce",
+   "text": "No Microsoft Word em português, o atalho Ctrl + B salva o documento, enquanto o atalho Ctrl + S aplica sublinhado ao texto selecionado.",
+   "answer": "C",
+   "comment": "No Word em português, os atalhos acompanham a inicial dos comandos: B de Salvar (e N de Negrito, S de Sublinhado, I de Itálico). Atenção para não aplicar a lógica da versão em inglês (Ctrl + S para salvar)."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "A intranet é uma rede privada que utiliza as mesmas tecnologias e protocolos da internet, mas com acesso restrito aos usuários autorizados de uma organização.",
+   "answer": "C",
+   "comment": "É exatamente o conceito de intranet. Quando parte dela é aberta a usuários externos autorizados, como fornecedores, passa a ser chamada de extranet."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "Navegadores como o Google Chrome, o Mozilla Firefox e o Microsoft Edge são exemplos de sítios de busca, pois localizam páginas na internet a partir das palavras digitadas pelo usuário.",
+   "answer": "E",
+   "comment": "Navegadores são programas usados para acessar páginas. Sítios de busca, como o Google e o Bing, são serviços que pesquisam o conteúdo. Confundir navegador com buscador é um dos erros mais cobrados."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "O protocolo HTTPS utiliza criptografia na comunicação entre o navegador e o servidor, o que dificulta a interceptação dos dados trocados.",
+   "answer": "C",
+   "comment": "O HTTPS é o HTTP com camada de segurança (TLS), que cifra os dados em trânsito. Ele protege a comunicação, mas não garante que o site em si seja confiável."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "No correio eletrônico, o protocolo POP3 é utilizado para o envio de mensagens, ao passo que o protocolo SMTP é utilizado para o recebimento delas.",
+   "answer": "E",
+   "comment": "As funções estão trocadas. O SMTP envia mensagens, e o POP3 (ou o IMAP) recebe. Guarde: SMTP = sai, POP3 = pega."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "Clientes de correio eletrônico, como o Mozilla Thunderbird, permitem gerenciar, em um único programa, as mensagens de várias contas de e-mail.",
+   "answer": "C",
+   "comment": "Um cliente de e-mail instalado no computador reúne várias contas, de provedores diferentes, na mesma interface. Isso o distingue do webmail, que é acessado pelo navegador."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "Cookies são programas maliciosos instalados sem autorização do usuário, que têm como objetivo danificar os arquivos do computador.",
+   "answer": "E",
+   "comment": "Cookies são pequenos arquivos de texto que os sites gravam no navegador para lembrar preferências, logins e carrinhos de compra. Não são programas nem, por si só, danificam arquivos, embora possam ser usados para rastreamento."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "Em um sítio de busca como o Google, ao digitar uma expressão entre aspas, o usuário solicita que sejam retornadas páginas que contenham exatamente aquela expressão.",
+   "answer": "C",
+   "comment": "As aspas fazem a busca por frase exata. Outros operadores cobrados: o sinal de menos exclui um termo, e o site: restringe a busca a um domínio."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "Em um grupo de discussão por e-mail, as mensagens enviadas por um participante são recebidas apenas pelo administrador do grupo, que decide se as repassa aos demais membros.",
+   "answer": "E",
+   "comment": "Em regra, a mensagem enviada ao endereço do grupo é distribuída a todos os membros, e é isso que caracteriza a discussão em grupo. A moderação é opcional e depende da configuração escolhida pelo administrador."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "A navegação anônima (janela privada) dos navegadores impede que os sítios visitados e o provedor de internet identifiquem a atividade do usuário na rede.",
+   "answer": "E",
+   "comment": "O modo anônimo apenas deixa de gravar, no próprio computador, histórico, cookies e dados de formulários ao fechar a janela. Sites, provedor e administrador da rede continuam podendo registrar o acesso."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "Nas redes sociais, mesmo o conteúdo publicado com restrição de visualização pode ser copiado e compartilhado por terceiros, razão pela qual as configurações de privacidade reduzem, mas não eliminam, a exposição das informações.",
+   "answer": "C",
+   "comment": "Quem tem acesso ao conteúdo pode capturar a tela ou reenviá-lo. Por isso a configuração de privacidade ajuda, mas o cuidado principal é pensar antes de publicar."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "No modelo de computação em nuvem conhecido como SaaS, o cliente é responsável por gerenciar o sistema operacional e a infraestrutura de servidores em que o software é executado.",
+   "answer": "E",
+   "comment": "No SaaS, o fornecedor cuida de tudo: infraestrutura, sistema operacional e aplicação, e o cliente apenas usa o software. Quem gerencia o sistema operacional é o cliente do IaaS."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Redes e Internet",
+   "type": "ce",
+   "text": "Na computação em nuvem, os recursos computacionais são disponibilizados sob demanda por meio da internet, e o uso pode ser medido, de modo que o cliente pague pelo que efetivamente consome.",
+   "answer": "C",
+   "comment": "Autosserviço sob demanda, acesso pela rede e serviço medido são características essenciais da nuvem na definição do NIST. A cobrança conforme o uso decorre dessa medição."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Organização de arquivos",
+   "type": "ce",
+   "text": "Em um sistema de arquivos, uma pasta (diretório) pode conter apenas arquivos, sendo impossível criar outras pastas dentro dela.",
+   "answer": "E",
+   "comment": "Pastas podem conter arquivos e outras pastas (subpastas), formando uma estrutura hierárquica em árvore. É essa organização que permite agrupar o conteúdo por assunto."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Organização de arquivos",
+   "type": "ce",
+   "text": "A extensão de um arquivo, como .pdf, .xlsx ou .jpg, identifica o seu tipo e ajuda o sistema operacional a determinar qual programa deve ser usado para abri-lo.",
+   "answer": "C",
+   "comment": "A extensão, que aparece depois do ponto no nome, indica o formato do arquivo e a associação com o programa. Alterar a extensão não converte o arquivo, e pode impedir que ele seja aberto corretamente."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Organização de arquivos",
+   "type": "ce",
+   "text": "O caminho C:\\Usuarios\\Ana\\Documentos\\relatorio.docx indica que o arquivo relatorio.docx está armazenado na pasta Documentos, a qual está dentro da pasta Ana, que, por sua vez, está dentro da pasta Usuarios, na unidade C:.",
+   "answer": "C",
+   "comment": "O caminho é lido da esquerda para a direita, da unidade para o arquivo, com cada barra invertida separando um nível da hierarquia. No Linux, o separador é a barra normal (/)."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Organização de arquivos",
+   "type": "ce",
+   "text": "A compactação de arquivos nos formatos ZIP e RAR sempre resulta em perda irreversível de parte das informações do arquivo original.",
+   "answer": "E",
+   "comment": "ZIP e RAR usam compactação sem perdas: ao descompactar, os arquivos voltam idênticos ao original. A palavra sempre é o sinal de alerta nesse tipo de item."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Segurança da informação",
+   "type": "ce",
+   "text": "Para se propagar, o worm necessita ser executado como parte de outro programa hospedeiro, ao qual se anexa, e depende da ação do usuário.",
+   "answer": "E",
+   "comment": "O worm é um programa independente que se replica sozinho, explorando falhas e usando a rede, sem precisar de hospedeiro nem da ação do usuário. Quem se anexa a outros programas e depende de execução é o vírus."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Segurança da informação",
+   "type": "ce",
+   "text": "O firewall pode ser implementado por software ou por hardware e tem a função de controlar o tráfego de entrada e de saída da rede com base em regras previamente definidas.",
+   "answer": "C",
+   "comment": "O firewall filtra o tráfego conforme regras e pode ser pessoal (software no computador) ou corporativo (equipamento dedicado). Ele não substitui o antivírus: cada ferramenta cuida de um tipo de ameaça."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Segurança da informação",
+   "type": "ce",
+   "text": "A instalação de um antivírus é suficiente para proteger o computador contra qualquer tipo de ameaça, dispensando o uso de firewall e a atualização do sistema operacional.",
+   "answer": "E",
+   "comment": "A proteção é feita em camadas: antivírus, firewall, atualizações e bons hábitos do usuário se complementam. Nenhuma ferramenta isolada é suficiente, e a palavra qualquer entrega o erro do item."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Segurança da informação",
+   "type": "ce",
+   "text": "Ransomware é um tipo de código malicioso que torna inacessíveis os dados armazenados em um equipamento, geralmente por meio de criptografia, e exige pagamento de resgate para restabelecer o acesso.",
+   "answer": "C",
+   "comment": "É o conceito de ransomware, uma forma de extorsão digital. A melhor defesa é manter backups atualizados e desconectados, para recuperar os dados sem pagar o resgate."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Segurança da informação",
+   "type": "ce",
+   "text": "O spyware monitora as atividades do usuário e envia as informações coletadas a terceiros, e os aplicativos anti-spyware são utilizados para detectá-lo e removê-lo.",
+   "answer": "C",
+   "comment": "O spyware coleta dados, como o que é digitado e os sites acessados. O keylogger e o screenlogger são tipos específicos. O anti-spyware é a ferramenta voltada a esse tipo de praga, e muitos antivírus já a incluem."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Segurança da informação",
+   "type": "ce",
+   "text": "O backup incremental copia todos os arquivos selecionados, independentemente de terem sido ou não alterados desde o último backup realizado.",
+   "answer": "E",
+   "comment": "Essa é a definição de backup completo (full). O incremental copia apenas o que foi criado ou alterado desde o último backup, seja ele completo ou incremental, e por isso é mais rápido e ocupa menos espaço."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Segurança da informação",
+   "type": "ce",
+   "text": "Uma boa prática de backup recomenda manter ao menos três cópias dos dados, armazenadas em dois tipos de mídia diferentes, com uma delas guardada fora do local de origem.",
+   "answer": "C",
+   "comment": "É a regra 3-2-1: três cópias, duas mídias, uma fora do local. A cópia externa protege os dados contra eventos como incêndio, roubo e falhas que atinjam o local principal."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Segurança da informação",
+   "type": "ce",
+   "text": "O armazenamento de arquivos em serviços de nuvem, como Google Drive e OneDrive, dispensa a realização de backup, pois os dados armazenados nunca podem ser perdidos.",
+   "answer": "E",
+   "comment": "A nuvem também está sujeita a exclusões acidentais, sincronização de arquivos corrompidos, ransomware e problemas na conta. Sincronizar não é o mesmo que fazer backup, e a palavra nunca é a pista do erro."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "module": "Segurança da informação",
+   "type": "ce",
+   "text": "Uma senha forte combina letras maiúsculas e minúsculas, números e símbolos, e a autenticação em dois fatores acrescenta uma camada extra de proteção ao acesso à conta.",
+   "answer": "C",
+   "comment": "Senhas longas e variadas dificultam a descoberta por tentativa, e o segundo fator (um código no celular, por exemplo) protege a conta mesmo que a senha seja descoberta. Também não se deve reutilizar a mesma senha em vários serviços."
+  }
+]
+}
