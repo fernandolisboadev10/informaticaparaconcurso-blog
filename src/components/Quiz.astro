@@ -31,7 +31,7 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
 ---
 <section class="quiz" id="questoes" data-total={total} data-mode={mode} aria-labelledby="quiz-title">
   <noscript><style>.quiz .q-fb[hidden], .quiz .gabarito[hidden] { display: block !important; } .quiz-bar, .quiz-reset, .quiz-submit { display: none; }</style></noscript>
-  <h2 id="quiz-title">{title}</h2>
+  <h2 id="quiz-title" class:list={{ "quiz-title-neon": final }}>{title}</h2>
   {final ? (
     <p class="quiz-intro">
       {total} questões para você responder do início ao fim. Escolha uma alternativa em cada item, ou deixe em branco se
@@ -392,6 +392,27 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
 
   .quiz h2 {
     margin: 0 0 8px;
+  }
+
+  .quiz .quiz-title-neon {
+    --neon: #0a84ff;
+    --neon-glow: rgba(10, 132, 255, 0.35);
+    color: var(--neon);
+    text-shadow: 0 0 10px var(--neon-glow);
+  }
+
+  :global(:root[data-theme='dark']) .quiz .quiz-title-neon {
+    --neon: #5cf0ff;
+    --neon-glow: rgba(0, 229, 255, 0.75);
+    text-shadow: 0 0 6px var(--neon-glow), 0 0 18px rgba(0, 170, 255, 0.55);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme='light'])) .quiz .quiz-title-neon {
+      --neon: #5cf0ff;
+      --neon-glow: rgba(0, 229, 255, 0.75);
+      text-shadow: 0 0 6px var(--neon-glow), 0 0 18px rgba(0, 170, 255, 0.55);
+    }
   }
 
   .quiz-intro {
