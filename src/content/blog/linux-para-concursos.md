@@ -69,20 +69,20 @@ Na prova, a banca pode cobrar o significado do prompt, o uso do histórico de co
 
 Primeiramente, a banca gosta de cobrar os [comandos mais básicos de terminal](/comandos-basicos-do-linux/), aqueles que qualquer usuário usa no dia a dia:
 
--   `pwd`: mostra o diretório atual em que você está;
--   `whoami`: exibe o nome do usuário logado;
--   `date`: mostra data e hora do sistema;
--   `history`: lista o histórico de comandos digitados;
--   `cd`: navega entre diretórios;
--   `ls`: lista arquivos e diretórios.
+-   <span class="cai-prova"><code>pwd</code></span>: mostra o diretório atual em que você está;
+-   <span class="cai-prova"><code>whoami</code></span>: exibe o nome do usuário logado;
+-   <span class="cai-prova"><code>date</code></span>: mostra data e hora do sistema;
+-   <span class="cai-prova"><code>history</code></span>: lista o histórico de comandos digitados;
+-   <span class="cai-prova"><code>cd</code></span>: navega entre diretórios;
+-   <span class="cai-prova"><code>ls</code></span>: lista arquivos e diretórios.
 
 Além disso, aparecem com frequência os comandos de manipulação de arquivos e diretórios:
 
--   `mkdir`: cria diretórios;
--   `touch`: cria arquivos vazios;
--   `cp`: copia arquivos ou diretórios;
--   `mv`: move ou renomeia arquivos;
--   `rm`: remove arquivos ou diretórios.
+-   <span class="cai-prova"><code>mkdir</code></span>: cria diretórios;
+-   <span class="cai-prova"><code>touch</code></span>: cria arquivos vazios;
+-   <span class="cai-prova"><code>cp</code></span>: copia arquivos ou diretórios;
+-   <span class="cai-prova"><code>mv</code></span>: move ou renomeia arquivos;
+-   <span class="cai-prova"><code>rm</code></span>: remove arquivos ou diretórios.
 
 Repare bem nessa diferença, porque ela é clássica em prova: o `cp` copia e mantém o original no lugar; já o `mv` move (ou renomeia) e, nesse processo, o arquivo original deixa de existir na origem. A banca adora trocar esses dois verbos para confundir o candidato desatento. Você encontra a sintaxe completa e oficial de cada comando no manual do GNU Coreutils, que o próprio projeto GNU mantém, e uma lista mais completa, com mais exemplos práticos, no artigo [comandos básicos do Linux para concursos](/comandos-basicos-do-linux/).
 

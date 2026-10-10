@@ -184,6 +184,12 @@ img {
   --cai-line: rgba(255, 255, 0, 0.45);
 }
 
+/* Comando destacado: tira o fundo do code para o marca-texto amarelo aparecer */
+.prose .cai-prova code {
+  background: transparent;
+  padding: 0 2px;
+}
+
 .prose h2 {
   margin-top: 2.5em;
   font-size: 1.6rem;
