@@ -5,7 +5,7 @@ category: "Concursos"
 date: 2026-10-13T07:00:00-03:00
 readingTime: "9 min"
 tags: ["TRT 8 2026", "FCC", "Analista Judiciário", "Técnico Judiciário", "Noções de Informática"]
-image: "./images/concurso-trt-8-2026-informatica-fcc.webp"
+image: "./images/concurso-trt-8-2026.webp"
 imageAlt: "Candidata estudando em uma mesa organizada com notebook, edital impresso, livros de legislação e uma pequena estátua da balança da justiça"
 related:
   - nocoes-de-informatica
