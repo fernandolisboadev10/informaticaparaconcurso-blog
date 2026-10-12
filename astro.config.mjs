@@ -27,6 +27,7 @@ export default defineConfig({
   // URLs herdadas do WordPress (feed, sitemaps do Yoast, autor e contato)
   redirects: {
     '/category/sem-categoria': '/blog',
+    '/category/noticias': '/category/concursos',
     '/feed': '/rss.xml',
     '/sitemap_index.xml': '/sitemap-index.xml',
     '/wp-sitemap.xml': '/sitemap-index.xml',
