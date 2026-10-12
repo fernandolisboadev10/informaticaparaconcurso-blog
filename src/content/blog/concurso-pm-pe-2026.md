@@ -5,7 +5,7 @@ category: "Concursos"
 date: 2026-10-12T12:40:00-03:00
 readingTime: "8 min"
 tags: ["PM PE 2026", "Soldado", "AOCP", "Edital", "Noções de Informática"]
-image: "./images/concurso-pm-pe-2026-soldado-informatica.webp"
+image: "./images/concurso-pm-pe-2026.webp"
 imageAlt: "Candidato a Soldado da Polícia Militar estudando com notebook, edital impresso e caderno de anotações sobre a mesa"
 related:
   - cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica

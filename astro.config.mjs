@@ -28,6 +28,7 @@ export default defineConfig({
   redirects: {
     '/category/sem-categoria': '/blog',
     '/category/noticias': '/category/concursos',
+    '/concurso-pm-pe-2026-soldado-informatica': '/concurso-pm-pe-2026',
     '/feed': '/rss.xml',
     '/sitemap_index.xml': '/sitemap-index.xml',
     '/wp-sitemap.xml': '/sitemap-index.xml',

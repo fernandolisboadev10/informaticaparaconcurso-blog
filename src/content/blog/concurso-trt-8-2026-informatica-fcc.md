@@ -93,7 +93,7 @@ Se precisar de um método para organizar a rotina, o artigo [como estudar para c
 
 Vale, e por um motivo simples: é uma das disciplinas mais previsíveis do edital. O conteúdo é fechado, as bancas repetem os mesmos assuntos e quem estuda com método costuma acertar a maioria. Em uma prova de 60 questões, em que a nota mínima é 6,00 e a classificação é disputada, cada acerto de Informática ajuda a separar quem passa de quem fica no cadastro.
 
-A mesma lógica vale para qualquer outro edital que você esteja acompanhando. Se for um concurso de polícia, veja o [edital da PM PE 2026](/concurso-pm-pe-2026-soldado-informatica/), que também traz Informática, e como a Cebraspe cobra o tema no [gabarito comentado da PM MA](/gabarito-extraoficial-pm-ma-soldado/). A banca muda, mas os fundamentos de Informática seguem os mesmos.
+A mesma lógica vale para qualquer outro edital que você esteja acompanhando. Se for um concurso de polícia, veja o [edital da PM PE 2026](/concurso-pm-pe-2026/), que também traz Informática, e como a Cebraspe cobra o tema no [gabarito comentado da PM MA](/gabarito-extraoficial-pm-ma-soldado/). A banca muda, mas os fundamentos de Informática seguem os mesmos.
 
 ## Fontes e Referências
 
