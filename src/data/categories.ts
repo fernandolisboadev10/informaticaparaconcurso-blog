@@ -80,6 +80,15 @@ export const categories: Category[] = [
     intro:
       'Questões no estilo das bancas para praticar cada assunto e descobrir onde ainda falta revisar.',
   },
+  {
+    slug: 'concursos',
+    name: 'Concursos',
+    title: 'Concursos públicos: gabaritos, provas e novidades',
+    description:
+      'Gabaritos extraoficiais, notas de corte, datas de recurso e análises das provas de concursos públicos, com foco em Informática.',
+    intro:
+      'Acompanhe o que acontece nos concursos: gabaritos extraoficiais, regras de pontuação, prazos de recurso e o que as provas cobraram de Informática.',
+  },
 ];
 
 export const categoryHref = (name: string): string => {
