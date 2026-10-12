@@ -9,6 +9,15 @@ export interface Category {
 // Category pages are real, indexable URLs (/category/<slug>/), the same ones the old WordPress site used. `name` must match the `category` field in the posts' frontmatter.
 export const categories: Category[] = [
   {
+    slug: 'noticias',
+    name: 'Notícias',
+    title: 'Notícias de concursos públicos: gabaritos, provas e prazos',
+    description:
+      'Gabaritos extraoficiais, notas de corte, datas de recurso e análises das provas de concursos públicos, com foco em Informática.',
+    intro:
+      'Acompanhe o que acontece nos concursos: gabaritos extraoficiais, regras de pontuação, prazos de recurso e o que as provas cobraram de Informática.',
+  },
+  {
     slug: 'dicas',
     name: 'Dicas',
     title: 'Dicas de estudo para concursos de informática',
@@ -79,15 +88,6 @@ export const categories: Category[] = [
       'Simulados de informática por assunto, com questões no estilo das bancas para testar o que você estudou.',
     intro:
       'Questões no estilo das bancas para praticar cada assunto e descobrir onde ainda falta revisar.',
-  },
-  {
-    slug: 'noticias',
-    name: 'Notícias',
-    title: 'Notícias de concursos públicos: gabaritos, provas e prazos',
-    description:
-      'Gabaritos extraoficiais, notas de corte, datas de recurso e análises das provas de concursos públicos, com foco em Informática.',
-    intro:
-      'Acompanhe o que acontece nos concursos: gabaritos extraoficiais, regras de pontuação, prazos de recurso e o que as provas cobraram de Informática.',
   },
 ];
 
