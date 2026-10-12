@@ -3,19 +3,11 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import { isPublished, sortByActivity } from '../../utils/posts';
+import { categories as categoryList } from '../../data/categories';
 
 const posts = sortByActivity(await getCollection('blog', isPublished));
 
-const categories = [
-  'Notícias',
-  'Inteligência Artificial',
-  'Jogos',
-  'Tutoriais',
-  'Dicas',
-  'Curiosidades',
-  'Reviews',
-  'Apps',
-];
+const categories = categoryList.map((c) => c.name);
 ---
 <BaseLayout title="Blog" description="Guias, reviews e notícias sobre IA, jogos, tutoriais e curiosidades.">
   <div class="container">

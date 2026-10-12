@@ -81,9 +81,9 @@ export const categories: Category[] = [
       'Questões no estilo das bancas para praticar cada assunto e descobrir onde ainda falta revisar.',
   },
   {
-    slug: 'concursos',
-    name: 'Concursos',
-    title: 'Concursos públicos: gabaritos, provas e novidades',
+    slug: 'noticias',
+    name: 'Notícias',
+    title: 'Notícias de concursos públicos: gabaritos, provas e prazos',
     description:
       'Gabaritos extraoficiais, notas de corte, datas de recurso e análises das provas de concursos públicos, com foco em Informática.',
     intro:

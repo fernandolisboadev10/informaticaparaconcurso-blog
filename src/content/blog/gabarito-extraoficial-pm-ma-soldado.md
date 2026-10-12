@@ -1,7 +1,7 @@
 ---
 title: "Gabarito Extraoficial PM MA 2026 Soldado: 120 Questões"
 description: "Confira o gabarito extraoficial da PM MA 2026 para Soldado, com as 120 respostas, nota mínima, datas do oficial e Informática comentada item a item."
-category: "Concursos"
+category: "Notícias"
 date: 2026-10-12T09:30:00-03:00
 readingTime: "12 min"
 tags: ["Gabarito Extraoficial", "PM MA 2026", "Soldado", "Cebraspe", "Noções de Informática"]
