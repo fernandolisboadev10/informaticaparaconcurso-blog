@@ -6,7 +6,7 @@ date: 2026-10-12T09:30:00-03:00
 readingTime: "12 min"
 tags: ["Gabarito Extraoficial", "PM MA 2026", "Soldado", "Cebraspe", "Noções de Informática"]
 image: "./images/gabarito-extraoficial-pm-ma-soldado.webp"
-imageAlt: "Candidato à mesa conferindo a folha de respostas com o gabarito extraoficial no notebook logo após a prova da PM MA"
+imageAlt: "Candidato nordestino conferindo a folha de respostas com o gabarito extraoficial no notebook ao pôr do sol, após a prova da PM MA"
 related:
   - informatica-cebraspe-pm-ma-2026
   - simulado-vespera-pm-ma-2026
