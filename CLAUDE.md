@@ -27,4 +27,4 @@ The home, `/blog/` and category pages sort posts by latest activity: the newer o
 
 ## Scheduling
 
-A post goes live when its `date` has passed (`isPublished` in `src/utils/posts.ts`). The deploy workflow rebuilds at 07:02, 11:02 and 18:02 (Brasília time), so to schedule a post set `date` to a future time such as `2026-10-02T07:00:00-03:00` and push; commit it before the slot. The `Notícias` category is for time-bound news; the topic goes in `tags`.
+A post goes live when its `date` has passed (`isPublished` in `src/utils/posts.ts`). The deploy workflow rebuilds at 07:02, 11:02 and 18:02 (Brasília time), so to schedule a post set `date` to a future time such as `2026-10-02T07:00:00-03:00` and push; commit it before the slot. The `Concursos` category is for time-bound news; the topic goes in `tags`.

@@ -9,9 +9,9 @@ export interface Category {
 // Category pages are real, indexable URLs (/category/<slug>/), the same ones the old WordPress site used. `name` must match the `category` field in the posts' frontmatter.
 export const categories: Category[] = [
   {
-    slug: 'noticias',
-    name: 'Notícias',
-    title: 'Notícias de concursos públicos: gabaritos, provas e prazos',
+    slug: 'concursos',
+    name: 'Concursos',
+    title: 'Concursos públicos: gabaritos, provas e novidades',
     description:
       'Gabaritos extraoficiais, notas de corte, datas de recurso e análises das provas de concursos públicos, com foco em Informática.',
     intro:

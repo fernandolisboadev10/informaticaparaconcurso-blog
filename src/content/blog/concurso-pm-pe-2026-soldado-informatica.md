@@ -1,7 +1,7 @@
 ---
 title: "Concurso PM PE 2026: Edital, 1.250 Vagas de Soldado e Informática"
 description: "Edital da PM PE 2026 publicado: 1.250 vagas para Soldado, banca AOCP, inscrições até 5 de novembro e o que estudar de Informática para a prova."
-category: "Notícias"
+category: "Concursos"
 date: 2026-10-12T12:40:00-03:00
 readingTime: "8 min"
 tags: ["PM PE 2026", "Soldado", "AOCP", "Edital", "Noções de Informática"]
