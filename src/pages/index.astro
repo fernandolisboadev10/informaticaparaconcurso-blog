@@ -3,16 +3,21 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import FeaturedGrid from '../components/FeaturedGrid.astro';
+import Pagination from '../components/Pagination.astro';
 import { isPublished, sortByActivity } from '../utils/posts';
 
-const PAGE_SIZE = 6;
+const PER_PAGE = 9;
+const page = Number(Astro.props.page ?? 1);
 const all = sortByActivity(await getCollection('blog', isPublished));
-const featured = all.slice(0, 3);
-const posts = all.slice(3);
+const featured = page === 1 ? all.slice(0, 3) : [];
+const gridAll = all.slice(3);
+const totalPages = Math.max(1, Math.ceil(gridAll.length / PER_PAGE));
+const posts = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 ---
-<BaseLayout title="Informática para Concurso: resumos e simulados" description="Resumos, simulados e o que cai na prova de informática dos concursos, em linguagem simples e direta.">
+<BaseLayout title={page > 1 ? `Informática para Concurso: resumos e simulados - Página ${page}` : "Informática para Concurso: resumos e simulados"} description="Resumos, simulados e o que cai na prova de informática dos concursos, em linguagem simples e direta.">
   <h1 class="visually-hidden">Informática para Concurso</h1>
 
+  {page === 1 && (
   <section class="container featured-wrap">
     <div class="recent-header">
       <div>
@@ -22,6 +27,7 @@ const posts = all.slice(3);
     </div>
     <FeaturedGrid posts={featured} />
   </section>
+  )}
 
   <section class="container recent">
     <div class="recent-header">
@@ -33,7 +39,7 @@ const posts = all.slice(3);
     </div>
     <div class="grid">
       {posts.map((post, i) => (
-        <div class={i < PAGE_SIZE ? 'item' : 'item extra'}>
+        <div class={'item'}>
         <PostCard
           slug={post.id}
           title={post.data.title}
@@ -48,25 +54,10 @@ const posts = all.slice(3);
         </div>
       ))}
     </div>
-    {posts.length > PAGE_SIZE && (
-      <div class="more-wrap">
-        <button type="button" id="more-posts" class="more-btn" data-step={PAGE_SIZE}>Ver mais posts</button>
-      </div>
-    )}
+    <Pagination current={page} total={totalPages} />
   </section>
 </BaseLayout>
 
-<script>
-  const btn = document.querySelector<HTMLButtonElement>('#more-posts');
-  btn?.addEventListener('click', () => {
-    const step = Number(btn.dataset.step) || 6;
-    const hidden = document.querySelectorAll<HTMLElement>('.item.extra:not(.show)');
-    hidden.forEach((el, i) => {
-      if (i < step) el.classList.add('show');
-    });
-    if (hidden.length <= step) btn.parentElement?.remove();
-  });
-</script>
 
 <style>
   .visually-hidden {
