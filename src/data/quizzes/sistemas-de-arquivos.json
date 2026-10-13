@@ -1,0 +1,109 @@
+{
+ "questions": [
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Julgue o item a seguir. O sistema de arquivos define como os dados são nomeados, gravados e localizados em uma unidade de armazenamento, como HD, SSD ou pendrive.",
+   "answer": "C",
+   "comment": "Essa é a definição de sistema de arquivos: a estrutura que organiza como os dados são gravados e encontrados na unidade."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Um usuário tenta copiar um arquivo de vídeo de 6 GB para um pendrive formatado em FAT32 com 16 GB livres, e o Windows recusa a operação. O motivo é que:",
+   "options": [
+    "o FAT32 não permite gravar arquivos maiores que 4 GB.",
+    "o pendrive precisa estar formatado em ext4 para receber vídeos.",
+    "arquivos de vídeo só podem ser gravados em unidades NTFS internas.",
+    "o Windows não grava dados em pendrives.",
+    "o FAT32 só aceita arquivos de texto."
+   ],
+   "answer": "A",
+   "comment": "O FAT32 limita cada arquivo a 4 GB, independentemente do espaço livre na unidade. Formatar o pendrive em exFAT ou NTFS resolve o problema."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Julgue o item a seguir. O NTFS é o sistema de arquivos padrão do Windows e oferece recursos como permissões de acesso, criptografia e compactação de arquivos.",
+   "answer": "C",
+   "comment": "O NTFS reúne permissões, criptografia (EFS), compactação, cotas de disco e journaling, recursos que o FAT32 não possui."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "O sistema de arquivos criado pela Microsoft para mídia removível, que elimina o limite de 4 GB por arquivo e funciona tanto em Windows quanto em macOS, é o:",
+   "options": [
+    "ext4.",
+    "FAT32.",
+    "exFAT.",
+    "APFS.",
+    "ReFS."
+   ],
+   "answer": "C",
+   "comment": "O exFAT foi pensado para pendrives, cartões de memória e HDs externos. O ext4 é do Linux, o APFS é do macOS e o ReFS é voltado a servidores Windows."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Julgue o item a seguir. O ext4 é o sistema de arquivos exclusivo do Windows e não pode ser usado em distribuições Linux.",
+   "answer": "E",
+   "comment": "É o contrário: o ext4 é muito usado por padrão em distribuições Linux, e o Windows não o lê nativamente."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Sobre a formatação rápida de uma unidade no Windows, é correto afirmar que:",
+   "options": [
+    "ela verifica a unidade em busca de setores defeituosos e demora mais que a formatação completa.",
+    "ela apaga a tabela de arquivos, e os dados podem ser recuperados por programas específicos até serem sobrescritos.",
+    "ela destrói fisicamente os dados, tornando a recuperação impossível.",
+    "ela só pode ser aplicada em unidades NTFS.",
+    "ela converte o sistema de arquivos de FAT32 para NTFS sem apagar nada."
+   ],
+   "answer": "B",
+   "comment": "Na formatação rápida, apenas a estrutura que indica onde estão os arquivos é refeita. Os dados continuam gravados e podem ser recuperados enquanto não forem sobrescritos."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Julgue o item a seguir. O journaling é um recurso que registra as operações antes de concluí-las, o que ajuda a manter a integridade do sistema de arquivos após falhas, como uma queda de energia.",
+   "answer": "C",
+   "comment": "O journaling está presente em sistemas como o NTFS e o ext4 e reduz o risco de corrupção após interrupções inesperadas."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Para transformar um volume FAT32 em NTFS sem perder os dados nele gravados, o Windows oferece:",
+   "options": [
+    "a exclusão da partição e a criação de uma nova.",
+    "o comando convert, executado no Prompt de Comando.",
+    "a troca da extensão dos arquivos para .ntfs.",
+    "a formatação completa da unidade.",
+    "a instalação do ext4 como sistema adicional."
+   ],
+   "answer": "B",
+   "comment": "O comando convert (por exemplo, convert D: /fs:ntfs) converte FAT32 em NTFS preservando os dados. Formatar ou recriar a partição apagaria o conteúdo."
+  },
+  {
+   "banca": "",
+   "type": "ce",
+   "text": "Julgue o item a seguir. A extensão de um arquivo, como .docx ou .jpg, define o sistema de arquivos da unidade em que ele está gravado.",
+   "answer": "E",
+   "comment": "A extensão indica o tipo de cada arquivo. O sistema de arquivos (NTFS, FAT32, exFAT, ext4) pertence à unidade ou à partição como um todo."
+  },
+  {
+   "banca": "",
+   "type": "mc",
+   "text": "Uma partição é, corretamente, definida como:",
+   "options": [
+    "o menor bloco de dados que o sistema usa para gravar um arquivo.",
+    "uma divisão lógica de um disco, que recebe seu próprio sistema de arquivos.",
+    "um arquivo compactado que reúne várias pastas.",
+    "um tipo de memória volátil usada pelo processador.",
+    "uma cópia de segurança completa da unidade."
+   ],
+   "answer": "B",
+   "comment": "Partição é a divisão lógica de um disco. O menor bloco de gravação é o cluster (unidade de alocação), e as demais alternativas descrevem outros conceitos."
+  }
+ ]
+}
