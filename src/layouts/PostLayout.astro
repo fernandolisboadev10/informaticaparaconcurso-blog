@@ -88,6 +88,8 @@ const articleSchema = {
       <slot />
     </div>
 
+    <ShareButtons title={title} variant="end" />
+
     {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
 
     <PostNav prev={prev} next={next} />
