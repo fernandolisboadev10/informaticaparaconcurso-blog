@@ -96,11 +96,11 @@
    "type": "mc",
    "text": "Assinale a alternativa que apresenta apenas extensões de arquivos de áudio ou vídeo.",
    "options": [
-    ".pg, .png e .gif",
-    ".ocx, .xlsx e .pptx",
-    ".p3, .wav e .mp4",
-    ".ip, .rar e .7z",
-    ".xe, .msi e .txt"
+    ".jpg, .png e .gif",
+    ".docx, .xlsx e .pptx",
+    ".mp3, .wav e .mp4",
+    ".zip, .rar e .7z",
+    ".exe, .msi e .txt"
    ],
    "answer": "C",
    "comment": ".mp3 e .wav são áudio, e .mp4 é vídeo. As demais alternativas trazem imagens, documentos do Office, compactados e executáveis."
