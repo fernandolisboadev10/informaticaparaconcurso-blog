@@ -1,0 +1,406 @@
+{
+  "mode": "final",
+  "title": "Simulado de véspera Cebraspe: 50 questões",
+  "questions": [
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Sistemas operacionais",
+      "type": "ce",
+      "text": "No Linux, as permissões de um arquivo são definidas separadamente para o dono, para o grupo e para os demais usuários, e o comando chmod é utilizado para alterá-las.",
+      "answer": "C",
+      "comment": "Essa é a base do modelo de permissões do Linux: leitura (r), escrita (w) e execução (x) para o dono, o grupo e os outros. O chmod altera essas permissões, enquanto o chown altera o dono do arquivo."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Sistemas operacionais",
+      "type": "ce",
+      "text": "No Windows, o atalho Alt + Tab permite alternar entre as janelas abertas, e o atalho Windows + L bloqueia a estação de trabalho.",
+      "answer": "C",
+      "comment": "Os dois atalhos estão corretos. Alt + Tab alterna entre programas abertos, e Windows + L bloqueia a sessão sem encerrá-la, exigindo a senha para retornar."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Sistemas operacionais",
+      "type": "ce",
+      "text": "No Linux, o comando pwd exibe o nome do usuário que está conectado ao sistema.",
+      "answer": "E",
+      "comment": "O pwd (print working directory) mostra o diretório atual de trabalho. Quem exibe o nome do usuário é o comando whoami. A banca costuma explorar comandos de nome curto."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Sistemas operacionais",
+      "type": "ce",
+      "text": "No Windows, o Gerenciador de Dispositivos é a ferramenta utilizada para instalar e desinstalar programas do computador.",
+      "answer": "E",
+      "comment": "O Gerenciador de Dispositivos lista e administra o hardware e os drivers. A instalação e a remoção de programas ficam em Programas e Recursos (ou em Aplicativos, nas versões mais novas)."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Sistemas operacionais",
+      "type": "ce",
+      "text": "No Linux, os nomes de arquivos e de diretórios diferenciam letras maiúsculas de minúsculas, de modo que relatorio.txt e Relatorio.txt podem existir no mesmo diretório como arquivos distintos.",
+      "answer": "C",
+      "comment": "O Linux é sensível a maiúsculas e minúsculas (case sensitive). No Windows, os dois nomes seriam considerados iguais e não poderiam coexistir na mesma pasta."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Editores de texto",
+      "type": "ce",
+      "text": "No Microsoft Word, o sumário automático é construído com base nos estilos de título aplicados ao texto e pode ser atualizado depois que o documento sofrer alterações.",
+      "answer": "C",
+      "comment": "O sumário automático depende dos estilos Título 1, Título 2 e assim por diante. Após editar o texto, basta atualizar o campo para que títulos e números de página sejam refeitos."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Editores de texto",
+      "type": "ce",
+      "text": "No Microsoft Word, o recurso Mala Direta permite gerar cartas ou etiquetas personalizadas a partir de uma lista de destinatários, sem a necessidade de digitar cada documento individualmente.",
+      "answer": "C",
+      "comment": "A mala direta combina um documento principal com uma fonte de dados, como uma planilha do Excel, e produz uma versão personalizada para cada registro."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Editores de texto",
+      "type": "ce",
+      "text": "No Microsoft Word em português, o atalho Ctrl + Z refaz a última ação que havia sido desfeita, enquanto o atalho Ctrl + Y desfaz a última ação realizada.",
+      "answer": "E",
+      "comment": "As funções estão trocadas. Ctrl + Z desfaz a última ação, e Ctrl + Y refaz (repete) a ação desfeita. A inversão de funções é uma pegadinha recorrente em atalhos."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Editores de texto",
+      "type": "ce",
+      "text": "No Microsoft Word, é possível configurar cabeçalhos e rodapés diferentes para seções distintas do mesmo documento, desde que o vínculo com a seção anterior seja desfeito.",
+      "answer": "C",
+      "comment": "Ao inserir uma quebra de seção e desativar a opção Vincular ao Anterior, cada seção passa a ter cabeçalho e rodapé próprios."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Editores de texto",
+      "type": "ce",
+      "text": "No Microsoft Word em português, o atalho Ctrl + U aplica sublinhado ao texto selecionado.",
+      "answer": "E",
+      "comment": "No Word em português, o sublinhado é aplicado com Ctrl + S. O Ctrl + U abre a ferramenta Substituir. Por isso, o item deve ser julgado com a versão em português do programa em mente."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Planilhas eletrônicas",
+      "type": "ce",
+      "text": "No Microsoft Excel, a fórmula =CONT.SE(A1:A10;\">5\") retorna a quantidade de células do intervalo cujo valor é maior que 5.",
+      "answer": "C",
+      "comment": "A função CONT.SE conta as células de um intervalo que atendem a um critério. Aqui, o critério é ser maior que 5. Não confunda com SOMA.SE, que soma os valores."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Planilhas eletrônicas",
+      "type": "ce",
+      "text": "Na função PROCV do Microsoft Excel, o valor procurado é localizado, obrigatoriamente, na última coluna do intervalo informado.",
+      "answer": "E",
+      "comment": "O PROCV (procura vertical) busca o valor na primeira coluna do intervalo e devolve um resultado de outra coluna da mesma linha, indicada pelo número do índice."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Planilhas eletrônicas",
+      "type": "ce",
+      "text": "No Microsoft Excel, considerando que as células A1, A2 e A3 contêm, respectivamente, os valores 10, 20 e 60, a fórmula =MÉDIA(A1:A3) retorna o valor 45.",
+      "answer": "E",
+      "comment": "A soma é 90 e, dividida pelas 3 células, resulta em 30. O valor 45 é a média de apenas dois valores (por exemplo, 30 e 60), um resultado plausível que induz ao erro quem não faz a conta."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Planilhas eletrônicas",
+      "type": "ce",
+      "text": "Em uma planilha eletrônica, o conteúdo de uma célula que começa com o sinal de igual (=) é interpretado como uma fórmula, e não como um texto comum.",
+      "answer": "C",
+      "comment": "É assim que o Excel e o Calc diferenciam fórmulas de texto digitado. Sem o sinal de igual, o conteúdo é tratado como texto ou número comum."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Planilhas eletrônicas",
+      "type": "ce",
+      "text": "No Microsoft Excel, a referência $A1 mantém fixa a linha 1 e permite que a coluna varie quando a fórmula é copiada para células de colunas diferentes.",
+      "answer": "E",
+      "comment": "O cifrão fixa o que vem logo depois dele. Em $A1, ele fixa a coluna A, e a linha pode variar. Para fixar a linha 1, a referência seria A$1."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Protocolos e redes",
+      "type": "ce",
+      "text": "O protocolo DNS é responsável por converter nomes de domínio, como www.exemplo.com.br, em endereços IP.",
+      "answer": "C",
+      "comment": "O DNS funciona como a agenda da internet: traduz o nome que o usuário digita no endereço numérico usado pelas máquinas para se localizarem."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Protocolos e redes",
+      "type": "ce",
+      "text": "O protocolo DHCP é o responsável por converter nomes de domínio em endereços IP.",
+      "answer": "E",
+      "comment": "Essa é a função do DNS. O DHCP atribui automaticamente endereços IP e outros parâmetros de rede aos dispositivos que se conectam."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Protocolos e redes",
+      "type": "ce",
+      "text": "Um endereço IPv4 é formado por 32 bits, ao passo que um endereço IPv6 é formado por 128 bits.",
+      "answer": "C",
+      "comment": "A ampliação de 32 para 128 bits permite um número muito maior de endereços, e esse foi o principal motivo da criação do IPv6."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Protocolos e redes",
+      "type": "ce",
+      "text": "O protocolo UDP, por ser orientado a conexão, garante a entrega ordenada de todos os pacotes enviados.",
+      "answer": "E",
+      "comment": "O orientado a conexão e com entrega confirmada é o TCP. O UDP é mais simples e mais rápido, mas não oferece essas garantias, e por isso é usado em transmissões ao vivo e jogos."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Protocolos e redes",
+      "type": "ce",
+      "text": "Uma VPN permite que um usuário estabeleça, por meio de uma rede pública como a internet, uma conexão segura e criptografada com uma rede privada.",
+      "answer": "C",
+      "comment": "A VPN (rede privada virtual) cria um \"túnel\" criptografado e é muito usada no acesso remoto de funcionários à rede da organização."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Navegação e correio eletrônico",
+      "type": "ce",
+      "text": "No envio de uma mensagem de correio eletrônico, os endereços inseridos no campo Cco (cópia oculta) não são exibidos aos demais destinatários.",
+      "answer": "C",
+      "comment": "O campo Cco (ou Bcc) oculta os destinatários listados nele, tanto dos que estão em Para e Cc quanto dos demais em Cco."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Navegação e correio eletrônico",
+      "type": "ce",
+      "text": "No protocolo IMAP, as mensagens são obrigatoriamente baixadas e apagadas do servidor, o que impede o acesso ao correio a partir de outros dispositivos.",
+      "answer": "E",
+      "comment": "O IMAP mantém as mensagens no servidor e sincroniza o estado entre dispositivos. O comportamento descrito se aproxima do POP3 em sua configuração padrão."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Navegação e correio eletrônico",
+      "type": "ce",
+      "text": "O cache de um navegador armazena, no computador do usuário, cópias de elementos de páginas já visitadas, a fim de agilizar o carregamento em acessos posteriores.",
+      "answer": "C",
+      "comment": "Imagens, estilos e scripts ficam guardados localmente. Por isso, limpar o cache é uma das soluções clássicas quando uma página aparece desatualizada."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Navegação e correio eletrônico",
+      "type": "ce",
+      "text": "No Google Chrome, o atalho Ctrl + T abre uma nova janela do navegador, e o atalho Ctrl + N abre uma nova guia.",
+      "answer": "E",
+      "comment": "As funções estão trocadas: Ctrl + T abre uma nova guia, e Ctrl + N abre uma nova janela."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Navegação e correio eletrônico",
+      "type": "ce",
+      "text": "O termo spam designa mensagens de e-mail com vírus anexados, de modo que toda mensagem de spam é, necessariamente, um código malicioso.",
+      "answer": "E",
+      "comment": "Spam é a mensagem não solicitada, em geral enviada em massa. Ela pode conter links ou anexos maliciosos, mas isso não é uma característica obrigatória."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Nuvem e colaboração",
+      "type": "ce",
+      "text": "No modelo de computação em nuvem IaaS, o provedor oferece infraestrutura virtualizada, como servidores e armazenamento, cabendo ao cliente instalar e administrar o sistema operacional e as aplicações.",
+      "answer": "C",
+      "comment": "No IaaS, o cliente controla da camada do sistema operacional para cima. É o modelo com maior liberdade e maior responsabilidade para o contratante."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Nuvem e colaboração",
+      "type": "ce",
+      "text": "Na nuvem pública, os recursos computacionais são de uso exclusivo de uma única organização e ficam hospedados exclusivamente no próprio datacenter dela.",
+      "answer": "E",
+      "comment": "A descrição se aproxima da nuvem privada. Na nuvem pública, a infraestrutura pertence ao provedor e é compartilhada entre vários clientes, de forma isolada."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Nuvem e colaboração",
+      "type": "ce",
+      "text": "A nuvem híbrida combina ambientes de nuvem privada e de nuvem pública, permitindo que dados e aplicações se movam entre eles.",
+      "answer": "C",
+      "comment": "É o modelo que une os dois mundos, muito adotado por quem precisa manter certos dados sob controle próprio e usar a escala da nuvem pública para outras demandas."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Nuvem e colaboração",
+      "type": "ce",
+      "text": "No modelo PaaS, o cliente recebe aplicativos prontos para o usuário final, como correio eletrônico e editores de texto, sem acesso a qualquer ambiente de desenvolvimento.",
+      "answer": "E",
+      "comment": "Aplicativos prontos caracterizam o SaaS. O PaaS oferece uma plataforma para desenvolver, testar e executar aplicações, sem que o cliente administre a infraestrutura subjacente."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Nuvem e colaboração",
+      "type": "ce",
+      "text": "Ferramentas de videoconferência, como Microsoft Teams e Google Meet, não permitem o compartilhamento da tela durante a reunião, limitando-se à transmissão de áudio e vídeo.",
+      "answer": "E",
+      "comment": "O compartilhamento de tela é um recurso básico dessas ferramentas, junto com chat, gravação e criação de salas de grupo."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Criptografia e certificação",
+      "type": "ce",
+      "text": "Na criptografia simétrica, a mesma chave é utilizada tanto para cifrar quanto para decifrar a informação.",
+      "answer": "C",
+      "comment": "Essa é a característica da criptografia simétrica, que é rápida, mas exige que a chave seja compartilhada de forma segura entre as partes."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Criptografia e certificação",
+      "type": "ce",
+      "text": "Na criptografia assimétrica, utiliza-se uma única chave, compartilhada entre remetente e destinatário, tanto para cifrar quanto para decifrar a mensagem.",
+      "answer": "E",
+      "comment": "A assimétrica usa um par de chaves: a pública e a privada. O que a descrição apresenta é a criptografia simétrica."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Criptografia e certificação",
+      "type": "ce",
+      "text": "A assinatura digital é produzida com a chave privada do signatário e pode ser verificada com a chave pública correspondente.",
+      "answer": "C",
+      "comment": "Por isso a assinatura digital comprova a autoria e a integridade: só quem possui a chave privada consegue gerá-la, e qualquer pessoa pode conferi-la com a chave pública."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Criptografia e certificação",
+      "type": "ce",
+      "text": "Para enviar uma mensagem confidencial a um destinatário por meio de criptografia assimétrica, o remetente deve cifrá-la com a chave privada do próprio destinatário.",
+      "answer": "E",
+      "comment": "Para garantir confidencialidade, o remetente cifra a mensagem com a chave pública do destinatário, e apenas a chave privada dele consegue decifrá-la."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Criptografia e certificação",
+      "type": "ce",
+      "text": "O certificado digital associa a identidade de uma pessoa ou de uma entidade a uma chave pública e é emitido por uma autoridade certificadora.",
+      "answer": "C",
+      "comment": "A autoridade certificadora atesta que a chave pública pertence ao titular. No Brasil, essa estrutura é a ICP-Brasil."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Ameaças e ataques",
+      "type": "ce",
+      "text": "O phishing é uma técnica que busca obter dados sensíveis do usuário por meio de mensagens ou páginas falsas que se passam por instituições confiáveis.",
+      "answer": "C",
+      "comment": "Mensagens que imitam bancos, órgãos públicos ou lojas e levam a páginas falsas são o exemplo clássico de phishing."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Ameaças e ataques",
+      "type": "ce",
+      "text": "A engenharia social explora, exclusivamente, falhas técnicas de software, dispensando qualquer interação com as pessoas.",
+      "answer": "E",
+      "comment": "A engenharia social explora o fator humano: persuasão, confiança e desatenção. Não se trata de falha técnica, e sim de manipulação das pessoas."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Ameaças e ataques",
+      "type": "ce",
+      "text": "Um ataque de negação de serviço (DoS) tem como objetivo tornar um serviço ou um sistema indisponível para seus usuários legítimos, em geral por meio de sobrecarga.",
+      "answer": "C",
+      "comment": "No DDoS, o ataque parte de muitas máquinas ao mesmo tempo, o que dificulta a defesa. O objetivo é a indisponibilidade, e não o roubo de dados."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Ameaças e ataques",
+      "type": "ce",
+      "text": "O cavalo de troia (trojan) é um código malicioso que se replica automaticamente pelas redes, sem necessidade de ser executado pelo usuário.",
+      "answer": "E",
+      "comment": "A replicação automática é a característica do worm. O trojan se passa por programa legítimo e depende de o usuário executá-lo."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Ameaças e ataques",
+      "type": "ce",
+      "text": "Um backdoor é um mecanismo que permite o retorno de um invasor a um equipamento comprometido, sem que ele precise explorar novamente a falha original.",
+      "answer": "C",
+      "comment": "O backdoor deixa uma \"porta dos fundos\" aberta e garante ao invasor o acesso futuro à máquina."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Backup e hardware",
+      "type": "ce",
+      "text": "No backup diferencial, são copiados os arquivos criados ou alterados desde o último backup completo.",
+      "answer": "C",
+      "comment": "O diferencial acumula todas as mudanças desde o último completo. Na restauração, bastam o último backup completo e o último diferencial."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Backup e hardware",
+      "type": "ce",
+      "text": "No backup incremental, são copiados todos os arquivos alterados desde o último backup completo, e a restauração exige apenas o backup completo e o último incremental.",
+      "answer": "E",
+      "comment": "O incremental copia apenas o que mudou desde o último backup de qualquer tipo, e a restauração exige o completo e todos os incrementais seguintes."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Backup e hardware",
+      "type": "ce",
+      "text": "A memória RAM é volátil: o seu conteúdo é perdido quando o computador é desligado.",
+      "answer": "C",
+      "comment": "A RAM guarda os dados e programas em uso. Já os dados armazenados em disco permanecem após o desligamento."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Backup e hardware",
+      "type": "ce",
+      "text": "Os discos SSD armazenam os dados em discos magnéticos giratórios, lidos por cabeças de leitura e gravação.",
+      "answer": "E",
+      "comment": "Essa é a descrição do HD. O SSD usa memória flash, não tem partes móveis e é mais rápido e silencioso."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Backup e hardware",
+      "type": "ce",
+      "text": "A memória cache é mais lenta que a memória RAM, porém tem capacidade de armazenamento muito maior que ela.",
+      "answer": "E",
+      "comment": "A cache é mais rápida e de menor capacidade que a RAM, e fica entre o processador e a memória principal para acelerar o acesso aos dados mais usados."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Tecnologias emergentes",
+      "type": "ce",
+      "text": "O termo big data se refere a conjuntos de dados de grande volume, variedade e velocidade, que exigem tecnologias específicas para armazenamento e processamento.",
+      "answer": "C",
+      "comment": "Volume, variedade e velocidade são os \"três Vs\" clássicos do conceito, aos quais se somam, em muitas fontes, veracidade e valor."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Tecnologias emergentes",
+      "type": "ce",
+      "text": "A Internet das Coisas (IoT) restringe-se à conexão de computadores e smartphones à internet, não alcançando objetos como eletrodomésticos, sensores e veículos.",
+      "answer": "E",
+      "comment": "A IoT justamente amplia a conexão para objetos do cotidiano equipados com sensores, como lâmpadas, câmeras, carros e eletrodomésticos."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Tecnologias emergentes",
+      "type": "ce",
+      "text": "As respostas geradas por ferramentas de inteligência artificial generativa podem conter erros e, por isso, devem ser verificadas, e dados sensíveis não devem ser inseridos nelas sem os devidos cuidados.",
+      "answer": "C",
+      "comment": "O uso responsável exige conferência das informações geradas e cuidado com a privacidade, pois o conteúdo digitado pode ser armazenado ou tratado pelo serviço."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Tecnologias emergentes",
+      "type": "ce",
+      "text": "O aprendizado de máquina (machine learning) é um ramo da inteligência artificial em que os sistemas aprendem padrões a partir de dados, sem que cada regra precise ser programada de forma explícita.",
+      "answer": "C",
+      "comment": "Em vez de seguir regras escritas passo a passo, o modelo é treinado com dados e identifica padrões por conta própria."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "module": "Tecnologias emergentes",
+      "type": "ce",
+      "text": "A mineração de dados (data mining) consiste na realização de cópias de segurança de grandes bases de dados em mídias externas.",
+      "answer": "E",
+      "comment": "A mineração de dados busca padrões, correlações e informações úteis em grandes bases. A cópia de segurança é o backup."
+    }
+  ]
+}
