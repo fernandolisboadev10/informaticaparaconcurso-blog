@@ -2,7 +2,7 @@
 title: "Simulado de Véspera Cebraspe: 50 Questões Comentadas"
 description: "Simulado de véspera de Informática para qualquer concurso da Cebraspe: 50 questões Certo ou Errado, nota por bloco e gabarito comentado no final."
 category: "Simulados"
-date: 2026-10-14T12:00:00-03:00
+date: 2026-10-14T10:00:00-03:00
 readingTime: "35 min"
 tags: ["Simulado", "Cebraspe", "Noções de Informática", "Certo ou Errado"]
 image: "./images/simulado-cebraspe-informatica.webp"
