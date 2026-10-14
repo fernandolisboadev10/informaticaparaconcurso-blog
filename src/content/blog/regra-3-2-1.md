@@ -78,19 +78,3 @@ Você não precisa memorizar todas as variações, mas vale entender a lógica g
 ### Guarde esta ideia
 
 Quando a questão mencionar backup, verifique três perguntas antes de julgar o item. Quantas cópias existem? Em quantos tipos de mídia diferentes elas estão distribuídas? Pelo menos uma delas fica fora do local original? Se a resposta bater com o padrão 3-2-1, o item costuma estar correto, desde que não force uma tecnologia específica como obrigatória. Para fixar, resolva o [simulado de Segurança da Informação](/simulado-seguranca-da-informacao/).
-
--   ![Cebraspe](./images/Cebraspe-150x150.webp)
-    
-    [Cebraspe: como funciona a banca e o que ela cobra em Informática](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/)
--   ![Como Estudar para Concurso](./images/Como-Estudar-para-Concurso-150x150.webp)
-    
-    [Como Estudar para Concurso Faltando Menos de 15 Dias para a Prova](/como-estudar-para-concurso/)
--   ![](./images/informatica-para-concursos-150x150.webp)
-    
-    [Informática para concursos: 5 confusões clássicas e como a banca as cobra](/informatica-para-concursos-5-duvidas-prova/)
--   ![Cebraspe PM MA 2026](./images/Cebraspe-PM-MA-2026-150x150.webp)
-    
-    [10 dicas para gabaritar a prova de Informática da Cebraspe PM MA 2026](/informatica-cebraspe-pm-ma-2026/)
--   ![Windows 10](./images/Windows-10-150x150.webp)
-    
-    [Windows 10: Guia Completo para Concursos Públicos](/windows-10-para-concursos/)

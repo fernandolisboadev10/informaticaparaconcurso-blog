@@ -63,19 +63,3 @@ O [artigo sobre internet, intranet e extranet](/o-que-e-extranet/) esclarece ess
 Com esses conceitos revisados, chegou o momento de testar o que você aprendeu neste simulado de redes de computadores. Resolva as trinta questões no seu ritmo, sem consultar o comentário antes de responder, e anote os temas em que mais errar.
 
 Perceba, ao longo das questões, como esses quatro blocos se cruzam na prática: o modelo TCP/IP explica como o dado trafega, o tipo de rede define o alcance dessa comunicação, a topologia mostra o arranjo físico dos equipamentos e a classificação internet, intranet e extranet determina quem tem permissão de acessar. Entender essa conexão, e não apenas decorar cada termo isoladamente, é o que faz a diferença na hora de eliminar alternativas em uma questão mais elaborada.
-
--   ![Cebraspe](./images/Cebraspe-150x150.webp)
-    
-    [Cebraspe: como funciona a banca e o que ela cobra em Informática](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/)
--   ![Como Estudar para Concurso](./images/Como-Estudar-para-Concurso-150x150.webp)
-    
-    [Como Estudar para Concurso Faltando Menos de 15 Dias para a Prova](/como-estudar-para-concurso/)
--   ![](./images/informatica-para-concursos-150x150.webp)
-    
-    [Informática para concursos: 5 confusões clássicas e como a banca as cobra](/informatica-para-concursos-5-duvidas-prova/)
--   ![Cebraspe PM MA 2026](./images/Cebraspe-PM-MA-2026-150x150.webp)
-    
-    [10 dicas para gabaritar a prova de Informática da Cebraspe PM MA 2026](/informatica-cebraspe-pm-ma-2026/)
--   ![Windows 10](./images/Windows-10-150x150.webp)
-    
-    [Windows 10: Guia Completo para Concursos Públicos](/windows-10-para-concursos/)

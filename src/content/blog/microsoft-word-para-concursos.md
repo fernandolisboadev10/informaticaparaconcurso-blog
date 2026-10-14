@@ -155,19 +155,3 @@ Estudar Microsoft Word para concursos de forma estratégica significa compreende
 Em vez de estudar o Word como usuário casual, trate o programa como conteúdo de prova: observe os nomes exatos das guias, as funções dos comandos e as diferenças entre atalhos básicos e avançados. Com esta aula, você já tem uma base bem mais sólida para enfrentar questões intermediárias sobre o editor.
 
 O próximo passo é praticar com exercícios comentados, porque é na resolução que as **pegadinhas** ficam realmente visíveis. Se quiser consolidar tudo o que foi visto nesta aula antes de seguir para [Excel](/excel-em-concursos-publicos/) e [PowerPoint](/powerpoint-o-que-cai-nos-concursos/), vale passar pelo nosso [simulado de Office](/simulado-office/).
-
--   ![Cebraspe](./images/Cebraspe-150x150.webp)
-    
-    [Cebraspe: como funciona a banca e o que ela cobra em Informática](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/)
--   ![Como Estudar para Concurso](./images/Como-Estudar-para-Concurso-150x150.webp)
-    
-    [Como Estudar para Concurso Faltando Menos de 15 Dias para a Prova](/como-estudar-para-concurso/)
--   ![](./images/informatica-para-concursos-150x150.webp)
-    
-    [Informática para concursos: 5 confusões clássicas e como a banca as cobra](/informatica-para-concursos-5-duvidas-prova/)
--   ![Cebraspe PM MA 2026](./images/Cebraspe-PM-MA-2026-150x150.webp)
-    
-    [10 dicas para gabaritar a prova de Informática da Cebraspe PM MA 2026](/informatica-cebraspe-pm-ma-2026/)
--   ![Windows 10](./images/Windows-10-150x150.webp)
-    
-    [Windows 10: Guia Completo para Concursos Públicos](/windows-10-para-concursos/)

@@ -63,19 +63,3 @@ O [artigo sobre LibreOffice para concursos](/libreoffice-para-concursos/) mostra
 ## Simulado de Office: hora de colocar em prática
 
 Com esses conceitos revisados, chegou o momento de testar o que você aprendeu neste simulado de Office. Resolva as trinta questões no seu ritmo, sem consultar o comentário antes de responder, e anote os temas em que mais errar. Como os três aplicativos aparecem juntos na maioria dos editais, vale revisar Word, Excel e PowerPoint na mesma sessão de estudo, em vez de tratá-los como disciplinas separadas.
-
--   ![Cebraspe](./images/Cebraspe-150x150.webp)
-    
-    [Cebraspe: como funciona a banca e o que ela cobra em Informática](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/)
--   ![Como Estudar para Concurso](./images/Como-Estudar-para-Concurso-150x150.webp)
-    
-    [Como Estudar para Concurso Faltando Menos de 15 Dias para a Prova](/como-estudar-para-concurso/)
--   ![](./images/informatica-para-concursos-150x150.webp)
-    
-    [Informática para concursos: 5 confusões clássicas e como a banca as cobra](/informatica-para-concursos-5-duvidas-prova/)
--   ![Cebraspe PM MA 2026](./images/Cebraspe-PM-MA-2026-150x150.webp)
-    
-    [10 dicas para gabaritar a prova de Informática da Cebraspe PM MA 2026](/informatica-cebraspe-pm-ma-2026/)
--   ![Windows 10](./images/Windows-10-150x150.webp)
-    
-    [Windows 10: Guia Completo para Concursos Públicos](/windows-10-para-concursos/)

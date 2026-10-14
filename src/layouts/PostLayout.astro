@@ -5,7 +5,6 @@ import BaseLayout from './BaseLayout.astro';
 import AuthorBio from '../components/AuthorBio.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
-import PostNav from '../components/PostNav.astro';
 import Quiz from '../components/Quiz.astro';
 import type { Question } from '../components/Quiz.astro';
 import { categoryHref } from '../data/categories';
@@ -88,13 +87,11 @@ const articleSchema = {
       <slot />
     </div>
 
-    <ShareButtons title={title} variant="end" />
-
     {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
 
-    <PostNav prev={prev} next={next} />
-
     <AuthorBio />
+
+    <ShareButtons title={title} variant="end" />
     <RelatedPosts slug={Astro.props.slug} category={category} tags={tags} related={related} />
   </article>
 </BaseLayout>

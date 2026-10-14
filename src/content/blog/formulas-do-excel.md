@@ -53,19 +53,3 @@ Depois de passar pelas 15 questões, vale reunir tudo em um resumo curto. Menos 
 | ⌨️ `;` | Separador de argumentos em português |
 
 💬 **Para a próxima revisão:** refaça mentalmente cada fórmula do Excel usando os dados reais da planilha antes de julgar um item como certo ou errado. É assim que a banca verifica se você realmente entendeu o funcionamento da fórmula, e não apenas decorou a sintaxe. Para ampliar, leia o guia [Excel para concursos](/excel-em-concursos-publicos/) e treine no [simulado de Office](/simulado-office/). 🎓
-
--   ![Cebraspe](./images/Cebraspe-150x150.webp)
-    
-    [Cebraspe: como funciona a banca e o que ela cobra em Informática](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/)
--   ![Como Estudar para Concurso](./images/Como-Estudar-para-Concurso-150x150.webp)
-    
-    [Como Estudar para Concurso Faltando Menos de 15 Dias para a Prova](/como-estudar-para-concurso/)
--   ![](./images/informatica-para-concursos-150x150.webp)
-    
-    [Informática para concursos: 5 confusões clássicas e como a banca as cobra](/informatica-para-concursos-5-duvidas-prova/)
--   ![Cebraspe PM MA 2026](./images/Cebraspe-PM-MA-2026-150x150.webp)
-    
-    [10 dicas para gabaritar a prova de Informática da Cebraspe PM MA 2026](/informatica-cebraspe-pm-ma-2026/)
--   ![Windows 10](./images/Windows-10-150x150.webp)
-    
-    [Windows 10: Guia Completo para Concursos Públicos](/windows-10-para-concursos/)
