@@ -1,0 +1,144 @@
+{
+  "questions": [
+    {
+      "banca": "Estilo Cebraspe",
+      "type": "mc",
+      "text": "Leia a frase: \"The fire department will actually inspect the building next week.\" Nesse contexto, o termo \"actually\" significa:",
+      "options": [
+        "atualmente.",
+        "na verdade.",
+        "ativamente.",
+        "recentemente.",
+        "frequentemente."
+      ],
+      "answer": "B",
+      "comment": "\"Actually\" é um falso cognato clássico: não significa \"atualmente\" (que seria \"currently\" ou \"nowadays\"), e sim \"na verdade\" ou \"de fato\"."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "type": "mc",
+      "text": "Leia o texto: \"Every year, firefighters visit schools to teach children how to react in case of fire. They explain that it is important to stay low, leave the building quickly and never go back inside.\" De acordo com o texto, as visitas dos bombeiros às escolas têm como objetivo:",
+      "options": [
+        "selecionar novos candidatos para a corporação.",
+        "inspecionar a estrutura dos prédios escolares.",
+        "ensinar as crianças a reagir em caso de incêndio.",
+        "treinar os professores em primeiros socorros.",
+        "demonstrar o uso de equipamentos de combate ao fogo."
+      ],
+      "answer": "C",
+      "comment": "O trecho \"to teach children how to react in case of fire\" informa o objetivo das visitas. As demais alternativas trazem informações que não aparecem no texto."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "type": "mc",
+      "text": "Leia a frase: \"The rescue team arrived late; however, everyone was saved.\" O conectivo \"however\" expressa uma ideia de:",
+      "options": [
+        "causa.",
+        "adição.",
+        "conclusão.",
+        "contraste.",
+        "finalidade."
+      ],
+      "answer": "D",
+      "comment": "\"However\" equivale a \"no entanto\" ou \"porém\" e introduz uma oposição: a equipe chegou tarde, mas mesmo assim todos foram salvos."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "type": "mc",
+      "text": "Leia a frase: \"The firefighters checked the equipment before the mission because it was essential for their safety.\" O pronome \"it\" refere-se a:",
+      "options": [
+        "the equipment.",
+        "the mission.",
+        "the firefighters.",
+        "their safety.",
+        "the fire."
+      ],
+      "answer": "A",
+      "comment": "O pronome \"it\" retoma o equipamento, que é o elemento essencial para a segurança. \"Firefighters\" seria retomado por \"they\", não por \"it\"."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "type": "mc",
+      "text": "Assinale a alternativa que completa corretamente a lacuna: \"Yesterday, the team ______ a fire in the warehouse.\"",
+      "options": [
+        "extinguish",
+        "extinguishes",
+        "extinguished",
+        "will extinguish",
+        "is extinguishing"
+      ],
+      "answer": "C",
+      "comment": "A palavra \"yesterday\" indica passado, então o verbo deve estar no simple past: \"extinguished\"."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "type": "mc",
+      "text": "Leia a frase: \"You must not use the elevator during a fire.\" A expressão \"must not\" indica:",
+      "options": [
+        "possibilidade.",
+        "permissão.",
+        "habilidade.",
+        "sugestão.",
+        "proibição."
+      ],
+      "answer": "E",
+      "comment": "\"Must not\" expressa proibição. Já \"don't have to\" indica que algo não é obrigatório, o que é diferente."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "type": "mc",
+      "text": "Leia o texto: \"Smoke is often more dangerous than flames. It spreads quickly, and people may lose consciousness before the fire reaches them.\" É possível inferir do texto que:",
+      "options": [
+        "as chamas são sempre menos perigosas que a fumaça.",
+        "a fumaça pode ser mais perigosa que as chamas.",
+        "ninguém sobrevive a um incêndio com muita fumaça.",
+        "o fogo se espalha mais devagar que a fumaça em todos os casos.",
+        "a fumaça só é perigosa quando há chamas visíveis."
+      ],
+      "answer": "B",
+      "comment": "\"Often more dangerous\" torna a afirmação da alternativa B correta. As demais usam termos absolutos (\"sempre\", \"ninguém\", \"todos os casos\", \"só\"), que o texto não sustenta."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "type": "mc",
+      "text": "Leia o texto: \"The report says that most accidents at home can be avoided with simple precautions.\" Segundo o texto:",
+      "options": [
+        "nenhum acidente doméstico pode ser evitado.",
+        "todas as precauções são inúteis.",
+        "os acidentes domésticos são raros.",
+        "a maioria dos acidentes domésticos pode ser evitada.",
+        "precauções complexas são necessárias para evitar acidentes."
+      ],
+      "answer": "D",
+      "comment": "\"Most accidents ... can be avoided\" significa que a maioria dos acidentes pode ser evitada, e isso com precauções simples, o que descarta a alternativa E."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "type": "mc",
+      "text": "Assinale a alternativa que completa corretamente as lacunas: \"The meeting will be held ______ Monday ______ 9 a.m.\"",
+      "options": [
+        "on / at",
+        "in / on",
+        "at / in",
+        "on / in",
+        "at / on"
+      ],
+      "answer": "A",
+      "comment": "Usa-se \"on\" com dias da semana (on Monday) e \"at\" com horários (at 9 a.m.)."
+    },
+    {
+      "banca": "Estilo Cebraspe",
+      "type": "mc",
+      "text": "Leia a frase: \"This extinguisher is lighter than the old one.\" A frase significa que:",
+      "options": [
+        "este extintor é tão leve quanto o antigo.",
+        "este extintor é mais pesado que o antigo.",
+        "o extintor antigo é mais leve que este.",
+        "este extintor é o mais leve de todos.",
+        "este extintor é mais leve que o antigo."
+      ],
+      "answer": "E",
+      "comment": "\"Lighter than\" é o comparativo de superioridade de \"light\" e equivale a \"mais leve que\". O superlativo seria \"the lightest\"."
+    }
+  ]
+}
