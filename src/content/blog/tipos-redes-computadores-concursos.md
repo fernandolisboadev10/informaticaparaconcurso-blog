@@ -76,4 +76,3 @@ Por fim, a chave para dominar o estilo de cobrança das principais bancas é tre
 
 -   IBM. [O que é rede de computadores?](https://www.ibm.com/br-pt/think/topics/networking)
 -   Estratégia Concursos. [Tipos de Redes (LAN, MAN e WAN) para concursos.](https://www.estrategiaconcursos.com.br/blog/tipos-redes-concurso-pf/)
--   Focus Concursos. [Informática: Redes de computadores.](https://blog.focusconcursos.com.br/informatica-redes-de-computadores/)

@@ -136,9 +136,8 @@ Portanto, ao revisar o tema, concentre seu esforço nos conceitos básicos com m
 
 ## Fontes e Referências
 
--   Qconcursos — Editor de Apresentações: PowerPoint e Impress para concursos: [https://www.qconcursos.com/questoes-de-concursos/disciplinas/noes-de-informatica-microsoft-powerpoint](https://www.qconcursos.com/questoes-de-concursos/disciplinas/noes-de-informatica-microsoft-powerpoint)[qconcursos](https://www.qconcursos.com/resumos/editor-de-apresentacoes-powerpoint-e-impress-conceitos-e-funcoes)
--   Qconcursos — Questão sobre F5 no PowerPoint: [https://www.qconcursos.com/questoes-de-concursos/questoes](https://www.qconcursos.com/questoes-de-concursos/questoes)[qconcursos](https://www.qconcursos.com/questoes-de-concursos/questoes/8a22b0bd-18)
--   Aula PowerPoint para concursos — formatos de arquivos e extensões: [https://www.youtube.com/watch?v=](https://www.youtube.com/watch?v=)[youtube](https://www.youtube.com/watch?v=6Dbn6s-P7vg)
--   Aula PowerPoint para concursos — pptx e ppsx: [https://www.youtube.com/watch?v=](https://www.youtube.com/watch?v=)[youtube](https://www.youtube.com/watch?v=oySZ1j5JBtU)
--   Aula de atalhos PowerPoint para concursos: [https://www.youtube.com/watch?v=](https://www.youtube.com/watch?v=)[youtube](https://www.youtube.com/watch?v=BRlLCR6X4TE)
--   Artigo sobre cobrança de PowerPoint em informática para concursos: [https://folha.qconcursos.com/n/informatica-para-concurso-o-que-estudar-sobre-powerpoint](https://folha.qconcursos.com/n/informatica-para-concurso-o-que-estudar-sobre-powerpoint)
+-   Qconcursos. [Editor de Apresentações: PowerPoint e Impress para concursos](https://www.qconcursos.com/resumos/editor-de-apresentacoes-powerpoint-e-impress-conceitos-e-funcoes)
+-   Qconcursos. [Questão sobre o atalho para iniciar a apresentação de slides](https://www.qconcursos.com/questoes-de-concursos/questoes/8a22b0bd-18)
+-   [Aula PowerPoint para concursos: formatos de arquivos e extensões](https://www.youtube.com/watch?v=6Dbn6s-P7vg)
+-   [Aula PowerPoint para concursos: pptx e ppsx](https://www.youtube.com/watch?v=oySZ1j5JBtU)
+-   [Aula de atalhos PowerPoint para concursos](https://www.youtube.com/watch?v=BRlLCR6X4TE)
