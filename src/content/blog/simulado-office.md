@@ -15,7 +15,7 @@ Word, Excel e PowerPoint costumam derrubar até quem estuda bastante, e este sim
 
 Antes de tudo, vale revisar os recursos de formatação que a banca mais explora no Word.
 
-Quebra de página e quebra de seção costumam ser confundidas: a primeira apenas move o conteúdo para a próxima página, mantendo a formatação; a segunda permite aplicar configurações diferentes (como orientação ou numeração) entre uma parte do documento e outra. Da mesma forma, o candidato precisa saber diferenciar espaçamento entre linhas de espaçamento entre parágrafos, dois ajustes distintos no menu de formatação.
+Quebra de página e [quebra de seção](https://support.microsoft.com/pt-br/office/usar-quebras-de-se%C3%A7%C3%A3o-para-alterar-o-layout-ou-a-formata%C3%A7%C3%A3o-em-uma-se%C3%A7%C3%A3o-do-documento-word-4cdfa638-3ea9-434a-8034-bf1e4274c450) costumam ser confundidas: a primeira apenas move o conteúdo para a próxima página, mantendo a formatação; a segunda permite aplicar configurações diferentes (como orientação ou numeração) entre uma parte do documento e outra. Da mesma forma, o candidato precisa saber diferenciar espaçamento entre linhas de espaçamento entre parágrafos, dois ajustes distintos no menu de formatação.
 
 Guarde esta ideia: sempre que a banca descrever uma mudança de layout que afeta só parte do documento, ela está testando quebra de seção, não quebra de página.
 
@@ -36,7 +36,7 @@ Funções como SOMA, MÉDIA, SE e PROCV aparecem quase sempre, e o examinador co
 
 Não confunda os dois conceitos: usar $A$1 trava linha e coluna, já A$1 trava apenas a linha. Essa distinção aparece com frequência em questões que pedem o resultado de uma fórmula copiada para outras células.
 
-Outro ponto recorrente é a função SE aninhada, usada quando existe mais de uma condição a testar. Por exemplo, =SE(A1>7;”Aprovado”;SE(A1>=5;”Recuperação”;”Reprovado”)) testa a primeira condição e, caso ela seja falsa, avalia a segunda antes de chegar ao resultado final. Interpretar essa lógica passo a passo evita erro de leitura na hora da prova.
+Outro ponto recorrente é a [função SE aninhada](https://support.microsoft.com/pt-br/office/fun%C3%A7%C3%A3o-se-f%C3%B3rmulas-aninhadas-e-evitando-armadilhas-0b22ff44-f149-44ba-aeb5-4ef99da241c8), usada quando existe mais de uma condição a testar. Por exemplo, =SE(A1>7;”Aprovado”;SE(A1>=5;”Recuperação”;”Reprovado”)) testa a primeira condição e, caso ela seja falsa, avalia a segunda antes de chegar ao resultado final. Interpretar essa lógica passo a passo evita erro de leitura na hora da prova.
 
 O [artigo sobre fórmulas do Excel](/formulas-do-excel/) e o [guia de Excel em concursos públicos](/excel-em-concursos-publicos/) detalham cada função com exemplos práticos de prova.
 
@@ -44,7 +44,7 @@ O [artigo sobre fórmulas do Excel](/formulas-do-excel/) e o [guia de Excel em c
 
 Além disso, o PowerPoint também garante presença fixa nos editais de informática.
 
-O slide mestre concentra a formatação padrão de todos os slides da apresentação, então alterá-lo modifica o conjunto inteiro de uma só vez. Transições controlam a troca entre um slide e outro, enquanto animações controlam o movimento de elementos dentro do mesmo slide, uma diferença que a banca gosta de explorar.
+O [slide mestre](https://support.microsoft.com/pt-br/powerpoint/training/what-is-a-slide-master-in-powerpoint) concentra a formatação padrão de todos os slides da apresentação, então alterá-lo modifica o conjunto inteiro de uma só vez. Transições controlam a troca entre um slide e outro, enquanto animações controlam o movimento de elementos dentro do mesmo slide, uma diferença que a banca gosta de explorar.
 
 Vale destacar também o modo de exibição de anotações, usado pelo apresentador para ver comentários que a plateia não enxerga na tela projetada. Além disso, a tecla F5 inicia a apresentação a partir do primeiro slide, enquanto Shift+F5 inicia a partir do slide atualmente selecionado, uma diferença pequena que já apareceu em prova.
 

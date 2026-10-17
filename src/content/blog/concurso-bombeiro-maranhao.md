@@ -15,11 +15,11 @@ related:
 
 O **concurso Bombeiro Maranhão** tem prova objetiva neste domingo, **18 de outubro de 2026**, no turno da tarde, e uma dúvida aparece em quase todo grupo de candidatos: cai informática? Pelo edital, **não cai**. A disciplina não aparece em nenhum bloco de conhecimentos, nem nos gerais nem nos específicos. Em compensação, o edital traz **Língua Estrangeira (Inglês)**, e é nela que muita gente costuma deixar pontos na mesa.
 
-Neste artigo você confere o que o edital do Corpo de Bombeiros Militar do Maranhão (CBM-MA), organizado pelo Cebraspe, cobra de inglês, como a prova está montada e o que fazer nos últimos dias.
+Neste artigo você confere o que o edital do Corpo de Bombeiros Militar do Maranhão (CBM-MA), organizado pelo [Cebraspe](https://www.cebraspe.org.br/concursos/cbm_ma_26), cobra de inglês, como a prova está montada e o que fazer nos últimos dias.
 
 ## Concurso Bombeiro Maranhão: sem informática no edital
 
-Conferi o item 17 do edital, que trata dos objetos de avaliação, e a informática não consta. Os conhecimentos gerais, comuns a todos os cargos, são:
+Conferi o item 17 do [edital](https://cdn.cebraspe.org.br/concursos/CBM_MA_26/arquivos/481612751BE0D87E75BBACCCBDCE7A76E6141AF324F67C8FCC3F143D1FF554C3.pdf), que trata dos objetos de avaliação, e a informática não consta. Os conhecimentos gerais, comuns a todos os cargos, são:
 
 -   Língua Portuguesa;
 -   História do Maranhão;
@@ -72,7 +72,7 @@ Se tiver tempo, leia dois ou três textos curtos em inglês sobre temas da área
 Faltando poucos dias, a prioridade é consolidar o que você já estudou, e não abrir conteúdo novo. Algumas orientações:
 
 -   **Revise a legislação institucional.** Para QPBM-0, as leis estaduais e federais citadas no edital têm peso no bloco específico, que vale 70 pontos;
--   **Confira seu local de prova.** O Cebraspe divulga a consulta individual no site do concurso. A responsabilidade de identificar o local e chegar no horário é do candidato;
+-   **Confira seu local de prova.** O Cebraspe divulga a consulta individual no [site do concurso](https://www.cebraspe.org.br/concursos/cbm_ma_26). A responsabilidade de identificar o local e chegar no horário é do candidato;
 -   **Cuide da folha de respostas.** Marcação rasurada, emendada ou com o campo mal preenchido pode ser considerada indevida, e a folha não é substituída por erro do candidato;
 -   **Planeje as 5 horas.** Comece pelo que você domina, deixe as mais difíceis para o fim e reserve tempo para transcrever as respostas;
 -   **Durma bem na véspera.** Uma prova longa exige descanso, e uma revisão a mais não compensa uma noite mal dormida.

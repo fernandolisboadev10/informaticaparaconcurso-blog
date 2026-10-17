@@ -15,13 +15,13 @@ Poucos temas exigem tanta atenção a detalhes quanto redes, e este simulado de 
 
 Antes de entrar nas questões, vale relembrar a lógica por trás dos dois modelos que toda banca cobra.
 
-O modelo OSI organiza a comunicação em sete camadas, da física à de aplicação, cada uma responsável por uma etapa específica do envio e recebimento de dados. Já o modelo TCP/IP simplifica essa estrutura em quatro camadas, e é o que efetivamente funciona na internet que você usa todos os dias.
+O modelo OSI organiza a comunicação em sete camadas, da física à de aplicação, cada uma responsável por uma etapa específica do envio e recebimento de dados. Já o [modelo TCP/IP](https://www.rfc-editor.org/rfc/rfc1122) simplifica essa estrutura em quatro camadas, e é o que efetivamente funciona na internet que você usa todos os dias.
 
-Nesse ponto, os protocolos mais cobrados costumam aparecer junto: HTTP e HTTPS para navegação, FTP para transferência de arquivos, DNS para resolver nomes de domínio e DHCP para atribuir endereços IP automaticamente.
+Nesse ponto, os protocolos mais cobrados costumam aparecer junto: HTTP e HTTPS para navegação, FTP para transferência de arquivos, [DNS para resolver nomes de domínio](https://www.rfc-editor.org/rfc/rfc1034) e DHCP para atribuir endereços IP automaticamente.
 
 Guarde esta ideia: quando a banca menciona “camadas de comunicação em rede”, ela está testando se você sabe que o TCP/IP é o modelo prático, enquanto o OSI é o modelo de referência, mais didático e detalhado.
 
-Vale destacar ainda a diferença entre HTTP e HTTPS, um clássico de prova: o HTTPS adiciona uma camada de criptografia à comunicação, protegendo os dados trocados entre o navegador e o servidor, o que o HTTP simples não oferece. Da mesma forma, não confunda DNS com DHCP: o primeiro traduz nomes de domínio em endereços IP, o segundo distribui esses endereços automaticamente para os dispositivos da rede.
+Vale destacar ainda a diferença entre HTTP e HTTPS, um clássico de prova: o HTTPS adiciona uma camada de criptografia à comunicação, protegendo os dados trocados entre o navegador e o servidor, o que o HTTP simples não oferece. Da mesma forma, não confunda DNS com DHCP: o primeiro traduz nomes de domínio em endereços IP, o segundo [distribui esses endereços automaticamente](https://www.rfc-editor.org/rfc/rfc2131) para os dispositivos da rede.
 
 Para revisar cada camada com profundidade, o [guia completo de redes de computadores](/redes-de-computadores-para-concursos/) traz a função de cada uma delas com exemplos práticos.
 

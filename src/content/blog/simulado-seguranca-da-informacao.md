@@ -21,7 +21,7 @@ Antes de tudo, vale separar bem os principais tipos de malware, porque a banca a
 -   Ransomware: sequestra os arquivos com criptografia e exige pagamento para liberar o acesso.
 -   Spyware: coleta informações do usuário sem o seu conhecimento, muitas vezes senhas e dados bancários.
 
-Esse é um detalhe que costuma confundir o candidato: o worm não precisa de arquivo hospedeiro, o vírus precisa. Guarde essa diferença, ela é uma das **pegadinhas** mais repetidas nas provas de Cebraspe e FGV.
+Esse é um detalhe que costuma confundir o candidato: [o worm não precisa de arquivo hospedeiro, o vírus precisa](https://cartilha.cert.br/fasciculos/codigos-maliciosos/fasciculo-codigos-maliciosos.pdf). Guarde essa diferença, ela é uma das **pegadinhas** mais repetidas nas provas de Cebraspe e FGV.
 
 Se quiser revisar cada ameaça com mais profundidade, o [artigo sobre malwares e ameaças de segurança da informação](/malwares-e-ameacas-seguranca-da-informacao/) traz exemplos reais de cada categoria.
 
@@ -49,7 +49,7 @@ Vale destacar: quando a banca fala em “duas chaves diferentes”, ela está de
 
 Antes de fechar a teoria, vale reforçar um ponto que a banca adora: nem todo ataque explora uma falha técnica, muitos exploram a confiança do usuário.
 
-A engenharia social manipula a vítima para que ela mesma entregue a informação sensível ou execute a ação que compromete o sistema. O phishing é o exemplo mais cobrado: um e-mail ou mensagem que se passa por uma fonte confiável (banco, empresa, órgão público) para induzir o clique em um link malicioso ou o envio de dados de acesso.
+A [engenharia social](https://cartilha.cert.br/fasciculos/golpes/fasciculo-golpes.pdf) manipula a vítima para que ela mesma entregue a informação sensível ou execute a ação que compromete o sistema. O phishing é o exemplo mais cobrado: um e-mail ou mensagem que se passa por uma fonte confiável (banco, empresa, órgão público) para induzir o clique em um link malicioso ou o envio de dados de acesso.
 
 Existem variações que também aparecem em prova:
 
@@ -62,7 +62,7 @@ Na prática, se a banca descrever um golpe que depende da vítima “clicar”, 
 
 Por fim, nenhuma estratégia de segurança está completa sem backup, porque ele é o que garante a recuperação depois de um ataque bem-sucedido.
 
-A regra mais cobrada é a 3-2-1: três cópias dos dados, em dois tipos de mídia diferentes, com uma cópia armazenada fora do local principal. Dessa forma, mesmo que o equipamento seja perdido, roubado ou infectado por ransomware, os dados continuam recuperáveis.
+A regra mais cobrada é a [3-2-1](https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf): três cópias dos dados, em dois tipos de mídia diferentes, com uma cópia armazenada fora do local principal. Dessa forma, mesmo que o equipamento seja perdido, roubado ou infectado por ransomware, os dados continuam recuperáveis.
 
 O [artigo sobre backup e segurança da informação](/backup-seguranca-da-informacao/) e a [regra 3-2-1 detalhada](/regra-3-2-1/) mostram como aplicar essa estratégia na prática, incluindo os tipos de backup (completo, incremental e diferencial) que também caem em prova.
 

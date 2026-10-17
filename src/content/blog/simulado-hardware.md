@@ -24,7 +24,7 @@ Na prova, o examinador costuma testar se você confunde a função de cada um. G
 Esse é um dos temas mais cobrados, e não à toa: é fácil confundir os dois conceitos se você não fixar a lógica por trás deles.
 
 -   **RAM (Random Access Memory)**: volátil, perde todo o conteúdo quando o computador desliga, permite leitura e escrita, armazena os dados dos programas em execução no momento.
--   **ROM (Read Only Memory)**: não volátil, mantém as informações mesmo sem energia, grava em geral as instruções de inicialização e o firmware do sistema.
+-   **[ROM (Read Only Memory)](https://csrc.nist.gov/glossary/term/read_only_memory)**: não volátil, mantém as informações mesmo sem energia, grava em geral as instruções de inicialização e o firmware do sistema.
 
 Aqui está um ponto que merece atenção: quando a banca descreve uma memória que “perde os dados ao desligar o equipamento”, ela está falando de RAM, não de ROM. Não confunda os dois conceitos na hora da prova, essa troca é uma das **pegadinhas** mais repetidas em concursos de informática.
 
@@ -32,7 +32,7 @@ Se quiser aprofundar, o [artigo completo sobre memórias RAM, ROM e cache](/aula
 
 ## Processador: o centro de processamento que toda prova cobra
 
-O processador, ou CPU, executa as instruções dos programas e coordena o funcionamento das demais peças. Dois pontos costumam aparecer nas provas: a quantidade de núcleos, que determina quantas tarefas o processador executa simultaneamente, e a velocidade de clock, medida em GHz, que indica quantos ciclos ele realiza por segundo.
+O processador, ou CPU, executa as instruções dos programas e coordena o funcionamento das demais peças. Dois pontos costumam aparecer nas provas: a [quantidade de núcleos](https://learn.microsoft.com/pt-br/windows/win32/procthread/multiple-processors), que determina quantas tarefas o processador executa simultaneamente, e a velocidade de clock, medida em GHz, que indica quantos ciclos ele realiza por segundo.
 
 Além disso, a memória cache trabalha ao lado do processador para agilizar o acesso aos dados mais usados, funcionando como uma ponte entre a velocidade da CPU e a velocidade, mais lenta, da RAM.
 
@@ -42,7 +42,7 @@ Na sequência, chegamos ao armazenamento, outro tema certo em praticamente qualq
 
 O HD (disco rígido) armazena dados em discos magnéticos giratórios, lidos por uma cabeça mecânica. Por depender de partes móveis, tende a ser mais lento e mais suscetível a falhas físicas.
 
-Já o SSD (unidade de estado sólido) grava as informações em chips de memória flash, sem peças móveis. Por esse motivo, ele lê e grava dados muito mais rápido, além de ser mais resistente a impactos.
+Já o SSD (unidade de estado sólido) grava as informações em chips de memória flash, sem peças móveis. Por esse motivo, ele lê e grava dados muito mais rápido, além de ser mais resistente a impactos. Os SSDs mais modernos usam o padrão [NVMe](https://nvmexpress.org/about/), pensado para unidades ligadas ao barramento PCI Express.
 
 Compare os pontos que mais caem em prova:
 

@@ -15,7 +15,7 @@ Essa confusão vira armadilha de prova com frequência. Por isso, você vai ente
 
 ### O Que É um Navegador de Internet (Browser)
 
-Primeiramente, o navegador é o programa que você instala no computador ou no celular para acessar a internet. Ele interpreta o código das páginas (HTML, CSS e JavaScript) e exibe o resultado na tela, com texto, imagens e vídeos organizados.
+Primeiramente, o [navegador](https://developer.mozilla.org/pt-BR/docs/Glossary/Browser) é o programa que você instala no computador ou no celular para acessar a internet. Ele interpreta o código das páginas (HTML, CSS e JavaScript) e exibe o resultado na tela, com texto, imagens e vídeos organizados.
 
 Além disso, o navegador funciona como uma janela para a web. Sem ele, o seu dispositivo não consegue abrir sites, redes sociais ou plataformas de streaming pela internet.
 
@@ -86,7 +86,7 @@ Essa ferramenta só existe porque está na internet, de forma aberta, e não den
 
 ### Como um sítio de busca funciona
 
-Por trás da busca simples existe um processo de três etapas, sempre nesta ordem:
+Por trás da busca simples existe um [processo de três etapas](https://developers.google.com/search/docs/fundamentals/how-search-works?hl=pt-BR), sempre nesta ordem:
 
 1.  **Rastreamento:** programas chamados robôs (crawlers) percorrem a internet, visitam páginas e seguem os links encontrados nelas.
 2.  **Indexação:** o sítio organiza o conteúdo rastreado em um banco de dados gigantesco, para consultá-lo depois com rapidez.
@@ -104,7 +104,7 @@ A banca também testa os operadores de pesquisa, como as aspas duplas (termo exa
 
 ### Sítios de busca e segurança da informação
 
-Nem todo resultado de busca é confiável. Páginas falsas, criadas para imitar sites legítimos, aparecem entre os resultados com o objetivo de aplicar phishing ou instalar malware, mesmo ocupando as primeiras posições. Desconfie de links com endereço estranho ou sem certificado de segurança e revise os [malwares e ameaças à segurança da informação](/malwares-e-ameacas-seguranca-da-informacao/). Na prova, resultado bem posicionado não é garantia de segurança.
+Nem todo resultado de busca é confiável. Páginas falsas, criadas para imitar sites legítimos, aparecem entre os resultados com o objetivo de aplicar [phishing](https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks) ou instalar malware, mesmo ocupando as primeiras posições. Desconfie de links com endereço estranho ou sem certificado de segurança e revise os [malwares e ameaças à segurança da informação](/malwares-e-ameacas-seguranca-da-informacao/). Na prova, resultado bem posicionado não é garantia de segurança.
 
 ### Por Que essa Confusão é Tão Comum
 

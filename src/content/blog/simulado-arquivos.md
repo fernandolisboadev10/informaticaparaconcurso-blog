@@ -25,7 +25,7 @@ O [artigo sobre gerenciamento de arquivos e pastas](/informatica-concursos-geren
 
 Na sequência, entram as extensões, e aqui o candidato costuma errar por não associar a extensão à sua função real.
 
-A extensão indica ao sistema operacional qual programa deve abrir aquele arquivo e como interpretar seu conteúdo. Documentos de texto usam .docx ou .odt, planilhas usam .xlsx ou .csv, imagens usam .jpg ou .png, e arquivos executáveis usam .exe.
+A [extensão](https://support.microsoft.com/pt-br/windows/experience/storage-filemanagement/common-file-name-extensions-in-windows) indica ao sistema operacional qual programa deve abrir aquele arquivo e como interpretar seu conteúdo. Documentos de texto usam .docx ou .odt, planilhas usam .xlsx ou .csv, imagens usam .jpg ou .png, e arquivos executáveis usam .exe.
 
 Esse é um detalhe que costuma confundir o candidato: a extensão não garante, sozinha, que o conteúdo é seguro. Um arquivo malicioso pode ser disfarçado com dupla extensão, como “documento.pdf.exe”, para enganar quem não presta atenção.
 
@@ -35,7 +35,7 @@ O [artigo sobre tipos de arquivo, extensões e formatos](/tipos-de-arquivo/) tra
 
 Além disso, a compactação também é tema certo, principalmente quando a prova envolve transferência ou armazenamento de arquivos.
 
-Formatos como ZIP e RAR reduzem o tamanho de um ou mais arquivos agrupando-os em um único pacote, o que facilita o envio por e-mail ou a economia de espaço em disco. Na compactação sem perdas, usada nesses formatos, nenhum dado é descartado no processo, o arquivo original é totalmente recuperado ao ser descompactado.
+Formatos como [ZIP](https://support.microsoft.com/pt-br/windows/compactar-e-descompactar-arquivos-8d28fa72-f2f9-712f-67df-f80cf89fd4e5) e RAR reduzem o tamanho de um ou mais arquivos agrupando-os em um único pacote, o que facilita o envio por e-mail ou a economia de espaço em disco. Na compactação sem perdas, usada nesses formatos, nenhum dado é descartado no processo, o arquivo original é totalmente recuperado ao ser descompactado.
 
 Vale destacar: isso é diferente da compactação com perdas, comum em imagens e vídeos, na qual parte da informação é descartada para reduzir ainda mais o tamanho final. Não confunda os dois conceitos, essa distinção já apareceu em provas anteriores.
 
@@ -51,7 +51,7 @@ Outro ponto recorrente é a diferença entre mover e copiar um arquivo: ao mover
 
 Por fim, chegamos ao destino final dos arquivos: onde e como guardá-los com segurança.
 
-A regra mais cobrada continua sendo a 3-2-1: três cópias dos dados, em dois tipos de mídia diferentes, com uma cópia fora do local principal. Dessa forma, mesmo que o computador falhe ou seja perdido, os arquivos continuam recuperáveis.
+A regra mais cobrada continua sendo a [3-2-1](https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf): três cópias dos dados, em dois tipos de mídia diferentes, com uma cópia fora do local principal. Dessa forma, mesmo que o computador falhe ou seja perdido, os arquivos continuam recuperáveis.
 
 O armazenamento em nuvem entra justamente como essa cópia externa: os dados ficam hospedados em servidores remotos, acessíveis de qualquer lugar com internet, e normalmente com backup automático incluído pelo próprio serviço.
 

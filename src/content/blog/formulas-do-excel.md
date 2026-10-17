@@ -27,13 +27,13 @@ Todas as questões ao final do artigo usam a planilha acima. Antes de resolvê-l
 
 **SOMA e MÉDIA.** A SOMA percorre o intervalo informado e soma os valores, e a MÉDIA divide o total pela quantidade de células. As duas só enxergam as células que você digitou entre parênteses. Um intervalo errado, como B2:F2 em vez de B2:E2, faz o Total ser contado dentro do próprio Total. Na MÉDIA, células vazias são ignoradas, e não contadas como zero.
 
-**Referências relativa, absoluta e mista.** Sem cifrão, a referência é relativa e se ajusta à posição para onde a fórmula é copiada. Com $A$1, ela é absoluta e trava coluna e linha. Em A$1 trava só a linha, e em $A1 trava só a coluna. É assim que uma fórmula na primeira linha pode ser arrastada para todas as outras.
+**Referências relativa, absoluta e mista.** Sem cifrão, a referência é [relativa](https://support.microsoft.com/pt-br/office/alternar-entre-refer%C3%AAncias-relativas-absolutas-e-mistas-dfec08cd-ae65-4f56-839e-5f0d8d0baca9) e se ajusta à posição para onde a fórmula é copiada. Com $A$1, ela é absoluta e trava coluna e linha. Em A$1 trava só a linha, e em $A1 trava só a coluna. É assim que uma fórmula na primeira linha pode ser arrastada para todas as outras.
 
-**SE.** A função recebe três partes separadas por ponto e vírgula: a condição, o resultado se for verdadeira e o resultado se for falsa. Todo texto digitado dentro da fórmula vai entre aspas duplas. Números e referências de célula não vão.
+**SE.** A [função](https://support.microsoft.com/pt-br/office/fun%C3%A7%C3%A3o-se-69aed7c9-4e8a-4755-a9bc-aa8bbff73be2) recebe três partes separadas por ponto e vírgula: a condição, o resultado se for verdadeira e o resultado se for falsa. Todo texto digitado dentro da fórmula vai entre aspas duplas. Números e referências de célula não vão.
 
 **MÁXIMO, MÍNIMO e CONT.SE.** O MÁXIMO e o MÍNIMO devolvem o maior e o menor valor do intervalo. A CONT.SE conta as ocorrências de um critério, que pode ser texto, número ou condição, diferente da SOMA, que soma números.
 
-**PROCV.** Busca o valor na primeira coluna do intervalo e retorna um dado de uma coluna à direita, na mesma linha. O número da coluna é contado dentro do intervalo, recomeçando do 1, e não pela letra da planilha. O último argumento 0 (ou FALSO) pede correspondência exata, e é o recomendado.
+**PROCV.** Busca o valor na [primeira coluna do intervalo](https://support.microsoft.com/pt-br/office/fun%C3%A7%C3%A3o-procv-0bbc8083-26fe-4963-8ab8-93a18ad188a1) e retorna um dado de uma coluna à direita, na mesma linha. O número da coluna é contado dentro do intervalo, recomeçando do 1, e não pela letra da planilha. O último argumento 0 (ou FALSO) pede correspondência exata, e é o recomendado.
 
 **Ordem das operações e separador.** Os parênteses fazem o Excel calcular primeiro o que está dentro deles. Em português do Brasil, a vírgula é o separador decimal e o ponto e vírgula separa os argumentos das funções, como também ocorre no [LibreOffice](/libreoffice-para-concursos/) Calc.
 

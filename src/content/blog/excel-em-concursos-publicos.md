@@ -52,7 +52,7 @@ O Excel usa referências para localizar valores dentro da planilha. Por padrão,
 
 Já a referência **absoluta** fixa a linha e a coluna com o símbolo **$**, como em `$A$1`. Assim, ao copiar a fórmula, o endereço permanece igual, independentemente de para onde você a mova.
 
-Da mesma forma, a referência **mista** fixa apenas a coluna ou apenas a linha, como em `$A1` ou `A$1`. A Microsoft ainda destaca que a tecla **F4** alterna entre referência relativa, absoluta e mista quando você seleciona a referência dentro da fórmula, um atalho que costuma render questão sozinho.
+Da mesma forma, a referência **mista** fixa apenas a coluna ou apenas a linha, como em `$A1` ou `A$1`. A Microsoft ainda destaca que a tecla **F4** [alterna entre referência relativa, absoluta e mista](https://support.microsoft.com/pt-br/office/alternar-entre-refer%C3%AAncias-relativas-absolutas-e-mistas-dfec08cd-ae65-4f56-839e-5f0d8d0baca9) quando você seleciona a referência dentro da fórmula, um atalho que costuma render questão sozinho.
 
 ## Fórmulas e funções básicas
 
@@ -82,7 +82,7 @@ Por isso, a banca costuma explorar a diferença entre fórmula e função. A **f
 
 Além das funções, você também precisa conhecer os recursos de análise e organização de dados. A guia Dados reúne comandos importantes, como **classificação** e **filtro**.
 
-A **formatação condicional**, por sua vez, destaca automaticamente células com base em regras que você define. Segundo a Microsoft, esse recurso torna padrões e tendências mais visíveis, e você pode aplicá-lo a intervalos, tabelas e até relatórios de Tabela Dinâmica.
+A **formatação condicional**, por sua vez, destaca automaticamente células com base em regras que você define. Segundo [a Microsoft](https://support.microsoft.com/pt-br/office/usar-a-formata%C3%A7%C3%A3o-condicional-para-real%C3%A7ar-informa%C3%A7%C3%B5es-no-excel-fed60dfa-1d3f-4e13-9ecb-f1951ff89d7f), esse recurso torna padrões e tendências mais visíveis, e você pode aplicá-lo a intervalos, tabelas e até relatórios de Tabela Dinâmica.
 
 <strong class="cai-prova">✅ Fixe esse ponto:</strong> a formatação condicional muda apenas a aparência (cor, fonte, ícone). Ela nunca altera o valor real da célula, e essa é justamente a casca de banana que aparece em questão de certo ou errado.
 
@@ -137,6 +137,6 @@ Portanto, revise as funções essenciais, memorize os atalhos mais frequentes e 
 ## Fontes e referências
 
 -   Microsoft Support: Overview of formulas in Excel
--   Microsoft Support: Switch between relative, absolute, and mixed references
--   Microsoft Support: Keyboard shortcuts in Excel
--   Microsoft Support: Use conditional formatting to highlight information in Excel
+-   [Microsoft Support: Switch between relative, absolute, and mixed references](https://support.microsoft.com/pt-br/office/alternar-entre-refer%C3%AAncias-relativas-absolutas-e-mistas-dfec08cd-ae65-4f56-839e-5f0d8d0baca9)
+-   [Microsoft Support: Keyboard shortcuts in Excel](https://support.microsoft.com/pt-br/office/atalhos-de-teclado-no-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f)
+-   [Microsoft Support: Use conditional formatting to highlight information in Excel](https://support.microsoft.com/pt-br/office/usar-a-formata%C3%A7%C3%A3o-condicional-para-real%C3%A7ar-informa%C3%A7%C3%B5es-no-excel-fed60dfa-1d3f-4e13-9ecb-f1951ff89d7f)

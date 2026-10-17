@@ -51,7 +51,7 @@ O cabeçalho e o rodapé também são clássicos de prova. Eles podem conter nú
 
 O Word oferece ferramentas de revisão úteis principalmente em ambientes de trabalho colaborativo: corretor ortográfico, corretor gramatical, contagem de palavras, comentários e Controle de Alterações.
 
-O Controle de Alterações permite acompanhar inserções, exclusões e edições feitas por diferentes revisores, o que facilita a análise do que foi modificado no documento. Esse tema aparece bastante em concurso porque envolve produtividade e revisão de textos oficiais, um cenário comum na rotina de órgãos públicos.
+O [Controle de Alterações](https://support.microsoft.com/pt-br/office/controlar-altera%C3%A7%C3%B5es-no-word-197ba630-0f5f-4a8e-9a77-3712475e806a) permite acompanhar inserções, exclusões e edições feitas por diferentes revisores, o que facilita a análise do que foi modificado no documento. Esse tema aparece bastante em concurso porque envolve produtividade e revisão de textos oficiais, um cenário comum na rotina de órgãos públicos.
 
 Na prática, funciona assim: quando a questão mencionar trabalho colaborativo, revisão por terceiros ou acompanhamento de modificações, pense imediatamente em comentários e Controle de Alterações. Essa associação direta evita erro bobo na hora da prova.
 
@@ -59,14 +59,14 @@ Cada alteração registrada pode ser aceita ou rejeitada individualmente. Já os
 
 ## Quebra de página x quebra de seção
 
-Esse é um dos detalhes que mais confundem o candidato. Guarde esta ideia: se a questão falar em “página com orientação diferente dentro do mesmo documento”, pense em quebra de seção, nunca em Ctrl + Enter.
+Esse é um dos detalhes que mais confundem o candidato. Guarde esta ideia: se a questão falar em “página com orientação diferente dentro do mesmo documento”, pense em [quebra de seção](https://support.microsoft.com/pt-br/office/usar-quebras-de-se%C3%A7%C3%A3o-para-alterar-o-layout-ou-a-formata%C3%A7%C3%A3o-em-uma-se%C3%A7%C3%A3o-do-documento-word-4cdfa638-3ea9-434a-8034-bf1e4274c450), nunca em Ctrl + Enter.
 
 -   **Ctrl + Enter**: quebra de página simples. Só empurra o texto para a próxima página, mantendo a mesma orientação, margens e formatação.
 -   **Layout ▸ Quebras ▸ Próxima Página**: quebra de seção. Permite orientação, margens e colunas independentes em cada seção.
 
 ## Estilos e sumário automático
 
-O Sumário, disponível na guia Referências, é gerado e atualizado a partir dos estilos de título (Título 1, Título 2 etc.) aplicados na guia Página Inicial. Por isso, para o sumário funcionar sozinho, o documento precisa usar estilos, e não apenas texto formatado à mão. Para atualizá-lo, use **F9** ou o botão “Atualizar Sumário”.
+O [Sumário](https://support.microsoft.com/pt-br/office/inserir-um-sum%C3%A1rio-882e8564-0edb-435e-84b5-1d8552ccf0c0), disponível na guia Referências, é gerado e atualizado a partir dos estilos de título (Título 1, Título 2 etc.) aplicados na guia Página Inicial. Por isso, para o sumário funcionar sozinho, o documento precisa usar estilos, e não apenas texto formatado à mão. Para atualizá-lo, use **F9** ou o botão “Atualizar Sumário”.
 
 ## Colunas, marca d’água, bordas de página e mala direta
 

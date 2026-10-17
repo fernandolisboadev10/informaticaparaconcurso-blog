@@ -125,13 +125,13 @@ Agora, escolha o primeiro bloco do seu edital, abra a aula correspondente e, ao 
 
 ## Fontes e Referências
 
--   Cebraspe. Banca examinadora: https://www.cebraspe.org.br/
+-   Cebraspe. [Banca examinadora](https://www.cebraspe.org.br/)
 -   Microsoft. Suporte do Microsoft Office (Word, Excel e PowerPoint): https://support.microsoft.com/pt-br/office
--   Microsoft. Suporte do Windows: https://support.microsoft.com/pt-br/windows
+-   Microsoft. [Suporte do Windows](https://support.microsoft.com/pt-br/windows)
 -   The Document Foundation. Documentação do LibreOffice: https://documentation.libreoffice.org/
 -   The Linux Kernel Organization. Documentação do kernel Linux: https://www.kernel.org/doc/html/latest/
 -   Michael Kerrisk. Linux man pages (man7.org): https://man7.org/linux/man-pages/
--   NIST. SP 800-12 Rev. 1, An Introduction to Information Security: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-12r1.pdf
+-   NIST. [SP 800-12 Rev. 1, An Introduction to Information Security](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-12r1.pdf)
 -   IETF. RFC 5321, Simple Mail Transfer Protocol (SMTP): https://www.rfc-editor.org/rfc/rfc5321
 -   IETF. RFC 1939, Post Office Protocol Version 3 (POP3): https://www.rfc-editor.org/rfc/rfc1939
 -   IETF. RFC 9051, Internet Message Access Protocol (IMAP) Version 4rev2: https://www.rfc-editor.org/rfc/rfc9051

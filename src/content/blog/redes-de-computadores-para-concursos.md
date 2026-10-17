@@ -114,7 +114,7 @@ O modelo **OSI** (Open Systems Interconnection) organiza a comunicação em sete
 6.  **Apresentação:** traduz e criptografa os dados.
 7.  **Aplicação:** faz a interface com o software do usuário.
 
-Já o modelo **TCP/IP**, o que realmente funciona na internet, condensa essas sete camadas em quatro: acesso à rede, internet, transporte e aplicação. Esse é um detalhe que costuma confundir: o OSI é a referência teórica e didática, um mapa conceitual, enquanto o TCP/IP é o modelo efetivamente implementado. Não troque um pelo outro na prova.
+Já o modelo [**TCP/IP**](https://www.rfc-editor.org/rfc/rfc1122), o que realmente funciona na internet, condensa essas sete camadas em quatro: acesso à rede, internet, transporte e aplicação. Esse é um detalhe que costuma confundir: o OSI é a referência teórica e didática, um mapa conceitual, enquanto o TCP/IP é o modelo efetivamente implementado. Não troque um pelo outro na prova.
 
 ## Internet: a rede pública e mundial
 
@@ -158,7 +158,7 @@ O detalhe que mais cai em prova é este: o HTTP, por padrão, transmite os dados
 
 ## HTTPS: o HTTP com uma camada de segurança
 
-O HTTPS (HTTP Secure) resolve exatamente essa fragilidade. Ele adiciona uma camada de criptografia por meio dos protocolos TLS, ou o mais antigo SSL, sobre o HTTP tradicional. Assim, mesmo que alguém intercepte os dados no meio do caminho, encontra apenas informação criptografada, sem conseguir interpretar o conteúdo.
+O [HTTPS (HTTP Secure)](https://www.rfc-editor.org/rfc/rfc2818) resolve exatamente essa fragilidade. Ele adiciona uma camada de criptografia por meio dos protocolos TLS, ou o mais antigo SSL, sobre o HTTP tradicional. Assim, mesmo que alguém intercepte os dados no meio do caminho, encontra apenas informação criptografada, sem conseguir interpretar o conteúdo.
 
 O cadeado que aparece ao lado do endereço no navegador indica que a conexão usa HTTPS, ou seja, que os dados trafegam criptografados entre o seu navegador e o servidor. Isso garante confidencialidade e integridade, mas não significa, por si só, que o site é confiável ou livre de golpes.
 
@@ -180,7 +180,7 @@ Protege o caminho, não garante confiança.
 
 ## VPN: estendendo a rede privada para fora da empresa
 
-A VPN (Virtual Private Network, ou Rede Privada Virtual) cria um túnel criptografado sobre uma rede pública, geralmente a própria internet, permitindo que um usuário externo acesse recursos da intranet como se estivesse fisicamente dentro da empresa. Um funcionário em home office, por exemplo, ativa a VPN e passa a enxergar os sistemas internos normalmente, mesmo estando em outra cidade.
+A [VPN (Virtual Private Network, ou Rede Privada Virtual)](https://csrc.nist.gov/pubs/sp/800/77/r1/final) cria um túnel criptografado sobre uma rede pública, geralmente a própria internet, permitindo que um usuário externo acesse recursos da intranet como se estivesse fisicamente dentro da empresa. Um funcionário em home office, por exemplo, ativa a VPN e passa a enxergar os sistemas internos normalmente, mesmo estando em outra cidade.
 
 A palavra-chave aqui é “túnel”: os dados saem criptografados do dispositivo do usuário, atravessam a internet pública dentro desse túnel protegido e só são decriptografados ao chegar ao destino autorizado. Consequentemente, mesmo trafegando por uma rede pública, a comunicação mantém as características de privacidade de uma rede interna.
 

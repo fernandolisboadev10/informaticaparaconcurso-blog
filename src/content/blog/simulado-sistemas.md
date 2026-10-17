@@ -15,7 +15,7 @@ Se você já sentiu dificuldade para fixar os conceitos de sistemas operacionais
 
 Antes de tudo, vale entender o que acontece por trás da tela quando você abre um programa.
 
-Cada programa em execução vira um processo, e o sistema operacional é responsável por decidir a ordem e o tempo que cada um recebe do processador, tarefa conhecida como escalonamento. Um processo passa por diferentes estados ao longo da execução: novo, pronto (esperando sua vez), em execução, em espera (aguardando algum recurso) e terminado.
+Cada programa em execução vira um processo, e o sistema operacional é responsável por decidir a ordem e o tempo que cada um recebe do processador, tarefa conhecida como [escalonamento](https://learn.microsoft.com/pt-br/windows/win32/procthread/scheduling). Um processo passa por diferentes estados ao longo da execução: novo, pronto (esperando sua vez), em execução, em espera (aguardando algum recurso) e terminado.
 
 Guarde esta ideia: um processo pronto já está na fila para usar o processador, enquanto um processo em espera depende de outro evento, como a leitura de um arquivo, para poder continuar. Essa diferença é um clássico de prova.
 
@@ -29,13 +29,13 @@ Quando a memória RAM não é suficiente para todos os processos em execução, 
 
 Esse é um detalhe que costuma confundir o candidato: a memória virtual não substitui a RAM, ela complementa, e como o disco é muito mais lento, o uso excessivo dessa técnica deixa o computador visivelmente mais lento, sinal de que a memória física está no limite.
 
-A área do disco reservada para essa troca de páginas recebe o nome de arquivo de paginação no Windows e de swap no Linux. Quando o sistema passa a maior parte do tempo trocando páginas entre RAM e disco, em vez de executar processos de fato, ocorre o que se chama de thrashing, situação em que o desempenho despenca mesmo com o processador praticamente ocioso.
+A área do disco reservada para essa troca de páginas recebe o nome de [arquivo de paginação](https://learn.microsoft.com/pt-br/troubleshoot/windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows) no Windows e de swap no Linux. Quando o sistema passa a maior parte do tempo trocando páginas entre RAM e disco, em vez de executar processos de fato, ocorre o que se chama de thrashing, situação em que o desempenho despenca mesmo com o processador praticamente ocioso.
 
 ## Permissões de arquivos: o modelo que o Linux cobra em detalhe
 
 Além disso, permissões de acesso a arquivos aparecem com frequência em questões sobre Linux.
 
-O sistema divide as permissões em três categorias: leitura (r), escrita (w) e execução (x), aplicadas a três grupos distintos: o dono do arquivo, o grupo ao qual ele pertence e os demais usuários. O comando chmod altera essas permissões, seja por letras (chmod u+x arquivo) ou por notação numérica, na qual cada permissão recebe um valor (4 para leitura, 2 para escrita, 1 para execução) que se soma para formar o código final, como chmod 755.
+O sistema divide as permissões em três categorias: leitura (r), escrita (w) e execução (x), aplicadas a três grupos distintos: o dono do arquivo, o grupo ao qual ele pertence e os demais usuários. O comando [chmod](https://man7.org/linux/man-pages/man1/chmod.1.html) altera essas permissões, seja por letras (chmod u+x arquivo) ou por notação numérica, na qual cada permissão recebe um valor (4 para leitura, 2 para escrita, 1 para execução) que se soma para formar o código final, como chmod 755.
 
 Não confunda os dois conceitos: 755 significa que o dono tem leitura, escrita e execução (4+2+1=7), enquanto grupo e outros têm apenas leitura e execução (4+1=5).
 

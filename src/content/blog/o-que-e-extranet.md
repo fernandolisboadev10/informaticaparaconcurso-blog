@@ -18,7 +18,7 @@ Para não errar, grave a ideia central: a extranet usa a mesma tecnologia das ou
 
 Extranet é a extensão controlada da intranet de uma organização para pessoas de fora dela. Diferentemente da intranet, que fica restrita aos funcionários, essa extensão libera uma parte específica da rede para quem tem uma relação direta com a empresa.
 
-Segundo o glossário de segurança do NIST (CNSSI 4009-2022), esse tipo de rede é “uma rede de computadores que uma organização usa para o tráfego de dados de aplicações entre ela e seus parceiros de negócio”. Ou seja, o acesso nunca é livre: existe sempre um vínculo comercial por trás dele.
+Segundo o [glossário de segurança do NIST](https://csrc.nist.gov/glossary/term/extranet) (CNSSI 4009-2022), esse tipo de rede é “uma rede de computadores que uma organização usa para o tráfego de dados de aplicações entre ela e seus parceiros de negócio”. Ou seja, o acesso nunca é livre: existe sempre um vínculo comercial por trás dele.
 
 Guarde esta ideia: extranet não é sinônimo de acesso público. Antes de tudo, ela pressupõe uma relação previamente estabelecida entre a empresa e quem está do outro lado da conexão.
 
@@ -100,5 +100,5 @@ Para fixar esse conteúdo, resolva agora as questões comentadas logo abaixo. El
 
 ## Fontes e Referências
 
--   NIST Computer Security Resource Center, glossário, termo “Extranet” (CNSSI 4009-2022)
--   IETF RFC 4949 Ver. 2, Internet Security Glossary
+-   [NIST Computer Security Resource Center, glossário, termo “Extranet” (CNSSI 4009-2022)](https://csrc.nist.gov/glossary/term/extranet)
+-   [IETF RFC 4949 Ver. 2, Internet Security Glossary](https://www.rfc-editor.org/rfc/rfc4949)

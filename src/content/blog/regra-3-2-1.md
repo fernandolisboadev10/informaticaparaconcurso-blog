@@ -9,7 +9,7 @@ image: "./images/regra321.webp"
 imageAlt: "Regra321 backup"
 ---
 
-Imagine que você guarda todos os arquivos importantes em um único HD externo. Um dia, esse HD apresenta defeito. Nesse momento, você perde tudo de uma vez. Foi justamente para evitar esse cenário que os profissionais de TI consolidaram a chamada regra 3-2-1 de backup, e é sobre ela que este artigo se concentra.
+Imagine que você guarda todos os arquivos importantes em um único HD externo. Um dia, esse HD apresenta defeito. Nesse momento, você perde tudo de uma vez. Foi justamente para evitar esse cenário que os profissionais de TI consolidaram a chamada [regra 3-2-1 de backup](https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf), e é sobre ela que este artigo se concentra.
 
 Antes de entrar nos detalhes técnicos, vale contextualizar por que esse tema aparece com frequência nas provas de Informática. Bancas como [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/), FGV e FCC cobram backup não apenas como conceito isolado, mas também dentro de questões sobre [segurança da informação](/simulado-seguranca-da-informacao/). Afinal, um backup mal planejado compromete diretamente a disponibilidade dos dados, um dos pilares da tríade CID (confidencialidade, integridade e disponibilidade).
 
@@ -47,7 +47,7 @@ nuvem ou outro prédio
 
 <strong class="cai-prova">💡 Cai na prova:</strong> a regra 3-2-1 trata da **quantidade e da diversidade de cópias**, não de um cronograma. Portanto, não confunda esse conceito com os [tipos de backup (completo, incremental e diferencial)](/backup-seguranca-da-informacao/) vistos no tópico anterior.
 
-Uma cópia sozinha não é backup, é apenas o arquivo original. Duas cópias já reduzem o risco, mas ainda deixam uma brecha. Se as duas ficam no mesmo tipo de mídia e no mesmo ambiente, um único incidente pode atingir ambas ao mesmo tempo. Por isso, manter três cópias no total cria uma margem de segurança maior, já que a chance de as três falharem juntas é bem menor.
+[Uma cópia sozinha não é backup](https://cartilha.cert.br/fasciculos/backup/fasciculo-backup.pdf), é apenas o arquivo original. Duas cópias já reduzem o risco, mas ainda deixam uma brecha. Se as duas ficam no mesmo tipo de mídia e no mesmo ambiente, um único incidente pode atingir ambas ao mesmo tempo. Por isso, manter três cópias no total cria uma margem de segurança maior, já que a chance de as três falharem juntas é bem menor.
 
 ### Por que dois tipos de mídia diferentes
 
@@ -70,7 +70,7 @@ Nos últimos anos, surgiram variações da regra 3-2-1, e algumas provas mais at
  
 | Variação | O que acrescenta |
 | --- | --- |
-| 3-2-1-1-0 | Uma cópia offline (imune a ataques via rede, como ransomware) e zero erros nos testes de restauração |
+| 3-2-1-1-0 | Uma [cópia offline](https://www.cisa.gov/stopransomware/ransomware-guide) (imune a ataques via rede, como ransomware) e zero erros nos testes de restauração |
 | 3-2-2 | Duas cópias fora do local, aumentando a redundância geográfica |
 
 Você não precisa memorizar todas as variações, mas vale entender a lógica geral. Cada versão nova tenta cobrir uma vulnerabilidade adicional, como ataques de [ransomware](/malwares-e-ameacas-seguranca-da-informacao/) que criptografam backups conectados à rede.
