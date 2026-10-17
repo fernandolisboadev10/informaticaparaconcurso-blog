@@ -2,44 +2,78 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
-import FeaturedGrid from '../components/FeaturedGrid.astro';
 import Pagination from '../components/Pagination.astro';
+import SectionHead from '../components/SectionHead.astro';
+import SubjectGrid from '../components/SubjectGrid.astro';
+import CompactList from '../components/CompactList.astro';
+import { categories, categoryHref } from '../data/categories';
 import { isPublished, sortByActivity } from '../utils/posts';
+import { questionCount } from '../utils/quizzes';
 
+// Page 1 opens with the subjects of the exam syllabus; "Aulas recentes" and the /page/N/ pages
+// list every post, newest first, 9 per page.
 const PER_PAGE = 9;
 const page = Number(Astro.props.page ?? 1);
 const all = sortByActivity(await getCollection('blog', isPublished));
-const featured = page === 1 ? all.slice(0, 3) : [];
-const gridAll = all.slice(3);
-const totalPages = Math.max(1, Math.ceil(gridAll.length / PER_PAGE));
-const posts = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+const totalPages = Math.max(1, Math.ceil(all.length / PER_PAGE));
+const posts = all.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+// Categories that are not a syllabus subject get their own blocks instead.
+const NOT_SUBJECTS = ['Concursos', 'Dicas', 'Simulados'];
+const inCategory = (name: string) => all.filter((p) => p.data.category === name);
+const subjects = categories
+  .filter((c) => !NOT_SUBJECTS.includes(c.name))
+  .map((c) => {
+    const subjectPosts = inCategory(c.name);
+    return {
+      name: c.name,
+      href: categoryHref(c.name),
+      posts: subjectPosts,
+      questions: subjectPosts.reduce((n, p) => n + questionCount(p.id), 0),
+    };
+  })
+  .filter((s) => s.posts.length > 0)
+  .sort((a, b) => b.posts.length - a.posts.length);
+
+const lessons = subjects.reduce((n, s) => n + s.posts.length, 0);
+const questions = all.reduce((n, p) => n + questionCount(p.id), 0);
+const simulados = inCategory('Simulados');
+const concursos = inCategory('Concursos');
 ---
 <BaseLayout title={page > 1 ? `Informática para Concurso: resumos e simulados - Página ${page}` : "Informática para Concurso: resumos e simulados"} description="Resumos, simulados e o que cai na prova de informática dos concursos, em linguagem simples e direta.">
-  <h1 class="visually-hidden">Informática para Concurso</h1>
+  {page === 1 ? (
+    <>
+      <section class="container intro">
+        <h1>Informática para concurso, matéria por matéria</h1>
+        <p class="lede">
+          {lessons} aulas sobre o que as bancas cobram, divididas pelas matérias do edital, e {questions} questões comentadas para treinar.
+        </p>
+        <SubjectGrid subjects={subjects} />
+      </section>
 
-  {page === 1 && (
-  <section class="container featured-wrap">
-    <div class="recent-header">
-      <div>
-        <h2>Em alta agora</h2>
-        <span class="underline"></span>
+      <div class="container pair">
+        {simulados.length > 0 && (
+          <section>
+            <SectionHead title="Simulados" href={categoryHref('Simulados')} linkLabel={`Ver os ${simulados.length}`} />
+            <CompactList posts={simulados.slice(0, 5)} />
+          </section>
+        )}
+        {concursos.length > 0 && (
+          <section>
+            <SectionHead title="Concursos e editais" href={categoryHref('Concursos')} linkLabel={`Ver os ${concursos.length}`} />
+            <CompactList posts={concursos.slice(0, 5)} />
+          </section>
+        )}
       </div>
-    </div>
-    <FeaturedGrid posts={featured} />
-  </section>
+    </>
+  ) : (
+    <h1 class="visually-hidden">Informática para Concurso</h1>
   )}
 
   <section class="container recent">
-    <div class="recent-header">
-      <div>
-        <h2>Acabou de sair</h2>
-        <span class="underline"></span>
-      </div>
-      <a href="/blog">Ver todos →</a>
-    </div>
+    <SectionHead title={page === 1 ? 'Aulas recentes' : `Todas as aulas, página ${page}`} href={page === 1 ? '/blog' : undefined} linkLabel="Ver todas" />
     <div class="grid">
       {posts.map((post, i) => (
-        <div class={'item'}>
         <PostCard
           slug={post.id}
           title={post.data.title}
@@ -49,15 +83,13 @@ const posts = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
           readingTime={post.data.readingTime}
           image={post.data.image}
           imageAlt={post.data.imageAlt}
-          priority={i === 0}
+          priority={page > 1 && i === 0}
         />
-        </div>
       ))}
     </div>
     <Pagination current={page} total={totalPages} />
   </section>
 </BaseLayout>
-
 
 <style>
   .visually-hidden {
@@ -72,86 +104,57 @@ const posts = gridAll.slice((page - 1) * PER_PAGE, page * PER_PAGE);
     border: 0;
   }
 
-  .featured-wrap {
-    padding-block: 32px 8px;
+  .intro {
+    padding-block: 44px 24px;
+  }
+
+  h1 {
+    max-width: 18ch;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.04;
+  }
+
+  .lede {
+    max-width: 56ch;
+    margin: 16px 0 32px;
+    font-size: 1.08rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    padding-block: 32px 16px;
   }
 
   .recent {
-    padding-block: 48px 40px;
-  }
-
-  .recent-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 28px;
-  }
-
-  .underline {
-    display: block;
-    width: 48px;
-    height: 4px;
-    margin-top: 10px;
-    border-radius: 2px;
-    background: linear-gradient(135deg, var(--violet), var(--rose));
-  }
-
-  .recent-header a {
-    text-decoration: none;
-    color: var(--teal);
-    font-size: 0.9rem;
-    white-space: nowrap;
-  }
-
-  .item {
-    display: contents;
-  }
-
-  .item.extra:not(.show) {
-    display: none;
-  }
-
-  .more-wrap {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-  }
-
-  .more-btn {
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 0.95rem;
-    padding: 12px 28px;
-    border-radius: 999px;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-    background: linear-gradient(135deg, var(--violet), var(--rose));
-    transition: transform 0.15s ease, filter 0.15s ease;
-  }
-
-  .more-btn:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.1);
+    padding-block: 40px 56px;
   }
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px 24px;
   }
 
   @media (max-width: 860px) {
+    .pair {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
     .grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
   @media (max-width: 600px) {
     .grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
     }
   }
-
 </style>
-

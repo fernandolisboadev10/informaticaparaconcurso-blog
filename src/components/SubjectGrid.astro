@@ -1,0 +1,123 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import QuestionsTag from './QuestionsTag.astro';
+import { categoryColor } from '../utils/categoryColor';
+
+interface Props {
+  subjects: {
+    name: string;
+    href: string;
+    posts: CollectionEntry<'blog'>[];
+    questions: number;
+  }[];
+}
+const { subjects } = Astro.props;
+---
+<ul class="subjects">
+  {subjects.map((s) => (
+    <li>
+      <a href={s.href} class="subject" style={`--cat:${categoryColor(s.name)}`}>
+        <span class="name">{s.name}</span>
+        <span class="counts">
+          <span class="lessons">{s.posts.length} {s.posts.length === 1 ? 'aula' : 'aulas'}</span>
+          <QuestionsTag count={s.questions} />
+        </span>
+        <span class="recent">
+          {s.posts.slice(0, 2).map((p) => <span>{p.data.title}</span>)}
+        </span>
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .subjects {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .subject {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    padding: 20px 22px;
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--cat);
+    border-radius: 10px;
+    background: var(--surface);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .subject:hover {
+    border-color: var(--violet);
+    border-top-color: var(--cat);
+  }
+
+  .name {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--ink-strong);
+  }
+
+  .counts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .lessons {
+    white-space: nowrap;
+  }
+
+  .recent {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+  }
+
+  .recent span {
+    font-size: 0.84rem;
+    line-height: 1.35;
+    color: var(--ink-soft);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 860px) {
+    .subjects {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .subject {
+      padding: 16px;
+    }
+
+    .name {
+      font-size: 1.2rem;
+    }
+
+    .recent {
+      display: none;
+    }
+  }
+</style>

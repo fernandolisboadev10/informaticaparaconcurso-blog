@@ -29,6 +29,10 @@
   --code-bg: #e6eeff;
   --code-ink: #1a2f8f;
 
+  /* "Cai na prova" highlighter: same solid yellow and dark text in both themes. */
+  --marker: #ffe14d;
+  --marker-ink: #2b2300;
+
   --measure: 68ch;
 }
 

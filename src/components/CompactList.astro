@@ -1,0 +1,67 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import QuestionsTag from './QuestionsTag.astro';
+import { questionCount } from '../utils/quizzes';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+}
+const { posts } = Astro.props;
+
+const fmt = (d: Date) => d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', timeZone: 'UTC' });
+---
+<ul class="compact">
+  {posts.map((p) => (
+    <li>
+      <a href={`/${p.id}`}>
+        <span class="title">{p.data.title}</span>
+        <span class="meta">
+          <QuestionsTag count={questionCount(p.id)} />
+          <span>{fmt(p.data.date)}</span>
+        </span>
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .compact {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li + li {
+    border-top: 1px solid var(--line);
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-block: 14px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--ink-strong);
+  }
+
+  a:hover .title {
+    color: var(--violet);
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+</style>
