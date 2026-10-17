@@ -73,5 +73,5 @@ Portanto, dominar os tipos de arquivo e extensões exige entender a lógica por 
 
 -   Microsoft Support. [Common file name extensions in Windows](https://support.microsoft.com/en-us/windows/common-file-name-extensions-in-windows-da4a4430-8e76-89c5-59f7-1cdbbc75cb01).
 -   Microsoft Support. [Open XML Formats and file name extensions](https://support.microsoft.com/en-us/office/open-xml-formats-and-file-name-extensions-5200d93c-3449-4380-8e11-31ef14555b18).
--   Microsoft Support. [Zip and unzip files](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-8d28fa72-f2f9-712f-67df-f80cf89fd4e5).
+-   Microsoft Support. Zip and unzip files.
 -   Library of Congress. [OpenDocument Format (ODF) Family, OASIS and ISO/IEC 26300](https://www.loc.gov/preservation/digital/formats/fdd/fdd000247.shtml).

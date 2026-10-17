@@ -117,5 +117,5 @@ Portanto, memorize este ponto: quem gerencia o sistema operacional define boa pa
 
 -   MELL, Peter; GRANCE, Timothy. [The NIST Definition of Cloud Computing (SP 800-145)](https://csrc.nist.gov/pubs/sp/800/145/final). NIST, 2011.
 -   Microsoft. [Responsabilidade compartilhada na nuvem](https://learn.microsoft.com/pt-br/azure/security/fundamentals/shared-responsibility). Microsoft Learn.
--   Amazon Web Services. [Types of Cloud Computing](https://aws.amazon.com/types-of-cloud-computing/). AWS.
+-   Amazon Web Services. Types of Cloud Computing. AWS.
 -   Google Cloud. [PaaS vs. IaaS vs. SaaS vs. CaaS](https://cloud.google.com/learn/paas-vs-iaas-vs-saas). Google Cloud.

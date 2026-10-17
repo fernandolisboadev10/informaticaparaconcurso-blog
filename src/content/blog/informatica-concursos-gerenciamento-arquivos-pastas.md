@@ -184,6 +184,6 @@ Agora, resolva as questões abaixo para fixar o conteúdo. Depois, avance para o
 
 -   Microsoft Learn. [Naming Files, Paths, and Namespaces](https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file).
 -   Microsoft Support. [Keyboard shortcuts in Windows](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec).
--   Microsoft Support. [Uninstall or remove apps and programs in Windows](https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98).
+-   Microsoft Support. Uninstall or remove apps and programs in Windows.
 -   Microsoft Support. [File Explorer in Windows](https://support.microsoft.com/en-us/windows/file-explorer-in-windows-ef370130-1cca-9dc5-e0df-2f7416fe1cb1).
--   Dell Technologies. [Move and copy files using drag-and-drop in Microsoft Windows](https://www.dell.com/support/kbdoc/en-us/000147309/move-and-copy-files-using-drag-and-drop-in-microsoft-windows).
+-   Dell Technologies. Move and copy files using drag-and-drop in Microsoft Windows.

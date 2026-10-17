@@ -48,7 +48,7 @@ Depois, cruze as duas informações:
 
 ### Como usar o histórico de provas da banca
 
-Em seguida, descubra como a sua banca cobra cada assunto. O [PCI Concursos reúne provas anteriores](https://www.pciconcursos.com.br/provas/) de várias bancas e órgãos, e você filtra o material por banca e disciplina. Para conferir editais e prazos de outros certames, a [lista de concursos do mesmo site](https://www.pciconcursos.com.br/concursos/) também ajuda.
+Em seguida, descubra como a sua banca cobra cada assunto. O PCI Concursos reúne provas anteriores de várias bancas e órgãos, e você filtra o material por banca e disciplina. Para conferir editais e prazos de outros certames, a lista de concursos do mesmo site também ajuda.
 
 Ao analisar as provas antigas, anote quantas questões de cada assunto apareceram. Esse levantamento mostra o que se repete e, consequentemente, o que merece mais tempo.
 
@@ -120,7 +120,7 @@ Vale destacar ainda a regra de pontuação. Em muitas provas do Cebraspe, um ite
 
 ### Onde encontrar provas anteriores e bancos de questões
 
-Para treinar, você pode combinar algumas fontes. O PCI Concursos, já citado, reúne provas anteriores para você imprimir ou resolver na tela. O [Gran Questões](https://questoes.grancursosonline.com.br/) oferece um banco grande de questões de concurso, e o [sistema de questões do Estratégia Concursos](https://concursos.estrategiaeducacional.com.br/) funciona como alternativa para montar cadernos por assunto.
+Para treinar, você pode combinar algumas fontes. O PCI Concursos, já citado, reúne provas anteriores para você imprimir ou resolver na tela. O Gran Questões oferece um banco grande de questões de concurso, e o sistema de questões do Estratégia Concursos funciona como alternativa para montar cadernos por assunto.
 
 Confira as condições de acesso de cada plataforma, porque algumas exigem cadastro ou assinatura. Aliás, comece pelas questões da sua banca e do seu cargo, pois elas refletem o estilo que você vai encontrar.
 
@@ -140,7 +140,7 @@ Principalmente nos três últimos dias, proteja o seu sono. Memória e atenção
 
 Organize o dia em blocos fixos: manhã para teoria e resumos, tarde para questões, noite para revisão leve. Reserve um intervalo de descanso e evite estudar de madrugada.
 
-Na hora da prova, decida a estratégia antes de sentar. Defina por qual disciplina você começa, quanto tempo dedica a cada bloco e como marca as questões duvidosas para voltar depois. O Estratégia Concursos publica um texto com a ideia de [decidir a estratégia de prova antes do dia](https://www.estrategiaconcursos.com.br/blog/estrategia-de-prova/), que vale a leitura.
+Na hora da prova, decida a estratégia antes de sentar. Defina por qual disciplina você começa, quanto tempo dedica a cada bloco e como marca as questões duvidosas para voltar depois. O Estratégia Concursos publica um texto com a ideia de decidir a estratégia de prova antes do dia, que vale a leitura.
 
 Comece pela disciplina em que você mais confia, porque os acertos iniciais dão ritmo e segurança. Se uma questão travar, marque e siga em frente.
 
@@ -177,9 +177,9 @@ Comece hoje pela tabela de peso e domínio, monte o calendário dos 15 dias e ma
 ## Fontes e Referências
 
 -   Cebraspe. Site oficial, editais e regras de concursos: [https://www.cebraspe.org.br/](https://www.cebraspe.org.br/)
--   PCI Concursos. Provas anteriores: [https://www.pciconcursos.com.br/provas/](https://www.pciconcursos.com.br/provas/)
--   PCI Concursos. Lista de concursos e editais: [https://www.pciconcursos.com.br/concursos/](https://www.pciconcursos.com.br/concursos/)
--   Gran Cursos Online. Gran Questões: [https://questoes.grancursosonline.com.br/](https://questoes.grancursosonline.com.br/)
--   Estratégia Concursos. Sistema de questões: [https://concursos.estrategiaeducacional.com.br/](https://concursos.estrategiaeducacional.com.br/)
--   Estratégia Concursos. Estratégia de prova: decida antes da prova: [https://www.estrategiaconcursos.com.br/blog/estrategia-de-prova/](https://www.estrategiaconcursos.com.br/blog/estrategia-de-prova/)
+-   PCI Concursos. Provas anteriores.
+-   PCI Concursos. Lista de concursos e editais.
+-   Gran Cursos Online. Gran Questões.
+-   Estratégia Concursos. Sistema de questões.
+-   Estratégia Concursos. Estratégia de prova: decida antes da prova.
 -   Edital do concurso em que você vai prestar prova (documento oficial da banca organizadora).

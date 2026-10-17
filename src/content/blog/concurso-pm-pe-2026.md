@@ -93,7 +93,7 @@ Confirme sempre os prazos no site de cada banca, porque as datas podem ser retif
 
 ## Fontes e Referências
 
--   Gran Cursos Online. Edital PMPE 2026 publicado: [blog.grancursosonline.com.br](https://blog.grancursosonline.com.br/concurso-pm-pe-edital-publicado-2026/)
--   Aprova Concursos. Concurso PM PE: inscrições abertas: [aprovaconcursos.com.br](https://www.aprovaconcursos.com.br/noticias/inscricoes-pmpe-2026/)
--   Direção Concursos. Editais de concurso público abertos em outubro de 2026: [direcaoconcursos.com.br](https://www.direcaoconcursos.com.br/noticias/concurso-publico-abertos-outubro-2026)
+-   Gran Cursos Online. Edital PMPE 2026 publicado: blog.grancursosonline.com.br
+-   Aprova Concursos. Concurso PM PE: inscrições abertas: aprovaconcursos.com.br
+-   Direção Concursos. Editais de concurso público abertos em outubro de 2026: direcaoconcursos.com.br
 -   Instituto AOCP. Página oficial dos concursos: [institutoaocp.org.br](https://www.institutoaocp.org.br/)

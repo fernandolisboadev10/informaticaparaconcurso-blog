@@ -230,10 +230,10 @@ Como próximo passo, resolva o [simulado de Hardware](/simulado-hardware/) com 3
 -   NIST. [Prefixes for binary multiples](https://physics.nist.gov/cuu/Units/binary.html).
 -   UEFI Forum. [UEFI Specifications](https://uefi.org/specifications).
 -   NVM Express. [NVM Express Specifications](https://nvmexpress.org/specifications/).
--   JEDEC. [Main Memory: DDR SDRAM Standards](https://www.jedec.org/category/technology-focus-area/main-memory-ddr3-ddr4-sdram).
--   SATA-IO. [Serial ATA International Organization](https://sata-io.org/).
--   PCI-SIG. [PCI Express Specifications](https://pcisig.com/specifications).
--   USB-IF. [USB Document Library](https://www.usb.org/documents).
--   Cebraspe. [Portal de concursos](https://www.cebraspe.org.br/).
+-   JEDEC. Main Memory: DDR SDRAM Standards.
+-   SATA-IO. Serial ATA International Organization.
+-   PCI-SIG. PCI Express Specifications.
+-   USB-IF. USB Document Library.
+-   Cebraspe. Portal de concursos.
 -   TANENBAUM, Andrew S.; AUSTIN, Todd. _Organização estruturada de computadores_. 6. ed. São Paulo: Pearson, 2013.
 -   STALLINGS, William. _Arquitetura e organização de computadores_. 10. ed. São Paulo: Pearson, 2017.

@@ -219,6 +219,6 @@ Você merece essa aprovação. Bons estudos e boa prova!
 -   Cebraspe. Edital nº 1 PMMA, de 10 de julho de 2026: [cdn.cebraspe.org.br](https://cdn.cebraspe.org.br/concursos/PM_MA_26/arquivos/0D18A37FF7787E4389E776EBBFD096137879457949085D7FCE6FA75C174E510B.pdf)
 -   Cebraspe. Edital nº 2 PMMA, retificação de 15 de julho de 2026: [cdn.cebraspe.org.br](https://cdn.cebraspe.org.br/concursos/pm_ma_26/arquivos/7513B8B9F5C862D7382ECA938508F5DA0FF85314902903D8B0F2EC2219888DD2.html)
 -   Cebraspe. Página oficial do concurso PM MA 2026: [cebraspe.org.br/concursos/pm\_ma\_26](https://www.cebraspe.org.br/concursos/pm_ma_26)
--   NIST. SP 800-145, The NIST Definition of Cloud Computing: [csrc.nist.gov](https://csrc.nist.gov/pubs/sp/800/145/final)
--   Linux man-pages Project: [man7.org](https://man7.org/linux/man-pages/)
--   GNU Project. GNU General Public License: [gnu.org](https://www.gnu.org/licenses/gpl-3.0.html)
+-   NIST. SP 800-145, The NIST Definition of Cloud Computing: csrc.nist.gov
+-   Linux man-pages Project: man7.org
+-   GNU Project. GNU General Public License: gnu.org

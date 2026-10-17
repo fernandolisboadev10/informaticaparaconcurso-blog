@@ -125,4 +125,4 @@ Portanto, seu próximo passo é montar uma tabela com esses cinco pares e resolv
 -   CERT.br/NIC.br. [Cartilha de Segurança para](https://cartilha.cert.br/) [I](https://cartilha.cert.br/)[nternet](https://cartilha.cert.br/).
 -   NIST. [SP 800-34 Rev. 1, Contingency Planning Guide for Federal Information Systems](https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final).
 -   Microsoft. [Alternar entre referências relativas, absolutas e mistas](https://support.microsoft.com/pt-pt/office/alternar-entre-refer%C3%AAncias-relativas-absolutas-e-mistas-dfec08cd-ae65-4f56-839e-5f0d8d0baca9).
--   Cebraspe. [Site oficial](https://www.cebraspe.org.br/).
+-   Cebraspe. Site oficial.

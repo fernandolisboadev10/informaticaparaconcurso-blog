@@ -106,4 +106,4 @@ Para continuar essa preparação, salve esta aula, resolva o quiz abaixo e trein
 -   [NIST (National Institute of Standards and Technology) — Glossário: Volatile Memory](https://csrc.nist.gov/glossary/term/volatile_memory)
 -   [NIST (National Institute of Standards and Technology) — Glossário: Read-Only Memory](https://csrc.nist.gov/glossary/term/Read_Only_Memory)
 -   [UEFI Forum — Especificação UEFI](https://uefi.org/sites/default/files/resources/UEFI_Spec_Final_2.11.pdf)
--   [Intel — Como encontrar o tamanho das caches L1, L2 e L3 em processadores Intel](https://www.intel.com/content/www/us/en/support/articles/000057727/processors.html)
+-   Intel — Como encontrar o tamanho das caches L1, L2 e L3 em processadores Intel

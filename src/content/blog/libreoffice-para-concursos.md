@@ -163,9 +163,9 @@ Agora, o próximo passo é praticar. Resolva questões da sua banca sobre o tema
 ## Fontes e Referências
 
 -   [LibreOffice Brasil (site oficial)](https://pt-br.libreoffice.org/)
--   [The Document Foundation](https://www.documentfoundation.org/)
+-   The Document Foundation
 -   [Ajuda oficial do LibreOffice: teclas de atalho gerais](https://help.libreoffice.org/latest/pt-BR/text/shared/04/01010000.html)
--   [OASIS: OpenDocument Format (ODF)](https://www.oasis-open.org/committees/office/)
+-   OASIS: OpenDocument Format (ODF)
 -   [ISO/IEC 26300: Open Document Format for Office Applications](https://www.iso.org/standard/66363.html)
--   [Apache OpenOffice (site oficial)](https://www.openoffice.org/pt-br/)
--   [TecMundo: BrOffice muda nome oficial para LibreOffice](https://www.tecmundo.com.br/software/9195-broffice-muda-nome-oficial-para-libreoffice.htm)
+-   Apache OpenOffice (site oficial)
+-   TecMundo: BrOffice muda nome oficial para LibreOffice

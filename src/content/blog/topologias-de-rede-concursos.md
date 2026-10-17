@@ -87,5 +87,5 @@ Por fim, treine com questões de concursos anteriores, como as do [simulado de R
 
 -   IBM. [O que é topologia de rede?](https://www.ibm.com/br-pt/think/topics/network-topology)
 -   Microsoft Learn. [Tipos e topologias de rede.](https://learn.microsoft.com/pt-br/training/modules/network-fundamentals/2-network-types-topologies)
--   Estratégia Concursos. [Desmistificando Redes de Computadores: Topologias de Rede.](https://www.estrategiaconcursos.com.br/blog/redes-computadores-topologias-rede/)
--   MK Solutions. [Topologia de rede: o que é, quais os tipos e como escolher.](https://www.mksolutions.com.br/topologia-de-rede/)
+-   Estratégia Concursos. Desmistificando Redes de Computadores: Topologias de Rede.
+-   MK Solutions. Topologia de rede: o que é, quais os tipos e como escolher.

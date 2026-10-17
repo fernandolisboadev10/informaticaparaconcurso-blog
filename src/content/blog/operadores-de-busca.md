@@ -31,7 +31,7 @@ Aspas `"noções de informática"`
 
 Confira se os resultados trazem a frase completa, na mesma ordem.
 
-Copiar comando [Testar no Google](https://www.google.com/search?q=%22no%C3%A7%C3%B5es+de+inform%C3%A1tica%22)
+Copiar comando `"noções de informática"`
 
 ### Hífen: excluir um termo
 
@@ -41,7 +41,7 @@ Hífen `navegador -chrome`
 
 Compare com a mesma pesquisa sem o hífen e veja o que desapareceu.
 
-Copiar comando [Testar no Google](https://www.google.com/search?q=navegador+-chrome)
+Copiar comando `navegador -chrome`
 
 ### OR: um termo ou outro
 
@@ -51,7 +51,7 @@ OR `Word OR Writer atalhos`
 
 Repare que aparecem páginas sobre um programa ou sobre o outro.
 
-Copiar comando [Testar no Google](https://www.google.com/search?q=Word+OR+Writer+atalhos)
+Copiar comando `Word OR Writer atalhos`
 
 ### Asterisco: curinga
 
@@ -61,7 +61,7 @@ Asterisco `"a sigla HTTP significa *"`
 
 O curinga ocupa o lugar do termo que falta na frase.
 
-Copiar comando [Testar no Google](https://www.google.com/search?q=%22a+sigla+HTTP+significa+%2A%22)
+Copiar comando `"a sigla HTTP significa *"`
 
 ## Operadores de busca para encontrar fontes e documentos
 
@@ -73,7 +73,7 @@ site: `site:cebraspe.org.br edital` (conheça a [banca Cebraspe](/cebraspe-como-
 
 Todos os resultados pertencem ao domínio informado.
 
-Copiar comando [Testar no Google](https://www.google.com/search?q=site%3Acebraspe.org.br+edital)
+Copiar comando `site:cebraspe.org.br edital`
 
 ### filetype: filtrar pelo formato do arquivo
 
@@ -83,7 +83,7 @@ filetype: `edital informática filetype:pdf`
 
 Os resultados aparecem como arquivos PDF (veja os [tipos de arquivo](/tipos-de-arquivo/)).
 
-Copiar comando [Testar no Google](https://www.google.com/search?q=edital+inform%C3%A1tica+filetype%3Apdf)
+Copiar comando `edital informática filetype:pdf`
 
 ### intitle: e inurl: título e endereço
 
@@ -93,7 +93,7 @@ intitle: `intitle:edital informática`
 
 A palavra colada ao operador deve aparecer no título da página.
 
-Copiar comando [Testar no Google](https://www.google.com/search?q=intitle%3Aedital+inform%C3%A1tica)
+Copiar comando `intitle:edital informática`
 
  
 
@@ -101,7 +101,7 @@ inurl: `inurl:edital informática`
 
 Procure a palavra edital no endereço (URL) das páginas.
 
-Copiar comando [Testar no Google](https://www.google.com/search?q=inurl%3Aedital+inform%C3%A1tica)
+Copiar comando `inurl:edital informática`
 
 ### Combinando operadores
 
@@ -111,7 +111,7 @@ Combinado `site:cebraspe.org.br filetype:pdf edital informática`
 
 Três filtros na mesma pesquisa: domínio, formato e assunto.
 
-Copiar comando [Testar no Google](https://www.google.com/search?q=site%3Acebraspe.org.br+filetype%3Apdf+edital+inform%C3%A1tica)
+Copiar comando `site:cebraspe.org.br filetype:pdf edital informática`
 
 ## Operadores de busca para números e datas
 
@@ -123,7 +123,7 @@ Intervalo `edital informática 2025..2026`
 
 Os resultados citam números dentro do intervalo indicado.
 
-Copiar comando [Testar no Google](https://www.google.com/search?q=edital+inform%C3%A1tica+2025..2026)
+Copiar comando `edital informática 2025..2026`
 
 ### before: e after: filtrar por data
 
@@ -133,7 +133,7 @@ after: `edital informática after:2025`
 
 Compare com a pesquisa sem o operador e observe as datas.
 
-Copiar comando [Testar no Google](https://www.google.com/search?q=edital+inform%C3%A1tica+after%3A2025)
+Copiar comando `edital informática after:2025`
 
 ## Operadores de busca: seu próximo passo de estudo
 
@@ -166,5 +166,5 @@ _Porque o Google ajusta os resultados por conta própria. A ajuda oficial descre
 ## Fontes e referências
 
 -   [Google. Refinar pesquisas na Web (Ajuda da Pesquisa Google)](https://support.google.com/websearch/answer/2466433?hl=pt-BR): documentação oficial dos operadores de aspas, `site:`, hífen, `before:`, `after:` e `filetype:`, incluindo a regra de não deixar espaço entre o operador e o termo.
--   [Search Engine Journal. Google Removes Cache: Search Operator Documentation](https://www.searchenginejournal.com/google-removes-cache-search-operator-documentation/528022/): registro da remoção do operador `cache:` da documentação do Google e do fim do funcionamento do comando.
--   [SEOmator. Google Search Operators Cheat Sheet (teste de julho de 2026)](https://seomator.com/blog/google-search-operators-cheat-sheet): teste independente sobre quais operadores ainda funcionam, como `intitle:` e o intervalo `..`, e quais têm comportamento mais flexível, como `inurl:`.
+-   Search Engine Journal. Google Removes Cache: Search Operator Documentation: registro da remoção do operador `cache:` da documentação do Google e do fim do funcionamento do comando.
+-   SEOmator. Google Search Operators Cheat Sheet (teste de julho de 2026): teste independente sobre quais operadores ainda funcionam, como `intitle:` e o intervalo `..`, e quais têm comportamento mais flexível, como `inurl:`.

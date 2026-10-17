@@ -136,8 +136,9 @@ Portanto, ao revisar o tema, concentre seu esforço nos conceitos básicos com m
 
 ## Fontes e Referências
 
--   Qconcursos. [Editor de Apresentações: PowerPoint e Impress para concursos](https://www.qconcursos.com/resumos/editor-de-apresentacoes-powerpoint-e-impress-conceitos-e-funcoes)
--   Qconcursos. [Questão sobre o atalho para iniciar a apresentação de slides](https://www.qconcursos.com/questoes-de-concursos/questoes/8a22b0bd-18)
--   [Aula PowerPoint para concursos: formatos de arquivos e extensões](https://www.youtube.com/watch?v=6Dbn6s-P7vg)
--   [Aula PowerPoint para concursos: pptx e ppsx](https://www.youtube.com/watch?v=oySZ1j5JBtU)
--   [Aula de atalhos PowerPoint para concursos](https://www.youtube.com/watch?v=BRlLCR6X4TE)
+-   [Microsoft Support. Atalhos de teclado no PowerPoint](https://support.microsoft.com/pt-br/office/atalhos-de-teclado-no-powerpoint-1524ffce-bd2a-45f4-9a7f-f18b992b93a0)
+-   Qconcursos. Editor de Apresentações: PowerPoint e Impress para concursos
+-   Qconcursos. Questão sobre o atalho para iniciar a apresentação de slides
+-   Aula PowerPoint para concursos: formatos de arquivos e extensões
+-   Aula PowerPoint para concursos: pptx e ppsx
+-   Aula de atalhos PowerPoint para concursos

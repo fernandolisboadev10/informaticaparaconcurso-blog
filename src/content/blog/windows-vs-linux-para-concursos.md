@@ -19,7 +19,7 @@ Antes de comparar os dois sistemas, vale entender a origem de cada um, porque a 
 
 O Windows nasceu em 1985, quando a Microsoft lançou sua primeira versão como uma interface gráfica que rodava sobre o MS-DOS. Bill Gates e Paul Allen fundaram a Microsoft em 1975, e o Windows se tornou, décadas depois, o sistema operacional mais usado em computadores pessoais no mundo. Segundo o Statcounter, levantamento independente que acompanha a fatia de mercado dos sistemas operacionais no mundo, o Windows ainda lidera com folga o uso em desktops, embora o Linux venha crescendo ano a ano.
 
-Atualmente, o Windows funciona como um software proprietário. Isso significa que a [Microsoft](https://www.microsoft.com/pt-br/windows) detém o código-fonte, controla as atualizações e cobra uma licença para o usuário instalar e utilizar o sistema legalmente. Para concursos, esse é o primeiro ponto que você precisa guardar: Windows é sinônimo de sistema fechado e comercial.
+Atualmente, o Windows funciona como um software proprietário. Isso significa que a Microsoft detém o código-fonte, controla as atualizações e cobra uma licença para o usuário instalar e utilizar o sistema legalmente. Para concursos, esse é o primeiro ponto que você precisa guardar: Windows é sinônimo de sistema fechado e comercial.
 
 ## O que é o Linux
 
@@ -63,7 +63,7 @@ O Windows evoluiu de forma linear: XP, Vista, 7, 8, 10 e, mais recentemente, o [
 
 ### Principais distribuições Linux
 
-Já o Linux se ramifica em famílias de distribuições. A empresa Canonical mantém o [Ubuntu](https://ubuntu.com/), uma das portas de entrada mais comuns para quem começa no sistema. O Debian, base do Ubuntu, ganhou fama pela estabilidade em servidores. A Red Hat patrocina o Fedora, que funciona como uma espécie de laboratório de tecnologias que depois chegam ao Red Hat Enterprise Linux. Já o Kali Linux se destaca em testes de segurança e aparece bastante em questões sobre pentest. O [DistroWatch](https://distrowatch.com/), portal que acompanha o ranking de popularidade das distribuições, é uma boa referência para quem quer visualizar essa disputa em números.
+Já o Linux se ramifica em famílias de distribuições. A empresa Canonical mantém o Ubuntu, uma das portas de entrada mais comuns para quem começa no sistema. O Debian, base do Ubuntu, ganhou fama pela estabilidade em servidores. A Red Hat patrocina o Fedora, que funciona como uma espécie de laboratório de tecnologias que depois chegam ao Red Hat Enterprise Linux. Já o Kali Linux se destaca em testes de segurança e aparece bastante em questões sobre pentest. O DistroWatch, portal que acompanha o ranking de popularidade das distribuições, é uma boa referência para quem quer visualizar essa disputa em números.
 
 Guarde esta ideia: cada distribuição usa o mesmo kernel Linux, mas escolhe pacotes, interface gráfica e filosofia próprios.
 
@@ -171,9 +171,9 @@ _Porque os dois sistemas resolvem o mesmo problema de formas opostas, um fechado
 
 ## Fontes e Referências
 
--   Microsoft Learn — Documentação oficial do Windows: [https://learn.microsoft.com/pt-br/windows/](https://learn.microsoft.com/pt-br/windows/)
+-   Microsoft Learn — Documentação oficial do Windows
 -   The Linux Kernel Archives (kernel.org): [https://www.kernel.org/](https://www.kernel.org/)
 -   GNU Project — GNU General Public License: [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
--   man7.org — Linux manual pages: [https://man7.org/](https://man7.org/)
+-   man7.org — Linux manual pages
 -   The Document Foundation — LibreOffice: [https://www.libreoffice.org/](https://www.libreoffice.org/)
--   Microsoft Store — Windows 11 (Home/Pro): [https://www.microsoft.com/pt-br/windows](https://www.microsoft.com/pt-br/windows)
+-   Microsoft Store — Windows 11 (Home/Pro)

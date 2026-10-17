@@ -107,7 +107,7 @@ Por fim, revise os conceitos de completo, incremental e diferencial, compare sua
 
 ## Fontes e Referências
 
--   [Veeam. 3-2-1 Backup Rule Explained: Do I Need One?](https://www.veeam.com/blog/321-backup-rule.html)
+-   Veeam. 3-2-1 Backup Rule Explained: Do I Need One?
 -   [CISA. Data Backup Options](https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf)
--   [Kapa Cyber. Backup Strategies That Survive Ransomware (3-2-1 Rule)](https://kapacyber.com/insights/ransomware-backup-strategy-321)
--   [Qconcursos. Questões sobre backup diferencial e incremental](https://www.qconcursos.com/questoes-de-concursos/questoes/sobre/backup-diferencial-e-incremental)
+-   Kapa Cyber. Backup Strategies That Survive Ransomware (3-2-1 Rule)
+-   Qconcursos. Questões sobre backup diferencial e incremental

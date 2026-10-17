@@ -264,5 +264,5 @@ _Sim. Os blocos dinâmicos fazem parte do Menu Iniciar do Windows 10. O Windows 
 
 -   Microsoft Learn. [Perguntas frequentes sobre o ciclo de vida do Windows](https://learn.microsoft.com/pt-br/lifecycle/faq/windows)
 -   Microsoft Learn. [Ciclo de vida do Windows 10 Home e Pro](https://learn.microsoft.com/pt-br/lifecycle/products/windows-10-home-and-pro)
--   Microsoft Learn. [Perguntas frequentes sobre o Internet Explorer e o Microsoft Edge](https://learn.microsoft.com/pt-br/lifecycle/faq/internet-explorer-microsoft-edge)
+-   Microsoft Learn. Perguntas frequentes sobre o Internet Explorer e o Microsoft Edge
 -   Suporte da Microsoft. [Atalhos de teclado no Windows](https://support.microsoft.com/pt-br/windows/atalhos-de-teclado-no-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec)

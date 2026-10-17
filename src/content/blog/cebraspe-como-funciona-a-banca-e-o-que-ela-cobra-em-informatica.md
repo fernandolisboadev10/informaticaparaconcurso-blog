@@ -108,8 +108,8 @@ Portanto, o seu próximo passo é simples: pegue uma prova anterior do Cebraspe 
 
 -   [Cebraspe, site oficial](https://www.cebraspe.org.br/)
 -   [Edital nº 1 do MPCE, de 16 de janeiro de 2025 (elaborado pelo Cebraspe)](https://cdn.direcaoconcursos.com.br/uploads/2025/01/Edital-concurso-MPCE-2025.pdf)
--   [Estratégia Concursos: você conhece o estilo da banca Cebraspe?](https://www.estrategiaconcursos.com.br/blog/?p=1129387)
--   [Estratégia Concursos: Concursos Cebraspe, editais previstos](https://www.estrategiaconcursos.com.br/blog/?p=1351580)
--   [Estratégia Concursos: como se preparar para o Cebraspe](https://www.estrategiaconcursos.com.br/blog/?p=1510614)
--   [Estratégia Concursos: análise de Informática para Escrivão PC-PB](https://www.estrategiaconcursos.com.br/blog/?p=967879)
+-   Estratégia Concursos: você conhece o estilo da banca Cebraspe?
+-   Estratégia Concursos: Concursos Cebraspe, editais previstos
+-   Estratégia Concursos: como se preparar para o Cebraspe
+-   Estratégia Concursos: análise de Informática para Escrivão PC-PB
 -   [The Linux Kernel Archives](https://www.kernel.org/)

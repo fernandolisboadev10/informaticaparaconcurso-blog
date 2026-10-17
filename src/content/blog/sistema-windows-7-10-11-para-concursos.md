@@ -159,8 +159,8 @@ Portanto, o Windows 11 trouxe Menu Iniciar centralizado, ausência de blocos din
 ## Fontes e referências
 
 -   [Microsoft Learn — Ciclo de vida do Windows 7](https://learn.microsoft.com/pt-br/lifecycle/products/windows-7)
--   [Microsoft Support — O que significa o Windows não ter mais suporte](https://support.microsoft.com/pt-br/windows/deployment/updates-lifecycle/what-does-it-mean-if-windows-isn-t-supported)
+-   Microsoft Support — O que significa o Windows não ter mais suporte
 -   [Microsoft Support — Fim do suporte do Windows 10](https://support.microsoft.com/pt-br/windows/windows-10-suporte-terminou-a-14-de-outubro-de-2025-2ca8b313-1946-43d3-b55c-2b95b107f281)
--   [Microsoft Learn — Informações de versão do Windows 11](https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information)
--   [Microsoft Learn — Planejamento para Windows 11](https://learn.microsoft.com/en-us/windows/whats-new/windows-11-plan)
--   [Microsoft — Novidades do Windows 11](https://www.microsoft.com/en-us/windows/learning-center/whats-new-in-windows-11)
+-   Microsoft Learn — Informações de versão do Windows 11
+-   Microsoft Learn — Planejamento para Windows 11
+-   Microsoft — Novidades do Windows 11
