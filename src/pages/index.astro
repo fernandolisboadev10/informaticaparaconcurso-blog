@@ -50,21 +50,6 @@ const concursos = inCategory('Concursos');
         </p>
         <SubjectGrid subjects={subjects} />
       </section>
-
-      <div class="container pair">
-        {simulados.length > 0 && (
-          <section>
-            <SectionHead title="Simulados" href={categoryHref('Simulados')} linkLabel={`Ver os ${simulados.length}`} />
-            <CompactList posts={simulados.slice(0, 5)} />
-          </section>
-        )}
-        {concursos.length > 0 && (
-          <section>
-            <SectionHead title="Concursos e editais" href={categoryHref('Concursos')} linkLabel={`Ver os ${concursos.length}`} />
-            <CompactList posts={concursos.slice(0, 5)} />
-          </section>
-        )}
-      </div>
     </>
   ) : (
     <h1 class="visually-hidden">Informática para Concurso</h1>
@@ -89,6 +74,23 @@ const concursos = inCategory('Concursos');
     </div>
     <Pagination current={page} total={totalPages} />
   </section>
+
+  {page === 1 && (
+    <div class="container pair">
+      {simulados.length > 0 && (
+        <section>
+          <SectionHead title="Simulados" href={categoryHref('Simulados')} linkLabel={`Ver os ${simulados.length}`} />
+          <CompactList posts={simulados.slice(0, 5)} />
+        </section>
+      )}
+      {concursos.length > 0 && (
+        <section>
+          <SectionHead title="Concursos e editais" href={categoryHref('Concursos')} linkLabel={`Ver os ${concursos.length}`} />
+          <CompactList posts={concursos.slice(0, 5)} />
+        </section>
+      )}
+    </div>
+  )}
 </BaseLayout>
 
 <style>
@@ -128,7 +130,7 @@ const concursos = inCategory('Concursos');
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 40px;
-    padding-block: 32px 16px;
+    padding-block: 0 56px;
   }
 
   .recent {
