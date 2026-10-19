@@ -1,0 +1,108 @@
+---
+// Botão flutuante que aparece depois de rolar a página e leva de volta ao topo.
+---
+<button type="button" class="back-to-top" id="back-to-top" aria-label="Voltar ao topo" hidden>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="6 15 12 9 18 15" />
+  </svg>
+</button>
+
+<script>
+  const button = document.getElementById('back-to-top');
+
+  if (button) {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    // Aparece depois de uma tela e meia de rolagem.
+    const threshold = () => window.innerHeight * 1.5;
+    let ticking = false;
+
+    const update = () => {
+      ticking = false;
+      const show = window.scrollY > threshold();
+      if (show && button.hidden) {
+        button.hidden = false;
+        // Dois frames para a transição de entrada rodar depois de tirar o hidden.
+        requestAnimationFrame(() => requestAnimationFrame(() => button.classList.add('is-visible')));
+      } else if (!show && button.classList.contains('is-visible')) {
+        button.classList.remove('is-visible');
+        const hide = () => {
+          if (!button.classList.contains('is-visible')) button.hidden = true;
+        };
+        if (reduceMotion.matches) hide();
+        else setTimeout(hide, 220);
+      }
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }, { passive: true });
+
+    button.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+      // Devolve o foco ao início da página para quem navega pelo teclado.
+      document.querySelector<HTMLElement>('a[href]')?.focus({ preventScroll: true });
+    });
+
+    update();
+  }
+</script>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--violet);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .back-to-top[hidden] {
+    display: none;
+  }
+
+  .back-to-top.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .back-to-top:hover,
+  .back-to-top:focus-visible {
+    background: var(--violet);
+    border-color: var(--violet);
+    color: var(--bg);
+  }
+
+  /* Com o aviso de cookies aberto, o botão sobe para não ficar embaixo dele. */
+  :global(body:has(#cookie-banner:not([hidden]))) .back-to-top {
+    bottom: 200px;
+  }
+
+  @media (min-width: 561px) {
+    :global(body:has(#cookie-banner:not([hidden]))) .back-to-top {
+      bottom: 110px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top {
+      transition: none;
+      transform: none;
+    }
+  }
+</style>

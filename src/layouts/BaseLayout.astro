@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieBanner from '../components/CookieBanner.astro';
+import BackToTop from '../components/BackToTop.astro';
 import { Font } from 'astro:assets';
 import '../styles/global.css';
 
@@ -160,6 +161,7 @@ const organizationSchema = {
       <slot />
     </main>
     <Footer />
+    <BackToTop />
     <CookieBanner />
   </body>
 </html>

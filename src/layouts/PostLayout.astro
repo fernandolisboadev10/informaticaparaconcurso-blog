@@ -8,6 +8,7 @@ import RelatedPosts from '../components/RelatedPosts.astro';
 import Quiz from '../components/Quiz.astro';
 import type { Question } from '../components/Quiz.astro';
 import TableOfContents from '../components/TableOfContents.astro';
+import ReadingProgress from '../components/ReadingProgress.astro';
 import type { MarkdownHeading } from 'astro';
 import { categoryHref } from '../data/categories';
 
@@ -86,6 +87,7 @@ const breadcrumbSchema = {
 <BaseLayout title={title} description={description} image={image?.src} type="article" published={date} modified={updated ?? date}>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <ReadingProgress />
   <div class:list={['container post-shell', { 'no-guide': !hasGuide }]}>
     <article class="post">
       <header class="post-head">
