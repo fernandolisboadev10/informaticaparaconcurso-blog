@@ -14,14 +14,14 @@ Ao navegar e utilizar este site, você concorda com os termos descritos abaixo.
 
 As informações pessoais que coletamos podem incluir:
 
--   Nome, endereço de e-mail, número de telefone e dados de contato que você fornece em nossos formulários (como no cadastro para o gerador de simulados).
+-   Nome e endereço de e-mail, se você escrever para nós pela página de Contato. O site não tem cadastro, login nem formulários de coleta de dados.
     
 -   Endereço IP, navegador utilizado, provedor de serviços de internet (ISP, como Claro, Vivo, etc.), data, hora e páginas visitadas.
     
 -   Preferências de navegação e interações dentro do site.
     
 
-Utilizamos essas informações para otimizar a sua experiência de usuário, personalizar o conteúdo das questões e tornar a sua visita o mais produtiva e agradável possível.
+Utilizamos essas informações para otimizar a sua experiência de usuário e tornar a sua visita o mais produtiva e agradável possível.
 
 ## Uso de Cookies e Publicidade
 
@@ -44,7 +44,7 @@ Além disso, nosso site pode utilizar ferramentas de **Remarketing com o Google 
 
 ## Como Administrar seus Cookies
 
-Você tem o controle. É possível escolher desativar os cookies nas configurações do seu navegador (Chrome, Edge, Firefox) ou por meio de programas de segurança (como o seu antivírus). No entanto, tenha em mente que isso pode afetar a sua interação com o nosso site e outros serviços web, como o login automático na área de simulados.
+Você tem o controle. É possível escolher desativar os cookies nas configurações do seu navegador (Chrome, Edge, Firefox) ou por meio de programas de segurança (como o seu antivírus). No entanto, tenha em mente que isso pode afetar a sua interação com o nosso site e outros serviços web, como lembrar as suas preferências de navegação.
 
 ## Links e Conteúdos de Terceiros
 
@@ -58,7 +58,7 @@ O **Informática para Concurso** não comercializa, troca ou compartilha informa
 
 ## Contato e Seus Direitos
 
-Se você tiver dúvidas, solicitações ou desejar exercer seus direitos de privacidade (acesso, correção ou exclusão de dados), por favor, entre em contato conosco através do formulário disponível na nossa página de Contato.
+Se você tiver dúvidas, solicitações ou desejar exercer seus direitos de privacidade (acesso, correção ou exclusão de dados), por favor, entre em contato conosco por e-mail, pelos dados da nossa [página de Contato](/fale-conosco/).
 
 ## Alterações nesta Política
 

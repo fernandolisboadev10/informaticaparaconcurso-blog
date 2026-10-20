@@ -163,4 +163,3 @@ Por fim, você, concurseiro, deve estudar esse tema com estratégia. Em vez de t
 
 -   [Começando com Linux: Comandos, serviços e administração](https://www.mercadolivre.com.br/comecando-com-linux-comandos-servicos-e-administracao/up/MLBU1906384981), de Daniel Romero
 -   [Questões de Concurso sobre Linux em Sistemas Operacionais para CESPE/Cebraspe](https://www.qconcursos.com/questoes-de-concursos/questoes?examining_board_ids%5B%5D=2&scholarity_ids%5B%5D=3&subject_ids%5B%5D=1097) (QConcursos)
--   Noções de Linux para Concursos (Cebraspe), Parte 1 (YouTube) — link pendente de confirmação

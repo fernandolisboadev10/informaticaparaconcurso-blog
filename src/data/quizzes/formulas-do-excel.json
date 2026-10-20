@@ -8,7 +8,7 @@
    "comment": "A SOMA percorre o intervalo B2:E2 e soma as quatro notas: 8,5 + 7 + 8 + 7,5 = 31. O intervalo não inclui a própria célula F2."
   },
   {
-   "banca": "Estilo CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "Qual fórmula você usaria na célula G2 para calcular a média das notas de Ana, e qual seria o resultado?",
    "options": [
@@ -29,7 +29,7 @@
    "comment": "Sem o cifrão ($), a referência é relativa e acompanha a posição para onde a fórmula é copiada."
   },
   {
-   "banca": "Estilo CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "Considerando a fórmula =SE(G3>=7;\"APROVADO\";\"REPROVADO\") e que a média de Bruno (G3) é 6, o resultado dessa fórmula é:",
    "options": [
@@ -50,7 +50,7 @@
    "comment": "Todo texto digitado diretamente em uma fórmula precisa estar entre aspas duplas. Sem elas, o Excel entende que são nomes e devolve erro. Números e referências de célula não exigem aspas."
   },
   {
-   "banca": "Estilo CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "O resultado da fórmula =MÁXIMO(B2:B6), aplicada à coluna Nota 1 de todos os alunos, é:",
    "options": [
@@ -64,7 +64,7 @@
    "comment": "As notas da coluna Nota 1 são 8,5; 6; 9; 4,5 e 7,5. O maior valor é 9, de Carla."
   },
   {
-   "banca": "Estilo CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "O resultado da fórmula =MÍNIMO(E2:E6), aplicada à coluna Nota 4 de todos os alunos, é:",
    "options": [
@@ -85,7 +85,7 @@
    "comment": "A CONT.SE conta as ocorrências de um critério, que pode ser texto, número ou condição. Três linhas da coluna Resultado têm APROVADO."
   },
   {
-   "banca": "Estilo CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "O resultado da fórmula =CONT.SE(H2:H6;\"REPROVADO\") é:",
    "options": [

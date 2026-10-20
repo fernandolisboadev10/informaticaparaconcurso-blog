@@ -1,7 +1,7 @@
 {
  "questions": [
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Em uma instalação padrão do Windows, qual é o formato de sistema de arquivos utilizado por padrão em uma nova partição?",
    "options": [
@@ -15,7 +15,7 @@
    "comment": "O NTFS (New Technology File System) é o sistema de arquivos padrão para novas partições em versões modernas do Windows. FAT32 é mais antigo e tem limitações, enquanto exFAT é usado em dispositivos removíveis. HFS+ e EXT4 são utilizados em sistemas Mac e Linux, respectivamente."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "Qual é o gerenciador de pacotes padrão no Ubuntu, uma popular distribuição Linux?",
    "options": [
@@ -29,7 +29,7 @@
    "comment": "O APT é o gerenciador de pacotes padrão no Ubuntu, que utiliza o DPKG como backend. RPM e YUM são usados em sistemas baseados em Red Hat, enquanto ZYPPER é do openSUSE."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "No sistema Linux, qual comando é utilizado para listar o conteúdo de um diretório?",
    "options": [
@@ -43,7 +43,7 @@
    "comment": "A resposta correta é ‘ls’, um comando utilizado em Linux para listar arquivos e diretórios. ‘dir’ é um comando do Windows, e ‘cd’ é usado para mudar de diretório, enquanto ‘list’ e ‘show’ não são comandos válidos para essa ação."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "Qual comando no terminal Linux é utilizado para listar arquivos e diretórios de forma detalhada?",
    "options": [
@@ -57,7 +57,7 @@
    "comment": "O comando ‘ls -l’ é utilizado para listar todos os arquivos e diretórios com detalhes. ‘dir’ é um comando do DOS, ‘list -a’ e ‘cat -d’ não existem, e ‘show -f’ não é correto no contexto do Linux."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "No Linux, o que o símbolo ‘/’ representa?",
    "options": [
@@ -71,7 +71,7 @@
    "comment": "No Linux, ‘/’ é o diretório raiz do sistema de arquivos. As outras opções não correspondem ao que representa o símbolo."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Qual é a principal função do sistema operacional em um computador?",
    "options": [
@@ -85,7 +85,7 @@
    "comment": "O sistema operacional é responsável por gerenciar o hardware e software do computador. As outras opções são funções secundárias ou de softwares específicos."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "Qual caminho representa um diretório no Windows?",
    "options": [
@@ -99,7 +99,7 @@
    "comment": "O caminho correto no Windows utiliza barras invertidas e o formato ‘C:\\Users\\nome\\’. As outras opções usam sintaxes inválidas ou do Linux."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "Qual é a principal diferença entre sistemas operacionais de 32 bits e 64 bits?",
    "options": [
@@ -113,7 +113,7 @@
    "comment": "A opção correta é ‘O tamanho máximo de memória RAM endereçada’, pois sistemas de 64 bits podem endereçar muito mais memória do que os de 32 bits. As outras opções não são verdadeiras."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "No Windows, qual é a função do registro do sistema?",
    "options": [
@@ -127,7 +127,7 @@
    "comment": "O registro do Windows é um banco de dados que armazena configurações do sistema e de aplicativos. As outras opções não representam a função do registro."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Qual sistema de arquivos é padrão no Linux?",
    "options": [
@@ -141,14 +141,14 @@
    "comment": "O EXT4 é o sistema de arquivos mais utilizado atualmente no Linux. NTFS e FAT32 são usados principalmente no Windows, enquanto HFS+ é típico de sistemas Apple e ext3 é uma versão anterior ao EXT4."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "ce",
    "text": "No Windows, os arquivos com extensões .dll são usados para armazenar bibliotecas de funções que podem ser utilizadas por múltiplos programas.",
    "answer": "C",
    "comment": "Os arquivos .dll (Dynamic Link Library) guardam bibliotecas de funções e dados que podem ser usadas ao mesmo tempo por vários programas no Windows. Portanto, o item está certo."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "Qual é a principal função do firmware em um computador?",
    "options": [
@@ -162,7 +162,7 @@
    "comment": "A alternativa A é correta; o firmware é um software instalado em hardware e controla suas funções. As outras opções não descrevem a função do firmware corretamente."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "Em Windows, qual é o propósito do comando ‘chkdsk’?",
    "options": [
@@ -190,7 +190,7 @@
    "comment": "O ps lista os processos. O top mostra os processos em tempo real, de forma semelhante ao Gerenciador de Tarefas do Windows."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Qual das seguintes alternativas é um ambiente gráfico que pode ser usado no Linux?",
    "options": [
@@ -204,7 +204,7 @@
    "comment": "GNOME é um ambiente gráfico para Linux, enquanto os demais são interfaces de sistemas diferentes."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "No Linux, o comando rm -rf / tem por objetivo:",
    "options": [
@@ -218,7 +218,7 @@
    "comment": "O -r apaga recursivamente e o -f dispensa confirmação, a partir da raiz (/). É um comando perigoso: versões atuais do rm recusam executá-lo por segurança."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Qual das seguintes opções é uma das características do sistema operacional Windows?",
    "options": [
@@ -232,7 +232,7 @@
    "comment": "Windows é conhecido por sua capacidade de multitarefa, permitindo que vários programas sejam executados simultaneamente. As outras alternativas estão incorretas para esse sistema operacional."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "No Linux, qual é o significado do símbolo ‘~’ na linha de comando?",
    "options": [
@@ -253,7 +253,7 @@
    "comment": "A Área de Trabalho Remota dá controle completo do computador remoto, desde que o acesso remoto esteja habilitado e o usuário esteja autorizado."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "Qual é a função do arquivo ‘hosts’ em sistemas operacionais?",
    "options": [
@@ -267,7 +267,7 @@
    "comment": "O arquivo ‘hosts’ mapeia nomes de host para endereços IP, facilitando a tradução de endereços. As outras opções não correspondem à função deste arquivo."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "O comando df, no Linux, exibe o uso de espaço em disco. A opção usada para mostrar os tamanhos em formato legível por humanos, com unidades em potências de 1024 (como MB e GB), é:",
    "options": [
@@ -295,14 +295,14 @@
    "comment": "O chmod (change mode) define quem pode ler, escrever e executar. O chown altera o dono do arquivo."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "ce",
    "text": "O GRUB é um gerenciador de inicialização, comumente usado em sistemas operacionais Linux.",
    "answer": "C",
    "comment": "O GRUB (GRand Unified Bootloader) é amplamente usado nas distribuições Linux para gerenciar a inicialização do sistema. Portanto, o item está certo."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Qual o significado da sigla ‘BIOS’ em um sistema de computação?",
    "options": [
@@ -330,7 +330,7 @@
    "comment": "A Restauração do Sistema retorna as configurações do Windows a um ponto anterior, sem afetar os documentos pessoais."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "No Windows 10, o recurso que permite visualizar todas as janelas abertas e criar múltiplas áreas de trabalho virtuais é a:",
    "options": [
@@ -344,7 +344,7 @@
    "comment": "A Visão de Tarefas (atalho Windows + Tab) mostra as janelas abertas e as áreas de trabalho virtuais. O Gerenciador de Tarefas monitora processos."
   },
   {
-   "banca": "Estilo CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "No terminal do Linux, o comando utilizado para exibir o conteúdo de um arquivo de texto é:",
    "options": [
@@ -358,7 +358,7 @@
    "comment": "O cat exibe o conteúdo do arquivo na tela. O touch cria um arquivo vazio."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "Qual comando do Linux é usado para listar diretórios e arquivos, incluindo os ocultos?",
    "options": [
@@ -372,7 +372,7 @@
    "comment": "A alternativa A é correta porque ‘ls -a’ lista todos os arquivos, inclusive os ocultos. As outras opções fazem listagens com variações que não incluem todos os arquivos."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Qual é o nome do interpretador de comandos clássico do Windows, executado pelo comando cmd?",
    "options": [
@@ -386,7 +386,7 @@
    "comment": "O Prompt de Comando (Command Prompt) é executado pelo cmd. O PowerShell é outro interpretador, mais recente, e o Windows Terminal é um aplicativo que hospeda ambos."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "No Windows, o que a ferramenta ‘msconfig’ permite ao usuário fazer?",
    "options": [
@@ -442,7 +442,7 @@
    "comment": "O Windows + L bloqueia a sessão, e o retorno exige autenticação. O Windows + E abre o Explorador de Arquivos."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Para abrir diretamente o Gerenciador de Tarefas do Windows, o usuário pode utilizar o atalho:",
    "options": [
@@ -463,7 +463,7 @@
    "comment": "A Microsoft detém o código-fonte e cobra pela licença de uso."
   },
   {
-   "banca": "Estilo CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "No Linux, o comando utilizado para criar um novo diretório é:",
    "options": [

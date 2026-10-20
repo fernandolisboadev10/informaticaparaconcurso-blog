@@ -18,6 +18,6 @@ Acreditamos firmemente que a informática não precisa ser um bicho de sete cabe
 
 ## Conecte-se com a Gente
 
-Estamos sempre abertos a sugestões de novos temas, dúvidas sobre editais e parcerias educacionais para fazer deste espaço a maior comunidade de estudos de informática do Brasil.
+Estamos sempre abertos a sugestões de novos temas, dúvidas sobre editais e parcerias educacionais para fazer deste espaço um lugar cada vez melhor para quem estuda informática para concursos.
 
-Se você quiser bater um papo, sugerir uma pauta ou tirar dúvidas sobre o nosso gerador de simulados, visite a nossa [página de contato](/fale-conosco/).
+Se você quiser bater um papo, sugerir uma pauta ou tirar dúvidas sobre os nossos simulados, visite a nossa [página de contato](/fale-conosco/).

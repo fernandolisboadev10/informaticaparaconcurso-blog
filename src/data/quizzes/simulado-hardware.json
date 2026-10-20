@@ -1,42 +1,42 @@
 {
  "questions": [
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "ce",
    "text": "O padrão USB 3.0, também conhecido como SuperSpeed USB, permite taxas de transferência teóricas de até 5 Gbps, superando o USB 2.0, cuja taxa máxima é de 480 Mbps.",
    "answer": "C",
    "comment": "A afirmação está correta. O USB 2.0 (High-Speed) alcança até 480 Mbps, enquanto o USB 3.0 (SuperSpeed) eleva esse limite teórico para 5 Gbps, uma diferença que a banca costuma explorar para testar se o candidato confunde as gerações do padrão."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "ce",
    "text": "A memória RAM (Random Access Memory) é classificada como memória volátil, pois perde todo o seu conteúdo quando o computador é desligado, diferentemente da memória ROM, que mantém os dados gravados mesmo sem energia elétrica.",
    "answer": "C",
    "comment": "A distinção está correta: a RAM é volátil e serve como memória de trabalho durante a execução dos programas, enquanto a ROM é não volátil e armazena instruções básicas de inicialização, como as rotinas de firmware do computador."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "ce",
    "text": "Em relação à hierarquia de memória de um computador, a memória cache L1, por estar localizada mais próxima do núcleo do processador, apresenta velocidade de acesso menor que a memória cache L2, o que justifica sua maior capacidade de armazenamento em relação a esta.",
    "answer": "E",
    "comment": "A questão inverte a lógica da hierarquia de memória. Quanto mais próxima do núcleo, mais rápida (e não mais lenta) é a memória cache, e justamente por isso ela tem menor capacidade de armazenamento. Portanto, a cache L1 é mais rápida e menor que a L2, o que torna a afirmação incorreta."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "ce",
    "text": "Um SSD (Solid State Drive) armazena dados por meio de componentes eletrônicos, sem partes mecânicas móveis, o que resulta, de modo geral, em maior velocidade de leitura e gravação e menor tempo de acesso quando comparado a um HD (disco rígido) tradicional.",
    "answer": "C",
    "comment": "A ausência de partes móveis, como os pratos giratórios e a cabeça de leitura do HD, é justamente o que permite ao SSD tempos de acesso muito menores e taxas de transferência superiores na maioria dos cenários de uso."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "ce",
    "text": "A memória virtual é uma técnica que permite ao sistema operacional utilizar espaço do disco de armazenamento como extensão da memória RAM, possibilitando a execução de programas que demandam mais memória do que a fisicamente instalada no computador.",
    "answer": "C",
    "comment": "Essa é exatamente a função da memória virtual (paginação/swap): quando a RAM se esgota, o sistema operacional utiliza uma área do disco para armazenar temporariamente dados menos utilizados, liberando espaço na memória física."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Sobre o barramento PCI Express (PCIe), amplamente utilizado para conectar placas de vídeo, SSDs NVMe e outros periféricos internos ao computador, assinale a alternativa correta.",
    "options": [
@@ -50,7 +50,7 @@
    "comment": "O PCIe é um barramento serial, e não paralelo, e sua largura de banda cresce conforme o número de lanes: um slot x16 oferece muito mais banda que um x1. Além disso, o PCIe é usado tanto por placas de vídeo quanto por SSDs NVMe, entre outros dispositivos internos."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Em relação às fontes de alimentação (PSU) utilizadas em computadores pessoais, assinale a alternativa correta.",
    "options": [
@@ -64,7 +64,7 @@
    "comment": "O selo 80 Plus certifica que a fonte converte energia de corrente alternada para contínua com um percentual mínimo de eficiência (a partir de 80%, com variações como Bronze, Silver, Gold e Platinum), o que reduz o desperdício de energia em forma de calor."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "A respeito das interfaces de vídeo utilizadas para conectar um computador a um monitor, assinale a alternativa correta.",
    "options": [
@@ -78,7 +78,7 @@
    "comment": "O HDMI transporta vídeo e áudio digitais em um único cabo. Já o VGA é uma interface analógica, mais antiga, sem suporte nativo a áudio, o que inverte a lógica das demais alternativas apresentadas na questão."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "Sobre as interfaces de conexão de dispositivos de armazenamento em computadores, assinale a alternativa correta.",
    "options": [
@@ -92,7 +92,7 @@
    "comment": "O NVMe foi criado justamente para tirar proveito da velocidade do barramento PCIe, superando o limite da interface SATA III. Por isso, SSDs NVMe costumam ser bem mais rápidos que SSDs SATA, embora ambos utilizem memória flash."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "No que se refere aos componentes de uma placa-mãe, assinale a alternativa correta.",
    "options": [
@@ -106,7 +106,7 @@
    "comment": "O soquete define, junto com o chipset, quais processadores podem ser fisicamente instalados na placa-mãe. Já a capacidade máxima de RAM e outros limites de expansão também dependem diretamente do projeto da placa-mãe, o que descarta as demais alternativas."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "A respeito da arquitetura de computadores conhecida como arquitetura de Von Neumann, assinale a alternativa correta.",
    "options": [
@@ -120,7 +120,7 @@
    "comment": "Na arquitetura de Von Neumann, dados e instruções compartilham a mesma memória e trafegam por um único barramento entre processador e memória, o que é a base da maioria dos computadores pessoais atuais, e não uma exclusividade de supercomputadores."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "Em relação à memória ROM e ao firmware responsável pela inicialização de um computador, assinale a alternativa correta.",
    "options": [
@@ -134,7 +134,7 @@
    "comment": "A UEFI surgiu como sucessora da BIOS tradicional, trazendo suporte a discos maiores (por meio do particionamento GPT), inicialização mais rápida e, em geral, uma interface gráfica mais amigável para o usuário configurar o computador."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "Sobre as características técnicas de monitores de vídeo, assinale a alternativa correta.",
    "options": [
@@ -148,7 +148,7 @@
    "comment": "A taxa de atualização (Hz) e a resolução (por exemplo, 1920×1080 ou 3840×2160) são características distintas do monitor. A taxa de atualização determina quantas vezes a imagem é redesenhada por segundo, o que afeta diretamente a fluidez percebida pelo usuário."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "A respeito dos slots de expansão presentes em placas-mãe de computadores, assinale a alternativa correta.",
    "options": [
@@ -162,7 +162,7 @@
    "comment": "O número de lanes de um slot PCIe é proporcional à largura de banda disponível: um slot x16 (comum para placas de vídeo) comporta muito mais dados por segundo do que um slot x1, geralmente reservado a placas de rede, som ou captura."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "Em relação à arquitetura interna do processador (CPU), assinale a alternativa correta.",
    "options": [
@@ -176,7 +176,7 @@
    "comment": "A Unidade de Controle (UC) coordena o fluxo de instruções e dados dentro do processador, enquanto a Unidade Lógica e Aritmética (ULA) executa efetivamente os cálculos e operações lógicas. Os registradores, por sua vez, ficam dentro do próprio processador, e não em armazenamento secundário."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "Sobre os tipos de impressoras utilizadas em ambientes de escritório, assinale a alternativa correta.",
    "options": [
@@ -190,7 +190,7 @@
    "comment": "A tecnologia a laser utiliza um tambor fotossensível que atrai o toner em pó, fixado ao papel com calor e pressão, o que costuma resultar em maior velocidade para grandes volumes. Já as impressoras jato de tinta projetam gotículas de tinta líquida diretamente sobre o papel."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "Em relação aos processadores multicore (multinúcleo) utilizados atualmente em computadores pessoais, assinale a alternativa correta.",
    "options": [
@@ -204,7 +204,7 @@
    "comment": "Processadores multicore permitem a execução simultânea de várias tarefas ou threads em núcleos distintos, o que melhora o desempenho especialmente em aplicações otimizadas para processamento paralelo, diferentemente de um processador com um único núcleo."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Quanto à classificação dos dispositivos periféricos de um computador, assinale a alternativa correta.",
    "options": [
@@ -218,7 +218,7 @@
    "comment": "Periféricos como impressoras multifuncionais (que imprimem e digitalizam) e monitores touch screen (que exibem imagem e recebem toque) desempenham simultaneamente funções de entrada e de saída, sendo classificados como periféricos híbridos (entrada e saída)."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "A respeito da frequência de operação (clock) de um processador, assinale a alternativa correta.",
    "options": [
@@ -232,7 +232,7 @@
    "comment": "O clock, medido em GHz, indica quantos ciclos de processamento o processador realiza por segundo e é um dos fatores (mas não o único) que influenciam o desempenho. O overclocking, ao contrário do afirmado em uma das alternativas, consiste em aumentar essa frequência além do valor padrão de fábrica."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Sobre o conector USB tipo C (USB-C) e sua relação com outros padrões de transmissão de dados, assinale a alternativa correta.",
    "options": [
@@ -295,7 +295,7 @@
    "comment": "Na hierarquia, a ordem decrescente de velocidade é registradores, cache, RAM e armazenamento secundário."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "A resolução de um monitor, como 1920 × 1080, indica:",
    "options": [
@@ -323,7 +323,7 @@
    "comment": "É por meio dos barramentos, como o PCIe, que os componentes da placa-mãe se comunicam."
   },
   {
-   "banca": "Estilo CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Um exemplo de dispositivo de armazenamento secundário, de memória não volátil, é:",
    "options": [
@@ -414,7 +414,7 @@
    "comment": "O HD é um armazenamento secundário e não volátil: mantém os dados sem energia. A memória volátil clássica é a RAM."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "O equipamento que fornece energia ao computador por um tempo limitado, em caso de queda no fornecimento, e ajuda a proteger contra variações da rede elétrica é o:",
    "options": [
@@ -428,7 +428,7 @@
    "comment": "O no-break possui bateria e mantém o equipamento ligado por alguns minutos, o que permite salvar o trabalho e desligar corretamente."
   },
   {
-   "banca": "Estilo CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "O cooler e o dissipador de calor (heatsink) têm como finalidade:",
    "options": [

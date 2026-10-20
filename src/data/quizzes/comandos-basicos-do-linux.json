@@ -78,7 +78,7 @@
    "comment": "O sudo concede privilégios administrativos e deve ser reservado para quando o sistema realmente pedir, como para instalar um programa ou editar uma configuração do sistema."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Em distribuições baseadas em Debian, como o Ubuntu, a sequência de comandos correta para atualizar a lista de programas e instalar um novo programa é:",
    "options": [

@@ -4,9 +4,9 @@ title: "Política de Cookies"
 description: "Como o Informática para Concurso (informaticaparaconcurso.com.br) usa cookies."
 ---
 
-**Última atualização: 16 de setembro de 2026**
+**Última atualização: 20 de outubro de 2026**
 
-Esta Política de Cookies explica o que são cookies, como o Informática para Concurso os utiliza e quais são as suas opções em relação ao uso deles. Ao usar nosso site ([https://techonplay.com.br](https://techonplay.com.br)), você concorda com o uso de cookies conforme descrito nesta política.
+Esta Política de Cookies explica o que são cookies, como o Informática para Concurso os utiliza e quais são as suas opções em relação ao uso deles. Ao usar nosso site ([https://informaticaparaconcurso.com.br](https://informaticaparaconcurso.com.br)), você concorda com o uso de cookies conforme descrito nesta política.
 
 ## 1. O Que São Cookies?
 Cookies são pequenos arquivos de texto armazenados no seu computador ou dispositivo móvel quando você visita um site. Eles são amplamente usados para fazer os sites funcionarem de forma mais eficiente e para fornecer informações aos proprietários do site.
@@ -25,8 +25,7 @@ Usamos o Google AdSense para exibir anúncios. O Google utiliza cookies para exi
 - O uso de cookies de publicidade pelo Google permite que ele e seus parceiros exibam anúncios com base na sua visita ao Informática para Concurso e/ou a outros sites na internet.
 - Você pode desativar a publicidade personalizada visitando as [Configurações de Anúncios do Google](https://www.google.com/settings/ads).
 
-**Links de Afiliados**  
-Alguns dos nossos artigos contêm links de afiliados (por exemplo, para a Amazon). Se você clicar em um desses links, um cookie pode ser armazenado no seu dispositivo para rastrear uma eventual compra, permitindo que ganhemos uma pequena comissão.
+Hoje o site não usa links de afiliados. Se isso mudar, esta política será atualizada.
 
 ## 4. Como Controlar os Cookies
 

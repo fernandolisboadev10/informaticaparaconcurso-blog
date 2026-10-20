@@ -1,4 +1,4 @@
-// Audit blog posts against the Discover checklist (see PLANO-DISCOVER.md).
+// Audit blog posts against the Discover checklist.
 // Usage: node scripts/audit-discover.mjs   (exit code 1 when any post fails)
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';

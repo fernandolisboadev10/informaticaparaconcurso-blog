@@ -1,7 +1,7 @@
 {
  "questions": [
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "Qual é a função do DNS na Internet?",
    "options": [
@@ -15,7 +15,7 @@
    "comment": "O DNS (Domain Name System) traduz nomes de domínio, fáceis de lembrar, em endereços IP, que os computadores usam para se localizar na rede."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "O que é a rede WAN?",
    "options": [
@@ -29,7 +29,7 @@
    "comment": "WAN significa Wide Area Network, que se refere a redes que cobrem grandes distâncias. As outras opções são definições de outros tipos de rede."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "O protocolo utilizado para a transferência de páginas web entre o servidor e o navegador é o:",
    "options": [
@@ -43,7 +43,7 @@
    "comment": "O HTTP define as regras de comunicação entre o navegador e o servidor web. O SMTP envia e-mails, e o FTP transfere arquivos."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Qual é a principal função do protocolo FTP?",
    "options": [
@@ -57,7 +57,7 @@
    "comment": "A opção A é a correta, pois o FTP (File Transfer Protocol) é usado principalmente para a transferência de arquivos entre sistemas. As outras opções não são funções do FTP."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "No contexto da segurança da informação nas redes, o que é phishing?",
    "options": [
@@ -71,7 +71,7 @@
    "comment": "Phishing é uma técnica de fraude online que visa enganar usuários para que revelem informações pessoais, como senhas e números de cartões de crédito. As outras definições não estão corretas."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "Qual a função do protocolo IMAP em relação ao e-mail?",
    "options": [
@@ -85,7 +85,7 @@
    "comment": "IMAP (Internet Message Access Protocol) permite que usuários gerenciem e-mails diretamente no servidor. As outras opções não descrevem sua função corretamente."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "No contexto da computação em nuvem, o que caracteriza o modelo SaaS (Software as a Service)?",
    "options": [
@@ -99,7 +99,7 @@
    "comment": "O modelo SaaS permite que o usuário acesse o software pela internet, sem a necessidade de instalação local. As outras opções descrevem características de diferentes modelos de serviços de computação em nuvem."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "O que caracteriza a computação em nuvem?",
    "options": [
@@ -113,7 +113,7 @@
    "comment": "A resposta correta é a opção B, pois a computação em nuvem se caracteriza pelo acesso remoto a recursos de tecnologia da informação. As outras opções falham em descrever essa característica."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "Qual é a principal diferença entre o protocolo IMAP e o protocolo POP3 na recuperação de e-mails?",
    "options": [
@@ -127,7 +127,7 @@
    "comment": "A principal diferença é que o IMAP permite que os e-mails sejam acessados de múltiplos dispositivos, enquanto o POP3, geralmente, baixa e remove os e-mails do servidor."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "Um navegador de internet (browser), como Google Chrome, Mozilla Firefox ou Microsoft Edge, tem como função principal:",
    "options": [
@@ -141,7 +141,7 @@
    "comment": "O navegador é o software responsável por requisitar páginas a servidores web e renderizar (interpretar e exibir) o HTML, CSS e JavaScript recebidos."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "Qual protocolo é utilizado para enviar e-mails?",
    "options": [
@@ -155,7 +155,7 @@
    "comment": "SMTP (Simple Mail Transfer Protocol) é o protocolo padrão para envio de e-mails. HTTP é para web, FTP para transferência de arquivos, IMAP e DNS servem para gerenciar e-mails e resolução de domínios, respectivamente."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "Qual a importância de um firewall em redes de computadores?",
    "options": [
@@ -169,7 +169,7 @@
    "comment": "Um firewall serve para filtrar e controlar o tráfego da rede, bloqueando acessos não autorizados e protegendo a rede interna. As outras opções não refletem sua função principal."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "O que significa a sigla URL na web?",
    "options": [
@@ -183,7 +183,7 @@
    "comment": "URL significa Uniform Resource Locator, que é um sistema de endereçamento utilizado para localizar recursos na web. As outras opções contêm erros de terminologia."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "Um firewall tem como principal função:",
    "options": [
@@ -225,7 +225,7 @@
    "comment": "No DDoS, muitos dispositivos enviam requisições ao mesmo tempo para sobrecarregar o alvo. O pilar atingido é a disponibilidade."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "A sigla VPN (Virtual Private Network) se refere a uma tecnologia que:",
    "options": [
@@ -246,7 +246,7 @@
    "comment": "O Wi-Fi é a WLAN, rede local sem fio, baseada nos padrões IEEE 802.11."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "Qual é um dos principais benefícios da computação em nuvem para empresas?",
    "options": [
@@ -274,14 +274,14 @@
    "comment": "No IaaS, o provedor entrega a infraestrutura e o cliente gerencia o sistema operacional. No PaaS, o provedor entrega a plataforma de desenvolvimento, e no SaaS, o software pronto."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "ce",
    "text": "Cookies armazenados por um navegador web são utilizados para rastrear a atividade do usuário e aprimorar a experiência de navegação baseada nas preferências do usuário.",
    "answer": "C",
    "comment": "Cookies ajudam a personalizar a experiência do usuário, armazenando informações sobre as atividades e preferências de navegação."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Qual é a vantagem do uso de computação em nuvem?",
    "options": [
@@ -309,7 +309,7 @@
    "comment": "O https é o protocolo. O www.exemplo.com.br é o domínio, e /contato é o caminho do recurso no servidor."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Qual é a principal característica de uma rede Intranet?",
    "options": [
@@ -323,7 +323,7 @@
    "comment": "A opção C é a resposta correta, pois a Intranet serve como uma rede interna restrita a membros de uma organização. As outras opções não descrevem corretamente a natureza de uma Intranet."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Na computação em nuvem, o modelo de serviço em que o provedor entrega uma plataforma para desenvolver e executar aplicações, sem que o cliente gerencie a infraestrutura, é o:",
    "options": [
@@ -337,7 +337,7 @@
    "comment": "O PaaS (Platform as a Service) entrega a plataforma de desenvolvimento. No SaaS o cliente usa o software pronto, e no IaaS gerencia o sistema operacional."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "A extranet é uma rede que:",
    "options": [
@@ -358,7 +358,7 @@
    "comment": "A PAN é a rede de área pessoal, de alcance de poucos metros ao redor de uma pessoa."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "Qual é a principal vantagem da virtualização em data centers?",
    "options": [
@@ -372,7 +372,7 @@
    "comment": "A virtualização permite que vários ambientes virtuais sejam executados em um único hardware, reduzindo assim os custos com servidores físicos. As outras alternativas são contrárias aos benefícios da virtualização."
   },
   {
-   "banca": "Estilo CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "O recurso do navegador que guarda cópias de arquivos de páginas já visitadas, como imagens e scripts, para que elas carreguem mais rápido em futuras visitas é o:",
    "options": [
@@ -442,7 +442,7 @@
    "comment": "O switch atua na camada de enlace e encaminha os dados ao dispositivo de destino dentro da rede local."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Um endereço IPv4 é formado por:",
    "options": [
@@ -463,7 +463,7 @@
    "comment": "O IPv6 foi criado para ampliar a quantidade de endereços disponíveis em relação ao IPv4, que tem 32 bits."
   },
   {
-   "banca": "Estilo CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "A topologia de rede mais utilizada nas redes locais modernas, em que os dispositivos se conectam a um equipamento central, é a:",
    "options": [

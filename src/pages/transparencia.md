@@ -14,6 +14,8 @@ Sabemos que, em concursos públicos, uma única questão pode separar você da a
 
 Nosso compromisso é entregar conteúdos revisados, minimizando o risco de você estudar o que não cai na prova e mantendo o mais alto padrão de qualidade educacional.
 
+**Sobre as questões dos simulados:** elas são autorais. Nós as elaboramos no estilo de cada banca, com comentário, e não são questões de provas oficiais. Quando uma questão traz o rótulo “Estilo Cebraspe”, “Estilo FGV” ou outro semelhante, o nome da banca indica apenas o formato usado.
+
 ## Diversidade de Bancas e Perfis
 
 O mundo dos concursos envolve diferentes metodologias de avaliação — do “Certo e Errado” do CEBRASPE à múltipla escolha da FGV e Vunesp. Nosso objetivo é apresentar uma visão panorâmica desse ecossistema, oferecendo análises de perfil para cada banca.
@@ -36,11 +38,11 @@ Nosso compromisso é fornecer resumos e simulados imparciais, garantindo a sua c
 
 Valorizamos profundamente a participação da nossa comunidade de estudantes. Incentivamos nossos leitores a compartilhar dúvidas, recursos de questões e críticas construtivas através dos nossos canais de contato.
 
-O diálogo aberto é fundamental para crescermos juntos e melhorarmos continuamente a qualidade da plataforma (incluindo o nosso gerador de simulados).
+O diálogo aberto é fundamental para crescermos juntos e melhorarmos continuamente a qualidade da plataforma (incluindo os nossos simulados).
 
 ## Publicidade e Parcerias
 
-Para assegurar a transparência, sempre informaremos de maneira clara quando um artigo contiver links de afiliados (como indicações de livros, cursos parceiros ou ferramentas) ou for um conteúdo patrocinado.
+O site pode exibir anúncios do Google AdSense, que aparecem separados do texto dos artigos. Hoje não há links de afiliados nem conteúdo patrocinado. Se isso mudar, informaremos de maneira clara no próprio artigo.
 
 Mantemos uma separação estrita entre o nosso conteúdo editorial (suas aulas e resumos) e a publicidade, protegendo a confiança que você deposita em nós para a sua preparação.
 

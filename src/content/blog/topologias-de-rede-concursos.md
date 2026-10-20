@@ -81,7 +81,7 @@ Em resumo, a tabela abaixo sintetiza as características críticas para sua memo
 
 Em resumo, dominar topologias de rede exige que você visualize o desenho de cada estrutura. Lembre-se: o **barramento** divide um cabo único; a **estrela** centraliza tudo em um switch; o **anel** forma um círculo; e a **malha** cria uma teia de conexões redundantes.
 
-Por fim, treine com questões de concursos anteriores, como as do [simulado de Redes de Computadores](/simulado-redes/). Identifique palavras-chave como “cabo central”, “nó concentrador”, “circuito fechado” e “múltiplos caminhos”. Dessa maneira, essa prática garante que você acerte questões de topologia em qualquer prova. Bons estudos!
+Por fim, treine com questões no estilo das bancas, como as do [simulado de Redes de Computadores](/simulado-redes/). Identifique palavras-chave como “cabo central”, “nó concentrador”, “circuito fechado” e “múltiplos caminhos”. Dessa maneira, essa prática garante que você acerte questões de topologia em qualquer prova. Bons estudos!
 
 ## Fontes e Referências
 

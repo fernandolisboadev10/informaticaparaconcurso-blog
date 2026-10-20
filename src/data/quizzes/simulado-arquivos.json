@@ -1,7 +1,7 @@
 {
  "questions": [
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "No Windows, qual é a função do Explorador de Arquivos?",
    "options": [
@@ -15,7 +15,7 @@
    "comment": "A alternativa C é correta, pois a ferramenta ‘Gerenciador de Arquivos’ permite que os usuários gerenciem arquivos e pastas. As demais opções não descrevem a função dessa ferramenta."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "Qual dos formatos abaixo é o mais adequado para compartilhar um documento mantendo a sua formatação em qualquer dispositivo?",
    "options": [
@@ -29,7 +29,7 @@
    "comment": "O PDF preserva o layout do documento e pode ser aberto em qualquer dispositivo. JPG é imagem, MP4 é vídeo, EXE é executável e MP3 é áudio."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "No contexto de organização de informações, o que é um sistema de gerenciamento de arquivos?",
    "options": [
@@ -43,14 +43,14 @@
    "comment": "A opção C está correta, pois um sistema de gerenciamento de arquivos organiza e permite a manipulação de arquivos e pastas. As outras alternativas não refletem a função de um sistema de gerenciamento de arquivos."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "ce",
    "text": "No Windows 10, é possível agendar a execução de programas usando o Agendador de Tarefas.",
    "answer": "C",
    "comment": "O Agendador de Tarefas do Windows permite programar a execução de programas e scripts em horários definidos pelo usuário. Portanto, o item está certo."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "No Explorador de Arquivos do Windows, ao “recortar” (Ctrl+X) um arquivo e depois “colar” (Ctrl+V) em outra pasta, o resultado é:",
    "options": [
@@ -64,7 +64,7 @@
    "comment": "Recortar e colar (Ctrl+X + Ctrl+V) move o arquivo — diferente de copiar e colar (Ctrl+C + Ctrl+V), que duplica o arquivo, mantendo o original no lugar."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Qual comando é usado para listar os arquivos em um diretório no Windows?",
    "options": [
@@ -92,7 +92,7 @@
    "comment": "O Painel de Navegação lista o Acesso rápido, as unidades e as pastas. A Barra de Endereços mostra o caminho atual, na parte superior."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "O que é um atalho de desktop no Windows?",
    "options": [
@@ -106,7 +106,7 @@
    "comment": "Um atalho de desktop é um link que permite acessar rapidamente um arquivo ou programa. As outras opções não se relacionam com a função de um atalho."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "Qual a diferença entre arquivos e pastas?",
    "options": [
@@ -120,7 +120,7 @@
    "comment": "A alternativa B é a correta, pois descreve exatamente a diferença entre arquivos e pastas. As outras alternativas não representam a realidade sobre arquivos e pastas."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Qual a função de um diretório em um sistema de arquivos?",
    "options": [
@@ -134,7 +134,7 @@
    "comment": "Os diretórios servem para organizar arquivos em grupos, facilitando a localização e o gerenciamento. As outras opções não são funções primárias de diretórios."
   },
   {
-   "banca": "FCC",
+   "banca": "Estilo FCC",
    "type": "mc",
    "text": "Qual é a principal vantagem de usar pastas para organizar arquivos em um computador?",
    "options": [
@@ -148,7 +148,7 @@
    "comment": "A principal vantagem de usar pastas é a organização, facilitando o acesso e a localização de arquivos. As outras opções não estão diretamente relacionadas à função das pastas."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "No Prompt de Comando do Windows, o comando utilizado para procurar uma sequência de texto dentro de arquivos é:",
    "options": [
@@ -162,7 +162,7 @@
    "comment": "O comando find procura texto em arquivos. O dir lista arquivos e pastas, e o explorer abre o Explorador de Arquivos."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Um arquivo de texto simples, sem formatação, geralmente possui a extensão:",
    "options": [
@@ -176,7 +176,7 @@
    "comment": "O .txt guarda apenas caracteres, sem formatação. Programas como o Bloco de Notas criam e editam esse tipo de arquivo."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "Qual comando é utilizado no Windows para abrir o Explorador de Arquivos?",
    "options": [
@@ -190,7 +190,7 @@
    "comment": "O comando explorer abre o Explorador de Arquivos do Windows. Os demais são comandos de terminal ou não abrem o explorador."
   },
   {
-   "banca": "VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Em um sistema operacional, as pastas são utilizadas para:",
    "options": [
@@ -211,7 +211,7 @@
    "comment": "O df é um comando de sistemas Linux e Unix. No Windows, o espaço livre das unidades aparece no Explorador de Arquivos."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Qual dos seguintes comandos é utilizado para abrir um terminal de comandos em sistemas Windows?",
    "options": [
@@ -225,7 +225,7 @@
    "comment": "O comando ‘cmd’ é utilizado para abrir o terminal de comandos no Windows. As outras opções não são comandos válidos desse sistema."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "No sistema operacional Linux, qual comando é utilizado para listar arquivos e pastas no diretório atual?",
    "options": [
@@ -239,7 +239,7 @@
    "comment": "A opção B é correta, pois ‘ls’ é o comando que lista arquivos e diretórios em Linux. As outras opções são incorretas ou de outros sistemas operacionais."
   },
   {
-   "banca": "CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Em um sistema de arquivos, o que caracteriza um diretório?",
    "options": [
@@ -253,7 +253,7 @@
    "comment": "Um diretório serve para organizar arquivos e pode conter referências a outros arquivos e outros diretórios. As outras opções estão erradas, pois um diretório pode ser visível e personalizável."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "Qual a função da extensão de um arquivo, como .txt ou .jpg?",
    "options": [
@@ -267,7 +267,7 @@
    "comment": "A opção C está correta porque a extensão de um arquivo especifica seu tipo e formato, facilitando sua identificação pelo sistema operacional. As demais respostas não correspondem à função real das extensões."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "No Windows, a extensão de arquivo “.exe” identifica tipicamente:",
    "options": [
@@ -281,7 +281,7 @@
    "comment": "A extensão .exe identifica um arquivo executável do Windows — ao ser aberto, ele inicia a execução de um programa."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "O que significa o termo ‘backup’ em informática?",
    "options": [
@@ -295,7 +295,7 @@
    "comment": "A opção C é correta, pois ‘backup’ refere-se à criação de cópias de segurança para evitar a perda de dados. As outras opções não descrevem o conceito corretamente."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Ao renomear o arquivo relatorio.txt para relatorio.jpg, o Windows:",
    "options": [
@@ -309,7 +309,7 @@
    "comment": "Mudar a extensão não converte o conteúdo. O arquivo continua sendo o mesmo texto, mas o programa associado à nova extensão pode não conseguir abri-lo."
   },
   {
-   "banca": "Estilo CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "No Windows, o atalho de teclado que abre o Explorador de Arquivos é:",
    "options": [
@@ -323,7 +323,7 @@
    "comment": "O Windows + E abre o Explorador de Arquivos. O Windows + L bloqueia a sessão, o Windows + R abre o Executar e o Windows + D mostra a Área de Trabalho."
   },
   {
-   "banca": "IADES",
+   "banca": "Estilo IADES",
    "type": "mc",
    "text": "No Windows, a tecla de atalho utilizada para renomear o arquivo ou a pasta selecionada é:",
    "options": [
@@ -351,7 +351,7 @@
    "comment": "O Ctrl + Shift + N cria uma nova pasta. O Ctrl + N abre uma nova janela do Explorador."
   },
   {
-   "banca": "Estilo CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "Um arquivo marcado com o atributo Somente leitura no Windows:",
    "options": [
@@ -365,7 +365,7 @@
    "comment": "O atributo Somente leitura protege o arquivo contra alterações acidentais, mas não impede a leitura."
   },
   {
-   "banca": "CEBRASPE",
+   "banca": "Estilo Cebraspe",
    "type": "mc",
    "text": "Ao excluir um arquivo do disco rígido local no Windows usando apenas a tecla Delete (sem combinar com Shift), o arquivo é:",
    "options": [
@@ -379,7 +379,7 @@
    "comment": "Por padrão, excluir um arquivo local com Delete o move para a Lixeira, de onde pode ser restaurado. Usar Shift+Delete é que causa exclusão permanente, pulando a Lixeira."
   },
   {
-   "banca": "FGV",
+   "banca": "Estilo FGV",
    "type": "mc",
    "text": "Que tipo de arquivo é normalmente utilizado para criar documentos de texto no Microsoft Word?",
    "options": [
@@ -449,7 +449,7 @@
    "comment": "A Lixeira guarda apenas arquivos apagados de discos locais. Em mídias removíveis e unidades de rede, a exclusão é permanente."
   },
   {
-   "banca": "Estilo VUNESP",
+   "banca": "Estilo Vunesp",
    "type": "mc",
    "text": "Um arquivo com a extensão .zip é, normalmente, um arquivo:",
    "options": [
@@ -463,7 +463,7 @@
    "comment": "A extensão .zip identifica arquivos compactados, que reúnem e reduzem o tamanho de arquivos e pastas."
   },
   {
-   "banca": "Estilo CESGRANRIO",
+   "banca": "Estilo Cesgranrio",
    "type": "mc",
    "text": "No Microsoft Excel, a extensão padrão de uma pasta de trabalho (arquivo de planilha) das versões mais recentes é:",
    "options": [

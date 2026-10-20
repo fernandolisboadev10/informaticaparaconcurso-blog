@@ -261,4 +261,4 @@ Mecanismo que filtra o tráfego de rede, permitindo ou bloqueando conexões conf
 
 ### Treine com mais questões
 
-Para fixar o conteúdo, resolva o [simulado de redes de computadores](/simulado-redes/), com 30 questões comentadas no estilo das bancas, e depois revise os temas em que errar.
+Para fixar o conteúdo, resolva o [simulado de redes de computadores](/simulado-redes/), com 40 questões comentadas no estilo das bancas, e depois revise os temas em que errar.
