@@ -1,10 +1,11 @@
 ---
 title: "Concurso Polícia Civil: destrinchando a Informática da Cebraspe"
-description: "Concurso Polícia Civil Cebraspe: veja o conteúdo programático de Informática tópico por tópico, o que a banca cobra e como estudar cada item."
+description: "Concurso Polícia Civil MA (Cebraspe): conteúdo programático de Informática tópico por tópico, 12 questões de múltipla escolha e como estudar."
 category: "Concursos"
 date: 2026-10-19T20:55:00-03:00
+updated: 2026-10-19T20:58:00-03:00
 readingTime: "10 min"
-tags: ["Concurso Polícia Civil", "Cebraspe", "Conteúdo Programático", "Edital", "Noções de Informática"]
+tags: ["Concurso Polícia Civil", "PC MA", "Oficial Investigador", "Cebraspe", "Conteúdo Programático", "Edital", "Noções de Informática"]
 image: "./images/Concurso-Policia-Civil-Cebraspe.webp"
 imageAlt: "Policial civil sentado à mesa lendo o edital de Informática na tela do computador"
 related:
@@ -13,13 +14,23 @@ related:
   - como-estudar-informatica-para-concurso
 ---
 
-Fala, concurseiro! Quem mira o **concurso Polícia Civil** com banca Cebraspe sabe que o edital de Informática não é igual ao de dez anos atrás. Além de Windows, Office e redes, agora entram evidência digital, cadeia de custódia, inteligência artificial e até criptomoedas.
+Fala, concurseiro! Quem mira o **concurso Polícia Civil** do Maranhão (PC-MA, cargo de Oficial Investigador de Polícia), com banca Cebraspe, sabe que o edital de Informática não é igual ao de dez anos atrás. Além de Windows, Office e redes, agora entram evidência digital, cadeia de custódia, inteligência artificial e até criptomoedas.
 
 Por isso, preparei este mapa. Primeiro, você vê os dez tópicos do edital. Depois, entende o que a banca costuma cobrar em cada um e o que priorizar. Se quiser conhecer o estilo da prova antes, leia [como funciona a Cebraspe e o que ela cobra em Informática](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/). Já para a base de todo o conteúdo, use a página de [Noções de Informática](/nocoes-de-informatica/).
 
+## Como é a prova do concurso Polícia Civil PC-MA
+
+Antes do programa, veja as regras do jogo no Edital nº 1 – PCMA – Investigador, de 13 de julho de 2026:
+
+- **Formato:** as questões são de **múltipla escolha**, com cinco opções (A, B, C, D e E) e uma única resposta correta. Ou seja, a prova **não** é no estilo Certo ou Errado.
+- **Pontuação:** cada questão vale 1 ponto. Erro, questão em branco e marcação dupla valem zero, então **não há desconto por erro**.
+- **Prova objetiva:** 100 questões, com duração de 5 horas, no turno da manhã. Quem faz menos de 50 pontos é eliminado.
+- **Informática:** são **12 questões**, a disciplina com mais questões de toda a prova.
+- **Prova discursiva:** 1 hora e 30 minutos, no turno da tarde.
+
 ## O conteúdo programático do concurso Polícia Civil Cebraspe em 10 tópicos
 
-O programa de Informática trazido neste artigo tem dez grandes itens. Veja a lista completa:
+O programa de Informática do edital tem dez grandes itens. Veja a lista completa:
 
 1. Conceito de internet e intranet
 2. Sistema operacional: Windows e Linux (pastas, diretórios, arquivos, atalhos, área de trabalho e área de transferência)
@@ -32,7 +43,7 @@ O programa de Informática trazido neste artigo tem dez grandes itens. Veja a li
 9. Noções de inteligência artificial e aprendizado de máquina
 10. Noções de criptomoedas
 
-Um aviso importante: cada edital tem o seu texto, e o conteúdo pode mudar de um concurso para outro. Portanto, confira sempre o programa do cargo em que você vai se inscrever.
+Esse é o programa do cargo de Oficial Investigador da PC-MA. Outros concursos de Polícia Civil podem trazer variações, portanto confira sempre o edital do cargo em que você vai se inscrever.
 
 ## Tópicos 1 a 3: a base que ainda derruba muita gente
 
@@ -66,7 +77,7 @@ Foque em URL (endereço de um recurso), HTTP e HTTPS, janela anônima e operador
 
 ### Redes de computadores
 
-Primeiro, os tipos: LAN (local), MAN (metropolitana) e WAN (longa distância). Em seguida, os endereços: o IPv4 tem 32 bits e o IPv6 tem 128 bits. Por fim, o Wi-Fi, que é a rede sem fio local. Ou seja, quando o item disser que o IPv6 usa 32 bits, desconfie e marque Errado. O material de [redes de computadores para concursos](/redes-de-computadores-para-concursos/) cobre esse bloco inteiro.
+Primeiro, os tipos: LAN (local), MAN (metropolitana) e WAN (longa distância). Em seguida, os endereços: o IPv4 tem 32 bits e o IPv6 tem 128 bits. Por fim, o Wi-Fi, que é a rede sem fio local. Ou seja, quando uma alternativa disser que o IPv6 usa 32 bits, desconfie: ela está errada. O material de [redes de computadores para concursos](/redes-de-computadores-para-concursos/) cobre esse bloco inteiro.
 
 ## Tópico 7: computação em nuvem
 
@@ -86,7 +97,7 @@ Cada praga tem uma marca registrada: o vírus precisa de um hospedeiro, o *worm*
 
 ### 8.3 Ferramentas de proteção
 
-O antivírus detecta e remove malware. O *firewall* filtra o tráfego de rede. O *anti-spyware* combate a espionagem. Trocar a função de uma pela da outra é o erro mais comum nos itens, e o texto sobre [antivírus, firewall e antispyware](/aplicativos-para-seguranca-antivirus-firewall-antispyware/) resolve essa confusão.
+O antivírus detecta e remove malware. O *firewall* filtra o tráfego de rede. O *anti-spyware* combate a espionagem. Trocar a função de uma pela da outra é o erro mais comum nas alternativas, e o texto sobre [antivírus, firewall e antispyware](/aplicativos-para-seguranca-antivirus-firewall-antispyware/) resolve essa confusão.
 
 ### 8.4 Criptografia e certificação digital
 
@@ -129,32 +140,46 @@ Criptomoeda é um ativo digital que usa criptografia e funciona sobre um registr
 
 Essa última ideia explica por que o tema interessa à Polícia: dá para rastrear o caminho do dinheiro no *blockchain* em crimes como golpes e lavagem de dinheiro.
 
-## Como a Cebraspe costuma cobrar: um item de exemplo
+## Como treinar para a múltipla escolha da Cebraspe
 
-A banca monta itens com termos verdadeiros e troca um detalhe. Veja:
+Em uma questão com cinco alternativas, a banca costuma misturar termos verdadeiros e trocar um detalhe nas opções erradas. Veja dois exemplos no formato do edital.
 
-> A cadeia de custódia é o conjunto de procedimentos que documenta a história cronológica do vestígio, do reconhecimento ao descarte.
+**Questão 1.** Qual ferramenta de proteção tem como função principal filtrar o tráfego de rede e bloquear acessos não autorizados?
 
-O gabarito é **CERTO**, e o item segue a definição legal. Agora veja o contrário:
+- A) Antivírus
+- B) Firewall
+- C) Anti-spyware
+- D) Certificado digital
+- E) *Hash*
 
-> O firewall é a ferramenta usada para localizar e remover vírus já instalados no computador.
+Gabarito: **B**. O antivírus detecta e remove malware, o anti-spyware combate a espionagem, o certificado digital identifica uma pessoa ou entidade e o *hash* verifica a integridade de um arquivo.
 
-O gabarito é **ERRADO**: quem localiza e remove vírus é o antivírus. Para treinar nesse formato, resolva o [simulado de Informática no estilo Cebraspe](/simulado-cebraspe-informatica/).
+**Questão 2.** Em uma investigação digital, o perito calcula o *hash* de um arquivo no momento da coleta e o compara com o valor obtido na análise. O objetivo dessa comparação é:
+
+- A) criptografar o arquivo para que somente o perito consiga abri-lo.
+- B) comprovar que o conteúdo do arquivo não foi alterado.
+- C) identificar o autor do arquivo.
+- D) recuperar arquivos apagados do disco.
+- E) acelerar a cópia do material para o laudo.
+
+Gabarito: **B**. Se os dois valores forem iguais, a integridade foi preservada. Se forem diferentes, o arquivo mudou.
+
+Como não há desconto por erro, **nunca deixe uma questão em branco**. Primeiro, elimine as alternativas que trocam conceitos, como a função do firewall pela do antivírus. Depois, escolha a melhor das que sobraram. Para reforçar os conceitos, o [simulado de Informática da Cebraspe](/simulado-cebraspe-informatica/) ajuda, mas ele usa o formato Certo ou Errado. Por isso, transforme cada item do simulado em uma pergunta de cinco alternativas ao revisar.
 
 ## Por onde começar: um plano para o concurso Polícia Civil
 
-Se o tempo está curto, siga esta ordem de prioridade:
+Informática vale 12 das 100 questões da prova objetiva e a nota mínima é 50 pontos. Com dez tópicos para 12 questões, cada tópico rende pouco mais de uma questão, e por isso nenhum deve ficar de fora. Se o tempo está curto, siga esta ordem de prioridade:
 
 1. **Segurança da informação (tópico 8):** é o bloco mais cobrado e o mais específico da área policial.
 2. **Redes, e-mail e navegação (tópicos 4 a 6):** conceitos que se repetem em toda prova.
 3. **Windows, Linux e Office (tópicos 2 e 3):** base que rende acertos seguros.
 4. **Nuvem, IA e criptomoedas (tópicos 7, 9 e 10):** temas novos, com poucos conceitos centrais.
 
-Em seguida, monte um ciclo: leia o tópico, resolva itens e anote cada erro em uma frase. Para organizar a rotina, use o roteiro de [como estudar Informática para concurso](/como-estudar-informatica-para-concurso/).
+Em seguida, monte um ciclo: leia o tópico, resolva questões de múltipla escolha e anote cada erro em uma frase. Para organizar a rotina, use o roteiro de [como estudar Informática para concurso](/como-estudar-informatica-para-concurso/).
 
 ## Conclusão
 
-O conteúdo programático de Informática do concurso Polícia Civil combina o básico de sempre com temas atuais: evidência digital, LGPD, inteligência artificial e criptomoedas. Quem estuda tópico por tópico, treina o formato Certo ou Errado e dá atenção à segurança da informação chega à prova com vantagem.
+O conteúdo programático de Informática do concurso Polícia Civil PC-MA combina o básico de sempre com temas atuais: evidência digital, LGPD, inteligência artificial e criptomoedas. Quem estuda tópico por tópico, treina a múltipla escolha com cinco alternativas e dá atenção à segurança da informação chega à prova com vantagem nas 12 questões da disciplina.
 
 Então, comece hoje pelo tópico 8 e siga a ordem deste guia. Bons estudos!
 
@@ -164,4 +189,4 @@ Então, comece hoje pelo tópico 8 e siga a ordem deste guia. Bons estudos!
 - Brasil. Lei nº 13.964/2019 (Pacote Anticrime): planalto.gov.br
 - Brasil. Lei nº 13.709/2018 (LGPD), art. 4º: planalto.gov.br
 - NIST. SP 800-145, The NIST Definition of Cloud Computing: csrc.nist.gov
-- Cebraspe. Editais e informações dos concursos: [cebraspe.org.br/concursos](https://www.cebraspe.org.br/concursos)
+- Cebraspe. Edital nº 1 – PCMA – Investigador, de 13 de julho de 2026: [cebraspe.org.br/concursos/pc_ma_26_investigador](https://www.cebraspe.org.br/concursos/pc_ma_26_investigador)
