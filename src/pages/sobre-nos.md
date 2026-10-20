@@ -6,7 +6,7 @@ description: "Conheça o Informática para Concurso, portal de Fernando Lisboa c
 
 ## **O Seu Mapa da Mina na Informática**
 
-O **Informática para Concurso** é um portal fundado por **Fernando Lisboa**, professor, analista de sistemas e especialista em tecnologia educacional. O projeto nasceu com um objetivo claro: traduzir o “tecniquês” da informática e transformá-lo em conhecimento prático, simples e direto ao ponto para quem precisa gabaritar em provas de concurso público.
+O **Informática para Concurso** é um portal fundado por **Fernando Lisboa**, professor de robótica e informática, analista de sistemas e especialista em tecnologia educacional e inteligência artificial. O projeto nasceu com um objetivo claro: traduzir o “tecniquês” da informática e transformá-lo em conhecimento prático, simples e direto ao ponto para quem precisa gabaritar em provas de concurso público.
 
 Aqui publicamos resumos esquematizados, análise do perfil das bancas, questões comentadas e as famosas “pegadinhas” de prova para que você pare de perder pontos preciosos na disciplina que mais reprova candidatos no Brasil.
 
