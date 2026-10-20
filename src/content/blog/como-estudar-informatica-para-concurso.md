@@ -1,5 +1,6 @@
 ---
 title: "Informática para Concurso Público: O Que Estudar e Como Começar"
+seoTitle: "Informática para Concurso: o que Estudar e Como Começar"
 description: "Como estudar informática para concurso do zero: leia o edital, siga a ordem certa, pratique no computador, resolva questões e revise. Plano de 6 semanas."
 category: "Dicas"
 date: 2026-10-17T09:20:00-03:00

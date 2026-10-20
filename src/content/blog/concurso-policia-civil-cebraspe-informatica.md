@@ -1,5 +1,6 @@
 ---
 title: "Concurso Polícia Civil: destrinchando a Informática da Cebraspe"
+seoTitle: "Concurso Polícia Civil: a Informática da Cebraspe"
 description: "Concurso Polícia Civil MA (Cebraspe): conteúdo programático de Informática tópico por tópico, 12 questões de múltipla escolha e como estudar."
 category: "Concursos"
 date: 2026-10-19T20:55:00-03:00

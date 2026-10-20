@@ -1,5 +1,6 @@
 ---
 title: "Concurso Bombeiro Maranhão não terá informática, mas terá inglês: dicas para a prova de domingo"
+seoTitle: "Concurso Bombeiro Maranhão: sem Informática, com Inglês"
 description: "Concurso Bombeiro Maranhão não terá informática, mas terá inglês. Veja o que o edital cobra, como a prova é estruturada e dicas para domingo."
 category: "Dicas"
 date: 2026-10-15T20:55:00-03:00

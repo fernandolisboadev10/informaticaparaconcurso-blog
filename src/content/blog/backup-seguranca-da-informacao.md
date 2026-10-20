@@ -1,5 +1,6 @@
 ---
 title: "Backup em Segurança da Informação: Aula Completa para Concursos"
+seoTitle: "Backup em Segurança da Informação: Aula para Concursos"
 description: "Aprenda backup em segurança da informação com aula objetiva, tipos de backup, regra 3-2-1 e 10 questões ao final do artigo para concursos."
 category: "Segurança"
 date: 2026-07-30T19:32:36-03:00

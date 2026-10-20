@@ -1,5 +1,6 @@
 ---
 title: "Cebraspe: como funciona a banca e o que ela cobra em Informática"
+seoTitle: "Cebraspe: como Funciona a Banca em Informática"
 description: "Cebraspe: veja como funciona a banca, o item Certo ou Errado, a regra do desconto e como estudar Informática para não perder pontos na prova"
 category: "Dicas"
 date: 2026-10-04T07:00:00-03:00

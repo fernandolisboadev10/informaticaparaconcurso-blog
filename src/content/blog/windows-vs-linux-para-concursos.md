@@ -1,5 +1,6 @@
 ---
 title: "Windows vs Linux para Concursos: Diferenças que a Banca Cobra"
+seoTitle: "Windows vs Linux para Concursos: Diferenças Cobradas"
 description: "Compare Windows e Linux para concursos: arquitetura, comandos, atalhos, Office e tabela comparativa completa. Questões comentadas para fixar."
 category: "Sistemas"
 date: 2026-07-29T16:20:32-03:00

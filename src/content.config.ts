@@ -6,6 +6,8 @@ const blog = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
+      // Optional <title>/og:title/twitter:title (no site suffix) for posts whose "title" is longer than 60 characters.
+      seoTitle: z.string().max(60).optional(),
       description: z.string(),
       category: z.string(),
       date: z.date(),

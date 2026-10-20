@@ -1,6 +1,7 @@
 ---
 title: "Noções de Informática para Concursos: o Guia Completo com os 5 Blocos que Caem em Prova"
-description: "Noções de informática para concursos: veja os 5 blocos da matéria, como a banca cobra cada assunto e um roteiro de estudo com aulas e simulados por bloco."
+seoTitle: "Noções de Informática para Concursos: Guia Completo"
+description: "Noções de informática para concursos: os 5 blocos da matéria, como a banca cobra cada assunto e um roteiro de estudo com aulas e simulados."
 category: "Simulados"
 date: 2026-09-25T21:59:54-03:00
 updated: 2026-09-25T22:00:12Z

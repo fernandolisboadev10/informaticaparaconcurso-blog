@@ -1,5 +1,6 @@
 ---
 title: "Comandos Básicos do Linux: Guia Passo a Passo para Quem Nunca Usou o Terminal"
+seoTitle: "Comandos Básicos do Linux: Passo a Passo para Iniciantes"
 description: "Comandos básicos do Linux do zero: navegar, criar, copiar e apagar arquivos. Guia passo a passo com exemplos práticos para iniciantes."
 category: "Sistemas"
 date: 2026-08-07T11:54:15-03:00

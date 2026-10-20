@@ -1,5 +1,6 @@
 ---
 title: "Como Estudar para Concurso Faltando Menos de 15 Dias para a Prova"
+seoTitle: "Como Estudar para Concurso Faltando Menos de 15 Dias"
 description: "Como estudar para concurso faltando menos de 15 dias? Veja o plano dia a dia, o que priorizar, como treinar com questões e os erros"
 category: "Dicas"
 date: 2026-10-02T14:38:54-03:00

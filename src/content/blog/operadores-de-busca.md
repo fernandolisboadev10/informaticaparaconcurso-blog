@@ -1,5 +1,6 @@
 ---
 title: "Operadores de busca do Google: os comandos que todo concurseiro deve dominar"
+seoTitle: "Operadores de Busca do Google: Comandos para Concursos"
 description: "Operadores de busca do Google com comandos prontos para copiar e testar no navegador: aspas, site:, filetype: e mais. Ideal para concursos."
 category: "Redes"
 date: 2026-09-19T12:24:16-03:00

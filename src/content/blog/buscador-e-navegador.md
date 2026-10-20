@@ -1,6 +1,7 @@
 ---
 title: "Buscador x Navegador e Sítios de Busca: Qual a Diferença Que Cai na Prova?"
-description: "Entenda a diferença entre navegador e buscador (sítio de busca), como a busca funciona e as pegadinhas que as bancas mais cobram, com exemplos e questões comentadas."
+seoTitle: "Diferença entre Navegador e Buscador: o que Cai na Prova"
+description: "Entenda a diferença entre navegador e buscador, como a busca funciona e as pegadinhas que as bancas mais cobram, com exemplos e questões comentadas."
 category: "Redes"
 date: 2026-09-17T13:18:46-03:00
 updated: 2026-10-05T11:40:00-03:00

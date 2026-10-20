@@ -1,5 +1,6 @@
 ---
 title: "Cloud Storage: o Guia Completo de Armazenamento de Dados na Nuvem para Concursos"
+seoTitle: "Cloud Storage: Armazenamento de Dados na Nuvem"
 description: "Entenda armazenamento de dados na nuvem para concursos: tipos NIST, vantagens, riscos de segurança e questões comentadas de bancas reais."
 category: "Segurança"
 date: 2026-07-30T20:24:59-03:00

@@ -1,6 +1,7 @@
 ---
 title: "Microsoft Word para Concursos: Aula Prática com o que Mais Cai em Prova"
-description: "Guia completo e revisão de Microsoft Word para concursos: interface, formatação, atalhos em português x inglês, quebra de seção e as pegadinhas das bancas."
+seoTitle: "Microsoft Word para Concursos: o que Mais Cai em Prova"
+description: "Revisão de Microsoft Word para concursos: interface, formatação, atalhos em português x inglês, quebra de seção e as pegadinhas das bancas."
 category: "Office"
 date: 2026-09-25T21:40:31-03:00
 updated: 2026-10-05T10:40:00-03:00

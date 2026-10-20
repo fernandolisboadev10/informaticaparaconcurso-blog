@@ -1,5 +1,6 @@
 ---
 title: "Concurso TRT 8 2026: Edital e o que Cai de Informática na FCC"
+seoTitle: "Concurso TRT 8 2026: Edital e Informática na FCC"
 description: "Edital do TRT 8 2026 publicado: 24 cargos, banca FCC, inscrições até 5 de novembro e o conteúdo oficial de Informática, com Windows e Google Workspace."
 category: "Concursos"
 date: 2026-10-13T07:00:00-03:00

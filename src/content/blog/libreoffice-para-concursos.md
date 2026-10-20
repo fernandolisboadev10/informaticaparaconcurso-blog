@@ -1,5 +1,6 @@
 ---
 title: "LibreOffice para Concursos: aula completa com história, programas e atalhos"
+seoTitle: "LibreOffice para Concursos: Aula Completa e Atalhos"
 description: "LibreOffice para concursos: aprenda a história do BrOffice, os 6 aplicativos da suíte, as extensões ODF e os atalhos que mais caem em provas."
 category: "Office"
 date: 2026-09-23T13:57:07-03:00

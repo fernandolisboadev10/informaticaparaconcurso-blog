@@ -1,5 +1,6 @@
 ---
 title: "Sistema Operacional Windows para Concursos: Diferenças entre as Versões 7, 10 e 11"
+seoTitle: "Windows 7, 10 e 11 para Concursos: Diferenças e Pegadinhas"
 description: "Sistema Operacional Windows para concursos: datas de suporte, mudanças visuais, recursos, requisitos e pegadinhas que mais caem em provas."
 category: "Sistemas"
 date: 2026-08-10T11:29:45-03:00

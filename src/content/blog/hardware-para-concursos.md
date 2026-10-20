@@ -1,5 +1,6 @@
 ---
 title: "Hardware para Concursos: o que a banca cobra e como estudar cada componente"
+seoTitle: "Hardware para Concursos: o que a Banca Cobra"
 description: "Hardware para concursos sem decoreba: entenda processador, memórias, armazenamento e periféricos, com as pegadinhas das bancas."
 category: "Hardware"
 date: 2026-08-02T11:34:38-03:00

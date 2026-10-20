@@ -1,5 +1,6 @@
 ---
 title: "Informática para concursos: 5 confusões clássicas e como a banca as cobra"
+seoTitle: "Informática para Concursos: 5 Confusões Clássicas da Prova"
 description: "Malware, backup, redes, Lixeira e Excel: veja as 5 dúvidas de informática para concursos que mais confundem o candidato e como a banca cobra."
 category: "Dicas"
 date: 2026-09-29T11:44:38-03:00

@@ -1,5 +1,6 @@
 ---
 title: "Antivírus, Firewall e Anti-Spyware: Entenda os Limites de Cada Aplicativo de Segurança"
+seoTitle: "Antivírus, Firewall e Anti-Spyware: o que cada um faz"
 description: "Entenda a diferença entre antivírus, firewall e anti-spyware, o que cada aplicativo de segurança faz e treine com questões no estilo das bancas."
 category: "Segurança"
 date: 2026-07-29T20:17:18-03:00

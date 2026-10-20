@@ -26,7 +26,9 @@ for (const slug of slugs) {
   const issues = [];
   const len = (s) => [...(s ?? '')].length;
 
-  if (len(data.title) > 65) issues.push(`title ${len(data.title)} chars (max 65)`);
+  // The <title> uses seoTitle when present, so that is the one that must fit.
+  const shownTitle = data.seoTitle ?? data.title;
+  if (len(shownTitle) > 65) issues.push(`title ${len(shownTitle)} chars (max 65)`);
   if (len(data.description) < 120 || len(data.description) > 155)
     issues.push(`description ${len(data.description)} chars (120-155)`);
   if (!data.image) issues.push('no cover image');
@@ -45,7 +47,7 @@ for (const slug of slugs) {
   if (stale.length) issues.push('link to old domain techonplay.com');
   for (const u of internal) {
     const target = u.replace(/^\/|\/?(#.*)?$/g, '');
-    const isSitePage = /^(blog|categoria\/[a-z-]+|sobre-nos|contate-nos|anuncie)$/.test(target);
+    const isSitePage = /^(blog|categoria\/[a-z-]+|sobre-nos|contate-nos|anuncie|linux\.html)$/.test(target);
     if (target && !isSitePage && !slugs.includes(target)) issues.push(`broken internal link ${u}`);
   }
 

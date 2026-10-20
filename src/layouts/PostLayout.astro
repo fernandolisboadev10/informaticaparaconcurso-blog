@@ -14,6 +14,7 @@ import { categoryHref } from '../data/categories';
 
 interface Props {
   title: string;
+  seoTitle?: string;
   description: string;
   category: string;
   date: Date;
@@ -28,7 +29,7 @@ interface Props {
   next?: { slug: string; title: string };
   headings?: MarkdownHeading[];
 }
-const { title, description, category, date, updated, related, tags, readingTime, image, imageAlt, prev, next, headings = [] } = Astro.props;
+const { title, seoTitle, description, category, date, updated, related, tags, readingTime, image, imageAlt, prev, next, headings = [] } = Astro.props;
 
 // Questões interativas ficam em src/data/quizzes/<slug>.json e são exibidas no final do artigo.
 const quizzes = import.meta.glob<{ default: { questions: Question[]; mode?: 'instant' | 'final'; title?: string } }>('../data/quizzes/*.json', { eager: true });
@@ -84,7 +85,7 @@ const breadcrumbSchema = {
   ],
 };
 ---
-<BaseLayout title={title} description={description} image={image?.src} type="article" published={date} modified={updated ?? date}>
+<BaseLayout title={title} seoTitle={seoTitle} description={description} image={image?.src} type="article" published={date} modified={updated ?? date}>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <ReadingProgress />

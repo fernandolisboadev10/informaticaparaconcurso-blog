@@ -1,6 +1,7 @@
 ---
 title: "Redes de Computadores para Concursos: a aula completa para você não errar mais nenhuma questão"
-description: "Redes de computadores para concursos: tipos de rede, topologias, componentes, modelos OSI e TCP/IP, internet, intranet, extranet, HTTP, HTTPS e VPN, com questões comentadas."
+seoTitle: "Redes de Computadores para Concursos: Aula Completa"
+description: "Redes de computadores para concursos: tipos de rede, topologias, OSI e TCP/IP, intranet, extranet, HTTP, HTTPS e VPN, com questões comentadas."
 category: "Redes"
 date: 2026-09-09T17:52:10-03:00
 updated: 2026-10-05T11:20:00-03:00
