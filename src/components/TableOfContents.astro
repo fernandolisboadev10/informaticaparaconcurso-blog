@@ -84,6 +84,16 @@ for (const h of Astro.props.headings) {
       subPairs.forEach((p) => p.li.classList.toggle('is-active', p.li === currentSub && p.li.closest('.is-active') !== null));
       const active = pairs[current]?.li;
       toc.style.setProperty('--fill', active ? `${active.offsetTop + 14}px` : '0px');
+      // Em telas baixas o sumário rola por dentro: mantém a seção atual à vista, sem mover a página.
+      if (active && toc.scrollHeight > toc.clientHeight) {
+        const pad = 48;
+        const from = active.offsetTop - pad;
+        const to = active.offsetTop + active.offsetHeight + pad - toc.clientHeight;
+        if (toc.scrollTop > from) toc.scrollTop = Math.max(0, from);
+        else if (toc.scrollTop < to) toc.scrollTop = to;
+      } else if (!active && toc.scrollTop !== 0) {
+        toc.scrollTop = 0;
+      }
     };
     window.addEventListener('scroll', () => {
       if (!ticking) {

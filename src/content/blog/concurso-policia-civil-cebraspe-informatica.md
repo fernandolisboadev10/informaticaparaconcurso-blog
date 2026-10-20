@@ -183,11 +183,9 @@ O conteúdo programático de Informática do concurso Polícia Civil PC-MA combi
 
 Para acompanhar o edital, os avisos e o cronograma, use a [página oficial do concurso PC-MA na Cebraspe](https://www.cebraspe.org.br/concursos/pc_ma_26_investigador). Então, comece hoje pelo tópico 8 e siga a ordem deste guia. Bons estudos!
 
-<aside class="post-cta" aria-label="Simulado de Informática Cebraspe">
-<p class="post-cta-kicker">Teste o que você aprendeu</p>
-<p class="post-cta-title">Simulado de Informática Cebraspe: nível superior</p>
-<p class="post-cta-text">50 questões de múltipla escolha no estilo da Polícia Civil. Ao marcar uma alternativa, você vê na hora se acertou ou errou, com o comentário da questão.</p>
-<a class="post-cta-btn" href="/simulado-cebraspe-informatica/">Resolver o simulado agora</a>
+<aside class="post-cta">
+<p class="post-cta-title">Pratique com o simulado</p>
+<p class="post-cta-text">Resolva 50 questões de múltipla escolha no estilo da Polícia Civil, com comentário em cada uma. <a href="/simulado-cebraspe-informatica/">Ir para o simulado de Informática da Cebraspe</a>.</p>
 </aside>
 
 ## Fontes e Referências
