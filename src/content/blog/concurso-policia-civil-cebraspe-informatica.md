@@ -2,7 +2,7 @@
 title: "Concurso Polícia Civil: destrinchando a Informática da Cebraspe"
 description: "Concurso Polícia Civil Cebraspe: veja o conteúdo programático de Informática tópico por tópico, o que a banca cobra e como estudar cada item."
 category: "Concursos"
-date: 2026-10-20T07:00:00-03:00
+date: 2026-10-19T20:55:00-03:00
 readingTime: "10 min"
 tags: ["Concurso Polícia Civil", "Cebraspe", "Conteúdo Programático", "Edital", "Noções de Informática"]
 image: "./images/Concurso-Policia-Civil-Cebraspe.webp"
