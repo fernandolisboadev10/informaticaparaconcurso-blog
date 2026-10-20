@@ -149,6 +149,7 @@ img {
 }
 
 .prose a {
+  overflow-wrap: anywhere;
   color: var(--link);
   text-decoration: none;
   background-image: linear-gradient(var(--link-line), var(--link-line));

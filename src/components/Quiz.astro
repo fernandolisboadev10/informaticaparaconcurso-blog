@@ -525,6 +525,16 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
     transition: border-color 0.15s, background 0.15s;
   }
 
+  /* Textos sem espaço (endereços IPv6, URLs) quebram em vez de alargar a página no celular. */
+  .q-opt {
+    max-width: 100%;
+  }
+
+  .q-opt > span:not(.q-letter) {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
   .q-opt-ce {
     min-width: 130px;
     justify-content: center;

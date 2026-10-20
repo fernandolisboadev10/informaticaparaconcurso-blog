@@ -194,4 +194,4 @@ Para acompanhar o edital, os avisos e o cronograma, use a [página oficial do co
 - Brasil. Lei nº 13.964/2019 (Pacote Anticrime): planalto.gov.br
 - Brasil. Lei nº 13.709/2018 (LGPD), art. 4º: planalto.gov.br
 - NIST. SP 800-145, The NIST Definition of Cloud Computing: csrc.nist.gov
-- Cebraspe. Edital nº 1 – PCMA – Investigador, de 13 de julho de 2026: [cebraspe.org.br/concursos/pc_ma_26_investigador](https://www.cebraspe.org.br/concursos/pc_ma_26_investigador)
+- Cebraspe. Edital nº 1 – PCMA – Investigador, de 13 de julho de 2026: [página oficial do concurso na Cebraspe](https://www.cebraspe.org.br/concursos/pc_ma_26_investigador)
