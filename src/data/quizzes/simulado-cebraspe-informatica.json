@@ -1,406 +1,756 @@
 {
-  "mode": "final",
-  "title": "Simulado de véspera Cebraspe: 50 questões",
+  "mode": "instant",
+  "title": "Simulado de Informática Cebraspe: nível superior",
   "questions": [
     {
-      "banca": "Estilo Cebraspe",
+      "banca": "Nível superior",
+      "module": "Internet, intranet e e-mail",
+      "type": "mc",
+      "text": "Uma Polícia Civil mantém um portal interno, acessível somente aos servidores mediante login, que usa as mesmas tecnologias da internet (navegador e protocolo HTTP). Quando esse acesso é ampliado a parceiros externos previamente autorizados, como laboratórios conveniados, o ambiente passa a ser chamado de:",
+      "options": [
+        "internet pública.",
+        "extranet.",
+        "rede metropolitana (MAN).",
+        "deep web.",
+        "rede ponto a ponto (P2P)."
+      ],
+      "answer": "B",
+      "comment": "A extranet estende a intranet a públicos externos autorizados. A internet pública é aberta a qualquer usuário, e MAN é uma classificação por alcance geográfico, não por público de acesso."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Internet, intranet e e-mail",
+      "type": "mc",
+      "text": "Um investigador configura o e-mail institucional no celular e no notebook e quer ver as mesmas mensagens, pastas e marcações de leitura nos dois aparelhos. Os protocolos adequados para receber e para enviar as mensagens são, respectivamente:",
+      "options": [
+        "SMTP e IMAP.",
+        "POP3 e IMAP.",
+        "IMAP e SMTP.",
+        "HTTP e FTP.",
+        "DNS e SMTP."
+      ],
+      "answer": "C",
+      "comment": "O IMAP mantém as mensagens no servidor e sincroniza os dispositivos. O SMTP é o protocolo de envio. O POP3, em geral, baixa as mensagens para a máquina e não mantém a sincronização entre aparelhos."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Internet, intranet e e-mail",
+      "type": "mc",
+      "text": "Ao enviar um comunicado, um servidor coloca alguns endereços no campo Cco (cópia oculta). Sobre esse recurso, é correto afirmar que:",
+      "options": [
+        "os destinatários em Cco recebem a mensagem, mas os seus endereços não são exibidos aos demais.",
+        "os destinatários em Cco não recebem a mensagem, que fica apenas na caixa de saída do remetente.",
+        "o campo Cco criptografa a mensagem para os demais destinatários.",
+        "o campo Cco só aceita endereços do mesmo domínio do remetente.",
+        "os destinatários em Cco podem ver todos os demais, mas não podem responder."
+      ],
+      "answer": "A",
+      "comment": "O Cco entrega a mensagem normalmente, só que oculta esses endereços dos outros destinatários. Já o campo Cc é visível a todos."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Internet, intranet e e-mail",
+      "type": "mc",
+      "text": "Um servidor recebe um e-mail que imita a identidade visual do órgão, com um anexo compactado e um link para \"atualização cadastral obrigatória\". A conduta mais adequada é:",
+      "options": [
+        "abrir o anexo em uma janela anônima do navegador, que o isola do computador.",
+        "não abrir o anexo nem clicar no link, confirmar a origem por outro canal oficial e comunicar o setor de TI.",
+        "encaminhar a mensagem a toda a equipe para que todos avaliem.",
+        "responder ao remetente pedindo a confirmação de que a mensagem é verdadeira.",
+        "desativar temporariamente o antivírus para que o anexo seja baixado sem bloqueios."
+      ],
+      "answer": "B",
+      "comment": "Trata-se de phishing. A janela anônima não isola nada, e encaminhar a mensagem espalha o risco. A conduta correta é não interagir, verificar a origem por outro canal e reportar."
+    },
+    {
+      "banca": "Nível superior",
       "module": "Sistemas operacionais",
-      "type": "ce",
-      "text": "No Linux, as permissões de um arquivo são definidas separadamente para o dono, para o grupo e para os demais usuários, e o comando chmod é utilizado para alterá-las.",
-      "answer": "C",
-      "comment": "Essa é a base do modelo de permissões do Linux: leitura (r), escrita (w) e execução (x) para o dono, o grupo e os outros. O chmod altera essas permissões, enquanto o chown altera o dono do arquivo."
+      "type": "mc",
+      "text": "No Windows, um atalho na área de trabalho aponta para um arquivo guardado na pasta de um caso. Se o usuário excluir apenas o atalho:",
+      "options": [
+        "o arquivo original também é excluído, pois o atalho é o seu único acesso.",
+        "o arquivo original é movido para a área de trabalho.",
+        "o arquivo original é copiado para a área de transferência.",
+        "o arquivo original é renomeado com a extensão .lnk.",
+        "o arquivo original permanece no local de origem."
+      ],
+      "answer": "E",
+      "comment": "O atalho é apenas um ponteiro (arquivo .lnk). Excluí-lo não afeta o arquivo ou a pasta de destino."
     },
     {
-      "banca": "Estilo Cebraspe",
+      "banca": "Nível superior",
       "module": "Sistemas operacionais",
-      "type": "ce",
-      "text": "No Windows, o atalho Alt + Tab permite alternar entre as janelas abertas, e o atalho Windows + L bloqueia a estação de trabalho.",
-      "answer": "C",
-      "comment": "Os dois atalhos estão corretos. Alt + Tab alterna entre programas abertos, e Windows + L bloqueia a sessão sem encerrá-la, exigindo a senha para retornar."
+      "type": "mc",
+      "text": "No Linux, na mesma pasta, existem os arquivos Relatorio.txt e relatorio.txt. É correto afirmar que:",
+      "options": [
+        "são arquivos distintos, pois o sistema diferencia maiúsculas de minúsculas nos nomes.",
+        "são o mesmo arquivo, e o segundo sobrescreveu o primeiro.",
+        "o sistema não permite criar o segundo nome na mesma pasta.",
+        "só podem coexistir se estiverem em unidades diferentes, como C: e D:.",
+        "o segundo arquivo é tratado automaticamente como um atalho do primeiro."
+      ],
+      "answer": "A",
+      "comment": "O Linux é case sensitive. Além disso, ele não usa letras de unidade: tudo parte de uma única raiz, representada pela barra (/)."
     },
     {
-      "banca": "Estilo Cebraspe",
+      "banca": "Nível superior",
       "module": "Sistemas operacionais",
-      "type": "ce",
-      "text": "No Linux, o comando pwd exibe o nome do usuário que está conectado ao sistema.",
-      "answer": "E",
-      "comment": "O pwd (print working directory) mostra o diretório atual de trabalho. Quem exibe o nome do usuário é o comando whoami. A banca costuma explorar comandos de nome curto."
+      "type": "mc",
+      "text": "No Windows, um usuário seleciona um arquivo, pressiona Ctrl + X, abre outra pasta da mesma unidade e pressiona Ctrl + V. Como resultado:",
+      "options": [
+        "o arquivo é movido para a nova pasta, usando a área de transferência como intermediária.",
+        "o arquivo é copiado e continua também na pasta de origem.",
+        "o arquivo é excluído definitivamente, sem passar pela Lixeira.",
+        "é criado um atalho para o arquivo na nova pasta.",
+        "o arquivo é compactado e colocado na nova pasta."
+      ],
+      "answer": "A",
+      "comment": "Ctrl + X recorta (guarda na área de transferência) e Ctrl + V cola, o que resulta em mover. Para copiar, o atalho é Ctrl + C."
     },
     {
-      "banca": "Estilo Cebraspe",
+      "banca": "Nível superior",
       "module": "Sistemas operacionais",
-      "type": "ce",
-      "text": "No Windows, o Gerenciador de Dispositivos é a ferramenta utilizada para instalar e desinstalar programas do computador.",
-      "answer": "E",
-      "comment": "O Gerenciador de Dispositivos lista e administra o hardware e os drivers. A instalação e a remoção de programas ficam em Programas e Recursos (ou em Aplicativos, nas versões mais novas)."
+      "type": "mc",
+      "text": "Sobre o Linux, é correto afirmar que:",
+      "options": [
+        "é um sistema proprietário, distribuído apenas por uma única empresa.",
+        "funciona apenas em modo texto, sem ambiente gráfico.",
+        "é derivado do código do Windows NT.",
+        "o termo se refere ao kernel, e as distribuições, como Debian e Ubuntu, reúnem o kernel com programas e ferramentas.",
+        "exige o pagamento de licença por usuário."
+      ],
+      "answer": "D",
+      "comment": "O Linux é software livre (licença GPL) e conta com ambientes gráficos completos. A palavra \"apenas\" em uma alternativa costuma ser sinal de erro."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Sistemas operacionais",
-      "type": "ce",
-      "text": "No Linux, os nomes de arquivos e de diretórios diferenciam letras maiúsculas de minúsculas, de modo que relatorio.txt e Relatorio.txt podem existir no mesmo diretório como arquivos distintos.",
+      "banca": "Nível superior",
+      "module": "Office e LibreOffice",
+      "type": "mc",
+      "text": "Um perito precisa abrir, em um computador que só tem LibreOffice, uma planilha criada no Excel (.xlsx). O programa indicado e o formato nativo dele são:",
+      "options": [
+        "Writer, cujo formato nativo é o .odt.",
+        "Impress, cujo formato nativo é o .odp.",
+        "Calc, que só abre arquivos .ods e não lê o formato do Excel.",
+        "Calc, que abre arquivos .xlsx e tem como formato nativo o .ods.",
+        "Base, cujo formato nativo é o .odb."
+      ],
+      "answer": "D",
+      "comment": "O Calc é o equivalente do Excel e abre os arquivos .xlsx. Writer é o editor de textos e Impress é o de apresentações."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Office e LibreOffice",
+      "type": "mc",
+      "text": "Na célula C1 de uma planilha foi digitada a fórmula =A1*$B$1. Ao copiar C1 e colar em C3, a fórmula resultante será:",
+      "options": [
+        "=A3*$B$3",
+        "=A1*$B$1",
+        "=A1*$B$3",
+        "=A3*B3",
+        "=A3*$B$1"
+      ],
+      "answer": "E",
+      "comment": "A referência relativa (A1) se ajusta à nova linha e vira A3. A referência absoluta ($B$1) não muda, pois o cifrão fixa coluna e linha."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Office e LibreOffice",
+      "type": "mc",
+      "text": "A mala direta de um editor de textos, como o Word ou o Writer, serve para:",
+      "options": [
+        "unir vários arquivos PDF em um só documento.",
+        "proteger o documento com senha de abertura.",
+        "corrigir automaticamente a ortografia do texto.",
+        "gerar documentos personalizados em lote, combinando um modelo com uma fonte de dados, como uma lista de intimados.",
+        "converter o documento em uma apresentação de slides."
+      ],
+      "answer": "D",
+      "comment": "Na mala direta, campos do modelo são preenchidos com os dados de cada registro da fonte, o que gera uma carta ou um ofício para cada nome da lista."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Office e LibreOffice",
+      "type": "mc",
+      "text": "Os formatos nativos do LibreOffice para texto, planilha e apresentação são, respectivamente:",
+      "options": [
+        ".docx, .xlsx e .pptx.",
+        ".odt, .ods e .odp.",
+        ".ods, .odt e .odp.",
+        ".odt, .odp e .ods.",
+        ".txt, .csv e .ppt."
+      ],
+      "answer": "B",
+      "comment": "Cada letra final indica o tipo: t de texto, s de spreadsheet (planilha) e p de presentation (apresentação). Os formatos .docx, .xlsx e .pptx são os do Microsoft Office."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Navegação, busca e redes sociais",
+      "type": "mc",
+      "text": "Na URL https://www.exemplo.gov.br/consulta?processo=123, o trecho \"https\" indica:",
+      "options": [
+        "o domínio de nível superior do endereço.",
+        "o caminho do recurso no servidor.",
+        "o parâmetro enviado na consulta.",
+        "o protocolo de transferência de hipertexto sobre uma conexão criptografada.",
+        "a senha de acesso à página."
+      ],
+      "answer": "D",
+      "comment": "O \"s\" de HTTPS indica o uso de criptografia (TLS) na comunicação. O domínio de topo seria \"br\", e \"processo=123\" é o parâmetro da consulta."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Navegação, busca e redes sociais",
+      "type": "mc",
+      "text": "Um servidor usa a janela anônima do navegador em um computador do órgão. É correto afirmar que:",
+      "options": [
+        "o acesso se torna anônimo e impossível de rastrear.",
+        "o computador fica protegido contra malware durante a sessão.",
+        "o site visitado não consegue identificar o endereço IP do usuário.",
+        "o navegador não guarda histórico nem cookies da sessão ao fechar, mas a rede e o provedor ainda podem registrar o acesso.",
+        "todo o tráfego passa a ser criptografado de ponta a ponta."
+      ],
+      "answer": "D",
+      "comment": "A janela anônima apenas evita guardar dados localmente. Ela não oculta o IP, não criptografa o tráfego e não protege contra malware."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Navegação, busca e redes sociais",
+      "type": "mc",
+      "text": "Para encontrar, em um buscador, páginas do domínio gov.br que contenham exatamente a expressão \"cadeia de custódia\" e que não mencionem o termo \"blog\", a pesquisa adequada é:",
+      "options": [
+        "filetype:gov.br \"cadeia de custódia\" -blog",
+        "\"gov.br\" cadeia de custódia +blog",
+        "site:gov.br cadeia de custódia ~blog",
+        "intitle:gov.br \"cadeia de custódia\" blog",
+        "site:gov.br \"cadeia de custódia\" -blog"
+      ],
+      "answer": "E",
+      "comment": "site: limita o domínio, as aspas buscam a expressão exata e o sinal de menos exclui o termo. O filetype: serve para uma extensão de arquivo, como pdf."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Navegação, busca e redes sociais",
+      "type": "mc",
+      "text": "A coleta de informações em fontes abertas, como redes sociais, mecanismos de busca e sites públicos, para apoiar uma investigação, é conhecida pela sigla:",
+      "options": [
+        "DDoS.",
+        "VPN.",
+        "OSINT.",
+        "DNS.",
+        "SQL."
+      ],
       "answer": "C",
-      "comment": "O Linux é sensível a maiúsculas e minúsculas (case sensitive). No Windows, os dois nomes seriam considerados iguais e não poderiam coexistir na mesma pasta."
+      "comment": "OSINT (Open Source Intelligence) é a inteligência de fontes abertas. As demais siglas se referem a ataque, rede privada, resolução de nomes e linguagem de banco de dados."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Editores de texto",
-      "type": "ce",
-      "text": "No Microsoft Word, o sumário automático é construído com base nos estilos de título aplicados ao texto e pode ser atualizado depois que o documento sofrer alterações.",
+      "banca": "Nível superior",
+      "module": "Redes de computadores",
+      "type": "mc",
+      "text": "As redes classificadas pelo alcance como local, metropolitana e de longa distância são identificadas, respectivamente, pelas siglas:",
+      "options": [
+        "WAN, MAN e LAN.",
+        "LAN, MAN e WAN.",
+        "LAN, WAN e MAN.",
+        "PAN, LAN e WAN.",
+        "MAN, LAN e WAN."
+      ],
+      "answer": "B",
+      "comment": "LAN (Local Area Network), MAN (Metropolitan Area Network) e WAN (Wide Area Network). A internet é o maior exemplo de WAN."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Redes de computadores",
+      "type": "mc",
+      "text": "Sobre o endereçamento IP, é correto afirmar que:",
+      "options": [
+        "o IPv4 usa 128 bits, e o IPv6 usa 32 bits.",
+        "o IPv4 usa 32 bits, em geral escritos em quatro números decimais, e o IPv6 usa 128 bits, escritos em grupos hexadecimais.",
+        "o IPv4 e o IPv6 usam 64 bits, mas com notações diferentes.",
+        "o IPv6 é escrito apenas com números decimais separados por pontos.",
+        "o IPv4 permite mais endereços do que o IPv6."
+      ],
+      "answer": "B",
+      "comment": "O IPv6 foi criado, entre outros motivos, para superar o esgotamento do IPv4, e por isso comporta uma quantidade muito maior de endereços."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Redes de computadores",
+      "type": "mc",
+      "text": "Entre os endereços a seguir, o único que corresponde a um IPv6 válido é:",
+      "options": [
+        "192.168.10.300",
+        "2001:db8::85a3::7334",
+        "10.10.10",
+        "2001:0db8:zz00::1",
+        "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+      ],
+      "answer": "E",
+      "comment": "O endereço 192.168.10.300 é um IPv4 inválido (cada número vai até 255). Em um IPv6, o \"::\" só pode aparecer uma vez, e só são aceitos os dígitos de 0 a 9 e as letras de A a F."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Redes de computadores",
+      "type": "mc",
+      "text": "Sobre as redes sem fio Wi-Fi (padrão IEEE 802.11), é correto afirmar que:",
+      "options": [
+        "usam ondas de rádio, e protocolos como o WPA2 e o WPA3 protegem a comunicação com criptografia.",
+        "o WEP é o protocolo de segurança mais moderno e recomendado.",
+        "não podem ser interceptadas, porque o sinal não passa por cabos.",
+        "ocultar o nome da rede (SSID) a torna inviolável.",
+        "funcionam exclusivamente por infravermelho, em linha reta."
+      ],
+      "answer": "A",
+      "comment": "O WEP é antigo e considerado inseguro. Ocultar o SSID não oferece proteção real, e o sinal de rádio pode ser captado por qualquer um dentro do alcance."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Redes de computadores",
+      "type": "mc",
+      "text": "Quando o usuário digita www.exemplo.gov.br no navegador, o serviço responsável por converter esse nome em um endereço IP é o:",
+      "options": [
+        "DHCP.",
+        "SMTP.",
+        "DNS.",
+        "NAT.",
+        "SSH."
+      ],
       "answer": "C",
-      "comment": "O sumário automático depende dos estilos Título 1, Título 2 e assim por diante. Após editar o texto, basta atualizar o campo para que títulos e números de página sejam refeitos."
+      "comment": "O DNS traduz nomes em endereços IP. O DHCP distribui endereços automaticamente aos dispositivos, e o SMTP envia e-mails."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Editores de texto",
-      "type": "ce",
-      "text": "No Microsoft Word, o recurso Mala Direta permite gerar cartas ou etiquetas personalizadas a partir de uma lista de destinatários, sem a necessidade de digitar cada documento individualmente.",
+      "banca": "Nível superior",
+      "module": "Computação em nuvem",
+      "type": "mc",
+      "text": "Um órgão usa editores de texto e planilha pelo navegador, mediante assinatura, sem instalar programas nem administrar servidores. Esse modelo de serviço de nuvem é o:",
+      "options": [
+        "IaaS.",
+        "PaaS.",
+        "on-premises.",
+        "housing.",
+        "SaaS."
+      ],
+      "answer": "E",
+      "comment": "No SaaS (software como serviço), o provedor entrega a aplicação pronta. No PaaS, entrega uma plataforma para desenvolver, e no IaaS, a infraestrutura virtualizada."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Computação em nuvem",
+      "type": "mc",
+      "text": "Sobre o armazenamento em nuvem, como Google Drive, OneDrive e Dropbox, é correto afirmar que:",
+      "options": [
+        "elimina a necessidade de qualquer backup.",
+        "não permite o compartilhamento de arquivos com outras pessoas.",
+        "só permite o acesso a partir do computador que enviou o arquivo.",
+        "facilita o acesso de qualquer dispositivo, mas não substitui o backup, pois uma exclusão ou um ransomware podem ser replicados na pasta sincronizada.",
+        "mantém os dados sempre criptografados e imunes a qualquer ataque."
+      ],
+      "answer": "D",
+      "comment": "Sincronização não é backup. Se um arquivo é apagado ou cifrado por ransomware, a alteração pode ser propagada para a nuvem."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Computação em nuvem",
+      "type": "mc",
+      "text": "A edição colaborativa em nuvem, usada por equipes em documentos compartilhados, caracteriza-se por:",
+      "options": [
+        "vários usuários editarem o mesmo arquivo online, com alterações sincronizadas e histórico de versões.",
+        "cada usuário baixar uma cópia e editá-la sem qualquer sincronização.",
+        "o arquivo ficar disponível somente para leitura.",
+        "a necessidade de instalar um servidor próprio em cada computador.",
+        "o funcionamento apenas sem conexão com a internet."
+      ],
+      "answer": "A",
+      "comment": "Os serviços de colaboração permitem que várias pessoas trabalhem ao mesmo tempo, com controle de versões e permissões de acesso."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Computação em nuvem",
+      "type": "mc",
+      "text": "A nuvem utilizada exclusivamente por uma única organização, com infraestrutura própria ou dedicada, é classificada como:",
+      "options": [
+        "pública.",
+        "privada.",
+        "híbrida.",
+        "comunitária.",
+        "compartilhada."
+      ],
+      "answer": "B",
+      "comment": "Na nuvem privada, o uso é exclusivo de uma organização. A pública atende a muitos clientes, a híbrida combina modelos, e a comunitária é compartilhada por organizações com interesses comuns."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "CID, malware e proteção",
+      "type": "mc",
+      "text": "Após a coleta, o conteúdo de um arquivo de laudo digital foi alterado por alguém sem autorização. O princípio da segurança da informação diretamente violado foi o da:",
+      "options": [
+        "confidencialidade.",
+        "disponibilidade.",
+        "integridade.",
+        "privacidade.",
+        "legalidade."
+      ],
       "answer": "C",
-      "comment": "A mala direta combina um documento principal com uma fonte de dados, como uma planilha do Excel, e produz uma versão personalizada para cada registro."
+      "comment": "A integridade garante que a informação não foi modificada indevidamente. A confidencialidade se refere ao acesso por quem não é autorizado, e a disponibilidade ao acesso quando necessário."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Editores de texto",
-      "type": "ce",
-      "text": "No Microsoft Word em português, o atalho Ctrl + Z refaz a última ação que havia sido desfeita, enquanto o atalho Ctrl + Y desfaz a última ação realizada.",
-      "answer": "E",
-      "comment": "As funções estão trocadas. Ctrl + Z desfaz a última ação, e Ctrl + Y refaz (repete) a ação desfeita. A inversão de funções é uma pegadinha recorrente em atalhos."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Editores de texto",
-      "type": "ce",
-      "text": "No Microsoft Word, é possível configurar cabeçalhos e rodapés diferentes para seções distintas do mesmo documento, desde que o vínculo com a seção anterior seja desfeito.",
+      "banca": "Nível superior",
+      "module": "CID, malware e proteção",
+      "type": "mc",
+      "text": "Um ataque de negação de serviço distribuído (DDoS) derruba o sistema de registro de ocorrências de uma Polícia Civil. O principal princípio afetado é o da:",
+      "options": [
+        "confidencialidade.",
+        "integridade.",
+        "disponibilidade.",
+        "autenticidade.",
+        "irretratabilidade."
+      ],
       "answer": "C",
-      "comment": "Ao inserir uma quebra de seção e desativar a opção Vincular ao Anterior, cada seção passa a ter cabeçalho e rodapé próprios."
+      "comment": "O DDoS sobrecarrega o serviço com requisições até que ele fique inacessível aos usuários legítimos, o que compromete a disponibilidade."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Editores de texto",
-      "type": "ce",
-      "text": "No Microsoft Word em português, o atalho Ctrl + U aplica sublinhado ao texto selecionado.",
+      "banca": "Nível superior",
+      "module": "CID, malware e proteção",
+      "type": "mc",
+      "text": "O programa malicioso que se replica sozinho pela rede, sem precisar de um arquivo hospedeiro nem da ação do usuário, é o:",
+      "options": [
+        "vírus.",
+        "cavalo de Troia (trojan).",
+        "spyware.",
+        "ransomware.",
+        "worm."
+      ],
       "answer": "E",
-      "comment": "No Word em português, o sublinhado é aplicado com Ctrl + S. O Ctrl + U abre a ferramenta Substituir. Por isso, o item deve ser julgado com a versão em português do programa em mente."
+      "comment": "O worm explora falhas e se espalha automaticamente. O vírus precisa de um hospedeiro, e o trojan se disfarça de programa legítimo."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Planilhas eletrônicas",
-      "type": "ce",
-      "text": "No Microsoft Excel, a fórmula =CONT.SE(A1:A10;\">5\") retorna a quantidade de células do intervalo cujo valor é maior que 5.",
+      "banca": "Nível superior",
+      "module": "CID, malware e proteção",
+      "type": "mc",
+      "text": "Depois de abrir um anexo, os arquivos de uma delegacia foram criptografados, e os criminosos exigem pagamento em criptomoeda para fornecer a chave. Esse ataque é típico de:",
+      "options": [
+        "spyware.",
+        "keylogger.",
+        "ransomware.",
+        "adware.",
+        "bot de busca."
+      ],
       "answer": "C",
-      "comment": "A função CONT.SE conta as células de um intervalo que atendem a um critério. Aqui, o critério é ser maior que 5. Não confunda com SOMA.SE, que soma os valores."
+      "comment": "O ransomware sequestra os dados, em geral por criptografia, e cobra um resgate. A melhor defesa inclui backups atualizados e guardados fora da rede."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Planilhas eletrônicas",
-      "type": "ce",
-      "text": "Na função PROCV do Microsoft Excel, o valor procurado é localizado, obrigatoriamente, na última coluna do intervalo informado.",
+      "banca": "Nível superior",
+      "module": "CID, malware e proteção",
+      "type": "mc",
+      "text": "Sobre as ferramentas de proteção, é correto afirmar que:",
+      "options": [
+        "o firewall localiza e elimina os vírus já instalados no computador.",
+        "o firewall filtra o tráfego de rede conforme regras, mas não remove o malware já instalado, tarefa que cabe ao antivírus.",
+        "o antivírus bloqueia conexões não autorizadas como função principal.",
+        "o anti-spyware criptografa as mensagens de e-mail.",
+        "o antivírus dispensa a atualização de assinaturas."
+      ],
+      "answer": "B",
+      "comment": "Cada ferramenta tem uma função. Trocar a função do firewall pela do antivírus é um erro clássico."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "CID, malware e proteção",
+      "type": "mc",
+      "text": "O programa que registra as teclas digitadas pelo usuário para capturar senhas é um tipo de spyware chamado:",
+      "options": [
+        "worm.",
+        "ransomware.",
+        "backdoor.",
+        "adware.",
+        "keylogger."
+      ],
       "answer": "E",
-      "comment": "O PROCV (procura vertical) busca o valor na primeira coluna do intervalo e devolve um resultado de outra coluna da mesma linha, indicada pelo número do índice."
+      "comment": "O keylogger monitora o teclado. O backdoor, por sua vez, abre uma porta de acesso remoto para o invasor."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Planilhas eletrônicas",
-      "type": "ce",
-      "text": "No Microsoft Excel, considerando que as células A1, A2 e A3 contêm, respectivamente, os valores 10, 20 e 60, a fórmula =MÉDIA(A1:A3) retorna o valor 45.",
-      "answer": "E",
-      "comment": "A soma é 90 e, dividida pelas 3 células, resulta em 30. O valor 45 é a média de apenas dois valores (por exemplo, 30 e 60), um resultado plausível que induz ao erro quem não faz a conta."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Planilhas eletrônicas",
-      "type": "ce",
-      "text": "Em uma planilha eletrônica, o conteúdo de uma célula que começa com o sinal de igual (=) é interpretado como uma fórmula, e não como um texto comum.",
-      "answer": "C",
-      "comment": "É assim que o Excel e o Calc diferenciam fórmulas de texto digitado. Sem o sinal de igual, o conteúdo é tratado como texto ou número comum."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Planilhas eletrônicas",
-      "type": "ce",
-      "text": "No Microsoft Excel, a referência $A1 mantém fixa a linha 1 e permite que a coluna varie quando a fórmula é copiada para células de colunas diferentes.",
-      "answer": "E",
-      "comment": "O cifrão fixa o que vem logo depois dele. Em $A1, ele fixa a coluna A, e a linha pode variar. Para fixar a linha 1, a referência seria A$1."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Protocolos e redes",
-      "type": "ce",
-      "text": "O protocolo DNS é responsável por converter nomes de domínio, como www.exemplo.com.br, em endereços IP.",
-      "answer": "C",
-      "comment": "O DNS funciona como a agenda da internet: traduz o nome que o usuário digita no endereço numérico usado pelas máquinas para se localizarem."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Protocolos e redes",
-      "type": "ce",
-      "text": "O protocolo DHCP é o responsável por converter nomes de domínio em endereços IP.",
-      "answer": "E",
-      "comment": "Essa é a função do DNS. O DHCP atribui automaticamente endereços IP e outros parâmetros de rede aos dispositivos que se conectam."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Protocolos e redes",
-      "type": "ce",
-      "text": "Um endereço IPv4 é formado por 32 bits, ao passo que um endereço IPv6 é formado por 128 bits.",
-      "answer": "C",
-      "comment": "A ampliação de 32 para 128 bits permite um número muito maior de endereços, e esse foi o principal motivo da criação do IPv6."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Protocolos e redes",
-      "type": "ce",
-      "text": "O protocolo UDP, por ser orientado a conexão, garante a entrega ordenada de todos os pacotes enviados.",
-      "answer": "E",
-      "comment": "O orientado a conexão e com entrega confirmada é o TCP. O UDP é mais simples e mais rápido, mas não oferece essas garantias, e por isso é usado em transmissões ao vivo e jogos."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Protocolos e redes",
-      "type": "ce",
-      "text": "Uma VPN permite que um usuário estabeleça, por meio de uma rede pública como a internet, uma conexão segura e criptografada com uma rede privada.",
-      "answer": "C",
-      "comment": "A VPN (rede privada virtual) cria um \"túnel\" criptografado e é muito usada no acesso remoto de funcionários à rede da organização."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Navegação e correio eletrônico",
-      "type": "ce",
-      "text": "No envio de uma mensagem de correio eletrônico, os endereços inseridos no campo Cco (cópia oculta) não são exibidos aos demais destinatários.",
-      "answer": "C",
-      "comment": "O campo Cco (ou Bcc) oculta os destinatários listados nele, tanto dos que estão em Para e Cc quanto dos demais em Cco."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Navegação e correio eletrônico",
-      "type": "ce",
-      "text": "No protocolo IMAP, as mensagens são obrigatoriamente baixadas e apagadas do servidor, o que impede o acesso ao correio a partir de outros dispositivos.",
-      "answer": "E",
-      "comment": "O IMAP mantém as mensagens no servidor e sincroniza o estado entre dispositivos. O comportamento descrito se aproxima do POP3 em sua configuração padrão."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Navegação e correio eletrônico",
-      "type": "ce",
-      "text": "O cache de um navegador armazena, no computador do usuário, cópias de elementos de páginas já visitadas, a fim de agilizar o carregamento em acessos posteriores.",
-      "answer": "C",
-      "comment": "Imagens, estilos e scripts ficam guardados localmente. Por isso, limpar o cache é uma das soluções clássicas quando uma página aparece desatualizada."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Navegação e correio eletrônico",
-      "type": "ce",
-      "text": "No Google Chrome, o atalho Ctrl + T abre uma nova janela do navegador, e o atalho Ctrl + N abre uma nova guia.",
-      "answer": "E",
-      "comment": "As funções estão trocadas: Ctrl + T abre uma nova guia, e Ctrl + N abre uma nova janela."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Navegação e correio eletrônico",
-      "type": "ce",
-      "text": "O termo spam designa mensagens de e-mail com vírus anexados, de modo que toda mensagem de spam é, necessariamente, um código malicioso.",
-      "answer": "E",
-      "comment": "Spam é a mensagem não solicitada, em geral enviada em massa. Ela pode conter links ou anexos maliciosos, mas isso não é uma característica obrigatória."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Nuvem e colaboração",
-      "type": "ce",
-      "text": "No modelo de computação em nuvem IaaS, o provedor oferece infraestrutura virtualizada, como servidores e armazenamento, cabendo ao cliente instalar e administrar o sistema operacional e as aplicações.",
-      "answer": "C",
-      "comment": "No IaaS, o cliente controla da camada do sistema operacional para cima. É o modelo com maior liberdade e maior responsabilidade para o contratante."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Nuvem e colaboração",
-      "type": "ce",
-      "text": "Na nuvem pública, os recursos computacionais são de uso exclusivo de uma única organização e ficam hospedados exclusivamente no próprio datacenter dela.",
-      "answer": "E",
-      "comment": "A descrição se aproxima da nuvem privada. Na nuvem pública, a infraestrutura pertence ao provedor e é compartilhada entre vários clientes, de forma isolada."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Nuvem e colaboração",
-      "type": "ce",
-      "text": "A nuvem híbrida combina ambientes de nuvem privada e de nuvem pública, permitindo que dados e aplicações se movam entre eles.",
-      "answer": "C",
-      "comment": "É o modelo que une os dois mundos, muito adotado por quem precisa manter certos dados sob controle próprio e usar a escala da nuvem pública para outras demandas."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Nuvem e colaboração",
-      "type": "ce",
-      "text": "No modelo PaaS, o cliente recebe aplicativos prontos para o usuário final, como correio eletrônico e editores de texto, sem acesso a qualquer ambiente de desenvolvimento.",
-      "answer": "E",
-      "comment": "Aplicativos prontos caracterizam o SaaS. O PaaS oferece uma plataforma para desenvolver, testar e executar aplicações, sem que o cliente administre a infraestrutura subjacente."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Nuvem e colaboração",
-      "type": "ce",
-      "text": "Ferramentas de videoconferência, como Microsoft Teams e Google Meet, não permitem o compartilhamento da tela durante a reunião, limitando-se à transmissão de áudio e vídeo.",
-      "answer": "E",
-      "comment": "O compartilhamento de tela é um recurso básico dessas ferramentas, junto com chat, gravação e criação de salas de grupo."
-    },
-    {
-      "banca": "Estilo Cebraspe",
+      "banca": "Nível superior",
       "module": "Criptografia e certificação",
-      "type": "ce",
-      "text": "Na criptografia simétrica, a mesma chave é utilizada tanto para cifrar quanto para decifrar a informação.",
-      "answer": "C",
-      "comment": "Essa é a característica da criptografia simétrica, que é rápida, mas exige que a chave seja compartilhada de forma segura entre as partes."
+      "type": "mc",
+      "text": "Na criptografia assimétrica, para que somente o destinatário consiga ler a mensagem, o remetente deve cifrá-la com:",
+      "options": [
+        "a chave pública do destinatário.",
+        "a chave privada do remetente.",
+        "a chave privada do destinatário.",
+        "a chave pública do remetente.",
+        "uma chave simétrica divulgada em público."
+      ],
+      "answer": "A",
+      "comment": "Só a chave privada do destinatário, que ele guarda em sigilo, decifra o que foi cifrado com a sua chave pública."
     },
     {
-      "banca": "Estilo Cebraspe",
+      "banca": "Nível superior",
       "module": "Criptografia e certificação",
-      "type": "ce",
-      "text": "Na criptografia assimétrica, utiliza-se uma única chave, compartilhada entre remetente e destinatário, tanto para cifrar quanto para decifrar a mensagem.",
-      "answer": "E",
-      "comment": "A assimétrica usa um par de chaves: a pública e a privada. O que a descrição apresenta é a criptografia simétrica."
+      "type": "mc",
+      "text": "Quando um documento é assinado digitalmente com a chave privada do signatário, a assinatura garante:",
+      "options": [
+        "apenas a confidencialidade do conteúdo.",
+        "a disponibilidade do documento.",
+        "o anonimato do signatário.",
+        "a autenticidade, a integridade e o não repúdio.",
+        "a compactação do arquivo."
+      ],
+      "answer": "D",
+      "comment": "A assinatura digital prova quem assinou e que o conteúdo não foi alterado. Ela não torna o documento sigiloso, o que exigiria cifrá-lo."
     },
     {
-      "banca": "Estilo Cebraspe",
+      "banca": "Nível superior",
       "module": "Criptografia e certificação",
-      "type": "ce",
-      "text": "A assinatura digital é produzida com a chave privada do signatário e pode ser verificada com a chave pública correspondente.",
-      "answer": "C",
-      "comment": "Por isso a assinatura digital comprova a autoria e a integridade: só quem possui a chave privada consegue gerá-la, e qualquer pessoa pode conferi-la com a chave pública."
+      "type": "mc",
+      "text": "O certificado digital emitido por uma autoridade certificadora da ICP-Brasil tem a função de:",
+      "options": [
+        "vincular um endereço IP a um endereço MAC.",
+        "garantir que um site está livre de qualquer malware.",
+        "criptografar todo o disco rígido do usuário.",
+        "vincular uma identidade, de pessoa ou de entidade, a uma chave pública.",
+        "substituir o antivírus do computador."
+      ],
+      "answer": "D",
+      "comment": "O certificado atesta que determinada chave pública pertence a determinada identidade, o que dá confiança à assinatura digital e às conexões seguras."
     },
     {
-      "banca": "Estilo Cebraspe",
+      "banca": "Nível superior",
       "module": "Criptografia e certificação",
-      "type": "ce",
-      "text": "Para enviar uma mensagem confidencial a um destinatário por meio de criptografia assimétrica, o remetente deve cifrá-la com a chave privada do próprio destinatário.",
+      "type": "mc",
+      "text": "Sobre as funções hash criptográficas, como a SHA-256, é correto afirmar que:",
+      "options": [
+        "geram um resumo de tamanho fixo, e qualquer alteração mínima no arquivo produz um hash completamente diferente.",
+        "permitem reconstituir o arquivo original a partir do hash.",
+        "produzem um resumo cujo tamanho cresce com o tamanho do arquivo.",
+        "usam um par de chaves, pública e privada, para decifrar o resumo.",
+        "garantem a confidencialidade do conteúdo."
+      ],
+      "answer": "A",
+      "comment": "O hash é uma via de mão única: serve para verificar integridade, e não para guardar ou esconder o conteúdo."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Evidência digital e cadeia de custódia",
+      "type": "mc",
+      "text": "Segundo o Código de Processo Penal (arts. 158-A a 158-F), a cadeia de custódia é:",
+      "options": [
+        "o documento que autoriza a quebra de sigilo de dados do investigado.",
+        "a cópia de segurança dos arquivos apreendidos em mídia externa.",
+        "o conjunto de procedimentos que mantém e documenta a história cronológica do vestígio, do reconhecimento ao descarte.",
+        "o laudo final em que o perito conclui a análise do material.",
+        "o registro dos antecedentes criminais do investigado."
+      ],
+      "answer": "C",
+      "comment": "A cadeia de custódia, incluída pela Lei 13.964/2019, rastreia a posse e o manuseio do vestígio. Ela busca garantir que a prova chegue ao processo sem ser adulterada."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Evidência digital e cadeia de custódia",
+      "type": "mc",
+      "text": "A sequência correta das etapas da cadeia de custódia previstas no Código de Processo Penal é:",
+      "options": [
+        "reconhecimento, isolamento, fixação, coleta, acondicionamento, transporte, recebimento, processamento, armazenamento e descarte.",
+        "isolamento, reconhecimento, fixação, coleta, acondicionamento, transporte, recebimento, processamento, armazenamento e descarte.",
+        "reconhecimento, isolamento, coleta, fixação, acondicionamento, transporte, recebimento, processamento, armazenamento e descarte.",
+        "reconhecimento, isolamento, fixação, coleta, transporte, acondicionamento, recebimento, processamento, armazenamento e descarte.",
+        "reconhecimento, isolamento, fixação, coleta, acondicionamento, transporte, recebimento, armazenamento, processamento e descarte."
+      ],
+      "answer": "A",
+      "comment": "São dez etapas. Primeiro o vestígio é reconhecido e isolado, depois fixado (registrado em seu local) e só então coletado. O processamento (análise) vem antes do armazenamento."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Evidência digital e cadeia de custódia",
+      "type": "mc",
+      "text": "Ao apreender um computador que está ligado, a evidência mais volátil, que deve ser priorizada na coleta, é:",
+      "options": [
+        "os arquivos gravados no disco rígido.",
+        "os dados de uma mídia óptica guardada em gaveta.",
+        "o conteúdo da memória RAM.",
+        "os arquivos de um pendrive desconectado.",
+        "os backups em fita armazenados em outro prédio."
+      ],
+      "answer": "C",
+      "comment": "A ordem de volatilidade manda coletar primeiro o que se perde mais rápido. O conteúdo da RAM desaparece quando o equipamento é desligado."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Evidência digital e cadeia de custódia",
+      "type": "mc",
+      "text": "Um perito faz a cópia forense de um disco e calcula o hash do disco original e o da cópia. Se os dois valores forem idênticos, isso indica que:",
+      "options": [
+        "o disco contém algum tipo de malware.",
+        "os dados do disco estão criptografados.",
+        "os arquivos apagados foram recuperados.",
+        "a prova foi obtida de forma lícita.",
+        "a cópia é íntegra e fiel ao conteúdo original."
+      ],
       "answer": "E",
-      "comment": "Para garantir confidencialidade, o remetente cifra a mensagem com a chave pública do destinatário, e apenas a chave privada dele consegue decifrá-la."
+      "comment": "Hashes iguais mostram que a cópia reproduz exatamente os dados da origem. O hash não informa se há malware, criptografia ou se a prova é lícita."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Criptografia e certificação",
-      "type": "ce",
-      "text": "O certificado digital associa a identidade de uma pessoa ou de uma entidade a uma chave pública e é emitido por uma autoridade certificadora.",
-      "answer": "C",
-      "comment": "A autoridade certificadora atesta que a chave pública pertence ao titular. No Brasil, essa estrutura é a ICP-Brasil."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Ameaças e ataques",
-      "type": "ce",
-      "text": "O phishing é uma técnica que busca obter dados sensíveis do usuário por meio de mensagens ou páginas falsas que se passam por instituições confiáveis.",
-      "answer": "C",
-      "comment": "Mensagens que imitam bancos, órgãos públicos ou lojas e levam a páginas falsas são o exemplo clássico de phishing."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Ameaças e ataques",
-      "type": "ce",
-      "text": "A engenharia social explora, exclusivamente, falhas técnicas de software, dispensando qualquer interação com as pessoas.",
+      "banca": "Nível superior",
+      "module": "Evidência digital e cadeia de custódia",
+      "type": "mc",
+      "text": "Para preservar a integridade de um disco apreendido, a análise pericial deve ser feita preferencialmente:",
+      "options": [
+        "diretamente no original, ligado normalmente ao sistema operacional.",
+        "após formatar o disco para eliminar arquivos temporários.",
+        "em um computador conectado a uma rede pública.",
+        "depois de apagar os arquivos que o perito considerar irrelevantes.",
+        "sobre uma imagem (cópia forense), com o original protegido por um bloqueador de escrita."
+      ],
       "answer": "E",
-      "comment": "A engenharia social explora o fator humano: persuasão, confiança e desatenção. Não se trata de falha técnica, e sim de manipulação das pessoas."
+      "comment": "O original deve ser mexido o mínimo possível. O bloqueador de escrita impede qualquer gravação no disco, e a análise é feita na cópia."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Ameaças e ataques",
-      "type": "ce",
-      "text": "Um ataque de negação de serviço (DoS) tem como objetivo tornar um serviço ou um sistema indisponível para seus usuários legítimos, em geral por meio de sobrecarga.",
-      "answer": "C",
-      "comment": "No DDoS, o ataque parte de muitas máquinas ao mesmo tempo, o que dificulta a defesa. O objetivo é a indisponibilidade, e não o roubo de dados."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Ameaças e ataques",
-      "type": "ce",
-      "text": "O cavalo de troia (trojan) é um código malicioso que se replica automaticamente pelas redes, sem necessidade de ser executado pelo usuário.",
+      "banca": "Nível superior",
+      "module": "LGPD",
+      "type": "mc",
+      "text": "De acordo com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018), é considerado dado pessoal sensível:",
+      "options": [
+        "o nome completo de uma pessoa.",
+        "o endereço de e-mail de uma pessoa.",
+        "a data de nascimento de uma pessoa.",
+        "o número de um processo judicial.",
+        "o dado biométrico vinculado a uma pessoa natural."
+      ],
       "answer": "E",
-      "comment": "A replicação automática é a característica do worm. O trojan se passa por programa legítimo e depende de o usuário executá-lo."
+      "comment": "São sensíveis dados como origem racial ou étnica, convicção religiosa, opinião política, saúde, vida sexual, dado genético e biométrico. Nome e e-mail são dados pessoais comuns."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Ameaças e ataques",
-      "type": "ce",
-      "text": "Um backdoor é um mecanismo que permite o retorno de um invasor a um equipamento comprometido, sem que ele precise explorar novamente a falha original.",
+      "banca": "Nível superior",
+      "module": "LGPD",
+      "type": "mc",
+      "text": "Na LGPD, a pessoa natural ou jurídica a quem competem as decisões referentes ao tratamento dos dados pessoais é o:",
+      "options": [
+        "controlador.",
+        "operador.",
+        "titular.",
+        "encarregado.",
+        "auditor."
+      ],
+      "answer": "A",
+      "comment": "O controlador decide. O operador trata os dados em nome do controlador, e o titular é a pessoa a quem os dados se referem."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "LGPD",
+      "type": "mc",
+      "text": "Na LGPD, o canal de comunicação entre o controlador, os titulares dos dados e a Autoridade Nacional de Proteção de Dados (ANPD) é exercido pelo:",
+      "options": [
+        "operador.",
+        "controlador.",
+        "titular.",
+        "encarregado.",
+        "perito."
+      ],
+      "answer": "D",
+      "comment": "O encarregado, também chamado de DPO, atende às reclamações dos titulares e faz a ponte com a ANPD."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "LGPD",
+      "type": "mc",
+      "text": "Segundo a LGPD, o tratamento de dados pessoais realizado exclusivamente para fins de segurança pública e de investigação e repressão de infrações penais:",
+      "options": [
+        "submete-se integralmente à LGPD, sem nenhuma exceção.",
+        "exige sempre o consentimento do titular investigado.",
+        "não se submete à LGPD, por ser regido por legislação específica.",
+        "depende de autorização prévia da ANPD para cada caso.",
+        "é proibido, em qualquer hipótese."
+      ],
       "answer": "C",
-      "comment": "O backdoor deixa uma \"porta dos fundos\" aberta e garante ao invasor o acesso futuro à máquina."
+      "comment": "O art. 4º da LGPD exclui essas atividades do seu alcance e prevê lei específica para elas. Isso não significa ausência de regras, e sim outro regime."
     },
     {
-      "banca": "Estilo Cebraspe",
-      "module": "Backup e hardware",
-      "type": "ce",
-      "text": "No backup diferencial, são copiados os arquivos criados ou alterados desde o último backup completo.",
+      "banca": "Nível superior",
+      "module": "Inteligência artificial",
+      "type": "mc",
+      "text": "O aprendizado de máquina (machine learning) pode ser definido como:",
+      "options": [
+        "a programação em que especialistas escrevem manualmente todas as regras de decisão.",
+        "um ramo da inteligência artificial em que sistemas aprendem padrões a partir de dados, sem regras explícitas para cada caso.",
+        "uma técnica de criptografia de dados em repouso.",
+        "um modelo de banco de dados relacional.",
+        "um serviço de armazenamento de arquivos em nuvem."
+      ],
+      "answer": "B",
+      "comment": "No aprendizado de máquina, o algoritmo é treinado com dados e generaliza o que aprendeu para casos novos."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Inteligência artificial",
+      "type": "mc",
+      "text": "Um sistema é treinado com milhares de imagens previamente rotuladas como \"com arma\" e \"sem arma\". Esse é um exemplo de aprendizado:",
+      "options": [
+        "não supervisionado.",
+        "supervisionado.",
+        "por reforço.",
+        "criptográfico.",
+        "relacional."
+      ],
+      "answer": "B",
+      "comment": "No aprendizado supervisionado, os dados de treino têm rótulos. No não supervisionado, o sistema busca padrões sem rótulos, e no aprendizado por reforço ele aprende por tentativa, erro e recompensa."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Inteligência artificial",
+      "type": "mc",
+      "text": "Em sistemas de reconhecimento facial usados pela segurança pública, um risco amplamente apontado é:",
+      "options": [
+        "o viés algorítmico, com taxas de erro maiores para certos grupos quando os dados de treinamento não são representativos.",
+        "a eliminação de qualquer necessidade de conferência humana.",
+        "a garantia de precisão de 100% em qualquer condição de imagem.",
+        "a independência total em relação a dados de treinamento.",
+        "a dispensa do cumprimento das regras de proteção de dados."
+      ],
+      "answer": "A",
+      "comment": "Por isso, o resultado do sistema deve ser conferido por pessoas, e o uso exige cuidados com a proteção de dados e os direitos dos cidadãos."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Criptomoedas",
+      "type": "mc",
+      "text": "O Bitcoin se caracteriza por ser:",
+      "options": [
+        "uma moeda emitida e controlada pelo Banco Central do país.",
+        "uma moeda digital descentralizada, registrada em um blockchain público e distribuído, sem controle de um banco central.",
+        "uma moeda registrada em um banco de dados privado, mantido por uma única empresa.",
+        "um título de crédito emitido por corretoras de valores.",
+        "uma moeda que só existe em formato impresso."
+      ],
+      "answer": "B",
+      "comment": "As transações são validadas pela rede, e o registro (blockchain) é copiado por muitos participantes. Não há uma autoridade central que emita ou controle o Bitcoin."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Criptomoedas",
+      "type": "mc",
+      "text": "As transações em um blockchain público, como o do Bitcoin, são:",
+      "options": [
+        "totalmente anônimas e impossíveis de rastrear.",
+        "sigilosas, visíveis apenas para as partes envolvidas.",
+        "registradas somente pela corretora (exchange) usada.",
+        "públicas e rastreáveis, mas associadas a endereços pseudônimos, e não necessariamente à identidade de uma pessoa.",
+        "reversíveis por qualquer usuário que perceba um erro."
+      ],
+      "answer": "D",
+      "comment": "Por isso, é possível seguir o caminho do dinheiro em uma investigação. Quando um endereço é ligado a uma pessoa, por exemplo em uma exchange, a identidade pode ser descoberta."
+    },
+    {
+      "banca": "Nível superior",
+      "module": "Criptomoedas",
+      "type": "mc",
+      "text": "Em relação à chave privada de uma carteira (wallet) de criptomoedas, é correto afirmar que:",
+      "options": [
+        "ela serve apenas para consultar o saldo da carteira.",
+        "ela pode ser sempre recuperada pelo e-mail cadastrado no blockchain.",
+        "quem a possui controla os fundos da carteira, e a perda dela pode significar a perda do acesso aos ativos.",
+        "ela depende da aprovação do emissor para cada transação.",
+        "ela permite pedir o estorno de uma transferência ao Banco Central."
+      ],
       "answer": "C",
-      "comment": "O diferencial acumula todas as mudanças desde o último completo. Na restauração, bastam o último backup completo e o último diferencial."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Backup e hardware",
-      "type": "ce",
-      "text": "No backup incremental, são copiados todos os arquivos alterados desde o último backup completo, e a restauração exige apenas o backup completo e o último incremental.",
-      "answer": "E",
-      "comment": "O incremental copia apenas o que mudou desde o último backup de qualquer tipo, e a restauração exige o completo e todos os incrementais seguintes."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Backup e hardware",
-      "type": "ce",
-      "text": "A memória RAM é volátil: o seu conteúdo é perdido quando o computador é desligado.",
-      "answer": "C",
-      "comment": "A RAM guarda os dados e programas em uso. Já os dados armazenados em disco permanecem após o desligamento."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Backup e hardware",
-      "type": "ce",
-      "text": "Os discos SSD armazenam os dados em discos magnéticos giratórios, lidos por cabeças de leitura e gravação.",
-      "answer": "E",
-      "comment": "Essa é a descrição do HD. O SSD usa memória flash, não tem partes móveis e é mais rápido e silencioso."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Backup e hardware",
-      "type": "ce",
-      "text": "A memória cache é mais lenta que a memória RAM, porém tem capacidade de armazenamento muito maior que ela.",
-      "answer": "E",
-      "comment": "A cache é mais rápida e de menor capacidade que a RAM, e fica entre o processador e a memória principal para acelerar o acesso aos dados mais usados."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Tecnologias emergentes",
-      "type": "ce",
-      "text": "O termo big data se refere a conjuntos de dados de grande volume, variedade e velocidade, que exigem tecnologias específicas para armazenamento e processamento.",
-      "answer": "C",
-      "comment": "Volume, variedade e velocidade são os \"três Vs\" clássicos do conceito, aos quais se somam, em muitas fontes, veracidade e valor."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Tecnologias emergentes",
-      "type": "ce",
-      "text": "A Internet das Coisas (IoT) restringe-se à conexão de computadores e smartphones à internet, não alcançando objetos como eletrodomésticos, sensores e veículos.",
-      "answer": "E",
-      "comment": "A IoT justamente amplia a conexão para objetos do cotidiano equipados com sensores, como lâmpadas, câmeras, carros e eletrodomésticos."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Tecnologias emergentes",
-      "type": "ce",
-      "text": "As respostas geradas por ferramentas de inteligência artificial generativa podem conter erros e, por isso, devem ser verificadas, e dados sensíveis não devem ser inseridos nelas sem os devidos cuidados.",
-      "answer": "C",
-      "comment": "O uso responsável exige conferência das informações geradas e cuidado com a privacidade, pois o conteúdo digitado pode ser armazenado ou tratado pelo serviço."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Tecnologias emergentes",
-      "type": "ce",
-      "text": "O aprendizado de máquina (machine learning) é um ramo da inteligência artificial em que os sistemas aprendem padrões a partir de dados, sem que cada regra precise ser programada de forma explícita.",
-      "answer": "C",
-      "comment": "Em vez de seguir regras escritas passo a passo, o modelo é treinado com dados e identifica padrões por conta própria."
-    },
-    {
-      "banca": "Estilo Cebraspe",
-      "module": "Tecnologias emergentes",
-      "type": "ce",
-      "text": "A mineração de dados (data mining) consiste na realização de cópias de segurança de grandes bases de dados em mídias externas.",
-      "answer": "E",
-      "comment": "A mineração de dados busca padrões, correlações e informações úteis em grandes bases. A cópia de segurança é o backup."
+      "comment": "Em carteiras não custodiais, não há quem recupere a chave por você. Já nas corretoras, a empresa guarda as chaves em nome do cliente."
     }
   ]
 }

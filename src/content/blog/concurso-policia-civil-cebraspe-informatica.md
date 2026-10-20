@@ -164,7 +164,7 @@ Gabarito: **B**. O antivírus detecta e remove malware, o anti-spyware combate a
 
 Gabarito: **B**. Se os dois valores forem iguais, a integridade foi preservada. Se forem diferentes, o arquivo mudou.
 
-Como não há desconto por erro, **nunca deixe uma questão em branco**. Primeiro, elimine as alternativas que trocam conceitos, como a função do firewall pela do antivírus. Depois, escolha a melhor das que sobraram. Para reforçar os conceitos, o [simulado de Informática da Cebraspe](/simulado-cebraspe-informatica/) ajuda, mas ele usa o formato Certo ou Errado. Por isso, transforme cada item do simulado em uma pergunta de cinco alternativas ao revisar.
+Como não há desconto por erro, **nunca deixe uma questão em branco**. Primeiro, elimine as alternativas que trocam conceitos, como a função do firewall pela do antivírus. Depois, escolha a melhor das que sobraram. Para treinar exatamente nesse formato, resolva o [simulado de Informática da Cebraspe para nível superior](/simulado-cebraspe-informatica/), com 50 questões de múltipla escolha e comentário na hora.
 
 ## Por onde começar: um plano para o concurso Polícia Civil
 
@@ -181,7 +181,14 @@ Em seguida, monte um ciclo: leia o tópico, resolva questões de múltipla escol
 
 O conteúdo programático de Informática do concurso Polícia Civil PC-MA combina o básico de sempre com temas atuais: evidência digital, LGPD, inteligência artificial e criptomoedas. Quem estuda tópico por tópico, treina a múltipla escolha com cinco alternativas e dá atenção à segurança da informação chega à prova com vantagem nas 12 questões da disciplina.
 
-Então, comece hoje pelo tópico 8 e siga a ordem deste guia. Bons estudos!
+Para acompanhar o edital, os avisos e o cronograma, use a [página oficial do concurso PC-MA na Cebraspe](https://www.cebraspe.org.br/concursos/pc_ma_26_investigador). Então, comece hoje pelo tópico 8 e siga a ordem deste guia. Bons estudos!
+
+<aside class="post-cta" aria-label="Simulado de Informática Cebraspe">
+<p class="post-cta-kicker">Teste o que você aprendeu</p>
+<p class="post-cta-title">Simulado de Informática Cebraspe: nível superior</p>
+<p class="post-cta-text">50 questões de múltipla escolha no estilo da Polícia Civil. Ao marcar uma alternativa, você vê na hora se acertou ou errou, com o comentário da questão.</p>
+<a class="post-cta-btn" href="/simulado-cebraspe-informatica/">Resolver o simulado agora</a>
+</aside>
 
 ## Fontes e Referências
 
