@@ -7,6 +7,7 @@ updated: 2026-09-25T20:08:35Z
 readingTime: "18 min"
 image: "./images/hardware-1.webp"
 imageAlt: "Hardware"
+tags: ["Simulado", "Hardware", "Noções de Informática"]
 ---
 
 Muitos candidatos travam justamente nos detalhes técnicos de hardware, e este simulado de hardware existe para reverter esse cenário. Ao resolver as questões comentadas, você revisa barramentos, memória RAM e ROM, processador, armazenamento (HD e SSD) e periféricos, temas recorrentes nas provas de Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Cada questão vem acompanhada de um comentário que explica o conceito correto e destaca a **pegadinha** explorada pela banca, o que torna o aprendizado mais sólido. Assim, você identifica rapidamente os pontos que ainda precisam de revisão. Por isso, faça este simulado com calma e anote os temas que mais errar.

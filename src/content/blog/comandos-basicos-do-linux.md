@@ -8,6 +8,7 @@ updated: 2026-09-13T14:28:22Z
 readingTime: "7 min"
 image: "./images/linux.webp"
 imageAlt: "Comandos Básicos do Linux: Guia Passo a Passo para Quem Nunca Usou o Terminal"
+tags: ["Linux", "Comandos do Linux", "Terminal", "Sistemas Operacionais", "Noções de Informática"]
 ---
 
 Você abre o terminal pela primeira vez e encontra uma tela preta com um cursor piscando. Nenhum ícone, nenhum menu, nenhuma pista visual — só aquele espaço vazio esperando você digitar alguma coisa. Essa sensação de travamento é normal. Praticamente todo mundo que hoje domina os comandos básicos do [Linux](/linux-para-concursos/) passou exatamente por esse momento antes de perder o medo do terminal.

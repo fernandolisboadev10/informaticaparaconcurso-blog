@@ -8,6 +8,7 @@ updated: 2026-09-22T19:17:55Z
 readingTime: "16 min"
 image: "./images/hardware.webp"
 imageAlt: "hardware para concursos"
+tags: ["Hardware", "Processador", "Memória", "Componentes do Computador", "Noções de Informática"]
 ---
 
 Hardware aparece em praticamente todo edital que cobra Informática. Às vezes o tema vem com esse nome; outras vezes, ele surge escondido em itens como “conceitos básicos de computação” ou “componentes de um computador”. Em qualquer caso, a banca espera que você saiba como a máquina funciona por dentro.

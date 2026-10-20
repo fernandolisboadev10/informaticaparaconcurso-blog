@@ -7,6 +7,7 @@ updated: 2026-08-20T17:37:50Z
 readingTime: "5 min"
 image: "./images/regra321.webp"
 imageAlt: "Regra321 backup"
+tags: ["Regra 3-2-1", "Backup", "Segurança da Informação", "Noções de Informática"]
 ---
 
 Imagine que você guarda todos os arquivos importantes em um único HD externo. Um dia, esse HD apresenta defeito. Nesse momento, você perde tudo de uma vez. Foi justamente para evitar esse cenário que os profissionais de TI consolidaram a chamada [regra 3-2-1 de backup](https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf), e é sobre ela que este artigo se concentra.

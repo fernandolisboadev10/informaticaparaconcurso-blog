@@ -7,6 +7,7 @@ updated: 2026-10-05T10:35:00-03:00
 readingTime: "10 min"
 image: "./images/slide.webp"
 imageAlt: "Power Point"
+tags: ["PowerPoint", "Microsoft Office", "Apresentações", "Noções de Informática"]
 ---
 
 Primeiramente, **PowerPoint o que cai nos concursos** é uma dúvida comum de quem estuda informática básica para provas de nível médio e superior. Em geral, as bancas cobram conceitos práticos do editor de apresentações, com foco em recursos, modos de exibição, formatos de arquivo, transições, animações e atalhos de teclado.

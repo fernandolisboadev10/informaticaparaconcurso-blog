@@ -7,6 +7,7 @@ updated: 2026-09-17T19:01:27Z
 readingTime: "9 min"
 image: "./images/memorias.webp"
 imageAlt: "Memórias"
+tags: ["Hardware", "Memória RAM", "Memória ROM", "Memória Cache", "Noções de Informática"]
 ---
 
 Antes de tudo, imagine a seguinte situação na sua prova: a banca [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) troca RAM por ROM, afirma que a cache guarda arquivos permanentemente ou diz que o HD substitui a memória principal. Você marcaria certo ou errado sem pensar duas vezes?

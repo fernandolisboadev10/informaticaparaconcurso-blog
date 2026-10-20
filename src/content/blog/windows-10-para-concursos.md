@@ -7,6 +7,7 @@ updated: 2026-09-28T00:49:17Z
 readingTime: "15 min"
 image: "./images/Windows-10.webp"
 imageAlt: "Windows 10"
+tags: ["Windows 10", "Windows", "Sistemas Operacionais", "Noções de Informática"]
 ---
 
 Primeiramente, o Windows 10 continua entre os assuntos mais cobrados em provas de Informática, mesmo depois do fim do suporte geral. As bancas seguem usando o sistema porque ele reúne quase tudo que o edital pede: interface, configurações, arquivos, segurança e atalhos.

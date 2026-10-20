@@ -7,6 +7,7 @@ updated: 2026-08-12T11:22:37Z
 readingTime: "5 min"
 image: "./images/Tipos-de-Redes-1.webp"
 imageAlt: "Tipos de redes"
+tags: ["Redes de Computadores", "LAN", "WAN", "Noções de Informática"]
 ---
 
 Primeiramente, dominar o tema de informática tornou-se um verdadeiro fator de desempate nos concursos públicos de nível médio e superior. Principalmente em carreiras policiais, de tribunais e fiscais, as bancas organizadoras têm um histórico de cobrar conceitos estruturais de tecnologia com um grau de exigência bastante técnico.

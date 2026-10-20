@@ -7,6 +7,7 @@ updated: 2026-09-26T12:23:04Z
 readingTime: "17 min"
 image: "./images/image-1.webp"
 imageAlt: "Linux para Concursos"
+tags: ["Linux", "Kernel", "Distribuições Linux", "Sistemas Operacionais", "Noções de Informática"]
 ---
 
 ## Introdução

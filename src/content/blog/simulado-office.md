@@ -7,6 +7,7 @@ updated: 2026-09-25T20:06:58Z
 readingTime: "15 min"
 image: "./images/office.webp"
 imageAlt: "office"
+tags: ["Simulado", "Microsoft Office", "Word", "Excel", "PowerPoint"]
 ---
 
 Word, Excel e PowerPoint costumam derrubar até quem estuda bastante, e este simulado de Office foi montado para testar exatamente esse conhecimento. Nas trinta questões comentadas, você encontra situações práticas envolvendo edição de documentos, fórmulas, formatação e recursos do pacote Office, no estilo cobrado por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Além disso, cada resposta vem com um comentário que esclarece o motivo da alternativa correta e evita que o mesmo erro se repita na prova real. Dessa forma, você treina a leitura atenta do enunciado, habilidade essencial nessa disciplina. Por fim, use este simulado de Office como um raio-x do seu preparo atual.

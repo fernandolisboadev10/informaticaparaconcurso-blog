@@ -7,6 +7,7 @@ updated: 2026-09-21T19:04:37Z
 readingTime: "24 min"
 image: "./images/Organizacao-de-Arquivos.webp"
 imageAlt: "Organização de Arquivos"
+tags: ["Arquivos e Pastas", "Gerenciamento de Arquivos", "Windows", "Noções de Informática"]
 ---
 
 Você já errou uma questão sobre copiar e mover arquivos porque a banca trocou uma única palavra? Esse erro é mais comum do que parece, e a causa quase sempre é a mesma: o candidato decora atalhos, mas não entende como o sistema organiza as informações. A organização de arquivos, pastas e programas aparece em provas de todas as bancas e rende pontos fáceis para quem domina os detalhes. Ao longo deste texto, você vai ver os conceitos-base, as operações do Explorador de Arquivos, as regras de nomes, o comportamento dos atalhos e a forma correta de lidar com programas, sempre com foco no que cai na prova.

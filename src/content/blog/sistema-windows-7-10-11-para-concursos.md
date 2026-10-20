@@ -8,6 +8,7 @@ updated: 2026-09-27T23:44:31Z
 readingTime: "12 min"
 image: "./images/win-7-e-win-10.webp"
 imageAlt: "sistema windows"
+tags: ["Windows", "Windows 10", "Windows 11", "Sistemas Operacionais", "Noções de Informática"]
 ---
 
 Primeiramente, estudar o **sistema operacional Windows** para concursos exige reconhecer as diferenças entre Windows 7, Windows 10 e Windows 11. As bancas costumam cobrar elementos da interface, configurações, recursos de produtividade, segurança, gerenciamento de arquivos e datas de encerramento do suporte.

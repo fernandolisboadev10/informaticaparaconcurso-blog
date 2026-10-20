@@ -8,6 +8,7 @@ updated: 2026-10-05T11:40:00-03:00
 readingTime: "11 min"
 image: "./images/buscador-x-navegador.webp"
 imageAlt: "Buscador x Navegador"
+tags: ["Navegador", "Buscador", "Internet", "Noções de Informática"]
 ---
 
 Você abre o navegador, digita uma pergunta na barra de busca e a resposta aparece em segundos. Nesse processo simples, dois elementos distintos entram em ação, e a maioria dos candidatos não sabe separar um do outro.

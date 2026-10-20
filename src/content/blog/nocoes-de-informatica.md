@@ -8,6 +8,7 @@ updated: 2026-09-25T22:00:12Z
 readingTime: "19 min"
 image: "./images/Nocoes-de-Informatica.webp"
 imageAlt: "Noções de Informática"
+tags: ["Noções de Informática", "Concurso Público", "Roteiro de Estudo", "Simulado"]
 ---
 
 Você abre o edital, chega à disciplina de noções de informática e encontra uma lista longa: **Windows, Linux, Word, Excel, redes, segurança, backup**. Diante de tanto assunto, muita gente estuda tudo ao mesmo tempo, sem ordem e sem prioridade.

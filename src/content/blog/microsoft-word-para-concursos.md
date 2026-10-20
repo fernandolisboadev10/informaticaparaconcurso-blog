@@ -8,6 +8,7 @@ updated: 2026-10-05T10:40:00-03:00
 readingTime: "15 min"
 image: "./images/Word.webp"
 imageAlt: "Microsoft Word para Concursos"
+tags: ["Word", "Microsoft Office", "Editor de Texto", "Noções de Informática"]
 ---
 
 Se você estuda Microsoft Word para concursos, já percebeu que decorar botão por botão não resolve. A banca não quer saber se você usa o Word no dia a dia, quer saber se você entende a lógica do programa e se percebe quando uma afirmação está errada por um detalhe só.

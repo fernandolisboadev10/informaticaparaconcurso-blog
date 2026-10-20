@@ -8,6 +8,7 @@ updated: 2026-09-29T11:58:50Z
 readingTime: "9 min"
 image: "./images/informatica-para-concursos.webp"
 imageAlt: "Informática para concursos: 5 confusões clássicas e como a banca as cobra"
+tags: ["Pegadinhas de Prova", "Dúvidas Comuns", "Concurso Público", "Noções de Informática"]
 ---
 
 Em informática para concursos, a banca raramente pede uma definição solta. O que derruba o candidato é a diferença entre dois conceitos parecidos, e é justamente nesse ponto que o item de Certo ou Errado esconde a **pegadinha**.

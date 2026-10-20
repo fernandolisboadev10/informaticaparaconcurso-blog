@@ -7,6 +7,7 @@ updated: 2026-09-22T19:23:59Z
 readingTime: "8 min"
 image: "./images/Perifericos.webp"
 imageAlt: "Periféricos"
+tags: ["Periféricos", "Entrada e Saída", "Hardware", "Noções de Informática"]
 ---
 
 Periféricos aparecem em quase toda prova de Informática, tanto em questões diretas quanto em itens com **pegadinha**. A banca troca a função de um monitor, de um scanner ou de um pendrive e espera que você caia na armadilha.

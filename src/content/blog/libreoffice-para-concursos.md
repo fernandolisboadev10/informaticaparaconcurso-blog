@@ -8,6 +8,7 @@ updated: 2026-09-23T13:57:08Z
 readingTime: "12 min"
 image: "./images/libreoffice.webp"
 imageAlt: "LibreOffice"
+tags: ["LibreOffice", "BrOffice", "Software Livre", "Microsoft Office", "Noções de Informática"]
 ---
 
 Se o seu edital cita “editores de texto, planilhas e apresentações”, a banca pode cobrar tanto o Microsoft Office quanto o LibreOffice. Para comparar, veja também o guia de [Word](/microsoft-word-para-concursos/), o de [Excel](/excel-em-concursos-publicos/) e o de [PowerPoint](/powerpoint-o-que-cai-nos-concursos/). Aliás, muitos órgãos públicos adotam a suíte livre no dia a dia, e por isso ela aparece com frequência nas provas de informática.

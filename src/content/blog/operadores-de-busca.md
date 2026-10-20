@@ -8,6 +8,7 @@ updated: 2026-09-26T19:14:50Z
 readingTime: "10 min"
 image: "./images/operadores-de-busca.webp"
 imageAlt: "operadores de busca"
+tags: ["Operadores de Busca", "Google", "Internet", "Noções de Informática"]
 ---
 
 Você já perdeu meia hora procurando um edital em PDF e só encontrou blogs repetidos? Os **operadores de busca** resolvem esse problema. Com poucos símbolos, você diz ao Google o que quer ver e o que deve ficar de fora. Ao lado de cada explicação, você encontra um comando pronto para copiar e testar no seu navegador. Em poucos minutos de prática, a pesquisa deixa de ser tentativa e erro e vira uma ferramenta de estudo.

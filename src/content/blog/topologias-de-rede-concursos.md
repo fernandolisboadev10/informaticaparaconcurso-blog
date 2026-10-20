@@ -7,6 +7,7 @@ updated: 2026-08-12T11:47:12Z
 readingTime: "6 min"
 image: "./images/Topologia-de-Redes-1.webp"
 imageAlt: "Topologia de Redes"
+tags: ["Topologias de Rede", "Redes de Computadores", "Noções de Informática"]
 ---
 
 Primeiramente, você já se perguntou como os computadores se organizam dentro de uma rede? A resposta está nas **topologias de rede**. Esse tema aparece com frequência em provas de nível médio e superior, especialmente em cargos de TI, tribunais e carreiras policiais.

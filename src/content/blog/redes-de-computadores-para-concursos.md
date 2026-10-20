@@ -8,6 +8,7 @@ updated: 2026-10-05T11:20:00-03:00
 readingTime: "14 min"
 image: "./images/Redes-de-Computadores.webp"
 imageAlt: "Redes de Computadores para Concursos"
+tags: ["Redes de Computadores", "TCP/IP", "Modelo OSI", "Internet", "Noções de Informática"]
 ---
 
 Redes de computadores para concursos é um daqueles assuntos que parecem simples à primeira vista, mas escondem detalhes que a banca adora explorar. Por isso, em vez de decorar definições soltas, vamos construir o raciocínio do começo ao fim: o que é uma rede, como ela se classifica, como os dados trafegam nela com segurança e, por fim, como tudo isso se conecta com internet, intranet, extranet, HTTP, HTTPS e VPN. Ao final desta aula, você terá o quadro completo na cabeça, e não apenas pedaços soltos de teoria.

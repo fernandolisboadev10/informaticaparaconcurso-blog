@@ -7,6 +7,7 @@ updated: 2026-09-25T20:08:56Z
 readingTime: "16 min"
 image: "./images/seguranca.webp"
 imageAlt: "segurança da informação"
+tags: ["Simulado", "Segurança da Informação", "Malware", "Criptografia", "Noções de Informática"]
 ---
 
 Vírus, malware, criptografia e backup são só alguns dos assuntos que aparecem neste simulado de segurança da informação, pensado para candidatos que já estudaram a teoria e querem testar a prática. Nas trinta questões comentadas, você revisa os principais conceitos cobrados por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp, sempre com foco nas situações mais exploradas em prova. Cada questão vem acompanhada de um comentário que esclarece o motivo da resposta correta, o que evita a decoreba sem compreensão. Assim, você aprende a reconhecer os termos técnicos e as **pegadinhas** mais comuns dessa disciplina. Portanto, aproveite este simulado de segurança da informação para reforçar exatamente os pontos que ainda geram dúvida.

@@ -8,6 +8,7 @@ updated: 2026-10-02T14:58:04Z
 readingTime: "12 min"
 image: "./images/Como-Estudar-para-Concurso.webp"
 imageAlt: "Como Estudar para Concurso"
+tags: ["Como Estudar", "Plano de Estudo", "Reta Final", "Concurso Público"]
 ---
 
 Faltam menos de 15 dias para a prova e a sensação é de que o edital cresceu. Você abre o material, olha a lista de assuntos e não sabe por onde começar. Respire, porque esse cenário tem solução.

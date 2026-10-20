@@ -8,6 +8,7 @@ updated: 2026-10-04T01:28:41Z
 readingTime: "7 min"
 image: "./images/Cebraspe.webp"
 imageAlt: "Cebraspe"
+tags: ["Cebraspe", "Banca", "Certo ou Errado", "Noções de Informática"]
 ---
 
 Você abre o edital, encontra o nome Cebraspe na primeira página e sente um frio na barriga? Isso é comum. Poucas bancas despertam tanto respeito, e o motivo está menos no conteúdo e mais na forma como a prova funciona.

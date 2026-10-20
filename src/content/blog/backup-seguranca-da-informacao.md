@@ -8,6 +8,7 @@ updated: 2026-07-30T20:12:26Z
 readingTime: "7 min"
 image: "./images/backup.webp"
 imageAlt: "Backup"
+tags: ["Backup", "Segurança da Informação", "Regra 3-2-1", "Noções de Informática"]
 ---
 
 ## Introdução à cópia de segurança

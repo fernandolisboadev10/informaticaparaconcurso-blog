@@ -8,6 +8,7 @@ updated: 2026-09-28T19:09:33Z
 readingTime: "19 min"
 image: "./images/Cebraspe-PM-MA-2026.webp"
 imageAlt: "Cebraspe PM MA 2026"
+tags: ["PM MA 2026", "Cebraspe", "Dicas de Prova", "Noções de Informática"]
 ---
 
 Fala, concurseiro! O concurso está chegando e aí, como andam os estudos? A prova da **Cebraspe PM MA 2026** acontece no dia 11 de outubro, portanto agora é hora de revisar, e não de começar conteúdo novo.

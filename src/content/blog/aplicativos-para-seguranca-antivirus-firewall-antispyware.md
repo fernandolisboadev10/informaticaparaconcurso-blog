@@ -8,6 +8,7 @@ updated: 2026-10-05T10:30:00-03:00
 readingTime: "10 min"
 image: "./images/aplicativos-para-seguranca.webp"
 imageAlt: "aplicativos para segurança"
+tags: ["Segurança da Informação", "Antivírus", "Firewall", "Anti-Spyware", "Noções de Informática"]
 ---
 
 ## Introdução

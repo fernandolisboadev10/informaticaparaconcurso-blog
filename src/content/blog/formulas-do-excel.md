@@ -7,6 +7,7 @@ updated: 2026-08-19T14:03:11Z
 readingTime: "11 min"
 image: "./images/revisao-excel.webp"
 imageAlt: "Revisão de Fórmulas do Excel"
+tags: ["Excel", "Fórmulas do Excel", "Cebraspe", "Microsoft Office", "Noções de Informática"]
 ---
 
 Toda vez que o [CEBRASPE](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) cobra fórmulas do Excel, a banca costuma montar o mesmo tipo de armadilha: apresenta uma planilha pequena e espera que você resolva a fórmula mentalmente, célula por célula, sem apoio de computador. Por isso, decorar sintaxe isolada ajuda pouco. O caminho mais eficiente é treinar em cima de uma única tabela, exatamente como a prova cobra. É justamente esse o formato deste artigo, atualizado para quem está se preparando para os concursos de 2026: uma planilha de exemplo e, a partir dela, 15 questões comentadas, cobrindo as fórmulas do Excel que mais aparecem em prova. 🎯

@@ -7,6 +7,7 @@ updated: 2026-09-25T19:59:55Z
 readingTime: "16 min"
 image: "./images/redes-1.webp"
 imageAlt: "Redes de Computadores"
+tags: ["Simulado", "Redes de Computadores", "Internet", "Noções de Informática"]
 ---
 
 Poucos temas exigem tanta atenção a detalhes quanto redes, e este simulado de redes de computadores foi criado para colocar essa teoria à prova. Nas trinta questões comentadas, você revisa protocolos, modelos OSI e TCP/IP, topologias, tipos de rede e conceitos de internet, intranet e extranet, sempre na linguagem usada por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Além disso, cada questão apresenta um comentário que explica o raciocínio correto e destaca a armadilha que a banca costuma preparar. Dessa forma, você treina justamente aquilo que costuma ser cobrado em prova. Por isso, encare este simulado de redes de computadores como um termômetro real do seu conhecimento.

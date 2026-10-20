@@ -8,6 +8,7 @@ updated: 2026-10-10T10:30:00-03:00
 readingTime: "12 min"
 image: "./images/Cloud-Storage.webp"
 imageAlt: "Cloud Storage"
+tags: ["Cloud Storage", "Computação em Nuvem", "Armazenamento de Dados", "Segurança da Informação"]
 ---
 
 ## Introdução

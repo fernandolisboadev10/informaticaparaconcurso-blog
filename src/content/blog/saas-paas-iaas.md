@@ -7,6 +7,7 @@ updated: 2026-10-10T10:45:00-03:00
 readingTime: "8 min"
 image: "./images/saas-paas-e-iaas.webp"
 imageAlt: "SaaS, PaaS e IaaS"
+tags: ["SaaS", "PaaS", "IaaS", "Computação em Nuvem", "Noções de Informática"]
 ---
 
 Poucos assuntos de computação em nuvem aparecem tanto em prova quanto **SaaS, PaaS e IaaS**. Além disso, a banca raramente pergunta só o significado da sigla. Ela quer saber quem gerencia o quê, e é justamente aí que o candidato perde pontos.

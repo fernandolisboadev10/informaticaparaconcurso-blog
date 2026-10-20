@@ -7,6 +7,7 @@ updated: 2026-10-05T10:57:29Z
 readingTime: "12 min"
 image: "./images/excel.webp"
 imageAlt: "Excel"
+tags: ["Excel", "Microsoft Office", "Planilhas", "Fórmulas", "Noções de Informática"]
 ---
 
 🎯 **Cai muito em prova!** O Excel costuma render de 3 a 6 questões nas provas de Informática do [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/), FGV, FCC e Vunesp. Referência relativa x absoluta, a diferença entre fórmula e função e a confusão entre planilha e pasta de trabalho são os campeões de **pegadinha**, e é exatamente por aí que você vai começar a estudar hoje.

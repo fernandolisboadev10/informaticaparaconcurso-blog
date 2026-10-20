@@ -7,6 +7,7 @@ updated: 2026-09-21T19:27:56Z
 readingTime: "8 min"
 image: "./images/tipos-de-arquivos.webp"
 imageAlt: "tipos de arquivos"
+tags: ["Tipos de Arquivo", "Extensões de Arquivo", "Arquivos e Pastas", "Noções de Informática"]
 ---
 
 Você já viu uma questão perguntar qual programa abre um arquivo `.ods`, ou se uma imagem `.jpg` mantém a qualidade depois de salva várias vezes? A banca adora esse tipo de detalhe, porque ele separa quem decorou uma lista de quem entendeu a lógica. Ao longo do texto, você vai entender como o Windows identifica cada arquivo, quais tipos de arquivo e extensões aparecem em prova e onde ficam as **pegadinhas**. Para rever o contexto geral, consulte o artigo sobre [organização de arquivos, pastas e programas](/informatica-concursos-gerenciamento-arquivos-pastas/).
