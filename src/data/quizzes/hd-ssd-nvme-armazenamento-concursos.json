@@ -1,0 +1,116 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O HD grava os dados em pratos magnéticos giratórios, lidos por uma cabeça de leitura e gravação; por depender de partes mecânicas, é mais sensível a impactos que o SSD.",
+   "answer": "C",
+   "comment": "Pratos, motor e cabeça em movimento são justamente o que torna o HD mais lento e mais frágil. O SSD usa memória flash e não tem partes móveis, por isso resiste melhor a quedas e tem acesso mais rápido."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O pendrive utiliza memória flash volátil, de modo que os arquivos nele gravados são apagados quando o dispositivo é retirado da porta USB.",
+   "answer": "E",
+   "comment": "A memória flash é não volátil: o pendrive mantém os dados sem energia. Retirá-lo da porta não apaga nada. A memória que perde o conteúdo sem energia é a RAM. O risco real da remoção é interromper uma gravação em andamento, que pode corromper o arquivo."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O M.2 é um formato físico de encaixe; por isso, um SSD M.2 pode operar tanto com o protocolo SATA quanto com o protocolo NVMe.",
+   "answer": "C",
+   "comment": "M.2 descreve o tamanho e o conector, não a velocidade. Existem SSDs M.2 SATA, limitados a cerca de 600 MB/s, e SSDs M.2 NVMe, que usam o PCIe e vão bem além disso. Quem confunde formato com protocolo cai na pegadinha."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No RAID 1, os dados são divididos em blocos distribuídos entre os discos, com o objetivo de aumentar o desempenho, sem qualquer redundância das informações.",
+   "answer": "E",
+   "comment": "A descrição é do RAID 0 (striping). O RAID 1 faz espelhamento: grava uma cópia idêntica dos dados em cada disco e continua funcionando se um deles falhar. Troque a palavra e a questão muda de gabarito."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Uma empresa que adota RAID 5 em seu servidor de arquivos pode dispensar as rotinas de backup, já que a paridade garante a recuperação de qualquer dado perdido.",
+   "answer": "E",
+   "comment": "O RAID 5 tolera a falha de um disco, mas não protege contra exclusão acidental, ransomware, corrupção lógica, incêndio ou furto. Tudo isso atinge o conjunto inteiro. RAID aumenta a disponibilidade; backup é uma cópia separada que permite restaurar. Um não substitui o outro."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A interface SATA III possui taxa teórica de 6 Gb/s, o que a limita a algo próximo de 600 MB/s; já um SSD NVMe conectado ao barramento PCIe pode superar esse patamar.",
+   "answer": "C",
+   "comment": "Mesmo um SSD sem partes móveis fica preso ao limite da interface. O NVMe foi criado para trabalhar sobre o PCIe, que oferece muito mais banda, e alcança vários GB/s nos modelos atuais. Os valores são teóricos e variam conforme o modelo."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Como todo SSD utiliza memória flash, um SSD SATA e um SSD NVMe apresentam, necessariamente, a mesma velocidade de leitura e gravação.",
+   "answer": "E",
+   "comment": "A memória é a mesma, mas a interface muda o teto de velocidade. O SATA fica em torno de 600 MB/s, enquanto o NVMe sobre PCIe pode chegar a vários GB/s. Repare em “todo” e “necessariamente”, que costumam indicar item errado."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O processador não executa os programas diretamente a partir do HD ou do SSD: o sistema operacional os carrega antes na memória RAM.",
+   "answer": "C",
+   "comment": "HD e SSD são memória secundária, usada para guardar dados de forma permanente. A CPU trabalha com a memória principal, por isso programas e dados em uso precisam estar na RAM. Por isso, ao abrir um programa, ele leva um tempo para carregar do disco."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "Considere as mídias ópticas em camada simples. A alternativa que as apresenta em ordem crescente de capacidade de armazenamento é:",
+   "options": [
+    "DVD, CD e Blu-ray.",
+    "CD, DVD e Blu-ray.",
+    "Blu-ray, DVD e CD.",
+    "CD, Blu-ray e DVD.",
+    "DVD, Blu-ray e CD."
+   ],
+   "answer": "B",
+   "comment": "Em camada simples, o CD guarda cerca de 700 MB, o DVD 4,7 GB e o Blu-ray 25 GB. Assim, a ordem crescente é CD, DVD e Blu-ray. Camadas duplas dobram aproximadamente a capacidade do DVD (8,5 GB) e do Blu-ray (50 GB), mas não mudam a ordem."
+  },
+  {
+   "banca": "Estilo Vunesp",
+   "type": "mc",
+   "text": "Um técnico precisa montar um volume com dois discos idênticos que continue funcionando caso um dos discos falhe, aceitando aproveitar apenas a capacidade de um deles. A configuração mais adequada é:",
+   "options": [
+    "RAID 0.",
+    "RAID 5, pois ele exige somente dois discos.",
+    "JBOD, que grava os dados duplicados em ambos os discos.",
+    "RAID 1.",
+    "RAID 0 com paridade."
+   ],
+   "answer": "D",
+   "comment": "O RAID 1 espelha os dados em dois ou mais discos: se um falhar, o outro mantém tudo disponível, ao custo de aproveitar apenas a capacidade de um disco. O RAID 0 não tem tolerância a falhas, o RAID 5 exige no mínimo três discos, JBOD apenas junta capacidades e “RAID 0 com paridade” não existe."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "Sobre os conceitos de NVMe, M.2 e SATA no armazenamento em estado sólido, assinale a afirmativa correta.",
+   "options": [
+    "NVMe é um formato físico de encaixe, e M.2 é o protocolo de comunicação.",
+    "Todo SSD que usa o encaixe M.2 opera obrigatoriamente com o protocolo NVMe.",
+    "NVMe é um protocolo criado para SSDs conectados ao barramento PCI Express, enquanto M.2 é um formato físico que pode abrigar SSDs SATA ou NVMe.",
+    "O SATA é um protocolo exclusivo de SSDs, pois HDs utilizam somente conexões USB.",
+    "SSDs SATA e SSDs NVMe usam o mesmo barramento e, por isso, têm o mesmo limite de velocidade."
+   ],
+   "answer": "C",
+   "comment": "A alternativa C separa corretamente os três conceitos: NVMe é protocolo sobre PCIe, M.2 é formato e SATA é outra interface. A A inverte NVMe e M.2, a B ignora os SSDs M.2 SATA, a D erra porque os HDs usam SATA há muito tempo e a E ignora que os barramentos são diferentes."
+  },
+  {
+   "banca": "Estilo Vunesp",
+   "type": "mc",
+   "text": "Um servidor usa quatro discos de 1 TB cada, organizados em RAID 5. Nessa configuração, a capacidade útil aproximada e o número de falhas de disco toleradas são, respectivamente:",
+   "options": [
+    "3 TB e uma falha.",
+    "4 TB e uma falha.",
+    "2 TB e duas falhas.",
+    "3 TB e nenhuma falha.",
+    "1 TB e três falhas."
+   ],
+   "answer": "A",
+   "comment": "No RAID 5, a capacidade equivalente a um disco é usada para a paridade; com quatro discos de 1 TB, sobram cerca de 3 TB úteis. O nível tolera a falha de um disco, pois os dados dele podem ser recalculados a partir da paridade. Uma segunda falha antes da reconstrução leva à perda do volume."
+  }
+ ]
+}
