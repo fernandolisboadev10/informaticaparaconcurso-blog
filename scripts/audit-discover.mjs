@@ -37,7 +37,9 @@ for (const slug of slugs) {
 
   const links = [...body.matchAll(/(?<!!)\[[^\]]*\]\(([^)\s]+)/g)].map((m) => m[1]);
   const internal = links.filter((u) => u.startsWith('/'));
-  const external = [...new Set(links)].filter((u) => /^https?:\/\//.test(u) && !/^https?:\/\/(www\.)?informaticaparaconcurso.com\.br/.test(u));
+  // Links in the final "Fontes" block do not count toward the external limit.
+  const bodyLinks = [...body.split(/^## Fontes/m)[0].matchAll(/(?<!!)\[[^\]]*\]\(([^)\s]+)/g)].map((m) => m[1]);
+  const external = [...new Set(bodyLinks)].filter((u) => /^https?:\/\//.test(u) && !/^https?:\/\/(www\.)?informaticaparaconcurso.com\.br/.test(u));
   const stale = links.filter((u) => /^https?:\/\/(www\.)?informaticaparaconcurso.com(?!\.br)/.test(u));
 
   if (internal.length < MIN_INTERNAL) issues.push(`${internal.length} internal links (min ${MIN_INTERNAL})`);
