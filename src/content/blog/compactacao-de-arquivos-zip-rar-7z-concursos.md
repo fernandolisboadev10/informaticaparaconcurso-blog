@@ -69,6 +69,8 @@ Existe ainda a compactação do próprio sistema de arquivos. O NTFS aceita comp
 
 Aqui está o ponto central da prova. Compactar altera a forma de gravar os dados para ocupar menos espaço; criptografar embaralha o conteúdo para que só quem tem a chave o leia. Um ZIP comum, sem senha, pode ser aberto por qualquer pessoa que o receba, e a compactação não esconde nada.
 
+![Notebook exibindo uma pasta compactada com ícone de cadeado, símbolo de que a senha é um recurso do programa e não da compactação](./images/compactacao-senha-criptografia.webp)
+
 Para proteger o conteúdo, é preciso um programa que ofereça senha. O [7-Zip](https://www.7-zip.org/) informa que oferece criptografia AES-256 nos formatos 7z e ZIP, e o WinRAR também usa AES de 256 bits. Já a Microsoft informa que o Windows 11 24H2 não oferece suporte a operações em arquivos compactados criptografados e sugere ferramentas como 7-Zip ou WinRAR nesse caso.
 
 Duas ressalvas completam o quadro. Primeira: a proteção por senha pertence ao programa e ao método escolhidos, não ao conceito de compactação, e o manual do `zip` no Linux chama a criptografia padrão do ZIP de relativamente fraca, indicando métodos mais fortes quando o sigilo importa. Segunda: se você compacta um arquivo que já está criptografado no Windows, a Microsoft avisa que ele será descriptografado na extração, o que pode expor a informação.
