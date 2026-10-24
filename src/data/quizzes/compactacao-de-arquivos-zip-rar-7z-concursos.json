@@ -1,0 +1,123 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Compactar um arquivo no formato ZIP, sem definir senha, impede que outras pessoas leiam o conteúdo, pois a compactação embaralha os dados.",
+   "answer": "E",
+   "comment": "Compactar reduz o tamanho e reúne arquivos, mas não protege o conteúdo. Para impedir a leitura é preciso criptografia ou senha, recurso que depende do programa usado. Um ZIP comum pode ser aberto por qualquer pessoa."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Nos formatos de compactação sem perda, como o ZIP e o 7z, o arquivo extraído é idêntico ao original que foi compactado.",
+   "answer": "C",
+   "comment": "Na compressão sem perda nenhum dado é descartado, e a extração devolve o conteúdo exatamente como era. A degradação aparece em formatos com perda, como JPG e MP3."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Uma pasta com centenas de fotografias no formato JPG tende a reduzir bastante de tamanho ao ser compactada em um arquivo ZIP, porque o JPG não possui nenhuma compressão.",
+   "answer": "E",
+   "comment": "O JPG já usa compressão (com perda), então há pouca redundância para o ZIP eliminar. A pasta zipada fica com tamanho próximo ao original. O erro do item está na justificativa."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Linux, o comando tar -cvf pacote.tar pasta/ reúne o conteúdo da pasta em um único arquivo, sem comprimi-lo.",
+   "answer": "C",
+   "comment": "O tar empacota. A compressão só ocorre quando se usa um filtro, como a opção -z (gzip), -j (bzip2) ou -J (xz), ou quando o pacote é comprimido depois por outro programa."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Os documentos nos formatos .docx, .xlsx e .pptx do Microsoft Office usam a tecnologia de compressão ZIP, razão pela qual compactá-los novamente costuma trazer pouco ganho de espaço.",
+   "answer": "C",
+   "comment": "Os formatos Open XML são gravados de forma compactada, com tecnologia ZIP. Como o conteúdo já foi comprimido, um novo ZIP encolhe pouco o arquivo."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Um arquivo compactado dividido em vários volumes pode ser extraído normalmente apenas com o primeiro volume, já que ele contém o índice de todo o conteúdo.",
+   "answer": "E",
+   "comment": "Para extrair é necessário reunir todos os volumes, completos e íntegros. Sem as demais partes, os dados ficam incompletos e a extração falha."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Compactar uma pasta e manter o arquivo resultante no mesmo disco rígido do original constitui, por si só, uma cópia de segurança adequada.",
+   "answer": "E",
+   "comment": "Se o disco falhar, o original e o arquivo compactado são perdidos juntos. Backup exige cópia em outro local ou mídia, como prevê a regra 3-2-1. A compactação só ajuda a economizar espaço."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "Uma servidora precisa enviar por e-mail 30 documentos de texto (.txt) e deseja anexar um único arquivo, que ocupe o menor espaço possível sem perda de conteúdo. A providência mais adequada é:",
+   "options": [
+    "compactar os documentos em um único arquivo no formato ZIP.",
+    "converter cada documento para o formato JPG.",
+    "renomear a extensão de cada documento para .zip.",
+    "excluir os documentos originais antes do envio.",
+    "enviar os documentos em formato BMP, que é menor."
+   ],
+   "answer": "A",
+   "comment": "Textos têm muita redundância e compactam bem. O ZIP reúne os arquivos em um só anexo e comprime sem perda. Renomear a extensão não compacta nada, e converter texto em JPG ou BMP não faz sentido."
+  },
+  {
+   "banca": "Estilo Vunesp",
+   "type": "mc",
+   "text": "No Linux, para criar o pacote backup.tar.gz a partir da pasta documentos/, empacotando e comprimindo com gzip na mesma operação, o comando adequado é:",
+   "options": [
+    "tar -xvf backup.tar.gz documentos/",
+    "gunzip backup.tar.gz documentos/",
+    "tar -czvf backup.tar.gz documentos/",
+    "unzip backup.tar.gz documentos/",
+    "tar -cvf backup.tar documentos/"
+   ],
+   "answer": "C",
+   "comment": "A opção -c cria o pacote e -z o passa pelo gzip, gerando o .tar.gz. O -x extrai, o gunzip descomprime, o unzip trata arquivos .zip, e o tar -cvf cria apenas o .tar, sem compressão."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Sobre compactação de arquivos e proteção por senha, é correto afirmar que:",
+   "options": [
+    "todo arquivo compactado exige senha para ser extraído.",
+    "a compactação, por si só, equivale à criptografia dos dados.",
+    "um arquivo ZIP criado pelo menu do Windows é sempre criptografado.",
+    "a compressão sem perda impede a recuperação do arquivo original.",
+    "a proteção por senha depende do programa e do formato utilizados, como o 7-Zip com criptografia AES-256."
+   ],
+   "answer": "E",
+   "comment": "Compactar e criptografar são recursos distintos. Programas como o 7-Zip oferecem criptografia AES-256 nos formatos 7z e ZIP, mas isso é uma opção do programa. As demais alternativas trazem afirmações absolutas e erradas."
+  },
+  {
+   "banca": "Estilo FGV",
+   "type": "mc",
+   "text": "Um técnico vai compactar uma pasta com os seguintes tipos de arquivo. Aquele em que a compactação deve produzir a MENOR redução de tamanho é o conjunto de:",
+   "options": [
+    "arquivos de texto simples (.txt).",
+    "imagens no formato BMP.",
+    "fotografias no formato JPG.",
+    "planilhas exportadas como texto (.csv).",
+    "registros de log em texto."
+   ],
+   "answer": "C",
+   "comment": "Arquivos como JPG, MP3 e MP4 já passaram por compressão, então quase não encolhem no ZIP. Texto simples, CSV, logs e BMP têm muita redundância e compactam bem."
+  },
+  {
+   "banca": "Estilo Cesgranrio",
+   "type": "mc",
+   "text": "Dos formatos a seguir, aquele que utiliza compressão COM perda de dados é o:",
+   "options": [
+    "ZIP.",
+    "7z.",
+    "TAR.GZ.",
+    "GZ.",
+    "MP3."
+   ],
+   "answer": "E",
+   "comment": "ZIP, 7z, GZ e TAR.GZ usam compressão sem perda, e a extração devolve o original. O MP3 descarta parte da informação do áudio para reduzir o tamanho, e esse descarte não pode ser desfeito."
+  }
+ ]
+}
