@@ -4,7 +4,7 @@ seoTitle: "Windows 7, 10 e 11 para Concursos: Diferenças e Pegadinhas"
 description: "Sistema Operacional Windows para concursos: datas de suporte, mudanças visuais, recursos, requisitos e pegadinhas que mais caem em provas."
 category: "Sistemas"
 date: 2026-08-10T11:29:45-03:00
-updated: 2026-09-27T23:44:31Z
+updated: 2026-10-26T20:48:00-03:00
 readingTime: "12 min"
 image: "./images/win-7-e-win-10.webp"
 imageAlt: "sistema windows"
@@ -133,6 +133,28 @@ Vale destacar que o Windows 11 exige requisitos de hardware mais rígidos que os
 Em outras palavras, o TPM é um componente voltado à segurança. Ele auxilia na proteção de chaves criptográficas, credenciais e dados do sistema.
 
 Por isso, se uma questão relacionar TPM 2.0 e Windows 11, a afirmação tende a estar correta. Por outro lado, afirmar que o Windows 7 exigia TPM 2.0 para instalação é incorreto.
+
+### Atalhos do Windows que mais caem em prova
+
+Os atalhos com a tecla do Windows (a tecla com a bandeira, indicada como **Win**) são cobrados em todas as versões, e a banca costuma trocar a função de um pelo outro. Esta tabela reúne os mais frequentes:
+
+| Atalho | Função | Observação |
+| --- | --- | --- |
+| **Win + E** | Abre o Explorador de Arquivos | **E** de *Explorer*. |
+| **Win + D** | Mostra ou oculta a Área de Trabalho | Minimiza todas as janelas. |
+| **Win + L** | Bloqueia o computador | **L** de *Lock*. Não desliga nem encerra a sessão. |
+| **Win + R** | Abre a janela Executar | Usada para rodar comandos como `cmd` e `msconfig`. |
+| **Win + I** | Abre as Configurações | Não abre o Painel de Controle. |
+| **Win + Tab** | Abre a Visão de Tarefas | Mostra as janelas abertas e as áreas de trabalho virtuais. |
+| **Alt + Tab** | Alterna entre as janelas abertas | Não é um atalho da tecla Win. |
+| **Ctrl + Shift + Esc** | Abre o Gerenciador de Tarefas | Também acessível por Ctrl + Alt + Del. |
+| **Win + Shift + S** | Abre a ferramenta de captura de tela | Permite recortar uma área da tela. |
+| **Win + V** | Abre o histórico da Área de Transferência | Precisa estar habilitado nas configurações. |
+| **Win + seta para a esquerda ou direita** | Encaixa a janela em metade da tela | É o recurso *Snap*, que no Windows 11 ganhou os *Snap Layouts*. |
+
+O erro mais comum é trocar o **Win + L** (bloquear) por desligar o computador, e o **Win + D** (mostrar a área de trabalho) por fechar os programas. Os dois apenas ocultam ou bloqueiam, e os programas continuam abertos.
+
+Treine com este item, elaborado para este artigo: *"O atalho Win + D encerra todos os programas em execução e exibe a Área de Trabalho."* O gabarito é **Errado**, porque o atalho só minimiza as janelas, e os programas continuam em execução.
 
 ### Pegadinhas sobre o sistema operacional Windows
 

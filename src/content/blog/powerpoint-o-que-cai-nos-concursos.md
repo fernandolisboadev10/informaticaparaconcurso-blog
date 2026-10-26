@@ -3,7 +3,7 @@ title: "Power Point para concursos: atalhos, temas e como estudar"
 description: "Revise o que cai de PowerPoint nos concursos: modos de exibição, formatos de arquivo, atalhos, slide mestre e as pegadinhas que as bancas mais cobram."
 category: "Office"
 date: 2026-08-01T00:42:47-03:00
-updated: 2026-10-05T10:35:00-03:00
+updated: 2026-10-26T20:48:00-03:00
 readingTime: "10 min"
 image: "./images/slide.webp"
 imageAlt: "Power Point"
@@ -112,6 +112,24 @@ Primeiramente, um dos erros mais comuns é trocar **F5** por **Shift + F5**. Com
 No entanto, outro erro frequente é não saber diferenciar **pptx** de **ppsx**. Enquanto um está ligado ao arquivo padrão de apresentação editável, o outro é frequentemente associado à exibição da apresentação em tela cheia ao ser aberto.
 
 Além disso, muitos candidatos também confundem transição com animação. Em outras palavras, acertar PowerPoint em concurso depende menos de conhecimento avançado e mais de clareza sobre conceitos básicos que costumam ser cobrados de forma repetida.
+
+## Os pares que a banca troca: tabela de confusões
+
+A maior parte dos itens de PowerPoint nasce da troca entre duas coisas parecidas. Esta tabela reúne os pares mais comuns, com a regra que desfaz a confusão:
+
+| Se a questão fala em… | …e você pensa em… | Regra para decidir |
+| --- | --- | --- |
+| **Transição** | efeito entre dois slides | Acontece na passagem de um slide para o outro. Fica na guia **Transições**. |
+| **Animação** | efeito em um objeto do slide | Age em texto, imagem ou forma dentro do slide. Fica na guia **Animações**. |
+| **F5** | iniciar a apresentação | Começa pelo **primeiro** slide. |
+| **Shift + F5** | iniciar a apresentação | Começa pelo slide **atual**. |
+| **.pptx** | arquivo editável | Formato padrão de apresentação, aberto no modo de edição. |
+| **.ppsx** | arquivo de exibição | Abre direto no modo de apresentação (*slide show*). |
+| **.potx** | modelo | Serve de base para novas apresentações. |
+| **.ppt** | formato antigo | Padrão das versões anteriores ao Office 2007. |
+| **Slide Mestre** | formatar um slide | Altera o padrão de todos os slides que usam aquele layout. |
+
+Para treinar, resolva estes dois itens, elaborados para este artigo. **Item 1:** *"A transição de slides é o recurso que aplica movimento a uma imagem específica dentro de um slide."* O gabarito é **Errado**, pois isso é animação. **Item 2:** *"Para iniciar a apresentação a partir do slide que está selecionado no momento, o usuário pode usar o atalho Shift + F5."* O gabarito é **Certo**, ao contrário do F5, que parte do primeiro slide.
 
 ## Como estudar PowerPoint para concurso
 

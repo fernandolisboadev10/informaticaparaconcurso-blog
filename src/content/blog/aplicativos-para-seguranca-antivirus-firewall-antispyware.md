@@ -4,7 +4,7 @@ seoTitle: "Antivírus, Firewall e Anti-Spyware: o que cada um faz"
 description: "Entenda a diferença entre antivírus, firewall e anti-spyware, o que cada aplicativo de segurança faz e treine com questões no estilo das bancas."
 category: "Segurança"
 date: 2026-07-29T20:17:18-03:00
-updated: 2026-10-05T10:30:00-03:00
+updated: 2026-10-26T20:48:00-03:00
 readingTime: "10 min"
 image: "./images/aplicativos-para-seguranca.webp"
 imageAlt: "aplicativos para segurança"
@@ -104,6 +104,47 @@ Consequentemente, essas soluções não substituem o antivírus nem o firewall. 
 Em resumo, as bancas costumam cobrar três funções centrais: o antivírus protege contra malware, o firewall controla o tráfego de rede, e o anti-spyware combate programas espiões.
 
 Não apenas isso, também aparecem **pegadinhas** sobre atualização, sobre abrangência da proteção e sobre a diferença entre prevenção e remoção. Sempre que a questão afirmar que uma ferramenta “garante” ou “elimina totalmente” algum risco, vale desconfiar.
+
+## Onde essas ferramentas ficam no Windows
+
+Nas provas de Informática, o cenário quase sempre é o Windows 10 ou 11, e a banca costuma citar a ferramenta pelo nome. Por isso vale saber onde cada função mora no **Segurança do Windows** (*Windows Security*), o painel de segurança que já vem com o sistema:
+
+| Função | Onde fica no Segurança do Windows | O que observar na prova |
+| --- | --- | --- |
+| Antivírus e antimalware | **Proteção contra vírus e ameaças** (Microsoft Defender Antivirus) | Tem proteção em tempo real, proteção fornecida na nuvem e verificações rápida, completa e personalizada. |
+| Firewall | **Firewall e proteção de rede** (Firewall do Windows Defender) | Opera por perfis de rede: domínio, privada e pública, cada um com suas regras. |
+| Proteção contra ransomware | **Proteção contra vírus e ameaças**, em *Proteção contra ransomware* e acesso controlado a pastas | Restringe quais programas podem alterar pastas protegidas, como Documentos. |
+| Controle de aplicativos | **Controle de aplicativos e do navegador** | Reputação de programas e arquivos baixados, ligada à proteção contra sites e downloads suspeitos. |
+
+Dois detalhes do firewall do Windows caem com frequência. Primeiro, a regra padrão: conexões **de entrada** são bloqueadas, a menos que exista uma regra permitindo, enquanto as **de saída** são permitidas, a menos que exista uma regra bloqueando. Segundo, o perfil de rede: ao conectar em um Wi-Fi público, o Windows deve usar o perfil **público**, o mais restritivo, justamente porque a rede não é confiável.
+
+## Um exemplo passo a passo: o anexo malicioso
+
+Para ver as camadas funcionando juntas, imagine que Marcos recebe um e-mail com um anexo chamado `comprovante.exe`. Cada ferramenta entra em um momento diferente:
+
+1. **Filtro antispam:** pode barrar o e-mail antes de ele chegar à caixa de entrada. Se não barrar, a mensagem chega.
+2. **Antivírus:** ao baixar ou abrir o anexo, compara o arquivo com a base de assinaturas. Se for um malware novo, a análise heurística ou comportamental ainda pode detectá-lo.
+3. **Anti-spyware:** se o programa instalar um espião que captura o que Marcos digita, é essa camada, ou o antimalware, que o identifica e o remove.
+4. **Firewall:** se o malware tentar enviar os dados capturados para um servidor externo, o firewall pode bloquear a conexão de saída, caso exista uma regra para isso.
+5. **Backup:** se nada disso funcionar e os arquivos forem criptografados, é a cópia de segurança que permite recuperar o conteúdo sem pagar resgate.
+
+A lição para a prova é que nenhuma etapa isolada garante a proteção. A defesa funciona porque cada camada cobre uma falha das outras.
+
+## Treine: três itens no estilo Certo ou Errado
+
+Os itens abaixo foram elaborados para este artigo, no formato da Cebraspe. Tente responder antes de ler o gabarito.
+
+**Item 1.** O firewall, ao bloquear uma conexão não autorizada, remove do computador os arquivos infectados que já estavam armazenados nele.
+
+**Item 2.** A heurística permite que o antivírus detecte um malware que ainda não consta na sua base de assinaturas, pela análise das características e do comportamento do código.
+
+**Item 3.** Instalar um antivírus atualizado dispensa o uso de firewall e de cópias de segurança, pois ele elimina totalmente o risco de infecção.
+
+**Gabarito comentado:**
+
+- **Item 1: Errado.** O firewall filtra o tráfego de rede. Ele não analisa nem remove arquivos já armazenados. Essa tarefa é do antivírus.
+- **Item 2: Certo.** A heurística e a análise de comportamento existem justamente para detectar ameaças sem assinatura cadastrada.
+- **Item 3: Errado.** O antivírus reduz o risco, mas não o elimina, e não substitui o firewall nem o backup. Note o "dispensa" e o "elimina totalmente", as palavras que decidem o item.
 
 ## Perguntas frequentes
 

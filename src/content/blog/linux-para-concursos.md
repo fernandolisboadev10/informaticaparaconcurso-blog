@@ -4,7 +4,7 @@ seoTitle: "Linux para Concursos: o que Cai na Prova da Cebraspe"
 description: "Entenda por que a Cebraspe cobra tanto Linux, veja kernel, distribuições e comandos essenciais e treine com 12 questões de Certo ou Errado."
 category: "Sistemas"
 date: 2026-09-26T12:22:06-03:00
-updated: 2026-10-21T20:55:00-03:00
+updated: 2026-10-26T20:48:00-03:00
 readingTime: "17 min"
 image: "./images/image-1.webp"
 imageAlt: "Pinguim do Linux ao lado de um terminal com os comandos mais cobrados em concursos"
@@ -135,6 +135,38 @@ Comandos e permissões de Linux mais cobrados em concurso
 | `find` | Localiza arquivos por nome, tamanho ou data | `find / -name "*.log"` | Confundir com man |
 | `chmod` | Altera as permissões (leitura, escrita, execução) do arquivo | `chmod 755 script.sh` | Trocar função com chown |
 | `chown` | Altera o dono (usuário) do arquivo | `chown maria arquivo.txt` | Trocar função com chmod |
+
+## Como calcular o chmod: passo a passo
+
+O `chmod 755` aparece em muita prova, e o candidato que decorou o número sem entender a conta erra assim que a banca muda os valores. A lógica é simples: cada permissão vale um número e, para cada grupo (dono, grupo e outros), você soma os valores.
+
+| Permissão | Letra | Valor |
+| --- | --- | --- |
+| Leitura | `r` | 4 |
+| Escrita | `w` | 2 |
+| Execução | `x` | 1 |
+| Nenhuma | `-` | 0 |
+
+Veja como converter a sequência `-rwxr-xr--` que aparece no `ls -l`:
+
+1. Separe o primeiro caractere, que indica o tipo (`-` é arquivo comum e `d` é diretório). Sobram `rwx`, `r-x` e `r--`.
+2. **Dono:** `rwx` = 4 + 2 + 1 = **7**.
+3. **Grupo:** `r-x` = 4 + 0 + 1 = **5**.
+4. **Outros:** `r--` = 4 + 0 + 0 = **4**.
+5. Junte os três números: `chmod 754`.
+
+Alguns valores se repetem tanto que vale memorizar:
+
+| Valor | Significado | Uso comum |
+| --- | --- | --- |
+| `755` | dono lê, escreve e executa; grupo e outros leem e executam | programas e scripts |
+| `644` | dono lê e escreve; grupo e outros só leem | arquivos de texto comuns |
+| `600` | só o dono lê e escreve | arquivos privados |
+| `777` | todos podem tudo | evitar, é uma falha de segurança |
+
+A banca também pode usar a forma simbólica. Por exemplo, `chmod u+x script.sh` dá permissão de execução só ao dono (**u** de *user*), enquanto `chmod g-w arquivo.txt` retira a escrita do grupo. As letras são `u` (dono), `g` (grupo), `o` (outros) e `a` (todos), e os sinais `+` e `-` adicionam ou retiram a permissão.
+
+Treine com este item, elaborado para este artigo: *"O comando `chmod 640 relatorio.txt` permite que o dono leia e escreva no arquivo, que o grupo apenas leia, e que os demais usuários não tenham nenhum acesso."* O gabarito é **Certo**: 6 = 4 + 2 (dono lê e escreve), 4 = leitura (grupo) e 0 = nenhum acesso (outros).
 
 ## O escritório dentro do Linux: LibreOffice
 

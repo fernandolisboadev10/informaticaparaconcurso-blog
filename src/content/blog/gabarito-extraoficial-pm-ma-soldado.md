@@ -3,6 +3,7 @@ title: "Gabarito Extraoficial PM MA 2026 Soldado: 120 Questões"
 description: "Confira o gabarito extraoficial da PM MA 2026 para Soldado, com as 120 respostas, nota mínima, datas do oficial e Informática comentada item a item."
 category: "Concursos"
 date: 2026-10-12T09:30:00-03:00
+updated: 2026-10-26T20:48:00-03:00
 readingTime: "12 min"
 tags: ["Gabarito Extraoficial", "PM MA 2026", "Soldado", "Cebraspe", "Noções de Informática"]
 image: "./images/gabarito-extraoficial-pm-ma-soldado.webp"
@@ -13,7 +14,9 @@ related:
   - cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica
 ---
 
-A prova objetiva da PM MA para Soldado foi aplicada neste domingo, 11 de outubro, e a pergunta que todo candidato faz agora é a mesma: quantos pontos eu fiz? Enquanto o gabarito oficial preliminar da Cebraspe não sai, os cursinhos divulgam o gabarito extraoficial, e é ele que permite estimar a sua nota ainda hoje.
+A prova objetiva da PM MA para Soldado foi aplicada em 11 de outubro de 2026, e a pergunta que todo candidato fez logo depois foi a mesma: quantos pontos eu fiz? Enquanto o gabarito oficial da Cebraspe não saía, os cursinhos divulgaram o gabarito extraoficial, e é ele que permite estimar a sua nota.
+
+> **Atualização de 26 de outubro:** as datas de gabarito preliminar e de recursos que aparecem mais abaixo vêm do cronograma do edital e já passaram. Para ver o gabarito oficial vigente e eventuais anulações, consulte a [página do concurso na Cebraspe](https://www.cebraspe.org.br/concursos/pm_ma_26). Se algum item do gabarito extraoficial abaixo mudou lá, o que vale é o resultado da banca.
 
 Neste artigo você encontra as 120 respostas na ordem da prova, a explicação da conta de pontos, as notas mínimas do edital, as datas do gabarito oficial e dos recursos e, como o assunto aqui é Informática, o gabarito comentado dos 45 itens de Noções de Informática.
 
