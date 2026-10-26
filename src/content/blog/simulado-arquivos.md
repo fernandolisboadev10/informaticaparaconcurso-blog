@@ -3,14 +3,14 @@ title: "Simulado Arquivos"
 description: "Simulado de organização de arquivos com 40 questões comentadas no estilo das bancas. Revise backup, pastas e compactação para o concurso."
 category: "Simulados"
 date: 2026-08-23T13:00:32-03:00
-updated: 2026-09-25T20:02:47Z
+updated: 2026-10-26T20:36:00-03:00
 readingTime: "15 min"
 image: "./images/arquivos.webp"
 imageAlt: "Arquivos"
 tags: ["Simulado", "Arquivos e Pastas", "Backup", "Noções de Informática"]
 ---
 
-Organização e gerenciamento de arquivos parecem simples à primeira vista, mas concentram diversas **pegadinhas** de prova, e este simulado de organização de arquivos comprova isso na prática. Ao longo de trinta questões comentadas, você revisa estrutura de pastas, extensões, compactação, backup e boas práticas de armazenamento, sempre no formato adotado por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Cada questão traz um comentário que esclarece o conceito por trás da resposta correta, o que ajuda a fixar o conteúdo de forma definitiva. Assim, você entende não apenas o que decorar, mas também o porquê de cada regra. Portanto, resolva este simulado de organização de arquivos antes de considerar o assunto encerrado.
+Organização e gerenciamento de arquivos parecem simples à primeira vista, mas concentram diversas **pegadinhas** de prova, e este simulado de organização de arquivos comprova isso na prática. Ao longo de 40 questões comentadas, você revisa estrutura de pastas, extensões, compactação, backup e boas práticas de armazenamento, sempre no formato adotado por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Cada questão traz um comentário que esclarece o conceito por trás da resposta correta, o que ajuda a fixar o conteúdo de forma definitiva. Assim, você entende não apenas o que decorar, mas também o porquê de cada regra. Portanto, resolva este simulado de organização de arquivos antes de considerar o assunto encerrado.
 
 ## Estrutura de pastas e hierarquia: como o sistema organiza tudo
 
@@ -60,4 +60,4 @@ A [regra 3-2-1 de backup](/regra-3-2-1/) e o [artigo sobre arma](/cloud-storage-
 
 ## Simulado de organização de arquivos: hora de colocar em prática
 
-Com esses conceitos revisados, chegou o momento de testar o que você aprendeu neste simulado de organização de arquivos. Resolva as trinta questões no seu ritmo, sem consultar o comentário antes de responder, e anote os temas em que mais errar. Esse é o método mais eficiente para transformar detalhes que pareciam simples em pontos garantidos na sua prova..
+Com esses conceitos revisados, chegou o momento de testar o que você aprendeu neste simulado de organização de arquivos. Resolva as 40 questões no seu ritmo, sem consultar o comentário antes de responder, e anote os temas em que mais errar. Esse é o método mais eficiente para transformar detalhes que pareciam simples em pontos garantidos na sua prova..

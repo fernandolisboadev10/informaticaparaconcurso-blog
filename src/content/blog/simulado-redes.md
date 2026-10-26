@@ -3,14 +3,14 @@ title: "Simulado de Redes de Computadores"
 description: "Simulado de redes de computadores com 40 questões comentadas no estilo das principais bancas. Teste seus conhecimentos agora."
 category: "Simulados"
 date: 2026-08-23T13:03:03-03:00
-updated: 2026-09-25T19:59:55Z
+updated: 2026-10-26T20:36:00-03:00
 readingTime: "16 min"
 image: "./images/redes-1.webp"
 imageAlt: "Redes de Computadores"
 tags: ["Simulado", "Redes de Computadores", "Internet", "Noções de Informática"]
 ---
 
-Poucos temas exigem tanta atenção a detalhes quanto redes, e este simulado de redes de computadores foi criado para colocar essa teoria à prova. Nas trinta questões comentadas, você revisa protocolos, modelos OSI e TCP/IP, topologias, tipos de rede e conceitos de internet, intranet e extranet, sempre na linguagem usada por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Além disso, cada questão apresenta um comentário que explica o raciocínio correto e destaca a armadilha que a banca costuma preparar. Dessa forma, você treina justamente aquilo que costuma ser cobrado em prova. Por isso, encare este simulado de redes de computadores como um termômetro real do seu conhecimento.
+Poucos temas exigem tanta atenção a detalhes quanto redes, e este simulado de redes de computadores foi criado para colocar essa teoria à prova. Nas 40 questões comentadas, você revisa protocolos, modelos OSI e TCP/IP, topologias, tipos de rede e conceitos de internet, intranet e extranet, sempre na linguagem usada por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Além disso, cada questão apresenta um comentário que explica o raciocínio correto e destaca a armadilha que a banca costuma preparar. Dessa forma, você treina justamente aquilo que costuma ser cobrado em prova. Por isso, encare este simulado de redes de computadores como um termômetro real do seu conhecimento.
 
 ## Modelo OSI e TCP/IP: a base que organiza a comunicação em rede
 
@@ -61,6 +61,6 @@ O [artigo sobre internet, intranet e extranet](/o-que-e-extranet/) esclarece ess
 
 ## Simulado de redes de computadores: hora de colocar em prática
 
-Com esses conceitos revisados, chegou o momento de testar o que você aprendeu neste simulado de redes de computadores. Resolva as trinta questões no seu ritmo, sem consultar o comentário antes de responder, e anote os temas em que mais errar.
+Com esses conceitos revisados, chegou o momento de testar o que você aprendeu neste simulado de redes de computadores. Resolva as 40 questões no seu ritmo, sem consultar o comentário antes de responder, e anote os temas em que mais errar.
 
 Perceba, ao longo das questões, como esses quatro blocos se cruzam na prática: o modelo TCP/IP explica como o dado trafega, o tipo de rede define o alcance dessa comunicação, a topologia mostra o arranjo físico dos equipamentos e a classificação internet, intranet e extranet determina quem tem permissão de acessar. Entender essa conexão, e não apenas decorar cada termo isoladamente, é o que faz a diferença na hora de eliminar alternativas em uma questão mais elaborada.

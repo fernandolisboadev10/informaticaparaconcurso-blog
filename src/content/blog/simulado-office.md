@@ -3,14 +3,14 @@ title: "Simulado Office"
 description: "Simulado de Office com 40 questões comentadas no estilo das bancas sobre Word, Excel e PowerPoint. Teste seu preparo para o concurso."
 category: "Simulados"
 date: 2026-08-23T12:55:50-03:00
-updated: 2026-09-25T20:06:58Z
+updated: 2026-10-26T20:36:00-03:00
 readingTime: "15 min"
 image: "./images/office.webp"
 imageAlt: "office"
 tags: ["Simulado", "Microsoft Office", "Word", "Excel", "PowerPoint"]
 ---
 
-Word, Excel e PowerPoint costumam derrubar até quem estuda bastante, e este simulado de Office foi montado para testar exatamente esse conhecimento. Nas trinta questões comentadas, você encontra situações práticas envolvendo edição de documentos, fórmulas, formatação e recursos do pacote Office, no estilo cobrado por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Além disso, cada resposta vem com um comentário que esclarece o motivo da alternativa correta e evita que o mesmo erro se repita na prova real. Dessa forma, você treina a leitura atenta do enunciado, habilidade essencial nessa disciplina. Por fim, use este simulado de Office como um raio-x do seu preparo atual.
+Word, Excel e PowerPoint costumam derrubar até quem estuda bastante, e este simulado de Office foi montado para testar exatamente esse conhecimento. Nas 40 questões comentadas, você encontra situações práticas envolvendo edição de documentos, fórmulas, formatação e recursos do pacote Office, no estilo cobrado por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp. Além disso, cada resposta vem com um comentário que esclarece o motivo da alternativa correta e evita que o mesmo erro se repita na prova real. Dessa forma, você treina a leitura atenta do enunciado, habilidade essencial nessa disciplina. Por fim, use este simulado de Office como um raio-x do seu preparo atual.
 
 ## Word: edição e formatação que caem em praticamente toda prova
 
@@ -63,4 +63,4 @@ O [artigo sobre LibreOffice para concursos](/libreoffice-para-concursos/) mostra
 
 ## Simulado de Office: hora de colocar em prática
 
-Com esses conceitos revisados, chegou o momento de testar o que você aprendeu neste simulado de Office. Resolva as trinta questões no seu ritmo, sem consultar o comentário antes de responder, e anote os temas em que mais errar. Como os três aplicativos aparecem juntos na maioria dos editais, vale revisar Word, Excel e PowerPoint na mesma sessão de estudo, em vez de tratá-los como disciplinas separadas.
+Com esses conceitos revisados, chegou o momento de testar o que você aprendeu neste simulado de Office. Resolva as 40 questões no seu ritmo, sem consultar o comentário antes de responder, e anote os temas em que mais errar. Como os três aplicativos aparecem juntos na maioria dos editais, vale revisar Word, Excel e PowerPoint na mesma sessão de estudo, em vez de tratá-los como disciplinas separadas.

@@ -3,14 +3,14 @@ title: "Simulado Segurança da Informação"
 description: "Simulado de segurança da informação com 40 questões comentadas no estilo das bancas. Revise vírus, backup e criptografia para o concurso."
 category: "Simulados"
 date: 2026-09-25T20:08:54-03:00
-updated: 2026-09-25T20:08:56Z
+updated: 2026-10-26T20:36:00-03:00
 readingTime: "16 min"
 image: "./images/seguranca.webp"
 imageAlt: "segurança da informação"
 tags: ["Simulado", "Segurança da Informação", "Malware", "Criptografia", "Noções de Informática"]
 ---
 
-Vírus, malware, criptografia e backup são só alguns dos assuntos que aparecem neste simulado de segurança da informação, pensado para candidatos que já estudaram a teoria e querem testar a prática. Nas trinta questões comentadas, você revisa os principais conceitos cobrados por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp, sempre com foco nas situações mais exploradas em prova. Cada questão vem acompanhada de um comentário que esclarece o motivo da resposta correta, o que evita a decoreba sem compreensão. Assim, você aprende a reconhecer os termos técnicos e as **pegadinhas** mais comuns dessa disciplina. Portanto, aproveite este simulado de segurança da informação para reforçar exatamente os pontos que ainda geram dúvida.
+Vírus, malware, criptografia e backup são só alguns dos assuntos que aparecem neste simulado de segurança da informação, pensado para candidatos que já estudaram a teoria e querem testar a prática. Nas 40 questões comentadas, você revisa os principais conceitos cobrados por Cebraspe, Cesgranrio, FCC, FGV, IADES e Vunesp, sempre com foco nas situações mais exploradas em prova. Cada questão vem acompanhada de um comentário que esclarece o motivo da resposta correta, o que evita a decoreba sem compreensão. Assim, você aprende a reconhecer os termos técnicos e as **pegadinhas** mais comuns dessa disciplina. Portanto, aproveite este simulado de segurança da informação para reforçar exatamente os pontos que ainda geram dúvida.
 
 ## Malware: os tipos que mais caem na prova
 
@@ -69,6 +69,6 @@ O [artigo sobre backup e segurança da informação](/backup-seguranca-da-inform
 
 ## Simulado de segurança da informação: hora de colocar em prática
 
-Com esses conceitos revisados, chegou o momento de testar o que você aprendeu neste simulado de segurança da informação. Resolva as trinta questões no seu ritmo, sem consultar o comentário antes de responder, e anote os temas em que mais errar.
+Com esses conceitos revisados, chegou o momento de testar o que você aprendeu neste simulado de segurança da informação. Resolva as 40 questões no seu ritmo, sem consultar o comentário antes de responder, e anote os temas em que mais errar.
 
 Se quiser continuar treinando outros módulos, os simulados de [hardware](/simulado-hardware/) e [redes de computadores](/simulado-redes/) seguem o mesmo formato comentado.
