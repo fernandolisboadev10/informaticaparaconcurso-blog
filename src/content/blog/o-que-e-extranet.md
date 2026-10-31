@@ -3,7 +3,7 @@ title: "O que é Extranet? Diferença para Intranet e Internet"
 description: "O que é extranet: conceito, como funciona o acesso de parceiros, diferença para intranet e internet e as pegadinhas mais cobradas em concursos."
 category: "Redes"
 date: 2026-09-13T16:35:26-03:00
-updated: 2026-10-31T10:32:00-03:00
+updated: 2026-10-31T10:37:00-03:00
 tags: ["extranet", "intranet", "internet", "redes de computadores", "concurso público"]
 readingTime: "10 min"
 image: "./images/extranet.webp"
@@ -23,8 +23,6 @@ Segundo o glossário de segurança do NIST (CNSSI 4009-2022), esse tipo de rede 
 Guarde esta ideia: extranet não é sinônimo de acesso público, e também não é um tipo de rede por alcance como a [LAN, a MAN e a WAN](/tipos-redes-computadores-concursos/). Antes de tudo, ela pressupõe uma relação previamente estabelecida entre a empresa e quem está do outro lado da conexão.
 
 ## Como funciona o acesso a essa rede corporativa externa
-
-![](./images/extranet-1-1024x683.webp)
 
 Na prática, essa rede funciona como uma porta lateral da intranet, aberta apenas para visitantes autorizados. Assim, o usuário externo recebe login e senha próprios, com permissões limitadas àquilo que ele realmente precisa enxergar.
 
@@ -53,8 +51,6 @@ Por outro lado, ampliar o acesso da rede também amplia a superfície de ataque,
 Para separar os três conceitos, pense em quem entra em cada rede. A **internet** é pública: qualquer pessoa com um provedor de acesso consegue usá-la, e nenhuma empresa ou governo controla a rede como um todo. A **intranet** fica restrita ao público interno da organização, usando os mesmos protocolos da internet de forma fechada, e não é uma tecnologia diferente. Já a extranet ocupa o meio-termo: parte da rede interna, liberada para um público externo específico e autenticado.
 
 ![Esquema com a internet, a extranet e a intranet em camadas concêntricas](./images/extranet-intranet-internet-camadas.webp)
-
-![O que e extranet tabela comparativa](./images/o-que-e-extranet-tabela-comparativa-1024x683.webp)
 
 | Rede | Quem acessa | Alcance | Exemplo |
 | --- | --- | --- | --- |
