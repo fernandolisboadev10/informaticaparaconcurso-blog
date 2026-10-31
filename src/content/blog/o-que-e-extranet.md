@@ -3,7 +3,7 @@ title: "O que é Extranet? Diferença para Intranet e Internet"
 description: "O que é extranet: conceito, como funciona o acesso de parceiros, diferença para intranet e internet e as pegadinhas mais cobradas em concursos."
 category: "Redes"
 date: 2026-09-13T16:35:26-03:00
-updated: 2026-10-31T09:00:00-03:00
+updated: 2026-10-31T10:32:00-03:00
 tags: ["extranet", "intranet", "internet", "redes de computadores", "concurso público"]
 readingTime: "10 min"
 image: "./images/extranet.webp"
