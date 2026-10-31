@@ -3,14 +3,14 @@ title: "O que é Extranet? Diferença para Intranet e Internet"
 description: "O que é extranet: conceito, como funciona o acesso de parceiros, diferença para intranet e internet e as pegadinhas mais cobradas em concursos."
 category: "Redes"
 date: 2026-09-13T16:35:26-03:00
-updated: 2026-10-17T12:50:00-03:00
+updated: 2026-10-31T09:00:00-03:00
 tags: ["extranet", "intranet", "internet", "redes de computadores", "concurso público"]
 readingTime: "10 min"
 image: "./images/extranet.webp"
 imageAlt: "O Que É Extranet"
 ---
 
-O que é extranet? É a parte da rede de uma empresa liberada, mediante login e senha, para pessoas de fora dela, como fornecedores, clientes e parceiros comerciais. Em concursos, esse é um dos conceitos mais cobrados quando o assunto é redes de computadores, e a banca costuma testá-lo comparando a extranet com a intranet e a internet.
+O que é extranet? É a parte da rede de uma empresa liberada, mediante login e senha, para pessoas de fora dela, como fornecedores, clientes e parceiros comerciais. Em concursos, esse é um dos conceitos mais cobrados quando o assunto é [redes de computadores](/redes-de-computadores-para-concursos/), e a banca costuma testá-lo comparando a extranet com a intranet e a internet.
 
 Para não errar, grave a ideia central: a extranet usa a mesma tecnologia das outras redes, o conjunto de protocolos TCP/IP. Portanto, o que a define não é a tecnologia, mas **quem pode acessar**. Esse critério de acesso é o que separa a resposta certa da **pegadinha**.
 
@@ -18,9 +18,9 @@ Para não errar, grave a ideia central: a extranet usa a mesma tecnologia das ou
 
 Extranet é a extensão controlada da intranet de uma organização para pessoas de fora dela. Diferentemente da intranet, que fica restrita aos funcionários, essa extensão libera uma parte específica da rede para quem tem uma relação direta com a empresa.
 
-Segundo o [glossário de segurança do NIST](https://csrc.nist.gov/glossary/term/extranet) (CNSSI 4009-2022), esse tipo de rede é “uma rede de computadores que uma organização usa para o tráfego de dados de aplicações entre ela e seus parceiros de negócio”. Ou seja, o acesso nunca é livre: existe sempre um vínculo comercial por trás dele.
+Segundo o glossário de segurança do NIST (CNSSI 4009-2022), esse tipo de rede é “uma rede de computadores que uma organização usa para o tráfego de dados de aplicações entre ela e seus parceiros de negócio”. Ou seja, o acesso nunca é livre: existe sempre um vínculo comercial por trás dele.
 
-Guarde esta ideia: extranet não é sinônimo de acesso público. Antes de tudo, ela pressupõe uma relação previamente estabelecida entre a empresa e quem está do outro lado da conexão.
+Guarde esta ideia: extranet não é sinônimo de acesso público, e também não é um tipo de rede por alcance como a [LAN, a MAN e a WAN](/tipos-redes-computadores-concursos/). Antes de tudo, ela pressupõe uma relação previamente estabelecida entre a empresa e quem está do outro lado da conexão.
 
 ## Como funciona o acesso a essa rede corporativa externa
 
@@ -30,23 +30,29 @@ Na prática, essa rede funciona como uma porta lateral da intranet, aberta apena
 
 Além disso, a empresa costuma usar VPN, certificados digitais ou portais web protegidos por HTTPS, que o parceiro acessa normalmente pelo [navegador](/buscador-e-navegador/) como qualquer outra página, para garantir que só o usuário autenticado chegue até os dados. Dessa forma, o restante da rede interna continua isolado, fora do alcance de quem entra por essa via.
 
+![Acesso seguro à extranet com login, senha e conexão protegida](./images/extranet-acesso-seguro-vpn.webp)
+
 Não confunda os dois conceitos: a extranet amplia o alcance da rede corporativa, mas não elimina o controle de acesso. Pelo contrário, ela depende dele para existir com segurança.
 
 ## Um exemplo real de uso da extranet
 
 Imagine uma fábrica que cria um portal para seus fornecedores. Por meio dele, cada fornecedor consulta o estoque, acompanha pedidos em andamento e envia notas fiscais diretamente no sistema da empresa.
 
-Esse fornecedor não tem acesso ao restante da rede interna, como o setor financeiro ou o RH. Ele enxerga somente a área da extranet liberada para o papel dele, o que ilustra bem o conceito de acesso segmentado por perfil.
+Hoje, boa parte desses portais roda na nuvem, como um serviço entregue por terceiros, no modelo [SaaS](/saas-paas-iaas/) que também cai em prova. Esse fornecedor não tem acesso ao restante da rede interna, como o setor financeiro ou o RH. Ele enxerga somente a área da extranet liberada para o papel dele, o que ilustra bem o conceito de acesso segmentado por perfil.
+
+![Fornecedor acessando o portal de pedidos de uma fábrica pela extranet](./images/extranet-portal-fornecedor.webp)
 
 ## Vantagens e riscos da extranet para as empresas
 
 Para a empresa, a extranet resolve um problema concreto: integrar parceiros ao fluxo de trabalho sem duplicar sistemas nem abrir a rede inteira. Dessa forma, fornecedores atualizam pedidos, clientes acompanham entregas e contadores consultam documentos, tudo dentro de um ambiente controlado, sem depender de e-mail ou telefone para cada solicitação.
 
-Por outro lado, ampliar o acesso da rede também amplia a superfície de ataque. Por esse motivo, a extranet exige cuidados extras: perfis de acesso bem definidos, autenticação forte e monitoramento constante das conexões externas. Não é à toa que esse tipo de rede aparece também em questões de segurança da informação, não somente nas que cobram a classificação de redes.
+Por outro lado, ampliar o acesso da rede também amplia a superfície de ataque, já que credenciais roubadas e [malwares](/malwares-e-ameacas-seguranca-da-informacao/) de um parceiro podem chegar até a empresa. Até o [NIST](https://csrc.nist.gov/glossary/term/extranet) trata a extranet como canal de troca de dados entre organizações, o que exige controle. Por esse motivo, a extranet exige cuidados extras: perfis de acesso bem definidos, autenticação forte e monitoramento constante das conexões externas. Não é à toa que esse tipo de rede aparece também em questões de segurança da informação, não somente nas que cobram a classificação de redes.
 
 ## Extranet x intranet x internet: a diferença que a banca cobra
 
 Para separar os três conceitos, pense em quem entra em cada rede. A **internet** é pública: qualquer pessoa com um provedor de acesso consegue usá-la, e nenhuma empresa ou governo controla a rede como um todo. A **intranet** fica restrita ao público interno da organização, usando os mesmos protocolos da internet de forma fechada, e não é uma tecnologia diferente. Já a extranet ocupa o meio-termo: parte da rede interna, liberada para um público externo específico e autenticado.
+
+![Esquema com a internet, a extranet e a intranet em camadas concêntricas](./images/extranet-intranet-internet-camadas.webp)
 
 ![O que e extranet tabela comparativa](./images/o-que-e-extranet-tabela-comparativa-1024x683.webp)
 
@@ -56,7 +62,7 @@ Para separar os três conceitos, pense em quem entra em cada rede. A **internet*
 | **Intranet** | Funcionários da empresa | Interno | Portal do RH, sistema interno |
 | **Extranet** | Funcionários + parceiros externos autenticados | Interno estendido | Portal do fornecedor |
 
-Aliás, essa classificação trata de quem pode acessar a rede, não do alcance geográfico dela. Não misture esse critério com a classificação de LAN, MAN e WAN, que trata de outra coisa: a distância física coberta pela rede. Para revisar como os protocolos se conectam, veja a [aula completa sobre redes de computadores](/redes-de-computadores-para-concursos/).
+Aliás, essa classificação trata de quem pode acessar a rede, não do alcance geográfico dela. Não misture esse critério com a classificação de LAN, MAN e WAN, que trata de outra coisa: a distância física coberta pela rede. Para revisar como os protocolos se conectam, veja a [aula completa sobre redes de computadores](/redes-de-computadores-para-concursos/); e, para entender como os computadores ficam ligados fisicamente, vale ver as [topologias de rede](/topologias-de-rede-concursos/).
 
 ## Pegadinhas de prova sobre extranet
 
@@ -66,7 +72,7 @@ Se a questão disser que a intranet usa uma tecnologia diferente da internet, de
 
 Outra **pegadinha** frequente inverte extranet e intranet, apostando na distração do candidato. Se a banca afirmar que essa rede serve exclusivamente ao público interno da empresa, marque a questão como incorreta, porque essa é justamente a definição de intranet.
 
-Na sua prova, sempre relacione a extranet à ideia de parceria externa autenticada. Esse é um detalhe que costuma confundir o candidato, mas que se resolve com uma pergunta simples: quem está acessando tem vínculo direto com a empresa, e esse acesso passa por login?
+Se a banca for a Cebraspe, que gosta de afirmações absolutas, confira como [ela costuma cobrar informática](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/). Na sua prova, sempre relacione a extranet à ideia de parceria externa autenticada. Esse é um detalhe que costuma confundir o candidato, mas que se resolve com uma pergunta simples: quem está acessando tem vínculo direto com a empresa, e esse acesso passa por login?
 
 ## Perguntas frequentes sobre extranet
 
@@ -96,7 +102,7 @@ Em resumo, a extranet resolve um problema real das empresas: como compartilhar i
 
 Agora que o conceito está claro, aproveite para revisar o quadro comparativo acima e treine a diferenciação entre as três redes no [simulado de redes de computadores](/simulado-redes/). Se ainda tiver dúvidas sobre a estrutura geral das redes, vale revisitar o [guia de redes de computadores para concursos](/redes-de-computadores-para-concursos/) antes de avançar para o próximo tópico.
 
-Para fixar esse conteúdo, resolva agora as questões comentadas logo abaixo. Elas seguem o estilo das principais bancas e ajudam você a identificar, na prática, se o conceito de extranet já está bem consolidado.
+Já que a extranet também envolve controle de acesso, aproveite para praticar no [simulado de segurança da informação](/simulado-seguranca-da-informacao/). Para fixar esse conteúdo, resolva agora as questões comentadas logo abaixo. Elas seguem o estilo das principais bancas e ajudam você a identificar, na prática, se o conceito de extranet já está bem consolidado.
 
 ## Fontes e Referências
 
