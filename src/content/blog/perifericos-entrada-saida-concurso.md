@@ -3,10 +3,10 @@ title: "Periféricos de Entrada e Saída: o que cai em concursos"
 description: "Periféricos de entrada e saída em concursos: aprenda a classificar teclado, monitor, scanner, pendrive e multifuncional e evite as pegadinhas"
 category: "Hardware"
 date: 2026-08-15T10:45:35-03:00
-updated: 2026-09-22T19:23:59Z
+updated: 2026-10-31T11:00:00-03:00
 readingTime: "8 min"
 image: "./images/Perifericos.webp"
-imageAlt: "Periféricos"
+imageAlt: "Periféricos de entrada e saída: teclado, mouse, monitor, scanner e impressora"
 tags: ["Periféricos", "Entrada e Saída", "Hardware", "Noções de Informática"]
 ---
 
@@ -23,6 +23,8 @@ Periféricos são dispositivos de hardware que permitem a comunicação entre o 
 Na prática, funciona assim: quando você digita um texto, usa um periférico para enviar dados ao computador. Em seguida, quando lê esse texto na tela, usa outro periférico para receber a informação que a máquina processou.
 
 Esse é um detalhe que costuma confundir o candidato: nem todo periférico fica fora do gabinete. Placas de rede, placas de som e unidades de armazenamento internas também entram nesse grupo, porque ampliam a capacidade de comunicação do sistema.
+
+![Mesa com periféricos de entrada à esquerda, computador ao centro e periféricos de saída à direita](./images/perifericos-fluxo-entrada-saida.webp)
 
 Se você ainda não domina a relação entre processador, [memória](/aula-hardware-memorias-ram-rom-cache/) e dispositivos, vale revisar antes o guia completo de [hardware para concursos](/hardware-para-concursos/).
 
@@ -61,6 +63,8 @@ A impressora multifuncional é o exemplo preferido das bancas. Quando imprime, e
 
 Outro exemplo importante é a tela sensível ao toque (touchscreen). Ela mostra informações como um monitor e, ao mesmo tempo, recebe toques e comandos como um dispositivo de entrada.
 
+![Impressora multifuncional e tela sensível ao toque, exemplos de periféricos de entrada e saída](./images/perifericos-multifuncional-touchscreen.webp)
+
 Além disso, entram nesse grupo:
 
 -   **Modem e placa de rede:** enviam e recebem dados pela [rede](/redes-de-computadores-para-concursos/).
@@ -72,6 +76,8 @@ Vale destacar que algumas bancas tratam pendrive, HD e SSD como dispositivos de 
 ## Periféricos em concursos: as pegadinhas mais comuns da Cebraspe
 
 A [Cebraspe](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) gosta de palavras absolutas, como “somente”, “sempre” e “exclusivamente”, para tornar um item errado. Assim, sempre que encontrar uma delas, analise a função do dispositivo com calma.
+
+![Comparação entre scanner, periférico de entrada, e impressora, periférico de saída](./images/perifericos-scanner-x-impressora.webp)
 
 Veja os erros mais comuns:
 
