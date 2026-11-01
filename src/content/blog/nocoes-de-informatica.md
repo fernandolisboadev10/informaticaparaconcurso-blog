@@ -1,14 +1,14 @@
 ---
 title: "Noções de Informática para Concursos: o Guia Completo com os 5 Blocos que Caem em Prova"
 seoTitle: "Noções de Informática para Concursos: Guia Completo"
-description: "Noções de informática para concursos: os 5 blocos da matéria, como a banca cobra cada assunto e um roteiro de estudo com aulas e simulados."
+description: "Noções de informática para concursos: os 5 blocos, o que muda no nível médio e superior, como cada banca cobra e um roteiro de estudo com simulados."
 category: "Simulados"
 date: 2026-09-25T21:59:54-03:00
-updated: 2026-09-25T22:00:12Z
-readingTime: "19 min"
-image: "./images/Nocoes-de-Informatica.webp"
-imageAlt: "Noções de Informática"
-tags: ["Noções de Informática", "Concurso Público", "Roteiro de Estudo", "Simulado"]
+updated: 2026-10-31T22:15:00-03:00
+readingTime: "23 min"
+image: "./images/nocoes-de-informatica-capa.webp"
+imageAlt: "Concurseiro visto de costas escrevendo em um caderno a lista de temas de noções de informática: sistema Windows, sistema Linux, segurança da informação, pacote Office, redes de computadores e inteligência artificial"
+tags: ["Noções de Informática", "Concurso Público", "Roteiro de Estudo", "Simulado", "Nível Médio", "Nível Superior"]
 ---
 
 Você abre o edital, chega à disciplina de noções de informática e encontra uma lista longa: **Windows, Linux, Word, Excel, redes, segurança, backup**. Diante de tanto assunto, muita gente estuda tudo ao mesmo tempo, sem ordem e sem prioridade.
@@ -33,7 +33,36 @@ Por outro lado, o nível básico engana. As questões não exigem conhecimento a
 
 Portanto, decorar definições soltas não resolve. Você precisa entender como cada recurso funciona, porque só assim percebe a troca sutil no enunciado.
 
+## Nível médio e nível superior: o que muda na cobrança
+
+O conteúdo de noções de informática é basicamente o mesmo nos dois níveis. O que muda é o **peso**, a **profundidade** e o **contexto** em que a matéria aparece. O edital do [TRT 8](/concurso-trt-8-2026/), por exemplo, traz o mesmo programa para Analistas (nível superior) e Técnicos (nível médio) e avisa que as provas têm níveis de complexidade diferentes conforme o cargo.
+
+| | Nível médio | Nível superior |
+| --- | --- | --- |
+| Cargos comuns | Técnico, Soldado, Agente, Auxiliar, Assistente | Analista, Oficial, Auditor, Professor, cargos de formação específica |
+| Peso da informática | Costuma ter mais destaque no bloco de conhecimentos gerais | Divide espaço com mais disciplinas, normalmente com poucas questões |
+| Foco da prova | Uso prático: Windows, Word, Excel, navegadores, arquivos e segurança básica | Conceitos, segurança da informação, nuvem, redes e ferramentas de trabalho colaborativo |
+| Como estudar | Domine o básico e treine muito as pegadinhas | Revise o essencial rápido e invista em quem pontua mais, como a disciplina do cargo |
+
+Essa tabela mostra tendências, não regras. Quem manda é o edital, e a diferença mais importante está nos cargos de **Tecnologia da Informação**. Nos editais de tribunal, essas especialidades costumam ter um programa próprio de TI, sem a disciplina de noções de informática dos demais cargos. Se você mira essa área, o estudo é bem mais profundo do que o deste guia.
+
+Na prática, o nível médio é onde a informática rende mais. Em concursos de polícia, de guarda e de nível técnico, ela costuma ser uma das disciplinas em que quem estuda com método abre vantagem. No nível superior, ela raramente decide a aprovação sozinha, mas cada acerto ajuda quando a nota de corte é apertada.
+
 ## Como a banca cobra noções de informática
+
+### Cada banca tem o seu estilo
+
+A matéria é a mesma, mas o formato muda conforme quem organiza a prova. Os exemplos abaixo vêm de editais abertos em 2026:
+
+| Banca | Formato da questão | Exemplo recente |
+| --- | --- | --- |
+| Cebraspe | Certo ou Errado | [Câmara dos Deputados e PM MA](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) |
+| FCC | Múltipla escolha, cinco alternativas | [TRT 8](/concurso-trt-8-2026/) |
+| AOCP | Múltipla escolha | [PM PE](/concurso-pm-pe-2026/) |
+| Vunesp | Múltipla escolha | TRF 3 e TJ-SP |
+| Cesgranrio | Múltipla escolha | [Petrobras e Transpetro](/concurso-petrobras-2026/) |
+
+Treinar com provas anteriores da mesma banca vale mais do que ler mais teoria. Cada uma tem um jeito de montar o enunciado e as alternativas, e esse jeito só se aprende resolvendo questões.
 
 ### Certo ou Errado e as palavras absolutas
 
@@ -100,11 +129,24 @@ Além desses cinco blocos, alguns editais incluem hardware. Se o seu edital cobr
 
 Guarde esta ideia: a RAM é volátil e perde os dados quando o computador desliga, enquanto a ROM mantém o conteúdo mesmo sem energia. Em seguida, faça o [simulado de hardware](/simulado-hardware/).
 
+## Noções de informática em cada tipo de concurso
+
+O mesmo guia serve para concursos muito diferentes, mas cada tipo tem as suas particularidades. Veja o que aparece nos principais:
+
+-   **Tribunais (TRT, TRF, TJ):** cargos de nível médio e superior, normalmente com banca FCC ou Vunesp. O TRT 8 cobra Windows 10 e 11, Google Workspace, redes, navegadores, buscadores, arquivos e segurança. Já a cobertura do TRF 3 indica um programa que inclui Inteligência Artificial e ferramentas como Microsoft 365 e Teams, então confirme no Anexo do edital;
+-   **Polícias e bombeiros:** nível médio, com Cebraspe, AOCP e outras bancas, e foco em Windows, Office, redes e segurança. Veja os exemplos de [PM PE](/concurso-pm-pe-2026/) e [PM MA](/gabarito-extraoficial-pm-ma-soldado/);
+-   **Legislativo (Câmara dos Deputados, assembleias):** nível superior, em geral com Cebraspe, e com programa de conhecimentos básicos definido no edital de cada cargo;
+-   **Estatais (Petrobras, Transpetro):** banca Cesgranrio. Nos editais da Transpetro, os conhecimentos gerais são Português, Matemática e Inglês, sem Informática. Nesses concursos, ela pesa nos cargos de TI. O resumo está em [concurso Petrobras 2026](/concurso-petrobras-2026/);
+-   **Fazenda e tribunais de contas:** nível superior, com bancas como FCC e Cebraspe, em que a informática costuma ser uma disciplina curta ao lado de Direito e Contabilidade;
+-   **Prefeituras e guardas municipais:** nível médio e superior, com bancas regionais variadas, em que o conteúdo costuma ser o básico de Windows, Office e Internet.
+
+Para ver quais concursos estão com inscrição aberta e em qual banca, acompanhe a lista de [concurso público 2026](/concurso-publico-2026/), atualizada com prazos e vagas.
+
 ## Como estudar noções de informática: roteiro por etapas
 
 Na prática, funciona assim: você estuda um bloco, faz o simulado e anota cada erro. Essa lista de erros vira o seu material de revisão. Siga estas etapas:
 
-1.  Leia o edital e marque quais blocos ele cobra.
+1.  Leia o edital e marque o nível do cargo, a banca e quais blocos ele cobra.
 2.  Comece por sistemas operacionais e arquivos, pois essa base sustenta o resto.
 3.  Avance para o Office: Word, Excel e PowerPoint.
 4.  Estude redes, navegadores e correio eletrônico.
