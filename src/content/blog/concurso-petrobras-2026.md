@@ -4,6 +4,7 @@ seoTitle: "Concurso Petrobras 2026: Edital, Banca e Como Estudar"
 description: "Concurso Petrobras 2026 ainda sem edital: banca Cesgranrio, PDV de 1.100 saídas, o exemplo da Transpetro e um plano de estudo para começar já."
 category: "Concursos"
 date: 2026-10-31T20:40:00-03:00
+updated: 2026-10-31T21:43:00-03:00
 readingTime: "7 min"
 tags: ["Petrobras 2026", "Cesgranrio", "Transpetro", "Edital", "Como Estudar"]
 image: "./images/concurso-petrobras-2026.webp"
@@ -43,6 +44,23 @@ Quem quer entender como a Cesgranrio monta uma prova para o sistema Petrobras po
 -   **Salário de nível técnico:** de R$ 3.776,64 (básico) a R$ 6.539,54 (mínimo garantido);
 -   **Salário de nível superior:** de R$ 8.647,34 (básico) a R$ 14.973,62 (mínimo garantido).
 
+### Cargos do Edital 01 da Transpetro (marinha)
+
+O Edital 01 reúne os cargos de guarnição, que trabalham a bordo dos navios. A remuneração mínima garantida, conforme o portal da Cesgranrio, é esta (a taxa de inscrição é de R$ 81,50):
+
+| Cargo | Remuneração mínima garantida |
+| --- | --- |
+| Auxiliar de Saúde | R$ 9.742,63 |
+| Eletricista | R$ 9.742,63 |
+| Condutor Bombeador | R$ 9.646,91 |
+| Condutor Mecânico | R$ 9.646,91 |
+| Cozinheiro | R$ 6.624,90 |
+| Taifeiro | R$ 6.624,90 |
+| Moço de Convés | R$ 5.464,00 |
+| Moço de Máquinas | R$ 5.464,00 |
+
+A soldada básica varia de R$ 2.074,66 a R$ 3.914,02, e a diferença até o mínimo garantido vem dos adicionais de embarque. Cada cargo tem uma tabela de requisitos própria no edital, então leia a do seu antes de pagar a taxa.
+
 Um dado útil para quem estuda: na prova de nível técnico, os 20 itens de Conhecimentos Gerais são **10 de Português e 10 de Matemática**, e no nível superior, 10 de Português e 10 de Inglês, com 40 ou 50 itens de Conhecimentos Específicos. Segundo o levantamento consultado, Informática não aparece entre os conhecimentos gerais. Isso não permite afirmar que a Petrobras fará igual, mas é o melhor indício disponível sobre o estilo da banca nesse grupo.
 
 ## E Informática, entra ou não?
@@ -74,5 +92,6 @@ Se o plano é prestar a Petrobras, o melhor uso das próximas semanas é estudar
 ## Fontes e Referências
 
 -   Gran Cursos Online. Concurso Petrobras: Cesgranrio é a banca: [blog.grancursosonline.com.br](https://blog.grancursosonline.com.br/concurso-petrobras/)
+-   Fundação Cesgranrio. Edital 01 da Transpetro, cargos e remunerações: [concursos.cesgranrio.org.br](https://concursos.cesgranrio.org.br/portal/avaliacoes/22)
 -   Gran Cursos Online. Concurso Transpetro: 4.171 vagas, provas em 6/12: [blog.grancursosonline.com.br](https://blog.grancursosonline.com.br/concurso-transpetro/)
 -   Focus Concursos. Vai ter concurso da Petrobras em 2026?: [noticias.focusconcursos.com.br](https://noticias.focusconcursos.com.br/noticias/vai-ter-concurso-da-petrobras-em-2026-entenda-por-que-o-novo-edital-a-grande-aposta-do-ano)
