@@ -12,6 +12,9 @@ const nav = [
 ];
 
 const currentHref = Astro.url.pathname + Astro.url.search;
+
+const questoesUrl = 'https://www.geradordequestoes.site/?utm_source=blog&utm_medium=menu&utm_campaign=nav_questoes';
+const questoesLabel = 'Questões: gerador de questões com IA (abre em nova aba)';
 ---
 <header class="site-header">
   <div class="container bar">
@@ -29,6 +32,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
       {nav.map((item) => (
         <a href={item.href} class:list={{ active: item.href === currentHref }}>{item.label}</a>
       ))}
+      <a href={questoesUrl} class="cta-questoes" target="_blank" rel="noopener" aria-label={questoesLabel}>Questões</a>
     </nav>
     <div class="right-controls">
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar tema escuro">
@@ -64,6 +68,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     {nav.map((item) => (
       <a href={item.href} class:list={{ active: item.href === currentHref }}>{item.label}</a>
     ))}
+    <a href={questoesUrl} class="cta-questoes" target="_blank" rel="noopener" aria-label={questoesLabel}>Questões</a>
   </nav>
 </header>
 
@@ -194,6 +199,52 @@ const currentHref = Astro.url.pathname + Astro.url.search;
   .nav a.active {
     color: var(--violet-deep);
     background: var(--line);
+  }
+
+  /* Botão do gerador de questões: brilho neon que pulsa algumas vezes e fica fixo. */
+  .nav a.cta-questoes,
+  .mobile-nav a.cta-questoes {
+    --neon: 38, 224, 208;
+    color: #fff;
+    background: #0a6268;
+    box-shadow: 0 0 6px rgba(var(--neon), 0.55), 0 0 14px rgba(var(--neon), 0.3);
+    animation: neon-pulse 2.4s ease-in-out 8;
+  }
+
+  .nav a.cta-questoes {
+    margin-left: 8px;
+    padding: 8px 16px;
+  }
+
+  .nav a.cta-questoes:hover,
+  .mobile-nav a.cta-questoes:hover {
+    color: #fff;
+    background: #0d7d85;
+    box-shadow: 0 0 10px rgba(var(--neon), 0.8), 0 0 22px rgba(var(--neon), 0.45);
+  }
+
+  .mobile-nav a.cta-questoes {
+    margin: 14px 24px;
+    padding: 12px 20px;
+    border-bottom: none;
+    border-radius: 24px;
+    text-align: center;
+  }
+
+  @keyframes neon-pulse {
+    0%, 100% {
+      box-shadow: 0 0 6px rgba(var(--neon), 0.55), 0 0 14px rgba(var(--neon), 0.3);
+    }
+    50% {
+      box-shadow: 0 0 12px rgba(var(--neon), 0.95), 0 0 28px rgba(var(--neon), 0.6);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav a.cta-questoes,
+    .mobile-nav a.cta-questoes {
+      animation: none;
+    }
   }
 
   .right-controls {
