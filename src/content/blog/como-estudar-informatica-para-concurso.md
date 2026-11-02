@@ -4,7 +4,7 @@ seoTitle: "Como Estudar Informática para Concurso: Passo a Passo"
 description: "Como estudar informática para concurso do básico ao avançado: ordem certa, prática, questões e tópicos que crescem, como IPv6, IA e criptomoedas."
 category: "Dicas"
 date: 2026-10-17T09:20:00-03:00
-updated: 2026-11-02T16:30:00-03:00
+updated: 2026-11-02T16:31:00-03:00
 tags: ["como estudar informática para concurso", "plano de estudo", "noções de informática", "concurso público", "caderno de erros", "informática avançada"]
 readingTime: "15 min"
 related:
@@ -12,8 +12,8 @@ related:
   - como-estudar-para-concurso
   - informatica-para-concursos-5-duvidas-prova
   - cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica
-image: "./images/como-estudar-informatica-para-concurso-capa.webp"
-imageAlt: "Concurseiro visto de costas estudando informática para concurso, escrevendo em um caderno com anotações e marca-textos, ao lado de um notebook e de um livro aberto"
+image: "./images/como-estudar-informatica-para-concurso-simbolos.webp"
+imageAlt: "Homem estudando informática para concurso em um notebook, com ícones de Windows, Linux, pacote de escritório, redes, nuvem e inteligência artificial flutuando ao redor e o título Informática para Concursos"
 ---
 
 Informática é a matéria em que o candidato mais perde ponto por descuido e menos por falta de inteligência. O conteúdo parece simples, o estudo costuma ser deixado para depois e, na prova, uma única palavra muda o sentido do item.
