@@ -1,7 +1,7 @@
 ---
 title: "Simulado Arquivos"
 description: "Simulado de organização de arquivos com 40 questões comentadas no estilo das bancas. Revise backup, pastas e compactação para o concurso."
-category: "Simulados"
+category: "Arquivos"
 date: 2026-08-23T13:00:32-03:00
 updated: 2026-10-26T20:36:00-03:00
 readingTime: "15 min"

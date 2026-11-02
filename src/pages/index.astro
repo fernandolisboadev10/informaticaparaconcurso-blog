@@ -19,7 +19,7 @@ const totalPages = Math.max(1, Math.ceil(all.length / PER_PAGE));
 const posts = all.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
 // Categories that are not a syllabus subject get their own blocks instead.
-const NOT_SUBJECTS = ['Concursos', 'Dicas', 'Simulados'];
+const NOT_SUBJECTS = ['Concursos', 'Dicas'];
 const inCategory = (name: string) => all.filter((p) => p.data.category === name);
 const subjects = categories
   .filter((c) => !NOT_SUBJECTS.includes(c.name))
@@ -37,7 +37,8 @@ const subjects = categories
 
 const lessons = subjects.reduce((n, s) => n + s.posts.length, 0);
 const questions = all.reduce((n, p) => n + questionCount(p.id), 0);
-const simulados = inCategory('Simulados');
+// Os simulados agora ficam na categoria do assunto; a home os reúne pelo prefixo do slug.
+const simulados = all.filter((p) => p.id.startsWith('simulado-'));
 const concursos = inCategory('Concursos');
 ---
 <BaseLayout title={page > 1 ? `Informática para Concurso: resumos e simulados - Página ${page}` : "Informática para Concurso: resumos e simulados"} description="Resumos, simulados e o que cai na prova de informática dos concursos, em linguagem simples e direta.">
@@ -79,7 +80,7 @@ const concursos = inCategory('Concursos');
     <div class="container pair">
       {simulados.length > 0 && (
         <section>
-          <SectionHead title="Simulados" href={categoryHref('Simulados')} linkLabel={`Ver os ${simulados.length}`} />
+          <SectionHead title="Simulados" href="/blog/?q=simulado" linkLabel={`Ver os ${simulados.length}`} />
           <CompactList posts={simulados.slice(0, 5)} />
         </section>
       )}

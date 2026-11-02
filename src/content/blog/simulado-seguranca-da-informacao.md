@@ -1,7 +1,7 @@
 ---
 title: "Simulado Segurança da Informação"
 description: "Simulado de segurança da informação com 40 questões comentadas no estilo das bancas. Revise vírus, backup e criptografia para o concurso."
-category: "Simulados"
+category: "Segurança"
 date: 2026-09-25T20:08:54-03:00
 updated: 2026-10-26T20:36:00-03:00
 readingTime: "16 min"

@@ -1,7 +1,7 @@
 ---
 title: "Simulado Sistemas Operacionais"
 description: "Simulado de sistemas operacionais com 40 questões comentadas no estilo das principais bancas. Treine agora e prepare-se para o concurso."
-category: "Simulados"
+category: "Sistemas"
 date: 2026-09-25T20:11:01-03:00
 updated: 2026-10-26T20:36:00-03:00
 readingTime: "14 min"

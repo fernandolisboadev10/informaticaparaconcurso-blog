@@ -6,6 +6,8 @@ import AuthorBio from '../components/AuthorBio.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import Quiz from '../components/Quiz.astro';
+import QuestoesCTA from '../components/QuestoesCTA.astro';
+import { showQuestoesCta } from '../data/questoes';
 import type { Question } from '../components/Quiz.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
@@ -124,7 +126,9 @@ const breadcrumbSchema = {
           <slot />
         </div>
 
-        {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
+        {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} slug={Astro.props.slug} />}
+
+        {showQuestoesCta(Astro.props.slug, category, Boolean(quiz)) && <QuestoesCTA slug={Astro.props.slug} />}
 
         <AuthorBio />
 

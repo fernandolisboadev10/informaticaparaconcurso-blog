@@ -1,7 +1,7 @@
 ---
 title: "Simulado de Informática Cebraspe Nível Superior: 50 Questões"
 description: "Simulado de Informática Cebraspe para nível superior: 50 questões de múltipla escolha, com acerto ou erro e comentário na hora, no estilo Polícia Civil."
-category: "Simulados"
+category: "Dicas"
 date: 2026-10-14T10:00:00-03:00
 updated: 2026-10-19T20:59:00-03:00
 readingTime: "35 min"

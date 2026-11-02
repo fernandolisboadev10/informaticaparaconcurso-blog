@@ -1,7 +1,7 @@
 ---
 title: "Simulado de Redes de Computadores"
 description: "Simulado de redes de computadores com 40 questões comentadas no estilo das principais bancas. Teste seus conhecimentos agora."
-category: "Simulados"
+category: "Redes"
 date: 2026-08-23T13:03:03-03:00
 updated: 2026-10-26T20:36:00-03:00
 readingTime: "16 min"

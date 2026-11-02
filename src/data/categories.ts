@@ -80,15 +80,6 @@ export const categories: Category[] = [
     intro:
       'Ameaças, defesas e boas práticas de segurança, com as diferenças entre ferramentas que as bancas adoram cobrar.',
   },
-  {
-    slug: 'simulados',
-    name: 'Simulados',
-    title: 'Simulados de informática para concursos',
-    description:
-      'Simulados de informática por assunto, com questões no estilo das bancas para testar o que você estudou.',
-    intro:
-      'Questões no estilo das bancas para praticar cada assunto e descobrir onde ainda falta revisar.',
-  },
 ];
 
 export const categoryHref = (name: string): string => {

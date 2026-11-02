@@ -1,4 +1,6 @@
 ---
+import { questoesUrl } from '../data/questoes';
+
 export interface Question {
   banca?: string;
   module?: string;
@@ -11,13 +13,15 @@ export interface Question {
 
 interface Props {
   questions: Question[];
+  slug?: string;
   title?: string;
   // 'instant': feedback right after each answer. 'final': nothing is revealed until the reader
   // finishes; then score, per-module performance and the commented answer key appear below.
   mode?: 'instant' | 'final';
 }
 
-const { questions, title = 'Questões comentadas', mode = 'instant' } = Astro.props;
+const { questions, title = 'Questões comentadas', mode = 'instant', slug } = Astro.props;
+const ctaHref = questoesUrl('quiz_resultado', slug);
 const final = mode === 'final';
 const total = questions.length;
 const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -101,6 +105,7 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
         <p class="quiz-focus"></p>
       </>
     )}
+    <a class="quiz-cta" href={ctaHref} target="_blank" rel="noopener">Gerar mais questões no Gerador de Questões</a>
   </div>
 
   {final && (
@@ -267,6 +272,8 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
         focusEl.textContent = weakName
           ? `Por onde recomeçar a revisão: ${weakName}.`
           : 'Você acertou todos os módulos. Mantenha o ritmo e descanse bem.';
+        const ctaLink = quiz.querySelector<HTMLAnchorElement>('.quiz-cta');
+        if (ctaLink && weakName) ctaLink.textContent = `Gerar mais questões de ${weakName}`;
 
         result.hidden = false;
         gabarito.hidden = false;
@@ -629,6 +636,21 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
   .quiz-msg {
     margin: 0;
     color: var(--ink-soft);
+  }
+
+  .quiz-cta {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 20px;
+    border-radius: 24px;
+    background: #0a6268;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .quiz-cta:hover {
+    background: #0d7d85;
   }
 
   .quiz-result {

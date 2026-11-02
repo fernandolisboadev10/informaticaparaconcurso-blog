@@ -1,7 +1,7 @@
 ---
 title: "Simulado de Véspera PM MA 2026: 40 Questões Comentadas"
 description: "Simulado de véspera de Informática para a PM MA 2026 com 40 questões estilo Cebraspe, nota de desempenho por módulo e gabarito comentado no final."
-category: "Simulados"
+category: "Concursos"
 date: 2026-10-09T20:30:00-03:00
 readingTime: "30 min"
 tags: ["Simulado", "PM MA 2026", "Cebraspe", "Noções de Informática"]

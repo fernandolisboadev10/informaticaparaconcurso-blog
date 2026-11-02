@@ -1,0 +1,65 @@
+---
+import { bancaOf, questoesAriaLabel, questoesUrl } from '../data/questoes';
+
+interface Props {
+  slug: string;
+}
+
+const { slug } = Astro.props;
+const banca = bancaOf(slug);
+const title = banca ? `Treine no estilo ${banca}` : 'Treine com questões novas, no estilo da sua banca';
+const href = questoesUrl('cta_fim_post', slug);
+---
+<aside class="questoes-cta" aria-labelledby="questoes-cta-title">
+  <p class="eyebrow">Gerador de Questões</p>
+  <h2 id="questoes-cta-title">{title}</h2>
+  <p>
+    Nossa ferramenta de estudo com IA cria questões novas a cada pedido, por assunto, nível e banca, e ajuda a revisar os itens em que você errou.
+  </p>
+  <a class="btn" href={href} target="_blank" rel="noopener" aria-label={`Conhecer o ${questoesAriaLabel}`}>Conhecer o Gerador de Questões</a>
+</aside>
+
+<style>
+  .questoes-cta {
+    margin: 36px 0;
+    padding: 24px;
+    border-radius: 16px;
+    background: #0a6268;
+    color: #fff;
+    box-shadow: 0 0 0 1px rgba(38, 224, 208, 0.35), 0 0 22px rgba(38, 224, 208, 0.18);
+  }
+
+  .eyebrow {
+    margin: 0 0 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #9ff3ea;
+  }
+
+  .questoes-cta h2 {
+    margin: 0 0 8px;
+    font-size: 1.35rem;
+    color: #fff;
+  }
+
+  .questoes-cta p:not(.eyebrow) {
+    margin: 0 0 16px;
+    color: #e3fbf8;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 24px;
+    background: #fff;
+    color: #0a6268;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    background: #e3fbf8;
+  }
+</style>
