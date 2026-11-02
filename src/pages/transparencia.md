@@ -18,7 +18,7 @@ Nosso compromisso é entregar conteúdos revisados, minimizando o risco de você
 
 ## Diversidade de Bancas e Perfis
 
-O mundo dos concursos envolve diferentes metodologias de avaliação — do “Certo e Errado” do CEBRASPE à múltipla escolha da FGV e Vunesp. Nosso objetivo é apresentar uma visão panorâmica desse ecossistema, oferecendo análises de perfil para cada banca.
+O mundo dos concursos envolve diferentes metodologias de avaliação, do “Certo e Errado” do CEBRASPE à múltipla escolha da FGV e Vunesp. Nosso objetivo é apresentar uma visão panorâmica desse ecossistema, oferecendo análises de perfil para cada banca.
 
 Dessa forma, buscamos garantir que você tenha um entendimento equilibrado sobre como o mesmo assunto pode ser cobrado de maneiras completamente diferentes dependendo do concurso.
 

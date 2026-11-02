@@ -194,7 +194,7 @@
     "Acelerar a velocidade de download de arquivos"
    ],
    "answer": "A",
-   "comment": "O firewall atua como uma barreira de filtragem de tráfego de rede, decidindo o que pode entrar e sair com base em regras — ele não remove vírus já instalados (essa é função do antivírus)."
+   "comment": "O firewall atua como uma barreira de filtragem de tráfego de rede, decidindo o que pode entrar e sair com base em regras. Ele não remove vírus já instalados (essa é função do antivírus)."
   },
   {
    "banca": "Estilo FGV",

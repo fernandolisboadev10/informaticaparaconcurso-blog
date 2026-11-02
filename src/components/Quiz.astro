@@ -215,7 +215,7 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
           const g = gItems[i];
           g.classList.add(state === 'right' ? 'ok' : state);
           g.querySelector<HTMLElement>('.g-chip')!.textContent =
-            state === 'right' ? '✓ Acertou' : state === 'wrong' ? '✗ Errou' : '— Em branco';
+            state === 'right' ? '✓ Acertou' : state === 'wrong' ? '✗ Errou' : 'Em branco';
           g.querySelector<HTMLElement>('.g-yours')!.textContent =
             pick === undefined
               ? 'não respondida'

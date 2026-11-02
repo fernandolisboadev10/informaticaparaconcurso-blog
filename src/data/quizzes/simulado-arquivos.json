@@ -61,7 +61,7 @@
     "É criado um atalho (link) para o arquivo original, sem movê-lo"
    ],
    "answer": "B",
-   "comment": "Recortar e colar (Ctrl+X + Ctrl+V) move o arquivo — diferente de copiar e colar (Ctrl+C + Ctrl+V), que duplica o arquivo, mantendo o original no lugar."
+   "comment": "Recortar e colar (Ctrl+X + Ctrl+V) move o arquivo, diferente de copiar e colar (Ctrl+C + Ctrl+V), que duplica o arquivo, mantendo o original no lugar."
   },
   {
    "banca": "Estilo Vunesp",
@@ -278,7 +278,7 @@
     "Um arquivo de áudio"
    ],
    "answer": "A",
-   "comment": "A extensão .exe identifica um arquivo executável do Windows — ao ser aberto, ele inicia a execução de um programa."
+   "comment": "A extensão .exe identifica um arquivo executável do Windows: ao ser aberto, ele inicia a execução de um programa."
   },
   {
    "banca": "Estilo IADES",
