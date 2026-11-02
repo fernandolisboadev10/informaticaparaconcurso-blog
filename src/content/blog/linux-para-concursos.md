@@ -4,7 +4,7 @@ seoTitle: "Linux para Concursos: o que Cai na Prova da Cebraspe"
 description: "Entenda por que a Cebraspe cobra tanto Linux, veja kernel, distribuições e comandos essenciais e treine com 12 questões de Certo ou Errado."
 category: "Sistemas"
 date: 2026-09-26T12:22:06-03:00
-updated: 2026-10-26T20:48:00-03:00
+updated: 2026-11-01T21:18:00-03:00
 readingTime: "17 min"
 image: "./images/image-1.webp"
 imageAlt: "Pinguim do Linux ao lado de um terminal com os comandos mais cobrados em concursos"
@@ -118,7 +118,7 @@ Guarde esta ideia, porque ela costuma render questão isolada: o comando `chmod`
 
 A tabela abaixo resume os comandos mais cobrados sobre esse bloco. Consulte-a sempre que precisar revisar rapidamente antes da prova.
 
-  Tabela — Comandos e Permissões Linux para Concursos 
+  Tabela: Comandos e Permissões Linux para Concursos 
 
 Comandos e permissões de Linux mais cobrados em concurso
 
