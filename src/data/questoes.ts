@@ -1,11 +1,6 @@
 // Gerador de Questões: produto próprio, divulgado no menu, no fim dos posts e no resultado dos simulados.
-const BASE = 'https://www.geradordequestoes.site/';
-
-export const questoesUrl = (medium: string, content?: string): string => {
-  const params = new URLSearchParams({ utm_source: 'blog', utm_medium: medium, utm_campaign: 'gerador' });
-  if (content) params.set('utm_content', content);
-  return `${BASE}?${params.toString()}`;
-};
+// Link limpo, sem parâmetros UTM, para o leitor ver e copiar o endereço do produto.
+export const QUESTOES_URL = 'https://www.geradordequestoes.site/';
 
 export const questoesAriaLabel = 'Gerador de Questões com IA (abre em nova aba)';
 

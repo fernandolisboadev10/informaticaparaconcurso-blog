@@ -126,7 +126,7 @@ const breadcrumbSchema = {
           <slot />
         </div>
 
-        {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} slug={Astro.props.slug} />}
+        {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
 
         {showQuestoesCta(Astro.props.slug, category, Boolean(quiz)) && <QuestoesCTA slug={Astro.props.slug} />}
 

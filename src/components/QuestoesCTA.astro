@@ -1,5 +1,5 @@
 ---
-import { bancaOf, questoesAriaLabel, questoesUrl } from '../data/questoes';
+import { bancaOf, questoesAriaLabel, QUESTOES_URL } from '../data/questoes';
 
 interface Props {
   slug: string;
@@ -8,7 +8,7 @@ interface Props {
 const { slug } = Astro.props;
 const banca = bancaOf(slug);
 const title = banca ? `Treine no estilo ${banca}` : 'Treine com questões novas, no estilo da sua banca';
-const href = questoesUrl('cta_fim_post', slug);
+const href = QUESTOES_URL;
 ---
 <aside class="questoes-cta" aria-labelledby="questoes-cta-title">
   <p class="eyebrow">Gerador de Questões</p>

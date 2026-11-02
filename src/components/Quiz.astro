@@ -1,5 +1,5 @@
 ---
-import { questoesUrl } from '../data/questoes';
+import { QUESTOES_URL } from '../data/questoes';
 
 export interface Question {
   banca?: string;
@@ -13,15 +13,14 @@ export interface Question {
 
 interface Props {
   questions: Question[];
-  slug?: string;
   title?: string;
   // 'instant': feedback right after each answer. 'final': nothing is revealed until the reader
   // finishes; then score, per-module performance and the commented answer key appear below.
   mode?: 'instant' | 'final';
 }
 
-const { questions, title = 'Questões comentadas', mode = 'instant', slug } = Astro.props;
-const ctaHref = questoesUrl('quiz_resultado', slug);
+const { questions, title = 'Questões comentadas', mode = 'instant' } = Astro.props;
+const ctaHref = QUESTOES_URL;
 const final = mode === 'final';
 const total = questions.length;
 const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
