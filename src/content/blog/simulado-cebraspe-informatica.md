@@ -3,7 +3,7 @@ title: "Simulado de Informática Cebraspe Nível Superior: 50 Questões"
 description: "Simulado de Informática Cebraspe para nível superior: 50 questões de múltipla escolha, com acerto ou erro e comentário na hora, no estilo Polícia Civil."
 category: "Dicas"
 date: 2026-10-14T10:00:00-03:00
-updated: 2026-11-03T09:55:00-03:00
+updated: 2026-11-03T10:07:00-03:00
 readingTime: "35 min"
 tags: ["Simulado", "Cebraspe", "Nível Superior", "Polícia Civil", "Múltipla Escolha", "Noções de Informática"]
 image: "./images/simulado-cebraspe-informatica.webp"
@@ -38,20 +38,20 @@ Uma observação sobre a nota: no edital da PC-MA, cada questão vale 1 ponto, e
 
 ## Os 12 blocos do simulado de Informática Cebraspe
 
-As 50 questões do simulado acompanham os tópicos do edital, nesta ordem. Os itens marcados em verde-limão são os que mais pesam no concurso policial e merecem sua atenção primeiro:
+As 50 questões do simulado acompanham os tópicos do edital, nesta ordem. Os 12 blocos estão marcados em verde-limão, e os termos extras destacados dentro dos blocos 7 a 10 são os que mais pesam no concurso policial:
 
-1. **Internet, intranet e e-mail** (4 questões): extranet, SMTP e IMAP, Cco e *phishing*.
-2. **Sistemas operacionais** (4): atalhos, área de transferência e o Linux.
-3. **Office e LibreOffice** (4): formatos nativos, referências de células e mala direta.
-4. **Navegação, busca e redes sociais** (4): URL, janela anônima, operadores de busca e OSINT.
-5. **Redes de computadores** (5): LAN, MAN e WAN, IPv4, IPv6, Wi-Fi e DNS.
-6. **Computação em nuvem** (4): SaaS, PaaS e IaaS, armazenamento e colaboração.
+1. <span class="cai-prova lima">**Internet, intranet e e-mail**</span> (4 questões): extranet, SMTP e IMAP, Cco e *phishing*.
+2. <span class="cai-prova lima">**Sistemas operacionais**</span> (4): atalhos, área de transferência e o Linux.
+3. <span class="cai-prova lima">**Office e LibreOffice**</span> (4): formatos nativos, referências de células e mala direta.
+4. <span class="cai-prova lima">**Navegação, busca e redes sociais**</span> (4): URL, janela anônima, operadores de busca e OSINT.
+5. <span class="cai-prova lima">**Redes de computadores**</span> (5): LAN, MAN e WAN, IPv4, IPv6, Wi-Fi e DNS.
+6. <span class="cai-prova lima">**Computação em nuvem**</span> (4): SaaS, PaaS e IaaS, armazenamento e colaboração.
 7. <span class="cai-prova lima">**CID, malware e proteção**</span> (6): <span class="cai-prova lima">confidencialidade, integridade, disponibilidade</span>, pragas e ferramentas.
 8. <span class="cai-prova lima">**Criptografia e certificação**</span> (4): chaves, <span class="cai-prova lima">assinatura digital</span>, certificado e *hash*.
 9. <span class="cai-prova lima">**Evidência digital e cadeia de custódia**</span> (5): etapas, volatilidade e <span class="cai-prova lima">cópia forense</span>.
 10. <span class="cai-prova lima">**LGPD**</span> (4): dados sensíveis, controlador, encarregado e a <span class="cai-prova lima">exceção para investigação criminal</span>.
-11. **Inteligência artificial** (3): aprendizado de máquina, tipos de aprendizado e viés.
-12. **Criptomoedas** (3): blockchain, pseudonimato e carteiras.
+11. <span class="cai-prova lima">**Inteligência artificial**</span> (3): aprendizado de máquina, tipos de aprendizado e viés.
+12. <span class="cai-prova lima">**Criptomoedas**</span> (3): blockchain, pseudonimato e carteiras.
 
 Os blocos de segurança, evidência digital e LGPD concentram 15 das 50 questões, porque são os que mais separam o concurso policial dos demais. Por isso, se o seu tempo é curto, faça primeiro esses blocos do simulado Cebraspe e só depois os temas clássicos. Para revisar a teoria antes de começar, abra o [simulado de segurança da informação](/simulado-seguranca-da-informacao/) e o resumo de [redes de computadores para concursos](/redes-de-computadores-para-concursos/).
 
