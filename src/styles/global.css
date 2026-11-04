@@ -192,17 +192,11 @@ img {
   --cai-line: rgba(255, 255, 0, 0.45);
 }
 
-/* Variante verde-limão: <span class="cai-prova lima"> */
-.prose .cai-prova.lima {
-  --cai-line: #a8ff1a;
-}
-
+/* Variante <span class="cai-prova lima">: amarelo vivo, igual nos dois temas (usada nos blocos do simulado Cebraspe) */
+.prose .cai-prova.lima,
 :root:not([data-theme='light']) .prose .cai-prova.lima {
-  --cai-line: rgba(168, 255, 26, 0.45);
-}
-
-:root:not([data-theme='light']) .prose .cai-prova.lima {
-  --cai-line: rgba(168, 255, 26, 0.45);
+  --cai-line: #ffee00;
+  background-size: 100% 0.42em;
 }
 
 /* Comando destacado: tira o fundo do code para o marca-texto amarelo aparecer */
