@@ -4,8 +4,8 @@ import { questoesAriaLabel, QUESTOES_URL } from '../data/questoes';
 
 const nav = [
   { label: 'Início', href: '/' },
-  { label: 'Questões', href: '/questoes/' },
   ...categoryList.map((c) => ({ label: c.name, href: `/category/${c.slug}/` })),
+  { label: 'Questões', href: '/questoes/' },
 ];
 
 const isHome = Astro.url.pathname === '/';
