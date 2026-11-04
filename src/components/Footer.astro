@@ -16,7 +16,7 @@ const quickLinks = [
   <div class="container grid">
     <div class="about-col">
       <a href="/" class="brand" aria-label="Informática para Concurso - Início">
-        <svg class="brand-logo" width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="5" y="4" width="26" height="20" rx="3" stroke="currentColor" stroke-width="2.2"></rect><path d="M12 12l4 3-4 3M19 19h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 31h10M18 24v7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+        <img class="brand-logo" src="/images/logo-icon.webp" alt="" width="28" height="28" />
         <span class="brand-name">Informática<small>para Concurso</small></span>
       </a>
       <p class="tagline">
@@ -85,7 +85,9 @@ const quickLinks = [
   .brand-logo {
     display: block;
     flex: none;
-    color: var(--violet);
+    height: 28px;
+    width: 28px;
+    image-rendering: pixelated;
   }
 
   .brand-name {
