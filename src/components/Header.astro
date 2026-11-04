@@ -4,7 +4,7 @@ import { categories as categoryList } from '../data/categories';
 const nav = [
   { label: 'Início', href: '/' },
   ...categoryList.map((c) => ({ label: c.name, href: `/category/${c.slug}/` })),
-  { label: 'Questões', href: '/questoes/', featured: true },
+  { label: 'Questões', href: '/questoes/' },
 ];
 
 const currentHref = Astro.url.pathname + Astro.url.search;
@@ -24,7 +24,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     </a>
     <nav class="nav" aria-label="Principal">
       {nav.map((item) => (
-        <a href={item.href} class:list={{ active: item.href === currentHref, featured: item.featured }} aria-current={item.href === currentHref ? 'page' : undefined}>{item.label}</a>
+        <a href={item.href} class:list={{ active: item.href === currentHref }} aria-current={item.href === currentHref ? 'page' : undefined}>{item.label}</a>
       ))}
     </nav>
     <div class="right-controls">
@@ -57,7 +57,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
   </div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Menu">
     {nav.map((item) => (
-      <a href={item.href} class:list={{ active: item.href === currentHref, featured: item.featured }}>{item.label}</a>
+      <a href={item.href} class:list={{ active: item.href === currentHref }}>{item.label}</a>
     ))}
   </nav>
 </header>
@@ -178,7 +178,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: 4px;
     flex: 1;
   }
 
@@ -186,13 +186,13 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     display: inline-flex;
     align-items: center;
     min-height: 44px;
-    padding: 0 7px;
+    padding: 0 11px;
     border-radius: 10px;
     text-decoration: none;
     font-family: var(--font-body);
     font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 0.03em;
+    font-size: 13px;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--ink-soft);
     white-space: nowrap;
@@ -206,47 +206,6 @@ const currentHref = Astro.url.pathname + Astro.url.search;
   .nav a.active {
     color: var(--ink-strong);
     background: color-mix(in srgb, var(--violet) 18%, var(--bg));
-  }
-
-  /* Item "Questões": destaque teal com brilho neon leve (desligado para quem prefere menos movimento). */
-  @keyframes neon-pulse {
-    0%, 100% {
-      box-shadow: 0 0 6px color-mix(in srgb, var(--cta) 45%, transparent), 0 0 14px color-mix(in srgb, var(--cta) 25%, transparent);
-    }
-    50% {
-      box-shadow: 0 0 12px color-mix(in srgb, var(--cta) 80%, transparent), 0 0 26px color-mix(in srgb, var(--cta) 45%, transparent);
-    }
-  }
-
-  .nav a.featured,
-  .nav a.featured.active,
-  .mobile-nav a.featured,
-  .mobile-nav a.featured.active {
-    background: var(--cta);
-    color: var(--cta-ink);
-    font-weight: 800;
-    animation: neon-pulse 2.8s ease-in-out infinite;
-  }
-
-  .nav a.featured:hover {
-    background: var(--cta);
-    color: var(--cta-ink);
-    filter: brightness(1.08);
-  }
-
-  .mobile-nav a.featured {
-    margin: 14px 24px;
-    padding: 12px 20px;
-    border-bottom: none;
-    border-radius: 10px;
-    text-align: center;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .nav a.featured,
-    .mobile-nav a.featured {
-      animation: none;
-    }
   }
 
   .right-controls {
