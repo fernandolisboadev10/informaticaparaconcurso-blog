@@ -10,6 +10,7 @@ import CompactList from '../components/CompactList.astro';
 import { categories, categoryHref } from '../data/categories';
 import { isPublished, sortByActivity } from '../utils/posts';
 import { questionCount } from '../utils/quizzes';
+import { QUESTOES_URL, questoesAriaLabel } from '../data/questoes';
 
 // Page 1 opens with the subjects of the exam syllabus; "Aulas recentes" and the /page/N/ pages
 // list every post, newest first, 9 per page.
@@ -245,11 +246,11 @@ const warmup = [
     <section class="block band-wrap">
       <div class="band">
         <div class="band-text">
-          <h2>Leu a aula? Fixe com questões.</h2>
-          <p>Resolva questões comentadas, confira o gabarito e entenda o porquê de cada alternativa.</p>
+          <h2>Crie questões personalizadas para o seu edital.</h2>
+          <p>Gere questões de acordo com o conteúdo programático do seu edital, no estilo da sua banca, e confira o gabarito comentado.</p>
         </div>
-        <a class="btn-cta btn-big" href="/questoes/">
-          Resolver questões
+        <a class="btn-cta btn-big" href={QUESTOES_URL} target="_blank" rel="noopener" aria-label={`Criar questões: ${questoesAriaLabel}`}>
+          Criar questões
           <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         </a>
       </div>

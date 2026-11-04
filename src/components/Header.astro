@@ -1,5 +1,6 @@
 ---
 import { categories as categoryList } from '../data/categories';
+import { questoesAriaLabel, QUESTOES_URL } from '../data/questoes';
 
 const nav = [
   { label: 'Início', href: '/' },
@@ -7,7 +8,6 @@ const nav = [
 ];
 
 const currentHref = Astro.url.pathname + Astro.url.search;
-const onQuestoes = Astro.url.pathname.startsWith('/questoes');
 ---
 <header class="site-header">
   <div class="bar">
@@ -28,7 +28,7 @@ const onQuestoes = Astro.url.pathname.startsWith('/questoes');
       ))}
     </nav>
     <div class="right-controls">
-      <a href="/questoes/" class:list={['cta-questoes', 'cta-desktop', { current: onQuestoes }]} aria-current={onQuestoes ? 'page' : undefined}>
+      <a href={QUESTOES_URL} class="cta-questoes cta-desktop" target="_blank" rel="noopener" aria-label={`Questões: ${questoesAriaLabel}`}>
         Questões
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </a>
@@ -62,7 +62,7 @@ const onQuestoes = Astro.url.pathname.startsWith('/questoes');
     {nav.map((item) => (
       <a href={item.href} class:list={{ active: item.href === currentHref }}>{item.label}</a>
     ))}
-    <a href="/questoes/" class="cta-questoes">Questões</a>
+    <a href={QUESTOES_URL} class="cta-questoes" target="_blank" rel="noopener" aria-label={`Questões: ${questoesAriaLabel}`}>Questões</a>
   </nav>
 </header>
 
@@ -219,10 +219,6 @@ const onQuestoes = Astro.url.pathname.startsWith('/questoes');
 
   .cta-questoes:hover {
     filter: brightness(1.08);
-  }
-
-  .cta-questoes.current {
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--cta) 28%, transparent);
   }
 
   .mobile-nav a.cta-questoes {
