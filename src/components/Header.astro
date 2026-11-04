@@ -384,9 +384,9 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     /* Mobile: menu button on the left, logo centered, theme and search on the right. */
     .bar {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-      gap: 14px;
-      padding-inline: 16px;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 10px;
+      padding-inline: 12px;
     }
 
     .brand {
@@ -399,6 +399,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
 
     .brand {
       justify-self: center;
+      min-width: 0;
     }
 
     .theme-toggle,
@@ -427,7 +428,12 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     }
 
     .brand-name {
-      font-size: 18px;
+      font-size: 17px;
+    }
+
+    .brand-name small {
+      font-size: 9px;
+      letter-spacing: 0.14em;
     }
 
     .brand-logo {
