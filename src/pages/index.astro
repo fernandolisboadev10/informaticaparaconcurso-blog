@@ -152,6 +152,33 @@ const warmup = [
     </section>
   )}
 
+  {page === 1 && trilha.length > 0 && (
+      <section class="block" id="trilha">
+        <div class="block-head">
+          <h2>Por onde começar</h2>
+          <p>Três passos para organizar seus estudos antes de mergulhar nas matérias.</p>
+        </div>
+        <ol class="trilha">
+          {trilha.map((t, i) => (
+            <li>
+              <a class="step" href={`/${t.slug}`}>
+                <span class="step-thumb">
+                  {t.image && <Image src={t.image} alt={t.imageAlt ?? t.title} width={640} height={400} quality={70} />}
+                </span>
+                <span class="step-info">
+                  <span class="step-n">{i + 1}</span>
+                  <span class="step-text">
+                    <span class="step-title">{t.title}</span>
+                    {t.meta && <span class="step-meta">{t.meta}</span>}
+                  </span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </section>
+  )}
+
   <section class="block recent">
     <SectionHead title={page === 1 ? 'Aulas recentes' : `Todas as aulas, página ${page}`} href={page === 1 ? '/blog' : undefined} linkLabel="Ver todas" />
     <div class="rows">
@@ -173,33 +200,6 @@ const warmup = [
 
   {page === 1 && (
     <>
-      {trilha.length > 0 && (
-        <section class="block" id="trilha">
-          <div class="block-head">
-            <h2>Por onde começar</h2>
-            <p>Três passos para organizar seus estudos antes de mergulhar nas matérias.</p>
-          </div>
-          <ol class="trilha">
-            {trilha.map((t, i) => (
-              <li>
-                <a class="step" href={`/${t.slug}`}>
-                  <span class="step-thumb">
-                    {t.image && <Image src={t.image} alt={t.imageAlt ?? t.title} width={640} height={400} quality={70} />}
-                  </span>
-                  <span class="step-info">
-                    <span class="step-n">{i + 1}</span>
-                    <span class="step-text">
-                      <span class="step-title">{t.title}</span>
-                      {t.meta && <span class="step-meta">{t.meta}</span>}
-                    </span>
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ol>
-        </section>
-      )}
-
       <section class="block" id="materias">
         <div class="block-head head-row">
           <div>
