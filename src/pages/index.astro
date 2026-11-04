@@ -63,27 +63,32 @@ const trilha = trilhaSlugs
 const warmup = [
   {
     meta: 'Sistemas · Windows · múltipla escolha',
-    text: 'No Windows, o atalho de teclado Windows + L serve para',
-    options: ['abrir o Explorador de Arquivos', 'bloquear a sessão do usuário', 'minimizar todas as janelas', 'abrir o Gerenciador de Tarefas'],
+    text: 'No Windows, ao excluir um arquivo armazenado em um pendrive (unidade removível) com a tecla Delete, o arquivo',
+    options: [
+      'é movido para a Lixeira do próprio pendrive',
+      'é movido para a Lixeira do computador',
+      'é excluído permanentemente, sem passar pela Lixeira',
+      'fica oculto e pode ser restaurado pelo Explorador de Arquivos',
+    ],
     badges: ['A', 'B', 'C', 'D'],
-    correct: 1,
-    comment: 'Windows + L bloqueia a sessão e volta à tela de login. Windows + E abre o Explorador de Arquivos, Windows + D mostra a área de trabalho (minimiza as janelas) e o Gerenciador de Tarefas abre com Ctrl + Shift + Esc.',
+    correct: 2,
+    comment: 'Arquivos apagados de unidades removíveis, como pendrives, e de unidades de rede não passam pela Lixeira: a exclusão é permanente. Só os arquivos do disco local do computador vão para a Lixeira.',
   },
   {
     meta: 'Sistemas · Linux · certo ou errado',
-    text: 'Julgue o item. No Linux, o comando ls -l lista o conteúdo de um diretório em formato detalhado, exibindo, entre outras informações, as permissões, o proprietário e o tamanho de cada arquivo.',
+    text: 'Julgue o item. No Linux, o comando chmod 755 arquivo concede ao proprietário as permissões de leitura, escrita e execução e, ao grupo e aos demais usuários, apenas as de leitura e execução.',
     options: ['Certo', 'Errado'],
     badges: ['C', 'E'],
     correct: 0,
-    comment: 'A opção -l (formato longo) do ls acrescenta permissões, dono, grupo, tamanho e data de modificação. O item está certo.',
+    comment: 'Na notação numérica, leitura vale 4, escrita 2 e execução 1. O 7 do proprietário é 4+2+1 (rwx), e os dois 5 seguintes são 4+1 (r-x) para o grupo e para os demais. O item está certo.',
   },
   {
     meta: 'Redes · múltipla escolha',
-    text: 'A rede privada de uma organização que utiliza os mesmos protocolos e serviços da Internet, e que é acessada apenas por seus funcionários, é denominada',
-    options: ['Extranet', 'Intranet', 'Internet', 'Ethernet'],
+    text: 'Na pilha de protocolos TCP/IP, o protocolo da camada de transporte que oferece entrega confiável, com controle de fluxo e retransmissão de segmentos perdidos, é o',
+    options: ['UDP', 'TCP', 'ICMP', 'ARP'],
     badges: ['A', 'B', 'C', 'D'],
     correct: 1,
-    comment: 'Intranet é a rede interna de uma organização que usa a tecnologia da Internet. A Extranet estende o acesso a públicos externos autorizados, como clientes e parceiros. Ethernet é uma tecnologia de rede local, não um tipo de rede por acesso.',
+    comment: 'O TCP estabelece conexão e garante a entrega ordenada dos dados, retransmitindo o que se perde. O UDP é mais leve e não oferece essas garantias. O ICMP serve para mensagens de controle e erro (como o ping), e o ARP associa endereço IP a endereço físico (MAC).',
   },
 ];
 ---
