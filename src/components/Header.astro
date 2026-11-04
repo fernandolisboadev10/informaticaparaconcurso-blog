@@ -28,8 +28,8 @@ const currentHref = Astro.url.pathname + Astro.url.search;
       ))}
     </nav>
     <div class="right-controls">
-      <a href={QUESTOES_URL} class="cta-questoes cta-desktop" target="_blank" rel="noopener" aria-label={`Questões: ${questoesAriaLabel}`}>
-        Questões
+      <a href={QUESTOES_URL} class="cta-questoes cta-desktop" target="_blank" rel="noopener" aria-label={`Criar questões: ${questoesAriaLabel}`}>
+        Criar questões
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
       </a>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar tema claro ou escuro">
@@ -62,7 +62,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     {nav.map((item) => (
       <a href={item.href} class:list={{ active: item.href === currentHref }}>{item.label}</a>
     ))}
-    <a href={QUESTOES_URL} class="cta-questoes" target="_blank" rel="noopener" aria-label={`Questões: ${questoesAriaLabel}`}>Questões</a>
+    <a href={QUESTOES_URL} class="cta-questoes" target="_blank" rel="noopener" aria-label={`Criar questões: ${questoesAriaLabel}`}>Criar questões</a>
   </nav>
 </header>
 
@@ -113,7 +113,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
   }
 
   .bar {
-    max-width: 1180px;
+    max-width: 1320px;
     margin-inline: auto;
     padding: 12px 24px;
     display: flex;
@@ -340,7 +340,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     background: color-mix(in srgb, var(--violet) 14%, var(--bg));
   }
 
-  @media (max-width: 1180px) {
+  @media (max-width: 1260px) {
     .nav {
       display: none;
     }
