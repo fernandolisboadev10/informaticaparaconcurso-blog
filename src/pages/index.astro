@@ -54,6 +54,8 @@ const trilha = trilhaSlugs
   .map((p) => ({
     slug: p.id,
     title: p.data.title,
+    image: p.data.image,
+    imageAlt: p.data.imageAlt,
     meta: [p.data.readingTime, questionCount(p.id) > 0 ? `${questionCount(p.id)} questões` : ''].filter(Boolean).join(' · '),
   }));
 
@@ -181,10 +183,15 @@ const warmup = [
             {trilha.map((t, i) => (
               <li>
                 <a class="step" href={`/${t.slug}`}>
-                  <span class="step-n">{i + 1}</span>
-                  <span class="step-text">
-                    <span class="step-title">{t.title}</span>
-                    {t.meta && <span class="step-meta">{t.meta}</span>}
+                  <span class="step-thumb">
+                    {t.image && <Image src={t.image} alt={t.imageAlt ?? t.title} width={640} height={400} quality={70} />}
+                  </span>
+                  <span class="step-info">
+                    <span class="step-n">{i + 1}</span>
+                    <span class="step-text">
+                      <span class="step-title">{t.title}</span>
+                      {t.meta && <span class="step-meta">{t.meta}</span>}
+                    </span>
                   </span>
                 </a>
               </li>
@@ -736,15 +743,35 @@ const warmup = [
 
   .step {
     display: flex;
-    gap: 16px;
+    flex-direction: column;
     height: 100%;
-    padding: 20px;
+    overflow: hidden;
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 14px;
     color: inherit;
     text-decoration: none;
     transition: border-color 0.15s;
+  }
+
+  .step-thumb {
+    display: block;
+    aspect-ratio: 16 / 10;
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--line-strong);
+    overflow: hidden;
+  }
+
+  .step-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .step-info {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
   }
 
   .step:hover {
