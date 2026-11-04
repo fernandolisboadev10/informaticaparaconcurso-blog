@@ -380,6 +380,26 @@ const warmup = [
     filter: brightness(1.08);
   }
 
+  /* Brilho neon leve que pulsa devagar (desligado para quem prefere menos movimento). */
+  @keyframes neon-pulse {
+    0%, 100% {
+      box-shadow: 0 0 6px color-mix(in srgb, var(--cta) 45%, transparent), 0 0 14px color-mix(in srgb, var(--cta) 25%, transparent);
+    }
+    50% {
+      box-shadow: 0 0 12px color-mix(in srgb, var(--cta) 80%, transparent), 0 0 26px color-mix(in srgb, var(--cta) 45%, transparent);
+    }
+  }
+
+  .btn-big {
+    animation: neon-pulse 2.8s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn-big {
+      animation: none;
+    }
+  }
+
   .btn-big {
     min-height: 56px;
     padding: 0 32px;

@@ -221,6 +221,26 @@ const currentHref = Astro.url.pathname + Astro.url.search;
     filter: brightness(1.08);
   }
 
+  /* Brilho neon leve que pulsa devagar (desligado para quem prefere menos movimento). */
+  @keyframes neon-pulse {
+    0%, 100% {
+      box-shadow: 0 0 6px color-mix(in srgb, var(--cta) 45%, transparent), 0 0 14px color-mix(in srgb, var(--cta) 25%, transparent);
+    }
+    50% {
+      box-shadow: 0 0 12px color-mix(in srgb, var(--cta) 80%, transparent), 0 0 26px color-mix(in srgb, var(--cta) 45%, transparent);
+    }
+  }
+
+  .cta-questoes {
+    animation: neon-pulse 2.8s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cta-questoes {
+      animation: none;
+    }
+  }
+
   .mobile-nav a.cta-questoes {
     justify-content: center;
     color: var(--cta-ink);
