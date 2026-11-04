@@ -1,13 +1,13 @@
-// Cor do chip por categoria (texto branco por cima: todas passam de 4.5:1).
+// Cor de destaque por categoria (barra do cartão, ponto do rótulo, link "Praticar"), na paleta do tema escuro.
 const COLORS: Record<string, string> = {
-  "Redes": '#2563eb',
-  "Segurança": '#15803d',
-  "Sistemas": '#0f766e',
-  "Office": '#b45309',
-  "Dicas": '#0369a1',
-  "Hardware": '#a21caf',
-  "Concursos": '#be123c',
-  "Arquivos": '#475569',
+  "Redes": '#60a5fa',
+  "Segurança": '#a3e635',
+  "Sistemas": '#2dd4bf',
+  "Office": '#fb923c',
+  "Dicas": '#a5b4fc',
+  "Hardware": '#c084fc',
+  "Concursos": '#fb7185',
+  "Arquivos": '#94a3b8',
 };
 
-export const categoryColor = (category: string): string => COLORS[category] ?? '#6d28d9';
+export const categoryColor = (category: string): string => COLORS[category] ?? '#a5b4fc';

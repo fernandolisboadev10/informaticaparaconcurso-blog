@@ -39,13 +39,11 @@ const { category, onImage = false } = Astro.props;
     background: color-mix(in srgb, var(--cat) 55%, #fff);
   }
 
-  :global(:root[data-theme='dark']) .cat::before {
+  :global(:root:not([data-theme='light'])) .cat::before {
     background: color-mix(in srgb, var(--cat) 60%, #fff);
   }
 
-  @media (prefers-color-scheme: dark) {
     :global(:root:not([data-theme='light'])) .cat::before {
-      background: color-mix(in srgb, var(--cat) 60%, #fff);
-    }
+    background: color-mix(in srgb, var(--cat) 60%, #fff);
   }
 </style>

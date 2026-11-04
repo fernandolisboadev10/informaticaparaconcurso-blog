@@ -1,27 +1,31 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import QuestionsTag from './QuestionsTag.astro';
 import { questionCount } from '../utils/quizzes';
 
 interface Props {
   posts: CollectionEntry<'blog'>[];
+  // Texto da ação à direita (ex.: "Iniciar →"); sem ele, a linha mostra só título e data.
+  action?: string;
 }
-const { posts } = Astro.props;
+const { posts, action } = Astro.props;
 
 const fmt = (d: Date) => d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', timeZone: 'UTC' });
 ---
 <ul class="compact">
-  {posts.map((p) => (
-    <li>
-      <a href={`/${p.id}`}>
-        <span class="title">{p.data.title}</span>
-        <span class="meta">
-          <QuestionsTag count={questionCount(p.id)} />
-          <span>{fmt(p.data.date)}</span>
-        </span>
-      </a>
-    </li>
-  ))}
+  {posts.map((p) => {
+    const n = questionCount(p.id);
+    return (
+      <li>
+        <a href={`/${p.id}`}>
+          <span class="text">
+            <span class="title">{p.data.title}</span>
+            <span class="meta">{n > 0 && <>{n} {n === 1 ? 'questão' : 'questões'} · </>}{fmt(p.data.date)}</span>
+          </span>
+          {action && <span class="action">{action}</span>}
+        </a>
+      </li>
+    );
+  })}
 </ul>
 
 <style>
@@ -29,39 +33,54 @@ const fmt = (d: Date) => d.toLocaleDateString('pt-BR', { day: 'numeric', month: 
     margin: 0;
     padding: 0;
     list-style: none;
+    border-top: 1px solid var(--line);
   }
 
-  li + li {
-    border-top: 1px solid var(--line);
+  li {
+    border-bottom: 1px solid var(--line);
   }
 
   a {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding-block: 14px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 44px;
+    padding-block: 16px;
     color: inherit;
     text-decoration: none;
   }
 
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+  }
+
   .title {
     font-family: var(--font-display);
-    font-size: 1.02rem;
+    font-size: 1.0625rem;
     font-weight: 700;
     line-height: 1.3;
-    letter-spacing: -0.01em;
     color: var(--ink-strong);
+    text-wrap: pretty;
   }
 
   a:hover .title {
-    color: var(--violet);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.8rem;
+    font-size: 0.8125rem;
     color: var(--ink-soft);
+  }
+
+  .action {
+    flex: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--cta);
   }
 </style>

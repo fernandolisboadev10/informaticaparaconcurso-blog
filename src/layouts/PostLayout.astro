@@ -13,6 +13,8 @@ import TableOfContents from '../components/TableOfContents.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import type { MarkdownHeading } from 'astro';
 import { categoryHref } from '../data/categories';
+import { categoryColor } from '../utils/categoryColor';
+import { questionCount } from '../utils/quizzes';
 
 interface Props {
   title: string;
@@ -105,12 +107,17 @@ const breadcrumbSchema = {
       <header class="post-head">
         <nav class="crumbs" aria-label="Você está em">
           <a href="/">Início</a>
-          <span aria-hidden="true">›</span>
+          <span aria-hidden="true">/</span>
           <a href={categoryHref(category)}>{category}</a>
         </nav>
+        <a class="pill" href={categoryHref(category)} style={`--cat:${categoryColor(category)}`}>{category}</a>
         <h1>{title}</h1>
         <p class="meta">
-          Por <a href="/sobre-nos">Fernando Lisboa</a> | <time datetime={date.toISOString()}>{formattedDate}</time>{showUpdated && <> | Atualizado em <time datetime={updated!.toISOString()}>{formattedUpdated}</time></>}{readingTime && `, ${readingTime} de leitura`}
+          <span>Por <a href="/sobre-nos">Fernando Lisboa</a></span>
+          <span><time datetime={date.toISOString()}>{formattedDate}</time></span>
+          {showUpdated && <span>Atualizado em <time datetime={updated!.toISOString()}>{formattedUpdated}</time></span>}
+          {readingTime && <span>{readingTime} de leitura</span>}
+          {questionCount(Astro.props.slug) > 0 && <a class="qchip" href="#questoes">{questionCount(Astro.props.slug)} questões</a>}
         </p>
         <ShareButtons title={title} />
 
@@ -140,6 +147,10 @@ const breadcrumbSchema = {
     {hasGuide && (
       <aside class="post-aside">
         <TableOfContents headings={headings} />
+        <a class="practice" href={`/questoes/?materia=${encodeURIComponent(category)}`}>
+          <span class="practice-title">Praticar este tema</span>
+          <span class="practice-sub">Questões de {category} →</span>
+        </a>
       </aside>
     )}
   </div>
@@ -249,14 +260,21 @@ const breadcrumbSchema = {
 </script>
 
 <style>
-  /* Article and guide side by side on desktop; the guide drops between cover and text on smaller screens. */
+  /* Cabeçalho em cima; guia à esquerda e texto à direita no desktop. No celular o guia desce entre a capa e o texto. */
   .post-shell {
-    padding-block: 40px 56px;
+    max-width: 1180px;
+    padding-block: 32px 56px;
     display: grid;
-    grid-template-columns: minmax(0, 720px) 260px;
-    grid-template-areas: 'post aside';
-    justify-content: space-between;
+    grid-template-columns: 260px minmax(0, 720px);
+    grid-template-areas:
+      'head head'
+      'aside body';
+    justify-content: start;
     column-gap: 48px;
+  }
+
+  .post {
+    display: contents;
   }
 
   .post-head,
@@ -265,48 +283,67 @@ const breadcrumbSchema = {
     min-width: 0;
   }
 
-  .post {
-    grid-area: post;
-    min-width: 0;
+  .post-head {
+    grid-area: head;
+    max-width: 820px;
+    margin-bottom: 8px;
+  }
+
+  .post-body {
+    grid-area: body;
   }
 
   .post-aside {
     grid-area: aside;
-    padding-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 8px;
   }
 
   .post-shell.no-guide {
-    max-width: 768px;
+    max-width: 800px;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: 'post';
+    grid-template-areas: 'head' 'body';
+  }
+
+  .practice {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    border-radius: 12px;
+    background: var(--cta);
+    color: var(--cta-ink);
+    text-decoration: none;
+  }
+
+  .practice:hover {
+    filter: brightness(1.08);
+  }
+
+  .practice-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1rem;
+  }
+
+  .practice-sub {
+    font-size: 0.875rem;
+    font-weight: 500;
   }
 
   @media (max-width: 1099px) {
-    /* Header, guide and body share one grid so the guide sits between cover and text. */
     .post-shell,
     .post-shell.no-guide {
-      max-width: 768px;
+      max-width: 800px;
       grid-template-columns: minmax(0, 1fr);
       grid-template-areas: 'head' 'aside' 'body';
     }
 
-    .post {
-      display: contents;
-    }
-
-    .post-head {
-      grid-area: head;
-    }
-
     .post-aside {
-      grid-area: aside;
       padding-top: 0;
       margin-bottom: 32px;
-    }
-
-    .post-body {
-      grid-area: body;
-      min-width: 0;
     }
   }
 
@@ -314,9 +351,9 @@ const breadcrumbSchema = {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px;
-    margin: 0 0 16px;
-    font-size: 0.85rem;
+    gap: 4px 8px;
+    margin: 0 0 24px;
+    font-size: 0.875rem;
     color: var(--ink-soft);
   }
 
@@ -325,31 +362,49 @@ const breadcrumbSchema = {
     text-decoration: none;
   }
 
-  .crumbs a:last-child {
-    color: var(--violet);
-    font-weight: 600;
+  .crumbs a:hover {
+    color: var(--ink-strong);
   }
 
-  .crumbs a:hover {
-    text-decoration: underline;
+  .pill {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--cat) 40%, transparent);
+    color: var(--cat);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  :global(:root[data-theme='light']) .pill {
+    color: color-mix(in srgb, var(--cat) 55%, #000);
   }
 
   h1 {
-    font-size: clamp(1.9rem, 4.2vw, 2.75rem);
+    font-size: clamp(2.125rem, 4.6vw, 3.375rem);
     font-weight: 800;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.022em;
     line-height: 1.08;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
+    text-wrap: balance;
   }
 
   .meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 20px;
     color: var(--ink-soft);
-    font-size: 0.9rem;
-    margin: 0 0 20px;
+    font-size: 0.875rem;
+    margin: 0 0 24px;
   }
 
   .meta a {
-    color: var(--violet);
+    color: var(--ink-strong);
     text-decoration: none;
     font-weight: 600;
   }
@@ -358,9 +413,17 @@ const breadcrumbSchema = {
     text-decoration: underline;
   }
 
+  .meta .qchip {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--chip-ink);
+  }
+
   .hero-image {
+    max-width: 720px;
     aspect-ratio: 3 / 2;
-    border-radius: 10px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
     overflow: hidden;
     margin-bottom: 40px;
   }

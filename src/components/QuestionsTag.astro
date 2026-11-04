@@ -7,15 +7,16 @@ const { count } = Astro.props;
 {count > 0 && <span class="questions">{count} {count === 1 ? 'questão' : 'questões'}</span>}
 
 <style>
-  /* The site's "Cai na prova" highlighter, used to flag posts that end with exam questions. */
+  /* Selo de "N questões": amarelo translúcido com número em fonte mono (no tema claro volta ao marca-texto). */
   .questions {
     display: inline-block;
-    padding: 1px 7px;
-    border-radius: 3px;
-    background: var(--marker);
-    color: var(--marker-ink);
-    font-family: var(--font-body);
-    font-size: 0.76rem;
+    padding: 2px 8px;
+    border-radius: 8px;
+    border: 1px solid var(--chip-line);
+    background: var(--chip-bg);
+    color: var(--chip-ink);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
     font-weight: 700;
     line-height: 1.5;
     white-space: nowrap;

@@ -1,0 +1,786 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { categories } from '../data/categories';
+import { isPublished } from '../utils/posts';
+import { QUESTOES_URL, questoesAriaLabel } from '../data/questoes';
+
+// Todas as questões comentadas do site (src/data/quizzes/<slug>.json), reunidas em um treino único.
+// O leitor escolhe a matéria e responde um bloco de 10 questões sorteadas, com gabarito e link para a aula.
+interface RawQuestion {
+  type: 'ce' | 'mc';
+  text: string;
+  options?: string[];
+  answer: string;
+  comment?: string;
+}
+
+const quizzes = import.meta.glob<{ default: { questions: RawQuestion[] } }>('../data/quizzes/*.json', { eager: true });
+const posts = await getCollection('blog', isPublished);
+const postBySlug = new Map(posts.map((p) => [p.id, p]));
+
+// Aulas referenciadas pelas questões (índice curto no JSON), na ordem do currículo.
+const lessons: { title: string; href: string; cat: string }[] = [];
+const questions: [number, 'ce' | 'mc', string, string[] | 0, string, string][] = [];
+const countByCat = new Map<string, number>();
+
+for (const [path, mod] of Object.entries(quizzes)) {
+  const slug = path.replace(/^.*\/(.+)\.json$/, '$1');
+  const post = postBySlug.get(slug);
+  if (!post) continue;
+  const li = lessons.push({ title: post.data.title, href: `/${slug}/`, cat: post.data.category }) - 1;
+  for (const q of mod.default.questions ?? []) {
+    questions.push([li, q.type, q.text, q.options ?? 0, q.answer, q.comment ?? '']);
+    countByCat.set(post.data.category, (countByCat.get(post.data.category) ?? 0) + 1);
+  }
+}
+
+const subjects = categories
+  .map((c) => ({ name: c.name, count: countByCat.get(c.name) ?? 0 }))
+  .filter((s) => s.count > 0);
+
+const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
+---
+<BaseLayout
+  title="Questões comentadas de Informática para concursos"
+  description={`${questions.length} questões comentadas de Informática para concursos, com gabarito explicado e link para a aula de cada tema. Escolha a matéria e resolva um bloco de 10.`}
+>
+  <div class="page">
+    <div class="intro">
+      <div class="intro-text">
+        <h1>Questões comentadas</h1>
+        <p>Responda, veja o gabarito e entenda o porquê. Cada questão aponta a aula para revisar.</p>
+      </div>
+      <a class="back" href="/#materias">← Voltar às matérias</a>
+    </div>
+
+    <div class="filters" role="group" aria-label="Matéria">
+      <button type="button" class="chip is-on" data-materia="">Todas ({questions.length})</button>
+      {subjects.map((s) => (
+        <button type="button" class="chip" data-materia={s.name}>{s.name} ({s.count})</button>
+      ))}
+    </div>
+
+    <div class="layout" id="player" hidden>
+      <section class="main" aria-labelledby="q-title">
+        <div>
+          <div class="progress-meta">
+            <span id="q-title">Questão <strong id="q-num">1</strong> de <span id="q-total">10</span></span>
+            <span><span id="q-answered">0</span> respondidas</span>
+          </div>
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-label="Progresso" id="q-progress">
+            <div class="progress-fill" id="q-fill"></div>
+          </div>
+        </div>
+
+        <article class="card">
+          <div class="tags">
+            <span class="tag tag-cat" id="q-cat"></span>
+            <span class="tag" id="q-kind"></span>
+          </div>
+          <p class="q-text" id="q-text"></p>
+          <div class="options" id="q-options"></div>
+          <div class="feedback" id="q-feedback" role="status" aria-live="polite" hidden>
+            <p class="verdict" id="q-verdict"></p>
+            <p class="small-label">Comentário</p>
+            <p class="comment" id="q-comment"></p>
+            <a class="lesson" id="q-lesson" href="/"></a>
+          </div>
+        </article>
+
+        <div class="nav-btns">
+          <button type="button" class="btn-ghost" id="btn-prev">← Anterior</button>
+          <button type="button" class="btn-next" id="btn-next">Próxima questão →</button>
+        </div>
+      </section>
+
+      <aside class="side">
+        <div class="panel">
+          <h2>Questões</h2>
+          <div class="grid" id="q-grid"></div>
+          <p class="legend">✓ acertou · ✗ errou · número simples: ainda não respondida</p>
+        </div>
+        <div class="panel panel-score">
+          <h2>Seu desempenho</h2>
+          <p class="score"><span id="s-ok">0</span><span class="score-of"> / <span id="s-done">0</span></span></p>
+          <p class="legend">acertos entre as questões respondidas</p>
+          <p class="done" id="s-done-msg" hidden>Bloco concluído. Releia as aulas das questões que errou e refaça.</p>
+          <button type="button" class="btn-ghost btn-small" id="btn-restart">Novo bloco de 10</button>
+        </div>
+      </aside>
+    </div>
+
+    <noscript><p class="nojs">Ative o JavaScript para resolver as questões neste treino.</p></noscript>
+
+    <p class="gerador">
+      Quer questões novas, por assunto e banca? Conheça o
+      <a href={QUESTOES_URL} target="_blank" rel="noopener" aria-label={`Conhecer o ${questoesAriaLabel}`}>Gerador de Questões com IA</a>.
+    </p>
+  </div>
+
+  <script type="application/json" id="q-data" set:html={payload}></script>
+</BaseLayout>
+
+<script>
+  type Q = [number, 'ce' | 'mc', string, string[] | 0, string, string];
+  type Data = { lessons: { title: string; href: string; cat: string }[]; questions: Q[] };
+
+  const BLOCK = 10;
+  const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
+  const data: Data = JSON.parse(document.getElementById('q-data')!.textContent || '{}');
+
+  const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
+  const player = $('player');
+  const els = {
+    num: $('q-num'), total: $('q-total'), answered: $('q-answered'), progress: $('q-progress'), fill: $('q-fill'),
+    cat: $('q-cat'), kind: $('q-kind'), text: $('q-text'), options: $('q-options'),
+    feedback: $('q-feedback'), verdict: $('q-verdict'), comment: $('q-comment'), lesson: $('q-lesson') as HTMLAnchorElement,
+    prev: $<HTMLButtonElement>('btn-prev'), next: $<HTMLButtonElement>('btn-next'), grid: $('q-grid'),
+    ok: $('s-ok'), done: $('s-done'), doneMsg: $('s-done-msg'), restart: $('btn-restart'),
+  };
+  const chips = Array.from(document.querySelectorAll<HTMLButtonElement>('.chip'));
+
+  let materia = '';
+  let block: Q[] = [];
+  let idx = 0;
+  let answers: (number | undefined)[] = [];
+
+  const correctIndex = (q: Q) => (q[1] === 'ce' ? (q[4] === 'C' ? 0 : 1) : LETTERS.indexOf(q[4]));
+  const labels = (q: Q) => (q[1] === 'ce' ? ['Certo', 'Errado'] : (q[3] as string[]));
+  const badge = (q: Q, i: number) => (q[1] === 'ce' ? (i === 0 ? 'C' : 'E') : LETTERS[i]);
+
+  function el(tag: string, cls?: string, text?: string) {
+    const node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+
+  function newBlock() {
+    const pool = data.questions.filter((q) => !materia || data.lessons[q[0]].cat === materia);
+    const pick = pool.slice();
+    for (let i = pick.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pick[i], pick[j]] = [pick[j], pick[i]];
+    }
+    block = pick.slice(0, BLOCK);
+    idx = 0;
+    answers = [];
+    render();
+  }
+
+  function render() {
+    const q = block[idx];
+    if (!q) return;
+    const chosen = answers[idx];
+    const answered = chosen !== undefined;
+    const right = correctIndex(q);
+    const lesson = data.lessons[q[0]];
+    const doneCount = answers.filter((a) => a !== undefined).length;
+    const okCount = block.filter((b, i) => answers[i] === correctIndex(b)).length;
+
+    els.num.textContent = String(idx + 1);
+    els.total.textContent = String(block.length);
+    els.answered.textContent = String(doneCount);
+    els.progress.setAttribute('aria-valuemax', String(block.length));
+    els.progress.setAttribute('aria-valuenow', String(doneCount));
+    els.fill.style.width = Math.round((doneCount / block.length) * 100) + '%';
+    els.cat.textContent = lesson.cat;
+    els.kind.textContent = q[1] === 'ce' ? 'Certo ou Errado' : 'Múltipla escolha';
+    els.text.textContent = q[2];
+
+    els.options.replaceChildren(
+      ...labels(q).map((label, i) => {
+        const btn = el('button', 'opt') as HTMLButtonElement;
+        btn.type = 'button';
+        btn.disabled = answered;
+        const status = el('span', 'opt-status');
+        if (answered && i === right) {
+          btn.classList.add('is-right');
+          status.textContent = '✓ Gabarito';
+        } else if (answered && i === chosen) {
+          btn.classList.add('is-wrong');
+          status.textContent = '✗ Sua resposta';
+        }
+        btn.append(el('span', 'opt-badge', badge(q, i)), el('span', 'opt-label', label), status);
+        btn.addEventListener('click', () => {
+          if (answers[idx] !== undefined) return;
+          answers[idx] = i;
+          render();
+        });
+        return btn;
+      }),
+    );
+
+    els.feedback.hidden = !answered;
+    if (answered) {
+      const ok = chosen === right;
+      els.verdict.textContent = ok ? 'Você acertou.' : 'Você errou. Leia o comentário.';
+      els.verdict.className = 'verdict' + (ok ? ' ok' : '');
+      els.comment.textContent = q[5] || `Gabarito: ${labels(q)[right]}.`;
+      els.lesson.textContent = `Revisar a aula: ${lesson.title} →`;
+      els.lesson.href = lesson.href;
+    }
+
+    els.prev.disabled = idx === 0;
+    const last = idx === block.length - 1;
+    els.next.disabled = last;
+    els.next.classList.toggle('is-ready', answered && !last);
+
+    els.grid.replaceChildren(
+      ...block.map((b, i) => {
+        const a = answers[i];
+        const done = a !== undefined;
+        const ok = done && a === correctIndex(b);
+        const btn = el('button', 'nbtn') as HTMLButtonElement;
+        btn.type = 'button';
+        btn.setAttribute('aria-label', `Questão ${i + 1}${done ? (ok ? ', acertou' : ', errou') : ', não respondida'}`);
+        if (i === idx) btn.setAttribute('aria-current', 'true');
+        if (i === idx) btn.classList.add('is-current');
+        if (done) btn.classList.add(ok ? 'is-ok' : 'is-bad');
+        btn.append(String(i + 1), el('span', 'nmark', done ? (ok ? '✓' : '✗') : ''));
+        btn.addEventListener('click', () => {
+          idx = i;
+          render();
+        });
+        return btn;
+      }),
+    );
+
+    els.ok.textContent = String(okCount);
+    els.done.textContent = String(doneCount);
+    els.doneMsg.hidden = doneCount !== block.length;
+  }
+
+  function setMateria(name: string, updateUrl = true) {
+    materia = name;
+    chips.forEach((c) => c.classList.toggle('is-on', (c.dataset.materia || '') === name));
+    if (updateUrl) {
+      const url = new URL(location.href);
+      if (name) url.searchParams.set('materia', name);
+      else url.searchParams.delete('materia');
+      history.replaceState(null, '', url);
+    }
+    newBlock();
+  }
+
+  chips.forEach((c) => c.addEventListener('click', () => setMateria(c.dataset.materia || '')));
+  els.prev.addEventListener('click', () => {
+    idx = Math.max(0, idx - 1);
+    render();
+  });
+  els.next.addEventListener('click', () => {
+    idx = Math.min(block.length - 1, idx + 1);
+    render();
+  });
+  els.restart.addEventListener('click', newBlock);
+
+  player.hidden = false;
+  const wanted = new URL(location.href).searchParams.get('materia') || '';
+  setMateria(chips.some((c) => (c.dataset.materia || '') === wanted) ? wanted : '', false);
+</script>
+
+<style is:global>
+  .page {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding: 32px 24px 72px;
+  }
+
+  .page .intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .page .intro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .page h1 {
+    font-size: clamp(1.875rem, 4vw, 2.625rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .page .intro-text p {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+
+  .page .back {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 600;
+    color: var(--violet);
+    text-decoration: none;
+  }
+
+  .page .back:hover {
+    color: var(--ink-strong);
+  }
+
+  .page .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .page .chip {
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line-strong);
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+
+  .page .chip:hover {
+    background: var(--surface-2);
+    border-color: var(--line-hover);
+  }
+
+  .page .chip.is-on {
+    background: color-mix(in srgb, var(--violet) 18%, var(--bg));
+    border-color: var(--violet);
+    color: var(--ink-strong);
+  }
+
+  .page .layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .page .layout[hidden] {
+    display: none;
+  }
+
+  .page .main {
+    flex: 999 1 560px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .page .progress-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+  }
+
+  .page .progress-meta strong {
+    color: var(--ink-strong);
+    font-family: var(--font-mono);
+  }
+
+  .page .progress {
+    height: 6px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    overflow: hidden;
+  }
+
+  .page .progress-fill {
+    height: 100%;
+    width: 0;
+    background: var(--cta);
+    border-radius: 999px;
+  }
+
+  .page .card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+
+  .page .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .page .tag {
+    padding: 3px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--line-strong);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+
+  .page .tag-cat {
+    border-color: color-mix(in srgb, var(--violet) 40%, transparent);
+    color: var(--violet);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .page .q-text {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--ink-strong);
+    text-wrap: pretty;
+  }
+
+  .page .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .page .opt {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    min-height: 56px;
+    padding: 12px 18px;
+    text-align: left;
+    border-radius: 12px;
+    border: 2px solid var(--line-strong);
+    background: var(--bg);
+    color: var(--ink-strong);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.45;
+    cursor: pointer;
+  }
+
+  .page .opt:not(:disabled):hover {
+    background: var(--surface-2);
+    border-color: var(--line-hover);
+  }
+
+  .page .opt:disabled {
+    cursor: default;
+  }
+
+  .page .opt-badge {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--surface-2);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.9375rem;
+  }
+
+  .page .opt-label {
+    flex: 1;
+  }
+
+  .page .opt-status {
+    flex: none;
+    font-size: 0.8125rem;
+    font-weight: 700;
+  }
+
+  .page .opt.is-right {
+    border-color: var(--ok);
+    background: color-mix(in srgb, var(--ok) 12%, transparent);
+  }
+
+  .page .opt.is-right .opt-status {
+    color: var(--ok);
+  }
+
+  .page .opt.is-wrong {
+    border-color: var(--bad);
+    background: color-mix(in srgb, var(--bad) 12%, transparent);
+  }
+
+  .page .opt.is-wrong .opt-status {
+    color: var(--bad);
+  }
+
+  .page .feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+
+  .page .feedback[hidden] {
+    display: none;
+  }
+
+  .page .verdict {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--bad);
+  }
+
+  .page .verdict.ok {
+    color: var(--ok);
+  }
+
+  .page .small-label {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .page .comment {
+    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+
+  .page .lesson {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 600;
+    color: var(--violet);
+    text-decoration: none;
+  }
+
+  .page .lesson:hover {
+    color: var(--ink-strong);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .page .nav-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .page .btn-ghost {
+    min-height: 52px;
+    padding: 0 24px;
+    border-radius: 12px;
+    border: 1px solid var(--line-strong);
+    background: transparent;
+    color: var(--ink-strong);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .page .btn-ghost:hover:not(:disabled) {
+    background: var(--surface-2);
+    border-color: var(--line-hover);
+  }
+
+  .page .btn-ghost:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  .page .btn-small {
+    min-height: 44px;
+    border-radius: 10px;
+    font-size: 0.9375rem;
+    padding: 0 16px;
+  }
+
+  .page .btn-next {
+    min-height: 52px;
+    padding: 0 28px;
+    border-radius: 12px;
+    border: 0;
+    background: var(--surface-2);
+    color: var(--ink-soft);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.0625rem;
+    cursor: pointer;
+  }
+
+  .page .btn-next.is-ready {
+    background: var(--cta);
+    color: var(--cta-ink);
+  }
+
+  .page .btn-next.is-ready:hover {
+    filter: brightness(1.08);
+  }
+
+  .page .btn-next:disabled {
+    cursor: default;
+  }
+
+  .page .side {
+    flex: 1 1 280px;
+    max-width: 340px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .page .panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+  }
+
+  .page .panel h2 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--violet);
+  }
+
+  .page .grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .page .nbtn {
+    min-height: 48px;
+    border-radius: 10px;
+    border: 2px solid var(--line-strong);
+    background: var(--bg);
+    color: var(--ink-strong);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 1.1;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page .nbtn:hover {
+    border-color: var(--violet);
+  }
+
+  .page .nbtn.is-ok {
+    border-color: var(--ok);
+    background: color-mix(in srgb, var(--ok) 14%, transparent);
+  }
+
+  .page .nbtn.is-bad {
+    border-color: var(--bad);
+    background: color-mix(in srgb, var(--bad) 14%, transparent);
+  }
+
+  .page .nbtn.is-current {
+    border-color: var(--violet);
+  }
+
+  .page .nmark {
+    font-size: 0.6875rem;
+    min-height: 0.8em;
+  }
+
+  .page .nbtn.is-ok .nmark {
+    color: var(--ok);
+  }
+
+  .page .nbtn.is-bad .nmark {
+    color: var(--bad);
+  }
+
+  .page .legend {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--ink-soft);
+  }
+
+  .page .score {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 2.125rem;
+    line-height: 1.1;
+    color: var(--ink-strong);
+  }
+
+  .page .score-of {
+    font-size: 1.125rem;
+    color: var(--ink-soft);
+  }
+
+  .page .done {
+    margin: 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    font-size: 0.9375rem;
+    color: var(--ink);
+  }
+
+  .page .done[hidden] {
+    display: none;
+  }
+
+  .page .gerador {
+    margin: 40px 0 0;
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+  }
+
+  .page .gerador a {
+    color: var(--violet);
+    font-weight: 600;
+  }
+
+  .page .nojs {
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 640px) {
+    .page .card {
+      padding: 22px 18px;
+    }
+
+    .page .q-text {
+      font-size: 1.125rem;
+    }
+
+    .page .side {
+      max-width: none;
+      flex-basis: 100%;
+    }
+  }
+</style>

@@ -1,12 +1,70 @@
+/* Tema padrão: escuro (design "Informática para Concurso"). O claro fica disponível pelo botão do cabeçalho
+   (data-theme="light"). */
 :root {
+  color-scheme: dark;
+  --bg: #0b0e14;
+  --surface: #121826;
+  --surface-2: #1b2438;
+  --ink-strong: #ffffff;
+  --ink-deep: #06080d;
+  --ink: #d5dcec;
+  --ink-soft: #a9b4c9;
+  --line: #243049;
+  --line-strong: #2f3d5c;
+  --line-hover: #4a5d8a;
+
+  --violet: #a5b4fc;
+  --violet-soft: #a5b4fc;
+  --violet-deep: #7c8cff;
+
+  --rose: #60a5fa;
+  --rose-soft: #93c5fd;
+
+  --teal: #2dd4bf;
+  --teal-soft: #5eead4;
+
+  /* Botão principal (CTA) */
+  --cta: #2dd4bf;
+  --cta-ink: #04201d;
+
+  --ok: #34d399;
+  --bad: #fb923c;
+
+  --gradient: linear-gradient(135deg, var(--rose-soft), var(--rose));
+
+  --font-display: var(--f-archivo);
+  --font-body: var(--f-inter);
+  --font-mono: var(--f-jetbrains-mono);
+  --font-read: var(--f-inter);
+  --link: #a5b4fc;
+  --link-line: rgba(165, 180, 252, 0.22);
+  --code-bg: #1b2438;
+  --code-ink: #fcd34d;
+
+  /* Selo "N questões" */
+  --chip-bg: rgba(250, 204, 21, 0.12);
+  --chip-line: rgba(250, 204, 21, 0.28);
+  --chip-ink: #fcd34d;
+
+  /* "Cai na prova" highlighter: same solid yellow and dark text in both themes. */
+  --marker: #ffff00;
+  --marker-ink: #1a1a00;
+
+  --measure: 72ch;
+}
+
+:root[data-theme='light'] {
   color-scheme: light;
   --bg: #f5f8ff;
   --surface: #ffffff;
+  --surface-2: #e6eeff;
   --ink-strong: #101a3d;
   --ink-deep: #0b1230;
   --ink: #1c2747;
   --ink-soft: #5a6788;
   --line: #d9e4fa;
+  --line-strong: #c3d1f0;
+  --line-hover: #8aa0d8;
 
   --violet: #2a14b4;
   --violet-soft: #a5b4fc;
@@ -18,72 +76,20 @@
   --teal: #0d9488;
   --teal-soft: #5eead4;
 
-  --gradient: linear-gradient(135deg, var(--rose-soft), var(--rose));
+  --cta: #0d9488;
+  --cta-ink: #ffffff;
 
-  --font-display: var(--f-archivo);
-  --font-body: var(--f-inter);
-  --font-mono: var(--f-plex-mono);
-  --font-read: var(--f-lexend), var(--f-inter);
+  --ok: #15803d;
+  --bad: #c2410c;
+
   --link: #0a6bd0;
   --link-line: rgba(11, 111, 204, 0.13);
   --code-bg: #e6eeff;
   --code-ink: #1a2f8f;
 
-  /* "Cai na prova" highlighter: same solid yellow and dark text in both themes. */
-  --marker: #ffff00;
-  --marker-ink: #1a1a00;
-
-  --measure: 68ch;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    color-scheme: dark;
-    --bg: #0d1117;
-    --surface: #161b22;
-    --ink-strong: #f2f6ff;
-    --ink: #d4def2;
-    --ink-soft: #93a3c9;
-    --line: #30363d;
-
-    --violet: #7c8cff;
-    --violet-soft: #a5b4fc;
-    --violet-deep: #5a6bf0;
-
-    --rose: #60a5fa;
-    --rose-soft: #93c5fd;
-
-    --teal: #2dd4bf;
-
-    --link: #6cb2ff;
-    --link-line: rgba(108, 178, 255, 0.22);
-    --code-bg: #262c36;
-    --code-ink: #d6e4ff;
-  }
-}
-
-:root[data-theme='dark'] {
-  color-scheme: dark;
-  --bg: #0d1117;
-  --surface: #161b22;
-  --ink-strong: #f2f6ff;
-  --ink: #d4def2;
-  --ink-soft: #93a3c9;
-  --line: #30363d;
-
-  --violet: #7c8cff;
-  --violet-soft: #a5b4fc;
-  --violet-deep: #5a6bf0;
-
-  --rose: #60a5fa;
-  --rose-soft: #93c5fd;
-
-  --teal: #2dd4bf;
-
-  --link: #6cb2ff;
-  --link-line: rgba(108, 178, 255, 0.22);
-  --code-bg: #262c36;
-  --code-ink: #d6e4ff;
+  --chip-bg: #ffff00;
+  --chip-line: transparent;
+  --chip-ink: #1a1a00;
 }
 
 * {
@@ -134,9 +140,9 @@ img {
 .prose p, .prose ul, .prose ol {
   font-family: var(--font-read);
   color: var(--ink);
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .prose li {
@@ -151,18 +157,15 @@ img {
 .prose a {
   overflow-wrap: anywhere;
   color: var(--link);
-  text-decoration: none;
-  background-image: linear-gradient(var(--link-line), var(--link-line));
-  background-repeat: no-repeat;
-  background-position: 0 92%;
-  background-size: 100% 0.42em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  transition: background-size 0.2s ease;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--link-line);
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
 .prose a:hover {
-  background-size: 100% 100%;
+  color: var(--ink-strong);
+  text-decoration-color: currentColor;
 }
 
 /* Destaque amarelo "Cai na prova": mesmo efeito do link, em amarelo */
@@ -181,13 +184,11 @@ img {
   background-size: 100% 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .prose .cai-prova {
-    --cai-line: rgba(255, 255, 0, 0.45);
-  }
+:root:not([data-theme='light']) .prose .cai-prova {
+  --cai-line: rgba(255, 255, 0, 0.45);
 }
 
-:root[data-theme='dark'] .prose .cai-prova {
+:root:not([data-theme='light']) .prose .cai-prova {
   --cai-line: rgba(255, 255, 0, 0.45);
 }
 
@@ -196,13 +197,11 @@ img {
   --cai-line: #a8ff1a;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .prose .cai-prova.lima {
-    --cai-line: rgba(168, 255, 26, 0.45);
-  }
+:root:not([data-theme='light']) .prose .cai-prova.lima {
+  --cai-line: rgba(168, 255, 26, 0.45);
 }
 
-:root[data-theme='dark'] .prose .cai-prova.lima {
+:root:not([data-theme='light']) .prose .cai-prova.lima {
   --cai-line: rgba(168, 255, 26, 0.45);
 }
 
@@ -216,8 +215,9 @@ img {
 .prose .post-cta {
   margin: 32px 0 8px;
   padding: 14px 18px;
-  border-left: 3px solid var(--rose);
-  border-radius: 6px;
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--cta);
+  border-radius: 12px;
   background: var(--surface);
 }
 
@@ -235,7 +235,9 @@ img {
 
 .prose h2 {
   margin-top: 2.5em;
-  font-size: 1.6rem;
+  font-size: clamp(1.625rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.2;
   letter-spacing: -0.015em;
 }
 
@@ -253,7 +255,8 @@ img {
 
 .prose img {
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
   margin: 32px 0;
 }
 
@@ -270,7 +273,8 @@ img {
 .prose th,
 .prose td {
   padding: 12px 14px;
-  border: 1px solid var(--line);
+  border: 0;
+  border-bottom: 1px solid var(--line);
   text-align: left;
   vertical-align: top;
   color: var(--ink);
@@ -278,20 +282,28 @@ img {
 }
 
 .prose th {
-  background: var(--surface);
-  color: var(--ink-strong);
-  font-weight: 700;
+  background: transparent;
+  border-bottom-color: var(--line-strong);
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.prose tbody tr:nth-child(even) td {
-  background: color-mix(in srgb, var(--surface) 55%, transparent);
+.prose table {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
 }
 
 .prose pre {
-  background: var(--ink-deep);
-  color: #ece7fb;
-  padding: 20px;
-  border-radius: 8px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 20px 24px;
+  border-radius: 12px;
+  line-height: 1.9;
   overflow-x: auto;
   font-family: var(--font-mono);
   font-size: 0.9rem;
@@ -301,8 +313,8 @@ img {
   font-family: var(--font-mono);
   background: var(--code-bg);
   color: var(--code-ink);
-  padding: 2px 6px;
-  border-radius: 3px;
+  padding: 2px 7px;
+  border-radius: 6px;
   font-size: 0.9em;
 }
 
@@ -411,28 +423,26 @@ img {
   color: #ffffff;
 }
 
-:root[data-theme='dark'] .prose .copy-btn {
+:root:not([data-theme='light']) .prose .copy-btn {
   color: #0b1230;
   background: var(--violet);
   border-color: var(--violet);
 }
 
-:root[data-theme='dark'] .prose .copy-btn:hover {
+:root:not([data-theme='light']) .prose .copy-btn:hover {
   background: var(--violet-soft);
   border-color: var(--violet-soft);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .prose .copy-btn {
-    color: #0b1230;
-    background: var(--violet);
-    border-color: var(--violet);
-  }
+:root:not([data-theme='light']) .prose .copy-btn {
+  color: #0b1230;
+  background: var(--violet);
+  border-color: var(--violet);
+}
 
-  :root:not([data-theme='light']) .prose .copy-btn:hover {
-    background: var(--violet-soft);
-    border-color: var(--violet-soft);
-  }
+:root:not([data-theme='light']) .prose .copy-btn:hover {
+  background: var(--violet-soft);
+  border-color: var(--violet-soft);
 }
 
 .prose p > .copy-btn {

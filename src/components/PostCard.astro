@@ -57,9 +57,10 @@ const formattedDate = date?.toLocaleDateString('pt-BR', {
   .thumb {
     display: block;
     aspect-ratio: 3 / 2;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    background: var(--line);
+    background: var(--surface-2);
+    border: 1px solid var(--line-strong);
   }
 
   .thumb img {
@@ -90,7 +91,8 @@ const formattedDate = date?.toLocaleDateString('pt-BR', {
   }
 
   .card:hover h3 {
-    color: var(--violet);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 
   .description {

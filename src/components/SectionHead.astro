@@ -8,45 +8,30 @@ interface Props {
 const { title, href, linkLabel, id } = Astro.props;
 ---
 <div class="section-head">
-  <h2 id={id}>{href ? <a href={href}>{title}</a> : title}</h2>
-  <span class="rule" aria-hidden="true"></span>
-  {href && linkLabel && <a class="more" href={href}>{linkLabel}</a>}
+  <h2 id={id}>{title}</h2>
+  {href && linkLabel && <a class="more" href={href}>{linkLabel} →</a>}
 </div>
 
 <style>
   .section-head {
     display: flex;
     align-items: baseline;
-    gap: 16px;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
   }
 
   h2 {
-    font-size: 1.35rem;
+    font-size: 1.625rem;
     font-weight: 800;
-    letter-spacing: -0.02em;
-    white-space: nowrap;
-  }
-
-  h2 a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  h2 a:hover {
-    color: var(--violet);
-  }
-
-  /* The rule separates sections and carries the eye to the section link. */
-  .rule {
-    flex: 1;
-    align-self: center;
-    height: 1px;
-    background: var(--line);
+    letter-spacing: -0.01em;
   }
 
   .more {
-    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--violet);
     text-decoration: none;
@@ -54,6 +39,6 @@ const { title, href, linkLabel, id } = Astro.props;
   }
 
   .more:hover {
-    text-decoration: underline;
+    color: var(--ink-strong);
   }
 </style>

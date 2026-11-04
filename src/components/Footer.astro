@@ -16,7 +16,8 @@ const quickLinks = [
   <div class="container grid">
     <div class="about-col">
       <a href="/" class="brand" aria-label="Informática para Concurso - Início">
-        <span class="brand-mark"><img class="brand-logo" src="/images/logo-icon.webp" alt="" width="28" height="28" /><span class="brand-name">Informática<small>para Concurso</small></span></span>
+        <svg class="brand-logo" width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true"><rect x="5" y="4" width="26" height="20" rx="3" stroke="currentColor" stroke-width="2.2"></rect><path d="M12 12l4 3-4 3M19 19h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 31h10M18 24v7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+        <span class="brand-name">Informática<small>para Concurso</small></span>
       </a>
       <p class="tagline">
         Resumos, simulados e análises das bancas para você estudar informática com foco no que realmente cai nas provas de concursos públicos.
@@ -58,6 +59,12 @@ const quickLinks = [
 <style>
   .site-footer {
     margin-top: 56px;
+    background: #080b11;
+    --ink-soft: #a9b4c9;
+    --ink-strong: #ffffff;
+    --violet: #a5b4fc;
+    --teal: #2dd4bf;
+    border-top: 1px solid var(--line);
   }
 
   .grid {
@@ -75,17 +82,10 @@ const quickLinks = [
     margin: 0 0 16px;
   }
 
-  .brand-mark {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
   .brand-logo {
     display: block;
-    height: 28px;
-    width: 28px;
-    image-rendering: pixelated;
+    flex: none;
+    color: var(--violet);
   }
 
   .brand-name {
@@ -117,24 +117,15 @@ const quickLinks = [
   }
 
   .col-title {
+    font-family: var(--font-display);
     position: relative;
     font-size: 0.95rem;
     color: var(--ink-strong);
     font-weight: 700;
     margin: 0 0 14px;
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
 
-  .col-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 32px;
-    height: 3px;
-    border-radius: 2px;
-    background: linear-gradient(135deg, var(--violet), var(--rose));
-  }
 
 
   ul {
@@ -155,6 +146,9 @@ const quickLinks = [
   }
 
   ul a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
     text-decoration: none;
     color: var(--ink-soft);
     font-size: 0.9rem;

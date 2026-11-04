@@ -380,16 +380,14 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
     border-top: 1px solid var(--line);
   }
 
-  :global(:root[data-theme='dark']) .quiz {
+  :global(:root:not([data-theme='light'])) .quiz {
     --ok: #34d399;
     --bad: #fb7185;
   }
 
-  @media (prefers-color-scheme: dark) {
     :global(:root:not([data-theme='light'])) .quiz {
-      --ok: #34d399;
-      --bad: #fb7185;
-    }
+    --ok: #34d399;
+    --bad: #fb7185;
   }
 
   .quiz [hidden] {
@@ -407,18 +405,16 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
     text-shadow: 0 0 10px var(--neon-glow);
   }
 
-  :global(:root[data-theme='dark']) .quiz .quiz-title-neon {
+  :global(:root:not([data-theme='light'])) .quiz .quiz-title-neon {
     --neon: #5cf0ff;
     --neon-glow: rgba(0, 229, 255, 0.75);
     text-shadow: 0 0 6px var(--neon-glow), 0 0 18px rgba(0, 170, 255, 0.55);
   }
 
-  @media (prefers-color-scheme: dark) {
     :global(:root:not([data-theme='light'])) .quiz .quiz-title-neon {
-      --neon: #5cf0ff;
-      --neon-glow: rgba(0, 229, 255, 0.75);
-      text-shadow: 0 0 6px var(--neon-glow), 0 0 18px rgba(0, 170, 255, 0.55);
-    }
+    --neon: #5cf0ff;
+    --neon-glow: rgba(0, 229, 255, 0.75);
+    text-shadow: 0 0 6px var(--neon-glow), 0 0 18px rgba(0, 170, 255, 0.55);
   }
 
   .quiz-intro {

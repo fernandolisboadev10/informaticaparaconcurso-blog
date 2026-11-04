@@ -1,7 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PostCard from '../components/PostCard.astro';
+import LessonRow from '../components/LessonRow.astro';
 import Pagination from '../components/Pagination.astro';
 import SectionHead from '../components/SectionHead.astro';
 import SubjectGrid from '../components/SubjectGrid.astro';
@@ -40,30 +41,172 @@ const questions = all.reduce((n, p) => n + questionCount(p.id), 0);
 // Os simulados agora ficam na categoria do assunto; a home os reúne pelo prefixo do slug.
 const simulados = all.filter((p) => p.id.startsWith('simulado-'));
 const concursos = inCategory('Concursos');
+
+// Post em destaque no topo: o simulado Cebraspe (cai de volta para o mais recente).
+const featured = all.find((p) => p.id === 'simulado-cebraspe-informatica') ?? all[0];
+const fmtLong = (d: Date) => d.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+// "Por onde começar": três passos, na ordem em que o leitor deve percorrer.
+const trilhaSlugs = ['como-estudar-informatica-para-concurso', 'nocoes-de-informatica', 'simulado-cebraspe-informatica'];
+const trilha = trilhaSlugs
+  .map((slug) => all.find((p) => p.id === slug))
+  .filter((p): p is NonNullable<typeof p> => Boolean(p))
+  .map((p) => ({
+    slug: p.id,
+    title: p.data.title,
+    meta: [p.data.readingTime, questionCount(p.id) > 0 ? `${questionCount(p.id)} questões` : ''].filter(Boolean).join(' · '),
+  }));
+
+// Questões de aquecimento: respondidas na própria home, sem sair da página.
+const warmup = [
+  {
+    meta: 'Sistemas · Linux · múltipla escolha',
+    text: 'Em um sistema Linux, o diretório que armazena, por padrão, os arquivos de configuração do sistema e dos programas é o',
+    options: ['/home', '/etc', '/var', '/tmp'],
+    badges: ['A', 'B', 'C', 'D'],
+    correct: 1,
+    comment: 'O /etc guarda as configurações. O /home contém os arquivos pessoais dos usuários, o /var guarda dados variáveis, como registros (logs), e o /tmp guarda arquivos temporários.',
+  },
+  {
+    meta: 'Sistemas · Linux · certo ou errado',
+    text: 'Julgue o item. No Linux, o comando ls -l lista o conteúdo de um diretório em formato detalhado, exibindo, entre outras informações, as permissões, o proprietário e o tamanho de cada arquivo.',
+    options: ['Certo', 'Errado'],
+    badges: ['C', 'E'],
+    correct: 0,
+    comment: 'A opção -l (formato longo) do ls acrescenta permissões, dono, grupo, tamanho e data de modificação. O item está certo.',
+  },
+];
 ---
 <BaseLayout title={page > 1 ? `Informática para Concurso: resumos e simulados - Página ${page}` : "Informática para Concurso: resumos e simulados"} description="Resumos, simulados e o que cai na prova de informática dos concursos, em linguagem simples e direta.">
   {page === 1 ? (
     <>
-      <section class="container intro">
-        <h1>Informática para concurso, matéria por matéria</h1>
-        <p class="lede">
-          {lessons} aulas sobre o que as bancas cobram, divididas pelas matérias do edital, e {questions} questões comentadas para treinar.
-        </p>
+      <section class="hero">
+        <div class="hero-main">
+          <p class="eyebrow">Informática para concursos públicos</p>
+          <h1>Informática para concurso, matéria por matéria</h1>
+          <p class="lede">
+            Aulas organizadas pelas matérias do edital, com o que as bancas realmente cobram, e questões comentadas para fixar cada tema.
+          </p>
+          <div class="actions">
+            <a class="btn-cta" href="/questoes/">
+              Resolver questões
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+            <a class="btn-ghost" href="#trilha">Por onde começar</a>
+          </div>
+          <dl class="stats">
+            <div><dt>aulas</dt><dd>{lessons}</dd></div>
+            <div><dt>questões comentadas</dt><dd>{questions}</dd></div>
+            <div><dt>simulados</dt><dd>{simulados.length}</dd></div>
+          </dl>
+          {featured && (
+            <a class="featured" href={`/${featured.id}`}>
+              <span class="featured-img">
+                {featured.data.image && <Image src={featured.data.image} alt={featured.data.imageAlt ?? featured.data.title} width={640} height={320} quality={70} priority />}
+              </span>
+              <span class="featured-body">
+                <span class="featured-labels">
+                  <span class="badge">Em destaque</span>
+                  <span class="featured-cat">{featured.data.category}</span>
+                  {questionCount(featured.id) > 0 && <span class="chip">{questionCount(featured.id)} questões</span>}
+                </span>
+                <span class="featured-title">{featured.data.title}</span>
+                <span class="featured-meta">{fmtLong(featured.data.date)}{featured.data.readingTime && ` · ${featured.data.readingTime} de leitura`}</span>
+                <span class="featured-go">Fazer o simulado →</span>
+              </span>
+            </a>
+          )}
+        </div>
+
+        <div class="warm-col">
+          {warmup.map((w, qi) => (
+            <article class="warm" data-correct={w.correct} aria-labelledby={`warm-t-${qi}`}>
+              <div class="warm-head">
+                <span class="warm-label" id={`warm-t-${qi}`}>Questão de aquecimento {qi + 1}</span>
+                <span class="warm-meta">{w.meta}</span>
+              </div>
+              <p class="warm-text">{w.text}</p>
+              <div class="warm-opts">
+                {w.options.map((label, i) => (
+                  <button type="button" class="opt" data-i={i}>
+                    <span class="opt-badge">{w.badges[i]}</span>
+                    <span class="opt-label">{label}</span>
+                    <span class="opt-status"></span>
+                  </button>
+                ))}
+              </div>
+              <div class="warm-result" role="status" aria-live="polite">
+                <p class="warm-hint">Escolha uma resposta para ver o gabarito comentado.</p>
+                <div class="warm-answer" hidden>
+                  <p class="warm-verdict"></p>
+                  <p class="warm-comment">{w.comment}</p>
+                  <a class="warm-more" href="/questoes/">Continuar resolvendo questões →</a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {trilha.length > 0 && (
+        <section class="block" id="trilha">
+          <div class="block-head">
+            <h2>Por onde começar</h2>
+            <p>Três passos para organizar seus estudos antes de mergulhar nas matérias.</p>
+          </div>
+          <ol class="trilha">
+            {trilha.map((t, i) => (
+              <li>
+                <a class="step" href={`/${t.slug}`}>
+                  <span class="step-n">{i + 1}</span>
+                  <span class="step-text">
+                    <span class="step-title">{t.title}</span>
+                    {t.meta && <span class="step-meta">{t.meta}</span>}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      <section class="block" id="materias">
+        <div class="block-head head-row">
+          <div>
+            <h2>Estude por matéria do edital</h2>
+            <p>Cada matéria reúne aulas, simulado e questões comentadas.</p>
+          </div>
+          <a class="more" href="/blog/">Ver todas as aulas →</a>
+        </div>
         <SubjectGrid subjects={subjects} />
       </section>
+
+      <div class="block pair">
+        {simulados.length > 0 && (
+          <section>
+            <SectionHead title="Simulados" href="/blog/?q=simulado" linkLabel={`Ver os ${simulados.length}`} />
+            <CompactList posts={simulados.slice(0, 5)} action="Iniciar →" />
+          </section>
+        )}
+        {concursos.length > 0 && (
+          <section>
+            <SectionHead title="Concursos e editais" href={categoryHref('Concursos')} linkLabel={`Ver os ${concursos.length}`} />
+            <CompactList posts={concursos.slice(0, 5)} />
+          </section>
+        )}
+      </div>
     </>
   ) : (
     <h1 class="visually-hidden">Informática para Concurso</h1>
   )}
 
-  <section class="container recent">
+  <section class="block recent">
     <SectionHead title={page === 1 ? 'Aulas recentes' : `Todas as aulas, página ${page}`} href={page === 1 ? '/blog' : undefined} linkLabel="Ver todas" />
-    <div class="grid">
+    <div class="rows">
       {posts.map((post, i) => (
-        <PostCard
+        <LessonRow
           slug={post.id}
           title={post.data.title}
-          description={post.data.description}
           category={post.data.category}
           date={post.data.date}
           readingTime={post.data.readingTime}
@@ -77,22 +220,51 @@ const concursos = inCategory('Concursos');
   </section>
 
   {page === 1 && (
-    <div class="container pair">
-      {simulados.length > 0 && (
-        <section>
-          <SectionHead title="Simulados" href="/blog/?q=simulado" linkLabel={`Ver os ${simulados.length}`} />
-          <CompactList posts={simulados.slice(0, 5)} />
-        </section>
-      )}
-      {concursos.length > 0 && (
-        <section>
-          <SectionHead title="Concursos e editais" href={categoryHref('Concursos')} linkLabel={`Ver os ${concursos.length}`} />
-          <CompactList posts={concursos.slice(0, 5)} />
-        </section>
-      )}
-    </div>
+    <section class="block band-wrap">
+      <div class="band">
+        <div class="band-text">
+          <h2>Leu a aula? Fixe com questões.</h2>
+          <p>Resolva questões comentadas, confira o gabarito e entenda o porquê de cada alternativa.</p>
+        </div>
+        <a class="btn-cta btn-big" href="/questoes/">
+          Resolver questões
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+    </section>
   )}
 </BaseLayout>
+
+<script>
+  // Questões de aquecimento: marca o gabarito e mostra o comentário, uma única tentativa por questão.
+  document.querySelectorAll<HTMLElement>('.warm').forEach((card) => {
+    const correct = Number(card.dataset.correct);
+    const buttons = Array.from(card.querySelectorAll<HTMLButtonElement>('.opt'));
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const chosen = Number(btn.dataset.i);
+        buttons.forEach((b, i) => {
+          b.disabled = true;
+          const status = b.querySelector('.opt-status');
+          if (i === correct) {
+            b.classList.add('is-right');
+            if (status) status.textContent = '✓ Gabarito';
+          } else if (i === chosen) {
+            b.classList.add('is-wrong');
+            if (status) status.textContent = '✗ Sua resposta';
+          }
+        });
+        const verdict = card.querySelector<HTMLElement>('.warm-verdict');
+        if (verdict) {
+          verdict.textContent = chosen === correct ? 'Você acertou.' : 'Você errou. Veja o comentário.';
+          verdict.classList.toggle('ok', chosen === correct);
+        }
+        card.querySelector<HTMLElement>('.warm-hint')?.setAttribute('hidden', '');
+        card.querySelector<HTMLElement>('.warm-answer')?.removeAttribute('hidden');
+      });
+    });
+  });
+</script>
 
 <style>
   .visually-hidden {
@@ -107,57 +279,577 @@ const concursos = inCategory('Concursos');
     border: 0;
   }
 
-  .intro {
-    padding-block: 44px 24px;
+  /* Larguras do design: conteúdo em 1180px com 24px de margem. */
+  .hero,
+  .block {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+
+  .block {
+    padding-block: 40px 24px;
+  }
+
+  .hero {
+    padding-block: 64px 48px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
+    gap: 48px;
+    align-items: start;
+  }
+
+  .hero-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 0;
+  }
+
+  .eyebrow {
+    margin: 0;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--violet);
   }
 
   h1 {
-    max-width: 18ch;
-    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-size: clamp(2.375rem, 5.2vw, 4rem);
     font-weight: 800;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.025em;
     line-height: 1.04;
+    text-wrap: balance;
   }
 
   .lede {
-    max-width: 56ch;
-    margin: 16px 0 32px;
-    font-size: 1.08rem;
-    line-height: 1.55;
+    max-width: 520px;
+    margin: 0;
+    font-size: 1.1875rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 28px;
+    border-radius: 12px;
+    background: var(--cta);
+    color: var(--cta-ink);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.0625rem;
+    text-decoration: none;
+  }
+
+  .btn-cta:hover {
+    filter: brightness(1.08);
+  }
+
+  .btn-big {
+    min-height: 56px;
+    padding: 0 32px;
+    font-size: 1.125rem;
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 0 24px;
+    border-radius: 12px;
+    border: 1px solid var(--line-strong);
+    color: var(--ink-strong);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .btn-ghost:hover {
+    background: var(--surface-2);
+    border-color: var(--line-hover);
+  }
+
+  .stats {
+    margin: 8px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 40px;
+  }
+
+  .stats > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .stats dt {
+    order: 2;
+    font-size: 0.8125rem;
+    color: var(--ink-soft);
+  }
+
+  .stats dd {
+    order: 1;
+    margin: 0;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--ink-strong);
+  }
+
+  /* Cartão em destaque */
+  .featured {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.15s;
+  }
+
+  .featured:hover {
+    border-color: var(--line-hover);
+  }
+
+  .featured-img {
+    display: block;
+    aspect-ratio: 16 / 8;
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--line-strong);
+    overflow: hidden;
+  }
+
+  .featured-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .featured-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+  }
+
+  .featured-labels {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 12px;
+    font-size: 0.8125rem;
+  }
+
+  .badge {
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: var(--cta);
+    color: var(--cta-ink);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .featured-cat {
+    font-weight: 700;
+    color: var(--violet);
+  }
+
+  .chip {
+    padding: 2px 8px;
+    border-radius: 8px;
+    border: 1px solid var(--chip-line);
+    background: var(--chip-bg);
+    color: var(--chip-ink);
+    font-family: var(--font-mono);
+    font-weight: 700;
+  }
+
+  .featured-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--ink-strong);
+    text-wrap: balance;
+  }
+
+  .featured-meta {
+    font-size: 0.8125rem;
+    color: var(--ink-soft);
+  }
+
+  .featured-go {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 700;
+    color: var(--cta);
+  }
+
+  /* Questões de aquecimento */
+  .warm-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+  }
+
+  .warm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+
+  .warm-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px 12px;
+  }
+
+  .warm-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--violet);
+  }
+
+  .warm-meta {
+    font-size: 0.8125rem;
+    color: var(--ink-soft);
+  }
+
+  .warm-text {
+    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--ink-strong);
+    text-wrap: pretty;
+  }
+
+  .warm-opts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .opt {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-height: 48px;
+    padding: 8px 14px;
+    text-align: left;
+    border-radius: 12px;
+    border: 2px solid var(--line-strong);
+    background: var(--bg);
+    color: var(--ink-strong);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.4;
+    cursor: pointer;
+  }
+
+  .opt:not(:disabled):hover {
+    background: var(--surface-2);
+    border-color: var(--line-hover);
+  }
+
+  .opt:disabled {
+    cursor: default;
+  }
+
+  .opt-badge {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--surface-2);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+
+  .opt-label {
+    flex: 1;
+  }
+
+  .opt-status {
+    flex: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .opt.is-right {
+    border-color: var(--ok);
+    background: color-mix(in srgb, var(--ok) 12%, transparent);
+  }
+
+  .opt.is-right .opt-status {
+    color: var(--ok);
+  }
+
+  .opt.is-wrong {
+    border-color: var(--bad);
+    background: color-mix(in srgb, var(--bad) 12%, transparent);
+  }
+
+  .opt.is-wrong .opt-status {
+    color: var(--bad);
+  }
+
+  .warm-hint {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--ink-soft);
+  }
+
+  .warm-answer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+  }
+
+  .warm-answer[hidden],
+  .warm-hint[hidden] {
+    display: none;
+  }
+
+  .warm-verdict {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.0625rem;
+    color: var(--bad);
+  }
+
+  .warm-verdict.ok {
+    color: var(--ok);
+  }
+
+  .warm-comment {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+
+  .warm-more {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: var(--cta);
+    text-decoration: none;
+  }
+
+  /* Blocos de seção */
+  .block-head {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .block-head.head-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .block-head.head-row > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .block-head h2 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+  }
+
+  .block-head p {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+
+  .more {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 600;
+    color: var(--violet);
+    text-decoration: none;
+  }
+
+  .more:hover {
+    color: var(--ink-strong);
+  }
+
+  /* Por onde começar */
+  .trilha {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+    gap: 16px;
+  }
+
+  .step {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.15s;
+  }
+
+  .step:hover {
+    border-color: var(--line-hover);
+  }
+
+  .step-n {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--surface-2);
+    color: var(--violet);
+    font-family: var(--font-mono);
+    font-weight: 700;
+  }
+
+  .step-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .step-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    color: var(--ink-strong);
+    text-wrap: balance;
+  }
+
+  .step-meta {
+    font-size: 0.875rem;
     color: var(--ink-soft);
   }
 
   .pair {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 40px;
-    padding-block: 0 56px;
+    grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr));
+    gap: 48px;
+  }
+
+  .rows {
+    border-top: 1px solid var(--line);
+  }
+
+  .rows > :global(.row + .row) {
+    border-top: 1px solid var(--line);
+  }
+
+  .rows > :global(.row) {
+    border-bottom: 0;
   }
 
   .recent {
-    padding-block: 40px 56px;
+    padding-bottom: 8px;
   }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 32px 24px;
+  /* Faixa final */
+  .band-wrap {
+    padding-block: 48px 72px;
   }
 
-  @media (max-width: 860px) {
-    .pair {
-      grid-template-columns: minmax(0, 1fr);
+  .band {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 40px;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    border-radius: 20px;
+  }
+
+  .band-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 640px;
+  }
+
+  .band-text h2 {
+    font-size: 2rem;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+
+  .band-text p {
+    margin: 0;
+    font-size: 1.0625rem;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding-block: 40px 32px;
+      gap: 32px;
     }
 
-    .grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (max-width: 600px) {
-    .grid {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 0;
+    .band {
+      padding: 28px 24px;
     }
   }
 </style>
