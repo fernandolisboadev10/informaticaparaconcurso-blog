@@ -78,9 +78,10 @@ const warmup = [
 ];
 ---
 <BaseLayout title={page > 1 ? `Informática para Concurso: resumos e simulados - Página ${page}` : "Informática para Concurso: resumos e simulados"} description="Resumos, simulados e o que cai na prova de informática dos concursos, em linguagem simples e direta.">
-  {page === 1 ? (
-    <>
-      <section class="hero">
+  {page > 1 && <h1 class="visually-hidden">Informática para Concurso</h1>}
+
+  {page === 1 && (
+    <section class="hero">
         <div class="hero-main">
           <p class="eyebrow">Informática para concursos públicos</p>
           <h1>Informática para concurso, matéria por matéria</h1>
@@ -146,8 +147,30 @@ const warmup = [
             </article>
           ))}
         </div>
-      </section>
+    </section>
+  )}
 
+  <section class="block recent">
+    <SectionHead title={page === 1 ? 'Aulas recentes' : `Todas as aulas, página ${page}`} href={page === 1 ? '/blog' : undefined} linkLabel="Ver todas" />
+    <div class="rows">
+      {posts.map((post, i) => (
+        <LessonRow
+          slug={post.id}
+          title={post.data.title}
+          category={post.data.category}
+          date={post.data.date}
+          readingTime={post.data.readingTime}
+          image={post.data.image}
+          imageAlt={post.data.imageAlt}
+          priority={page > 1 && i === 0}
+        />
+      ))}
+    </div>
+    <Pagination current={page} total={totalPages} />
+  </section>
+
+  {page === 1 && (
+    <>
       {trilha.length > 0 && (
         <section class="block" id="trilha">
           <div class="block-head">
@@ -196,28 +219,7 @@ const warmup = [
         )}
       </div>
     </>
-  ) : (
-    <h1 class="visually-hidden">Informática para Concurso</h1>
   )}
-
-  <section class="block recent">
-    <SectionHead title={page === 1 ? 'Aulas recentes' : `Todas as aulas, página ${page}`} href={page === 1 ? '/blog' : undefined} linkLabel="Ver todas" />
-    <div class="rows">
-      {posts.map((post, i) => (
-        <LessonRow
-          slug={post.id}
-          title={post.data.title}
-          category={post.data.category}
-          date={post.data.date}
-          readingTime={post.data.readingTime}
-          image={post.data.image}
-          imageAlt={post.data.imageAlt}
-          priority={page > 1 && i === 0}
-        />
-      ))}
-    </div>
-    <Pagination current={page} total={totalPages} />
-  </section>
 
   {page === 1 && (
     <section class="block band-wrap">
