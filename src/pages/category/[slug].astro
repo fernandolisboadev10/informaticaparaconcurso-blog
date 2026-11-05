@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
+import ApostilaBanner from '../../components/ApostilaBanner.astro';
 import { categories } from '../../data/categories';
 import { isPublished, sortByActivity } from '../../utils/posts';
 
@@ -14,6 +15,7 @@ export async function getStaticPaths() {
 }
 
 const PAGE_SIZE = 6;
+const BANNER_AFTER = 3; // banner da apostila depois do 3º cartão
 const { category, posts } = Astro.props;
 
 const schema = {
@@ -50,6 +52,7 @@ const schema = {
 
     <div class="posts">
       {posts.map((post, i) => (
+        <>
         <div class={i < PAGE_SIZE ? 'item' : 'item extra'}>
         <PostCard
           slug={post.id}
@@ -62,6 +65,10 @@ const schema = {
           imageAlt={post.data.imageAlt}
         />
         </div>
+        {i === BANNER_AFTER - 1 && posts.length > BANNER_AFTER && (
+          <div class="promo"><ApostilaBanner slot="categoria" category={category.name} /></div>
+        )}
+        </>
       ))}
     </div>
     <div class="more-wrap">
@@ -93,6 +100,10 @@ const schema = {
 <style>
   .item {
     display: contents;
+  }
+
+  .promo {
+    grid-column: 1 / -1;
   }
 
   .item.extra:not(.show) {

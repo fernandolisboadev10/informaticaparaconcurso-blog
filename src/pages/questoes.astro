@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { categories } from '../data/categories';
 import { isPublished } from '../utils/posts';
 import { QUESTOES_URL, questoesAriaLabel } from '../data/questoes';
+import ApostilaBanner from '../components/ApostilaBanner.astro';
 
 // Todas as questões comentadas do site (src/data/quizzes/<slug>.json), reunidas em um treino único.
 // O leitor escolhe a matéria e responde um bloco de 10 questões sorteadas, com gabarito e link para a aula.
@@ -116,6 +117,8 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
       Quer questões novas, por assunto e banca? Conheça o
       <a href={QUESTOES_URL} target="_blank" rel="noopener" aria-label={`Conhecer o ${questoesAriaLabel}`}>Gerador de Questões com IA</a>.
     </p>
+
+    <ApostilaBanner slot="questoes" />
   </div>
 
   <script type="application/json" id="q-data" set:html={payload}></script>

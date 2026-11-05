@@ -1,0 +1,124 @@
+---
+import { APOSTILA_URL, APOSTILA_PRICE, APOSTILA_COVER, MODULO_BY_CATEGORY, apostilaAriaLabel } from '../data/apostila';
+
+interface Props {
+  slot: string; // identifica a posição no GA4: post-meio, post-fim, post-lateral, home, categoria
+  variant?: 'wide' | 'side';
+  category?: string;
+}
+
+const { slot, variant = 'wide', category } = Astro.props;
+const modulo = category ? MODULO_BY_CATEGORY[category] : undefined;
+const title = modulo
+  ? `Treine ${modulo.nome} com questões reais da Cebraspe`
+  : 'Mais de 500 questões reais da Cebraspe, com gabarito comentado';
+const text = modulo
+  ? `O módulo de ${modulo.nome} da apostila tem ${modulo.questoes} questões de provas já aplicadas, cada uma com comentário.`
+  : 'Apostila em PDF com questões de provas já aplicadas de todos os concursos da banca, organizadas por matéria.';
+---
+<aside class:list={['apostila', variant]} data-banner="apostila" data-slot={slot} aria-label={apostilaAriaLabel}>
+  <img class="cover" src={APOSTILA_COVER} alt="" width="128" height="171" loading="lazy" decoding="async" />
+  <div class="body">
+    <p class="eyebrow">Apostila Cebraspe</p>
+    <p class="title">{title}</p>
+    <p class="text">{text}</p>
+    <a class="btn" href={APOSTILA_URL} data-banner-link>Quero a apostila por {APOSTILA_PRICE}</a>
+  </div>
+</aside>
+
+<style>
+  .apostila {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 36px 0;
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    box-shadow: 0 0 0 1px rgba(252, 211, 77, 0.18), 0 0 22px rgba(252, 211, 77, 0.08);
+  }
+  .cover {
+    flex: none;
+    width: 128px;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    border-radius: 6px;
+    border: 1px solid var(--line-hover);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  }
+  .body { min-width: 0; }
+  .eyebrow {
+    margin: 0 0 4px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--chip-ink);
+  }
+  .title {
+    margin: 0 0 6px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    color: var(--ink-strong);
+  }
+  .text { margin: 0 0 14px; font-size: 0.9375rem; color: var(--ink-soft); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 20px;
+    border-radius: 12px;
+    background: var(--cta);
+    color: var(--cta-ink);
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .btn:hover { filter: brightness(1.08); }
+
+  .apostila.side {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 16px;
+    gap: 12px;
+  }
+  .side .cover { width: 120px; }
+  .side .title { font-size: 1.05rem; }
+  .side .text { font-size: 0.875rem; margin-bottom: 12px; }
+
+  @media (max-width: 520px) {
+    .apostila.wide { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+
+<script>
+  // Medição no GA4 (gtag já existe no BaseLayout): banner_view quando 50% do banner aparece, banner_click ao clicar.
+  declare const gtag: (...args: unknown[]) => void;
+  const send = (name: string, slot: string) => {
+    try { gtag('event', name, { banner_id: 'apostila', slot }); } catch { /* sem analytics */ }
+  };
+  const seen = new WeakSet<Element>();
+  const io = 'IntersectionObserver' in window
+    ? new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting && !seen.has(e.target)) {
+            seen.add(e.target);
+            send('banner_view', (e.target as HTMLElement).dataset.slot ?? '');
+            io!.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.5 })
+    : null;
+  const watch = () => document.querySelectorAll('[data-banner="apostila"]').forEach((el) => io?.observe(el));
+  watch();
+  document.addEventListener('click', (ev) => {
+    const a = (ev.target as HTMLElement).closest('[data-banner-link]');
+    const box = a?.closest<HTMLElement>('[data-banner="apostila"]');
+    if (box) send('banner_click', box.dataset.slot ?? '');
+  });
+  // Banners injetados depois (meio do artigo) avisam por este evento.
+  document.addEventListener('banner:added', watch);
+</script>

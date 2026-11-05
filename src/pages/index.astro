@@ -10,6 +10,7 @@ import CompactList from '../components/CompactList.astro';
 import { categories, categoryHref } from '../data/categories';
 import { isPublished, sortByActivity } from '../utils/posts';
 import { questionCount } from '../utils/quizzes';
+import ApostilaBanner from '../components/ApostilaBanner.astro';
 import { QUESTOES_URL, questoesAriaLabel } from '../data/questoes';
 
 // Page 1 opens with the subjects of the exam syllabus; "Aulas recentes" and the /page/N/ pages
@@ -260,6 +261,7 @@ const warmup = [
           <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         </a>
       </div>
+      <ApostilaBanner slot="home" />
     </section>
   )}
 </BaseLayout>
