@@ -26,7 +26,7 @@ const text = modulo
     <p class="eyebrow">Apostila Cebraspe</p>
     <p class="title">{title}</p>
     <p class="text">{text}</p>
-    <a class="btn" href={APOSTILA_URL} data-banner-link><span class="lg">Quero a apostila por </span><span class="sm">Comprar por </span>{APOSTILA_PRICE} <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+    <a class="btn" href={APOSTILA_URL} data-banner-link><span class="label"><span class="lg">Quero a apostila por </span><span class="sm">Comprar por </span>{APOSTILA_PRICE}</span> <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
   </div>
 </aside>
 
@@ -109,10 +109,16 @@ const text = modulo
     font-size: 0.9rem;
   }
   .btn { gap: 10px; }
+  .btn .label { white-space: nowrap; }
   .btn svg { transition: transform 0.2s; }
   .btn:hover svg { transform: translateX(4px); }
 
+  /* O fundo do hero é sempre escuro: fixa as cores de texto claras, mesmo no tema claro do site. */
   .apostila.hero {
+    --ink-strong: #ffffff;
+    --ink-soft: #c3cbe0;
+    --cta: #2dd4bf;
+    --cta-ink: #04201d;
     gap: 32px;
     margin: 8px 0;
     padding: 32px 40px;
