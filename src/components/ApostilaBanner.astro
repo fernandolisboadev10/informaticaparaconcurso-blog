@@ -26,7 +26,7 @@ const text = modulo
     <p class="eyebrow">Apostila Cebraspe</p>
     <p class="title">{title}</p>
     <p class="text">{text}</p>
-    <a class="btn" href={APOSTILA_URL} data-banner-link>Quero a apostila por {APOSTILA_PRICE} <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+    <a class="btn" href={APOSTILA_URL} data-banner-link><span class="lg">Quero a apostila por </span><span class="sm">Comprar por </span>{APOSTILA_PRICE} <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
   </div>
 </aside>
 
@@ -45,6 +45,8 @@ const text = modulo
   .cover {
     flex: none;
     width: 128px;
+    margin: 0;
+    max-width: none;
     height: auto;
     aspect-ratio: 3 / 4;
     border-radius: 6px;
@@ -164,15 +166,39 @@ const text = modulo
     .price { animation: price-pop 2.2s ease-in-out infinite; }
   }
 
-  @media (max-width: 640px) {
-    .apostila.hero { flex-direction: column; align-items: flex-start; padding: 28px 22px; }
-    .hero .cover { width: 130px; }
-    .hero .price { top: 14px; right: 14px; }
-    .hero .body { padding-right: 0; padding-top: 28px; }
-  }
+  /* Celular: faixa compacta (capa pequena + título) e botão em largura total, em vez de um cartão alto. */
+  .btn .sm { display: none; }
 
-  @media (max-width: 520px) {
-    .apostila.wide { flex-direction: column; align-items: flex-start; }
+  @media (max-width: 640px) {
+    .apostila.hero,
+    .apostila.wide {
+      display: grid;
+      grid-template-columns: 84px minmax(0, 1fr);
+      grid-template-areas: 'cover info' 'cta cta';
+      gap: 10px 16px;
+      align-items: start;
+      margin: 8px 0;
+      padding: 16px;
+      border-radius: 16px;
+    }
+    .hero .cover,
+    .wide .cover { grid-area: cover; width: 84px; animation-duration: 5s; }
+    .hero .body,
+    .wide .body { display: contents; padding: 0; }
+    .hero .price,
+    .wide .price { display: none; }
+    .hero .eyebrow,
+    .wide .eyebrow { display: none; }
+    .hero .title,
+    .wide .title { grid-area: info; align-self: center; margin: 0; font-size: 1.1rem; line-height: 1.25; }
+    .hero .text,
+    .wide .text { display: none; }
+    .hero .btn,
+    .wide .btn { grid-area: cta; justify-content: center; width: 100%; min-height: 48px; padding: 0 16px; font-size: 1rem; }
+    .btn .lg { display: none; }
+    .btn .sm { display: inline; }
+    .hero .body > *,
+    .wide .body > * { position: relative; z-index: 2; }
   }
 </style>
 
