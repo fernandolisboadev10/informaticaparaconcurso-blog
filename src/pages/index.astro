@@ -178,6 +178,12 @@ const warmup = [
               <a class="step" href={`/${t.slug}`}>
                 <span class="step-thumb">
                   {t.image && <Image src={t.image} alt={t.imageAlt ?? t.title} width={640} height={400} quality={70} />}
+                  <span class="step-star" title="Favorito dos leitores">
+                    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+                      <path d="M12 2.5l2.94 5.96 6.58.96-4.76 4.64 1.12 6.55L12 17.52 6.12 20.61l1.12-6.55L2.48 9.42l6.58-.96L12 2.5z" />
+                    </svg>
+                    <span class="visually-hidden">Favorito dos leitores</span>
+                  </span>
                 </span>
                 <span class="step-info">
                   <span class="step-n">{i + 1}</span>
@@ -789,6 +795,7 @@ const warmup = [
   }
 
   .step-thumb {
+    position: relative;
     display: block;
     aspect-ratio: 16 / 10;
     background: var(--surface-2);
@@ -806,6 +813,31 @@ const warmup = [
     display: flex;
     gap: 16px;
     padding: 20px;
+  }
+
+  /* Estrela dourada: marca os artigos favoritos e mais acessados. */
+  .step-star {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(10, 14, 22, 0.78);
+    border: 1px solid rgba(251, 191, 36, 0.55);
+    box-shadow: 0 0 12px rgba(251, 191, 36, 0.4);
+    backdrop-filter: blur(4px);
+  }
+
+  .step-star svg {
+    fill: #fbbf24;
+    stroke: #f59e0b;
+    stroke-width: 1;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 3px rgba(251, 191, 36, 0.6));
   }
 
   .step:hover {
