@@ -167,6 +167,12 @@ const warmup = [
     </section>
   )}
 
+  {page === 1 && (
+    <section class="block promo-hero">
+      <ApostilaBanner slot="home-topo" variant="hero" />
+    </section>
+  )}
+
   {page === 1 && trilha.length > 0 && (
       <section class="block" id="trilha">
         <div class="block-head">
@@ -320,6 +326,10 @@ const warmup = [
 
   .block {
     padding-block: 40px 24px;
+  }
+
+  .block.promo-hero {
+    padding-block: 8px 0;
   }
 
   .hero {

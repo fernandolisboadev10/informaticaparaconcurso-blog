@@ -3,13 +3,16 @@ import { APOSTILA_URL, APOSTILA_PRICE, APOSTILA_COVER, MODULO_BY_CATEGORY, apost
 
 interface Props {
   slot: string; // identifica a posição no GA4: post-meio, post-fim, post-lateral, home, categoria
-  variant?: 'wide' | 'side';
+  variant?: 'wide' | 'side' | 'hero';
   category?: string;
 }
 
 const { slot, variant = 'wide', category } = Astro.props;
 const modulo = category ? MODULO_BY_CATEGORY[category] : undefined;
-const title = modulo
+const isHero = variant === 'hero';
+const title = isHero
+  ? 'Mais de 500 questões reais da Cebraspe, com gabarito comentado'
+  : modulo
   ? `Treine ${modulo.nome} com questões reais da Cebraspe`
   : 'Mais de 500 questões reais da Cebraspe, com gabarito comentado';
 const text = modulo
@@ -19,10 +22,11 @@ const text = modulo
 <aside class:list={['apostila', variant]} data-banner="apostila" data-slot={slot} aria-label={apostilaAriaLabel}>
   <img class="cover" src={APOSTILA_COVER} alt="" width="128" height="171" loading="lazy" decoding="async" />
   <div class="body">
+    <span class="price" aria-hidden="true">{APOSTILA_PRICE}</span>
     <p class="eyebrow">Apostila Cebraspe</p>
     <p class="title">{title}</p>
     <p class="text">{text}</p>
-    <a class="btn" href={APOSTILA_URL} data-banner-link>Quero a apostila por {APOSTILA_PRICE}</a>
+    <a class="btn" href={APOSTILA_URL} data-banner-link>Quero a apostila por {APOSTILA_PRICE} <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
   </div>
 </aside>
 
@@ -47,7 +51,7 @@ const text = modulo
     border: 1px solid var(--line-hover);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
   }
-  .body { min-width: 0; }
+  .body { min-width: 0; position: relative; z-index: 2; }
   .eyebrow {
     margin: 0 0 4px;
     font-size: 0.72rem;
@@ -88,6 +92,84 @@ const text = modulo
   .side .cover { width: 120px; }
   .side .title { font-size: 1.05rem; }
   .side .text { font-size: 0.875rem; margin-bottom: 12px; }
+
+  /* Efeitos de banner de propaganda (desligados para quem prefere menos movimento) */
+  .apostila { position: relative; overflow: hidden; isolation: isolate; }
+  .price {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #ffc400;
+    color: #1a1400;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+  .btn { gap: 10px; }
+  .btn svg { transition: transform 0.2s; }
+  .btn:hover svg { transform: translateX(4px); }
+
+  .apostila.hero {
+    gap: 32px;
+    margin: 8px 0;
+    padding: 32px 40px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, #111827 0%, #1b1f4a 60%, #2a1f6b 100%);
+  }
+  .hero .cover { width: 170px; }
+  .hero .eyebrow { color: #ffc400; font-size: 0.8rem; }
+  .hero .title { font-size: clamp(1.5rem, 3.2vw, 2.25rem); letter-spacing: -0.015em; }
+  .hero .text { font-size: 1.0625rem; max-width: 560px; }
+  .hero .btn { min-height: 56px; padding: 0 30px; font-size: 1.125rem; }
+  .hero .price { position: absolute; top: 20px; right: 24px; margin: 0; font-size: 1.25rem; padding: 6px 16px; }
+  .hero .body { padding-right: 130px; }
+
+  @keyframes glow-border {
+    0%, 100% { box-shadow: 0 0 0 1px rgba(255, 196, 0, 0.35), 0 0 14px rgba(255, 196, 0, 0.12); }
+    50% { box-shadow: 0 0 0 1px rgba(255, 196, 0, 0.9), 0 0 30px rgba(255, 196, 0, 0.35); }
+  }
+  @keyframes shine {
+    0%, 55% { transform: translateX(-130%) skewX(-20deg); }
+    100% { transform: translateX(260%) skewX(-20deg); }
+  }
+  @keyframes float-cover {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-8px) rotate(1.5deg); }
+  }
+  @keyframes btn-pulse {
+    0%, 100% { box-shadow: 0 0 6px color-mix(in srgb, var(--cta) 45%, transparent), 0 0 14px color-mix(in srgb, var(--cta) 25%, transparent); }
+    50% { box-shadow: 0 0 12px color-mix(in srgb, var(--cta) 80%, transparent), 0 0 28px color-mix(in srgb, var(--cta) 45%, transparent); transform: scale(1.03); }
+  }
+  @keyframes price-pop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1) rotate(-3deg); }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .apostila { animation: glow-border 3s ease-in-out infinite; }
+    .apostila::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 35%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+      transform: translateX(-130%) skewX(-20deg);
+      animation: shine 5s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .cover { animation: float-cover 4.5s ease-in-out infinite; }
+    .btn { animation: btn-pulse 2.6s ease-in-out infinite; }
+    .price { animation: price-pop 2.2s ease-in-out infinite; }
+  }
+
+  @media (max-width: 640px) {
+    .apostila.hero { flex-direction: column; align-items: flex-start; padding: 28px 22px; }
+    .hero .cover { width: 130px; }
+    .hero .price { top: 14px; right: 14px; }
+    .hero .body { padding-right: 0; padding-top: 28px; }
+  }
 
   @media (max-width: 520px) {
     .apostila.wide { flex-direction: column; align-items: flex-start; }
