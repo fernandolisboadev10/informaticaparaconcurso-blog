@@ -21,6 +21,8 @@ import { QUESTOES_URL, questoesAriaLabel } from '../data/questoes';
 const PER_PAGE = 9;
 const page = Number(Astro.props.page ?? 1);
 const all = sortByActivity(await getCollection('blog', isPublished));
+// Topo da home: ordem por data de criação (o mais novo publicado), não por edição.
+const byCreated = [...all].sort((a, b) => b.data.date.getTime() - a.data.date.getTime() || a.id.localeCompare(b.id));
 const totalPages = Math.max(1, Math.ceil(all.length / PER_PAGE));
 const posts = all.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
@@ -71,12 +73,12 @@ const trilha = trilhaSlugs
   {page === 1 && (
     <>
       <h1 class="visually-hidden">Informática para Concurso: resumos e simulados</h1>
-      <TrendBar posts={all.slice(0, 6)} />
+      <TrendBar posts={byCreated.slice(0, 6)} />
       <section class="top">
-        <div class="top-lead"><HomeLead posts={all.slice(0, 1)} /></div>
+        <div class="top-lead"><HomeLead posts={byCreated.slice(0, 1)} /></div>
         <aside class="top-latest" aria-labelledby="latest-title">
           <SectionHead title="Últimas" id="latest-title" />
-          <LatestList posts={all.slice(1, 10)} />
+          <LatestList posts={byCreated.slice(1, 10)} />
         </aside>
       </section>
     </>

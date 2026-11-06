@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { activityTime } from '../utils/posts';
 import CategoryLabel from './CategoryLabel.astro';
 
 interface Props {
@@ -13,7 +12,7 @@ const MONTHS = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', '
 // Day and Brasília time of the post's latest activity. Posts dated without a time (midnight UTC)
 // show only the day, read in UTC so it does not slip to the previous evening.
 const stamp = (post: CollectionEntry<'blog'>) => {
-  const t = new Date(activityTime(post));
+  const t = post.data.date;
   const dateOnly = t.getUTCHours() === 0 && t.getUTCMinutes() === 0;
   const local = dateOnly ? t : new Date(t.getTime() - 3 * 60 * 60 * 1000);
   const day = `${local.getUTCDate()} ${MONTHS[local.getUTCMonth()]}`;
