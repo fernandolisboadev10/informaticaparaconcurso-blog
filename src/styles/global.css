@@ -35,7 +35,7 @@
   --font-display: var(--f-archivo);
   --font-body: var(--f-inter);
   --font-mono: var(--f-jetbrains-mono);
-  --font-read: var(--f-inter);
+  --font-read: var(--f-lexend), var(--f-inter);
   --link: #a5b4fc;
   --link-line: rgba(165, 180, 252, 0.22);
   --code-bg: #1b2438;
@@ -50,7 +50,7 @@
   --marker: #ffff00;
   --marker-ink: #1a1a00;
 
-  --measure: 720px;
+  --measure: 68ch;
 }
 
 :root[data-theme='light'] {
@@ -140,9 +140,9 @@ img {
 .prose p, .prose ul, .prose ol {
   font-family: var(--font-read);
   color: var(--ink);
-  font-size: 1.0625rem;
-  line-height: 1.75;
-  font-weight: 400;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  font-weight: 300;
 }
 
 .prose li {
