@@ -4,7 +4,7 @@ seoTitle: "Comandos Básicos do Linux: Passo a Passo para Iniciantes"
 description: "Comandos básicos do Linux do zero: navegar, criar, copiar e apagar arquivos. Guia passo a passo com exemplos práticos para iniciantes."
 category: "Sistemas"
 date: 2026-08-07T11:54:15-03:00
-updated: 2026-11-01T21:18:00-03:00
+updated: 2026-11-05T22:06:00-03:00
 readingTime: "7 min"
 image: "./images/linux.webp"
 imageAlt: "Comandos Básicos do Linux: Guia Passo a Passo para Quem Nunca Usou o Terminal"
@@ -75,7 +75,7 @@ Você não precisa decorar todos os comandos básicos do Linux de uma vez. Escol
 
 Se você ainda não tem o Linux instalado, ou só quer treinar antes de mexer no seu computador de verdade, use o simulador de terminal logo abaixo. Ele roda direto no navegador, sem instalação, e reproduz o comportamento dos comandos que você acabou de aprender.
 
-Depois que <span class="cai-prova"><code>pwd</code></span>, <span class="cai-prova"><code>ls</code></span>, <span class="cai-prova"><code>cd</code></span>, <span class="cai-prova"><code>mkdir</code></span>, <span class="cai-prova"><code>touch</code></span>, <span class="cai-prova"><code>cp</code></span>, <span class="cai-prova"><code>mv</code></span>, <span class="cai-prova"><code>rm</code></span> e <span class="cai-prova"><code>sudo</code></span> já estiverem confortáveis na sua rotina, você estará pronto para o próximo nível: permissões de arquivo, processos e os comandos que administram o sistema por trás das telas. Para a visão geral do que cai em prova, siga para o guia [Linux para concursos](/linux-para-concursos/) e treine no [simulado de Sistemas Operacionais](/simulado-sistemas/).
+Depois que <span class="cai-prova"><code>pwd</code></span>, <span class="cai-prova"><code>ls</code></span>, <span class="cai-prova"><code>cd</code></span>, <span class="cai-prova"><code>mkdir</code></span>, <span class="cai-prova"><code>touch</code></span>, <span class="cai-prova"><code>cp</code></span>, <span class="cai-prova"><code>mv</code></span>, <span class="cai-prova"><code>rm</code></span> e <span class="cai-prova"><code>sudo</code></span> já estiverem confortáveis na sua rotina, você estará pronto para o próximo nível: [permissões de arquivo no Linux (chmod)](/permissoes-linux-chmod-concursos/), processos e os comandos que administram o sistema por trás das telas. Para a visão geral do que cai em prova, siga para o guia [Linux para concursos](/linux-para-concursos/) e treine no [simulado de Sistemas Operacionais](/simulado-sistemas/).
 
 ## Agora é a sua vez
 

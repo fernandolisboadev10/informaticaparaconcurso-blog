@@ -4,7 +4,7 @@ seoTitle: "Linux para Concursos: o que Cai na Prova da Cebraspe"
 description: "Entenda por que a Cebraspe cobra tanto Linux, veja kernel, distribuições e comandos essenciais e treine com 12 questões de Certo ou Errado."
 category: "Sistemas"
 date: 2026-09-26T12:22:06-03:00
-updated: 2026-11-01T21:18:00-03:00
+updated: 2026-11-05T22:06:00-03:00
 readingTime: "17 min"
 image: "./images/image-1.webp"
 imageAlt: "Pinguim do Linux ao lado de um terminal com os comandos mais cobrados em concursos"
@@ -167,6 +167,8 @@ Alguns valores se repetem tanto que vale memorizar:
 A banca também pode usar a forma simbólica. Por exemplo, `chmod u+x script.sh` dá permissão de execução só ao dono (**u** de *user*), enquanto `chmod g-w arquivo.txt` retira a escrita do grupo. As letras são `u` (dono), `g` (grupo), `o` (outros) e `a` (todos), e os sinais `+` e `-` adicionam ou retiram a permissão.
 
 Treine com este item, elaborado para este artigo: *"O comando `chmod 640 relatorio.txt` permite que o dono leia e escreva no arquivo, que o grupo apenas leia, e que os demais usuários não tenham nenhum acesso."* O gabarito é **Certo**: 6 = 4 + 2 (dono lê e escreve), 4 = leitura (grupo) e 0 = nenhum acesso (outros).
+
+Para ir além da conta, com a pegadinha do `x` em diretórios, o `chown`, o `umask` e um quiz de 12 itens, leia o artigo [permissões no Linux: chmod 755, rwx e questões de concurso](/permissoes-linux-chmod-concursos/).
 
 ## O escritório dentro do Linux: LibreOffice
 

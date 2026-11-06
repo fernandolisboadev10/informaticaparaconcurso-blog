@@ -1,0 +1,88 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Linux, o comando chmod 755 arquivo concede ao proprietário as permissões de leitura, escrita e execução e, ao grupo e aos demais usuários, apenas as de leitura e execução.",
+   "answer": "C",
+   "comment": "O 7 do dono é 4+2+1 (rwx), e os dois 5 seguintes são 4+1 (r-x) para o grupo e para os demais. O item está certo."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O comando chmod pode ser usado para alterar o usuário proprietário de um arquivo no Linux.",
+   "answer": "E",
+   "comment": "O chmod altera as permissões. Quem altera o dono é o chown. Trocar um comando pelo outro é uma das pegadinhas mais comuns."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em um diretório, a permissão de leitura (r) permite listar os nomes dos itens e a de execução (x) permite entrar no diretório e acessar seus itens pelo nome.",
+   "answer": "C",
+   "comment": "Em diretórios, r lista os nomes e x permite entrar (cd) e acessar os itens. Sem o x, não se consegue abrir os arquivos de dentro."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em um diretório, a permissão de execução (x) serve exclusivamente para listar os arquivos nele contidos.",
+   "answer": "E",
+   "comment": "Quem permite listar os nomes é a permissão de leitura (r). O x permite entrar no diretório e acessar os itens, e o uso do termo exclusivamente torna o item errado."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Considerando o umask 022, um arquivo comum criado por padrão recebe a permissão 644 e um diretório criado por padrão recebe a permissão 755.",
+   "answer": "C",
+   "comment": "O ponto de partida é 666 para arquivos e 777 para diretórios. Com umask 022, retiram-se as permissões de escrita de grupo e demais, o que dá 644 e 755."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "A permissão 777 é a mais recomendada para arquivos de programas, pois garante que todos os usuários os executem com segurança.",
+   "answer": "E",
+   "comment": "O 777 libera leitura, escrita e execução para todos, inclusive para alterar o arquivo. É considerada má prática e uma falha de segurança."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Na saída do comando ls -l, a sequência drwxr-x--- indica um diretório em que o dono tem leitura, escrita e execução, o grupo tem leitura e execução e os demais usuários não têm nenhum acesso.",
+   "answer": "C",
+   "comment": "O d inicial indica diretório. Depois vêm rwx (dono), r-x (grupo) e --- (demais usuários), o que corresponde ao que o item descreve."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O comando chmod -R 750 pasta aplica a permissão 750 à pasta indicada e a todo o seu conteúdo, de forma recursiva.",
+   "answer": "C",
+   "comment": "A opção -R torna a operação recursiva, alcançando os arquivos e subdiretórios da pasta."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O comando chmod u+x script.sh adiciona a permissão de execução apenas para o proprietário do arquivo.",
+   "answer": "C",
+   "comment": "O u refere-se ao dono (user), e o + adiciona a permissão. Grupo e demais usuários não são afetados."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O usuário root, em regra, não é impedido pelas permissões comuns de leitura e escrita dos arquivos do sistema.",
+   "answer": "C",
+   "comment": "O administrador tem acesso amplo e, em regra, ignora as restrições comuns de leitura e escrita, por isso o uso do root exige cuidado."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O sticky bit, aplicado a um diretório compartilhado como o /tmp, permite que qualquer usuário apague os arquivos dos outros usuários dentro dele.",
+   "answer": "E",
+   "comment": "É o contrário: com o sticky bit, cada usuário só consegue apagar ou renomear os próprios arquivos no diretório. Ele aparece como t no fim, por exemplo em drwxrwxrwt."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O comando chmod a-w arquivo.txt remove a permissão de escrita do dono, do grupo e dos demais usuários do arquivo.",
+   "answer": "C",
+   "comment": "O a representa todos (dono, grupo e demais), e o sinal - remove a permissão de escrita (w)."
+  }
+ ]
+}
