@@ -5,6 +5,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LessonRow from '../components/LessonRow.astro';
 import Pagination from '../components/Pagination.astro';
 import SectionHead from '../components/SectionHead.astro';
+import TrendBar from "../components/TrendBar.astro";
+import HomeLead from "../components/HomeLead.astro";
+import LatestList from "../components/LatestList.astro";
 import SubjectGrid from '../components/SubjectGrid.astro';
 import CompactList from '../components/CompactList.astro';
 import { categories, categoryHref } from '../data/categories';
@@ -61,110 +64,22 @@ const trilha = trilhaSlugs
     meta: [p.data.readingTime, questionCount(p.id) > 0 ? `${questionCount(p.id)} questões` : ''].filter(Boolean).join(' · '),
   }));
 
-// Questões de aquecimento: respondidas na própria home, sem sair da página.
-const warmup = [
-  {
-    meta: 'Sistemas · Windows · múltipla escolha',
-    text: 'No Windows, ao excluir um arquivo armazenado em um pendrive (unidade removível) com a tecla Delete, o arquivo',
-    options: [
-      'é movido para a Lixeira do próprio pendrive',
-      'é movido para a Lixeira do computador',
-      'é excluído permanentemente, sem passar pela Lixeira',
-      'fica oculto e pode ser restaurado pelo Explorador de Arquivos',
-    ],
-    badges: ['A', 'B', 'C', 'D'],
-    correct: 2,
-    comment: 'Arquivos apagados de unidades removíveis, como pendrives, e de unidades de rede não passam pela Lixeira: a exclusão é permanente. Só os arquivos do disco local do computador vão para a Lixeira.',
-  },
-  {
-    meta: 'Sistemas · Linux · certo ou errado',
-    text: 'Julgue o item. No Linux, o comando chmod 755 arquivo concede ao proprietário as permissões de leitura, escrita e execução e, ao grupo e aos demais usuários, apenas as de leitura e execução.',
-    options: ['Certo', 'Errado'],
-    badges: ['C', 'E'],
-    correct: 0,
-    comment: 'Na notação numérica, leitura vale 4, escrita 2 e execução 1. O 7 do proprietário é 4+2+1 (rwx), e os dois 5 seguintes são 4+1 (r-x) para o grupo e para os demais. O item está certo.',
-  },
-  {
-    meta: 'Redes · múltipla escolha',
-    text: 'Na pilha de protocolos TCP/IP, o protocolo da camada de transporte que oferece entrega confiável, com controle de fluxo e retransmissão de segmentos perdidos, é o',
-    options: ['UDP', 'TCP', 'ICMP', 'ARP'],
-    badges: ['A', 'B', 'C', 'D'],
-    correct: 1,
-    comment: 'O TCP estabelece conexão e garante a entrega ordenada dos dados, retransmitindo o que se perde. O UDP é mais leve e não oferece essas garantias. O ICMP serve para mensagens de controle e erro (como o ping), e o ARP associa endereço IP a endereço físico (MAC).',
-  },
-];
 ---
 <BaseLayout title={page > 1 ? `Informática para Concurso: resumos e simulados - Página ${page}` : "Informática para Concurso: resumos e simulados"} description="Resumos, simulados e o que cai na prova de informática dos concursos, em linguagem simples e direta.">
   {page > 1 && <h1 class="visually-hidden">Informática para Concurso</h1>}
 
   {page === 1 && (
-    <section class="hero">
-        <div class="hero-main">
-          <p class="eyebrow">Informática para concursos públicos</p>
-          <h1>Informática para concurso, matéria por matéria</h1>
-          <p class="lede">
-            Aulas organizadas pelas matérias do edital, com o que as bancas realmente cobram, e questões comentadas para fixar cada tema.
-          </p>
-          <div class="actions">
-            <a class="btn-cta" href="/questoes/">
-              Resolver questões
-              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            </a>
-            <a class="btn-ghost" href="#trilha">Por onde começar</a>
-          </div>
-          <dl class="stats">
-            <div><dt>aulas</dt><dd>{lessons}</dd></div>
-            <div><dt>questões comentadas</dt><dd>{questions}</dd></div>
-            <div><dt>simulados</dt><dd>{simulados.length}</dd></div>
-          </dl>
-          {featured && (
-            <a class="featured" href={`/${featured.id}`}>
-              <span class="featured-img">
-                {featured.data.image && <Image src={featured.data.image} alt={featured.data.imageAlt ?? featured.data.title} width={640} height={320} quality={70} priority />}
-              </span>
-              <span class="featured-body">
-                <span class="featured-labels">
-                  <span class="badge">Em destaque</span>
-                  <span class="featured-cat">{featured.data.category}</span>
-                  {questionCount(featured.id) > 0 && <span class="chip">{questionCount(featured.id)} questões</span>}
-                </span>
-                <span class="featured-title">{featured.data.title}</span>
-                <span class="featured-meta">{fmtLong(featured.data.date)}{featured.data.readingTime && ` · ${featured.data.readingTime} de leitura`}</span>
-                <span class="featured-go">Fazer o simulado →</span>
-              </span>
-            </a>
-          )}
-        </div>
-
-        <div class="warm-col">
-          {warmup.map((w, qi) => (
-            <article class="warm" data-correct={w.correct} aria-labelledby={`warm-t-${qi}`}>
-              <div class="warm-head">
-                <span class="warm-label" id={`warm-t-${qi}`}>Questão de aquecimento {qi + 1}</span>
-                <span class="warm-meta">{w.meta}</span>
-              </div>
-              <p class="warm-text">{w.text}</p>
-              <div class="warm-opts">
-                {w.options.map((label, i) => (
-                  <button type="button" class="opt" data-i={i}>
-                    <span class="opt-badge">{w.badges[i]}</span>
-                    <span class="opt-label">{label}</span>
-                    <span class="opt-status"></span>
-                  </button>
-                ))}
-              </div>
-              <div class="warm-result" role="status" aria-live="polite">
-                <p class="warm-hint">Escolha uma resposta para ver o gabarito comentado.</p>
-                <div class="warm-answer" hidden>
-                  <p class="warm-verdict"></p>
-                  <p class="warm-comment">{w.comment}</p>
-                  <a class="warm-more" href="/questoes/">Continuar resolvendo questões →</a>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-    </section>
+    <>
+      <h1 class="visually-hidden">Informática para Concurso: resumos e simulados</h1>
+      <TrendBar posts={all.slice(0, 6)} />
+      <section class="top">
+        <div class="top-lead"><HomeLead posts={all.slice(0, 1)} /></div>
+        <aside class="top-latest" aria-labelledby="latest-title">
+          <SectionHead title="Últimas" id="latest-title" />
+          <LatestList posts={all.slice(1, 10)} />
+        </aside>
+      </section>
+    </>
   )}
 
   {page === 1 && (
@@ -304,34 +219,6 @@ const warmup = [
     bandBox.querySelector('[data-banner-link]')?.addEventListener('click', () => send('banner_click'));
   }
 
-  // Questões de aquecimento: marca o gabarito e mostra o comentário, uma única tentativa por questão.
-  document.querySelectorAll<HTMLElement>('.warm').forEach((card) => {
-    const correct = Number(card.dataset.correct);
-    const buttons = Array.from(card.querySelectorAll<HTMLButtonElement>('.opt'));
-    buttons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const chosen = Number(btn.dataset.i);
-        buttons.forEach((b, i) => {
-          b.disabled = true;
-          const status = b.querySelector('.opt-status');
-          if (i === correct) {
-            b.classList.add('is-right');
-            if (status) status.textContent = '✓ Gabarito';
-          } else if (i === chosen) {
-            b.classList.add('is-wrong');
-            if (status) status.textContent = '✗ Sua resposta';
-          }
-        });
-        const verdict = card.querySelector<HTMLElement>('.warm-verdict');
-        if (verdict) {
-          verdict.textContent = chosen === correct ? 'Você acertou.' : 'Você errou. Veja o comentário.';
-          verdict.classList.toggle('ok', chosen === correct);
-        }
-        card.querySelector<HTMLElement>('.warm-hint')?.setAttribute('hidden', '');
-        card.querySelector<HTMLElement>('.warm-answer')?.removeAttribute('hidden');
-      });
-    });
-  });
 </script>
 
 <style>
@@ -596,176 +483,17 @@ const warmup = [
     color: var(--cta);
   }
 
-  /* Questões de aquecimento */
-  .warm-col {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    min-width: 0;
+  .top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 40px;
+    max-width: 1180px;
+    margin-inline: auto;
+    padding: 36px 24px 24px;
   }
 
-  .warm {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 24px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 18px;
-  }
-
-  .warm-head {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4px 12px;
-  }
-
-  .warm-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--violet);
-  }
-
-  .warm-meta {
-    font-size: 0.8125rem;
-    color: var(--ink-soft);
-  }
-
-  .warm-text {
-    margin: 0;
-    font-size: 1.0625rem;
-    line-height: 1.6;
-    color: var(--ink-strong);
-    text-wrap: pretty;
-  }
-
-  .warm-opts {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .opt {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    width: 100%;
-    min-height: 48px;
-    padding: 8px 14px;
-    text-align: left;
-    border-radius: 12px;
-    border: 2px solid var(--line-strong);
-    background: var(--bg);
-    color: var(--ink-strong);
-    font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.4;
-    cursor: pointer;
-  }
-
-  .opt:not(:disabled):hover {
-    background: var(--surface-2);
-    border-color: var(--line-hover);
-  }
-
-  .opt:disabled {
-    cursor: default;
-  }
-
-  .opt-badge {
-    flex: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 8px;
-    background: var(--surface-2);
-    color: var(--ink);
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 0.875rem;
-  }
-
-  .opt-label {
-    flex: 1;
-  }
-
-  .opt-status {
-    flex: none;
-    font-size: 0.75rem;
-    font-weight: 700;
-  }
-
-  .opt.is-right {
-    border-color: var(--ok);
-    background: color-mix(in srgb, var(--ok) 12%, transparent);
-  }
-
-  .opt.is-right .opt-status {
-    color: var(--ok);
-  }
-
-  .opt.is-wrong {
-    border-color: var(--bad);
-    background: color-mix(in srgb, var(--bad) 12%, transparent);
-  }
-
-  .opt.is-wrong .opt-status {
-    color: var(--bad);
-  }
-
-  .warm-hint {
-    margin: 0;
-    font-size: 0.8125rem;
-    color: var(--ink-soft);
-  }
-
-  .warm-answer {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding-top: 16px;
-    border-top: 1px solid var(--line);
-  }
-
-  .warm-answer[hidden],
-  .warm-hint[hidden] {
-    display: none;
-  }
-
-  .warm-verdict {
-    margin: 0;
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 1.0625rem;
-    color: var(--bad);
-  }
-
-  .warm-verdict.ok {
-    color: var(--ok);
-  }
-
-  .warm-comment {
-    margin: 0;
-    font-size: 0.9375rem;
-    line-height: 1.65;
-    color: var(--ink);
-    text-wrap: pretty;
-  }
-
-  .warm-more {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    font-weight: 700;
-    font-size: 0.9375rem;
-    color: var(--cta);
-    text-decoration: none;
+  @media (max-width: 960px) {
+    .top { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   }
 
   /* Blocos de seção */
