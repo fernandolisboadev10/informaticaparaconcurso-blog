@@ -1,12 +1,13 @@
 ---
-title: "Simulado de Véspera PM MA 2026: 40 Questões Comentadas"
-description: "Simulado de véspera de Informática para a PM MA 2026 com 40 questões estilo Cebraspe, nota de desempenho por módulo e gabarito comentado no final."
+title: "Simulado de Véspera de Concurso: 40 Questões de Informática"
+description: "Simulado de véspera de Informática com 40 questões estilo Cebraspe, gabarito comentado na hora em que você marca a resposta e nota de desempenho por módulo."
 category: "Concursos"
 date: 2026-10-09T20:30:00-03:00
+updated: 2026-11-06T07:10:00-03:00
 readingTime: "30 min"
-tags: ["Simulado", "PM MA 2026", "Cebraspe", "Noções de Informática"]
-image: "./images/simulado-vespera-pm-ma-2026.webp"
-imageAlt: "Concurseiro estudando à noite, na véspera da prova, com notebook, folha de respostas e despertador sobre a mesa"
+tags: ["Simulado", "Véspera de Prova", "Cebraspe", "Noções de Informática"]
+image: "./images/simulado-vespera-concurso.webp"
+imageAlt: "Concurseiro estudando à noite, na véspera da prova, com notebook mostrando o gabarito de uma questão, cartão-resposta, relógio e livros sobre a mesa"
 related:
   - informatica-cebraspe-pm-ma-2026
   - simulado-sistemas
@@ -15,11 +16,11 @@ related:
   - simulado-seguranca-da-informacao
 ---
 
-A véspera da prova não é hora de abrir conteúdo novo, e sim de conferir o que você já sabe. Por isso este simulado de véspera reúne 40 questões de Noções de Informática no estilo Certo ou Errado da Cebraspe, distribuídas pelos cinco blocos do programa oficial da PM MA 2026. Antes das questões, você encontra um parágrafo de revisão sobre cada módulo, para relembrar o que costuma ser cobrado. Depois, o simulado vem sem pistas: você responde os 40 itens, clica em “Ver resultado” e só então recebe a sua nota, o desempenho por módulo e o gabarito comentado de cada questão.
+A véspera da prova não é hora de abrir conteúdo novo, e sim de conferir o que você já sabe. Por isso este simulado de véspera reúne 40 questões de Noções de Informática no estilo Certo ou Errado da Cebraspe, distribuídas pelos cinco blocos que mais se repetem nos editais de Noções de Informática. Antes das questões, você encontra um parágrafo de revisão sobre cada módulo, para relembrar o que costuma ser cobrado. Depois, é só responder: ao marcar uma alternativa, o gabarito e o comentário aparecem na hora, e no fim você clica em “Ver resultado” para receber a sua nota e o desempenho por módulo.
 
 ## Como fazer este simulado de véspera
 
-Para que o resultado seja confiável, trate o simulado como a prova de verdade. Separe cerca de uma hora e dez minutos, tempo proporcional ao da prova da banca (3 horas e 30 minutos para 120 itens), e resolva sem consultar nenhum material.
+Para que o resultado seja confiável, trate o simulado como a prova de verdade. Separe cerca de uma hora e dez minutos, tempo proporcional ao de uma prova de 120 itens em 3 horas e 30 minutos, e resolva sem consultar nenhum material. Como o gabarito aparece assim que você marca a alternativa, cada resposta fica travada: leia o item, decida e só então confira o comentário.
 
 Na Cebraspe, cada item certo vale um ponto e cada item errado tira um ponto, enquanto o item em branco vale zero. Portanto, a nota deste simulado segue a mesma conta: acertos menos erros. Isso significa que chutar sem nenhuma segurança pode custar caro, e deixar em branco o item de que você não tem noção é uma decisão legítima. Se quiser entender melhor essa lógica, o artigo sobre [como a Cebraspe cobra Informática](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) explica o raciocínio da banca.
 
@@ -57,11 +58,11 @@ Aqui, as palavras absolutas são o grande alerta. Quando o item afirma que uma f
 
 ## Simulado de véspera: hora de responder
 
-Chegou o momento. Role até as 40 questões, responda uma a uma e, quando terminar, clique em “Ver resultado”. Você pode mudar a resposta de qualquer item antes de finalizar, e deixar em branco o que não souber. Depois do resultado, o gabarito comentado aparece logo abaixo, com a sua resposta ao lado do gabarito e a explicação de cada item.
+Chegou o momento. Role até as 40 questões, responda uma a uma e, quando terminar, clique em “Ver resultado”. Assim que você marca uma alternativa, o gabarito e a explicação do item aparecem logo abaixo dela, e a resposta fica travada. Você pode deixar em branco o que não souber. Ao clicar em “Ver resultado”, o simulado mostra a sua nota (acertos menos erros) e o desempenho por módulo.
 
 Use a nota como bússola, e não como sentença. Um resultado abaixo do esperado na véspera é uma boa notícia disfarçada: ele aponta exatamente o que revisar nas horas que restam. Bons estudos e boa prova!
 
 ## Fontes e Referências
 
--   Cebraspe. Edital nº 1 PMMA, de 10 de julho de 2026: [cdn.cebraspe.org.br](https://cdn.cebraspe.org.br/concursos/PM_MA_26/arquivos/0D18A37FF7787E4389E776EBBFD096137879457949085D7FCE6FA75C174E510B.pdf)
+-   Cebraspe. Edital nº 1 PMMA, de 10 de julho de 2026 (programa de Informática usado como referência): [cdn.cebraspe.org.br](https://cdn.cebraspe.org.br/concursos/PM_MA_26/arquivos/0D18A37FF7787E4389E776EBBFD096137879457949085D7FCE6FA75C174E510B.pdf)
 -   NIST. SP 800-145, The NIST Definition of Cloud Computing: [csrc.nist.gov](https://csrc.nist.gov/pubs/sp/800/145/final)

@@ -3,7 +3,7 @@ title: "Simulado de Informática Cebraspe Nível Superior: 50 Questões"
 description: "Simulado de Informática Cebraspe para nível superior: 50 questões de múltipla escolha, com acerto ou erro e comentário na hora, no estilo Polícia Civil."
 category: "Dicas"
 date: 2026-10-14T10:00:00-03:00
-updated: 2026-11-03T10:07:00-03:00
+updated: 2026-11-06T07:11:00-03:00
 readingTime: "35 min"
 tags: ["Simulado", "Cebraspe", "Nível Superior", "Polícia Civil", "Múltipla Escolha", "Noções de Informática"]
 image: "./images/simulado-cebraspe-informatica.webp"
@@ -11,7 +11,7 @@ imageAlt: "Mesa de concurseiro ao amanhecer, com folha de respostas marcada, lá
 related:
   - concurso-policia-civil-cebraspe-informatica
   - cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica
-  - simulado-vespera-pm-ma-2026
+  - simulado-vespera-concurso
   - simulado-seguranca-da-informacao
   - simulado-redes
 ---
@@ -26,7 +26,7 @@ Nos cargos de nível superior, a banca não se contenta com o "para que serve" d
 
 Por isso, este simulado mistura duas coisas: os temas clássicos (Windows, Linux, Office, redes e e-mail) e os temas que distinguem o concurso policial (segurança da informação, evidência digital, LGPD, inteligência artificial e criptomoedas). Aliás, o edital do concurso PC-MA para Oficial Investigador exige diploma de curso de nível superior em qualquer área, então o perfil de candidato é o mesmo para o qual este material foi pensado.
 
-Se você presta a PM MA, o recorte certo é o [simulado de véspera da PM MA 2026](/simulado-vespera-pm-ma-2026/). Aqui o objetivo é outro: treinar o conjunto do programa de Informática da Polícia Civil.
+Para a revisão da noite anterior à prova, o recorte certo é o [simulado de véspera de Informática](/simulado-vespera-concurso/). Aqui o objetivo é outro: treinar o conjunto do programa de Informática da Polícia Civil.
 
 ## Como fazer o simulado
 

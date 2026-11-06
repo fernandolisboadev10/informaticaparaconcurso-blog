@@ -16,12 +16,15 @@ interface Props {
   title?: string;
   // 'instant': feedback right after each answer. 'final': nothing is revealed until the reader
   // finishes; then score, per-module performance and the commented answer key appear below.
-  mode?: 'instant' | 'final';
+  mode?: 'instant' | 'final' | 'live';
 }
 
 const { questions, title = 'Questões comentadas', mode = 'instant' } = Astro.props;
 const ctaHref = QUESTOES_URL;
-const final = mode === 'final';
+// 'live': como 'final' (nota e desempenho por módulo ao clicar em “Ver resultado”), mas o gabarito comentado
+// de cada questão aparece na hora em que o aluno marca a alternativa.
+const live = mode === 'live';
+const final = mode === 'final' || live;
 const total = questions.length;
 const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
 const optionLabel = (q: Question, value: string) =>
@@ -35,7 +38,12 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
 <section class="quiz" id="questoes" data-total={total} data-mode={mode} aria-labelledby="quiz-title">
   <noscript><style>.quiz .q-fb[hidden], .quiz .gabarito[hidden] { display: block !important; } .quiz-bar, .quiz-reset, .quiz-submit { display: none; }</style></noscript>
   <h2 id="quiz-title" class:list={{ "quiz-title-neon": final }}>{title}</h2>
-  {final ? (
+  {live ? (
+    <p class="quiz-intro">
+      {total} questões para você responder do início ao fim. Ao marcar uma alternativa, o gabarito e o comentário aparecem
+      na hora. Depois de responder, clique em “Ver resultado” para ver a sua nota e o desempenho por módulo.
+    </p>
+  ) : final ? (
     <p class="quiz-intro">
       {total} questões para você responder do início ao fim. Escolha uma alternativa em cada item, ou deixe em branco se
       não souber. O resultado, a sua nota e o gabarito comentado só aparecem depois que você clicar em “Ver resultado”.
@@ -47,7 +55,7 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
   )}
   <div class="quiz-bar" role="status" aria-live="polite">
     <span><strong data-answered>0</strong> de {total} respondidas</span>
-    {!final && <span>Acertos: <strong data-hits>0</strong></span>}
+    {(!final || live) && <span>Acertos: <strong data-hits>0</strong></span>}
   </div>
 
   <ol class="quiz-list">
@@ -70,7 +78,7 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
                 </button>
               ))}
         </div>
-        {!final && (
+        {(!final || live) && (
           <div class="q-fb" hidden>
             <p class="q-status"></p>
             <p class="q-res"><strong>Resposta correta:</strong> {answerLabel(q)}</p>
@@ -107,7 +115,7 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
     <a class="quiz-cta" href={ctaHref} target="_blank" rel="noopener">Gerar mais questões no Gerador de Questões</a>
   </div>
 
-  {final && (
+  {final && !live && (
     <section class="gabarito" hidden aria-labelledby="gabarito-title">
       <h2 id="gabarito-title">Gabarito comentado</h2>
       <label class="g-filter"><input type="checkbox" data-only-wrong /> Mostrar só os itens que errei ou deixei em branco</label>
@@ -144,13 +152,15 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
     let answered = 0;
     let hits = 0;
 
-    if (quiz.dataset.mode === 'final') {
+    if (quiz.dataset.mode === 'final' || quiz.dataset.mode === 'live') {
+      const live = quiz.dataset.mode === 'live';
       const picks = new Map<HTMLElement, string>();
       const finish = quiz.querySelector<HTMLButtonElement>('.quiz-finish')!;
       const hint = quiz.querySelector<HTMLElement>('[data-hint]')!;
-      const gabarito = quiz.querySelector<HTMLElement>('.gabarito')!;
-      const gList = quiz.querySelector<HTMLElement>('.g-list')!;
-      const onlyWrong = quiz.querySelector<HTMLInputElement>('[data-only-wrong]')!;
+      const gabarito = quiz.querySelector<HTMLElement>('.gabarito');
+      const gList = quiz.querySelector<HTMLElement>('.g-list');
+      const onlyWrong = quiz.querySelector<HTMLInputElement>('[data-only-wrong]');
+      const liveHits = quiz.querySelector<HTMLElement>('[data-hits]');
       const gItems = Array.from(quiz.querySelectorAll<HTMLElement>('.g'));
       const modulesEl = quiz.querySelector<HTMLElement>('.quiz-modules')!;
       const focusEl = quiz.querySelector<HTMLElement>('.quiz-focus')!;
@@ -172,6 +182,22 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
         buttons.forEach((btn) => {
           btn.addEventListener('click', () => {
             if (finished) return;
+            if (live) {
+              if (item.classList.contains('done')) return;
+              const ok = btn.dataset.value === item.dataset.answer;
+              picks.set(item, btn.dataset.value!);
+              item.classList.add('done', ok ? 'right' : 'wrong');
+              buttons.forEach((b) => {
+                b.disabled = true;
+                if (b.dataset.value === item.dataset.answer) b.classList.add('is-right');
+                else if (b === btn) b.classList.add('is-wrong');
+              });
+              item.querySelector<HTMLElement>('.q-status')!.textContent = ok ? '✓ Você acertou!' : '✗ Você errou.';
+              item.querySelector<HTMLElement>('.q-fb')!.hidden = false;
+              if (liveHits) liveHits.textContent = String(Array.from(picks).filter(([it, v]) => v === it.dataset.answer).length);
+              refresh();
+              return;
+            }
             const value = btn.dataset.value!;
             const again = picks.get(item) === value;
             if (again) picks.delete(item);
@@ -186,7 +212,7 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
         });
       });
 
-      onlyWrong.addEventListener('change', () => gList.classList.toggle('only-wrong', onlyWrong.checked));
+      onlyWrong?.addEventListener('change', () => gList?.classList.toggle('only-wrong', onlyWrong.checked));
 
       finish.addEventListener('click', () => {
         if (finished) return;
@@ -217,6 +243,7 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
             else if (b.dataset.value === pick) b.classList.add('is-wrong');
           });
           const g = gItems[i];
+          if (g) {
           g.classList.add(state === 'right' ? 'ok' : state);
           g.querySelector<HTMLElement>('.g-chip')!.textContent =
             state === 'right' ? '✓ Acertou' : state === 'wrong' ? '✗ Errou' : 'Em branco';
@@ -224,6 +251,7 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
             pick === undefined
               ? 'não respondida'
               : (item.querySelector<HTMLElement>(`.q-opt[data-value="${pick}"]`)?.dataset.label ?? pick);
+          }
         });
 
         const net = hits - wrong;
@@ -275,7 +303,7 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
         if (ctaLink && weakName) ctaLink.textContent = `Gerar mais questões de ${weakName}`;
 
         result.hidden = false;
-        gabarito.hidden = false;
+        if (gabarito) gabarito.hidden = false;
         finish.hidden = true;
         hint.hidden = true;
         reset.hidden = false;
@@ -288,6 +316,8 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
         picks.clear();
         items.forEach((item) => {
           item.classList.remove('done', 'right', 'wrong');
+          const fb = item.querySelector<HTMLElement>('.q-fb');
+          if (fb) fb.hidden = true;
           item.querySelectorAll<HTMLButtonElement>('.q-opt').forEach((b) => {
             b.disabled = false;
             b.classList.remove('is-selected', 'is-right', 'is-wrong');
@@ -295,10 +325,11 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
           });
         });
         gItems.forEach((g) => g.classList.remove('ok', 'wrong', 'blank'));
-        onlyWrong.checked = false;
-        gList.classList.remove('only-wrong');
+        if (onlyWrong) onlyWrong.checked = false;
+        gList?.classList.remove('only-wrong');
+        if (liveHits) liveHits.textContent = '0';
         result.hidden = true;
-        gabarito.hidden = true;
+        if (gabarito) gabarito.hidden = true;
         finish.hidden = false;
         hint.hidden = false;
         refresh();

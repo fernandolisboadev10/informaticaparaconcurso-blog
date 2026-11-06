@@ -10,7 +10,7 @@ const BANCA_BY_SLUG: Record<string, string> = {
   'cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica': 'Cebraspe',
   'gabarito-extraoficial-pm-ma-soldado': 'Cebraspe',
   'informatica-cebraspe-pm-ma-2026': 'Cebraspe',
-  'simulado-vespera-pm-ma-2026': 'Cebraspe',
+  'simulado-vespera-concurso': 'Cebraspe',
   'concurso-policia-civil-cebraspe-informatica': 'Cebraspe',
   'concurso-pm-pe-2026': 'AOCP',
   'concurso-trt-8-2026': 'FCC',

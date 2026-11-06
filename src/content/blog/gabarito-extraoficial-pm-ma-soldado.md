@@ -3,14 +3,14 @@ title: "Gabarito PM MA 2026 Soldado: Oficial Preliminar da Cebraspe (120 Questõ
 description: "Gabarito oficial preliminar da PM MA 2026 para Soldado, com as 120 respostas, o que mudou em relação ao extraoficial e a Informática comentada item a item."
 category: "Concursos"
 date: 2026-10-12T09:30:00-03:00
-updated: 2026-10-26T21:04:00-03:00
+updated: 2026-11-06T07:11:00-03:00
 readingTime: "12 min"
 tags: ["Gabarito Extraoficial", "PM MA 2026", "Soldado", "Cebraspe", "Noções de Informática"]
 image: "./images/gabarito-extraoficial-pm-ma-soldado.webp"
 imageAlt: "Candidato sério conferindo o gabarito, vestido metade com farda de policial militar e metade com roupa civil, simbolizando a aprovação quase conquistada"
 related:
   - informatica-cebraspe-pm-ma-2026
-  - simulado-vespera-pm-ma-2026
+  - simulado-vespera-concurso
   - cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica
 ---
 
@@ -156,7 +156,7 @@ Antes de escrever qualquer recurso, siga uma ordem simples. Primeiro, marque no 
 
 Lembre também que a banca só altera o gabarito quando o erro é demonstrado. Um item que você “achou ambíguo” precisa ter a ambiguidade explicada com base em fonte confiável.
 
-Enquanto o resultado definitivo não sai, vale aproveitar o tempo para revisar o que errou. O [simulado de véspera da PM MA 2026](/simulado-vespera-pm-ma-2026/) é uma boa forma de medir se os temas da prova realmente fixaram, e a página de [Noções de Informática](/nocoes-de-informatica/) reúne os conteúdos do programa para a revisão.
+Enquanto o resultado definitivo não sai, vale aproveitar o tempo para revisar o que errou. O [simulado de véspera de Informática](/simulado-vespera-concurso/) é uma boa forma de medir se os temas da prova realmente fixaram, e a página de [Noções de Informática](/nocoes-de-informatica/) reúne os conteúdos do programa para a revisão.
 
 Boa sorte no resultado!
 

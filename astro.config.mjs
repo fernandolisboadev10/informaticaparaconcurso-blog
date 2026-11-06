@@ -30,6 +30,7 @@ export default defineConfig({
     '/category/noticias': '/category/concursos',
     '/category/simulados': '/blog',
     '/concurso-pm-pe-2026-soldado-informatica': '/concurso-pm-pe-2026',
+    '/simulado-vespera-pm-ma-2026': '/simulado-vespera-concurso/',
     '/feed': '/rss.xml',
     '/sitemap_index.xml': '/sitemap-index.xml',
     '/wp-sitemap.xml': '/sitemap-index.xml',
