@@ -106,6 +106,35 @@ const { posts } = Astro.props;
     white-space: nowrap;
   }
 
+  /* Tema claro: faixa clara, texto escuro, verde mais fechado para ter contraste. */
+  :global(:root[data-theme='light']) .trend {
+    background: #e9eeff;
+    color: var(--ink-strong);
+    border-bottom: 1px solid var(--line);
+  }
+
+  :global(:root[data-theme='light']) .dot {
+    background: #65b800;
+    box-shadow: 0 0 0 4px rgba(101, 184, 0, 0.22), 0 0 8px 1px rgba(101, 184, 0, 0.55);
+  }
+
+  :global(:root[data-theme='light']) .trend-l {
+    color: #3d6b00;
+    text-shadow: none;
+  }
+
+  :global(:root[data-theme='light']) .trend-items a {
+    color: var(--ink-strong);
+  }
+
+  :global(:root[data-theme='light']) .trend-items a:hover {
+    color: var(--link);
+  }
+
+  :global(:root[data-theme='light']) .trend-items b {
+    color: var(--ink-soft);
+  }
+
   @media (max-width: 600px) {
     .trend-l {
       font-size: 0.6rem;
