@@ -50,7 +50,7 @@
   --marker: #ffff00;
   --marker-ink: #1a1a00;
 
-  --measure: 72ch;
+  --measure: 720px;
 }
 
 :root[data-theme='light'] {
@@ -140,8 +140,8 @@ img {
 .prose p, .prose ul, .prose ol {
   font-family: var(--font-read);
   color: var(--ink);
-  font-size: 1.125rem;
-  line-height: 1.8;
+  font-size: 1.0625rem;
+  line-height: 1.75;
   font-weight: 400;
 }
 
@@ -228,8 +228,9 @@ img {
 }
 
 .prose h2 {
-  margin-top: 2.5em;
-  font-size: clamp(1.625rem, 3vw, 2rem);
+  margin-top: 67px;
+  margin-bottom: 17px;
+  font-size: clamp(1.5rem, 2.4vw, 1.75rem);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.015em;
