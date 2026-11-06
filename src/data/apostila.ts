@@ -1,6 +1,6 @@
 // Apostila de questões Cebraspe: produto pago, divulgado por banners (ApostilaBanner.astro).
-// ATENÇÃO: troque APOSTILA_URL pelo link de compra (página de vendas ou checkout) antes de publicar.
-export const APOSTILA_URL = '/apostila/';
+// Link de venda na Hotmart (checkout aberto em nova aba).
+export const APOSTILA_URL = 'https://pay.hotmart.com/U108363176U';
 export const APOSTILA_PRICE = 'R$ 19,90';
 export const APOSTILA_QUESTIONS = 552;
 // Para trocar a capa, substitua este arquivo (proporção 3:4).
