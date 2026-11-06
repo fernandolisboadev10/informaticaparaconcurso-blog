@@ -12,6 +12,8 @@ const modulo = category ? MODULO_BY_CATEGORY[category] : undefined;
 const isHero = variant === 'hero';
 const title = isHero
   ? 'Mais de 500 questões reais da Cebraspe, com gabarito comentado'
+  : modulo && variant === 'side'
+  ? `${modulo.nome}: ${modulo.questoes} questões reais da Cebraspe`
   : modulo
   ? `Treine ${modulo.nome} com questões reais da Cebraspe`
   : 'Mais de 500 questões reais da Cebraspe, com gabarito comentado';
@@ -84,16 +86,27 @@ const text = modulo
   }
   .btn:hover { filter: brightness(1.08); }
 
+  /* Lateral (coluna de 260px): capa pequena, título curto e botão em largura total. */
   .apostila.side {
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0;
-    padding: 16px;
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    grid-template-areas: 'cover info' 'cta cta';
     gap: 12px;
+    align-items: start;
+    margin: 0;
+    padding: 14px;
+    border-radius: 14px;
   }
-  .side .cover { width: 120px; }
-  .side .title { font-size: 1.05rem; }
-  .side .text { font-size: 0.875rem; margin-bottom: 12px; }
+  .side .cover { grid-area: cover; width: 72px; }
+  .side .body { display: contents; }
+  .side .price,
+  .side .eyebrow,
+  .side .text { display: none; }
+  .side .title { grid-area: info; align-self: center; margin: 0; font-size: 0.95rem; line-height: 1.25; }
+  .side .btn { grid-area: cta; justify-content: center; width: 100%; min-height: 44px; padding: 0 12px; font-size: 0.9rem; }
+  .side .btn .lg { display: none; }
+  .side .btn .sm { display: inline; }
+  .side .body > * { position: relative; z-index: 2; }
 
   /* Efeitos de banner de propaganda (desligados para quem prefere menos movimento) */
   .apostila { position: relative; overflow: hidden; isolation: isolate; }

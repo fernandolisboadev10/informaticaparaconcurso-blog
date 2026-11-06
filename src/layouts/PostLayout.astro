@@ -151,12 +151,14 @@ const breadcrumbSchema = {
 
     {hasGuide && (
       <aside class="post-aside">
+        <div class="aside-sticky">
         <TableOfContents headings={headings} />
         <a class="practice" href={`/questoes/?materia=${encodeURIComponent(category)}`}>
           <span class="practice-title">Praticar este tema</span>
           <span class="practice-sub">Questões de {category} →</span>
         </a>
         <div class="aside-banner"><ApostilaBanner slot="post-lateral" variant="side" category={category} /></div>
+        </div>
       </aside>
     )}
   </div>
@@ -349,8 +351,24 @@ const breadcrumbSchema = {
     font-weight: 500;
   }
 
+  /* Guia, "Praticar este tema" e banner andam juntos: antes só o guia era fixo e deslizava por cima dos outros dois. */
+  .aside-sticky {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media (min-width: 1100px) {
+    .aside-sticky {
+      position: sticky;
+      top: 88px;
+      max-height: calc(100vh - 112px);
+    }
+  }
+
   .aside-banner {
     display: block;
+    flex: none;
   }
 
   @media (max-width: 1099px) {

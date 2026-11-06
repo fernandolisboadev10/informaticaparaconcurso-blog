@@ -262,9 +262,8 @@ for (const h of Astro.props.headings) {
   /* Desktop: sticky beside the article, subsections open only for the section being read. */
   @media (min-width: 1100px) {
     .toc {
-      position: sticky;
-      top: 88px;
-      max-height: calc(100vh - 112px);
+      flex: 1 1 auto;
+      min-height: 120px;
       overflow-y: auto;
       scrollbar-width: thin;
       padding-right: 4px;
