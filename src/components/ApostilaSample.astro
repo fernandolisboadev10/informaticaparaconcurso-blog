@@ -2,14 +2,18 @@
 import { apostilaModules } from '../data/apostila-samples';
 ---
 <div class="sample" data-apostila-sample>
+  <div class="sample-progress" hidden>
+    <div><strong>Seu teste gratuito</strong><span data-progress-label>0 de {apostilaModules.length} respondidas</span></div>
+    <progress max={apostilaModules.length} value="0" aria-label="Questões respondidas no teste gratuito"></progress>
+  </div>
   <div class="sample-picker" role="group" aria-label="Escolha a matéria da questão">
     {apostilaModules.map((module, i) => (
       <button type="button" class="subject" data-subject={module.id} aria-pressed={i === 0 ? 'true' : 'false'} aria-controls={`sample-${module.id}`} hidden>{module.short}</button>
     ))}
   </div>
-  {apostilaModules.map((module) => (
+  {apostilaModules.map((module, i) => (
     <article class="question" id={`sample-${module.id}`} data-question={module.id} data-answer={module.answer} aria-labelledby={`sample-title-${module.id}`}>
-      <div class="question-top"><span>Amostra da apostila</span><span>Página {module.page}</span></div>
+      <div class="question-top"><span>Questão {i + 1} de {apostilaModules.length}</span><span>Página {module.page}</span></div>
       <h3 id={`sample-title-${module.id}`}>{module.name}</h3>
       <p class="source">{module.source} · Questão {String(module.question).padStart(3, '0')}</p>
       <p class="statement">{module.text}</p>
@@ -26,8 +30,15 @@ import { apostilaModules } from '../data/apostila-samples';
         </div>
       </details>
       <button type="button" class="retry" data-retry hidden>Responder novamente</button>
+      <button type="button" class="next-question" data-next-question hidden>Próxima questão <span aria-hidden="true">→</span></button>
     </article>
   ))}
+  <section class="sample-summary" aria-labelledby="sample-summary-title" hidden>
+    <h3 id="sample-summary-title" tabindex="-1">Você concluiu as cinco questões!</h3>
+    <p class="summary-score" data-score></p>
+    <p>Use os comentários para retomar o que confundiu você. Na apostila completa, são 552 questões para continuar a revisão.</p>
+    <div><a href="#oferta">Conhecer a apostila</a><button type="button" data-restart>Refazer as cinco questões</button></div>
+  </section>
   <p class="sample-note">Uma questão de cada módulo, retirada do PDF. No material completo, o gabarito e o comentário já acompanham cada item.</p>
 </div>
 
@@ -35,6 +46,30 @@ import { apostilaModules } from '../data/apostila-samples';
   document.querySelectorAll<HTMLElement>('[data-apostila-sample]').forEach((sample) => {
     const selectors = [...sample.querySelectorAll<HTMLButtonElement>('[data-subject]')];
     const questions = [...sample.querySelectorAll<HTMLElement>('[data-question]')];
+    const progress = sample.querySelector<HTMLProgressElement>('progress')!;
+    const progressLabel = sample.querySelector<HTMLElement>('[data-progress-label]')!;
+    const summary = sample.querySelector<HTMLElement>('.sample-summary')!;
+    const picks = new Map<HTMLElement, boolean>();
+    sample.querySelector<HTMLElement>('.sample-progress')!.hidden = false;
+    const refresh = () => {
+      progress.value = picks.size;
+      progressLabel.textContent = `${picks.size} de ${questions.length} respondidas`;
+      summary.hidden = picks.size !== questions.length;
+      sample.querySelector<HTMLElement>('[data-score]')!.textContent = `${[...picks.values()].filter(Boolean).length} de ${questions.length} acertos`;
+      selectors.forEach((selector, i) => {
+        const completed = picks.has(questions[i]);
+        selector.dataset.completed = String(completed);
+        selector.setAttribute('aria-label', `${selector.textContent?.trim()}${completed ? ' — respondida' : ''}`);
+      });
+      questions.forEach((question) => {
+        question.querySelector<HTMLElement>('[data-next-question]')!.textContent = picks.size === questions.length ? 'Ver meu resultado' : 'Próxima questão →';
+      });
+    };
+    const selectQuestion = (index: number) => {
+      selectors[index].click();
+      questions[index].querySelector<HTMLElement>('h3')!.focus({ preventScroll: true });
+      questions[index].scrollIntoView({ block: 'nearest', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    };
     selectors.forEach((selector) => {
       selector.hidden = false;
       selector.addEventListener('click', () => {
@@ -49,6 +84,8 @@ import { apostilaModules } from '../data/apostila-samples';
       const result = question.querySelector<HTMLElement>('.result')!;
       const details = question.querySelector<HTMLDetailsElement>('details')!;
       const retry = question.querySelector<HTMLButtonElement>('[data-retry]')!;
+      const next = question.querySelector<HTMLButtonElement>('[data-next-question]')!;
+      question.querySelector('h3')!.setAttribute('tabindex', '-1');
       buttons.forEach((button) => button.addEventListener('click', () => {
         if (buttons.some((other) => other.disabled)) return;
         const correct = button.dataset.answerChoice === question.dataset.answer;
@@ -60,8 +97,11 @@ import { apostilaModules } from '../data/apostila-samples';
         });
         result.textContent = correct ? 'Você acertou! Confira o raciocínio no comentário.' : 'Ainda não foi desta vez. O comentário explica a resposta.';
         result.dataset.correct = String(correct);
+        picks.set(question, correct);
         details.open = true;
         retry.hidden = false;
+        next.hidden = false;
+        refresh();
       }));
       retry.addEventListener('click', () => {
         buttons.forEach((button) => {
@@ -73,15 +113,58 @@ import { apostilaModules } from '../data/apostila-samples';
         delete result.dataset.correct;
         details.open = false;
         retry.hidden = true;
+        next.hidden = true;
+        picks.delete(question);
+        refresh();
         buttons[0].focus();
       });
+      next.addEventListener('click', () => {
+        if (picks.size === questions.length) {
+          summary.querySelector<HTMLElement>('h3')!.focus();
+          return;
+        }
+        for (let step = 1; step <= questions.length; step += 1) {
+          const nextIndex = (i + step) % questions.length;
+          if (!picks.has(questions[nextIndex])) { selectQuestion(nextIndex); break; }
+        }
+      });
     });
+    sample.querySelector('[data-restart]')!.addEventListener('click', () => {
+      questions.forEach((question) => {
+        if (picks.has(question)) question.querySelector<HTMLButtonElement>('[data-retry]')!.click();
+      });
+      selectQuestion(0);
+    });
+    refresh();
   });
 </script>
 
 <style>
   [hidden] { display: none !important; }
   .sample { color: #1b2b47; }
+  .sample-progress { margin-bottom: 22px; }
+  .sample-progress > div { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; font-size: .8rem; }
+  .sample-progress span { color: #586a83; }
+  progress { display: block; width: 100%; height: 7px; border: 0; border-radius: 8px; overflow: hidden; accent-color: #1e5ec6; background: #dce5f3; }
+  progress::-webkit-progress-bar { background: #dce5f3; border-radius: 8px; }
+  progress::-webkit-progress-value { background: #1e5ec6; border-radius: 8px; }
+  progress::-moz-progress-bar { background: #1e5ec6; border-radius: 8px; }
+  .subject[data-completed='true']::after { content: ' ✓'; }
+  .sample-summary { margin-top: 24px; padding: 24px; border: 1px solid #c6d9f4; border-radius: 16px; background: #eaf2ff; }
+  .sample-summary h3 { font-size: 1.15rem; }
+  .summary-score { font-size: 1.8rem; font-weight: 700; letter-spacing: -.04em; margin: 12px 0; color: #153666; }
+  .sample-summary > p:not(.summary-score) { font-size: .9rem; line-height: 1.7; }
+  .sample-summary > div { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 20px; }
+  .sample-summary a { padding: 12px 16px; background: #ffda44; border-radius: 8px; color: #182238; font-size: .85rem; font-weight: 700; text-decoration: none; }
+  .sample-summary button { padding: 10px 0; border: 0; background: transparent; color: #1759b9; text-decoration: underline; text-underline-offset: 4px; font-size: .85rem; }
+  .next-question { display: block; margin-top: 20px; padding: 12px 18px; background: #153666; color: #fff; border: 0; border-radius: 8px; font-weight: 600; font-size: .85rem; }
+  .next-question:hover { background: #1e5ec6; }
+  @keyframes sample-feedback { from { opacity: .3; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: no-preference) {
+    .question details[open] .explanation-body, .sample-summary:not([hidden]) { animation: sample-feedback .3s ease-out; }
+    .answers button, .subject { transition: background .2s, border-color .2s, box-shadow .2s; }
+    .answers button:hover:not(:disabled) { box-shadow: 0 3px 10px #1e5ec61a; }
+  }
   .sample-picker { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
   .sample-picker:has(button[hidden]):not(:has(button:not([hidden]))) { display: none; }
   button { font: inherit; cursor: pointer; }
