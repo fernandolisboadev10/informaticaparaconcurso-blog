@@ -1,0 +1,109 @@
+<div class="demo" aria-hidden="true">
+  <div class="phone">
+    <div class="camera"></div>
+    <div class="screen">
+      <p class="example">EXEMPLO DE QUESTÃO</p>
+      <div class="status">
+        <span class="ia">IA</span>
+        <span class="status-text"><span class="loading">Gerando questão…</span><span class="generated">Questão gerada agora</span></span>
+      </div>
+      <div class="question">
+        <p class="statement">Julgue o item. No Linux, o comando <strong>chmod 755 arquivo</strong> concede ao proprietário as permissões de leitura, escrita e execução.</p>
+        <div class="options">
+          <div class="option correct"><b>C</b> Certo <span class="answer">✓ Gabarito</span></div>
+          <div class="option"><b>E</b> Errado</div>
+        </div>
+        <p class="comment">Comentário: 7 é 4+2+1, ou seja, rwx para o dono.</p>
+      </div>
+    </div>
+    <div class="home-indicator"></div>
+  </div>
+</div>
+
+<style>
+  .demo { display: grid; place-items: center; min-width: 0; }
+  .phone {
+    position: relative;
+    box-sizing: border-box;
+    width: 240px;
+    aspect-ratio: 1 / 2.1;
+    padding: 64px 17px 32px;
+    border: 3px solid #555953;
+    border-radius: 38px;
+    background: linear-gradient(145deg, #131612, #050605 70%);
+    box-shadow: inset 0 0 0 4px #080908, 0 18px 35px #0009, 0 0 40px #89f33618;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .phone::after { content: ''; position: absolute; right: -5px; top: 106px; width: 3px; height: 46px; border-radius: 2px; background: #676b64; }
+  .camera { position: absolute; width: 68px; height: 19px; background: #000; border-radius: 20px; top: 14px; left: 50%; transform: translateX(-50%); }
+  .camera::after { content: ''; position: absolute; right: 10px; top: 6px; width: 6px; height: 6px; border-radius: 50%; background: #152233; }
+  .home-indicator { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); width: 72px; height: 4px; border-radius: 4px; background: #ffffff65; }
+  .example { margin: 0 0 14px; font-size: 9px; letter-spacing: .12em; color: #a3a89a; }
+  .status { display: flex; align-items: center; gap: 7px; color: #a6f76a; font-size: 11px; font-weight: 700; }
+  .ia { border-radius: 5px; padding: 3px 7px; background: #89f336; color: #080908; }
+  .status-text { display: grid; }
+  .status-text > span { grid-area: 1 / 1; }
+  .loading { visibility: hidden; }
+  .statement { margin: 16px 0; }
+  .options { display: grid; gap: 8px; }
+  .option { display: flex; align-items: center; gap: 7px; padding: 10px 8px; border: 1px solid #2b2e25; border-radius: 12px; background: #050505; }
+  .option b { display: grid; place-items: center; width: 22px; height: 24px; border-radius: 6px; background: #1d2016; }
+  .correct { border-color: #89f336; background: #89f33614; }
+  .answer { margin-left: auto; font-size: 10px; font-weight: 700; color: #a6f76a; }
+  .comment { margin: 14px 0 0; color: #b5bcad; }
+
+  @keyframes reveal-question {
+    0%, 22% { opacity: 0; transform: translateY(6px); }
+    36%, 100% { opacity: 1; transform: none; }
+  }
+  @keyframes reveal-answer {
+    0%, 53% { opacity: 0; transform: translateY(4px); }
+    68%, 100% { opacity: 1; transform: none; }
+  }
+  @keyframes select-answer {
+    0%, 48% { border-color: #2b2e25; background: #050505; }
+    62%, 100% { border-color: #89f336; background: #89f33614; }
+  }
+  @keyframes loading-status { 0%, 22% { visibility: visible; } 23%, 100% { visibility: hidden; } }
+  @keyframes generated-status { 0%, 22% { visibility: hidden; } 23%, 100% { visibility: visible; } }
+  @keyframes invite-click {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 10px #89f33673; }
+    50% { transform: scale(1.025); box-shadow: 0 0 28px #89f33699; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :global([data-question-demo-banner].demo-ready:not(.demo-playing)) .question { opacity: 0; }
+    :global([data-question-demo-banner].demo-ready:not(.demo-playing)) .loading { visibility: visible; }
+    :global([data-question-demo-banner].demo-ready:not(.demo-playing)) .generated { visibility: hidden; }
+    :global([data-question-demo-banner].demo-playing) .question { animation: reveal-question 4s both; }
+    :global([data-question-demo-banner].demo-playing) .correct { animation: select-answer 4s both; }
+    :global([data-question-demo-banner].demo-playing) .answer,
+    :global([data-question-demo-banner].demo-playing) .comment { animation: reveal-answer 4s both; }
+    :global([data-question-demo-banner].demo-playing) .loading { animation: loading-status 4s both; }
+    :global([data-question-demo-banner].demo-playing) .generated { animation: generated-status 4s both; }
+    :global([data-question-demo-banner].demo-playing [data-banner-link]) { animation: invite-click .8s 3.2s both; }
+  }
+</style>
+
+<script>
+  // One sequence per banner, only after it enters the viewport. Static result without JS.
+  function initQuestionDemos() {
+    document.querySelectorAll<HTMLElement>('[data-question-demo-banner]').forEach((banner) => {
+      if (banner.dataset.demoInitialized) return;
+      banner.dataset.demoInitialized = 'true';
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+      banner.classList.add('demo-ready');
+      const observer = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          banner.classList.add('demo-playing');
+          observer.disconnect();
+        }
+      }, { threshold: 0.2 });
+      observer.observe(banner);
+      document.addEventListener('astro:before-swap', () => observer.disconnect(), { once: true });
+    });
+  }
+  initQuestionDemos();
+  document.addEventListener('astro:page-load', initQuestionDemos);
+</script>
