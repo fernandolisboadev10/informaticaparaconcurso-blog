@@ -15,6 +15,8 @@ interface Props {
   noindex?: boolean;
   published?: Date;
   modified?: Date;
+  showSiteNavigation?: boolean;
+  ads?: boolean;
 }
 
 const {
@@ -26,6 +28,8 @@ const {
   noindex = false,
   published,
   modified,
+  showSiteNavigation = true,
+  ads = true,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -59,12 +63,13 @@ const organizationSchema = {
     <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
     <meta name="google-site-verification" content="X0WtOXNS9hrK5eG-BF29jRIgMf6yj20Xu1gEDDW6Whc" />
 
-    <script is:inline>
+    <script is:inline data-ads={ads ? 'enabled' : 'disabled'}>
       // Consent: EU/UK-style timezones start denied (opt-in); everywhere else starts granted (opt-out).
       // The visitor's choice is stored in localStorage under "cookie-consent".
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       (function () {
+        var adsEnabled = document.currentScript.getAttribute('data-ads') !== 'disabled';
         var tz = '';
         try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
         var strict = tz.indexOf('Europe/') === 0 ||
@@ -75,7 +80,7 @@ const organizationSchema = {
         var adsLoaded = false;
 
         function loadAds() {
-          if (adsLoaded) return;
+          if (!adsEnabled || adsLoaded) return;
           adsLoaded = true;
           var s = document.createElement('script');
           s.async = true;
@@ -158,11 +163,11 @@ const organizationSchema = {
 
   </head>
   <body>
-    <Header />
+    {showSiteNavigation && <Header />}
     <main>
       <slot />
     </main>
-    <Footer />
+    {showSiteNavigation && <Footer />}
     <BackToTop />
     <CookieBanner />
   </body>

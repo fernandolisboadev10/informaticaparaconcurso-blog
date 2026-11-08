@@ -1,5 +1,5 @@
 ---
-import { APOSTILA_URL, APOSTILA_PRICE, APOSTILA_COVER, MODULO_BY_CATEGORY, apostilaAriaLabel } from '../data/apostila';
+import { APOSTILA_URL, APOSTILA_PRICE, APOSTILA_QUESTIONS, APOSTILA_COVER, MODULO_BY_CATEGORY, apostilaAriaLabel } from '../data/apostila';
 
 interface Props {
   slot: string; // identifica a posição no GA4: post-meio, post-fim, post-lateral, home, categoria
@@ -11,21 +11,20 @@ const { slot, variant = 'wide', category } = Astro.props;
 const modulo = category ? MODULO_BY_CATEGORY[category] : undefined;
 const isHero = variant === 'hero';
 const title = isHero
-  ? 'Mais de 500 questões reais da Cebraspe, com gabarito comentado'
+  ? `${APOSTILA_QUESTIONS} questões Cebraspe. Entenda o porquê de cada resposta.`
   : modulo && variant === 'side'
   ? `${modulo.nome}: ${modulo.questoes} questões reais da Cebraspe`
   : modulo
   ? `Treine ${modulo.nome} com questões reais da Cebraspe`
-  : 'Mais de 500 questões reais da Cebraspe, com gabarito comentado';
+  : `${APOSTILA_QUESTIONS} questões Cebraspe. Entenda o porquê de cada resposta.`;
 const text = modulo
   ? `O módulo de ${modulo.nome} da apostila tem ${modulo.questoes} questões de provas já aplicadas, cada uma com comentário.`
-  : 'Apostila em PDF com questões de provas já aplicadas de todos os concursos da banca, organizadas por matéria.';
+  : '206 páginas em PDF, cinco módulos e um comentário em cada questão. Estude no seu ritmo.';
 ---
 <aside class:list={['apostila', variant]} data-banner="apostila" data-slot={slot} aria-label={apostilaAriaLabel}>
   <img class="cover" src={APOSTILA_COVER} alt="" width="128" height="171" loading="lazy" decoding="async" />
   <div class="body">
-    <span class="price" aria-hidden="true">{APOSTILA_PRICE}</span>
-    <p class="eyebrow">Apostila Cebraspe</p>
+    <div class="banner-meta"><p class="eyebrow">Apostila digital · Cebraspe</p><span class="price" aria-hidden="true">{APOSTILA_PRICE}</span></div>
     <p class="title">{title}</p>
     <p class="text">{text}</p>
     <a class="btn" href={APOSTILA_URL} target="_blank" rel="noopener" data-banner-link><span class="label"><span class="lg">Quero a apostila por </span><span class="sm">Comprar por </span>{APOSTILA_PRICE}</span> <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
@@ -33,191 +32,98 @@ const text = modulo
 </aside>
 
 <style>
+  /* Same fixed navy, white typography and natural yellow as /apostila/, in both site themes. */
   .apostila {
+    --banner-yellow: #ffda44;
     display: flex;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
     margin: 36px 0;
-    padding: 20px;
+    padding: 26px;
     border-radius: 16px;
-    background: var(--surface);
-    border: 1px solid var(--line-strong);
-    box-shadow: 0 0 0 1px rgba(252, 211, 77, 0.18), 0 0 22px rgba(252, 211, 77, 0.08);
+    background: #101c34;
+    color: #fff;
+    border: 1px solid #ffffff26;
+    box-shadow: 0 8px 26px #0002;
+    font-family: var(--f-inter, Arial), sans-serif;
   }
-  .cover {
-    flex: none;
-    width: 128px;
-    margin: 0;
-    max-width: none;
-    height: auto;
-    aspect-ratio: 3 / 4;
-    border-radius: 6px;
-    border: 1px solid var(--line-hover);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
-  }
-  .body { min-width: 0; position: relative; z-index: 2; }
-  .eyebrow {
-    margin: 0 0 4px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--chip-ink);
-  }
-  .title {
-    margin: 0 0 6px;
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 1.2rem;
-    line-height: 1.25;
-    color: var(--ink-strong);
-  }
-  .text { margin: 0 0 14px; font-size: 0.9375rem; color: var(--ink-soft); }
+  .cover { flex: none; width: 128px; height: auto; aspect-ratio: 3 / 4; margin: 0; max-width: none; border-radius: 4px; border: 1px solid #ffffff26; box-shadow: 5px 9px 20px #0005; }
+  .body { min-width: 0; flex: 1; }
+  .banner-meta { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 12px; }
+  .eyebrow { margin: 0; color: #c5cee2; font-size: .78rem; font-weight: 500; }
+  .price { flex-shrink: 0; color: #fff; font-size: 1.2rem; font-weight: 700; letter-spacing: -.04em; line-height: 1.2; }
+  .title { margin: 0 0 12px; color: #fff; font-family: var(--f-archivo, Arial), sans-serif; font-size: 1.3rem; font-weight: 800; letter-spacing: -.035em; line-height: 1.18; }
+  .text { margin: 0 0 20px; color: #bfcbe0; font-size: .9375rem; line-height: 1.75; max-width: 55ch; }
   .btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
     display: inline-flex;
     align-items: center;
-    min-height: 44px;
-    padding: 0 20px;
-    border-radius: 12px;
-    background: var(--cta);
-    color: var(--cta-ink);
-    font-weight: 800;
+    justify-content: center;
+    gap: 14px;
+    min-height: 50px;
+    padding: 12px 22px;
+    border-radius: 9px;
+    background: var(--banner-yellow);
+    color: #182238;
+    box-shadow: inset 0 1px 0 #fff5, 0 4px 14px #0002;
+    font-size: .94rem;
+    font-weight: 700;
+    line-height: 1.4;
     text-decoration: none;
   }
-  .btn:hover { filter: brightness(1.08); }
-
-  /* Lateral (coluna de 260px): capa pequena, título curto e botão em largura total. */
-  .apostila.side {
-    display: grid;
-    grid-template-columns: 72px minmax(0, 1fr);
-    grid-template-areas: 'cover info' 'cta cta';
-    gap: 12px;
-    align-items: start;
-    margin: 0;
-    padding: 14px;
-    border-radius: 14px;
-  }
+  .btn:hover, .btn:focus-visible { background: #ffe36b; box-shadow: inset 0 1px 0 #fff6, 0 7px 22px #ffda4438; }
+  .btn:focus-visible { outline: 3px solid var(--banner-yellow); outline-offset: 5px; }
+  .btn:active { background: #f5cc32; }
+  .btn .label { white-space: nowrap; }
+  .btn svg { flex-shrink: 0; }
+  .btn .sm { display: none; }
+  .apostila.hero { gap: 36px; margin: 8px 0; padding: 36px 40px; border-radius: 22px; }
+  .hero .cover { width: 170px; }
+  .hero .eyebrow { font-size: .85rem; }
+  .hero .price { font-size: 1.65rem; }
+  .hero .title { max-width: 30ch; font-size: clamp(1.5rem, 3vw, 2.2rem); }
+  .hero .text { font-size: 1rem; }
+  .hero .btn { min-height: 56px; font-size: 1rem; }
+  .apostila.side { display: grid; grid-template-columns: 72px minmax(0, 1fr); grid-template-areas: 'cover info' 'cta cta'; gap: 14px; margin: 0; padding: 16px; }
   .side .cover { grid-area: cover; width: 72px; }
   .side .body { display: contents; }
-  .side .price,
-  .side .eyebrow,
-  .side .text { display: none; }
-  .side .title { grid-area: info; align-self: center; margin: 0; font-size: 0.95rem; line-height: 1.25; }
-  .side .btn { grid-area: cta; justify-content: center; width: 100%; min-height: 44px; padding: 0 12px; font-size: 0.9rem; }
+  .side .banner-meta, .side .text { display: none; }
+  .side .title { grid-area: info; align-self: center; margin: 0; font-size: .95rem; }
+  .side .btn { grid-area: cta; width: 100%; padding: 12px; font-size: .9rem; }
   .side .btn .lg { display: none; }
   .side .btn .sm { display: inline; }
-  .side .body > * { position: relative; z-index: 2; }
-
-  /* Efeitos de banner de propaganda (desligados para quem prefere menos movimento) */
-  .apostila { position: relative; overflow: hidden; isolation: isolate; }
-  .price {
-    display: inline-block;
-    margin-bottom: 8px;
-    padding: 4px 12px;
-    border-radius: 999px;
-    background: #ffc400;
-    color: #1a1400;
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 0.9rem;
+  @keyframes banner-sunlight {
+    from { transform: translateX(-350%) skewX(-20deg); }
+    to { transform: translateX(500%) skewX(-20deg); }
   }
-  .btn { gap: 10px; }
-  .btn .label { white-space: nowrap; }
-  .btn svg { transition: transform 0.2s; }
-  .btn:hover svg { transform: translateX(4px); }
-
-  /* O fundo do hero é sempre escuro: fixa as cores de texto claras, mesmo no tema claro do site. */
-  .apostila.hero {
-    --ink-strong: #ffffff;
-    --ink-soft: #c3cbe0;
-    --cta: #2dd4bf;
-    --cta-ink: #04201d;
-    gap: 32px;
-    margin: 8px 0;
-    padding: 32px 40px;
-    border-radius: 22px;
-    background: linear-gradient(120deg, #111827 0%, #1b1f4a 60%, #2a1f6b 100%);
-  }
-  .hero .cover { width: 170px; }
-  .hero .eyebrow { color: #ffc400; font-size: 0.8rem; }
-  .hero .title { font-size: clamp(1.5rem, 3.2vw, 2.25rem); letter-spacing: -0.015em; }
-  .hero .text { font-size: 1.0625rem; max-width: 560px; }
-  .hero .btn { min-height: 56px; padding: 0 30px; font-size: 1.125rem; }
-  .hero .price { position: absolute; top: 20px; right: 24px; margin: 0; font-size: 1.25rem; padding: 6px 16px; }
-  .hero .body { padding-right: 130px; }
-
-  @keyframes glow-border {
-    0%, 100% { box-shadow: 0 0 0 1px rgba(255, 196, 0, 0.35), 0 0 14px rgba(255, 196, 0, 0.12); }
-    50% { box-shadow: 0 0 0 1px rgba(255, 196, 0, 0.9), 0 0 30px rgba(255, 196, 0, 0.35); }
-  }
-  @keyframes shine {
-    0%, 55% { transform: translateX(-130%) skewX(-20deg); }
-    100% { transform: translateX(260%) skewX(-20deg); }
-  }
-  @keyframes float-cover {
-    0%, 100% { transform: translateY(0) rotate(-2deg); }
-    50% { transform: translateY(-8px) rotate(1.5deg); }
-  }
-  @keyframes btn-pulse {
-    0%, 100% { box-shadow: 0 0 6px color-mix(in srgb, var(--cta) 45%, transparent), 0 0 14px color-mix(in srgb, var(--cta) 25%, transparent); }
-    50% { box-shadow: 0 0 12px color-mix(in srgb, var(--cta) 80%, transparent), 0 0 28px color-mix(in srgb, var(--cta) 45%, transparent); transform: scale(1.03); }
-  }
-  @keyframes price-pop {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1) rotate(-3deg); }
-  }
-
   @media (prefers-reduced-motion: no-preference) {
-    .apostila { animation: glow-border 3s ease-in-out infinite; }
-    .apostila::after {
+    .btn { transition: background .2s ease, box-shadow .2s ease, transform .2s ease; }
+    .btn svg { transition: transform .2s ease; }
+    .btn:hover, .btn:focus-visible { transform: translateY(-2px); }
+    .btn:hover svg, .btn:focus-visible svg { transform: translateX(3px); }
+    .btn:active { transform: translateY(0); }
+    .is-visible .btn::after {
       content: '';
       position: absolute;
-      inset: 0;
-      width: 35%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14), transparent);
-      transform: translateX(-130%) skewX(-20deg);
-      animation: shine 5s ease-in-out infinite;
+      inset-block: -10%;
+      left: 0;
+      width: 30%;
+      background: linear-gradient(90deg, transparent, #fff7, transparent);
       pointer-events: none;
-      z-index: 1;
+      animation: banner-sunlight 1.3s .3s both;
     }
-    .cover { animation: float-cover 4.5s ease-in-out infinite; }
-    .btn { animation: btn-pulse 2.6s ease-in-out infinite; }
-    .price { animation: price-pop 2.2s ease-in-out infinite; }
   }
-
-  /* Celular: faixa compacta (capa pequena + título) e botão em largura total, em vez de um cartão alto. */
-  .btn .sm { display: none; }
-
   @media (max-width: 640px) {
-    .apostila.hero,
-    .apostila.wide {
-      display: grid;
-      grid-template-columns: 84px minmax(0, 1fr);
-      grid-template-areas: 'cover info' 'cta cta';
-      gap: 10px 16px;
-      align-items: start;
-      margin: 8px 0;
-      padding: 16px;
-      border-radius: 16px;
-    }
-    .hero .cover,
-    .wide .cover { grid-area: cover; width: 84px; animation-duration: 5s; }
-    .hero .body,
-    .wide .body { display: contents; padding: 0; }
-    .hero .price,
-    .wide .price { display: none; }
-    .hero .eyebrow,
-    .wide .eyebrow { display: none; }
-    .hero .title,
-    .wide .title { grid-area: info; align-self: center; margin: 0; font-size: 1.1rem; line-height: 1.25; }
-    .hero .text,
-    .wide .text { display: none; }
-    .hero .btn,
-    .wide .btn { grid-area: cta; justify-content: center; width: 100%; min-height: 48px; padding: 0 16px; font-size: 1rem; }
+    .apostila.hero, .apostila.wide { display: grid; grid-template-columns: 84px minmax(0, 1fr); grid-template-areas: 'cover info' 'cta cta'; gap: 14px 16px; align-items: start; margin: 8px 0; padding: 18px; border-radius: 16px; }
+    .hero .cover, .wide .cover { grid-area: cover; width: 84px; }
+    .hero .body, .wide .body { display: contents; }
+    .hero .banner-meta, .wide .banner-meta, .hero .text, .wide .text { display: none; }
+    .hero .title, .wide .title { grid-area: info; align-self: center; margin: 0; font-size: 1.05rem; line-height: 1.3; }
+    .hero .btn, .wide .btn { grid-area: cta; width: 100%; min-height: 50px; padding: 12px 14px; font-size: .95rem; }
     .btn .lg { display: none; }
     .btn .sm { display: inline; }
-    .hero .body > *,
-    .wide .body > * { position: relative; z-index: 2; }
   }
 </style>
 
@@ -233,6 +139,7 @@ const text = modulo
         entries.forEach((e) => {
           if (e.isIntersecting && !seen.has(e.target)) {
             seen.add(e.target);
+            e.target.classList.add('is-visible');
             send('banner_view', (e.target as HTMLElement).dataset.slot ?? '');
             io!.unobserve(e.target);
           }
