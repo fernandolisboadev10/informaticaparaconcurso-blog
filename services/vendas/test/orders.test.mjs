@@ -39,7 +39,7 @@ function fixture(){
   const calls=[];let snapshot,failed=false;
   const worker=createWorker({now:()=>now,fetch:async(url,options)=>{
     calls.push({url,options});
-    if(failed)return Response.json({error:'mock-unavailable'},{status:503});
+    if(failed)return Response.json(failed.body,{status:failed.status});
     if(options.method==='POST')return Response.json({id:remoteId,checkout_url:'https://sandbox.mercadopago.com.br/checkout/v1/redirect?order_id=test'});
     if(url.includes('?'))return Response.json({data:snapshot?[snapshot]:[]});
     return Response.json(snapshot);
@@ -53,7 +53,7 @@ function fixture(){
   };
   const row=()=>env.DB.db.prepare('SELECT * FROM orders').get();
   const task=()=>env.DB.db.prepare('SELECT * FROM outbox').get();
-  return {env,worker,calls,checkout,notify,row,task,fail(){failed=true;},
+  return {env,worker,calls,checkout,notify,row,task,fail(status=503,body={error:'mock-unavailable'}){failed={status,body};},
     async order(){const response=await checkout();assert.equal(response.status,201);return (await response.json()).orderId;},
     snapshot(id,change={}){
       snapshot={id:remoteId,type:'online',external_reference:id,user_id:'123',currency:'BRL',total_amount:'27.90',total_paid_amount:'27.90',
@@ -111,6 +111,28 @@ test('provider errors preserve the order and idempotency key on retry',async()=>
   const f=fixture();f.fail();assert.equal((await f.checkout()).status,502);assert.equal((await f.checkout()).status,502);
   assert.equal(f.env.DB.db.prepare('SELECT COUNT(*) n FROM orders').get().n,1);
   assert.equal(f.calls[0].options.headers['X-Idempotency-Key'],f.calls[1].options.headers['X-Idempotency-Key']);
+});
+
+test('test checkout reports upstream status and safe codes without copying provider messages',async(t)=>{
+  const logged=[];t.mock.method(console,'error',(...args)=>logged.push(args));
+  const f=fixture();f.fail(401,{error:'unauthorized',message:'Private value buyer@example.com APP_USR_do_not_echo'});
+  const result=await f.checkout();assert.equal(result.status,502);const body=await result.json();
+  assert.equal(body.diagnostic.phase,'provider_request');assert.equal(body.diagnostic.providerStatus,401);
+  assert.equal(body.diagnostic.providerCode,'unauthorized');
+  assert.equal(JSON.stringify([body,logged]).includes('APP_USR'),false);assert.equal(JSON.stringify([body,logged]).includes('@'),false);
+});
+
+test('live checkout does not expose diagnostic fields',async(t)=>{
+  t.mock.method(console,'error',()=>{});
+  const f=fixture();f.env.PAYMENTS_MODE='live';f.fail(400,{error:'bad_request'});
+  assert.deepEqual(await (await f.checkout()).json(),{error:'payment_provider_unavailable'});
+});
+
+test('missing checkout URL identifies the response validation stage',async(t)=>{
+  t.mock.method(console,'error',()=>{});
+  const f=fixture();f.fail(200,{id:remoteId});const body=await (await f.checkout()).json();
+  assert.equal(body.diagnostic.phase,'checkout_link');assert.equal(body.diagnostic.providerCode,'invalid_checkout_response');
+  assert.equal(f.row().checkout_state,'failed');
 });
 
 test('forged signature, body mismatch and expired signed timestamp never reach the provider',async()=>{

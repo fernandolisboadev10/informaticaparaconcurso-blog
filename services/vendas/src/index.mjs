@@ -1,6 +1,7 @@
 import { hash, readJson, receiptToken, UUID, PROVIDER_ID, verifyWebhook } from './security.mjs';
 
 import { normalizeOrder } from './orders.mjs';
+import { ProviderFailure, safeProviderDetails, safeFailure } from './diagnostics.mjs';
 
 const PRODUCT = 'apostila-cebraspe-552';
 const PRICE = 2790;
@@ -17,13 +18,18 @@ function configured(env) {
 
 export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date.now } = {}) {
   async function mp(env, path, options = {}) {
-    const response = await remoteFetch(`https://api.mercadopago.com${path}`, {
+    let response;
+    try { response = await remoteFetch(`https://api.mercadopago.com${path}`, {
       method: options.method ?? 'GET', redirect: 'error', signal: AbortSignal.timeout(12000),
       headers: { Authorization: `Bearer ${env.MP_ACCESS_TOKEN}`, 'Content-Type': 'application/json', ...(options.key ? { 'X-Idempotency-Key': options.key } : {}) },
       ...(options.body ? { body: JSON.stringify(options.body) } : {}),
-    });
-    if (!response.ok) throw new Error('payment_provider_unavailable');
-    return response.json();
+    }); } catch { throw new ProviderFailure(0,'provider_connection_failed'); }
+    if (!response.ok) {
+      const body = await response.json().catch(() => null);
+      const details = safeProviderDetails(body);
+      throw new ProviderFailure(response.status,details.code,details.mentionedFields);
+    }
+    try { return await response.json(); } catch { throw new ProviderFailure(response.status,'invalid_provider_json'); }
   }
 
   async function syncOrder(env, providerId) {
@@ -99,6 +105,7 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
         AND (checkout_state='failed' OR (checkout_state='creating' AND updated_at<?))`).bind(timestamp,order.id,timestamp-90000).run();
       if (!claim.meta.changes) return respond({ error: 'checkout_preparing' },409);
     }
+    let phase = 'provider_request';
     try {
       const returnUrl = `${httpsBase(env.SITE_URL)}/apostila/pagamento/?pedido=${order.id}`;
       const remoteOrder = await mp(env,'/v1/orders', { method:'POST', key:order.id, body:{
@@ -110,14 +117,19 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
           success_url:returnUrl,pending_url:returnUrl,failure_url:returnUrl,auto_return:'approved',
         }, payment_method:{ max_installments:1 } },
       }});
+      phase = 'checkout_link';
       const url = new URL(remoteOrder.checkout_url);
       if (!PROVIDER_ID.test(remoteOrder.id ?? '') || url.protocol !== 'https:' || !paymentHosts.has(url.hostname) || url.username || url.password) throw new Error('invalid_checkout_url');
+      phase = 'database_update';
       await env.DB.prepare(`UPDATE orders SET checkout_state='ready',provider_order_id=?,checkout_url=?,updated_at=? WHERE id=?`)
         .bind(remoteOrder.id,url.href,now(),order.id).run();
       return respond({ orderId:order.id,checkoutUrl:url.href },201);
-    } catch {
-      await env.DB.prepare(`UPDATE orders SET checkout_state='failed',updated_at=? WHERE id=?`).bind(now(),order.id).run();
-      return respond({ error: 'payment_provider_unavailable' },502);
+    } catch (error) {
+      const diagnostic = safeFailure(error,phase);
+      console.error('checkout_creation_failed',diagnostic);
+      try { await env.DB.prepare(`UPDATE orders SET checkout_state='failed',updated_at=? WHERE id=?`).bind(now(),order.id).run(); }
+      catch { console.error('checkout_state_update_failed'); }
+      return respond({ error: 'payment_provider_unavailable',...(env.PAYMENTS_MODE === 'test' ? { diagnostic } : {}) },502);
     }
   }
 
@@ -132,7 +144,7 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
       }});
       const url = new URL(request.url);
       try {
-        if (request.method === 'GET' && url.pathname === '/health') return respond({ service:'apostila-vendas',checkoutEnabled:env.CHECKOUT_ENABLED==='true' && configured(env) });
+        if (request.method === 'GET' && url.pathname === '/health') return respond({ service:'apostila-vendas',checkoutEnabled:env.CHECKOUT_ENABLED==='true' && configured(env),diagnosticsVersion:1 });
         if (request.method === 'OPTIONS') {
           if (!isAllowed) return respond({ error:'forbidden_origin' },403);
           return new Response(null,{ status:204,headers:{ 'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'GET, POST, OPTIONS','Access-Control-Allow-Headers':'Authorization, Content-Type, Idempotency-Key','Access-Control-Max-Age':'600',Vary:'Origin' }});

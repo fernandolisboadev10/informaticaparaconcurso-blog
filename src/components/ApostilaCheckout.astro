@@ -62,6 +62,21 @@ const { testing = false } = Astro.props;
             };
             const code = Object.hasOwn(diagnoses, data.error) ? data.error : 'unexpected_response';
             message.textContent = `${diagnoses[code] ?? 'Resposta inesperada do servidor.'} [HTTP ${response.status} · ${code}]`;
+            const diagnostic = data.diagnostic;
+            if (diagnostic && typeof diagnostic === 'object') {
+              const phases: Record<string, string> = { provider_request: 'criação da order', checkout_link: 'validação do link retornado', database_update: 'registro do link no banco' };
+              const details: string[] = [];
+              if (Object.hasOwn(phases, diagnostic.phase)) details.push(`Etapa: ${phases[diagnostic.phase]}`);
+              if (Number.isInteger(diagnostic.providerStatus) && diagnostic.providerStatus >= 100 && diagnostic.providerStatus <= 599) details.push(`Mercado Pago HTTP ${diagnostic.providerStatus}`);
+              const providerCode = diagnostic.providerCode;
+              if (typeof providerCode === 'string' && (/^[a-z_]{1,48}$/.test(providerCode) || /^\d{1,5}$/.test(providerCode) || ['PA_UNAUTHORIZED_RESULT_FROM_POLICIES','UNAUTHORIZED','BAD_REQUEST'].includes(providerCode))) details.push(`Código: ${providerCode}`);
+              const allowedFields = new Set(['type','processing_mode','external_reference','total_amount','currency','items','payer.email','payer','config.online','config','transactions','checkout_url']);
+              if (Array.isArray(diagnostic.mentionedFields)) {
+                const fields = diagnostic.mentionedFields.filter((field: unknown) => typeof field === 'string' && allowedFields.has(field)).slice(0,12);
+                if (fields.length) details.push(`Campos mencionados: ${fields.join(', ')}`);
+              }
+              if (details.length) message.textContent += ` [${details.join(' · ')}]`;
+            }
           }
           return;
         }

@@ -144,5 +144,11 @@ Por enquanto, a confirmação aprovada informa que a entrega está em preparaç�
 
 ## Validação externa pendente
 
+### Diagnóstico seguro do checkout
+
+O build de diagnóstico retorna `diagnosticsVersion: 1` em `/health`. Em `PAYMENTS_MODE=test`, falhas de criação retornam `diagnostic` com a etapa (`provider_request`, `checkout_link` ou `database_update`), o HTTP do provedor quando disponível, um código filtrado e nomes de campos reconhecidos. A página de teste exibe esses dados. Em modo `live`, esse objeto não é enviado ao navegador.
+O evento de log `checkout_creation_failed` contém somente esses metadados, sem o corpo original da resposta, e-mails ou credenciais. Um `providerStatus: 0` não é um status HTTP: significa que nenhum status do provedor foi registrado nessa etapa.
+O empacotamento para colar no editor do Cloudflare deve usar o arquivo inteiro gerado por `wrangler deploy --dry-run --outdir <diretório>`; atualizar código pelo painel preserva as variáveis e vínculos já configurados. Verificar o marcador de versão antes de repetir um teste.
+
 Os destinos `api.cloudflare.com`, `dash.cloudflare.com`, `api.mercadopago.com` e a documentação do Mercado Pago precisam estar acessíveis no ambiente de execução para automação autenticada.
 Nesta sessão, as credenciais não estavam configuradas e os acessos à documentação pública do Mercado Pago foram negados pela política de rede. A leitura dos tipos oficiais do SDK não substitui teste real no sandbox.
