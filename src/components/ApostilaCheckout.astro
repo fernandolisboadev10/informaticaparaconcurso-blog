@@ -4,7 +4,7 @@ import { APOSTILA_PRICE } from '../data/apostila';
 interface Props { testing?: boolean; }
 const { testing = false } = Astro.props;
 ---
-<form class="checkout-form" data-checkout-api={PAYMENTS_API_URL}>
+<form class="checkout-form" data-checkout-api={PAYMENTS_API_URL} data-checkout-testing={testing ? 'true' : undefined}>
   <label for="checkout-email">Seu e-mail</label>
   <input id="checkout-email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="voce@exemplo.com" />
   <p class="email-note">Use um e-mail que você acompanha para identificar sua compra. <a href="/politica-de-privacidade/">Privacidade</a></p>
@@ -27,6 +27,7 @@ const { testing = false } = Astro.props;
       button.disabled = true;
       message.textContent = 'Preparando seu pagamento…';
       const email = input.value.trim().toLowerCase();
+      let phase = 'armazenamento da aba';
       try {
         // Ensure the receipt can be kept before creating a checkout.
         sessionStorage.setItem('apostila-storage-check', '1');
@@ -35,11 +36,13 @@ const { testing = false } = Astro.props;
           const bytes = crypto.getRandomValues(new Uint8Array(32));
           attempt = { key: crypto.randomUUID(), token: [...bytes].map(b => b.toString(16).padStart(2, '0')).join(''), email };
         }
+        phase = 'conexão com o Worker';
         const response = await fetch(`${form.dataset.checkoutApi}/checkout`, {
           method: 'POST', credentials: 'omit', signal: AbortSignal.timeout(20000),
           headers: { 'Content-Type': 'application/json', 'Idempotency-Key': attempt.key, Authorization: `Bearer ${attempt.token}` },
           body: JSON.stringify({ email }),
         });
+        phase = 'leitura da resposta do Worker';
         const data = await response.json();
         if (!response.ok) {
           const messages: Record<string, string> = {
@@ -48,8 +51,21 @@ const { testing = false } = Astro.props;
             too_many_requests: 'Aguarde um minuto antes de tentar novamente.',
           };
           message.textContent = messages[data.error] ?? 'Não foi possível abrir o pagamento agora. Tente novamente em instantes.';
+          if (form.dataset.checkoutTesting === 'true') {
+            const diagnoses: Record<string, string> = {
+              checkout_unavailable: 'O checkout está desativado ou a configuração do Worker está incompleta.',
+              service_unavailable: 'O Worker não conseguiu concluir a operação. Confira os logs e as tabelas do D1.',
+              payment_provider_unavailable: 'Falha ao criar a order no Mercado Pago ou preparar o link de pagamento. Confira API Requests e os logs do Worker.',
+              invalid_request: 'O Worker recusou os dados da solicitação.',
+              forbidden_origin: 'O endereço desta página não está autorizado no Worker.',
+              ...messages,
+            };
+            const code = Object.hasOwn(diagnoses, data.error) ? data.error : 'unexpected_response';
+            message.textContent = `${diagnoses[code] ?? 'Resposta inesperada do servidor.'} [HTTP ${response.status} · ${code}]`;
+          }
           return;
         }
+        phase = 'validação do link de pagamento';
         const checkoutUrl = new URL(data.checkoutUrl);
         if (checkoutUrl.protocol !== 'https:' || !['www.mercadopago.com.br', 'sandbox.mercadopago.com.br'].includes(checkoutUrl.hostname) || !/^[a-f0-9-]{36}$/i.test(data.orderId)) throw new Error('invalid_response');
         sessionStorage.setItem(`apostila-order:${data.orderId}`, attempt.token);
@@ -57,6 +73,7 @@ const { testing = false } = Astro.props;
         window.location.assign(checkoutUrl.href);
       } catch {
         message.textContent = 'Não foi possível abrir o pagamento. Confira sua conexão e permita o armazenamento desta aba antes de tentar novamente.';
+        if (form.dataset.checkoutTesting === 'true') message.textContent += ` [Etapa: ${phase}]`;
       } finally { button.disabled = false; }
     });
   });
