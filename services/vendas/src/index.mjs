@@ -20,7 +20,7 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
   async function mp(env, path, options = {}) {
     let response;
     try { response = await remoteFetch(`https://api.mercadopago.com${path}`, {
-      method: options.method ?? 'GET', redirect: 'error', signal: AbortSignal.timeout(12000),
+      method: options.method ?? 'GET', redirect: 'manual', signal: AbortSignal.timeout(12000),
       headers: { Authorization: `Bearer ${env.MP_ACCESS_TOKEN}`, 'Content-Type': 'application/json', ...(options.key ? { 'X-Idempotency-Key': options.key } : {}) },
       ...(options.body ? { body: JSON.stringify(options.body) } : {}),
     }); } catch { throw new ProviderFailure(0,'provider_connection_failed'); }

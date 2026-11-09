@@ -113,6 +113,8 @@ O Worker aceita tópicos `order` e `orders`, mas a aprovação sempre depende da
 
 ## Recuperação e garantias
 
+- As chamadas externas usam `redirect: 'manual'`, suportado pelo Workers, e tratam respostas 3xx como falha. Não trocar por `error`: esse modo existe no fetch do Node, mas o runtime do Cloudflare lança uma exceção antes de enviar a requisição. O teste `runtime.test.mjs` exercita o código real com workerd e D1; apenas a resposta externa do Mercado Pago é simulada.
+
 - Pedido tem identificador imprevisível; valor e produto não vêm do navegador.
 - O mesmo pedido usa a mesma chave de idempotência na API de Orders.
 - Uma criação em andamento recebe `409`, para evitar requisições concorrentes.
