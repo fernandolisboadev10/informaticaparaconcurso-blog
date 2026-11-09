@@ -121,6 +121,7 @@ O Worker aceita tópicos `order` e `orders`, mas a aprovação sempre depende da
 - O mesmo pedido usa a mesma chave de idempotência na API de Orders.
 - Uma criação em andamento recebe `409`, para evitar requisições concorrentes.
 - Uma resposta perdida pode ser repetida com a mesma chave; a garantia externa deve ser validada no sandbox.
+- A consulta autenticada de um pedido pendente também busca a situação no Mercado Pago, sem depender da entrega do webhook. A chamada tem limite de 4 segundos e uma atualização por pedido a cada 5 segundos, controlada atomicamente no D1. Falhas preservam a situação já registrada; nunca se considera o status enviado no redirecionamento. A página consulta a cada 3 segundos nas primeiras tentativas e depois a cada 10 segundos.
 - Atualização do pedido, transações e outbox ocorre em um batch atômico do D1.
 - A outbox tem uma tarefa por pedido; notificação repetida não cria outra entrega.
 - Reembolsos/chargebacks cancelam tarefas pendentes. Reembolso parcial e divergências de valor exigem revisão.

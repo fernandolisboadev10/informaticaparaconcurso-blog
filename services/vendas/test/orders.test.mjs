@@ -200,6 +200,35 @@ test('receipt lookup requires the capability and discloses no email or redirect-
   assert.deepEqual(await response.json(),{orderId:id,status:'pending',amountCents:2790,currency:'BRL',reviewRequired:false});
 });
 
+test('authenticated return confirms approval without a webhook and queues delivery once',async()=>{
+  const f=fixture(),id=await f.order();f.snapshot(id);
+  const lookup=(key=token)=>f.worker.fetch(new Request(`${api}/orders/${id}`,{headers:{Origin:site,Authorization:`Bearer ${key}`}}),f.env);
+  assert.equal((await lookup('b'.repeat(64))).status,404);
+  assert.equal(f.calls.length,1); // Invalid capability never triggers a provider request.
+  const responses=await Promise.all([lookup(),lookup()]);
+  assert.equal(f.calls.filter(c=>c.options.method==='GET').length,1);
+  assert.equal((await (await lookup()).json()).status,'approved');
+  assert.equal(f.row().status,'approved');assert.equal(f.task().kind,'payment_approved');
+  await f.notify();
+  assert.equal(f.env.DB.db.prepare('SELECT COUNT(*) AS n FROM outbox').get().n,1);
+  assert.ok(responses.every(r=>r.status===200));
+});
+
+test('return polling is throttled and a provider failure preserves the recorded status',async()=>{
+  const f=fixture(),id=await f.order();f.fail();
+  const lookup=()=>f.worker.fetch(new Request(`${api}/orders/${id}`,{headers:{Origin:site,Authorization:`Bearer ${token}`}}),f.env);
+  assert.equal((await (await lookup()).json()).status,'pending');
+  assert.equal((await (await lookup()).json()).status,'pending');
+  assert.equal(f.calls.length,2); // Create + one refresh, despite repeated polls.
+  assert.equal(f.task(),undefined);
+});
+
+test('return never approves a provider snapshot with the wrong seller',async()=>{
+  const f=fixture(),id=await f.order();f.snapshot(id,{user_id:'999'});
+  const response=await f.worker.fetch(new Request(`${api}/orders/${id}`,{headers:{Origin:site,Authorization:`Bearer ${token}`}}),f.env);
+  assert.equal((await response.json()).status,'pending');assert.equal(f.task(),undefined);
+});
+
 test('scheduled reconciliation recovers a missing webhook using the stored Orders id',async()=>{
   const f=fixture(),id=await f.order();f.snapshot(id);let work;
   await f.worker.scheduled({},f.env,{waitUntil(p){work=p;}});await work;

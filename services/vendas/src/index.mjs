@@ -20,7 +20,7 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
   async function mp(env, path, options = {}) {
     let response;
     try { response = await remoteFetch(`https://api.mercadopago.com${path}`, {
-      method: options.method ?? 'GET', redirect: 'manual', signal: AbortSignal.timeout(12000),
+      method: options.method ?? 'GET', redirect: 'manual', signal: AbortSignal.timeout(options.timeout ?? 12000),
       headers: { Authorization: `Bearer ${env.MP_ACCESS_TOKEN}`, 'Content-Type': 'application/json', ...(options.key ? { 'X-Idempotency-Key': options.key } : {}) },
       ...(options.body ? { body: JSON.stringify(options.body) } : {}),
     }); } catch { throw new ProviderFailure(0,'provider_connection_failed'); }
@@ -32,8 +32,8 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
     try { return await response.json(); } catch { throw new ProviderFailure(response.status,'invalid_provider_json'); }
   }
 
-  async function syncOrder(env, providerId) {
-    const snapshot = await mp(env, `/v1/orders/${encodeURIComponent(providerId)}`);
+  async function syncOrder(env, providerId, timeout) {
+    const snapshot = await mp(env, `/v1/orders/${encodeURIComponent(providerId)}`,{ timeout });
     if (String(snapshot.id).toLowerCase() !== providerId.toLowerCase() || !UUID.test(snapshot.external_reference ?? '')) return 'ignored';
     const order = await env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(snapshot.external_reference).first();
     if (!order) return 'ignored';
@@ -168,8 +168,20 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
         if (orderId && UUID.test(orderId) && request.method === 'GET') {
           const token = receiptToken(request);
           if (!token || !env.DB) return respond({ error:'order_not_found' },404);
-          const order = await env.DB.prepare('SELECT id,status,amount_cents,currency,receipt_hash,review_required FROM orders WHERE id=?').bind(orderId).first();
+          let order = await env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(orderId).first();
           if (!order || order.receipt_hash !== await hash(token)) return respond({ error:'order_not_found' },404);
+          // Confirm on the return page too: a delayed webhook must not delay the buyer.
+          // Claim in D1 bounds concurrent polls across Worker instances and browser tabs.
+          if (configured(env) && order.provider_order_id && !order.review_required &&
+              ['pending','in_process','authorized'].includes(order.status)) {
+            const claim = await env.DB.prepare(`UPDATE orders SET reconciled_at=? WHERE id=? AND reconciled_at<?`)
+              .bind(now(),order.id,now()-5000).run();
+            if (claim.meta.changes) {
+              try { await syncOrder(env,order.provider_order_id,4000); }
+              catch { console.error('payment_return_sync_failed'); }
+            }
+            order = await env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(orderId).first();
+          }
           return respond({ orderId:order.id,status:order.status,amountCents:order.amount_cents,currency:order.currency,reviewRequired:!!order.review_required });
         }
         return respond({ error:'not_found' },404);

@@ -74,7 +74,7 @@ import { PAYMENTS_API_URL } from '../../data/payments';
         attempts += 1;
         if (['pending','in_process','authorized'].includes(data.status)) {
           retry.hidden = false;
-          if (attempts < 30) timer = setTimeout(check, 10000);
+          if (attempts < 30) timer = setTimeout(check, attempts < 10 ? 3000 : 10000);
         }
       } catch {
         title.textContent = 'Não foi possível consultar agora';
