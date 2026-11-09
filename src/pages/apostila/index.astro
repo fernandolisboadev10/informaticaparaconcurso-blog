@@ -3,9 +3,7 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ApostilaSample from '../../components/ApostilaSample.astro';
 import SalesArrow from '../../components/SalesArrow.astro';
-import ApostilaCheckout from '../../components/ApostilaCheckout.astro';
-import { PAYMENTS_UI_ENABLED } from '../../data/payments';
-import { APOSTILA_COVER, APOSTILA_PRICE, APOSTILA_QUESTIONS } from '../../data/apostila';
+import { APOSTILA_CHECKOUT_URL, APOSTILA_COVER, APOSTILA_PRICE, APOSTILA_QUESTIONS } from '../../data/apostila';
 import { apostilaModules } from '../../data/apostila-samples';
 import sistemas from '../../assets/apostila/pagina-3.webp';
 import documentos from '../../assets/apostila/pagina-39.webp';
@@ -30,9 +28,7 @@ const faqs = [
   { question: 'A apostila funciona como este teste interativo?', answer: 'A interação é uma demonstração desta página. A apostila é um PDF: os gabaritos e os comentários já aparecem junto das questões, como nas páginas de amostra.' },
   { question: 'Posso ler no celular e no computador?', answer: 'Sim. Você pode abrir o PDF em um leitor compatível no celular, tablet ou computador. O material usa páginas A4; no celular, pode ser necessário ampliar o texto para ler com conforto.' },
   { question: 'Posso imprimir para estudar?', answer: 'Sim, o formato A4 permite imprimir o material para seu estudo pessoal. Você também pode estudar diretamente pelo arquivo digital.' },
-  PAYMENTS_UI_ENABLED
-    ? { question: 'Como faço o pagamento?', answer: 'Informe seu e-mail na área da oferta para continuar no Checkout Pro do Mercado Pago. O preço é R$ 27,90, em pagamento único. As opções de Pix e cartão são apresentadas no checkout.' }
-    : { question: 'Já posso comprar por esta página?', answer: 'Ainda não. A compra por esta página está em preparação. O preço apresentado é R$ 27,90, em pagamento único. Por enquanto, você pode experimentar as questões e conhecer páginas reais da apostila gratuitamente.' },
+  { question: 'Como faço o pagamento?', answer: 'Clique em um dos botões de compra para continuar no checkout da Hotmart. O preço é R$ 27,90, em pagamento único. Confira as formas de pagamento disponíveis e conclua a compra diretamente na Hotmart.' },
   { question: 'A apostila é uma publicação oficial da Cebraspe?', answer: 'Não. É um material de estudo independente, organizado por Fernando Lisboa, do Informática para Concurso, com questões de provas da banca e comentários explicativos.' },
 ];
 ---
@@ -70,7 +66,7 @@ const faqs = [
           <div class="hero-offer"><strong>{APOSTILA_PRICE}</strong><span>Pagamento único<br />Apostila digital em PDF</span></div>
           <div class="hero-actions">
             <a class="action primary sample-cta" href="#amostra">Experimentar uma questão <SalesArrow direction="down" /></a>
-            <a class="text-link" href="#oferta">Conhecer a oferta <SalesArrow /></a>
+            <a class="text-link" href={APOSTILA_CHECKOUT_URL} data-hotmart-checkout>Comprar por {APOSTILA_PRICE} <SalesArrow /></a>
           </div>
           <p class="hero-footnote">Amostra gratuita, sem cadastro. Veja o material antes de decidir.</p>
         </div>
@@ -172,11 +168,8 @@ const faqs = [
           <p class="offer-name">Apostila Cebraspe de Informática</p>
           <p class="price">{APOSTILA_PRICE}</p>
           <p class="payment-note">Pagamento único · Produto digital</p>
-          {PAYMENTS_UI_ENABLED ? <ApostilaCheckout /> : <>
-            <div class="availability"><span aria-hidden="true"></span> Compra disponível em breve</div>
-            <p class="availability-note">Estamos preparando a compra por esta página. Enquanto isso, conheça o material com a amostra gratuita.</p>
-            <a class="action primary" href="#amostra">Experimentar a amostra <SalesArrow direction="up" /></a>
-          </>}
+          <a class="action primary" href={APOSTILA_CHECKOUT_URL} data-hotmart-checkout>Quero a apostila por {APOSTILA_PRICE} <SalesArrow /></a>
+          <p class="availability-note">Você será direcionado ao checkout da Hotmart para concluir sua compra.</p>
           <a class="support-link" href="mailto:fernandolisboa.dev@gmail.com">Tem uma dúvida? Fale comigo</a>
         </div>
       </div>
@@ -191,7 +184,7 @@ const faqs = [
       <div class="wrap footer-bottom"><p>© {new Date().getFullYear()} Informática para Concurso</p><nav aria-label="Informações legais"><a href="/politica-de-privacidade/">Privacidade</a><a href="/politica-de-cookies/">Cookies</a><a href="#" data-open-cookie-settings>Configurações de cookies</a><a href="/fale-conosco/">Contato</a></nav></div>
     </footer>
 
-    <div class="sticky-offer" hidden><span><strong>{APOSTILA_PRICE}</strong><small>Apostila · 552 questões</small></span><a href="#oferta">Ver oferta <SalesArrow /></a></div>
+    <div class="sticky-offer" hidden><span><strong>{APOSTILA_PRICE}</strong><small>Apostila · 552 questões</small></span><a href={APOSTILA_CHECKOUT_URL} data-hotmart-checkout>Comprar agora <SalesArrow /></a></div>
 
     <dialog class="preview-dialog" aria-labelledby="dialog-title">
       <div class="dialog-header"><div><p id="dialog-title"></p><span data-dialog-page></span></div><button type="button" data-close aria-label="Fechar prévia">✕</button></div>
