@@ -13,6 +13,31 @@ const statusMap = {
   refunded:'refunded',charged_back:'charged_back',in_mediation:'in_mediation',
 };
 
+// Static field names only: never return payer details or raw provider values.
+export function snapshotIssues(snapshot, localOrder, env) {
+  if (!snapshot || typeof snapshot !== 'object') return ['snapshot'];
+  const checks = {
+    id: PROVIDER_ID.test(snapshot.id ?? '') && (!localOrder.provider_order_id || localOrder.provider_order_id === snapshot.id),
+    external_reference: snapshot.external_reference === localOrder.id,
+    type: snapshot.type === 'online',
+    user_id: String(snapshot.user_id) === env.MP_COLLECTOR_ID,
+    currency: snapshot.currency === 'BRL',
+    total_amount: cents(snapshot.total_amount) === 2790,
+    local_product: localOrder.product === 'apostila-cebraspe-552' && localOrder.amount_cents === 2790,
+    live_mode: snapshot.live_mode === undefined || snapshot.live_mode === (env.PAYMENTS_MODE === 'live'),
+    last_updated_date: Number.isFinite(Date.parse(snapshot.last_updated_date)),
+    total_paid_amount: snapshot.total_paid_amount !== undefined && cents(snapshot.total_paid_amount) !== null,
+    'transactions.payments': Array.isArray(snapshot.transactions?.payments),
+  };
+  const entries = Array.isArray(snapshot.transactions?.payments) ? snapshot.transactions.payments : [];
+  if (entries.length) {
+    checks['payments.id'] = entries.every(p => PROVIDER_ID.test(p?.id ?? ''));
+    checks['payments.amount'] = entries.every(p => cents(p?.amount) !== null);
+    checks['payments.paid_amount'] = entries.every(p => p?.paid_amount !== undefined && cents(p.paid_amount) !== null);
+  }
+  return Object.entries(checks).filter(([,ok]) => !ok).map(([field]) => field);
+}
+
 // Orders API contract: mercadopago SDK 3.6.1, clients/order/{create/types,commonTypes}.d.ts.
 // The actual response and webhook contract must still be exercised with the merchant's test app.
 export function normalizeOrder(snapshot, localOrder, env) {

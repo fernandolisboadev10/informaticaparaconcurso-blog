@@ -194,10 +194,13 @@ test('split payments require the exact collected total, not just an approved sta
 
 test('receipt lookup requires the capability and discloses no email or redirect-based approval',async()=>{
   const f=fixture(),id=await f.order();
+  f.snapshot(id,{status:'created',total_paid_amount:'0',transactions:{payments:[]}});
   const lookup=(key)=>f.worker.fetch(new Request(`${api}/orders/${id}?status=approved`,{headers:{Origin:site,Authorization:`Bearer ${key}`}}),f.env);
   assert.equal((await lookup('b'.repeat(64))).status,404);const response=await lookup(token);
   assert.equal(response.headers.get('Cache-Control'),'no-store');
-  assert.deepEqual(await response.json(),{orderId:id,status:'pending',amountCents:2790,currency:'BRL',reviewRequired:false});
+  const {diagnostic,...receipt}=await response.json();
+  assert.equal(diagnostic.code,'provider_not_approved');
+  assert.deepEqual(receipt,{orderId:id,status:'pending',amountCents:2790,currency:'BRL',reviewRequired:false});
 });
 
 test('authenticated return confirms approval without a webhook and queues delivery once',async()=>{
@@ -226,7 +229,24 @@ test('return polling is throttled and a provider failure preserves the recorded 
 test('return never approves a provider snapshot with the wrong seller',async()=>{
   const f=fixture(),id=await f.order();f.snapshot(id,{user_id:'999'});
   const response=await f.worker.fetch(new Request(`${api}/orders/${id}`,{headers:{Origin:site,Authorization:`Bearer ${token}`}}),f.env);
-  assert.equal((await response.json()).status,'pending');assert.equal(f.task(),undefined);
+  const body=await response.json();
+  assert.equal(body.status,'pending');assert.equal(f.task(),undefined);
+  assert.deepEqual(body.diagnostic,{code:'provider_snapshot_mismatch',fields:['user_id']});
+});
+
+test('return diagnostics identify missing provider fields without exposing customer data',async()=>{
+  const f=fixture(),id=await f.order();f.snapshot(id,{currency:undefined,last_updated_date:undefined,payer:{email:'private@example.com'}});
+  const response=await f.worker.fetch(new Request(`${api}/orders/${id}`,{headers:{Origin:site,Authorization:`Bearer ${token}`}}),f.env);
+  const body=await response.json();
+  assert.equal(body.status,'pending');assert.equal(f.task(),undefined);
+  assert.deepEqual(body.diagnostic.fields,['currency','last_updated_date']);
+  assert.equal(JSON.stringify(body).includes('private@example.com'),false);
+});
+
+test('live receipts omit return diagnostics',async()=>{
+  const f=fixture(),id=await f.order();f.env.PAYMENTS_MODE='live';f.snapshot(id,{user_id:'999'});
+  const response=await f.worker.fetch(new Request(`${api}/orders/${id}`,{headers:{Origin:site,Authorization:`Bearer ${token}`}}),f.env);
+  assert.equal((await response.json()).diagnostic,undefined);
 });
 
 test('scheduled reconciliation recovers a missing webhook using the stored Orders id',async()=>{

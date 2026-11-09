@@ -9,6 +9,7 @@ import { PAYMENTS_API_URL } from '../../data/payments';
     <div class="status-box" role="status" aria-live="polite" aria-atomic="true">
       <h2 data-payment-title>Consultando seu pedido…</h2>
       <p data-payment-message>Aguarde enquanto confirmamos a situação do pagamento.</p>
+      <p data-payment-diagnostic hidden></p>
     </div>
     <p class="support" data-order-reference hidden></p>
     <button type="button" data-check-payment hidden>Consultar novamente</button>
@@ -24,6 +25,16 @@ import { PAYMENTS_API_URL } from '../../data/payments';
     const title = box.querySelector<HTMLElement>('[data-payment-title]')!;
     const message = box.querySelector<HTMLElement>('[data-payment-message]')!;
     const retry = box.querySelector<HTMLButtonElement>('[data-check-payment]')!;
+    const diagnosticText = box.querySelector<HTMLElement>('[data-payment-diagnostic]')!;
+    const diagnosticCodes: Record<string,string> = {
+      provider_snapshot_mismatch: 'A resposta do Mercado Pago não passou na validação',
+      local_order_not_found: 'A referência recebida não corresponde a um pedido local',
+      provider_not_approved: 'A consulta ao Mercado Pago ainda não confirmou a aprovação',
+      provider_lookup_failed: 'A consulta ao Mercado Pago falhou',
+      service_unconfigured: 'A configuração do servidor está incompleta',
+      provider_id_missing: 'O pedido não tem o identificador do Mercado Pago',
+    };
+    const diagnosticFields = new Set(['snapshot','id','external_reference','type','user_id','currency','total_amount','local_product','live_mode','last_updated_date','total_paid_amount','transactions.payments','payments.id','payments.amount','payments.paid_amount']);
     const orderId = new URL(location.href).searchParams.get('pedido') ?? '';
     let token: string | null = null;
     try { token = sessionStorage.getItem(`apostila-order:${orderId}`); } catch { /* Show a recovery message below. */ }
@@ -65,6 +76,12 @@ import { PAYMENTS_API_URL } from '../../data/payments';
         if (!response.ok) throw new Error('unavailable');
         const data = await response.json();
         if (!states[data.status] || data.orderId !== orderId) throw new Error('invalid_response');
+        if (data.diagnostic?.code !== 'refresh_throttled') {
+          const detail = diagnosticCodes[data.diagnostic?.code];
+          const fields = Array.isArray(data.diagnostic?.fields) ? data.diagnostic.fields.filter((field: unknown) => typeof field === 'string' && diagnosticFields.has(field)) : [];
+          diagnosticText.textContent = detail ? `Diagnóstico de teste: ${detail}${fields.length ? `. Campos: ${fields.join(', ')}` : ''}.` : '';
+          diagnosticText.hidden = !detail;
+        }
         [title.textContent, message.textContent] = states[data.status];
         if (data.reviewRequired) {
           title.textContent = 'Precisamos conferir seu pedido';

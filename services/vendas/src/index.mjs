@@ -1,6 +1,6 @@
 import { hash, readJson, receiptToken, UUID, PROVIDER_ID, verifyWebhook } from './security.mjs';
 
-import { normalizeOrder } from './orders.mjs';
+import { normalizeOrder, snapshotIssues } from './orders.mjs';
 import { ProviderFailure, safeProviderDetails, safeFailure } from './diagnostics.mjs';
 
 const PRODUCT = 'apostila-cebraspe-552';
@@ -32,11 +32,17 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
     try { return await response.json(); } catch { throw new ProviderFailure(response.status,'invalid_provider_json'); }
   }
 
-  async function syncOrder(env, providerId, timeout) {
+  async function syncOrder(env, providerId, timeout, diagnostic = {}) {
     const snapshot = await mp(env, `/v1/orders/${encodeURIComponent(providerId)}`,{ timeout });
-    if (String(snapshot.id).toLowerCase() !== providerId.toLowerCase() || !UUID.test(snapshot.external_reference ?? '')) return 'ignored';
+    diagnostic.code = 'provider_snapshot_mismatch';
+    diagnostic.fields = [];
+    if (String(snapshot?.id).toLowerCase() !== providerId.toLowerCase() || !UUID.test(snapshot?.external_reference ?? '')) {
+      diagnostic.fields = ['id','external_reference'];
+      return 'ignored';
+    }
     const order = await env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(snapshot.external_reference).first();
-    if (!order) return 'ignored';
+    if (!order) { diagnostic.code = 'local_order_not_found'; return 'ignored'; }
+    diagnostic.fields = snapshotIssues(snapshot,order,env);
     const verified = normalizeOrder(snapshot,order,env);
     if (!verified) return 'ignored';
     const syncToken = crypto.randomUUID();
@@ -65,6 +71,7 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
         AND EXISTS (SELECT 1 FROM orders WHERE id=? AND sync_token=? AND (status!='approved' OR review_required=1))`).bind(order.id,order.id,syncToken),
     );
     await env.DB.batch(statements);
+    diagnostic.code = verified.status === 'approved' ? 'approval_verified' : 'provider_not_approved';
     return 'processed';
   }
 
@@ -146,7 +153,7 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
       }});
       const url = new URL(request.url);
       try {
-        if (request.method === 'GET' && url.pathname === '/health') return respond({ service:'apostila-vendas',checkoutEnabled:env.CHECKOUT_ENABLED==='true' && configured(env),diagnosticsVersion:1 });
+        if (request.method === 'GET' && url.pathname === '/health') return respond({ service:'apostila-vendas',checkoutEnabled:env.CHECKOUT_ENABLED==='true' && configured(env),diagnosticsVersion:1,returnSyncVersion:2 });
         if (request.method === 'OPTIONS') {
           if (!isAllowed) return respond({ error:'forbidden_origin' },403);
           return new Response(null,{ status:204,headers:{ 'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'GET, POST, OPTIONS','Access-Control-Allow-Headers':'Authorization, Content-Type, Idempotency-Key','Access-Control-Max-Age':'600',Vary:'Origin' }});
@@ -170,6 +177,7 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
           if (!token || !env.DB) return respond({ error:'order_not_found' },404);
           let order = await env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(orderId).first();
           if (!order || order.receipt_hash !== await hash(token)) return respond({ error:'order_not_found' },404);
+          const diagnostic = { code:'already_recorded',fields:[] };
           // Confirm on the return page too: a delayed webhook must not delay the buyer.
           // Claim in D1 bounds concurrent polls across Worker instances and browser tabs.
           if (configured(env) && order.provider_order_id && !order.review_required &&
@@ -177,12 +185,20 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
             const claim = await env.DB.prepare(`UPDATE orders SET reconciled_at=? WHERE id=? AND reconciled_at<?`)
               .bind(now(),order.id,now()-5000).run();
             if (claim.meta.changes) {
-              try { await syncOrder(env,order.provider_order_id,4000); }
-              catch { console.error('payment_return_sync_failed'); }
-            }
+              try { await syncOrder(env,order.provider_order_id,4000,diagnostic); }
+              catch (error) {
+                diagnostic.code = 'provider_lookup_failed';
+                diagnostic.failure = safeFailure(error,'provider_lookup');
+                console.error('payment_return_sync_failed',diagnostic);
+              }
+              console.info('payment_return_checked',diagnostic);
+            } else diagnostic.code = 'refresh_throttled';
             order = await env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(orderId).first();
+          } else if (['pending','in_process','authorized'].includes(order.status)) {
+            diagnostic.code = !configured(env) ? 'service_unconfigured' : !order.provider_order_id ? 'provider_id_missing' : 'review_required';
           }
-          return respond({ orderId:order.id,status:order.status,amountCents:order.amount_cents,currency:order.currency,reviewRequired:!!order.review_required });
+          return respond({ orderId:order.id,status:order.status,amountCents:order.amount_cents,currency:order.currency,reviewRequired:!!order.review_required,
+            ...(env.PAYMENTS_MODE === 'test' ? { diagnostic } : {}) });
         }
         return respond({ error:'not_found' },404);
       } catch {
