@@ -13,6 +13,33 @@ const statusMap = {
   refunded:'refunded',charged_back:'charged_back',in_mediation:'in_mediation',
 };
 
+function isApproved(entry) {
+  return entry?.status === 'approved' || (entry?.status === 'processed' && entry.status_detail === 'accredited');
+}
+
+// Checkout Pro may omit paid_amount on individual transactions. Only allocate the
+// authoritative collected total when the entire approved set matches it exactly.
+function canAllocateCollectedTotal(snapshot, entries) {
+  const total = cents(snapshot.total_paid_amount);
+  if (!['processed','approved'].includes(snapshot.status) || total !== 2790) return false;
+  const approved = entries.filter(isApproved);
+  return approved.length > 0 && approved.every(p => cents(p.amount) !== null && cents(p.amount) > 0) &&
+    approved.reduce((sum,p) => sum + cents(p.amount),0) === total;
+}
+
+export function snapshotState(snapshot) {
+  const states = new Set(['created','pending','action_required','processing','in_process','authorized','processed','approved','failed','rejected','expired','canceled','cancelled','refunded','charged_back','in_mediation']);
+  const safeState = value => states.has(value) ? value : 'other';
+  const entries = Array.isArray(snapshot?.transactions?.payments) ? snapshot.transactions.payments : [];
+  const details = new Set(['accredited','pending','pending_waiting_payment','pending_review_manual','pending_contingency','partially_refunded','refunded','settled']);
+  return {
+    orderStatus:safeState(snapshot?.status),
+    paymentStatuses:[...new Set(entries.map(p => safeState(p?.status)))].slice(0,10),
+    paymentDetails:[...new Set(entries.map(p => details.has(p?.status_detail) ? p.status_detail : 'other'))].slice(0,10),
+    collectedTotal:cents(snapshot?.total_paid_amount) === 2790 ? 'full' : cents(snapshot?.total_paid_amount) === 0 ? 'zero' : 'other',
+  };
+}
+
 // Static field names only: never return payer details or raw provider values.
 export function snapshotIssues(snapshot, localOrder, env) {
   if (!snapshot || typeof snapshot !== 'object') return ['snapshot'];
@@ -33,7 +60,7 @@ export function snapshotIssues(snapshot, localOrder, env) {
   if (entries.length) {
     checks['payments.id'] = entries.every(p => PROVIDER_ID.test(p?.id ?? ''));
     checks['payments.amount'] = entries.every(p => cents(p?.amount) !== null);
-    checks['payments.paid_amount'] = entries.every(p => p?.paid_amount !== undefined && cents(p.paid_amount) !== null);
+    checks['payments.paid_amount'] = entries.every(p => p?.paid_amount !== undefined ? cents(p.paid_amount) !== null : isApproved(p) && canAllocateCollectedTotal(snapshot,entries));
   }
   return Object.entries(checks).filter(([,ok]) => !ok).map(([field]) => field);
 }
@@ -52,14 +79,17 @@ export function normalizeOrder(snapshot, localOrder, env) {
   if (!Number.isFinite(updated) || totalPaid === null) return null;
   const entries = snapshot.transactions?.payments ?? [];
   if (!Array.isArray(entries)) return null;
+  const allocateCollected = canAllocateCollectedTotal(snapshot,entries);
   const payments = [];
   const unique = new Set();
   let paid = 0, refunded = 0, review = false;
   for (const entry of entries) {
-    const amount = cents(entry.amount), collected = cents(entry.paid_amount ?? '0'), returned = cents(entry.refunded_amount ?? '0');
+    const amount = cents(entry.amount);
+    const collected = entry.paid_amount === undefined && isApproved(entry) && allocateCollected ? amount : cents(entry.paid_amount ?? '0');
+    const returned = cents(entry.refunded_amount ?? '0');
     if (!PROVIDER_ID.test(entry.id ?? '') || unique.has(entry.id) || amount === null || amount < 1 || collected === null || returned === null || returned > amount) return null;
     unique.add(entry.id);
-    const approved = entry.status === 'approved' || (entry.status === 'processed' && entry.status_detail === 'accredited');
+    const approved = isApproved(entry);
     let status = approved && collected === amount ? 'approved' : statusMap[entry.status] ?? 'pending';
     if (approved && collected !== amount) review = true;
     if (returned > 0) status = 'refunded';

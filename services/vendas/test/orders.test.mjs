@@ -192,6 +192,32 @@ test('split payments require the exact collected total, not just an approved sta
   under.transactions.payments[0].paid_amount='1.00';await g.notify();assert.notEqual(g.row().status,'approved');assert.equal(g.task(),undefined);
 });
 
+test('Checkout Pro confirms a full approved total when individual paid_amount is omitted',async()=>{
+  const f=fixture(),id=await f.order();const snapshot=f.snapshot(id);
+  delete snapshot.transactions.payments[0].paid_amount;
+  await f.notify();
+  assert.equal(f.row().status,'approved');assert.equal(f.row().review_required,0);
+  assert.equal(f.env.DB.db.prepare('SELECT paid_cents FROM payments').get().paid_cents,2790);
+  assert.equal(f.task().kind,'payment_approved');
+});
+
+for (const [name,change] of Object.entries({
+  partial_total:{total_paid_amount:'1.00'},
+  missing_total:{total_paid_amount:undefined},
+  pending_order:{status:'created'},
+  rejected_payment:{paymentStatus:'rejected'},
+  explicit_zero:{paidAmount:'0'},
+})) {
+  test(`omitted transaction amount cannot approve ${name}`,async()=>{
+    const f=fixture(),id=await f.order();const snapshot=f.snapshot(id,change);
+    delete snapshot.transactions.payments[0].paid_amount;
+    if(change.paymentStatus)snapshot.transactions.payments[0].status=change.paymentStatus;
+    if(change.paidAmount)snapshot.transactions.payments[0].paid_amount=change.paidAmount;
+    await f.notify();
+    assert.notEqual(f.row().status,'approved');assert.equal(f.task(),undefined);
+  });
+}
+
 test('receipt lookup requires the capability and discloses no email or redirect-based approval',async()=>{
   const f=fixture(),id=await f.order();
   f.snapshot(id,{status:'created',total_paid_amount:'0',transactions:{payments:[]}});
@@ -231,7 +257,8 @@ test('return never approves a provider snapshot with the wrong seller',async()=>
   const response=await f.worker.fetch(new Request(`${api}/orders/${id}`,{headers:{Origin:site,Authorization:`Bearer ${token}`}}),f.env);
   const body=await response.json();
   assert.equal(body.status,'pending');assert.equal(f.task(),undefined);
-  assert.deepEqual(body.diagnostic,{code:'provider_snapshot_mismatch',fields:['user_id']});
+  assert.equal(body.diagnostic.code,'provider_snapshot_mismatch');
+  assert.deepEqual(body.diagnostic.fields,['user_id']);
 });
 
 test('return diagnostics identify missing provider fields without exposing customer data',async()=>{

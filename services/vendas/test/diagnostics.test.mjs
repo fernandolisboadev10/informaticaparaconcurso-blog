@@ -26,5 +26,5 @@ test('upstream HTTP status is retained with bounded safe codes',()=>{
 
 test('health identifies the diagnostics build without exposing secrets',async()=>{
   const response=await createWorker().fetch(new Request('https://example.com/health'),{});
-  assert.deepEqual(await response.json(),{service:'apostila-vendas',checkoutEnabled:false,diagnosticsVersion:1,returnSyncVersion:2});
+  assert.deepEqual(await response.json(),{service:'apostila-vendas',checkoutEnabled:false,diagnosticsVersion:1,returnSyncVersion:3});
 });

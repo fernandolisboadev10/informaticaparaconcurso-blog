@@ -1,6 +1,6 @@
 import { hash, readJson, receiptToken, UUID, PROVIDER_ID, verifyWebhook } from './security.mjs';
 
-import { normalizeOrder, snapshotIssues } from './orders.mjs';
+import { normalizeOrder, snapshotIssues, snapshotState } from './orders.mjs';
 import { ProviderFailure, safeProviderDetails, safeFailure } from './diagnostics.mjs';
 
 const PRODUCT = 'apostila-cebraspe-552';
@@ -43,6 +43,7 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
     const order = await env.DB.prepare('SELECT * FROM orders WHERE id=?').bind(snapshot.external_reference).first();
     if (!order) { diagnostic.code = 'local_order_not_found'; return 'ignored'; }
     diagnostic.fields = snapshotIssues(snapshot,order,env);
+    diagnostic.providerState = snapshotState(snapshot);
     const verified = normalizeOrder(snapshot,order,env);
     if (!verified) return 'ignored';
     const syncToken = crypto.randomUUID();
@@ -153,7 +154,7 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
       }});
       const url = new URL(request.url);
       try {
-        if (request.method === 'GET' && url.pathname === '/health') return respond({ service:'apostila-vendas',checkoutEnabled:env.CHECKOUT_ENABLED==='true' && configured(env),diagnosticsVersion:1,returnSyncVersion:2 });
+        if (request.method === 'GET' && url.pathname === '/health') return respond({ service:'apostila-vendas',checkoutEnabled:env.CHECKOUT_ENABLED==='true' && configured(env),diagnosticsVersion:1,returnSyncVersion:3 });
         if (request.method === 'OPTIONS') {
           if (!isAllowed) return respond({ error:'forbidden_origin' },403);
           return new Response(null,{ status:204,headers:{ 'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'GET, POST, OPTIONS','Access-Control-Allow-Headers':'Authorization, Content-Type, Idempotency-Key','Access-Control-Max-Age':'600',Vary:'Origin' }});
