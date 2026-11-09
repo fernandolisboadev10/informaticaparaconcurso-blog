@@ -109,7 +109,9 @@ export function createWorker({ fetch: remoteFetch = globalThis.fetch, now = Date
     try {
       const returnUrl = `${httpsBase(env.SITE_URL)}/apostila/pagamento/?pedido=${order.id}`;
       const remoteOrder = await mp(env,'/v1/orders', { method:'POST', key:order.id, body:{
-        type:'online',processing_mode:'automatic',total_amount:(PRICE/100).toFixed(2),currency:'BRL',external_reference:order.id,
+        // Checkout Pro creates the order before the buyer selects a payment method.
+        // Automatic processing instead expects payment transactions in this request.
+        type:'online',processing_mode:'manual',capture_mode:'automatic',total_amount:(PRICE/100).toFixed(2),currency:'BRL',external_reference:order.id,
         items:[{ external_code:PRODUCT,title:'Apostila Cebraspe — 552 Questões Comentadas de Informática',quantity:1,unit_price:(PRICE/100).toFixed(2) }],
         payer:{ email },
         config:{ online:{

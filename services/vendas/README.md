@@ -113,6 +113,8 @@ O Worker aceita tópicos `order` e `orders`, mas a aprovação sempre depende da
 
 ## Recuperação e garantias
 
+- A criação do Checkout Pro usa `processing_mode: 'manual'` e `capture_mode: 'automatic'`, conforme o [exemplo oficial do SDK](https://github.com/mercadopago/sdk-nodejs/blob/master/src/examples/order/createCheckoutPro.ts). O comprador escolhe o meio de pagamento na página hospedada. Não usar processamento automático sem transações: esse é o fluxo de pagamento direto, que exige dados de pagamento já na criação.
+
 - As chamadas externas usam `redirect: 'manual'`, suportado pelo Workers, e tratam respostas 3xx como falha. Não trocar por `error`: esse modo existe no fetch do Node, mas o runtime do Cloudflare lança uma exceção antes de enviar a requisição. O teste `runtime.test.mjs` exercita o código real com workerd e D1; apenas a resposta externa do Mercado Pago é simulada.
 
 - Pedido tem identificador imprevisível; valor e produto não vêm do navegador.

@@ -22,6 +22,12 @@ test('checkout reaches the provider using redirect mode supported by Cloudflare 
     },
     outboundService:async request=>{
       requests.push({url:request.url,body:await request.json()});
+      const body=requests.at(-1).body;
+      // Official SDK Checkout Pro example: createCheckoutPro.ts.
+      // Automatic processing without transactions is a different integration flow.
+      if(body.processing_mode!=='manual'||body.capture_mode!=='automatic') {
+        return Response.json({errors:[{code:'required_properties'}]},{status:400});
+      }
       return Response.json({id:'ORD_RUNTIME_TEST',checkout_url:'https://sandbox.mercadopago.com.br/checkout/v1/redirect?order_id=runtime'});
     },
   }));
