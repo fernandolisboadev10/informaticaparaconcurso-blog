@@ -1,0 +1,77 @@
+---
+import { PAYMENTS_API_URL } from '../data/payments';
+import { APOSTILA_PRICE } from '../data/apostila';
+interface Props { testing?: boolean; }
+const { testing = false } = Astro.props;
+---
+<form class="checkout-form" data-checkout-api={PAYMENTS_API_URL}>
+  <label for="checkout-email">Seu e-mail</label>
+  <input id="checkout-email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="voce@exemplo.com" />
+  <p class="email-note">Use um e-mail que você acompanha para identificar sua compra. <a href="/politica-de-privacidade/">Privacidade</a></p>
+  <button type="submit" disabled>{testing ? `Abrir checkout de teste — ${APOSTILA_PRICE}` : `Pagar ${APOSTILA_PRICE} no Mercado Pago`}</button>
+  <p class="methods">Pix ou cartão, conforme as opções do checkout.</p>
+  <p class="checkout-message" role="status" aria-live="polite"></p>
+  <noscript><p>Ative o JavaScript para abrir o pagamento ou entre em contato pelo link abaixo.</p></noscript>
+</form>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-checkout-api]').forEach((form) => {
+    const input = form.querySelector<HTMLInputElement>('input')!;
+    const button = form.querySelector<HTMLButtonElement>('button')!;
+    const message = form.querySelector<HTMLElement>('.checkout-message')!;
+    let attempt: { key: string; token: string; email: string } | null = null;
+    button.disabled = false;
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (button.disabled || !form.reportValidity()) return;
+      button.disabled = true;
+      message.textContent = 'Preparando seu pagamento…';
+      const email = input.value.trim().toLowerCase();
+      try {
+        // Ensure the receipt can be kept before creating a checkout.
+        sessionStorage.setItem('apostila-storage-check', '1');
+        sessionStorage.removeItem('apostila-storage-check');
+        if (!attempt || attempt.email !== email) {
+          const bytes = crypto.getRandomValues(new Uint8Array(32));
+          attempt = { key: crypto.randomUUID(), token: [...bytes].map(b => b.toString(16).padStart(2, '0')).join(''), email };
+        }
+        const response = await fetch(`${form.dataset.checkoutApi}/checkout`, {
+          method: 'POST', credentials: 'omit', signal: AbortSignal.timeout(20000),
+          headers: { 'Content-Type': 'application/json', 'Idempotency-Key': attempt.key, Authorization: `Bearer ${attempt.token}` },
+          body: JSON.stringify({ email }),
+        });
+        const data = await response.json();
+        if (!response.ok) {
+          const messages: Record<string, string> = {
+            invalid_email: 'Confira o e-mail informado.',
+            checkout_preparing: 'Seu pagamento ainda está sendo preparado. Tente novamente em instantes.',
+            too_many_requests: 'Aguarde um minuto antes de tentar novamente.',
+          };
+          message.textContent = messages[data.error] ?? 'Não foi possível abrir o pagamento agora. Tente novamente em instantes.';
+          return;
+        }
+        const checkoutUrl = new URL(data.checkoutUrl);
+        if (checkoutUrl.protocol !== 'https:' || !['www.mercadopago.com.br', 'sandbox.mercadopago.com.br'].includes(checkoutUrl.hostname) || !/^[a-f0-9-]{36}$/i.test(data.orderId)) throw new Error('invalid_response');
+        sessionStorage.setItem(`apostila-order:${data.orderId}`, attempt.token);
+        message.textContent = 'Abrindo o Mercado Pago…';
+        window.location.assign(checkoutUrl.href);
+      } catch {
+        message.textContent = 'Não foi possível abrir o pagamento. Confira sua conexão e permita o armazenamento desta aba antes de tentar novamente.';
+      } finally { button.disabled = false; }
+    });
+  });
+</script>
+
+<style>
+  .checkout-form { text-align: left; }
+  label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 8px; color: #edf2fc; }
+  input { box-sizing: border-box; width: 100%; padding: 14px; min-height: 48px; background: #fff; border: 1px solid #cbd6e8; border-radius: 8px; color: #182238; font: inherit; }
+  input:focus-visible, button:focus-visible { outline: 3px solid #ffda44; outline-offset: 4px; }
+  .email-note, .methods { font-size: .74rem; color: #bfcbe0; line-height: 1.7; }
+  button { width: 100%; min-height: 54px; border: 0; border-radius: 9px; background: #ffda44; color: #182238; font: inherit; font-weight: 700; font-size: .9rem; padding: 14px 12px; cursor: pointer; }
+  button:hover:not(:disabled) { background: #ffe36b; }
+  button:disabled { cursor: wait; opacity: .7; }
+  .methods { text-align: center; }
+  .checkout-message { color: #fff; font-size: .85rem; line-height: 1.7; }
+  .checkout-message:empty { display: none; }
+</style>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ApostilaCheckout from '../../components/ApostilaCheckout.astro';
+---
+<BaseLayout title="Teste do pagamento da apostila" noindex ads={false} showSiteNavigation={false}>
+  <div class="test-page">
+    <a class="back" href="/apostila/">← Voltar à apostila</a>
+    <p class="label">Validação da integração</p>
+    <h1>Testar o checkout da apostila</h1>
+    <p class="intro">Esta página é usada para conferir a integração com o Mercado Pago antes de liberar as compras no blog.</p>
+    <div class="notice"><strong>Use somente dados de teste.</strong><p>Informe o e-mail da conta de <strong>comprador de teste</strong> criada no Mercado Pago. No checkout, utilize apenas os cartões de teste fornecidos pelo painel. A conta compradora deve ser diferente da conta vendedora.</p></div>
+    <div class="form-card"><ApostilaCheckout testing /></div>
+    <p class="footnote">O botão da página pública permanece desativado. A entrega automática do PDF ainda não faz parte deste teste.</p>
+    <a class="support" href="mailto:fernandolisboa.dev@gmail.com">Entrar em contato</a>
+  </div>
+</BaseLayout>
+
+<style>
+  .test-page { max-width: 680px; padding: 40px 24px 80px; margin-inline: auto; font-family: var(--f-inter, Arial), sans-serif; }
+  .back { color: var(--ink-soft); font-size: .85rem; text-underline-offset: 4px; }
+  .label { margin-top: 40px; color: var(--ink-soft); font-size: .85rem; }
+  h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+  .intro { line-height: 1.8; }
+  .notice { padding: 20px; border: 1px solid var(--line-strong); border-radius: 12px; margin: 26px 0; background: var(--surface); }
+  .notice p { line-height: 1.8; margin-bottom: 0; font-size: .9rem; }
+  .form-card { background: #192943; border-radius: 16px; padding: clamp(22px, 5vw, 34px); color: #fff; color-scheme: dark; }
+  .footnote { color: var(--ink-soft); font-size: .8rem; line-height: 1.8; margin: 24px 0; }
+  .support { font-size: .9rem; }
+</style>

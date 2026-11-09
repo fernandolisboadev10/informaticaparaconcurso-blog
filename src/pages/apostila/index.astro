@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ApostilaSample from '../../components/ApostilaSample.astro';
 import SalesArrow from '../../components/SalesArrow.astro';
+import ApostilaCheckout from '../../components/ApostilaCheckout.astro';
+import { PAYMENTS_UI_ENABLED } from '../../data/payments';
 import { APOSTILA_COVER, APOSTILA_PRICE, APOSTILA_QUESTIONS } from '../../data/apostila';
 import { apostilaModules } from '../../data/apostila-samples';
 import sistemas from '../../assets/apostila/pagina-3.webp';
@@ -28,7 +30,9 @@ const faqs = [
   { question: 'A apostila funciona como este teste interativo?', answer: 'A interação é uma demonstração desta página. A apostila é um PDF: os gabaritos e os comentários já aparecem junto das questões, como nas páginas de amostra.' },
   { question: 'Posso ler no celular e no computador?', answer: 'Sim. Você pode abrir o PDF em um leitor compatível no celular, tablet ou computador. O material usa páginas A4; no celular, pode ser necessário ampliar o texto para ler com conforto.' },
   { question: 'Posso imprimir para estudar?', answer: 'Sim, o formato A4 permite imprimir o material para seu estudo pessoal. Você também pode estudar diretamente pelo arquivo digital.' },
-  { question: 'Já posso comprar por esta página?', answer: 'Ainda não. A compra por esta página está em preparação. O preço apresentado é R$ 27,90, em pagamento único. Por enquanto, você pode experimentar as questões e conhecer páginas reais da apostila gratuitamente.' },
+  PAYMENTS_UI_ENABLED
+    ? { question: 'Como faço o pagamento?', answer: 'Informe seu e-mail na área da oferta para continuar no Checkout Pro do Mercado Pago. O preço é R$ 27,90, em pagamento único. As opções de Pix e cartão são apresentadas no checkout.' }
+    : { question: 'Já posso comprar por esta página?', answer: 'Ainda não. A compra por esta página está em preparação. O preço apresentado é R$ 27,90, em pagamento único. Por enquanto, você pode experimentar as questões e conhecer páginas reais da apostila gratuitamente.' },
   { question: 'A apostila é uma publicação oficial da Cebraspe?', answer: 'Não. É um material de estudo independente, organizado por Fernando Lisboa, do Informática para Concurso, com questões de provas da banca e comentários explicativos.' },
 ];
 ---
@@ -168,9 +172,11 @@ const faqs = [
           <p class="offer-name">Apostila Cebraspe de Informática</p>
           <p class="price">{APOSTILA_PRICE}</p>
           <p class="payment-note">Pagamento único · Produto digital</p>
-          <div class="availability"><span aria-hidden="true"></span> Compra disponível em breve</div>
-          <p class="availability-note">Estamos preparando a compra por esta página. Enquanto isso, conheça o material com a amostra gratuita.</p>
-          <a class="action primary" href="#amostra">Experimentar a amostra <SalesArrow direction="up" /></a>
+          {PAYMENTS_UI_ENABLED ? <ApostilaCheckout /> : <>
+            <div class="availability"><span aria-hidden="true"></span> Compra disponível em breve</div>
+            <p class="availability-note">Estamos preparando a compra por esta página. Enquanto isso, conheça o material com a amostra gratuita.</p>
+            <a class="action primary" href="#amostra">Experimentar a amostra <SalesArrow direction="up" /></a>
+          </>}
           <a class="support-link" href="mailto:fernandolisboa.dev@gmail.com">Tem uma dúvida? Fale comigo</a>
         </div>
       </div>

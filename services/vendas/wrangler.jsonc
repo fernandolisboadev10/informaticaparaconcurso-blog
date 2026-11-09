@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "apostila-vendas",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-11-08",
+  "workers_dev": true,
+  "vars": {
+    "CHECKOUT_ENABLED": "false",
+    "PAYMENTS_MODE": "test",
+    "SITE_URL": "https://informaticaparaconcurso.com.br",
+    "API_PUBLIC_URL": "https://apostila-vendas.fernandolisboa-dev.workers.dev",
+    "ALLOWED_ORIGINS": "https://informaticaparaconcurso.com.br",
+    "MP_COLLECTOR_ID": ""
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "apostila-orders",
+    // Template only. Replace with the ID returned by `wrangler d1 create apostila-orders`.
+    "database_id": "00000000-0000-0000-0000-000000000000",
+    "migrations_dir": "migrations"
+  }],
+  "ratelimits": [{
+    "name": "CHECKOUT_RATE_LIMITER",
+    "namespace_id": "1001",
+    "simple": { "limit": 5, "period": 60 }
+  }],
+  "triggers": { "crons": ["*/10 * * * *"] },
+  "observability": { "enabled": true }
+}

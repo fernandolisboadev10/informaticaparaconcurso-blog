@@ -1,0 +1,19 @@
+{
+  "name": "apostila-vendas",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "test": "node --test test/*.test.mjs",
+    "check": "wrangler deploy --dry-run",
+    "db:local": "wrangler d1 migrations apply DB --local",
+    "db:remote": "wrangler d1 migrations apply DB --remote",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.158.0"
+  }
+}

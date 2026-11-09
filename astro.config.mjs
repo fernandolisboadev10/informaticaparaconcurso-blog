@@ -66,6 +66,7 @@ export default defineConfig({
     sitemap({
       // Category pages with fewer than 2 posts are noindex, so keep them out of the sitemap.
       filter(page) {
+        if (/^\/apostila\/(?:pagamento|teste-pagamento)\/?$/.test(new URL(page).pathname)) return false;
         const m = new URL(page).pathname.match(/^\/categoria\/([^/]+)\/?$/);
         if (!m) return true;
         const names = { 'inteligencia-artificial': 'Inteligência Artificial', jogos: 'Jogos', tutoriais: 'Tutoriais', dicas: 'Dicas', curiosidades: 'Curiosidades', reviews: 'Reviews', apps: 'Apps', concursos: 'Concursos' };

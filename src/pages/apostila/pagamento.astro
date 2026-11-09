@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { PAYMENTS_API_URL } from '../../data/payments';
+---
+<BaseLayout title="Acompanhar pagamento" noindex ads={false}>
+  <section class="receipt" data-payment-api={PAYMENTS_API_URL}>
+    <p class="eyebrow">Apostila Cebraspe de Informática</p>
+    <h1>Acompanhe seu pagamento</h1>
+    <div class="status-box" role="status" aria-live="polite" aria-atomic="true">
+      <h2 data-payment-title>Consultando seu pedido…</h2>
+      <p data-payment-message>Aguarde enquanto confirmamos a situação do pagamento.</p>
+    </div>
+    <p class="support" data-order-reference hidden></p>
+    <button type="button" data-check-payment hidden>Consultar novamente</button>
+    <noscript><p>Ative o JavaScript para consultar o pedido nesta aba. Se precisar, entre em contato pelo e-mail de suporte.</p></noscript>
+    <p class="support">Precisa de ajuda? <a href="mailto:fernandolisboa.dev@gmail.com">fernandolisboa.dev@gmail.com</a></p>
+    <a href="/apostila/">Voltar à apostila</a>
+  </section>
+</BaseLayout>
+
+<script>
+  const box = document.querySelector<HTMLElement>('[data-payment-api]');
+  if (box) {
+    const title = box.querySelector<HTMLElement>('[data-payment-title]')!;
+    const message = box.querySelector<HTMLElement>('[data-payment-message]')!;
+    const retry = box.querySelector<HTMLButtonElement>('[data-check-payment]')!;
+    const orderId = new URL(location.href).searchParams.get('pedido') ?? '';
+    let token: string | null = null;
+    try { token = sessionStorage.getItem(`apostila-order:${orderId}`); } catch { /* Show a recovery message below. */ }
+    if (/^[a-f0-9-]{36}$/i.test(orderId) && token) {
+      const reference = box.querySelector<HTMLElement>('[data-order-reference]')!;
+      reference.textContent = `Número do pedido: ${orderId}`;
+      reference.hidden = false;
+    }
+    const states: Record<string, [string, string]> = {
+      approved: ['Pagamento aprovado', 'Seu pagamento foi confirmado. A entrega da apostila está sendo preparada. Se precisar de ajuda, entre em contato com o suporte.'],
+      pending: ['Aguardando pagamento', 'Assim que o Mercado Pago confirmar o pagamento, a situação será atualizada aqui.'],
+      in_process: ['Pagamento em análise', 'O Mercado Pago ainda está analisando o pagamento. Você pode consultar novamente em instantes.'],
+      authorized: ['Pagamento em processamento', 'O pagamento ainda não foi concluído. Aguarde a confirmação do Mercado Pago.'],
+      rejected: ['Pagamento não aprovado', 'O pagamento não foi aprovado. Volte à página da apostila para iniciar uma nova tentativa.'],
+      cancelled: ['Pagamento cancelado', 'Este pagamento foi cancelado. Se desejar, você pode iniciar uma nova compra.'],
+      refunded: ['Pagamento com reembolso', 'Há um reembolso registrado neste pagamento. Entre em contato com o suporte em caso de dúvida.'],
+      charged_back: ['Pagamento em contestação', 'Há uma contestação registrada. Entre em contato com o suporte para obter ajuda.'],
+      in_mediation: ['Pagamento em mediação', 'Este pagamento está em mediação no Mercado Pago. Entre em contato com o suporte para obter ajuda.'],
+    };
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    let attempts = 0;
+    let busy = false;
+    let stopped = false;
+    async function check() {
+      if (busy || stopped) return;
+      clearTimeout(timer);
+      retry.hidden = true;
+      busy = true;
+      try {
+        if (!box?.dataset.paymentApi || !/^[a-f0-9-]{36}$/i.test(orderId) || !token) {
+          title.textContent = 'Abra o retorno na mesma aba da compra';
+          message.textContent = 'Não encontramos a identificação do pedido nesta aba. Se você já pagou, entre em contato com o suporte. Não é necessário pagar novamente.';
+          return;
+        }
+        // Ignore status/payment_id in the redirect. Only the authenticated backend response counts.
+        const response = await fetch(`${box.dataset.paymentApi}/orders/${orderId}`, {
+          headers: { Authorization: `Bearer ${token}` }, credentials: 'omit', cache: 'no-store', signal: AbortSignal.timeout(15000),
+        });
+        if (!response.ok) throw new Error('unavailable');
+        const data = await response.json();
+        if (!states[data.status] || data.orderId !== orderId) throw new Error('invalid_response');
+        [title.textContent, message.textContent] = states[data.status];
+        if (data.reviewRequired) {
+          title.textContent = 'Precisamos conferir seu pedido';
+          message.textContent = 'Entre em contato com o suporte e informe o número do pedido. Não faça outro pagamento.';
+          return;
+        }
+        attempts += 1;
+        if (['pending','in_process','authorized'].includes(data.status)) {
+          retry.hidden = false;
+          if (attempts < 30) timer = setTimeout(check, 10000);
+        }
+      } catch {
+        title.textContent = 'Não foi possível consultar agora';
+        message.textContent = 'Isso não significa que o pagamento falhou. Consulte novamente em instantes ou entre em contato com o suporte.';
+        retry.hidden = false;
+      } finally { busy = false; }
+    }
+    retry.addEventListener('click', () => { attempts = 0; void check(); });
+    window.addEventListener('pagehide', () => { stopped = true; clearTimeout(timer); }, { once: true });
+    void check();
+  }
+</script>
+
+<style>
+  .receipt { max-width: 740px; margin: 0 auto; padding: 64px 24px 90px; }
+  .eyebrow { color: var(--ink-soft); font-size: .85rem; }
+  h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .status-box { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 26px; margin: 28px 0 18px; }
+  h2 { font-size: 1.25rem; }
+  .status-box p { line-height: 1.8; }
+  button { border: 0; border-radius: 8px; padding: 14px 20px; background: #ffda44; color: #182238; font: inherit; font-weight: 700; cursor: pointer; }
+  button[hidden] { display: none; }
+  .support { font-size: .9rem; line-height: 1.8; overflow-wrap: anywhere; margin-top: 32px; }
+</style>
