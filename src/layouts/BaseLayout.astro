@@ -163,8 +163,9 @@ const organizationSchema = {
 
   </head>
   <body>
+    {showSiteNavigation && <a class="skip-link" href="#main-content">Pular para o conteúdo</a>}
     {showSiteNavigation && <Header />}
-    <main>
+    <main id="main-content" tabindex="-1">
       <slot />
     </main>
     {showSiteNavigation && <Footer />}

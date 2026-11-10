@@ -14,8 +14,7 @@ import { categories, categoryHref } from '../data/categories';
 import { isPublished, sortByActivity } from '../utils/posts';
 import { questionCount } from '../utils/quizzes';
 import ApostilaBanner from '../components/ApostilaBanner.astro';
-import QuestionPhoneDemo from '../components/QuestionPhoneDemo.astro';
-import { QUESTOES_URL, questoesAriaLabel } from '../data/questoes';
+import QuestoesCTA from '../components/QuestoesCTA.astro';
 
 // Page 1 opens with the subjects of the exam syllabus; "Aulas recentes" and the /page/N/ pages
 // list every post, newest first, 9 per page.
@@ -175,46 +174,12 @@ const trilha = trilhaSlugs
 
   {page === 1 && (
     <section class="block band-wrap">
-      <div class="band" data-banner="gerador" data-slot="home-gerador" data-question-demo-banner>
-        <div class="band-text">
-          <p class="band-eyebrow"><span class="band-dot" aria-hidden="true"></span>Gerador de Questões com IA</p>
-          <h2>Crie questões personalizadas para o seu edital.</h2>
-          <p class="band-lede">Gere questões de acordo com o conteúdo programático do seu edital, no estilo da sua banca, e confira o gabarito comentado.</p>
-          <ul class="band-chips" aria-label="O que você escolhe">
-            <li>Seu edital</li>
-            <li>Sua banca</li>
-            <li>Nível de dificuldade</li>
-            <li>Gabarito comentado</li>
-          </ul>
-          <a class="btn-cta btn-big" href={QUESTOES_URL} target="_blank" rel="noopener" data-banner-link aria-label={`Criar questões: ${questoesAriaLabel}`}>
-            Criar questões
-            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          </a>
-        </div>
-        <QuestionPhoneDemo />
-      </div>
+      <QuestoesCTA placement="home" />
     </section>
   )}
 </BaseLayout>
 
-<script>
-  // Medição do banner do gerador no GA4 (banner_view e banner_click).
-  declare const gtag: (...args: unknown[]) => void;
-  const bandBox = document.querySelector<HTMLElement>('[data-banner="gerador"]');
-  if (bandBox) {
-    const send = (name: string) => {
-      try { gtag('event', name, { banner_id: 'gerador', slot: bandBox.dataset.slot }); } catch { /* sem analytics */ }
-    };
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        if (entries.some((e) => e.isIntersecting)) { send('banner_view'); io.disconnect(); }
-      }, { threshold: 0.5 });
-      io.observe(bandBox);
-    }
-    bandBox.querySelector('[data-banner-link]')?.addEventListener('click', () => send('banner_click'));
-  }
 
-</script>
 
 <style>
   .visually-hidden {
@@ -669,125 +634,6 @@ const trilha = trilhaSlugs
   /* Faixa final: gerador de questões. Azul profundo com destaques em azul neon. */
   .band-wrap {
     padding-block: 48px 72px;
-  }
-
-  .band {
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 260px;
-    gap: 40px;
-    align-items: center;
-    padding: 44px;
-    border-radius: 24px;
-    border: 2px solid #38aaff;
-    color: #fff;
-    background:
-      radial-gradient(circle at 100% 0%, rgba(56, 170, 255, 0.16), transparent 50%),
-      linear-gradient(135deg, #071326 0%, #0c2442 100%);
-    box-shadow: 0 0 22px rgba(56, 170, 255, 0.3);
-  }
-
-  .band-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    min-width: 0;
-    position: relative;
-    z-index: 2;
-  }
-
-  .band-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 0;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #93ceff;
-  }
-
-  .band-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #38aaff;
-  }
-
-  .band-text h2 {
-    font-size: clamp(1.75rem, 3.4vw, 2.5rem);
-    line-height: 1.12;
-    letter-spacing: -0.02em;
-    color: #fff;
-    text-wrap: balance;
-  }
-
-  .band-lede {
-    margin: 0;
-    max-width: 560px;
-    font-size: 1.0625rem;
-    color: #c5d6ea;
-    text-wrap: pretty;
-  }
-
-  .band-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    list-style: none;
-    margin: 4px 0 8px;
-    padding: 0;
-  }
-
-  .band-chips li {
-    padding: 5px 14px;
-    border-radius: 999px;
-    border: 1px solid rgba(56, 170, 255, 0.5);
-    background: rgba(56, 170, 255, 0.08);
-    color: #bbdfff;
-    font-size: 0.875rem;
-    font-weight: 600;
-  }
-
-  /* Botão: azul neon com texto escuro */
-  .band .btn-cta {
-    background: #38aaff;
-    color: #071426;
-    box-shadow: 0 0 10px rgba(56, 170, 255, 0.45);
-  }
-
-  .band .btn-cta svg {
-    transition: transform 0.2s;
-  }
-
-  .band .btn-cta:hover {
-    background: #93ceff;
-    filter: none;
-  }
-
-  .band .btn-cta:hover svg {
-    transform: translateX(4px);
-  }
-
-  .band .btn-cta:focus-visible {
-    outline: 3px solid #fff;
-    outline-offset: 3px;
-  }
-
-  @media (max-width: 900px) {
-    .band {
-      grid-template-columns: minmax(0, 1fr);
-      padding: 32px 24px;
-    }
-
-    .band .btn-cta {
-      width: 100%;
-      justify-content: center;
-    }
   }
 
   @media (max-width: 640px) {

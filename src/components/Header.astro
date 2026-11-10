@@ -7,7 +7,7 @@ const nav = [
   { label: 'Questões', href: '/questoes/' },
 ];
 
-const currentHref = Astro.url.pathname + Astro.url.search;
+const currentHref = Astro.url.pathname;
 ---
 <header class="site-header">
   <div class="bar">
@@ -49,7 +49,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
           <input type="search" name="q" placeholder="O que você quer estudar?" aria-label="Buscar artigos" autocomplete="off" />
           <button type="submit" class="search-submit">Buscar</button>
         </form>
-        <button type="button" class="search-toggle" id="search-toggle" aria-label="Buscar no site" aria-expanded="false">
+        <button type="button" class="search-toggle" id="search-toggle" aria-label="Buscar no site" aria-expanded="false" aria-controls="search-form">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.8"></circle><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg>
         </button>
       </div>
@@ -57,7 +57,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
   </div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Menu">
     {nav.map((item) => (
-      <a href={item.href} class:list={{ active: item.href === currentHref }}>{item.label}</a>
+      <a href={item.href} class:list={{ active: item.href === currentHref }} aria-current={item.href === currentHref ? 'page' : undefined}>{item.label}</a>
     ))}
   </nav>
 </header>
@@ -70,7 +70,10 @@ const currentHref = Astro.url.pathname + Astro.url.search;
   searchToggle?.addEventListener('click', () => {
     const open = searchWrap?.classList.toggle('open');
     searchToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (open) searchInput?.focus();
+    if (open) {
+      setMenuOpen(false);
+      searchInput?.focus();
+    }
   });
 
   function closeSearch() {
@@ -102,16 +105,47 @@ const currentHref = Astro.url.pathname + Astro.url.search;
   const menuToggle = document.getElementById('menu-toggle');
   const mobileNav = document.getElementById('mobile-nav');
 
+  function setMenuOpen(open: boolean, restoreFocus = false) {
+    const focusWasInside = mobileNav?.contains(document.activeElement);
+    mobileNav?.classList.toggle('open', open);
+    if (mobileNav) mobileNav.inert = !open;
+    menuToggle?.setAttribute('aria-expanded', String(open));
+    menuToggle?.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    if (restoreFocus || (!open && focusWasInside)) {
+      const target = menuToggle?.getClientRects().length
+        ? menuToggle
+        : document.querySelector<HTMLAnchorElement>('.brand');
+      target?.focus();
+    }
+  }
+
+  setMenuOpen(false);
   menuToggle?.addEventListener('click', () => {
-    const open = mobileNav?.classList.toggle('open');
-    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    const open = !mobileNav?.classList.contains('open');
+    if (open) closeSearch();
+    setMenuOpen(open);
   });
 
   mobileNav?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
-      menuToggle?.setAttribute('aria-expanded', 'false');
+      setMenuOpen(false);
     });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && mobileNav?.classList.contains('open')) {
+      setMenuOpen(false, true);
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (mobileNav?.classList.contains('open') &&
+        !mobileNav.contains(event.target as Node) &&
+        !menuToggle?.contains(event.target as Node)) setMenuOpen(false);
+  });
+
+  window.matchMedia('(min-width: 1261px)').addEventListener('change', (event) => {
+    if (event.matches) setMenuOpen(false);
   });
 </script>
 
@@ -340,6 +374,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
 
   .mobile-nav {
     display: none;
+    visibility: hidden;
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
@@ -348,6 +383,7 @@ const currentHref = Astro.url.pathname + Astro.url.search;
   }
 
   .mobile-nav.open {
+    visibility: visible;
     max-height: min(80vh, 800px);
     overflow-y: auto;
     border-top-color: var(--line);

@@ -8,7 +8,6 @@ import RelatedPosts from '../components/RelatedPosts.astro';
 import Quiz from '../components/Quiz.astro';
 import QuestoesCTA from '../components/QuestoesCTA.astro';
 import ApostilaBanner from '../components/ApostilaBanner.astro';
-import { showQuestoesCta } from '../data/questoes';
 import type { Question } from '../components/Quiz.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
@@ -138,7 +137,7 @@ const breadcrumbSchema = {
 
         {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
 
-        {showQuestoesCta(Astro.props.slug, category, Boolean(quiz)) && <QuestoesCTA slug={Astro.props.slug} />}
+        <QuestoesCTA slug={Astro.props.slug} />
 
         <ApostilaBanner slot="post-fim" category={category} />
 

@@ -8,12 +8,13 @@ import { categories as categoryList } from '../../data/categories';
 const posts = sortByActivity(await getCollection('blog', isPublished));
 
 const categories = categoryList.map((c) => c.name);
+const description = 'Aulas, resumos e simulados de Informática para concursos, organizados por matéria do edital.';
 ---
-<BaseLayout title="Blog" description="Guias, reviews e notícias sobre IA, jogos, tutoriais e curiosidades.">
+<BaseLayout title="Blog" description={description}>
   <div class="container">
     <header class="page-header">
       <h1>Blog</h1>
-      <p>Guias, reviews e notícias sobre IA, jogos, tutoriais e curiosidades.</p>
+      <p>{description}</p>
     </header>
 
     <input
@@ -24,12 +25,14 @@ const categories = categoryList.map((c) => c.name);
       aria-label="Buscar artigos"
     />
 
-    <div class="filters" id="filters">
-      <button class="filter active" data-category="all">Todos</button>
+    <div class="filters" id="filters" role="group" aria-label="Filtrar artigos por matéria">
+      <button type="button" class="filter active" data-category="all" aria-pressed="true">Todos</button>
       {categories.map((c) => (
-        <button class="filter" data-category={c}>{c}</button>
+        <button type="button" class="filter" data-category={c} aria-pressed="false">{c}</button>
       ))}
     </div>
+
+    <p id="search-status" class="search-status" role="status" aria-live="polite" aria-atomic="true"></p>
 
     <div class="posts" id="posts">
       {posts.map((post) => (
@@ -109,7 +112,7 @@ const categories = categoryList.map((c) => c.name);
 
   .filter.active {
     background: var(--violet);
-    color: #ffffff;
+    color: var(--bg);
     border-color: var(--violet);
   }
 
@@ -138,6 +141,10 @@ const categories = categoryList.map((c) => c.name);
     margin-block: 24px 40px;
   }
 
+  .more-wrap[hidden] {
+    display: none;
+  }
+
   .more-btn {
     font-family: var(--font-body);
     font-weight: 600;
@@ -160,6 +167,12 @@ const categories = categoryList.map((c) => c.name);
     color: var(--ink-soft);
     padding-bottom: 40px;
   }
+
+  .search-status {
+    margin-block: 0 16px;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
 </style>
 
 <script>
@@ -167,6 +180,7 @@ const categories = categoryList.map((c) => c.name);
   const items = document.querySelectorAll<HTMLElement>('.post-item');
   const searchInput = document.querySelector<HTMLInputElement>('#search-input');
   const noResults = document.querySelector<HTMLElement>('#no-results');
+  const searchStatus = document.querySelector<HTMLElement>('#search-status');
 
   const PAGE_SIZE = 6;
   const moreWrap = document.querySelector<HTMLElement>('#more-wrap');
@@ -190,7 +204,16 @@ const categories = categoryList.map((c) => c.name);
     if (moreWrap) moreWrap.hidden = visibleCount <= shown;
 
     if (noResults) noResults.hidden = visibleCount > 0;
-    filters.forEach((f) => f.classList.toggle('active', f.dataset.category === activeCategory));
+    filters.forEach((f) => {
+      const active = f.dataset.category === activeCategory;
+      f.classList.toggle('active', active);
+      f.setAttribute('aria-pressed', String(active));
+    });
+    if (searchStatus) {
+      searchStatus.textContent = visibleCount === 0
+        ? 'Nenhum artigo encontrado. Tente outro termo ou matéria.'
+        : `Mostrando ${Math.min(shown, visibleCount)} de ${visibleCount} ${visibleCount === 1 ? 'artigo encontrado' : 'artigos encontrados'}.`;
+    }
   }
 
   filters.forEach((btn) => {
