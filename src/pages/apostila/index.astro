@@ -28,14 +28,14 @@ const faqs = [
   { question: 'A apostila funciona como este teste interativo?', answer: 'A interação é uma demonstração desta página. A apostila é um PDF: os gabaritos e os comentários já aparecem junto das questões, como nas páginas de amostra.' },
   { question: 'Posso ler no celular e no computador?', answer: 'Sim. Você pode abrir o PDF em um leitor compatível no celular, tablet ou computador. O material usa páginas A4; no celular, pode ser necessário ampliar o texto para ler com conforto.' },
   { question: 'Posso imprimir para estudar?', answer: 'Sim, o formato A4 permite imprimir o material para seu estudo pessoal. Você também pode estudar diretamente pelo arquivo digital.' },
-  { question: 'Como faço o pagamento?', answer: 'Clique em um dos botões de compra para continuar no checkout da Hotmart. O preço é R$ 27,90, em pagamento único. Confira as formas de pagamento disponíveis e conclua a compra diretamente na Hotmart.' },
+  { question: 'Como faço o pagamento?', answer: `Clique em um dos botões de compra para continuar no checkout da Hotmart. O preço é ${APOSTILA_PRICE}, em pagamento único. Confira as formas de pagamento disponíveis e conclua a compra diretamente na Hotmart.` },
   { question: 'A apostila é uma publicação oficial da Cebraspe?', answer: 'Não. É um material de estudo independente, organizado por Fernando Lisboa, do Informática para Concurso, com questões de provas da banca e comentários explicativos.' },
 ];
 ---
 <BaseLayout
   title="Apostila Cebraspe"
   seoTitle="Apostila Cebraspe: 552 questões comentadas de Informática"
-  description="Conheça a apostila de Informática com 552 questões Cebraspe comentadas, 206 páginas e cinco módulos. Experimente uma amostra gratuita. R$ 27,90."
+  description={`Conheça a apostila de Informática com 552 questões Cebraspe comentadas, 206 páginas e cinco módulos. Experimente uma amostra gratuita. ${APOSTILA_PRICE}.`}
   image={APOSTILA_COVER}
   showSiteNavigation={false}
   ads={false}
