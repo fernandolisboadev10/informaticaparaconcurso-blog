@@ -4,8 +4,11 @@ seoTitle: "Fonte, Nobreak e Estabilizador: Diferenças em Concursos"
 description: "Entenda a função da fonte de alimentação do computador e diferencie nobreak, estabilizador e filtro de linha nas questões de informática."
 category: "Hardware"
 date: 2026-11-18T15:00:00-03:00
+updated: 2026-11-18T19:45:00-03:00
 readingTime: "9 min"
 draft: false
+image: "./images/fonte-de-alimentacao-nobreak-estabilizador-concursos.webp"
+imageAlt: "Fonte ATX com cabos, nobreak com visor e estabilizador com tomadas, lado a lado em uma bancada"
 tags: ["Hardware", "Fonte de alimentação", "Nobreak", "Estabilizador", "Concursos"]
 related:
   - hardware-para-concursos
