@@ -1,6 +1,4 @@
 ---
-import { QUESTOES_URL } from '../data/questoes';
-
 export interface Question {
   banca?: string;
   module?: string;
@@ -20,7 +18,6 @@ interface Props {
 }
 
 const { questions, title = 'Questões comentadas', mode = 'instant' } = Astro.props;
-const ctaHref = QUESTOES_URL;
 // 'live': como 'final' (nota e desempenho por módulo ao clicar em “Ver resultado”), mas o gabarito comentado
 // de cada questão aparece na hora em que o aluno marca a alternativa.
 const live = mode === 'live';
@@ -112,7 +109,6 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
         <p class="quiz-focus"></p>
       </>
     )}
-    <a class="quiz-cta" href={ctaHref} target="_blank" rel="noopener">Gerar mais questões no Gerador de Questões</a>
   </div>
 
   {final && !live && (
@@ -299,8 +295,6 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
         focusEl.textContent = weakName
           ? `Por onde recomeçar a revisão: ${weakName}.`
           : 'Você acertou todos os módulos. Mantenha o ritmo e descanse bem.';
-        const ctaLink = quiz.querySelector<HTMLAnchorElement>('.quiz-cta');
-        if (ctaLink && weakName) ctaLink.textContent = `Gerar mais questões de ${weakName}`;
 
         result.hidden = false;
         if (gabarito) gabarito.hidden = false;
@@ -662,21 +656,6 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
   .quiz-msg {
     margin: 0;
     color: var(--ink-soft);
-  }
-
-  .quiz-cta {
-    display: inline-block;
-    margin-top: 16px;
-    padding: 10px 20px;
-    border-radius: 24px;
-    background: #0a6268;
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .quiz-cta:hover {
-    background: #0d7d85;
   }
 
   .quiz-result {

@@ -13,6 +13,8 @@ const { chromium } = require(process.env.BLOG_PLAYWRIGHT_MODULE || 'playwright')
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 const screenshotDir = process.env.BLOG_SCREENSHOT_DIR;
+const pausedRoutes = ['apostila/index.html', 'apostila/teste-pagamento/index.html'];
+const normalizeLineEndings = (source) => source.replaceAll('\r\n', '\n');
 let passed = 0;
 const failures = [];
 async function check(name, run) {
@@ -22,30 +24,31 @@ async function check(name, run) {
 
 await check('advertising, consent, deployment, content and routing sources preserved', async () => {
   for (const file of ['astro.config.mjs', 'public/ads.txt', 'public/robots.txt', 'public/CNAME', 'src/components/CookieBanner.astro', '.github/workflows/deploy.yml']) {
-    assert.equal(await readFile(path.join(root, file), 'utf8'), execFileSync('git', ['show', `HEAD:${file}`], { encoding: 'utf8' }), file);
+    assert.equal(normalizeLineEndings(await readFile(path.join(root, file), 'utf8')), execFileSync('git', ['show', `HEAD:${file}`], { encoding: 'utf8' }), file);
   }
   const before = execFileSync('git', ['show', 'HEAD:src/layouts/BaseLayout.astro'], { encoding: 'utf8' });
   const after = await readFile(path.join(root, 'src/layouts/BaseLayout.astro'), 'utf8');
   const consentScript = (source) => source.match(/<script is:inline data-ads=[\s\S]*?<\/script>/)?.[0];
   assert.ok(consentScript(before));
-  assert.equal(consentScript(after), consentScript(before));
+  assert.equal(consentScript(normalizeLineEndings(after)), consentScript(before));
   for (const file of (await readdir(path.join(root, 'src/content/blog'))).filter((name) => name.endsWith('.md'))) {
-    assert.equal(await readFile(path.join(root, 'src/content/blog', file), 'utf8'), execFileSync('git', ['show', `HEAD:src/content/blog/${file}`], { encoding: 'utf8' }), file);
+    assert.equal(normalizeLineEndings(await readFile(path.join(root, 'src/content/blog', file), 'utf8')), execFileSync('git', ['show', `HEAD:src/content/blog/${file}`], { encoding: 'utf8' }), file);
   }
 });
 
-if (process.env.BLOG_BASELINE_DIST) await check('all generated routes and SEO metadata preserved except corrected blog description', async () => {
-  async function htmlFiles(dir, prefix = '') {
-    const list = [];
-    for (const item of await readdir(path.join(dir, prefix), { withFileTypes: true })) {
-      const name = path.join(prefix, item.name);
-      if (item.isDirectory()) list.push(...await htmlFiles(dir, name));
-      else if (name.endsWith('.html')) list.push(name);
-    }
-    return list.sort();
+async function htmlFiles(dir, prefix = '') {
+  const list = [];
+  for (const item of await readdir(path.join(dir, prefix), { withFileTypes: true })) {
+    const name = path.posix.join(prefix, item.name);
+    if (item.isDirectory()) list.push(...await htmlFiles(dir, name));
+    else if (name.endsWith('.html')) list.push(name);
   }
+  return list.sort();
+}
+
+if (process.env.BLOG_BASELINE_DIST) await check('routes and SEO metadata preserved for the remaining pages', async () => {
   const baseline = process.env.BLOG_BASELINE_DIST;
-  const files = await htmlFiles(baseline);
+  const files = (await htmlFiles(baseline)).filter((file) => !pausedRoutes.includes(file));
   assert.deepEqual(await htmlFiles(dist), files);
   const metadata = (source, blog) => [...source.matchAll(/<meta\b[^>]*>|<link\b[^>]*rel="canonical"[^>]*>|<title>[\s\S]*?<\/title>/g)]
     .map(([tag]) => tag).filter((tag) => !blog || !/(?:name="description"|property="og:description"|name="twitter:description")/.test(tag));
@@ -54,33 +57,29 @@ if (process.env.BLOG_BASELINE_DIST) await check('all generated routes and SEO me
     const after = await readFile(path.join(dist, file), 'utf8');
     assert.deepEqual(metadata(after, file === 'blog/index.html'), metadata(before, file === 'blog/index.html'), file);
   }
-  for (const file of ['robots.txt', 'ads.txt', 'CNAME', 'rss.xml', 'sitemap-index.xml', 'sitemap-0.xml']) {
+  for (const file of ['robots.txt', 'ads.txt', 'CNAME', 'rss.xml', 'sitemap-index.xml']) {
     assert.deepEqual(await readFile(path.join(dist, file)), await readFile(path.join(baseline, file)), file);
   }
+  const sitemap = await readFile(path.join(baseline, 'sitemap-0.xml'), 'utf8');
+  assert.equal(await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8'), sitemap.replace(
+    /<url><loc>https:\/\/informaticaparaconcurso\.com\.br\/apostila\/<\/loc>[^<]*(?:<lastmod>[^<]*<\/lastmod>)?<\/url>/,
+    '',
+  ));
 });
 
-await check('phone banner replaces old model on home and every generated article', async () => {
-  const home = await readFile(path.join(dist, 'index.html'), 'utf8');
-  const homeBanners = [...home.matchAll(/<aside\b[^>]*data-banner="gerador"[\s\S]*?<\/aside>/g)];
-  assert.equal(homeBanners.length, 1);
-  assert.match(homeBanners[0][0], /data-slot="home-gerador"/);
-  let articles = 0;
-  for (const dir of await readdir(dist, { withFileTypes: true })) {
-    if (!dir.isDirectory()) continue;
-    let source;
-    try { source = await readFile(path.join(dist, dir.name, 'index.html'), 'utf8'); } catch { continue; }
-    if (!source.includes('"@type":"BlogPosting"')) continue;
-    articles++;
-    const banners = [...source.matchAll(/<aside\b[^>]*data-banner="gerador"[\s\S]*?<\/aside>/g)];
-    assert.equal(banners.length, 1, dir.name);
-    assert.match(banners[0][0], /data-question-demo-banner/, dir.name);
-    assert.match(banners[0][0], /EXEMPLO DE QUESTÃO/, dir.name);
-    assert.match(banners[0][0], /data-slot="post-fim-gerador"/, dir.name);
-    assert.match(banners[0][0], /href="https:\/\/www\.geradordequestoes\.site\/"/, dir.name);
-    assert.doesNotMatch(banners[0][0], /class="mock"|Treine com questões novas, no estilo da sua banca/, dir.name);
+await check('product offers and sales routes are absent from the generated site', async () => {
+  const files = await htmlFiles(dist);
+  for (const route of pausedRoutes) assert.ok(!files.includes(route), route);
+  for (const file of files) {
+    const source = await readFile(path.join(dist, file), 'utf8');
+    assert.doesNotMatch(source, /data-banner=|quiz-cta|geradordequestoes\.site|pay\.hotmart\.com|href="\/apostila\/"/i, file);
   }
-  assert.ok(articles > 0, 'No articles were inspected');
-  console.log(`  ${articles} generated articles checked`);
+  await assert.rejects(readFile(path.join(dist, 'images/apostila-capa.webp')), { code: 'ENOENT' });
+  const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
+  assert.doesNotMatch(sitemap, /\/apostila\//);
+  const receipt = await readFile(path.join(dist, 'apostila/pagamento/index.html'), 'utf8');
+  assert.match(receipt, /name="robots" content="noindex, follow"/);
+  console.log(`  ${files.length} generated pages checked`);
 });
 
 const server = createServer(async (request, response) => {
@@ -158,24 +157,17 @@ try {
     await page.getByRole('button', { name: 'Ver mais posts', exact: true }).click();
     assert.ok(await page.locator('.post-item:visible').count() > before);
   });
-  for (const [route, slot] of [['/', 'home-gerador'], ['/regra-3-2-1/', 'post-fim-gerador']]) await check(`banner phone, link and single analytics events: ${slot}`, async () => {
-    await page.goto(`${base}${route}`);
-    const banner = page.locator('[data-banner="gerador"]');
-    assert.equal(await banner.count(), 1);
-    assert.equal(await banner.locator('.phone').count(), 1);
-    assert.equal(await banner.locator('[data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
-    await page.evaluate(() => {
-      window.__bannerEvents = [];
-      window.gtag = (...args) => window.__bannerEvents.push(args);
-    });
-    await banner.scrollIntoViewIfNeeded();
-    await page.waitForFunction(() => window.__bannerEvents.some((args) => args[1] === 'banner_view'));
-    await banner.locator('[data-banner-link]').evaluate((link) => link.addEventListener('click', (event) => event.preventDefault()));
-    await banner.locator('[data-banner-link]').click();
-    const events = await page.evaluate(() => window.__bannerEvents.filter((args) => args[2]?.banner_id === 'gerador'));
-    assert.equal(events.filter((args) => args[1] === 'banner_view').length, 1);
-    assert.equal(events.filter((args) => args[1] === 'banner_click').length, 1);
-    for (const event of events) assert.equal(event[2].slot, slot);
+  await check('free questions and the quiz score still work', async () => {
+    await page.goto(`${base}/questoes/`);
+    await page.locator('#q-options button').first().click();
+    assert.equal(await page.locator('#q-feedback').isVisible(), true);
+    assert.equal(await page.locator('#q-answered').innerText(), '1');
+
+    await page.goto(`${base}/simulado-vespera-concurso/`);
+    await page.locator('.q-opt').first().click();
+    await page.getByRole('button', { name: 'Ver resultado', exact: true }).click();
+    assert.equal(await page.locator('.quiz-result').isVisible(), true);
+    assert.equal(await page.locator('[data-stat="blank"]').innerText(), '39');
   });
   for (const width of [320, 390, 768, 1440]) for (const theme of ['dark', 'light']) await check(`reading and filter contrast ${width}px ${theme}`, async () => {
     await page.setViewportSize({ width, height: 900 });
@@ -184,9 +176,6 @@ try {
       await page.goto(`${base}${route}`);
       assert.equal(await page.locator('h1').count(), 1, route);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, route);
-      if (route === '/' || route === '/regra-3-2-1/') {
-        assert.equal(await page.locator('[data-banner="gerador"] .phone').isVisible(), true, route);
-      }
     }
     await page.goto(`${base}/blog/`);
     const contrast = await page.locator('.filter.active').evaluate((el) => {

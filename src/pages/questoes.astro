@@ -3,8 +3,6 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { categories } from '../data/categories';
 import { isPublished } from '../utils/posts';
-import { QUESTOES_URL, questoesAriaLabel } from '../data/questoes';
-import ApostilaBanner from '../components/ApostilaBanner.astro';
 
 // Todas as questões comentadas do site (src/data/quizzes/<slug>.json), reunidas em um treino único.
 // O leitor escolhe a matéria e responde um bloco de 10 questões sorteadas, com gabarito e link para a aula.
@@ -112,13 +110,6 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
     </div>
 
     <noscript><p class="nojs">Ative o JavaScript para resolver as questões neste treino.</p></noscript>
-
-    <p class="gerador">
-      Quer questões novas, por assunto e banca? Conheça o
-      <a href={QUESTOES_URL} target="_blank" rel="noopener" aria-label={`Conhecer o ${questoesAriaLabel}`}>Gerador de Questões com IA</a>.
-    </p>
-
-    <ApostilaBanner slot="questoes" />
   </div>
 
   <script type="application/json" id="q-data" set:html={payload}></script>
@@ -755,17 +746,6 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
 
   .page .done[hidden] {
     display: none;
-  }
-
-  .page .gerador {
-    margin: 40px 0 0;
-    font-size: 0.9375rem;
-    color: var(--ink-soft);
-  }
-
-  .page .gerador a {
-    color: var(--violet);
-    font-weight: 600;
   }
 
   .page .nojs {

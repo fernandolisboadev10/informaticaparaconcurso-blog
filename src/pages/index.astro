@@ -13,8 +13,6 @@ import CompactList from '../components/CompactList.astro';
 import { categories, categoryHref } from '../data/categories';
 import { isPublished, sortByActivity } from '../utils/posts';
 import { questionCount } from '../utils/quizzes';
-import ApostilaBanner from '../components/ApostilaBanner.astro';
-import QuestoesCTA from '../components/QuestoesCTA.astro';
 
 // Page 1 opens with the subjects of the exam syllabus; "Aulas recentes" and the /page/N/ pages
 // list every post, newest first, 9 per page.
@@ -82,12 +80,6 @@ const trilha = trilhaSlugs
         </aside>
       </section>
     </>
-  )}
-
-  {page === 1 && (
-    <section class="block promo-hero">
-      <ApostilaBanner slot="home-topo" variant="hero" />
-    </section>
   )}
 
   {page === 1 && trilha.length > 0 && (
@@ -171,12 +163,6 @@ const trilha = trilhaSlugs
       </div>
     </>
   )}
-
-  {page === 1 && (
-    <section class="block band-wrap">
-      <QuestoesCTA placement="home" />
-    </section>
-  )}
 </BaseLayout>
 
 
@@ -204,10 +190,6 @@ const trilha = trilhaSlugs
 
   .block {
     padding-block: 40px 24px;
-  }
-
-  .block.promo-hero {
-    padding-block: 8px 0;
   }
 
   .hero {
@@ -629,11 +611,6 @@ const trilha = trilhaSlugs
 
   .recent {
     padding-bottom: 8px;
-  }
-
-  /* Faixa final: gerador de questões. Azul profundo com destaques em azul neon. */
-  .band-wrap {
-    padding-block: 48px 72px;
   }
 
   @media (max-width: 640px) {

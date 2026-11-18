@@ -6,8 +6,6 @@ import AuthorBio from '../components/AuthorBio.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import Quiz from '../components/Quiz.astro';
-import QuestoesCTA from '../components/QuestoesCTA.astro';
-import ApostilaBanner from '../components/ApostilaBanner.astro';
 import type { Question } from '../components/Quiz.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
@@ -133,13 +131,7 @@ const breadcrumbSchema = {
           <slot />
         </div>
 
-        <template id="apostila-mid"><ApostilaBanner slot="post-meio" category={category} /></template>
-
         {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
-
-        <QuestoesCTA slug={Astro.props.slug} />
-
-        <ApostilaBanner slot="post-fim" category={category} />
 
         <AuthorBio />
 
@@ -152,16 +144,6 @@ const breadcrumbSchema = {
 </BaseLayout>
 
 <script>
-  // Banner no meio do artigo: entra antes do H2 central, só em textos com 4 ou mais seções (nunca no primeiro terço).
-  (function placeMidBanner() {
-    const tpl = document.getElementById('apostila-mid') as HTMLTemplateElement | null;
-    const h2s = document.querySelectorAll('.prose > h2');
-    if (!tpl || h2s.length < 4) return;
-    const target = h2s[Math.floor(h2s.length / 2)];
-    target.before(tpl.content.cloneNode(true));
-    document.dispatchEvent(new Event('banner:added'));
-  })();
-
   function legacyCopy(text: string): boolean {
     const textarea = document.createElement('textarea');
     textarea.value = text;

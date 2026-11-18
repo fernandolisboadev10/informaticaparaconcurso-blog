@@ -1,0 +1,521 @@
+diff --git a/scripts/check-ux.mjs b/scripts/check-ux.mjs
+index bf3dbe0..7196b10 100644
+--- a/scripts/check-ux.mjs
++++ b/scripts/check-ux.mjs
+@@ -13,6 +13,8 @@ const { chromium } = require(process.env.BLOG_PLAYWRIGHT_MODULE || 'playwright')
+ const root = process.cwd();
+ const dist = path.join(root, 'dist');
+ const screenshotDir = process.env.BLOG_SCREENSHOT_DIR;
++const pausedRoutes = ['apostila/index.html', 'apostila/teste-pagamento/index.html'];
++const normalizeLineEndings = (source) => source.replaceAll('\r\n', '\n');
+ let passed = 0;
+ const failures = [];
+ async function check(name, run) {
+@@ -22,30 +24,31 @@ async function check(name, run) {
+
+ await check('advertising, consent, deployment, content and routing sources preserved', async () => {
+   for (const file of ['astro.config.mjs', 'public/ads.txt', 'public/robots.txt', 'public/CNAME', 'src/components/CookieBanner.astro', '.github/workflows/deploy.yml']) {
+-    assert.equal(await readFile(path.join(root, file), 'utf8'), execFileSync('git', ['show', `HEAD:${file}`], { encoding: 'utf8' }), file);
++    assert.equal(normalizeLineEndings(await readFile(path.join(root, file), 'utf8')), execFileSync('git', ['show', `HEAD:${file}`], { encoding: 'utf8' }), file);
+   }
+   const before = execFileSync('git', ['show', 'HEAD:src/layouts/BaseLayout.astro'], { encoding: 'utf8' });
+   const after = await readFile(path.join(root, 'src/layouts/BaseLayout.astro'), 'utf8');
+   const consentScript = (source) => source.match(/<script is:inline data-ads=[\s\S]*?<\/script>/)?.[0];
+   assert.ok(consentScript(before));
+-  assert.equal(consentScript(after), consentScript(before));
++  assert.equal(consentScript(normalizeLineEndings(after)), consentScript(before));
+   for (const file of (await readdir(path.join(root, 'src/content/blog'))).filter((name) => name.endsWith('.md'))) {
+-    assert.equal(await readFile(path.join(root, 'src/content/blog', file), 'utf8'), execFileSync('git', ['show', `HEAD:src/content/blog/${file}`], { encoding: 'utf8' }), file);
++    assert.equal(normalizeLineEndings(await readFile(path.join(root, 'src/content/blog', file), 'utf8')), execFileSync('git', ['show', `HEAD:src/content/blog/${file}`], { encoding: 'utf8' }), file);
+   }
+ });
+
+-if (process.env.BLOG_BASELINE_DIST) await check('all generated routes and SEO metadata preserved except corrected blog description', async () => {
+-  async function htmlFiles(dir, prefix = '') {
+-    const list = [];
+-    for (const item of await readdir(path.join(dir, prefix), { withFileTypes: true })) {
+-      const name = path.join(prefix, item.name);
+-      if (item.isDirectory()) list.push(...await htmlFiles(dir, name));
+-      else if (name.endsWith('.html')) list.push(name);
+-    }
+-    return list.sort();
++async function htmlFiles(dir, prefix = '') {
++  const list = [];
++  for (const item of await readdir(path.join(dir, prefix), { withFileTypes: true })) {
++    const name = path.posix.join(prefix, item.name);
++    if (item.isDirectory()) list.push(...await htmlFiles(dir, name));
++    else if (name.endsWith('.html')) list.push(name);
+   }
++  return list.sort();
++}
++
++if (process.env.BLOG_BASELINE_DIST) await check('routes and SEO metadata preserved for the remaining pages', async () => {
+   const baseline = process.env.BLOG_BASELINE_DIST;
+-  const files = await htmlFiles(baseline);
++  const files = (await htmlFiles(baseline)).filter((file) => !pausedRoutes.includes(file));
+   assert.deepEqual(await htmlFiles(dist), files);
+   const metadata = (source, blog) => [...source.matchAll(/<meta\b[^>]*>|<link\b[^>]*rel="canonical"[^>]*>|<title>[\s\S]*?<\/title>/g)]
+     .map(([tag]) => tag).filter((tag) => !blog || !/(?:name="description"|property="og:description"|name="twitter:description")/.test(tag));
+@@ -54,33 +57,29 @@ if (process.env.BLOG_BASELINE_DIST) await check('all generated routes and SEO me
+     const after = await readFile(path.join(dist, file), 'utf8');
+     assert.deepEqual(metadata(after, file === 'blog/index.html'), metadata(before, file === 'blog/index.html'), file);
+   }
+-  for (const file of ['robots.txt', 'ads.txt', 'CNAME', 'rss.xml', 'sitemap-index.xml', 'sitemap-0.xml']) {
++  for (const file of ['robots.txt', 'ads.txt', 'CNAME', 'rss.xml', 'sitemap-index.xml']) {
+     assert.deepEqual(await readFile(path.join(dist, file)), await readFile(path.join(baseline, file)), file);
+   }
++  const sitemap = await readFile(path.join(baseline, 'sitemap-0.xml'), 'utf8');
++  assert.equal(await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8'), sitemap.replace(
++    /<url><loc>https:\/\/informaticaparaconcurso\.com\.br\/apostila\/<\/loc>[^<]*(?:<lastmod>[^<]*<\/lastmod>)?<\/url>/,
++    '',
++  ));
+ });
+
+-await check('phone banner replaces old model on home and every generated article', async () => {
+-  const home = await readFile(path.join(dist, 'index.html'), 'utf8');
+-  const homeBanners = [...home.matchAll(/<aside\b[^>]*data-banner="gerador"[\s\S]*?<\/aside>/g)];
+-  assert.equal(homeBanners.length, 1);
+-  assert.match(homeBanners[0][0], /data-slot="home-gerador"/);
+-  let articles = 0;
+-  for (const dir of await readdir(dist, { withFileTypes: true })) {
+-    if (!dir.isDirectory()) continue;
+-    let source;
+-    try { source = await readFile(path.join(dist, dir.name, 'index.html'), 'utf8'); } catch { continue; }
+-    if (!source.includes('"@type":"BlogPosting"')) continue;
+-    articles++;
+-    const banners = [...source.matchAll(/<aside\b[^>]*data-banner="gerador"[\s\S]*?<\/aside>/g)];
+-    assert.equal(banners.length, 1, dir.name);
+-    assert.match(banners[0][0], /data-question-demo-banner/, dir.name);
+-    assert.match(banners[0][0], /EXEMPLO DE QUESTÃO/, dir.name);
+-    assert.match(banners[0][0], /data-slot="post-fim-gerador"/, dir.name);
+-    assert.match(banners[0][0], /href="https:\/\/www\.geradordequestoes\.site\/"/, dir.name);
+-    assert.doesNotMatch(banners[0][0], /class="mock"|Treine com questões novas, no estilo da sua banca/, dir.name);
++await check('product offers and sales routes are absent from the generated site', async () => {
++  const files = await htmlFiles(dist);
++  for (const route of pausedRoutes) assert.ok(!files.includes(route), route);
++  for (const file of files) {
++    const source = await readFile(path.join(dist, file), 'utf8');
++    assert.doesNotMatch(source, /data-banner=|quiz-cta|geradordequestoes\.site|pay\.hotmart\.com|href="\/apostila\/"/i, file);
+   }
+-  assert.ok(articles > 0, 'No articles were inspected');
+-  console.log(`  ${articles} generated articles checked`);
++  await assert.rejects(readFile(path.join(dist, 'images/apostila-capa.webp')), { code: 'ENOENT' });
++  const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
++  assert.doesNotMatch(sitemap, /\/apostila\//);
++  const receipt = await readFile(path.join(dist, 'apostila/pagamento/index.html'), 'utf8');
++  assert.match(receipt, /name="robots" content="noindex, follow"/);
++  console.log(`  ${files.length} generated pages checked`);
+ });
+
+ const server = createServer(async (request, response) => {
+@@ -158,24 +157,17 @@ try {
+     await page.getByRole('button', { name: 'Ver mais posts', exact: true }).click();
+     assert.ok(await page.locator('.post-item:visible').count() > before);
+   });
+-  for (const [route, slot] of [['/', 'home-gerador'], ['/regra-3-2-1/', 'post-fim-gerador']]) await check(`banner phone, link and single analytics events: ${slot}`, async () => {
+-    await page.goto(`${base}${route}`);
+-    const banner = page.locator('[data-banner="gerador"]');
+-    assert.equal(await banner.count(), 1);
+-    assert.equal(await banner.locator('.phone').count(), 1);
+-    assert.equal(await banner.locator('[data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
+-    await page.evaluate(() => {
+-      window.__bannerEvents = [];
+-      window.gtag = (...args) => window.__bannerEvents.push(args);
+-    });
+-    await banner.scrollIntoViewIfNeeded();
+-    await page.waitForFunction(() => window.__bannerEvents.some((args) => args[1] === 'banner_view'));
+-    await banner.locator('[data-banner-link]').evaluate((link) => link.addEventListener('click', (event) => event.preventDefault()));
+-    await banner.locator('[data-banner-link]').click();
+-    const events = await page.evaluate(() => window.__bannerEvents.filter((args) => args[2]?.banner_id === 'gerador'));
+-    assert.equal(events.filter((args) => args[1] === 'banner_view').length, 1);
+-    assert.equal(events.filter((args) => args[1] === 'banner_click').length, 1);
+-    for (const event of events) assert.equal(event[2].slot, slot);
++  await check('free questions and the quiz score still work', async () => {
++    await page.goto(`${base}/questoes/`);
++    await page.locator('#q-options button').first().click();
++    assert.equal(await page.locator('#q-feedback').isVisible(), true);
++    assert.equal(await page.locator('#q-answered').innerText(), '1');
++
++    await page.goto(`${base}/simulado-vespera-concurso/`);
++    await page.locator('.q-opt').first().click();
++    await page.getByRole('button', { name: 'Ver resultado', exact: true }).click();
++    assert.equal(await page.locator('.quiz-result').isVisible(), true);
++    assert.equal(await page.locator('[data-stat="blank"]').innerText(), '39');
+   });
+   for (const width of [320, 390, 768, 1440]) for (const theme of ['dark', 'light']) await check(`reading and filter contrast ${width}px ${theme}`, async () => {
+     await page.setViewportSize({ width, height: 900 });
+@@ -184,9 +176,6 @@ try {
+       await page.goto(`${base}${route}`);
+       assert.equal(await page.locator('h1').count(), 1, route);
+       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, route);
+-      if (route === '/' || route === '/regra-3-2-1/') {
+-        assert.equal(await page.locator('[data-banner="gerador"] .phone').isVisible(), true, route);
+-      }
+     }
+     await page.goto(`${base}/blog/`);
+     const contrast = await page.locator('.filter.active').evaluate((el) => {
+diff --git a/src/components/Footer.astro b/src/components/Footer.astro
+index 812430f..5717128 100644
+--- a/src/components/Footer.astro
++++ b/src/components/Footer.astro
+@@ -1,7 +1,5 @@
+ ---
+ import { categories as categoryList } from "../data/categories";
+-import { APOSTILA_URL } from "../data/apostila";
+-import { QUESTOES_URL, questoesAriaLabel } from "../data/questoes";
+
+ const categories = [
+   { label: "Início", href: "/" },
+@@ -44,14 +42,6 @@ const quickLinks = [
+       </ul>
+     </div>
+
+-    <div>
+-      <p class="col-title">Materiais</p>
+-      <ul>
+-        <li><a href={APOSTILA_URL}>Apostila Cebraspe</a></li>
+-        <li><a href={QUESTOES_URL} target="_blank" rel="noopener" aria-label={`Conhecer o ${questoesAriaLabel}`}>Gerador de Questões</a></li>
+-      </ul>
+-    </div>
+-
+   </div>
+
+   <div class="bottom">
+@@ -79,7 +69,7 @@ const quickLinks = [
+
+   .grid {
+     display: grid;
+-    grid-template-columns: 1.5fr 0.9fr 1.5fr 1fr;
++    grid-template-columns: 1.5fr 0.9fr 1.5fr;
+     gap: 32px;
+     padding-block: 36px 28px;
+   }
+diff --git a/src/components/Quiz.astro b/src/components/Quiz.astro
+index 3d5acc6..bf2108f 100644
+--- a/src/components/Quiz.astro
++++ b/src/components/Quiz.astro
+@@ -1,6 +1,4 @@
+ ---
+-import { QUESTOES_URL } from '../data/questoes';
+-
+ export interface Question {
+   banca?: string;
+   module?: string;
+@@ -20,7 +18,6 @@ interface Props {
+ }
+
+ const { questions, title = 'Questões comentadas', mode = 'instant' } = Astro.props;
+-const ctaHref = QUESTOES_URL;
+ // 'live': como 'final' (nota e desempenho por módulo ao clicar em “Ver resultado”), mas o gabarito comentado
+ // de cada questão aparece na hora em que o aluno marca a alternativa.
+ const live = mode === 'live';
+@@ -112,7 +109,6 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
+         <p class="quiz-focus"></p>
+       </>
+     )}
+-    <a class="quiz-cta" href={ctaHref} target="_blank" rel="noopener">Gerar mais questões no Gerador de Questões</a>
+   </div>
+
+   {final && !live && (
+@@ -299,8 +295,6 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
+         focusEl.textContent = weakName
+           ? `Por onde recomeçar a revisão: ${weakName}.`
+           : 'Você acertou todos os módulos. Mantenha o ritmo e descanse bem.';
+-        const ctaLink = quiz.querySelector<HTMLAnchorElement>('.quiz-cta');
+-        if (ctaLink && weakName) ctaLink.textContent = `Gerar mais questões de ${weakName}`;
+
+         result.hidden = false;
+         if (gabarito) gabarito.hidden = false;
+@@ -664,21 +658,6 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
+     color: var(--ink-soft);
+   }
+
+-  .quiz-cta {
+-    display: inline-block;
+-    margin-top: 16px;
+-    padding: 10px 20px;
+-    border-radius: 24px;
+-    background: #0a6268;
+-    color: #fff;
+-    font-weight: 700;
+-    text-decoration: none;
+-  }
+-
+-  .quiz-cta:hover {
+-    background: #0d7d85;
+-  }
+-
+   .quiz-result {
+     scroll-margin-top: 120px;
+   }
+diff --git a/src/layouts/PostLayout.astro b/src/layouts/PostLayout.astro
+index 028af3e..a7baece 100644
+--- a/src/layouts/PostLayout.astro
++++ b/src/layouts/PostLayout.astro
+@@ -6,8 +6,6 @@ import AuthorBio from '../components/AuthorBio.astro';
+ import ShareButtons from '../components/ShareButtons.astro';
+ import RelatedPosts from '../components/RelatedPosts.astro';
+ import Quiz from '../components/Quiz.astro';
+-import QuestoesCTA from '../components/QuestoesCTA.astro';
+-import ApostilaBanner from '../components/ApostilaBanner.astro';
+ import type { Question } from '../components/Quiz.astro';
+ import TableOfContents from '../components/TableOfContents.astro';
+ import ReadingProgress from '../components/ReadingProgress.astro';
+@@ -133,14 +131,8 @@ const breadcrumbSchema = {
+           <slot />
+         </div>
+
+-        <template id="apostila-mid"><ApostilaBanner slot="post-meio" category={category} /></template>
+-
+         {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
+
+-        <QuestoesCTA slug={Astro.props.slug} />
+-
+-        <ApostilaBanner slot="post-fim" category={category} />
+-
+         <AuthorBio />
+
+         <ShareButtons title={title} variant="end" />
+@@ -152,16 +144,6 @@ const breadcrumbSchema = {
+ </BaseLayout>
+
+ <script>
+-  // Banner no meio do artigo: entra antes do H2 central, só em textos com 4 ou mais seções (nunca no primeiro terço).
+-  (function placeMidBanner() {
+-    const tpl = document.getElementById('apostila-mid') as HTMLTemplateElement | null;
+-    const h2s = document.querySelectorAll('.prose > h2');
+-    if (!tpl || h2s.length < 4) return;
+-    const target = h2s[Math.floor(h2s.length / 2)];
+-    target.before(tpl.content.cloneNode(true));
+-    document.dispatchEvent(new Event('banner:added'));
+-  })();
+-
+   function legacyCopy(text: string): boolean {
+     const textarea = document.createElement('textarea');
+     textarea.value = text;
+diff --git a/src/pages/404.astro b/src/pages/404.astro
+index 6b23dd8..06c253b 100644
+--- a/src/pages/404.astro
++++ b/src/pages/404.astro
+@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
+ import { isPublished } from '../utils/posts';
+ import BaseLayout from '../layouts/BaseLayout.astro';
+ import PostCard from '../components/PostCard.astro';
+-import ApostilaBanner from '../components/ApostilaBanner.astro';
+
+ const posts = (await getCollection('blog', isPublished))
+   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+@@ -35,7 +34,6 @@ const posts = (await getCollection('blog', isPublished))
+         />
+       ))}
+     </div>
+-    <ApostilaBanner slot="404" />
+   </section>
+ </BaseLayout>
+
+diff --git a/src/pages/apostila/pagamento.astro b/src/pages/apostila/pagamento.astro
+index f301572..eb2774e 100644
+--- a/src/pages/apostila/pagamento.astro
++++ b/src/pages/apostila/pagamento.astro
+@@ -15,7 +15,6 @@ import { PAYMENTS_API_URL } from '../../data/payments';
+     <button type="button" data-check-payment hidden>Consultar novamente</button>
+     <noscript><p>Ative o JavaScript para consultar o pedido nesta aba. Se precisar, entre em contato pelo e-mail de suporte.</p></noscript>
+     <p class="support">Precisa de ajuda? <a href="mailto:fernandolisboa.dev@gmail.com">fernandolisboa.dev@gmail.com</a></p>
+-    <a href="/apostila/">Voltar à apostila</a>
+   </section>
+ </BaseLayout>
+
+@@ -48,8 +47,8 @@ import { PAYMENTS_API_URL } from '../../data/payments';
+       pending: ['Aguardando pagamento', 'Assim que o Mercado Pago confirmar o pagamento, a situação será atualizada aqui.'],
+       in_process: ['Pagamento em análise', 'O Mercado Pago ainda está analisando o pagamento. Você pode consultar novamente em instantes.'],
+       authorized: ['Pagamento em processamento', 'O pagamento ainda não foi concluído. Aguarde a confirmação do Mercado Pago.'],
+-      rejected: ['Pagamento não aprovado', 'O pagamento não foi aprovado. Volte à página da apostila para iniciar uma nova tentativa.'],
+-      cancelled: ['Pagamento cancelado', 'Este pagamento foi cancelado. Se desejar, você pode iniciar uma nova compra.'],
++      rejected: ['Pagamento não aprovado', 'O pagamento não foi aprovado. Se precisar de ajuda, entre em contato com o suporte.'],
++      cancelled: ['Pagamento cancelado', 'Este pagamento foi cancelado. Se precisar de ajuda, entre em contato com o suporte.'],
+       refunded: ['Pagamento com reembolso', 'Há um reembolso registrado neste pagamento. Entre em contato com o suporte em caso de dúvida.'],
+       charged_back: ['Pagamento em contestação', 'Há uma contestação registrada. Entre em contato com o suporte para obter ajuda.'],
+       in_mediation: ['Pagamento em mediação', 'Este pagamento está em mediação no Mercado Pago. Entre em contato com o suporte para obter ajuda.'],
+diff --git a/src/pages/category/[slug].astro b/src/pages/category/[slug].astro
+index 23c12ff..8aed2c6 100644
+--- a/src/pages/category/[slug].astro
++++ b/src/pages/category/[slug].astro
+@@ -2,7 +2,6 @@
+ import { getCollection } from 'astro:content';
+ import BaseLayout from '../../layouts/BaseLayout.astro';
+ import PostCard from '../../components/PostCard.astro';
+-import ApostilaBanner from '../../components/ApostilaBanner.astro';
+ import { categories } from '../../data/categories';
+ import { isPublished, sortByActivity } from '../../utils/posts';
+
+@@ -15,7 +14,6 @@ export async function getStaticPaths() {
+ }
+
+ const PAGE_SIZE = 6;
+-const BANNER_AFTER = 3; // banner da apostila depois do 3º cartão
+ const { category, posts } = Astro.props;
+
+ const schema = {
+@@ -52,23 +50,18 @@ const schema = {
+
+     <div class="posts">
+       {posts.map((post, i) => (
+-        <>
+         <div class={i < PAGE_SIZE ? 'item' : 'item extra'}>
+-        <PostCard
+-          slug={post.id}
+-          title={post.data.title}
+-          description={post.data.description}
+-          category={post.data.category}
+-          date={post.data.date}
+-          readingTime={post.data.readingTime}
+-          image={post.data.image}
+-          imageAlt={post.data.imageAlt}
+-        />
++          <PostCard
++            slug={post.id}
++            title={post.data.title}
++            description={post.data.description}
++            category={post.data.category}
++            date={post.data.date}
++            readingTime={post.data.readingTime}
++            image={post.data.image}
++            imageAlt={post.data.imageAlt}
++          />
+         </div>
+-        {i === BANNER_AFTER - 1 && posts.length > BANNER_AFTER && (
+-          <div class="promo"><ApostilaBanner slot="categoria" category={category.name} /></div>
+-        )}
+-        </>
+       ))}
+     </div>
+     <div class="more-wrap">
+@@ -102,10 +95,6 @@ const schema = {
+     display: contents;
+   }
+
+-  .promo {
+-    grid-column: 1 / -1;
+-  }
+-
+   .item.extra:not(.show) {
+     display: none;
+   }
+diff --git a/src/pages/index.astro b/src/pages/index.astro
+index b650f69..9353474 100644
+--- a/src/pages/index.astro
++++ b/src/pages/index.astro
+@@ -13,8 +13,6 @@ import CompactList from '../components/CompactList.astro';
+ import { categories, categoryHref } from '../data/categories';
+ import { isPublished, sortByActivity } from '../utils/posts';
+ import { questionCount } from '../utils/quizzes';
+-import ApostilaBanner from '../components/ApostilaBanner.astro';
+-import QuestoesCTA from '../components/QuestoesCTA.astro';
+
+ // Page 1 opens with the subjects of the exam syllabus; "Aulas recentes" and the /page/N/ pages
+ // list every post, newest first, 9 per page.
+@@ -84,12 +82,6 @@ const trilha = trilhaSlugs
+     </>
+   )}
+
+-  {page === 1 && (
+-    <section class="block promo-hero">
+-      <ApostilaBanner slot="home-topo" variant="hero" />
+-    </section>
+-  )}
+-
+   {page === 1 && trilha.length > 0 && (
+       <section class="block" id="trilha">
+         <div class="block-head">
+@@ -171,12 +163,6 @@ const trilha = trilhaSlugs
+       </div>
+     </>
+   )}
+-
+-  {page === 1 && (
+-    <section class="block band-wrap">
+-      <QuestoesCTA placement="home" />
+-    </section>
+-  )}
+ </BaseLayout>
+
+
+@@ -206,10 +192,6 @@ const trilha = trilhaSlugs
+     padding-block: 40px 24px;
+   }
+
+-  .block.promo-hero {
+-    padding-block: 8px 0;
+-  }
+-
+   .hero {
+     padding-block: 64px 48px;
+     display: grid;
+@@ -631,11 +613,6 @@ const trilha = trilhaSlugs
+     padding-bottom: 8px;
+   }
+
+-  /* Faixa final: gerador de questões. Azul profundo com destaques em azul neon. */
+-  .band-wrap {
+-    padding-block: 48px 72px;
+-  }
+-
+   @media (max-width: 640px) {
+     .hero {
+       padding-block: 40px 32px;
+diff --git a/src/pages/questoes.astro b/src/pages/questoes.astro
+index 03e74c1..6f97e58 100644
+--- a/src/pages/questoes.astro
++++ b/src/pages/questoes.astro
+@@ -3,8 +3,6 @@ import { getCollection } from 'astro:content';
+ import BaseLayout from '../layouts/BaseLayout.astro';
+ import { categories } from '../data/categories';
+ import { isPublished } from '../utils/posts';
+-import { QUESTOES_URL, questoesAriaLabel } from '../data/questoes';
+-import ApostilaBanner from '../components/ApostilaBanner.astro';
+
+ // Todas as questões comentadas do site (src/data/quizzes/<slug>.json), reunidas em um treino único.
+ // O leitor escolhe a matéria e responde um bloco de 10 questões sorteadas, com gabarito e link para a aula.
+@@ -112,13 +110,6 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
+     </div>
+
+     <noscript><p class="nojs">Ative o JavaScript para resolver as questões neste treino.</p></noscript>
+-
+-    <p class="gerador">
+-      Quer questões novas, por assunto e banca? Conheça o
+-      <a href={QUESTOES_URL} target="_blank" rel="noopener" aria-label={`Conhecer o ${questoesAriaLabel}`}>Gerador de Questões com IA</a>.
+-    </p>
+-
+-    <ApostilaBanner slot="questoes" />
+   </div>
+
+   <script type="application/json" id="q-data" set:html={payload}></script>
+@@ -757,17 +748,6 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
+     display: none;
+   }
+
+-  .page .gerador {
+-    margin: 40px 0 0;
+-    font-size: 0.9375rem;
+-    color: var(--ink-soft);
+-  }
+-
+-  .page .gerador a {
+-    color: var(--violet);
+-    font-weight: 600;
+-  }
+-
+   .page .nojs {
+     color: var(--ink-soft);
+   }
+diff --git a/tsconfig.json b/tsconfig.json
+index 8bf91d3..51c0324 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -1,5 +1,5 @@
+ {
+   "extends": "astro/tsconfigs/strict",
+   "include": [".astro/types.d.ts", "**/*"],
+-  "exclude": ["dist"]
++  "exclude": ["dist", "monetização"]
+ }
