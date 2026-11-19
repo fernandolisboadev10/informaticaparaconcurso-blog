@@ -102,7 +102,6 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
   }
   .study-offer.apostila {
     --offer-accent: #ffda44;
-    --offer-button-hover: #ffe36b;
     display: grid;
     grid-template-columns: minmax(42px, clamp(52px, 12vw, 100px)) minmax(0, 1fr);
   }
@@ -145,7 +144,7 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
     margin-top: 12px;
     padding: 8px 12px;
     border-radius: 8px;
-    background: var(--offer-accent);
+    background: var(--offer-button-fill, var(--offer-accent));
     color: var(--offer-button-ink);
     font-size: .875rem;
     font-weight: var(--offer-button-weight);
@@ -167,12 +166,10 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
   .study-offer.rail .offer-copy strong { font-size: 1.16rem; }
   .study-offer.rail .offer-button { width: 100%; justify-content: space-between; }
   .study-offer .offer-button.neon-cta {
+    --offer-button-fill: #b9f500;
+    --offer-button-hover: #d0ff4b;
     --offer-button-ink: #000;
     --offer-button-weight: 800;
-  }
-  .study-offer:not(.apostila) .offer-button.neon-cta {
-    --offer-accent: #b9f500;
-    --offer-button-hover: #d0ff4b;
   }
   .study-offer.anchor {
     margin: 0;
@@ -219,7 +216,7 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
     .offer-in-view .offer-button.neon-cta { animation: offer-neon-pulse 1.5s ease-in-out 2; }
     @keyframes offer-neon-pulse {
       0%, 100% { box-shadow: 0 0 0 0 transparent; }
-      50% { box-shadow: 0 0 12px 2px color-mix(in srgb, var(--offer-accent) 54%, transparent); }
+      50% { box-shadow: 0 0 12px 2px color-mix(in srgb, var(--offer-button-fill) 54%, transparent); }
     }
     @keyframes offer-appear { from { opacity: .72; translate: 0 8px; } }
     @keyframes offer-shine {

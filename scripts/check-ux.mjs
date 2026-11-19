@@ -288,8 +288,8 @@ try {
     await page.setViewportSize({ width: 1600, height: 900 });
     await page.goto(`${base}/`);
     const apostila = page.locator('[data-slot="home-trilha"]');
-    assert.deepEqual(await apostila.locator('[data-banner-link]').evaluate(buttonColors), ['rgb(255, 218, 68)', 'rgb(0, 0, 0)', '800']);
-    if (screenshotDir) await apostila.screenshot({ path: path.join(screenshotDir, 'apostila-amarelo-natural.png') });
+    assert.deepEqual(await apostila.locator('[data-banner-link]').evaluate(buttonColors), ['rgb(185, 245, 0)', 'rgb(0, 0, 0)', '800']);
+    if (screenshotDir) await apostila.screenshot({ path: path.join(screenshotDir, 'apostila-cta.png') });
     assert.ok(await page.locator('[data-slot="home-lateral-esquerda"]').isVisible());
     assert.ok(await page.locator('[data-slot="home-lateral-direita"]').isVisible());
     assert.ok(await page.locator('[data-slot="home-apos-aulas"] .offer-preview').isVisible());
