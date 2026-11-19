@@ -171,6 +171,14 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
     --offer-button-ink: #000;
     --offer-button-weight: 800;
   }
+  .study-offer.apostila .offer-button.neon-cta {
+    --offer-button-fill: var(--offer-accent);
+    --offer-button-hover: #ffe36b;
+  }
+  .study-offer.rail:not(.apostila) .offer-button.neon-cta {
+    --offer-button-fill: #55dbff;
+    --offer-button-hover: #9bebff;
+  }
   .study-offer.anchor {
     margin: 0;
     padding: 10px 46px 10px 14px;

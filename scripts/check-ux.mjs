@@ -235,7 +235,7 @@ try {
     assert.deepEqual(await railCta.evaluate((el) => {
       const style = getComputedStyle(el);
       return [style.backgroundColor, style.color, style.fontWeight, style.animationName];
-    }), ['rgb(185, 245, 0)', 'rgb(0, 0, 0)', '800', 'none']);
+    }), ['rgb(85, 219, 255)', 'rgb(0, 0, 0)', '800', 'none']);
     await phone.getByRole('button', { name: 'Certo', exact: true }).click();
     assert.match(await phone.locator('.demo-feedback').innerText(), /Você acertou/);
     await phone.getByRole('button', { name: 'Gerar exemplo' }).click();
@@ -289,7 +289,7 @@ try {
     await page.setViewportSize({ width: 1600, height: 900 });
     await page.goto(`${base}/`);
     const apostila = page.locator('[data-slot="home-trilha"]');
-    assert.deepEqual(await apostila.locator('[data-banner-link]').evaluate(buttonColors), ['rgb(185, 245, 0)', 'rgb(0, 0, 0)', '800']);
+    assert.deepEqual(await apostila.locator('[data-banner-link]').evaluate(buttonColors), ['rgb(255, 218, 68)', 'rgb(0, 0, 0)', '800']);
     if (screenshotDir) await apostila.screenshot({ path: path.join(screenshotDir, 'apostila-cta.png') });
     assert.ok(await page.locator('[data-slot="home-lateral-esquerda"]').isVisible());
     assert.ok(await page.locator('[data-slot="home-lateral-direita"]').isVisible());
