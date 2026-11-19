@@ -78,6 +78,7 @@ const examples = [
       const observer = new IntersectionObserver(([entry]) => {
         if (!entry?.isIntersecting) return;
         observer.disconnect();
+        phone.setAttribute('data-phone-entered', '');
         if (!phone.matches(':focus-within') && feedback.hidden && index === 0) generate();
       }, { threshold: 0.35 });
       observer.observe(phone);
@@ -87,6 +88,8 @@ const examples = [
 
 <style>
   .phone {
+    --phone-neon: #55dbff;
+    --phone-white: #fff;
     position: relative;
     display: flex;
     width: 100%;
@@ -95,11 +98,10 @@ const examples = [
     min-height: clamp(336px, calc(100svh - 228px), 385px);
     margin: 12px auto 2px;
     padding: 32px 6px 15px;
-    border: 2px solid #636d69;
+    border: 2px solid #647586;
     border-radius: 25px;
-    background: linear-gradient(145deg, #202823 0%, #0b100e 34%, #050806 88%);
-    box-shadow: inset 1px 1px 1px #b6c3b073, inset -2px -2px 0 #010302, 3px 1px 0 #333b36, 5px 2px 0 #101612, 8px 12px 17px #0008;
-    transform: perspective(850px) rotateY(-10deg) rotateX(3deg);
+    background: linear-gradient(145deg, #263849 0%, #0b1420 34%, #060a11 88%);
+    box-shadow: inset 1px 1px 1px #b6d1e873, inset -2px -2px 0 #03060b, 3px 1px 0 #334757, 5px 2px 0 #101b27, 8px 12px 17px #0008;
   }
   .phone::before, .phone::after {
     content: '';
@@ -113,9 +115,9 @@ const examples = [
     translate: -50% 0;
     width: 52px;
     height: 13px;
-    background: radial-gradient(circle at 78% 50%, #283e52 0 2px, transparent 3px), #020403;
+    background: radial-gradient(circle at 78% 50%, #314c61 0 2px, transparent 3px), #020407;
   }
-  .phone::after { right: -5px; top: 79px; width: 3px; height: 31px; background: #89938b; }
+  .phone::after { right: -5px; top: 79px; width: 3px; height: 31px; background: #8597a9; }
   .screen {
     position: relative;
     display: flex;
@@ -125,8 +127,8 @@ const examples = [
     gap: 7px;
     padding: 10px 8px 14px;
     border-radius: 14px;
-    background: radial-gradient(ellipse at top right, #344b12a0, transparent 52%), #111611;
-    color: #f6f8ff;
+    background: radial-gradient(ellipse at top right, #123e5da0, transparent 58%), #0b1521;
+    color: var(--phone-white);
     font: 400 .76rem/1.4 var(--font-body);
   }
   .screen::after {
@@ -138,34 +140,39 @@ const examples = [
     width: 43px;
     height: 3px;
     border-radius: 8px;
-    background: #7a867d;
+    background: #8195a6;
   }
   .screen p { margin: 0; }
-  .demo-status { color: #b9f500; font-weight: 700; }
+  .demo-status { color: var(--phone-neon); font-weight: 700; }
   .demo-question { min-height: 3.8em; }
   .demo-options { display: grid; gap: 5px; }
   button {
     min-height: 31px;
     padding: 4px 7px;
-    border: 1px solid #4d6053;
+    border: 1px solid #425c73;
     border-radius: 7px;
     color: inherit;
-    background: #0a110c;
+    background: #0a1523;
     font: 650 .72rem/1.3 var(--font-body);
     cursor: pointer;
   }
-  button:hover, button:focus-visible { border-color: #b9f500; }
-  button:focus-visible { outline: 2px solid #b9f500; outline-offset: 2px; }
-  button:disabled { cursor: default; color: #c8d3ca; }
-  button[data-result="correct"] { color: #d4ffad; border-color: #95d239; background: #202e10; }
-  .demo-feedback { color: #c8d3ca; }
-  .demo-next { margin-top: auto; color: #b9f500; }
+  button:hover, button:focus-visible { border-color: var(--phone-neon); }
+  button:focus-visible { outline: 2px solid var(--phone-neon); outline-offset: 2px; }
+  button:disabled { cursor: default; }
+  button[data-result="correct"] { color: var(--phone-white); border-color: var(--phone-neon); background: #17394f; }
+  .demo-next { margin-top: auto; color: var(--phone-neon); }
   @media (prefers-reduced-motion: no-preference) {
+    .phone[data-phone-entered] { animation: phone-rise .62s cubic-bezier(.2,.75,.27,1); }
     [data-generating] .demo-question {
-      background: linear-gradient(105deg, #22311c 20%, #485e26 50%, #22311c 80%);
+      background: linear-gradient(105deg, #142d46 20%, #2b6484 50%, #142d46 80%);
       background-size: 220% 100%;
       border-radius: 5px;
       animation: phone-generating .54s ease-in-out both;
+    }
+    @keyframes phone-rise {
+      0% { opacity: .6; translate: 0 12px; }
+      75% { opacity: 1; translate: 0 -2px; }
+      100% { translate: 0 0; }
     }
     @keyframes phone-generating { from { background-position: 100% 0; } to { background-position: 0 0; } }
   }

@@ -227,7 +227,9 @@ try {
     assert.ok(await phone.isVisible());
     const phoneBounds = await phone.boundingBox();
     assert.ok(phoneBounds && phoneBounds.height / phoneBounds.width >= 1.65);
-    assert.notEqual(await phone.evaluate((el) => getComputedStyle(el).transform), 'none');
+    assert.equal(await phone.evaluate((el) => getComputedStyle(el).transform), 'none');
+    assert.equal(await phone.locator('.demo-status').evaluate((el) => getComputedStyle(el).color), 'rgb(85, 219, 255)');
+    assert.equal(await phone.evaluate((el) => getComputedStyle(el).animationName), 'none');
     await phone.getByRole('button', { name: 'Certo', exact: true }).click();
     assert.match(await phone.locator('.demo-feedback').innerText(), /Você acertou/);
     await phone.getByRole('button', { name: 'Gerar exemplo' }).click();
@@ -241,6 +243,11 @@ try {
       await page.screenshot({ path: path.join(screenshotDir, 'laterais-desktop.png') });
       await phone.screenshot({ path: path.join(screenshotDir, 'celular-3d.png') });
     }
+    await page.emulateMedia({ reducedMotion: 'no-preference' });
+    await page.reload();
+    await right.locator('[data-phone-entered]').waitFor({ state: 'visible' });
+    assert.match(await phone.evaluate((el) => getComputedStyle(el).animationName), /phone-rise/);
+    await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.setViewportSize({ width: 390, height: 844 });
     assert.equal(await left.isVisible(), false);
     assert.equal(await right.isVisible(), false);
