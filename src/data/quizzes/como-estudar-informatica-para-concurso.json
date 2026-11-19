@@ -1,0 +1,104 @@
+{
+ "questions": [
+  {
+   "type": "mc",
+   "text": "Um edital cita Windows 11 e LibreOffice. Ao preparar a planilha de estudos, qual decisão segue o método apresentado no guia?",
+   "options": [
+    "Estudar apenas versões anteriores do Windows, porque as bancas repetem questões.",
+    "Dividir igualmente o tempo entre todos os softwares do mercado.",
+    "Registrar os tópicos e as versões do edital, marcar o que já domina e considerar o peso da disciplina.",
+    "Usar somente questões de um cargo diferente, mesmo havendo questões da própria banca.",
+    "Deixar a leitura do conteúdo programático para depois da primeira revisão."
+   ],
+   "answer": "C",
+   "comment": "O edital delimita os tópicos e as versões. Anotar o nível de domínio e o peso da matéria ajuda a distribuir o tempo de estudo."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Para criar uma cópia de um documento aberto com outro nome e preservar o arquivo original, pode-se usar o comando Salvar como e escolher um novo nome.",
+   "answer": "C",
+   "comment": "Salvar como permite escolher nome e local para a nova cópia. O arquivo original permanece no local anterior."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "No Windows, ao excluir um arquivo de um disco local com Shift+Delete, o arquivo vai para a Lixeira.",
+   "answer": "E",
+   "comment": "Shift+Delete exclui o item sem enviá-lo para a Lixeira. Isso elimina a opção de restaurá-lo por ela."
+  },
+  {
+   "type": "mc",
+   "text": "Ao copiar para baixo uma fórmula no Excel, é preciso manter a referência à célula B2 fixa. Como escrevê-la?",
+   "options": [
+    "$B$2",
+    "B2",
+    "$B2",
+    "B$3",
+    "B3"
+   ],
+   "answer": "A",
+   "comment": "O cifrão fixa o elemento que o segue. Em $B$2, tanto a coluna B quanto a linha 2 ficam fixas."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Um endereço HTTPS com conexão válida garante que o site é legítimo e que as ofertas exibidas nele são confiáveis.",
+   "answer": "E",
+   "comment": "O HTTPS protege o tráfego entre o navegador e o domínio acessado. Um site fraudulento também pode usar HTTPS."
+  },
+  {
+   "type": "mc",
+   "text": "Uma pessoa recebe uma mensagem que imita a comunicação do banco e pede que informe a senha em uma página falsa. Como se chama a fraude descrita?",
+   "options": [
+    "Pharming",
+    "Ransomware",
+    "Sincronização",
+    "Phishing",
+    "Cópia incremental"
+   ],
+   "answer": "D",
+   "comment": "No phishing, a mensagem procura convencer a vítima a divulgar dados. No pharming, a vítima pode ser redirecionada mesmo ao informar o endereço correto."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "O SMTP é usado para enviar e-mail, e o IMAP permite sincronizar mensagens e pastas com o servidor em diferentes dispositivos.",
+   "answer": "C",
+   "comment": "O SMTP transporta mensagens. O IMAP é usado pelo cliente para acessar e sincronizar a caixa armazenada no servidor."
+  },
+  {
+   "type": "mc",
+   "text": "Uma candidata acertou por palpite uma questão sobre Lixeira e errou outra sobre o mesmo assunto. Como ela deve aproveitar essas duas questões?",
+   "options": [
+    "Registrar só o número da questão errada.",
+    "Refazer apenas a questão que acertou.",
+    "Pular os comentários e memorizar as letras do gabarito.",
+    "Deixar o tema para a última semana, pois já acertou pelo menos uma.",
+    "Ler os dois comentários, anotar o motivo do erro e a regra correta e marcar a data para revisão."
+   ],
+   "answer": "E",
+   "comment": "O acerto por palpite merece revisão. O caderno de erros registra assunto, causa do erro, regra correta e data para ajudar a planejar o próximo treino."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em uma rotina de revisão espaçada, revisar um assunto no dia seguinte, depois de uma semana e depois de um mês é um exemplo de intervalos crescentes.",
+   "answer": "C",
+   "comment": "Distribuir as revisões ao longo do tempo ajuda a recuperar o conteúdo antes que seja esquecido."
+  },
+  {
+   "type": "mc",
+   "text": "Você aprendeu em teoria que Ctrl+Z desfaz a última ação. Qual exercício aplica o método proposto no guia?",
+   "options": [
+    "Copiar o atalho para o resumo e adiar o uso no programa.",
+    "Editar um texto, aplicar Ctrl+Z e conferir o resultado no documento antes de resolver questões sobre atalhos.",
+    "Praticar apenas a abertura do programa com o mouse.",
+    "Ir direto para um simulado completo sem testar o atalho.",
+    "Revisar apenas o nome das teclas que compõem o atalho."
+   ],
+   "answer": "B",
+   "comment": "O método combina teoria curta, prática no computador e questões. Ver a edição ser desfeita ajuda a lembrar o comportamento do comando."
+  }
+ ]
+}

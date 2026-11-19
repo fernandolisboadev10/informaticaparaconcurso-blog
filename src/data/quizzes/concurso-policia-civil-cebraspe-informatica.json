@@ -1,0 +1,144 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "mc",
+   "text": "Uma Polícia Civil oferece um portal interno a servidores e libera uma área desse ambiente, com autenticação, para peritos externos credenciados. Como se chama o ambiente disponibilizado a esses parceiros?",
+   "options": [
+    "Rede pública",
+    "Rede local sem fio",
+    "Extranet",
+    "Intranet de acesso exclusivo a servidores",
+    "Sítio de busca"
+   ],
+   "answer": "C",
+   "comment": "A extranet estende parte dos recursos internos a terceiros autorizados. O acesso permanece restrito."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "mc",
+   "text": "No Windows, uma pasta contém um arquivo e, na área de trabalho, há um atalho para ele. Ao excluir apenas o atalho, o que acontece com o arquivo?",
+   "options": [
+    "É movido para a Lixeira junto com o atalho.",
+    "Permanece na pasta original.",
+    "É convertido em um novo atalho na pasta original.",
+    "É restaurado automaticamente para a área de trabalho.",
+    "Só pode ser aberto depois de criar um novo atalho."
+   ],
+   "answer": "B",
+   "comment": "O atalho é uma referência. Excluí-lo remove a referência sem apagar o arquivo que ela apontava."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "mc",
+   "text": "Uma planilha do LibreOffice será salva no formato nativo padrão do aplicativo. Qual é a associação correta?",
+   "options": [
+    "Writer e .odt",
+    "Calc e .xlsx",
+    "Impress e .odp",
+    "Writer e .ods",
+    "Calc e .ods"
+   ],
+   "answer": "E",
+   "comment": "O Calc é o editor de planilhas e usa .ods como formato nativo padrão. Writer edita textos e Impress cria apresentações."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "mc",
+   "text": "Uma servidora quer enviar mensagens pelo cliente de e-mail e consultar, no celular e no computador, a mesma caixa com as mensagens sincronizadas no servidor. Qual par de protocolos atende a essas funções, respectivamente?",
+   "options": [
+    "SMTP e IMAP",
+    "IMAP e SMTP",
+    "SMTP e DNS",
+    "POP3 e SMTP",
+    "IMAP e HTTPS"
+   ],
+   "answer": "A",
+   "comment": "O SMTP é usado no envio. O IMAP permite consultar e sincronizar as mensagens e pastas mantidas no servidor."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "mc",
+   "text": "Ao fechar todas as janelas de uma sessão de navegação privada, qual efeito se espera no navegador?",
+   "options": [
+    "O provedor deixa de receber dados sobre a conexão.",
+    "Os arquivos baixados durante a sessão são apagados do computador.",
+    "Os serviços visitados perdem seus registros de acesso.",
+    "O histórico local da sessão deixa de ficar salvo no navegador.",
+    "O endereço IP da conexão é substituído por um endereço anônimo."
+   ],
+   "answer": "D",
+   "comment": "A navegação privada evita guardar localmente o histórico daquela sessão. Sites, provedor e administrador da rede ainda podem ter visibilidade conforme a conexão."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "mc",
+   "text": "Para comparar os esquemas de endereçamento IP, uma equipe registra o tamanho de cada versão. Qual registro está correto?",
+   "options": [
+    "IPv4 e IPv6 usam 32 bits.",
+    "IPv4 usa 32 bits e IPv6 usa 128 bits.",
+    "IPv4 usa 128 bits e IPv6 usa 32 bits.",
+    "IPv4 usa 48 bits e IPv6 usa 64 bits.",
+    "IPv4 e IPv6 usam 128 bits."
+   ],
+   "answer": "B",
+   "comment": "Um endereço IPv4 tem 32 bits e um IPv6 tem 128 bits. A escrita em grupos decimais ou hexadecimais é uma forma de representar esses bits."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "mc",
+   "text": "Uma equipe usa um editor on-line hospedado e mantido por um fornecedor. Os membros entram pelo navegador e editam juntos, sem administrar servidores ou instalar o editor. Qual modelo descreve esse serviço?",
+   "options": [
+    "IaaS",
+    "PaaS",
+    "SaaS",
+    "Hospedagem local",
+    "Armazenamento de objetos sem aplicativo"
+   ],
+   "answer": "C",
+   "comment": "No SaaS, o fornecedor oferece o software pronto para uso. Em IaaS e PaaS, o cliente recebe recursos de infraestrutura ou uma plataforma para executar suas aplicações."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "mc",
+   "text": "No exame de uma evidência digital, a equipe calcula o hash do arquivo ao recebê-lo e volta a calculá-lo após a cópia. Que propriedade a comparação verifica diretamente?",
+   "options": [
+    "Confidencialidade do arquivo",
+    "Disponibilidade do servidor",
+    "Identidade do autor original",
+    "Autorização legal para acesso ao arquivo",
+    "Integridade do conteúdo comparado"
+   ],
+   "answer": "E",
+   "comment": "Comparar os hashes calculados com o mesmo algoritmo ajuda a detectar mudanças no conteúdo. O hash, por si só, não identifica o autor nem documenta toda a cadeia de custódia."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "mc",
+   "text": "Um sistema aprende a classificar mensagens usando exemplos que uma equipe já marcou como legítimos ou fraudulentos. Qual tipo de aprendizado está descrito?",
+   "options": [
+    "Supervisionado",
+    "Não supervisionado",
+    "Por reforço",
+    "Agrupamento sem rótulos",
+    "Busca por palavras com regras fixas"
+   ],
+   "answer": "A",
+   "comment": "Os rótulos indicam a resposta esperada para os exemplos de treinamento, característica do aprendizado supervisionado."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "mc",
+   "text": "Em uma carteira Bitcoin em que o dono controla suas próprias chaves, qual recurso permite autorizar o gasto dos fundos?",
+   "options": [
+    "O endereço público da carteira.",
+    "O nome cadastrado em uma corretora.",
+    "O identificador da última transação recebida.",
+    "A chave privada associada aos fundos.",
+    "O hash de um bloco recente."
+   ],
+   "answer": "D",
+   "comment": "A chave privada permite produzir a assinatura que autoriza a transação. A rede pode verificar a assinatura sem receber a chave privada."
+  }
+ ]
+}

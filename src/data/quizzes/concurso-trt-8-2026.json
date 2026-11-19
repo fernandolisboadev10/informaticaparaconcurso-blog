@@ -1,0 +1,144 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "No Explorador de Arquivos do Windows, um servidor precisa abrir, pelo teclado, a pasta que contém a pasta atual. Qual atalho deve usar?",
+   "options": [
+    "Alt+Seta para cima",
+    "Alt+Seta para a esquerda",
+    "Ctrl+L",
+    "Ctrl+N",
+    "F2"
+   ],
+   "answer": "A",
+   "comment": "Alt+Seta para cima abre a pasta pai. Alt+Seta para a esquerda volta ao local anterior no histórico, que pode ser outra pasta."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Um servidor excluiu um arquivo no Windows e encontrou o item na Lixeira. Qual comando devolve o arquivo à pasta de origem?",
+   "options": [
+    "Esvaziar Lixeira",
+    "Excluir permanentemente",
+    "Restaurar",
+    "Fixar no Acesso Rápido",
+    "Criar atalho"
+   ],
+   "answer": "C",
+   "comment": "Restaurar devolve o item ao local de origem. Esvaziar a Lixeira elimina a cópia que estava disponível para restauração."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Os computadores e as impressoras de um único andar de um prédio estão conectados em uma rede que ocupa somente esse local. Quanto à abrangência, como ela é classificada?",
+   "options": [
+    "PAN, por conectar vários setores de uma cidade.",
+    "MAN, por estar em um prédio.",
+    "WAN, por permitir troca de arquivos.",
+    "LAN, por atender a uma área local.",
+    "WAN, por conter uma impressora de rede."
+   ],
+   "answer": "D",
+   "comment": "Uma LAN cobre uma área limitada, como uma sala, um andar ou um prédio. MAN e WAN cobrem áreas geográficas maiores."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Uma organização usa tecnologias da Web em um portal de acesso restrito aos seus servidores. Qual termo descreve a rede privada a que pertence esse portal?",
+   "options": [
+    "Internet",
+    "Intranet",
+    "Extranet",
+    "Sítio de busca",
+    "Rede metropolitana"
+   ],
+   "answer": "B",
+   "comment": "A intranet oferece serviços de rede a um público interno. Uma extranet abre determinados recursos a usuários externos autorizados."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Para pesquisar na Web pela expressão exata política de backup, qual consulta deve ser usada?",
+   "options": [
+    "política OR backup",
+    "política -backup",
+    "site:backup política",
+    "filetype:backup política",
+    "\"política de backup\""
+   ],
+   "answer": "E",
+   "comment": "As aspas orientam o buscador a procurar a expressão como uma sequência de palavras. Os operadores das demais consultas têm outras funções, como excluir um termo ou restringir o domínio."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Um usuário renomeia relatório.txt para relatório.pdf no Explorador de Arquivos, sem usar um conversor. Qual é o resultado?",
+   "options": [
+    "O sistema transforma o conteúdo em PDF.",
+    "O texto vira imagem e passa a abrir em qualquer leitor de PDF.",
+    "O nome muda, mas o conteúdo permanece no formato em que foi gravado.",
+    "O sistema cria automaticamente uma segunda cópia convertida.",
+    "O conteúdo é apagado para que o novo formato possa ser usado."
+   ],
+   "answer": "C",
+   "comment": "A extensão ajuda a indicar o formato e a escolher o programa padrão. Renomear a extensão não regrava o conteúdo no formato PDF."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Uma ferramenta deve permitir conexões de rede conforme regras, como aceitar ou bloquear determinado tráfego de entrada. Qual ferramenta tem essa função?",
+   "options": [
+    "Firewall",
+    "Antispyware",
+    "Editor de texto",
+    "Compactador de arquivos",
+    "Gerenciador de senhas"
+   ],
+   "answer": "A",
+   "comment": "O firewall avalia o tráfego segundo regras. Um antivírus ou antispyware tem outra função, ligada à detecção de programas maliciosos."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Um programa malicioso cifra arquivos e exige pagamento para tentar liberar o acesso. Como se classifica essa ameaça?",
+   "options": [
+    "Worm",
+    "Spyware",
+    "Phishing",
+    "Ransomware",
+    "Adware"
+   ],
+   "answer": "D",
+   "comment": "O ransomware bloqueia o acesso a dados ou sistemas e exige resgate. O enunciado descreve o bloqueio dos arquivos por criptografia."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Ao compartilhar um arquivo do Documentos Google pelo Drive, um servidor quer que uma colega sugira mudanças sem editar diretamente o texto. Qual função deve atribuir?",
+   "options": [
+    "Editor",
+    "Comentarista",
+    "Leitor",
+    "Proprietário",
+    "Acesso restrito sem adicionar a colega"
+   ],
+   "answer": "B",
+   "comment": "A função Comentarista permite fazer comentários e sugestões. Editor dá permissão para editar diretamente o conteúdo."
+  },
+  {
+   "banca": "Estilo FCC",
+   "type": "mc",
+   "text": "Uma pasta sincronizada contém a única cópia de trabalho de um documento. Quando o arquivo é apagado no computador, a exclusão se propaga ao serviço na nuvem. Qual medida protege melhor contra essa situação?",
+   "options": [
+    "Sincronizar a mesma pasta em mais um dispositivo usando a mesma conta.",
+    "Alterar a extensão dos arquivos antes de sincronizar.",
+    "Compartilhar o arquivo sincronizado com um colega como Leitor.",
+    "Desativar notificações de sincronização.",
+    "Manter um backup independente da pasta sincronizada, com cópias que possam ser restauradas."
+   ],
+   "answer": "E",
+   "comment": "A sincronização replica mudanças, inclusive exclusões. Um backup independente conserva cópias recuperáveis mesmo quando a exclusão se propaga."
+  }
+ ]
+}
