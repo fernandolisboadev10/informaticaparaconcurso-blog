@@ -147,6 +147,11 @@ const breadcrumbSchema = {
       <div class="post-body">
         <div class="prose">
           <slot />
+          {!showQuizOffer && offer?.product !== 'apostila' && (
+            <div class="mobile-apostila">
+              <StudyOffer product="apostila" placement="artigo-apostila-mobile" />
+            </div>
+          )}
         </div>
 
         {!showQuizOffer && (
@@ -302,6 +307,7 @@ const breadcrumbSchema = {
     }
     .post-shell > article { grid-area: 1 / 2; min-width: 0; }
     .post-rail { display: block; position: sticky; top: 96px; align-self: start; }
+    .mobile-apostila { display: none; }
     .rail-left { grid-area: 1 / 1; }
     .rail-right { grid-area: 1 / 3; }
   }

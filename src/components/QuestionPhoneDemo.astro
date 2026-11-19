@@ -1,0 +1,148 @@
+---
+const examples = [
+  { text: 'No Linux, chmod 755 dá ao dono permissão de escrita.', correct: true, comment: 'O primeiro 7 vale 4 + 2 + 1, ou seja, leitura, escrita e execução.' },
+  { text: 'O modo anônimo esconde sua navegação dos sites que você visita.', correct: false, comment: 'O modo anônimo limita o que fica salvo no navegador. Os sites ainda recebem sua conexão.' },
+  { text: 'No Excel, $A$1 mantém a coluna e a linha fixas ao copiar uma fórmula.', correct: true, comment: 'O cifrão antes da coluna e da linha indica uma referência absoluta.' },
+];
+---
+<div class="phone" data-question-phone data-examples={JSON.stringify(examples)}>
+  <div class="screen">
+    <p class="demo-status" role="status">Questão de exemplo</p>
+    <p class="demo-question">{examples[0].text}</p>
+    <div class="demo-options" role="group" aria-label="Responder questão de exemplo">
+      <button type="button" data-answer="true">Certo</button>
+      <button type="button" data-answer="false">Errado</button>
+    </div>
+    <p class="demo-feedback" role="status" hidden></p>
+    <button class="demo-next" type="button">Gerar exemplo</button>
+  </div>
+</div>
+
+<script>
+  interface Example { text: string; correct: boolean; comment: string; }
+
+  document.querySelectorAll<HTMLElement>('[data-question-phone]').forEach((phone) => {
+    const examples: Example[] = JSON.parse(phone.dataset.examples ?? '[]');
+    const status = phone.querySelector<HTMLElement>('.demo-status')!;
+    const question = phone.querySelector<HTMLElement>('.demo-question')!;
+    const feedback = phone.querySelector<HTMLElement>('.demo-feedback')!;
+    const next = phone.querySelector<HTMLButtonElement>('.demo-next')!;
+    const options = Array.from(phone.querySelectorAll<HTMLButtonElement>('[data-answer]'));
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let index = 0;
+
+    function showExample() {
+      status.textContent = 'Questão de exemplo';
+      question.textContent = examples[index].text;
+      feedback.hidden = true;
+      for (const option of options) {
+        option.disabled = false;
+        option.removeAttribute('data-result');
+      }
+      next.removeAttribute('aria-disabled');
+      phone.removeAttribute('data-generating');
+    }
+
+    function generate() {
+      if (phone.hasAttribute('data-generating')) return;
+      feedback.hidden = true;
+      if (motion.matches) { showExample(); return; }
+      phone.setAttribute('data-generating', '');
+      question.textContent = '';
+      status.textContent = 'Gerando questão…';
+      next.setAttribute('aria-disabled', 'true');
+      for (const option of options) option.disabled = true;
+      // Keep the loading state brief and skip it entirely with reduced motion.
+      window.setTimeout(showExample, 540);
+    }
+
+    for (const option of options) {
+      option.addEventListener('click', () => {
+        const example = examples[index];
+        const correct = (option.dataset.answer === 'true') === example.correct;
+        feedback.textContent = `${correct ? 'Você acertou.' : 'Resposta incorreta.'} ${example.comment}`;
+        feedback.hidden = false;
+        for (const choice of options) {
+          choice.disabled = true;
+          if ((choice.dataset.answer === 'true') === example.correct) choice.dataset.result = 'correct';
+        }
+        next.focus({ preventScroll: true });
+      });
+    }
+    next.addEventListener('click', () => {
+      if (phone.hasAttribute('data-generating')) return;
+      index = (index + 1) % examples.length;
+      generate();
+    });
+    if (!motion.matches && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(([entry]) => {
+        if (!entry?.isIntersecting) return;
+        observer.disconnect();
+        if (!phone.matches(':focus-within') && feedback.hidden && index === 0) generate();
+      }, { threshold: 0.35 });
+      observer.observe(phone);
+    }
+  });
+</script>
+
+<style>
+  .phone {
+    position: relative;
+    width: 100%;
+    max-width: 206px;
+    min-width: 0;
+    margin: 10px auto 0;
+    padding: 19px 5px 12px;
+    border: 2px solid #53657c;
+    border-radius: 19px;
+    background: #070f1e;
+    box-shadow: inset 0 0 0 2px #030815, 0 10px 17px #0005;
+  }
+  .phone::before, .phone::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    border-radius: 8px;
+  }
+  .phone::before { top: 6px; width: 30px; height: 6px; background: #273952; }
+  .phone::after { bottom: 5px; width: 31px; height: 3px; background: #617592; }
+  .screen {
+    display: grid;
+    gap: 7px;
+    padding: 8px;
+    border-radius: 11px;
+    background: #152541;
+    color: #f6f8ff;
+    font: 400 .76rem/1.4 var(--font-body);
+  }
+  .screen p { margin: 0; }
+  .demo-status { color: #9bddff; font-weight: 700; }
+  .demo-question { min-height: 3.8em; }
+  .demo-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+  button {
+    min-height: 28px;
+    padding: 4px 2px;
+    border: 1px solid #59708c;
+    border-radius: 5px;
+    color: inherit;
+    background: #0e1b30;
+    font: 650 .72rem/1.3 var(--font-body);
+    cursor: pointer;
+  }
+  button:hover, button:focus-visible { border-color: #9bddff; }
+  button:focus-visible { outline: 2px solid #9bddff; outline-offset: 2px; }
+  button:disabled { cursor: default; color: #bfcee0; }
+  button[data-result="correct"] { color: #c1ffd6; border-color: #83dca3; }
+  .demo-feedback { color: #c4d1e4; }
+  .demo-next { color: #9bddff; }
+  @media (prefers-reduced-motion: no-preference) {
+    [data-generating] .demo-question {
+      background: linear-gradient(105deg, #203554 20%, #406388 50%, #203554 80%);
+      background-size: 220% 100%;
+      border-radius: 5px;
+      animation: phone-generating .54s ease-in-out both;
+    }
+    @keyframes phone-generating { from { background-position: 100% 0; } to { background-position: 0 0; } }
+  }
+</style>

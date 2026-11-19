@@ -220,6 +220,18 @@ try {
     assert.ok(article && leftRail && rightRail);
     assert.ok(leftRail.x + leftRail.width < article.x);
     assert.ok(rightRail.x > article.x + article.width);
+    const mobileApostila = page.locator('.prose [data-slot="artigo-apostila-mobile"]');
+    assert.equal(await mobileApostila.isVisible(), false);
+    const phone = right.locator('[data-question-phone]');
+    assert.ok(await phone.isVisible());
+    await phone.getByRole('button', { name: 'Certo', exact: true }).click();
+    assert.match(await phone.locator('.demo-feedback').innerText(), /Você acertou/);
+    await phone.getByRole('button', { name: 'Gerar exemplo' }).click();
+    assert.match(await phone.locator('.demo-question').innerText(), /modo anônimo/);
+    assert.equal(await phone.locator('.demo-feedback').isVisible(), false);
+    await phone.getByRole('button', { name: 'Errado', exact: true }).click();
+    assert.match(await phone.locator('.demo-feedback').innerText(), /Você acertou/);
+    assert.equal(await right.locator('[data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
     if (screenshotDir) {
       await mkdir(screenshotDir, { recursive: true });
       await page.screenshot({ path: path.join(screenshotDir, 'laterais-desktop.png') });
@@ -227,6 +239,8 @@ try {
     await page.setViewportSize({ width: 390, height: 844 });
     assert.equal(await left.isVisible(), false);
     assert.equal(await right.isVisible(), false);
+    assert.ok(await mobileApostila.isVisible());
+    assert.equal(await mobileApostila.locator('[data-banner-link]').getAttribute('href'), '/apostila/#amostra');
 
     const anchor = page.locator('#generator-anchor');
     assert.equal(await anchor.isVisible(), false);

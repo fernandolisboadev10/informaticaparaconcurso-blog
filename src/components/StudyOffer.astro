@@ -2,6 +2,7 @@
 import { APOSTILA_COVER, APOSTILA_PRICE, APOSTILA_QUESTIONS, APOSTILA_URL } from '../data/apostila';
 import { QUESTOES_URL } from '../data/questoes';
 import SalesArrow from './SalesArrow.astro';
+import QuestionPhoneDemo from './QuestionPhoneDemo.astro';
 
 interface Props {
   product: 'apostila' | 'gerador';
@@ -13,6 +14,7 @@ interface Props {
 
 const { product, placement, label, compact = false, format = 'banner' } = Astro.props;
 const isApostila = product === 'apostila';
+const showPhone = !isApostila && format === 'rail';
 const productName = isApostila ? 'Apostila Cebraspe' : 'Gerador de Questões';
 const title = isApostila ? `${APOSTILA_QUESTIONS} questões comentadas da Cebraspe` : 'Monte um treino para sua banca';
 const detail = isApostila
@@ -31,8 +33,12 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
     )}
     <div class="offer-copy">
       <span class="offer-product">{productName}</span>
-      <strong>{title}</strong>
-      <p>{detail}</p>
+      {showPhone ? <QuestionPhoneDemo /> : (
+        <>
+          <strong>{title}</strong>
+          <p>{detail}</p>
+        </>
+      )}
       <a class="offer-button" href={href} data-banner-link>
         <span>{label ?? (isApostila ? 'Ver amostra da apostila' : 'Continuar no Gerador')}</span>
         <SalesArrow />
@@ -108,7 +114,7 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
     color: var(--offer-title);
     font: 750 clamp(1.1rem, 2.5vw, 1.6rem)/1.2 var(--font-display);
   }
-  .study-offer .offer-copy p, .study-offer .offer-preview p {
+  .study-offer .offer-copy > p, .study-offer .offer-preview p {
     margin: 6px 0 0;
     color: var(--offer-muted);
     font: 400 .875rem/1.5 var(--font-body);
