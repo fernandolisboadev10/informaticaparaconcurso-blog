@@ -6,13 +6,13 @@ import AuthorBio from '../components/AuthorBio.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import Quiz from '../components/Quiz.astro';
-import type { Question } from '../components/Quiz.astro';
+import StudyOffer from '../components/StudyOffer.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import type { MarkdownHeading } from 'astro';
 import { categoryHref } from '../data/categories';
 import { categoryColor } from '../utils/categoryColor';
-import { questionCount } from '../utils/quizzes';
+import { getArticleQuiz } from '../utils/quizzes';
 
 interface Props {
   title: string;
@@ -34,8 +34,15 @@ interface Props {
 const { title, seoTitle, description, category, date, updated, related, tags, readingTime, image, imageAlt, prev, next, headings = [] } = Astro.props;
 
 // Questões interativas ficam em src/data/quizzes/<slug>.json e são exibidas no final do artigo.
-const quizzes = import.meta.glob<{ default: { questions: Question[]; mode?: 'instant' | 'final'; title?: string } }>('../data/quizzes/*.json', { eager: true });
-const quiz = quizzes[`../data/quizzes/${Astro.props.slug}.json`]?.default;
+const quiz = getArticleQuiz(Astro.props.slug);
+const articleOffers: Record<string, { product: 'apostila' | 'gerador'; before: string; label?: string }> = {
+  'cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica': { product: 'apostila', before: 'Estratégia de estudo' },
+  'nocoes-de-informatica': { product: 'gerador', before: 'Os 5 blocos', label: 'Praticar mais questões de Informática' },
+  'sistema-windows-7-10-11-para-concursos': { product: 'gerador', before: 'Windows 11', label: 'Praticar mais questões de Windows' },
+};
+const offer = articleOffers[Astro.props.slug];
+const offerBefore = offer && headings.find((heading) => heading.depth === 2 && heading.text.startsWith(offer.before))?.slug;
+const showQuizOffer = Astro.props.slug.startsWith('simulado-');
 
 const formattedDate = date.toLocaleDateString('pt-BR', {
   day: '2-digit',
@@ -113,7 +120,7 @@ const breadcrumbSchema = {
           <span><time datetime={date.toISOString()}>{formattedDate}</time></span>
           {showUpdated && <span>Atualizado em <time datetime={updated!.toISOString()}>{formattedUpdated}</time></span>}
           {readingTime && <span>{readingTime} de leitura</span>}
-          {questionCount(Astro.props.slug) > 0 && <a class="qchip" href="#questoes">{questionCount(Astro.props.slug)} questões</a>}
+          {quiz && quiz.questions.length > 0 && <a class="qchip" href="#questoes">{quiz.questions.length} questões</a>}
         </p>
         <ShareButtons title={title} />
 
@@ -131,7 +138,17 @@ const breadcrumbSchema = {
           <slot />
         </div>
 
-        {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
+        {offer && (
+          <div data-article-offer={offerBefore}>
+            <StudyOffer product={offer.product} placement="artigo-entre-secoes" label={offer.label} />
+          </div>
+        )}
+
+        {quiz && (
+          <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title}>
+            {showQuizOffer && <StudyOffer slot="result-offer" product="gerador" placement="simulado-resultado" />}
+          </Quiz>
+        )}
 
         <AuthorBio />
 
@@ -144,6 +161,10 @@ const breadcrumbSchema = {
 </BaseLayout>
 
 <script>
+  const articleOffer = document.querySelector<HTMLElement>('[data-article-offer]');
+  const offerBefore = articleOffer?.dataset.articleOffer;
+  if (articleOffer && offerBefore) document.getElementById(offerBefore)?.before(articleOffer);
+
   function legacyCopy(text: string): boolean {
     const textarea = document.createElement('textarea');
     textarea.value = text;

@@ -3,7 +3,7 @@ title: "Excel para Concursos: o que realmente cai na prova"
 description: "Aprenda Excel para concursos públicos com aula objetiva, funções mais cobradas, atalhos, referências e 10 questões ao final do artigo"
 category: "Office"
 date: 2026-07-30T19:10:23-03:00
-updated: 2026-10-05T10:57:29Z
+updated: 2026-11-18T23:01:00-03:00
 readingTime: "12 min"
 image: "./images/excel.webp"
 imageAlt: "Excel"
@@ -14,7 +14,7 @@ tags: ["Excel", "Microsoft Office", "Planilhas", "Fórmulas", "Noções de Infor
 
 O Excel organiza dados, executa cálculos e facilita a análise de informações em planilhas eletrônicas. Justamente por isso, ele aparece com tanta frequência em concursos públicos: reúne, em um único programa, funções matemáticas, ferramentas de produtividade e recursos que o dia a dia da administração pública exige constantemente.
 
-Além disso, as bancas costumam cobrar tanto a teoria da interface quanto o uso prático de células, fórmulas, funções, referências e recursos como ordenação, filtro e formatação condicional. Por isso, dominar o Excel ajuda você a acertar tanto questões teóricas quanto itens que simulam situações reais de trabalho. Nesta aula, você vai revisar, um de cada vez, os pontos que mais caem em prova. Depois, aplique tudo na [revisão de fórmulas do Excel](/formulas-do-excel/), com 15 questões comentadas.
+Além disso, as bancas costumam cobrar tanto a teoria da interface quanto o uso prático de células, fórmulas, funções, referências e recursos como ordenação, filtro e formatação condicional. Por isso, dominar o Excel ajuda você a acertar tanto questões teóricas quanto itens que simulam situações reais de trabalho. Nesta aula, você vai revisar, um de cada vez, os pontos que mais caem em prova. Depois, aplique tudo na [revisão de fórmulas do Excel](/formulas-do-excel/), com 10 questões comentadas.
 
 ## O que é o Excel, afinal?
 

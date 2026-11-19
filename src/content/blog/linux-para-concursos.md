@@ -1,7 +1,7 @@
 ---
 title: "Linux para Concursos: o Guia Completo do que Cai na Prova"
 seoTitle: "Linux para Concursos: o que Cai na Prova da Cebraspe"
-description: "Entenda por que a Cebraspe cobra tanto Linux, veja kernel, distribuições e comandos essenciais e treine com 12 questões de Certo ou Errado."
+description: "Entenda por que a Cebraspe cobra tanto Linux, veja kernel, distribuições e comandos essenciais e treine com 10 questões de Certo ou Errado."
 category: "Sistemas"
 date: 2026-09-26T12:22:06-03:00
 updated: 2026-11-05T22:06:00-03:00

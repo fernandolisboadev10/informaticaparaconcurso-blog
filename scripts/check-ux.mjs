@@ -13,7 +13,8 @@ const { chromium } = require(process.env.BLOG_PLAYWRIGHT_MODULE || 'playwright')
 const root = process.cwd();
 const dist = path.join(root, 'dist');
 const screenshotDir = process.env.BLOG_SCREENSHOT_DIR;
-const pausedRoutes = ['apostila/index.html', 'apostila/teste-pagamento/index.html'];
+const salesRoute = 'apostila/index.html';
+const testCheckoutRoute = 'apostila/teste-pagamento/index.html';
 const normalizeLineEndings = (source) => source.replaceAll('\r\n', '\n');
 let passed = 0;
 const failures = [];
@@ -22,7 +23,7 @@ async function check(name, run) {
   catch (error) { failures.push(name); console.error(`FAIL ${name}: ${error.message}`); }
 }
 
-await check('advertising, consent, deployment, content and routing sources preserved', async () => {
+await check('advertising, consent, deployment and routing sources preserved', async () => {
   for (const file of ['astro.config.mjs', 'public/ads.txt', 'public/robots.txt', 'public/CNAME', 'src/components/CookieBanner.astro', '.github/workflows/deploy.yml']) {
     assert.equal(normalizeLineEndings(await readFile(path.join(root, file), 'utf8')), execFileSync('git', ['show', `HEAD:${file}`], { encoding: 'utf8' }), file);
   }
@@ -31,9 +32,6 @@ await check('advertising, consent, deployment, content and routing sources prese
   const consentScript = (source) => source.match(/<script is:inline data-ads=[\s\S]*?<\/script>/)?.[0];
   assert.ok(consentScript(before));
   assert.equal(consentScript(normalizeLineEndings(after)), consentScript(before));
-  for (const file of (await readdir(path.join(root, 'src/content/blog'))).filter((name) => name.endsWith('.md'))) {
-    assert.equal(normalizeLineEndings(await readFile(path.join(root, 'src/content/blog', file), 'utf8')), execFileSync('git', ['show', `HEAD:src/content/blog/${file}`], { encoding: 'utf8' }), file);
-  }
 });
 
 async function htmlFiles(dir, prefix = '') {
@@ -48,35 +46,45 @@ async function htmlFiles(dir, prefix = '') {
 
 if (process.env.BLOG_BASELINE_DIST) await check('routes and SEO metadata preserved for the remaining pages', async () => {
   const baseline = process.env.BLOG_BASELINE_DIST;
-  const files = (await htmlFiles(baseline)).filter((file) => !pausedRoutes.includes(file));
-  assert.deepEqual(await htmlFiles(dist), files);
+  const editorialRoutes = (file) => file !== salesRoute && file !== testCheckoutRoute;
+  const files = (await htmlFiles(baseline)).filter(editorialRoutes);
+  assert.deepEqual((await htmlFiles(dist)).filter(editorialRoutes), files);
   const metadata = (source, blog) => [...source.matchAll(/<meta\b[^>]*>|<link\b[^>]*rel="canonical"[^>]*>|<title>[\s\S]*?<\/title>/g)]
     .map(([tag]) => tag).filter((tag) => !blog || !/(?:name="description"|property="og:description"|name="twitter:description")/.test(tag));
   for (const file of files) {
     const before = await readFile(path.join(baseline, file), 'utf8');
     const after = await readFile(path.join(dist, file), 'utf8');
-    assert.deepEqual(metadata(after, file === 'blog/index.html'), metadata(before, file === 'blog/index.html'), file);
+    const descriptionChanged = ['blog/index.html', 'questoes/index.html', 'formulas-do-excel/index.html', 'linux-para-concursos/index.html'].includes(file);
+    assert.deepEqual(metadata(after, descriptionChanged), metadata(before, descriptionChanged), file);
   }
   for (const file of ['robots.txt', 'ads.txt', 'CNAME', 'rss.xml', 'sitemap-index.xml']) {
     assert.deepEqual(await readFile(path.join(dist, file)), await readFile(path.join(baseline, file)), file);
   }
-  const sitemap = await readFile(path.join(baseline, 'sitemap-0.xml'), 'utf8');
-  assert.equal(await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8'), sitemap.replace(
+  const withoutSales = (sitemap) => sitemap.replace(
     /<url><loc>https:\/\/informaticaparaconcurso\.com\.br\/apostila\/<\/loc>[^<]*(?:<lastmod>[^<]*<\/lastmod>)?<\/url>/,
     '',
-  ));
+  );
+  assert.equal(withoutSales(await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8')), withoutSales(await readFile(path.join(baseline, 'sitemap-0.xml'), 'utf8')));
 });
 
-await check('product offers and sales routes are absent from the generated site', async () => {
+await check('sales page and offers are present in the selected placements', async () => {
   const files = await htmlFiles(dist);
-  for (const route of pausedRoutes) assert.ok(!files.includes(route), route);
-  for (const file of files) {
-    const source = await readFile(path.join(dist, file), 'utf8');
-    assert.doesNotMatch(source, /data-banner=|quiz-cta|geradordequestoes\.site|pay\.hotmart\.com|href="\/apostila\/"/i, file);
+  assert.ok(!files.includes(testCheckoutRoute));
+  const sales = await readFile(path.join(dist, salesRoute), 'utf8');
+  assert.match(sales, /id="amostra"/);
+  assert.match(sales, /https:\/\/pay\.hotmart\.com\//);
+  for (const [file, placement] of [
+    ['index.html', 'home-trilha'],
+    ['index.html', 'home-simulados'],
+    ['cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/index.html', 'artigo-entre-secoes'],
+    ['simulado-cebraspe-informatica/index.html', 'simulado-resultado'],
+    ['questoes/index.html', 'questoes-resultado'],
+  ]) {
+    assert.ok((await readFile(path.join(dist, file), 'utf8')).includes(`data-slot="${placement}"`), file);
   }
-  await assert.rejects(readFile(path.join(dist, 'images/apostila-capa.webp')), { code: 'ENOENT' });
+  assert.doesNotMatch(await readFile(path.join(dist, '404.html'), 'utf8'), /data-banner=/);
   const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
-  assert.doesNotMatch(sitemap, /\/apostila\//);
+  assert.match(sitemap, /\/apostila\/<\/loc>/);
   const receipt = await readFile(path.join(dist, 'apostila/pagamento/index.html'), 'utf8');
   assert.match(receipt, /name="robots" content="noindex, follow"/);
   console.log(`  ${files.length} generated pages checked`);
@@ -158,21 +166,46 @@ try {
     assert.ok(await page.locator('.post-item:visible').count() > before);
   });
   await check('free questions and the quiz score still work', async () => {
-    await page.goto(`${base}/questoes/`);
+    await page.goto(`${base}/questoes/?materia=Hardware`);
+    assert.equal(await page.locator('#q-total').innerText(), '5');
+    assert.equal(await page.locator('#q-grid button').count(), 5);
+    assert.equal(await page.locator('#btn-restart').isVisible(), false);
     await page.locator('#q-options button').first().click();
     assert.equal(await page.locator('#q-feedback').isVisible(), true);
     assert.equal(await page.locator('#q-answered').innerText(), '1');
+    assert.match(await page.locator('#q-feedback-offer').innerText(), /Hardware/);
+    for (let i = 1; i < 5; i++) {
+      await page.locator('#btn-next').click();
+      await page.locator('#q-options button').first().click();
+    }
+    assert.match(await page.locator('#q-summary').innerText(), /de 5/i);
+    assert.equal(await page.locator('#q-complete [data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
+    await page.locator('#btn-restart').click();
+    assert.equal(await page.locator('#q-answered').innerText(), '0');
+    assert.equal(await page.locator('#q-complete').isVisible(), false);
 
     await page.goto(`${base}/simulado-vespera-concurso/`);
     await page.locator('.q-opt').first().click();
     await page.getByRole('button', { name: 'Ver resultado', exact: true }).click();
     assert.equal(await page.locator('.quiz-result').isVisible(), true);
     assert.equal(await page.locator('[data-stat="blank"]').innerText(), '39');
+    assert.equal(await page.locator('.quiz-result [data-banner-link]').isVisible(), true);
+  });
+  await check('article offers sit before the intended sections', async () => {
+    for (const route of [
+      '/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/',
+      '/nocoes-de-informatica/',
+      '/sistema-windows-7-10-11-para-concursos/',
+    ]) {
+      await page.goto(`${base}${route}`);
+      const offer = page.locator('.prose [data-article-offer]');
+      assert.ok(await offer.evaluate((el) => el.nextElementSibling?.id === el.dataset.articleOffer), route);
+    }
   });
   for (const width of [320, 390, 768, 1440]) for (const theme of ['dark', 'light']) await check(`reading and filter contrast ${width}px ${theme}`, async () => {
     await page.setViewportSize({ width, height: 900 });
     await page.evaluate((value) => localStorage.setItem('theme', value), theme);
-    for (const route of ['/', '/blog/', '/category/hardware/', '/regra-3-2-1/', '/sobre-nos/', '/politica-de-privacidade/']) {
+    for (const route of ['/', '/blog/', '/category/hardware/', '/questoes/', '/regra-3-2-1/', '/sobre-nos/', '/politica-de-privacidade/']) {
       await page.goto(`${base}${route}`);
       assert.equal(await page.locator('h1').count(), 1, route);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, route);

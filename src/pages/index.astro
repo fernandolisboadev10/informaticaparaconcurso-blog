@@ -5,6 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LessonRow from '../components/LessonRow.astro';
 import Pagination from '../components/Pagination.astro';
 import SectionHead from '../components/SectionHead.astro';
+import StudyOffer from '../components/StudyOffer.astro';
 import TrendBar from "../components/TrendBar.astro";
 import HomeLead from "../components/HomeLead.astro";
 import LatestList from "../components/LatestList.astro";
@@ -12,7 +13,7 @@ import SubjectGrid from '../components/SubjectGrid.astro';
 import CompactList from '../components/CompactList.astro';
 import { categories, categoryHref } from '../data/categories';
 import { isPublished, sortByActivity } from '../utils/posts';
-import { questionCount } from '../utils/quizzes';
+import { questionBankCount, questionCount } from '../utils/quizzes';
 
 // Page 1 opens with the subjects of the exam syllabus; "Aulas recentes" and the /page/N/ pages
 // list every post, newest first, 9 per page.
@@ -35,14 +36,13 @@ const subjects = categories
       name: c.name,
       href: categoryHref(c.name),
       posts: subjectPosts,
-      questions: subjectPosts.reduce((n, p) => n + questionCount(p.id), 0),
+      questions: subjectPosts.reduce((n, p) => n + questionBankCount(p.id), 0),
     };
   })
   .filter((s) => s.posts.length > 0)
   .sort((a, b) => b.posts.length - a.posts.length);
 
 const lessons = subjects.reduce((n, s) => n + s.posts.length, 0);
-const questions = all.reduce((n, p) => n + questionCount(p.id), 0);
 // Os simulados agora ficam na categoria do assunto; a home os reúne pelo prefixo do slug.
 const simulados = all.filter((p) => p.id.startsWith('simulado-'));
 const concursos = inCategory('Concursos');
@@ -115,6 +115,8 @@ const trilha = trilhaSlugs
       </section>
   )}
 
+  {page === 1 && <div class="block"><StudyOffer product="apostila" placement="home-trilha" /></div>}
+
   <section class="block recent">
     <SectionHead title={page === 1 ? 'Aulas recentes' : `Todas as aulas, página ${page}`} href={page === 1 ? '/blog' : undefined} linkLabel="Ver todas" />
     <div class="rows">
@@ -152,6 +154,7 @@ const trilha = trilhaSlugs
           <section>
             <SectionHead title="Simulados" href="/blog/?q=simulado" linkLabel={`Ver os ${simulados.length}`} />
             <CompactList posts={simulados.slice(0, 5)} action="Iniciar →" />
+            <p><StudyOffer product="gerador" placement="home-simulados" compact label="Montar meu treino no Gerador" /></p>
           </section>
         )}
         {concursos.length > 0 && (

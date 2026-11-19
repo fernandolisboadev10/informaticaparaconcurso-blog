@@ -1,0 +1,87 @@
+---
+import { APOSTILA_COVER, APOSTILA_PRICE, APOSTILA_QUESTIONS, APOSTILA_URL } from '../data/apostila';
+import { QUESTOES_URL } from '../data/questoes';
+
+interface Props {
+  product: 'apostila' | 'gerador';
+  placement: string;
+  label?: string;
+  compact?: boolean;
+}
+
+const { product, placement, label, compact = false } = Astro.props;
+const isApostila = product === 'apostila';
+const title = isApostila ? `${APOSTILA_QUESTIONS} questões comentadas da Cebraspe` : 'Monte um treino para sua banca';
+const detail = isApostila
+  ? `Apostila digital em PDF por ${APOSTILA_PRICE}, em pagamento único.`
+  : 'Escolha o assunto, o formato e a dificuldade. Cadastro gratuito.';
+const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
+---
+{compact ? (
+  <a class="offer-link" href={href} data-banner={product} data-slot={placement} data-banner-link>{label}</a>
+) : (
+  <aside class:list={['study-offer', { apostila: isApostila }]} aria-label={isApostila ? 'Apostila Cebraspe' : 'Gerador de Questões'} data-banner={product} data-slot={placement}>
+    {isApostila && <img src={APOSTILA_COVER} width="54" height="72" alt="" loading="lazy" />}
+    <div class="offer-copy">
+      <strong>{title}</strong>
+      <p>{detail}</p>
+    </div>
+    <a class="offer-button" href={href} data-banner-link>{label ?? (isApostila ? 'Ver amostra da apostila' : 'Continuar no Gerador')}</a>
+  </aside>
+)}
+
+<script>
+  declare const gtag: (...args: unknown[]) => void;
+  const send = (event: string, el: HTMLElement) => {
+    if (typeof gtag === 'function') gtag('event', event, { banner_id: el.dataset.banner, slot: el.dataset.slot });
+  };
+
+  const offers = document.querySelectorAll<HTMLElement>('[data-banner][data-slot]');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.intersectionRatio < 0.5) continue;
+        send('banner_view', entry.target as HTMLElement);
+        observer.unobserve(entry.target);
+      }
+    }, { threshold: 0.5 });
+    offers.forEach((el) => observer.observe(el));
+  }
+  offers.forEach((el) => el.addEventListener('click', (event) => {
+    if ((event.target as Element).closest('[data-banner-link]')) send('banner_click', el);
+  }));
+</script>
+
+<style>
+  .study-offer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 16px;
+    padding: 16px;
+    margin-block: 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-inline-start: 4px solid var(--violet);
+    border-radius: 12px;
+    text-align: left;
+  }
+  .study-offer.apostila { border-inline-start-color: #c99722; }
+  .study-offer img { flex: none; border-radius: 4px; object-fit: cover; }
+  .offer-copy { flex: 1 1 12rem; min-width: 0; }
+  .offer-copy strong { color: var(--ink-strong); font-size: 1rem; }
+  .offer-copy p { margin: 4px 0 0; color: var(--ink-soft); font-size: .875rem; line-height: 1.5; }
+  .offer-link { color: var(--violet); font-size: .9rem; font-weight: 700; text-underline-offset: .18em; }
+  .study-offer .offer-button {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #4430a8;
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .study-offer .offer-button:hover { background: #342381; color: #fff; text-decoration: none; }
+  .offer-link:focus-visible, .offer-button:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; }
+</style>

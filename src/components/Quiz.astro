@@ -109,6 +109,7 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
         <p class="quiz-focus"></p>
       </>
     )}
+    <slot name="result-offer" />
   </div>
 
   {final && !live && (

@@ -1,16 +1,16 @@
 ---
 title: "Revisão de Fórmulas do Excel para Concurso 2026"
-description: "Revise fórmulas do Excel para o CEBRASPE com 15 questões comentadas: SOMA, MÉDIA, SE, CONT.SE, PROCV e referências. Ideal para concurso 2026."
+description: "Revise fórmulas do Excel para o CEBRASPE com 10 questões comentadas: SOMA, MÉDIA, SE, CONT.SE, PROCV e referências. Ideal para concurso 2026."
 category: "Office"
 date: 2026-08-19T12:54:36-03:00
-updated: 2026-08-19T14:03:11Z
+updated: 2026-11-18T23:01:00-03:00
 readingTime: "11 min"
 image: "./images/revisao-excel.webp"
 imageAlt: "Revisão de Fórmulas do Excel"
 tags: ["Excel", "Fórmulas do Excel", "Cebraspe", "Microsoft Office", "Noções de Informática"]
 ---
 
-Toda vez que o [CEBRASPE](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) cobra fórmulas do Excel, a banca costuma montar o mesmo tipo de armadilha: apresenta uma planilha pequena e espera que você resolva a fórmula mentalmente, célula por célula, sem apoio de computador. Por isso, decorar sintaxe isolada ajuda pouco. O caminho mais eficiente é treinar em cima de uma única tabela, exatamente como a prova cobra. É justamente esse o formato deste artigo, atualizado para quem está se preparando para os concursos de 2026: uma planilha de exemplo e, a partir dela, 15 questões comentadas, cobrindo as fórmulas do Excel que mais aparecem em prova. 🎯
+Toda vez que o [CEBRASPE](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) cobra fórmulas do Excel, a banca costuma montar o mesmo tipo de armadilha: apresenta uma planilha pequena e espera que você resolva a fórmula mentalmente, célula por célula, sem apoio de computador. Por isso, decorar sintaxe isolada ajuda pouco. O caminho mais eficiente é treinar em cima de uma única tabela, exatamente como a prova cobra. É justamente esse o formato deste artigo, atualizado para quem está se preparando para os concursos de 2026: uma planilha de exemplo e, a partir dela, 10 questões comentadas, cobrindo as fórmulas do Excel que mais aparecem em prova. 🎯
 
 ## 🧮 A planilha que você vai usar em todas as questões
 
@@ -20,7 +20,7 @@ Considere que os dados abaixo estão em uma planilha do Excel, com o cabeçalho 
 
 📌 **Regra de aprovação:** Média ≥ 7,0 → APROVADO | Média < 7,0 → REPROVADO
 
-Repare que essa regra não aparece em nenhuma célula visível da tabela, ela mora dentro da fórmula da coluna Resultado. Esse tipo de detalhe, uma condição embutida em uma função, é justamente o que o CEBRASPE testa quando pede para você “julgar” um item sobre fórmulas do Excel. Com esses números fixados, você já consegue acompanhar as 15 questões a seguir, sempre voltando à tabela quando precisar conferir algum valor.
+Repare que essa regra não aparece em nenhuma célula visível da tabela, ela mora dentro da fórmula da coluna Resultado. Esse tipo de detalhe, uma condição embutida em uma função, é justamente o que o CEBRASPE testa quando pede para você “julgar” um item sobre fórmulas do Excel. Com esses números fixados, você já consegue acompanhar as 10 questões a seguir, sempre voltando à tabela quando precisar conferir algum valor.
 
 ## O que a banca testa em cada função
 
@@ -40,7 +40,7 @@ Todas as questões ao final do artigo usam a planilha acima. Antes de resolvê-l
 
 ## 📋 Cola rápida das fórmulas do Excel de hoje
 
-Depois de passar pelas 15 questões, vale reunir tudo em um resumo curto. Menos decoreba, mais entendimento do que cada fórmula do Excel faz com os dados: é assim que você se prepara de verdade para o estilo de cobrança do CEBRASPE em 2026. 🚀
+Depois de passar pelas 10 questões, vale reunir tudo em um resumo curto. Menos decoreba, mais entendimento do que cada fórmula do Excel faz com os dados: é assim que você se prepara de verdade para o estilo de cobrança do CEBRASPE em 2026. 🚀
 
 | Fórmula | O que faz |
 | --- | --- |

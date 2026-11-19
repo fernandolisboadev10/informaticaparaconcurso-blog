@@ -1,11 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import StudyOffer from '../components/StudyOffer.astro';
 import { categories } from '../data/categories';
 import { isPublished } from '../utils/posts';
 
 // Todas as questões comentadas do site (src/data/quizzes/<slug>.json), reunidas em um treino único.
-// O leitor escolhe a matéria e responde um bloco de 10 questões sorteadas, com gabarito e link para a aula.
+const blockSize = 5;
 interface RawQuestion {
   type: 'ce' | 'mc';
   text: string;
@@ -21,7 +22,7 @@ const postBySlug = new Map(posts.map((p) => [p.id, p]));
 // Aulas referenciadas pelas questões (índice curto no JSON), na ordem do currículo.
 const lessons: { title: string; href: string; cat: string }[] = [];
 const questions: [number, 'ce' | 'mc', string, string[] | 0, string, string][] = [];
-const countByCat = new Map<string, number>();
+const availableCategories = new Set<string>();
 
 for (const [path, mod] of Object.entries(quizzes)) {
   const slug = path.replace(/^.*\/(.+)\.json$/, '$1');
@@ -30,33 +31,32 @@ for (const [path, mod] of Object.entries(quizzes)) {
   const li = lessons.push({ title: post.data.title, href: `/${slug}/`, cat: post.data.category }) - 1;
   for (const q of mod.default.questions ?? []) {
     questions.push([li, q.type, q.text, q.options ?? 0, q.answer, q.comment ?? '']);
-    countByCat.set(post.data.category, (countByCat.get(post.data.category) ?? 0) + 1);
+    availableCategories.add(post.data.category);
   }
 }
 
-const subjects = categories
-  .map((c) => ({ name: c.name, count: countByCat.get(c.name) ?? 0 }))
-  .filter((s) => s.count > 0);
+const subjects = categories.filter((category) => availableCategories.has(category.name));
 
-const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
+const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g, '\\u003c');
 ---
 <BaseLayout
   title="Questões comentadas de Informática para concursos"
-  description={`${questions.length} questões comentadas de Informática para concursos, com gabarito explicado e link para a aula de cada tema. Escolha a matéria e resolva um bloco de 10.`}
+  description={`Treine Informática para concursos com um bloco de ${blockSize} questões comentadas. Escolha a matéria e confira o gabarito após cada resposta.`}
 >
   <div class="page">
     <div class="intro">
       <div class="intro-text">
         <h1>Questões comentadas</h1>
-        <p>Responda, veja o gabarito e entenda o porquê. Cada questão aponta a aula para revisar.</p>
+        <p>Faça um treino rápido com {blockSize} questões comentadas. Cada resposta aponta uma aula para revisar.</p>
+        <p class="intro-offer"><StudyOffer product="gerador" placement="questoes-inicio" compact label="Criar um treino para minha banca no Gerador" /></p>
       </div>
       <a class="back" href="/#materias">← Voltar às matérias</a>
     </div>
 
     <div class="filters" role="group" aria-label="Matéria">
-      <button type="button" class="chip is-on" data-materia="">Todas ({questions.length})</button>
+      <button type="button" class="chip is-on" data-materia="">Todas</button>
       {subjects.map((s) => (
-        <button type="button" class="chip" data-materia={s.name}>{s.name} ({s.count})</button>
+        <button type="button" class="chip" data-materia={s.name}>{s.name}</button>
       ))}
     </div>
 
@@ -64,10 +64,10 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
       <section class="main" aria-labelledby="q-title">
         <div>
           <div class="progress-meta">
-            <span id="q-title">Questão <strong id="q-num">1</strong> de <span id="q-total">10</span></span>
+            <span id="q-title">Questão <strong id="q-num">1</strong> de <span id="q-total">{blockSize}</span></span>
             <span><span id="q-answered">0</span> respondidas</span>
           </div>
-          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-label="Progresso" id="q-progress">
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax={blockSize} aria-valuenow="0" aria-label="Progresso" id="q-progress">
             <div class="progress-fill" id="q-fill"></div>
           </div>
         </div>
@@ -85,12 +85,20 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
             <p class="comment" id="q-comment"></p>
             <a class="lesson" id="q-lesson" href="/"></a>
           </div>
+          <p id="q-feedback-offer" class="feedback-offer" hidden>
+            <StudyOffer product="gerador" placement="questoes-primeira-resposta" compact label="Conhecer o Gerador de Questões" />
+          </p>
         </article>
 
         <div class="nav-btns">
           <button type="button" class="btn-ghost" id="btn-prev">← Anterior</button>
           <button type="button" class="btn-next" id="btn-next">Próxima questão →</button>
         </div>
+        <section id="q-complete" class="panel" aria-labelledby="q-summary" hidden>
+          <h2 id="q-summary" aria-live="polite"></h2>
+          <StudyOffer product="gerador" placement="questoes-resultado" />
+          <button type="button" class="btn-ghost btn-small" id="btn-restart">Fazer outro bloco grátis</button>
+        </section>
       </section>
 
       <aside class="side">
@@ -103,8 +111,6 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
           <h2>Seu desempenho</h2>
           <p class="score"><span id="s-ok">0</span><span class="score-of"> / <span id="s-done">0</span></span></p>
           <p class="legend">acertos entre as questões respondidas</p>
-          <p class="done" id="s-done-msg" hidden>Bloco concluído. Releia as aulas das questões que errou e refaça.</p>
-          <button type="button" class="btn-ghost btn-small" id="btn-restart">Novo bloco de 10</button>
         </div>
       </aside>
     </div>
@@ -117,9 +123,8 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
 
 <script>
   type Q = [number, 'ce' | 'mc', string, string[] | 0, string, string];
-  type Data = { lessons: { title: string; href: string; cat: string }[]; questions: Q[] };
+  type Data = { lessons: { title: string; href: string; cat: string }[]; questions: Q[]; blockSize: number };
 
-  const BLOCK = 10;
   const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
   const data: Data = JSON.parse(document.getElementById('q-data')!.textContent || '{}');
 
@@ -130,8 +135,10 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
     cat: $('q-cat'), kind: $('q-kind'), text: $('q-text'), options: $('q-options'),
     feedback: $('q-feedback'), verdict: $('q-verdict'), comment: $('q-comment'), lesson: $('q-lesson') as HTMLAnchorElement,
     prev: $<HTMLButtonElement>('btn-prev'), next: $<HTMLButtonElement>('btn-next'), grid: $('q-grid'),
-    ok: $('s-ok'), done: $('s-done'), doneMsg: $('s-done-msg'), restart: $('btn-restart'),
+    ok: $('s-ok'), done: $('s-done'), complete: $('q-complete'), summary: $('q-summary'), restart: $('btn-restart'),
+    feedbackOffer: $('q-feedback-offer'),
   };
+  const feedbackLink = els.feedbackOffer.querySelector<HTMLAnchorElement>('[data-banner-link]')!;
   const chips = Array.from(document.querySelectorAll<HTMLButtonElement>('.chip'));
 
   let materia = '';
@@ -157,7 +164,7 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
       const j = Math.floor(Math.random() * (i + 1));
       [pick[i], pick[j]] = [pick[j], pick[i]];
     }
-    block = pick.slice(0, BLOCK);
+    block = pick.slice(0, data.blockSize);
     idx = 0;
     answers = [];
     render();
@@ -215,6 +222,8 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
       els.lesson.textContent = `Revisar a aula: ${lesson.title} →`;
       els.lesson.href = lesson.href;
     }
+    els.feedbackOffer.hidden = !answered || doneCount !== 1;
+    if (!els.feedbackOffer.hidden) feedbackLink.textContent = `Praticar mais questões de ${lesson.cat} no Gerador`;
 
     els.prev.disabled = idx === 0;
     const last = idx === block.length - 1;
@@ -243,7 +252,8 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
 
     els.ok.textContent = String(okCount);
     els.done.textContent = String(doneCount);
-    els.doneMsg.hidden = doneCount !== block.length;
+    els.complete.hidden = doneCount !== block.length;
+    els.summary.textContent = els.complete.hidden ? '' : `Treino concluído. Você acertou ${okCount} de ${block.length}.`;
   }
 
   function setMateria(name: string, updateUrl = true) {
@@ -307,6 +317,8 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
     margin: 0;
     color: var(--ink-soft);
   }
+
+  .page .intro-text .intro-offer { margin-top: 10px; }
 
   .page .back {
     display: inline-flex;
@@ -736,17 +748,8 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
     color: var(--ink-soft);
   }
 
-  .page .done {
-    margin: 0;
-    padding-top: 12px;
-    border-top: 1px solid var(--line);
-    font-size: 0.9375rem;
-    color: var(--ink);
-  }
-
-  .page .done[hidden] {
-    display: none;
-  }
+  .page .feedback-offer { margin: 16px 0 0; }
+  .page #q-complete[hidden] { display: none; }
 
   .page .nojs {
     color: var(--ink-soft);
