@@ -194,8 +194,14 @@ try {
   await check('article offers sit before the intended sections', async () => {
     for (const route of [
       '/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/',
+      '/concurso-policia-civil-cebraspe-informatica/',
+      '/gabarito-extraoficial-pm-ma-soldado/',
       '/nocoes-de-informatica/',
       '/sistema-windows-7-10-11-para-concursos/',
+      '/linux-para-concursos/',
+      '/aplicativos-para-seguranca-antivirus-firewall-antispyware/',
+      '/perifericos-entrada-saida-concurso/',
+      '/fonte-de-alimentacao-nobreak-estabilizador-concursos/',
     ]) {
       await page.goto(`${base}${route}`);
       const offer = page.locator('.prose [data-article-offer]');

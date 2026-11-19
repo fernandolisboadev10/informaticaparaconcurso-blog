@@ -37,8 +37,14 @@ const { title, seoTitle, description, category, date, updated, related, tags, re
 const quiz = getArticleQuiz(Astro.props.slug);
 const articleOffers: Record<string, { product: 'apostila' | 'gerador'; before: string; label?: string }> = {
   'cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica': { product: 'apostila', before: 'Estratégia de estudo' },
+  'concurso-policia-civil-cebraspe-informatica': { product: 'apostila', before: 'Por onde começar' },
+  'gabarito-extraoficial-pm-ma-soldado': { product: 'apostila', before: 'Como calcular a sua nota' },
   'nocoes-de-informatica': { product: 'gerador', before: 'Os 5 blocos', label: 'Praticar mais questões de Informática' },
   'sistema-windows-7-10-11-para-concursos': { product: 'gerador', before: 'Windows 11', label: 'Praticar mais questões de Windows' },
+  'linux-para-concursos': { product: 'gerador', before: 'O escritório dentro do Linux', label: 'Praticar mais questões de Linux' },
+  'aplicativos-para-seguranca-antivirus-firewall-antispyware': { product: 'gerador', before: 'Perguntas frequentes', label: 'Praticar mais questões de Segurança' },
+  'perifericos-entrada-saida-concurso': { product: 'gerador', before: 'Conclusão', label: 'Praticar mais questões de Hardware' },
+  'fonte-de-alimentacao-nobreak-estabilizador-concursos': { product: 'gerador', before: 'Conclusão', label: 'Praticar mais questões de Hardware' },
 };
 const offer = articleOffers[Astro.props.slug];
 const offerBefore = offer && headings.find((heading) => heading.depth === 2 && heading.text.startsWith(offer.before))?.slug;
