@@ -15,6 +15,7 @@ interface Props {
 const { product, placement, label, compact = false, format = 'banner' } = Astro.props;
 const isApostila = product === 'apostila';
 const showPhone = !isApostila && format === 'rail';
+const neonButton = isApostila || format === 'anchor' || format === 'rail' || placement === 'home-apos-aulas';
 const productName = isApostila ? 'Apostila Cebraspe' : 'Gerador de Questões';
 const title = isApostila
   ? `${APOSTILA_QUESTIONS} questões comentadas da Cebraspe`
@@ -41,7 +42,7 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
           {format !== 'anchor' && <p>{detail}</p>}
         </>
       )}
-      <a class="offer-button" href={href} data-banner-link>
+      <a class:list={['offer-button', { 'neon-cta': neonButton }]} href={href} data-banner-link>
         <span>{label ?? (isApostila ? 'Ver amostra da apostila' : 'Continuar no Gerador')}</span>
         <span class="offer-arrow" aria-hidden="true"><SalesArrow /></span>
       </a>
@@ -165,13 +166,15 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
   .rail .offer-cover { width: min(90px, 75%); }
   .study-offer.rail .offer-copy strong { font-size: 1.16rem; }
   .study-offer.rail .offer-button { width: 100%; justify-content: space-between; }
-  .study-offer.apostila, .study-offer.anchor {
+  .study-offer .offer-button.neon-cta {
     --offer-button-ink: #000;
     --offer-button-weight: 800;
   }
-  .study-offer.anchor {
+  .study-offer:not(.apostila) .offer-button.neon-cta {
     --offer-accent: #b9f500;
     --offer-button-hover: #d0ff4b;
+  }
+  .study-offer.anchor {
     margin: 0;
     padding: 10px 46px 10px 14px;
     background: #12283b;
@@ -205,13 +208,18 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
   @media (prefers-reduced-motion: no-preference) {
     .study-offer.offer-in-view { animation: offer-appear .38s ease-out both; }
     .offer-in-view .offer-button { position: relative; overflow: hidden; }
-    .offer-in-view .offer-button::after {
+    .offer-in-view .offer-button:not(.neon-cta)::after {
       content: '';
       position: absolute;
       inset: 0;
       background: linear-gradient(110deg, transparent 30%, #fffa 50%, transparent 70%);
       pointer-events: none;
       animation: offer-shine .75s .2s ease-out both;
+    }
+    .offer-in-view .offer-button.neon-cta { animation: offer-neon-pulse 1.5s ease-in-out 2; }
+    @keyframes offer-neon-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 transparent; }
+      50% { box-shadow: 0 0 12px 2px color-mix(in srgb, var(--offer-accent) 54%, transparent); }
     }
     @keyframes offer-appear { from { opacity: .72; translate: 0 8px; } }
     @keyframes offer-shine {

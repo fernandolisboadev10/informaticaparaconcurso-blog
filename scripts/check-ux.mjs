@@ -230,6 +230,11 @@ try {
     assert.equal(await phone.evaluate((el) => getComputedStyle(el).transform), 'none');
     assert.equal(await phone.locator('.demo-status').evaluate((el) => getComputedStyle(el).color), 'rgb(85, 219, 255)');
     assert.equal(await phone.evaluate((el) => getComputedStyle(el).animationName), 'none');
+    const railCta = right.locator('[data-banner-link]');
+    assert.deepEqual(await railCta.evaluate((el) => {
+      const style = getComputedStyle(el);
+      return [style.backgroundColor, style.color, style.fontWeight, style.animationName];
+    }), ['rgb(185, 245, 0)', 'rgb(0, 0, 0)', '800', 'none']);
     await phone.getByRole('button', { name: 'Certo', exact: true }).click();
     assert.match(await phone.locator('.demo-feedback').innerText(), /Você acertou/);
     await phone.getByRole('button', { name: 'Gerar exemplo' }).click();
@@ -247,6 +252,8 @@ try {
     await page.reload();
     await right.locator('[data-phone-entered]').waitFor({ state: 'visible' });
     assert.match(await phone.evaluate((el) => getComputedStyle(el).animationName), /phone-rise/);
+    await right.and(page.locator('.offer-in-view')).waitFor({ state: 'visible' });
+    assert.match(await railCta.evaluate((el) => getComputedStyle(el).animationName), /offer-neon-pulse/);
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.setViewportSize({ width: 390, height: 844 });
     assert.equal(await left.isVisible(), false);
