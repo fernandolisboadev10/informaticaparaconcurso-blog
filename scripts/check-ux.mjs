@@ -202,11 +202,60 @@ try {
       '/aplicativos-para-seguranca-antivirus-firewall-antispyware/',
       '/perifericos-entrada-saida-concurso/',
       '/fonte-de-alimentacao-nobreak-estabilizador-concursos/',
+      '/regra-3-2-1/',
     ]) {
       await page.goto(`${base}${route}`);
       const offer = page.locator('.prose [data-article-offer]');
       assert.ok(await offer.evaluate((el) => el.nextElementSibling?.id === el.dataset.articleOffer), route);
     }
+  });
+  await check('desktop rails leave the article free and the bottom offer dismisses for the session', async () => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto(`${base}/regra-3-2-1/`);
+    const left = page.locator('[data-slot="artigo-lateral-esquerda"]');
+    const right = page.locator('[data-slot="artigo-lateral-direita"]');
+    const article = await page.locator('article.post').boundingBox();
+    const leftRail = await left.boundingBox();
+    const rightRail = await right.boundingBox();
+    assert.ok(article && leftRail && rightRail);
+    assert.ok(leftRail.x + leftRail.width < article.x);
+    assert.ok(rightRail.x > article.x + article.width);
+    if (screenshotDir) {
+      await mkdir(screenshotDir, { recursive: true });
+      await page.screenshot({ path: path.join(screenshotDir, 'laterais-desktop.png') });
+    }
+    await page.setViewportSize({ width: 390, height: 844 });
+    assert.equal(await left.isVisible(), false);
+    assert.equal(await right.isVisible(), false);
+
+    const anchor = page.locator('#generator-anchor');
+    assert.equal(await anchor.isVisible(), false);
+    await page.evaluate(() => window.scrollTo(0, 520));
+    await anchor.waitFor({ state: 'visible' });
+    if (screenshotDir) await anchor.screenshot({ path: path.join(screenshotDir, 'gerador-rodape-celular.png') });
+    assert.equal(await anchor.locator('strong').isVisible(), false);
+    assert.equal(await anchor.locator('[data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
+    assert.equal(await anchor.evaluate((el) => getComputedStyle(el).animationName), 'none');
+    await page.emulateMedia({ reducedMotion: 'no-preference' });
+    assert.match(await anchor.evaluate((el) => getComputedStyle(el).animationName), /anchor-rise/);
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.goto(`${base}/simulado-vespera-concurso/`);
+    await page.evaluate(() => window.scrollTo(0, 520));
+    await anchor.waitFor({ state: 'visible' });
+    await page.locator('#questoes').evaluate((quiz) => quiz.scrollIntoView({ block: 'start' }));
+    await anchor.waitFor({ state: 'hidden' });
+
+    await page.setViewportSize({ width: 1600, height: 900 });
+    await page.goto(`${base}/`);
+    assert.ok(await page.locator('[data-slot="home-lateral-esquerda"]').isVisible());
+    assert.ok(await page.locator('[data-slot="home-lateral-direita"]').isVisible());
+    await page.evaluate(() => window.scrollTo(0, 520));
+    await anchor.waitFor({ state: 'visible' });
+    await anchor.getByRole('button', { name: 'Fechar banner do Gerador' }).click();
+    assert.equal(await anchor.isVisible(), false);
+    await page.goto(`${base}/nocoes-de-informatica/`);
+    await page.evaluate(() => window.scrollTo(0, 520));
+    assert.equal(await anchor.isVisible(), false);
   });
   for (const width of [320, 390, 768, 1440]) for (const theme of ['dark', 'light']) await check(`reading and filter contrast ${width}px ${theme}`, async () => {
     await page.setViewportSize({ width, height: 900 });

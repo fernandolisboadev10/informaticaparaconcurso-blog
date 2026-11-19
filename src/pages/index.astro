@@ -6,6 +6,7 @@ import LessonRow from '../components/LessonRow.astro';
 import Pagination from '../components/Pagination.astro';
 import SectionHead from '../components/SectionHead.astro';
 import StudyOffer from '../components/StudyOffer.astro';
+import GeneratorAnchor from '../components/GeneratorAnchor.astro';
 import TrendBar from "../components/TrendBar.astro";
 import HomeLead from "../components/HomeLead.astro";
 import LatestList from "../components/LatestList.astro";
@@ -166,11 +167,25 @@ const trilha = trilhaSlugs
       </div>
     </>
   )}
+  {page === 1 && (
+    <>
+      <div class="home-rail home-rail-left"><StudyOffer product="apostila" placement="home-lateral-esquerda" format="rail" label="Ver amostra" /></div>
+      <div class="home-rail home-rail-right"><StudyOffer product="gerador" placement="home-lateral-direita" format="rail" label="Montar meu treino" /></div>
+      <GeneratorAnchor />
+    </>
+  )}
 </BaseLayout>
 
 
 
 <style>
+  .home-rail { display: none; }
+  @media (min-width: 1600px) and (min-height: 590px) {
+    .home-rail { display: block; position: fixed; top: 120px; width: 176px; }
+    .home-rail-left { right: calc(50% + 606px); }
+    .home-rail-right { left: calc(50% + 606px); }
+  }
+
   .visually-hidden {
     position: absolute;
     width: 1px;

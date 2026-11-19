@@ -8,9 +8,10 @@ interface Props {
   placement: string;
   label?: string;
   compact?: boolean;
+  format?: 'banner' | 'rail' | 'anchor';
 }
 
-const { product, placement, label, compact = false } = Astro.props;
+const { product, placement, label, compact = false, format = 'banner' } = Astro.props;
 const isApostila = product === 'apostila';
 const productName = isApostila ? 'Apostila Cebraspe' : 'Gerador de Questões';
 const title = isApostila ? `${APOSTILA_QUESTIONS} questões comentadas da Cebraspe` : 'Monte um treino para sua banca';
@@ -22,7 +23,7 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
 {compact ? (
   <a class="offer-link" href={href} data-banner={product} data-slot={placement} data-banner-link>{label}</a>
 ) : (
-  <aside class:list={['study-offer', { apostila: isApostila }]} aria-label={productName} data-banner={product} data-slot={placement}>
+  <aside class:list={['study-offer', format, { apostila: isApostila }]} aria-label={productName} data-banner={product} data-slot={placement}>
     {isApostila && (
       <div class="offer-cover" aria-hidden="true">
         <img src={APOSTILA_COVER} width="108" height="144" alt="" loading="lazy" decoding="async" />
@@ -37,7 +38,7 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
         <SalesArrow />
       </a>
     </div>
-    {!isApostila && (
+    {!isApostila && format === 'banner' && (
       <div class="offer-preview" aria-hidden="true">
         <span>Exemplo de pedido</span>
         <p>Gere 5 questões de redes no estilo Cebraspe, com gabarito comentado.</p>
@@ -57,6 +58,7 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (entry.intersectionRatio < 0.5) continue;
+        entry.target.classList.add('offer-in-view');
         send('banner_view', entry.target as HTMLElement);
         observer.unobserve(entry.target);
       }
@@ -140,8 +142,46 @@ const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
   .study-offer .offer-button:hover { background: #fff; color: #101c34; text-decoration: none; }
   .offer-button:focus-visible { outline: 2px solid var(--offer-title); outline-offset: 3px; }
   .offer-link:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; }
+  .study-offer.rail {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    margin: 0;
+    padding: 16px;
+  }
+  .rail .offer-cover { width: min(90px, 75%); }
+  .study-offer.rail .offer-copy strong { font-size: 1.16rem; }
+  .study-offer.rail .offer-button { width: 100%; justify-content: space-between; }
+  .study-offer.anchor { margin: 0; padding: 9px 40px 9px 14px; border-radius: 12px 12px 0 0; }
+  .anchor .offer-copy {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px 12px;
+  }
+  .study-offer.anchor .offer-copy strong, .study-offer.anchor .offer-copy p { display: none; }
+  .study-offer.anchor .offer-button { margin: 0; }
+
   @media (hover: hover) and (prefers-reduced-motion: no-preference) {
     .study-offer .offer-button { transition: background-color .18s ease, translate .18s ease; }
     .study-offer .offer-button:hover { translate: 0 -2px; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .study-offer.offer-in-view { animation: offer-appear .38s ease-out both; }
+    .offer-in-view .offer-button { position: relative; overflow: hidden; }
+    .offer-in-view .offer-button::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 30%, #fffa 50%, transparent 70%);
+      pointer-events: none;
+      animation: offer-shine .75s .2s ease-out both;
+    }
+    @keyframes offer-appear { from { opacity: .72; translate: 0 8px; } }
+    @keyframes offer-shine {
+      from { translate: -100% 0; }
+      to { translate: 100% 0; }
+    }
   }
 </style>

@@ -1,0 +1,72 @@
+---
+import StudyOffer from './StudyOffer.astro';
+---
+<div class="generator-anchor" id="generator-anchor" hidden>
+  <StudyOffer product="gerador" placement="rodape-flutuante" format="anchor" label="Montar meu treino" />
+  <button type="button" aria-label="Fechar banner do Gerador">×</button>
+</div>
+
+<script>
+  const key = 'generator-anchor-dismissed';
+  const anchor = document.querySelector<HTMLElement>('#generator-anchor');
+  if (anchor) {
+    const cookies = document.getElementById('cookie-banner');
+    const quiz = document.getElementById('questoes');
+    let dismissed = false;
+    let quizInView = false;
+    try { dismissed = sessionStorage.getItem(key) === '1'; } catch { /* The banner can still be closed. */ }
+
+    function update() {
+      if (anchor) anchor.hidden = dismissed || quizInView || (cookies !== null && !cookies.hidden) || window.scrollY < 300;
+    }
+
+    anchor.querySelector('button')?.addEventListener('click', () => {
+      dismissed = true;
+      try { sessionStorage.setItem(key, '1'); } catch { /* Keep dismissed for the current page. */ }
+      update();
+    });
+    if (!dismissed) {
+      if (cookies) new MutationObserver(update).observe(cookies, { attributes: true, attributeFilter: ['hidden'] });
+      if (quiz && 'IntersectionObserver' in window) {
+        new IntersectionObserver(([entry]) => {
+          quizInView = entry.isIntersecting;
+          update();
+        }).observe(quiz);
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      update();
+    }
+  }
+</script>
+
+<style>
+  .generator-anchor {
+    position: fixed;
+    inset-inline: 0;
+    bottom: env(safe-area-inset-bottom, 0px);
+    z-index: 39;
+    width: min(580px, calc(100% - 16px));
+    margin-inline: auto;
+    box-shadow: 0 -4px 28px #030b1f50;
+  }
+  .generator-anchor button {
+    position: absolute;
+    inset-inline-end: 3px;
+    top: 4px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: #f6f8ff;
+    font: 600 24px/1 var(--font-body);
+    cursor: pointer;
+  }
+  .generator-anchor button:hover, .generator-anchor button:focus-visible { background: #314867; }
+  :global(body:has(#generator-anchor:not([hidden]))) { padding-bottom: 104px; }
+  :global(body:has(#generator-anchor:not([hidden])) #back-to-top) { bottom: calc(108px + env(safe-area-inset-bottom, 0px)); }
+  @media (prefers-reduced-motion: no-preference) {
+    .generator-anchor:not([hidden]) { animation: anchor-rise .4s cubic-bezier(.2,.8,.3,1) both; }
+    @keyframes anchor-rise { from { translate: 0 110%; } }
+  }
+</style>

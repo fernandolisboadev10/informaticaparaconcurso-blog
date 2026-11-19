@@ -7,6 +7,7 @@ import ShareButtons from '../components/ShareButtons.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import Quiz from '../components/Quiz.astro';
 import StudyOffer from '../components/StudyOffer.astro';
+import GeneratorAnchor from '../components/GeneratorAnchor.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import type { MarkdownHeading } from 'astro';
@@ -46,9 +47,13 @@ const articleOffers: Record<string, { product: 'apostila' | 'gerador'; before: s
   'perifericos-entrada-saida-concurso': { product: 'gerador', before: 'Conclusão', label: 'Praticar mais questões de Hardware' },
   'fonte-de-alimentacao-nobreak-estabilizador-concursos': { product: 'gerador', before: 'Conclusão', label: 'Praticar mais questões de Hardware' },
 };
-const offer = articleOffers[Astro.props.slug];
-const offerBefore = offer && headings.find((heading) => heading.depth === 2 && heading.text.startsWith(offer.before))?.slug;
 const showQuizOffer = Astro.props.slug.startsWith('simulado-');
+const offer = articleOffers[Astro.props.slug];
+const sections = headings.filter((heading) => heading.depth === 2);
+const readingSections = sections.length >= 3 ? sections : headings.filter((heading) => heading.depth === 3);
+const offerBefore = offer
+  ? sections.find((heading) => heading.text.startsWith(offer.before))?.slug
+  : readingSections.length >= 3 ? readingSections[Math.floor(readingSections.length / 2)]?.slug : undefined;
 
 const formattedDate = date.toLocaleDateString('pt-BR', {
   day: '2-digit',
@@ -144,9 +149,9 @@ const breadcrumbSchema = {
           <slot />
         </div>
 
-        {offer && (
-          <div data-article-offer={offerBefore}>
-            <StudyOffer product={offer.product} placement="artigo-entre-secoes" label={offer.label} />
+        {!showQuizOffer && (
+          <div data-article-offer={offerBefore ?? ''}>
+            <StudyOffer product={offer?.product ?? 'gerador'} placement="artigo-entre-secoes" label={offer?.label} />
           </div>
         )}
 
@@ -162,8 +167,15 @@ const breadcrumbSchema = {
         <RelatedPosts slug={Astro.props.slug} category={category} tags={tags} related={related} />
       </div>
     </article>
+    <div class="post-rail rail-left">
+      <StudyOffer product="apostila" placement="artigo-lateral-esquerda" format="rail" label="Ver amostra" />
+    </div>
+    <div class="post-rail rail-right">
+      <StudyOffer product="gerador" placement="artigo-lateral-direita" format="rail" label="Montar meu treino" />
+    </div>
 
   </div>
+  <GeneratorAnchor />
 </BaseLayout>
 
 <script>
@@ -278,6 +290,20 @@ const breadcrumbSchema = {
   .post-shell {
     max-width: 808px;
     padding-block: 32px 56px;
+  }
+  .post-rail { display: none; }
+
+  @media (min-width: 1280px) and (min-height: 590px) {
+    .post-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 760px) minmax(0, 1fr);
+      column-gap: 24px;
+      max-width: 1320px;
+    }
+    .post-shell > article { grid-area: 1 / 2; min-width: 0; }
+    .post-rail { display: block; position: sticky; top: 96px; align-self: start; }
+    .rail-left { grid-area: 1 / 1; }
+    .rail-right { grid-area: 1 / 3; }
   }
 
   .post-head,
