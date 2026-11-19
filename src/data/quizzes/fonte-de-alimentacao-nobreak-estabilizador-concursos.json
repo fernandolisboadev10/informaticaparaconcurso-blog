@@ -1,0 +1,98 @@
+{
+ "questions": [
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Em um computador de mesa, a fonte de alimentação converte a corrente alternada da rede em corrente contínua para alimentar componentes internos.",
+   "answer": "C",
+   "comment": "A fonte recebe energia da tomada e fornece tensões contínuas adequadas aos componentes, como a placa-mãe e as unidades de armazenamento."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Uma fonte com potência nominal de 650 W consome 650 W da tomada sempre que o computador está ligado.",
+   "answer": "E",
+   "comment": "A potência nominal indica a capacidade de fornecimento da fonte. O consumo na tomada varia conforme a demanda dos componentes e a eficiência da fonte."
+  },
+  {
+   "type": "mc",
+   "text": "Durante um apagão, é preciso manter o computador ligado tempo suficiente para salvar o trabalho e desligá-lo. Qual equipamento cumpre essa função quando dimensionado para a carga?",
+   "options": [
+    "Fonte de alimentação com maior potência nominal.",
+    "Nobreak com bateria.",
+    "Protetor contra surtos.",
+    "Estabilizador sem bateria.",
+    "Régua de tomadas com proteção térmica."
+   ],
+   "answer": "B",
+   "comment": "O nobreak usa a energia armazenada na bateria durante a interrupção. Proteger contra surtos ou regular a tensão, por si só, não fornece energia quando a rede cai."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Um estabilizador pode corrigir variações de tensão dentro da faixa de operação definida pelo fabricante.",
+   "answer": "C",
+   "comment": "A regulação mantém a tensão de saída mais próxima do valor previsto enquanto a tensão de entrada estiver dentro dos limites de operação."
+  },
+  {
+   "type": "mc",
+   "text": "Um equipamento precisa de proteção contra picos breves de tensão. Qual função deve constar nas especificações do dispositivo escolhido?",
+   "options": [
+    "Aumento do número de tomadas disponíveis.",
+    "Distribuição de tensões contínuas para a placa-mãe.",
+    "Indicação da potência nominal da fonte de alimentação.",
+    "Limitação de surtos de tensão.",
+    "Medição do tempo de autonomia da bateria."
+   ],
+   "answer": "D",
+   "comment": "O protetor contra surtos foi projetado para limitar sobretensões transitórias. A presença de várias tomadas, por si só, não indica essa proteção."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "É possível concluir que uma régua protege contra surtos apenas por ela ter um interruptor e várias tomadas.",
+   "answer": "E",
+   "comment": "O interruptor e as tomadas são recursos de distribuição e acionamento. A proteção contra surtos precisa estar indicada nas especificações do produto."
+  },
+  {
+   "type": "mc",
+   "text": "Qual alternativa associa corretamente as unidades usadas para especificar tensão, corrente elétrica e potência, nessa ordem?",
+   "options": [
+    "Volts (V), amperes (A) e watts (W).",
+    "Watts (W), volts (V) e amperes (A).",
+    "Amperes (A), watts (W) e volts (V).",
+    "Volts (V), watts (W) e amperes (A).",
+    "Amperes (A), volts (V) e watts (W)."
+   ],
+   "answer": "A",
+   "comment": "A tensão é medida em volts, a corrente em amperes e a potência em watts."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Dois nobreaks do mesmo modelo, com baterias nas mesmas condições, têm a mesma autonomia mesmo que um alimente uma carga maior do que o outro.",
+   "answer": "E",
+   "comment": "A autonomia depende da carga conectada. Mantidas as demais condições, uma carga maior tende a descarregar a bateria mais depressa."
+  },
+  {
+   "banca": "Estilo Cebraspe",
+   "type": "ce",
+   "text": "Um nobreak com regulação automática de tensão pode compensar algumas variações da rede sem recorrer à bateria.",
+   "answer": "C",
+   "comment": "A regulação automática de tensão, conhecida como AVR, corrige determinadas variações enquanto há fornecimento da rede. O funcionamento depende da faixa de operação do modelo."
+  },
+  {
+   "type": "mc",
+   "text": "Em um computador de mesa conectado a um nobreak, como se dividem as funções dos dois equipamentos durante uma interrupção de energia?",
+   "options": [
+    "A fonte do computador mantém o nobreak ligado até a rede voltar.",
+    "O nobreak substitui a fonte e entrega tensões contínuas diretamente à placa-mãe.",
+    "O nobreak alimenta temporariamente a entrada da fonte, que continua fornecendo as tensões usadas pelos componentes internos.",
+    "A fonte detecta o apagão e passa a gerar a energia necessária para recarregar a bateria.",
+    "O nobreak apenas regula a tensão da rede enquanto a fonte usa sua própria bateria."
+   ],
+   "answer": "C",
+   "comment": "O nobreak mantém a alimentação da fonte por tempo limitado. A fonte continua responsável por converter essa energia e alimentar os componentes internos do computador."
+  }
+ ]
+}
