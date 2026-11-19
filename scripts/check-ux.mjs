@@ -111,6 +111,7 @@ try {
   await context.route('**/*', (route) => route.request().url().startsWith(`${base}/`) ? route.continue() : route.abort());
   await context.addInitScript(() => { localStorage.setItem('cookie-consent', 'denied'); });
   const page = await context.newPage();
+  await page.clock.install();
   page.setDefaultTimeout(6000);
   const errors = [];
   page.on('pageerror', (error) => errors.push(error.message));
@@ -210,7 +211,7 @@ try {
       assert.ok(await offer.evaluate((el) => el.nextElementSibling?.id === el.dataset.articleOffer), route);
     }
   });
-  await check('desktop rails leave the article free and the bottom offer dismisses for the session', async () => {
+  await check('desktop rails leave the article free and the bottom offer returns after ten seconds', async () => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.goto(`${base}/regra-3-2-1/`);
     const left = page.locator('[data-slot="artigo-lateral-esquerda"]');
@@ -263,7 +264,7 @@ try {
 
     const anchor = page.locator('#generator-anchor');
     assert.equal(await anchor.isVisible(), false);
-    await page.evaluate(() => window.scrollTo(0, 520));
+    await page.clock.fastForward(10_000);
     await anchor.waitFor({ state: 'visible' });
     if (screenshotDir) await anchor.screenshot({ path: path.join(screenshotDir, 'gerador-rodape-celular.png') });
     assert.equal(await anchor.locator('strong').innerText(), 'Questões para sua banca');
@@ -280,7 +281,7 @@ try {
     assert.match(await anchor.evaluate((el) => getComputedStyle(el).animationName), /anchor-rise/);
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.goto(`${base}/simulado-vespera-concurso/`);
-    await page.evaluate(() => window.scrollTo(0, 520));
+    await page.clock.fastForward(10_000);
     await anchor.waitFor({ state: 'visible' });
     await page.locator('#questoes').evaluate((quiz) => quiz.scrollIntoView({ block: 'start' }));
     await anchor.waitFor({ state: 'hidden' });
@@ -293,14 +294,19 @@ try {
     assert.ok(await page.locator('[data-slot="home-lateral-esquerda"]').isVisible());
     assert.ok(await page.locator('[data-slot="home-lateral-direita"]').isVisible());
     assert.ok(await page.locator('[data-slot="home-apos-aulas"] .offer-preview').isVisible());
-    await page.evaluate(() => window.scrollTo(0, 520));
+    await page.clock.fastForward(10_000);
     await anchor.waitFor({ state: 'visible' });
+    const fullWidth = await page.evaluate(() => document.documentElement.clientWidth);
+    const desktopBounds = await anchor.boundingBox();
+    assert.ok(desktopBounds && desktopBounds.x === 0 && desktopBounds.width === fullWidth);
+    assert.equal(desktopBounds.y + desktopBounds.height, 900);
     if (screenshotDir) await anchor.screenshot({ path: path.join(screenshotDir, 'gerador-rodape-desktop.png') });
     await anchor.getByRole('button', { name: 'Fechar banner do Gerador' }).click();
     assert.equal(await anchor.isVisible(), false);
-    await page.goto(`${base}/nocoes-de-informatica/`);
-    await page.evaluate(() => window.scrollTo(0, 520));
+    await page.clock.fastForward(8_000);
     assert.equal(await anchor.isVisible(), false);
+    await page.clock.fastForward(2_000);
+    await anchor.waitFor({ state: 'visible' });
   });
   for (const width of [320, 390, 768, 1440]) for (const theme of ['dark', 'light']) await check(`reading and filter contrast ${width}px ${theme}`, async () => {
     await page.setViewportSize({ width, height: 900 });

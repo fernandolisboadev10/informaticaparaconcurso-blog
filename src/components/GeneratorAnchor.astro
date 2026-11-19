@@ -1,41 +1,48 @@
 ---
 import StudyOffer from './StudyOffer.astro';
 ---
-<div class="generator-anchor" id="generator-anchor" hidden>
-  <StudyOffer product="gerador" placement="rodape-flutuante" format="anchor" label="Começar grátis" />
-  <button type="button" aria-label="Fechar banner do Gerador">×</button>
+<div class="generator-anchor" id="generator-anchor" data-interval="10000" hidden>
+  <div class="anchor-content">
+    <StudyOffer product="gerador" placement="rodape-flutuante" format="anchor" label="Começar grátis" />
+    <button type="button" aria-label="Fechar banner do Gerador">×</button>
+  </div>
 </div>
 
 <script>
-  const key = 'generator-anchor-dismissed';
-  const anchor = document.querySelector<HTMLElement>('#generator-anchor');
-  if (anchor) {
+  const banner = document.querySelector<HTMLElement>('#generator-anchor');
+  if (banner) {
+    const anchor = banner;
+    const interval = Number(anchor.dataset.interval);
     const cookies = document.getElementById('cookie-banner');
     const quiz = document.getElementById('questoes');
-    let dismissed = false;
     let quizInView = false;
-    try { dismissed = sessionStorage.getItem(key) === '1'; } catch { /* The banner can still be closed. */ }
+    let nextAppearance = performance.now() + interval;
+    let timer: number | undefined;
 
     function update() {
-      if (anchor) anchor.hidden = dismissed || quizInView || (cookies !== null && !cookies.hidden) || window.scrollY < 300;
+      window.clearTimeout(timer);
+      if (document.hidden || quizInView || (cookies && !cookies.hidden)) {
+        anchor.hidden = true;
+        return;
+      }
+      const remaining = nextAppearance - performance.now();
+      anchor.hidden = remaining > 0;
+      if (remaining > 0) timer = window.setTimeout(update, remaining);
     }
 
     anchor.querySelector('button')?.addEventListener('click', () => {
-      dismissed = true;
-      try { sessionStorage.setItem(key, '1'); } catch { /* Keep dismissed for the current page. */ }
+      nextAppearance = performance.now() + interval;
       update();
     });
-    if (!dismissed) {
-      if (cookies) new MutationObserver(update).observe(cookies, { attributes: true, attributeFilter: ['hidden'] });
-      if (quiz && 'IntersectionObserver' in window) {
-        new IntersectionObserver(([entry]) => {
-          quizInView = entry.isIntersecting;
-          update();
-        }).observe(quiz);
-      }
-      window.addEventListener('scroll', update, { passive: true });
-      update();
+    if (cookies) new MutationObserver(update).observe(cookies, { attributes: true, attributeFilter: ['hidden'] });
+    if (quiz && 'IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => {
+        quizInView = entry.isIntersecting;
+        update();
+      }).observe(quiz);
     }
+    document.addEventListener('visibilitychange', update);
+    update();
   }
 </script>
 
@@ -64,9 +71,23 @@ import StudyOffer from './StudyOffer.astro';
     font: 600 24px/1 var(--font-body);
     cursor: pointer;
   }
+  .anchor-content { position: relative; margin-inline: auto; }
   .generator-anchor button:hover, .generator-anchor button:focus-visible { background: #314867; }
   :global(body:has(#generator-anchor:not([hidden]))) { padding-bottom: 104px; }
   :global(body:has(#generator-anchor:not([hidden])) #back-to-top) { bottom: calc(108px + env(safe-area-inset-bottom, 0px)); }
+  @media (min-width: 1024px) {
+    .generator-anchor {
+      width: 100%;
+      bottom: 0;
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      border-top: 1px solid #406171;
+      border-radius: 0;
+      background: #12283b;
+    }
+    .anchor-content { max-width: 860px; padding-inline: 12px; }
+    .anchor-content :global(.study-offer.anchor) { border: 0; border-radius: 0; }
+    .generator-anchor button { inset-inline-end: 17px; }
+  }
   @media (prefers-reduced-motion: no-preference) {
     .generator-anchor:not([hidden]) { animation: anchor-rise .4s cubic-bezier(.2,.8,.3,1) both; }
     @keyframes anchor-rise { from { translate: 0 110%; } }
