@@ -76,6 +76,7 @@ await check('sales page and offers are present in the selected placements', asyn
   for (const [file, placement] of [
     ['index.html', 'home-trilha'],
     ['index.html', 'home-simulados'],
+    ['index.html', 'home-apos-aulas'],
     ['cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/index.html', 'artigo-entre-secoes'],
     ['simulado-cebraspe-informatica/index.html', 'simulado-resultado'],
     ['questoes/index.html', 'questoes-resultado'],
@@ -247,7 +248,10 @@ try {
     await page.evaluate(() => window.scrollTo(0, 520));
     await anchor.waitFor({ state: 'visible' });
     if (screenshotDir) await anchor.screenshot({ path: path.join(screenshotDir, 'gerador-rodape-celular.png') });
-    assert.equal(await anchor.locator('strong').isVisible(), false);
+    assert.equal(await anchor.locator('strong').innerText(), 'Questões para sua banca');
+    assert.equal(await anchor.locator('[data-banner-link]').evaluate((el) => getComputedStyle(el).backgroundColor), 'rgb(199, 243, 108)');
+    const anchorBounds = await anchor.boundingBox();
+    assert.ok(anchorBounds && anchorBounds.x >= 0 && anchorBounds.x + anchorBounds.width <= 390 && anchorBounds.height < 104);
     assert.equal(await anchor.locator('[data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
     assert.equal(await anchor.evaluate((el) => getComputedStyle(el).animationName), 'none');
     await page.emulateMedia({ reducedMotion: 'no-preference' });
@@ -263,8 +267,10 @@ try {
     await page.goto(`${base}/`);
     assert.ok(await page.locator('[data-slot="home-lateral-esquerda"]').isVisible());
     assert.ok(await page.locator('[data-slot="home-lateral-direita"]').isVisible());
+    assert.ok(await page.locator('[data-slot="home-apos-aulas"] .offer-preview').isVisible());
     await page.evaluate(() => window.scrollTo(0, 520));
     await anchor.waitFor({ state: 'visible' });
+    if (screenshotDir) await anchor.screenshot({ path: path.join(screenshotDir, 'gerador-rodape-desktop.png') });
     await anchor.getByRole('button', { name: 'Fechar banner do Gerador' }).click();
     assert.equal(await anchor.isVisible(), false);
     await page.goto(`${base}/nocoes-de-informatica/`);

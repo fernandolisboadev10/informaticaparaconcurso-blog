@@ -2,7 +2,7 @@
 import StudyOffer from './StudyOffer.astro';
 ---
 <div class="generator-anchor" id="generator-anchor" hidden>
-  <StudyOffer product="gerador" placement="rodape-flutuante" format="anchor" label="Montar meu treino" />
+  <StudyOffer product="gerador" placement="rodape-flutuante" format="anchor" label="Começar grátis" />
   <button type="button" aria-label="Fechar banner do Gerador">×</button>
 </div>
 
@@ -43,21 +43,23 @@ import StudyOffer from './StudyOffer.astro';
   .generator-anchor {
     position: fixed;
     inset-inline: 0;
-    bottom: env(safe-area-inset-bottom, 0px);
+    bottom: calc(8px + env(safe-area-inset-bottom, 0px));
     z-index: 39;
-    width: min(580px, calc(100% - 16px));
+    width: min(620px, calc(100% - 20px));
     margin-inline: auto;
-    box-shadow: 0 -4px 28px #030b1f50;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px #030b1f38;
   }
   .generator-anchor button {
     position: absolute;
-    inset-inline-end: 3px;
-    top: 4px;
+    inset-inline-end: 5px;
+    top: 50%;
+    translate: 0 -50%;
     width: 36px;
     height: 36px;
     border: 0;
     border-radius: 8px;
-    background: transparent;
+    background: #203d53;
     color: #f6f8ff;
     font: 600 24px/1 var(--font-body);
     cursor: pointer;
