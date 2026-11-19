@@ -249,7 +249,11 @@ try {
     await anchor.waitFor({ state: 'visible' });
     if (screenshotDir) await anchor.screenshot({ path: path.join(screenshotDir, 'gerador-rodape-celular.png') });
     assert.equal(await anchor.locator('strong').innerText(), 'Questões para sua banca');
-    assert.equal(await anchor.locator('[data-banner-link]').evaluate((el) => getComputedStyle(el).backgroundColor), 'rgb(199, 243, 108)');
+    const buttonColors = (el) => {
+      const style = getComputedStyle(el);
+      return [style.backgroundColor, style.color, style.fontWeight];
+    };
+    assert.deepEqual(await anchor.locator('[data-banner-link]').evaluate(buttonColors), ['rgb(185, 245, 0)', 'rgb(0, 0, 0)', '800']);
     const anchorBounds = await anchor.boundingBox();
     assert.ok(anchorBounds && anchorBounds.x >= 0 && anchorBounds.x + anchorBounds.width <= 390 && anchorBounds.height < 104);
     assert.equal(await anchor.locator('[data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
@@ -265,6 +269,9 @@ try {
 
     await page.setViewportSize({ width: 1600, height: 900 });
     await page.goto(`${base}/`);
+    const apostila = page.locator('[data-slot="home-trilha"]');
+    assert.deepEqual(await apostila.locator('[data-banner-link]').evaluate(buttonColors), ['rgb(255, 218, 68)', 'rgb(0, 0, 0)', '800']);
+    if (screenshotDir) await apostila.screenshot({ path: path.join(screenshotDir, 'apostila-amarelo-natural.png') });
     assert.ok(await page.locator('[data-slot="home-lateral-esquerda"]').isVisible());
     assert.ok(await page.locator('[data-slot="home-lateral-direita"]').isVisible());
     assert.ok(await page.locator('[data-slot="home-apos-aulas"] .offer-preview').isVisible());
