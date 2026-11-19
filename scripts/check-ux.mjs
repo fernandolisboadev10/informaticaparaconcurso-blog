@@ -225,6 +225,9 @@ try {
     assert.equal(await mobileApostila.isVisible(), false);
     const phone = right.locator('[data-question-phone]');
     assert.ok(await phone.isVisible());
+    const phoneBounds = await phone.boundingBox();
+    assert.ok(phoneBounds && phoneBounds.height / phoneBounds.width >= 1.65);
+    assert.notEqual(await phone.evaluate((el) => getComputedStyle(el).transform), 'none');
     await phone.getByRole('button', { name: 'Certo', exact: true }).click();
     assert.match(await phone.locator('.demo-feedback').innerText(), /Você acertou/);
     await phone.getByRole('button', { name: 'Gerar exemplo' }).click();
@@ -236,6 +239,7 @@ try {
     if (screenshotDir) {
       await mkdir(screenshotDir, { recursive: true });
       await page.screenshot({ path: path.join(screenshotDir, 'laterais-desktop.png') });
+      await phone.screenshot({ path: path.join(screenshotDir, 'celular-3d.png') });
     }
     await page.setViewportSize({ width: 390, height: 844 });
     assert.equal(await left.isVisible(), false);

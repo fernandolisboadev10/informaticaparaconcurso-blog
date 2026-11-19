@@ -88,57 +88,81 @@ const examples = [
 <style>
   .phone {
     position: relative;
+    display: flex;
     width: 100%;
     max-width: 206px;
     min-width: 0;
-    margin: 10px auto 0;
-    padding: 19px 5px 12px;
-    border: 2px solid #53657c;
-    border-radius: 19px;
-    background: #070f1e;
-    box-shadow: inset 0 0 0 2px #030815, 0 10px 17px #0005;
+    min-height: clamp(336px, calc(100svh - 228px), 385px);
+    margin: 12px auto 2px;
+    padding: 32px 6px 15px;
+    border: 2px solid #636d69;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #202823 0%, #0b100e 34%, #050806 88%);
+    box-shadow: inset 1px 1px 1px #b6c3b073, inset -2px -2px 0 #010302, 3px 1px 0 #333b36, 5px 2px 0 #101612, 8px 12px 17px #0008;
+    transform: perspective(850px) rotateY(-10deg) rotateX(3deg);
   }
   .phone::before, .phone::after {
     content: '';
     position: absolute;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+  .phone::before {
+    top: 8px;
     left: 50%;
     translate: -50% 0;
-    border-radius: 8px;
+    width: 52px;
+    height: 13px;
+    background: radial-gradient(circle at 78% 50%, #283e52 0 2px, transparent 3px), #020403;
   }
-  .phone::before { top: 6px; width: 30px; height: 6px; background: #273952; }
-  .phone::after { bottom: 5px; width: 31px; height: 3px; background: #617592; }
+  .phone::after { right: -5px; top: 79px; width: 3px; height: 31px; background: #89938b; }
   .screen {
-    display: grid;
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
     gap: 7px;
-    padding: 8px;
-    border-radius: 11px;
-    background: #152541;
+    padding: 10px 8px 14px;
+    border-radius: 14px;
+    background: radial-gradient(ellipse at top right, #344b12a0, transparent 52%), #111611;
     color: #f6f8ff;
     font: 400 .76rem/1.4 var(--font-body);
   }
+  .screen::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    translate: -50% 0;
+    width: 43px;
+    height: 3px;
+    border-radius: 8px;
+    background: #7a867d;
+  }
   .screen p { margin: 0; }
-  .demo-status { color: #9bddff; font-weight: 700; }
+  .demo-status { color: #b9f500; font-weight: 700; }
   .demo-question { min-height: 3.8em; }
-  .demo-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+  .demo-options { display: grid; gap: 5px; }
   button {
-    min-height: 28px;
-    padding: 4px 2px;
-    border: 1px solid #59708c;
-    border-radius: 5px;
+    min-height: 31px;
+    padding: 4px 7px;
+    border: 1px solid #4d6053;
+    border-radius: 7px;
     color: inherit;
-    background: #0e1b30;
+    background: #0a110c;
     font: 650 .72rem/1.3 var(--font-body);
     cursor: pointer;
   }
-  button:hover, button:focus-visible { border-color: #9bddff; }
-  button:focus-visible { outline: 2px solid #9bddff; outline-offset: 2px; }
-  button:disabled { cursor: default; color: #bfcee0; }
-  button[data-result="correct"] { color: #c1ffd6; border-color: #83dca3; }
-  .demo-feedback { color: #c4d1e4; }
-  .demo-next { color: #9bddff; }
+  button:hover, button:focus-visible { border-color: #b9f500; }
+  button:focus-visible { outline: 2px solid #b9f500; outline-offset: 2px; }
+  button:disabled { cursor: default; color: #c8d3ca; }
+  button[data-result="correct"] { color: #d4ffad; border-color: #95d239; background: #202e10; }
+  .demo-feedback { color: #c8d3ca; }
+  .demo-next { margin-top: auto; color: #b9f500; }
   @media (prefers-reduced-motion: no-preference) {
     [data-generating] .demo-question {
-      background: linear-gradient(105deg, #203554 20%, #406388 50%, #203554 80%);
+      background: linear-gradient(105deg, #22311c 20%, #485e26 50%, #22311c 80%);
       background-size: 220% 100%;
       border-radius: 5px;
       animation: phone-generating .54s ease-in-out both;
