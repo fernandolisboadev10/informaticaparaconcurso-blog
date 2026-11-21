@@ -1,10 +1,11 @@
 ---
-title: "Concurso Público 2026: Maiores Concursos Abertos Agora"
-seoTitle: "Concurso Público 2026: Maiores Concursos Abertos Agora"
-description: "Concurso público 2026: lista dos maiores editais com inscrição aberta, com vaga, salário, banca, prazo e data da prova, e como escolher o seu."
+title: "Concursos públicos 2026: editais e prazos de inscrição"
+seoTitle: "Concursos públicos 2026: editais e prazos de inscrição"
+description: "Veja os prazos de inscrição e datas de prova de TRF 3, IBGE, TRT 4 e TJ-SP, com links para as bancas e os editais oficiais."
 category: "Concursos"
 date: 2026-10-31T20:55:00-03:00
-readingTime: "8 min"
+updated: 2026-11-21T12:41:00-03:00
+readingTime: "4 min"
 tags: ["Concurso Público 2026", "Concursos Abertos", "Editais", "Inscrições Abertas", "Noções de Informática"]
 image: "./images/concurso-publico-2026.webp"
 imageAlt: "Concurseira estudando à noite em um quarto iluminado por abajur, marcando prazos de concursos em um calendário no celular, cercada de livros, apostilas e anotações"
@@ -14,67 +15,55 @@ related:
   - cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica
 ---
 
-Novembro é um dos meses mais movimentados do ano para quem quer **concurso público 2026**: vários editais grandes ainda estão com inscrição aberta, e muitos fecham nos próximos dias. A lista abaixo reúne os maiores, ordenada pelo **prazo final de inscrição**, para você ver primeiro o que está mais perto de encerrar.
+Na consulta de **21 de novembro de 2026**, TRF 3, TRT 4 e TJ-SP tinham concursos com inscrição aberta, assim como a seleção temporária do IBGE. Os links da tabela levam às páginas oficiais. Confira nelas o edital e eventuais retificações antes de se inscrever.
 
-Os dados foram conferidos em páginas de acompanhamento de concursos e nos editais, em 31 de outubro de 2026. Prazos e vagas podem mudar por retificação, então confirme sempre no edital antes de pagar a taxa.
+## Inscrições abertas na consulta de 21/11/2026
 
-## Concursos abertos em ordem de prazo
+| Seleção | Vagas | Remuneração inicial | Inscrições até | Prova prevista |
+| --- | --- | --- | --- | --- |
+| [TRF 3 (SP e MS)](https://www.vunesp.com.br/TRFT2601) | 11 + cadastro de reserva | R$ 9.776,73 a R$ 20.013,11, conforme o cargo | 23/11/2026 | 31/01/2027 |
+| [IBGE (recenseador)](https://ftp.ibge.gov.br/edital/PSS_Censo_Agro/2026_03/) | 27.279 temporárias | R$ 1.741,00 de parcela fixa mensal, mais produtividade | 25/11/2026 | 31/01/2027 |
+| [TRT 4 (RS)](https://www.concursosfcc.com.br/concursos/trt4r125/index.html) | Cadastro de reserva | R$ 9.776,71 para técnico ou R$ 16.040,88 para analista | 25/11/2026 | 31/01/2027 |
+| [TJ-SP (oficial de justiça)](https://www.vunesp.com.br/TJSP2602) | 132 | R$ 9.856,95 | 10/12/2026 | 14/03/2027 |
 
-| Concurso | Banca | Vagas | Salário inicial | Inscrição até | Prova |
-| --- | --- | --- | --- | --- | --- |
-| Sefaz SP | FCC | 60 | R$ 11.359,50 | 3/11 | a confirmar |
-| Alepa (PA) | Cetap | 135 + cadastro de reserva | R$ 10.353,64 | 4/11 | 13/12/2026 |
-| PM PE (Soldado) | AOCP | 1.250 | R$ 12.937,33 | 5/11 | a confirmar |
-| Bombeiros PE | AOCP | 570 | R$ 12.937,33 | 5/11 | a confirmar |
-| TRT 8 (PA e AP) | FCC | cadastro de reserva | R$ 16.040,88 | 5/11 | 17/1/2027 |
-| PM SC (Soldado) | AOCP | 500 | R$ 8.505,00 | 16/11 | 13/12/2026 |
-| Câmara dos Deputados | Cebraspe | 66 + 118 de reserva | R$ 32.070,88 | 17/11 | 17/1/2027 |
-| GCM São Gonçalo (RJ) | Selecon | 100 + 500 de reserva | R$ 3.172,96 | 18/11 | 24/1/2027 |
-| TRF 3 (SP e MS) | Vunesp | 11 + cadastro de reserva | R$ 16.040,87 | 23/11 (abre em 4/11) | 31/1/2027 |
-| TRT 4 (RS) | FCC | cadastro de reserva | R$ 16.040,88 | 25/11 | 31/1/2027 |
-| TJ-SP (Oficial de Justiça) | Vunesp | 132 + cadastro de reserva | R$ 9.856,95 | 10/12 | 14/3/2027 |
+TRF 3, TRT 4 e IBGE têm prova prevista para o mesmo dia. Antes de pagar mais de uma taxa, compare os horários, as cidades de prova e o tempo de deslocamento. No IBGE, veja também como funciona a [remuneração por produção e o pagamento da inscrição](/concurso-ibge-2026/).
 
-Salários são os iniciais divulgados nos editais ou nas páginas de acompanhamento. Em alguns casos o valor inclui gratificações.
+## Prazos encerrados da edição anterior
 
-## Os que merecem atenção especial
+Estas são as datas de inscrição registradas na edição anterior. Para quem já se inscreveu, a banca publica os próximos avisos.
 
-**Câmara dos Deputados.** É o maior salário da lista, com R$ 32.070,88 para Analista Legislativo, em Brasília. São 66 vagas imediatas e 118 de cadastro de reserva, com prova em 17 de janeiro de 2027 e taxa de R$ 130,00. O edital passou por retificação em outubro, que mudou requisitos de várias especialidades, então vale ler a versão atualizada. O concurso anterior da Casa teve mais de 86 mil inscritos, o que mostra a concorrência.
-
-**PM PE e Bombeiros PE.** Juntos passam de 1.800 vagas e fecham no mesmo dia, 5 de novembro. O edital da Polícia Militar está detalhado em [concurso PM PE 2026](/concurso-pm-pe-2026/), com o conteúdo de Informática.
-
-**PM SC.** São 500 vagas de Soldado, banca AOCP e prova já marcada para 13 de dezembro, uma das datas mais próximas da lista. Quem se inscrever precisa começar a estudar agora.
-
-**TRT 8 e TRT 4.** Os dois tribunais têm cadastro de reserva, salário de Analista acima de R$ 16 mil e a mesma banca, a FCC. Se você escolher um, dá para aproveitar boa parte do estudo no outro. O conteúdo de Informática do TRT 8 está em [concurso TRT 8 2026](/concurso-trt-8-2026/).
-
-**TRF 3.** As inscrições abrem em 4 de novembro e vão até 23 de novembro, pelo site da Vunesp. São apenas 11 vagas imediatas, mas o cadastro de reserva é o que atrai a maioria dos candidatos.
-
-**TJ-SP.** O prazo mais longo da lista, até 10 de dezembro, com a prova só em março de 2027. É o que dá mais tempo de preparo.
+| Seleção | Prazo informado na edição anterior |
+| --- | --- |
+| Sefaz SP | 03/11/2026 |
+| Alepa (PA) | 04/11/2026 |
+| PM PE (soldado) | 05/11/2026 |
+| Bombeiros PE | 05/11/2026 |
+| TRT 8 (PA e AP) | 05/11/2026 |
+| PM SC (soldado) | 16/11/2026 |
+| [Câmara dos Deputados (analista legislativo)](https://www.cebraspe.org.br/concursos/cd_26_analista) | 17/11/2026 |
+| GCM São Gonçalo (RJ) | 18/11/2026 |
 
 ## E o concurso da Petrobras?
 
-É o termo que mais cresceu nas buscas, mas o edital **ainda não foi publicado**. Por isso ele não está na tabela. O que existe é expectativa de edital com a banca Cesgranrio, e o concurso da Transpetro, do mesmo grupo, que já fechou as inscrições. Tudo isso está explicado em [concurso Petrobras 2026](/concurso-petrobras-2026/).
+O [guia do concurso Petrobras 2026](/concurso-petrobras-2026/) reúne os canais para acompanhar um novo edital, além do histórico de seleções do grupo.
 
 ## Como escolher em qual se inscrever
 
 Com tanta opção, o erro comum é se inscrever em todos e não estudar para nenhum. Três perguntas ajudam a decidir:
 
-1.  **Quanto tempo falta para a prova?** A prova da PM SC é em dezembro, a do TRT 8 em janeiro e a do TJ-SP em março. Quem tem pouco tempo deve priorizar o prazo curto só se já estudou aquele conteúdo;
-2.  **Qual é a banca?** Cada banca tem um estilo. A Cebraspe usa Certo ou Errado, e a FCC e a AOCP costumam usar múltipla escolha. Treinar com provas anteriores da banca pesa mais do que ler mais teoria;
-3.  **O cargo combina com a sua formação?** TRT, TRF e Câmara pedem nível superior. As polícias militares e os bombeiros pedem ensino médio.
+1. **Quanto tempo falta para a prova?** Compare o tempo disponível com o conteúdo que você ainda precisa estudar.
+2. **Qual é o formato da prova?** Confira se o edital prevê prova objetiva, discursiva ou outra etapa. Use questões da banca para treinar.
+3. **O cargo combina com a sua formação?** Confira os requisitos do cargo e da especialidade antes de pagar a taxa.
 
 Para organizar a rotina de estudo, o artigo [como estudar para concurso](/como-estudar-para-concurso/) mostra como dividir o tempo entre teoria, questões e revisão.
 
 ## Informática cai nesses concursos?
 
-Na maioria dos editais de tribunal e de polícia, sim, com peso pequeno e pegadinhas conhecidas. O programa varia: tribunais da FCC cobram Windows 10 e 11 e Google Workspace, enquanto a Cebraspe prefere redes, segurança e navegadores. Reúna o conteúdo na página de [Noções de Informática](/nocoes-de-informatica/) e, se a sua prova for da Cebraspe, leia [como a Cebraspe cobra Informática](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/).
+Consulte o conteúdo programático do seu cargo. Alguns editais incluem noções de informática para todos os candidatos. Outros reservam a matéria a cargos específicos de tecnologia. Se a disciplina estiver no seu edital, use o guia de [Noções de Informática](/nocoes-de-informatica/) para organizar a revisão.
 
-## Como esta lista é atualizada
+## Fontes oficiais
 
-Os prazos mudam o tempo todo. A cada revisão, esta página recebe a data de atualização, e os concursos com inscrição encerrada saem da tabela enquanto os novos editais entram. Antes de se inscrever, abra o edital no site da banca e confira vagas, requisitos e datas.
-
-## Fontes e Referências
-
--   Direção Concursos. Editais de concurso público abertos em outubro de 2026: [direcaoconcursos.com.br](https://www.direcaoconcursos.com.br/noticias/concurso-publico-abertos-outubro-2026)
--   Acheconcursos. Concursos abertos na semana de 26 de outubro: [acheconcursos.com.br](https://www.acheconcursos.com.br/noticias/concursos-abertos-35-orgaos-abrem-inscricoes-na-semana-de-26-de-outubro-94167)
--   Focus Concursos. Concurso TRF 3: edital publicado com salários de até R$ 20 mil: [noticias.focusconcursos.com.br](https://noticias.focusconcursos.com.br/noticias/concurso-trf-3-edital-publicado-com-salarios-de-ate-r-20-mil)
--   Concursos no Brasil. Concurso da Câmara dos Deputados é retificado: [concursosnobrasil.com](https://concursosnobrasil.com/noticia/2026/10/23/concurso-camara-dos-deputados-e-retificado-com-alteracao-de-vagas/)
+- TRF 3. [Comunicado do concurso com links para o edital de abertura e a retificação](https://web.trf3.jus.br/noticias/Noticiar/ExibirNoticia/447699-inscricoes-abertas-para-concurso-de-servidores-da).
+- IBGE. [Edital nº 03/2026 e anexos da seleção de recenseador](https://ftp.ibge.gov.br/edital/PSS_Censo_Agro/2026_03/EDITAL_03_2026_PSS_RECENSEADOR_IBGE.pdf).
+- Fundação Carlos Chagas. [Edital nº 01/2026 e inscrições do TRT 4](https://www.concursosfcc.com.br/concursos/trt4r125/index.html).
+- TJ-SP. [Publicação do edital de oficial de justiça e data prevista de prova](https://www.tjsp.jus.br/Imprensa/Noticias/Noticia?codigoNoticia=115772&pagina=1).

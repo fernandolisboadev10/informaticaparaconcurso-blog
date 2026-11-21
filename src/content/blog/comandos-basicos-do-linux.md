@@ -83,4 +83,4 @@ Ler sobre comandos e digitar comandos são duas habilidades diferentes, e só a 
 
 **[Pratique agora, sem instalar nada: clique aqui e abra o terminal Linux interativo.](/linux.html)** Teste os comandos deste artigo direto no navegador. Nada fica salvo, então pode errar à vontade.
 
-📚 Mais conteúdos de Informática para concursos: [fernandolisboa.pro](https://fernandolisboa.pro)
+Veja [mais aulas de Informática para concursos](/blog/).

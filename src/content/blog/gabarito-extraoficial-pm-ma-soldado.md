@@ -1,11 +1,11 @@
 ---
-title: "Gabarito PM MA 2026 Soldado: Oficial Preliminar da Cebraspe (120 Questões)"
-description: "Gabarito oficial preliminar da PM MA 2026 para Soldado, com as 120 respostas, o que mudou em relação ao extraoficial e a Informática comentada item a item."
+title: "Gabarito PM MA 2026 Soldado: Definitivo da Cebraspe (120 Questões)"
+description: "Confira o gabarito oficial definitivo da PM MA 2026 para Soldado, os seis itens anulados e os comentários de Informática."
 category: "Concursos"
 date: 2026-10-12T09:30:00-03:00
-updated: 2026-11-06T07:11:00-03:00
+updated: 2026-11-21T12:41:00-03:00
 readingTime: "12 min"
-tags: ["Gabarito Extraoficial", "PM MA 2026", "Soldado", "Cebraspe", "Noções de Informática"]
+tags: ["Gabarito Definitivo", "PM MA 2026", "Soldado", "Cebraspe", "Noções de Informática"]
 image: "./images/gabarito-extraoficial-pm-ma-soldado.webp"
 imageAlt: "Candidato sério conferindo o gabarito, vestido metade com farda de policial militar e metade com roupa civil, simbolizando a aprovação quase conquistada"
 related:
@@ -14,53 +14,40 @@ related:
   - cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica
 ---
 
-A prova objetiva da PM MA para Soldado foi aplicada em 11 de outubro de 2026, e a pergunta que todo candidato fez logo depois foi a mesma: quantos pontos eu fiz? Enquanto o gabarito oficial da Cebraspe não saía, os cursinhos divulgaram o gabarito extraoficial, e é ele que permite estimar a sua nota.
+A Cebraspe publicou o **gabarito oficial definitivo** da prova de 11 de outubro de 2026 para o **Cargo 1, Soldado do Quadro de Praças (QP)** da PM MA. Foram anulados **seis itens**. O [resultado final das provas objetivas](https://cdn.cebraspe.org.br/concursos/pm_ma_26/arquivos/45C834502AE51291DF90DD2BB1BF93AE2D81354B284A5CB8E049035FE05DB85D.pdf) também já foi divulgado, com as convocações para as etapas seguintes.
 
-> **Atualização de 26 de outubro:** o gabarito oficial preliminar da Cebraspe já foi divulgado, e as respostas abaixo seguem esse gabarito. Dez itens mudaram em relação ao extraoficial, listados mais abaixo. Como o preliminar ainda pode ser alterado depois da análise dos recursos, confirme eventuais anulações e o resultado definitivo na [página do concurso na Cebraspe](https://www.cebraspe.org.br/concursos/pm_ma_26).
+Confira o código impresso no seu caderno antes de comparar a numeração. As respostas abaixo seguem os PDFs oficiais de [Conhecimentos Gerais, código 242_PM_MA_CG1_01](https://cdn.cebraspe.org.br/concursos/PM_MA_26/arquivos/07632E794FE98F91C9FEDBA147702CCC1CFB2C307727E98394EE440B43596F34.pdf) e [Conhecimentos Específicos, código 242_PM_MA_001_01](https://cdn.cebraspe.org.br/concursos/pm_ma_26/arquivos/BBEA8C47F247E0F63DC4F6D5115C88D732F0C216DF4FE5F21F86646BCBB1A55D.pdf). **C** significa Certo, **E** significa Errado e **X** indica item anulado.
 
-Neste artigo você encontra as 120 respostas na ordem da prova, a explicação da conta de pontos, as notas mínimas do edital, as datas do gabarito oficial e dos recursos e, como o assunto aqui é Informática, o gabarito comentado dos 45 itens de Noções de Informática.
-
-## Aviso: o gabarito preliminar ainda pode mudar
-
-O gabarito abaixo é o **oficial preliminar** divulgado pela Cebraspe. Ele ainda pode ser alterado depois da análise dos recursos, com anulação ou mudança de resposta em alguns itens. Antes dele sair, o que circulava era o gabarito extraoficial dos cursinhos, e foi a comparação entre as duas versões que gerou a lista de mudanças mais abaixo. Como base do extraoficial, usamos a correção da Estratégia Concursos, conferida com a do Qconcursos.
-
-Outro cuidado importante: a numeração pode variar entre as fontes. Na comparação, os itens eram os mesmos, mas alguns blocos aparecem em ordem diferente de um gabarito para o outro. Portanto, confira cada resposta pelo **enunciado**, e não só pelo número, antes de tirar conclusões.
-
-## Gabarito oficial preliminar PM MA Soldado: conhecimentos gerais (1 a 50)
+## Gabarito oficial definitivo PM MA Soldado: conhecimentos gerais (1 a 50)
 
 **Língua Portuguesa (1 a 15):** 1 C · 2 E · 3 E · 4 C · 5 E · 6 C · 7 C · 8 C · 9 E · 10 E · 11 E · 12 C · 13 C · 14 C · 15 E
 
 **História do Brasil (16 a 21):** 16 C · 17 C · 18 E · 19 C · 20 E · 21 E
 
-**História do Maranhão (22 a 30):** 22 E · 23 C · 24 C · 25 C · 26 E · 27 C · 28 E · 29 C · 30 E
+**História do Maranhão (22 a 30):** 22 E · 23 C · 24 E · 25 X · 26 E · 27 C · 28 E · 29 X · 30 E
 
-**Geografia do Brasil (31 a 36):** 31 E · 32 C · 33 E · 34 C · 35 C · 36 E
+**Geografia do Brasil (31 a 36):** 31 E · 32 C · 33 E · 34 C · 35 X · 36 E
 
-**Geografia do Maranhão (37 a 45):** 37 C · 38 E · 39 C · 40 E · 41 E · 42 C · 43 C · 44 C · 45 E
+**Geografia do Maranhão (37 a 45):** 37 C · 38 E · 39 C · 40 E · 41 E · 42 E · 43 C · 44 C · 45 E
 
 **Raciocínio Lógico (46 a 50):** 46 E · 47 C · 48 C · 49 E · 50 E
 
-## Gabarito oficial preliminar PM MA Soldado: conhecimentos específicos (51 a 120)
+## Gabarito oficial definitivo PM MA Soldado: conhecimentos específicos (51 a 120)
 
-**Legislação Institucional (51 a 75):** 51 C · 52 C · 53 E · 54 E · 55 E · 56 E · 57 E · 58 C · 59 C · 60 C · 61 C · 62 C · 63 C · 64 E · 65 E · 66 C · 67 C · 68 C · 69 E · 70 E · 71 C · 72 E · 73 C · 74 E · 75 E
+**Legislação Institucional (51 a 75):** 51 C · 52 C · 53 E · 54 E · 55 E · 56 E · 57 E · 58 C · 59 C · 60 C · 61 C · 62 C · 63 C · 64 E · 65 E · 66 X · 67 C · 68 C · 69 E · 70 E · 71 C · 72 E · 73 C · 74 E · 75 E
 
-**Noções de Informática (76 a 120):** 76 C · 77 C · 78 C · 79 E · 80 E · 81 C · 82 C · 83 E · 84 E · 85 E · 86 C · 87 E · 88 C · 89 C · 90 E · 91 E · 92 C · 93 C · 94 C · 95 E · 96 C · 97 E · 98 E · 99 C · 100 E · 101 C · 102 C · 103 C · 104 E · 105 E · 106 E · 107 C · 108 E · 109 C · 110 C · 111 E · 112 C · 113 E · 114 E · 115 C · 116 C · 117 E · 118 C · 119 C · 120 E
+**Noções de Informática (76 a 120):** 76 C · 77 C · 78 C · 79 E · 80 E · 81 C · 82 C · 83 E · 84 E · 85 E · 86 C · 87 E · 88 C · 89 C · 90 E · 91 E · 92 C · 93 C · 94 C · 95 E · 96 C · 97 E · 98 E · 99 C · 100 E · 101 C · 102 C · 103 C · 104 E · 105 E · 106 E · 107 C · 108 X · 109 C · 110 C · 111 E · 112 C · 113 E · 114 E · 115 C · 116 X · 117 E · 118 C · 119 C · 120 E
 
-## O que mudou do extraoficial para o oficial
+## Quais itens foram anulados?
 
-Ao comparar o gabarito oficial preliminar com o extraoficial da Estratégia, **dez itens têm resposta diferente**. Se você corrigiu a sua prova pelo extraoficial, refaça a conta nestes itens:
+- **Conhecimentos Gerais (P1)** — itens 25, 29 e 35.
+- **Conhecimentos Específicos (P2)** — itens 66, 108 e 116. Os dois últimos são de Informática.
 
--   **História do Brasil (item 19):** o extraoficial dava Errado, e o oficial deu **Certo**.
--   **História do Maranhão (itens 24, 25 e 29):** o extraoficial dava Errado nos três, e o oficial deu **Certo** nos três.
--   **Geografia do Maranhão (item 42):** o extraoficial dava Errado, e o oficial deu **Certo**.
--   **Legislação Institucional (itens 68, 69, 72 e 74):** no item 68 o extraoficial dava Errado e o oficial deu **Certo**. Nos itens 69, 72 e 74 aconteceu o contrário: o extraoficial dava Certo e o oficial deu **Errado**.
--   **Noções de Informática (item 99):** o extraoficial dava Errado, e o oficial deu **Certo**. É o único item de Informática que mudou. O item 87, que tinha divergência entre os cursinhos, ficou **Errado**, como na Estratégia.
-
-Mesmo com o oficial, o resultado só fica fechado depois do julgamento dos recursos. Se a sua nota depende de algum desses itens para chegar a um mínimo, acompanhe a Cebraspe antes de qualquer conclusão.
+O item 99, sobre autenticação em dois fatores, consta como **Certo** no gabarito definitivo. O item 87, sobre filtros no Excel, consta como **Errado**.
 
 ## Informática da PM MA Soldado: gabarito comentado
 
-Esta é a parte que interessa ao concurseiro de Informática. A tabela segue a ordem da prova e traz, para cada um dos 45 itens, o gabarito oficial preliminar, o tema e o motivo da resposta. Como os enunciados são longos, o tema resume a ideia central, e é com ela que você confere o seu caderno.
+Esta é a parte que interessa ao concurseiro de Informática. A tabela segue a ordem da prova e traz, para cada um dos 45 itens, o gabarito oficial definitivo, o tema e o motivo da resposta. Como os enunciados são longos, o tema resume a ideia central, e é com ela que você confere o seu caderno.
 
 | Nº | Gab. | Tema | Por que está assim |
 | --- | --- | --- | --- |
@@ -75,7 +62,7 @@ Esta é a parte que interessa ao concurseiro de Informática. A tabela segue a o
 | 84 | E | Quebra de página manual | A quebra manual só faz o conteúdo seguinte começar em nova página, dentro do mesmo documento. Ela não cria outro arquivo. |
 | 85 | E | Cabeçalho no Word | Por padrão, o cabeçalho é vinculado ao da seção anterior, e a alteração se propaga pelas páginas da seção. Para um cabeçalho individual, é preciso criar uma quebra de seção e desmarcar “Vincular ao anterior”. |
 | 86 | C | Localizar e Substituir | Com “Substituir Tudo”, o Word troca todas as ocorrências de uma expressão por outra de uma só vez. |
-| 87 | E | Filtro no Excel | O filtro oculta temporariamente as linhas que não atendem ao critério, sem excluí-las, e elas voltam ao remover o filtro. Os cursinhos divergiram neste item, e o gabarito oficial preliminar confirmou **E**. |
+| 87 | E | Filtro no Excel | O filtro oculta temporariamente as linhas que não atendem ao critério, sem excluí-las, e elas voltam ao remover o filtro. Os cursinhos divergiram neste item, e o gabarito oficial definitivo confirmou **E**. |
 | 88 | C | Função CONT.SE | A CONT.SE conta as células que atendem a um critério. Em `=CONT.SE(B2:B100;"Furto")`, ela retorna quantas células contêm “Furto”. |
 | 89 | C | Controlar Alterações | Com o recurso ativo, o Word registra inserções, exclusões e mudanças de formatação, e cada uma pode ser aceita ou rejeitada. |
 | 90 | E | Numeração de páginas | O número de página é um campo atualizado automaticamente. Ao incluir páginas, não é preciso renumerar manualmente. |
@@ -87,7 +74,7 @@ Esta é a parte que interessa ao concurseiro de Informática. A tabela segue a o
 | 96 | C | Segurança da conexão no Chrome | O status da conexão aparece no ícone à esquerda do endereço do site, o cadeado ou o ícone de informações do site. |
 | 97 | E | Conversão de nomes em IP | Quem converte nomes de sites em endereços IP é o DNS. O FTP transfere arquivos. |
 | 98 | E | Filtros na pesquisa do Google | Os filtros personalizam apenas aquela busca. As configurações gerais, como idioma e SafeSearch, ficam em Configurações de pesquisa. |
-| 99 | C | Recurso de segurança do Instagram | **Item que mudou.** O extraoficial dava E, e o gabarito oficial preliminar deu **C**. O tema é a autenticação em dois fatores, recurso que exige um código em logins de dispositivos não reconhecidos. Releia o enunciado no seu caderno e acompanhe o resultado dos recursos. |
+| 99 | C | Recurso de segurança do Instagram | A autenticação em dois fatores pode exigir um código ao entrar por um dispositivo desconhecido. O item ficou como Certo no gabarito definitivo. |
 | 100 | E | Publicações inadequadas | Uma publicação só é removida quando viola os padrões da comunidade. Nos demais casos, restam opções como denunciar, ocultar, restringir ou bloquear. |
 | 101 | C | Pastas do usuário no Windows 11 (22H2 em diante) | As pastas padrão do usuário (Documentos, Imagens, Downloads e outras) continuam organizadas conforme o item descreve. As duas correções coincidem em C. |
 | 102 | C | Restaurar da Lixeira | Ao restaurar, o Windows devolve o arquivo à pasta de onde ele foi excluído. |
@@ -96,7 +83,7 @@ Esta é a parte que interessa ao concurseiro de Informática. A tabela segue a o
 | 105 | E | Compatibilidade entre plataformas | Não há compatibilidade ampla que garanta migração fácil. Cada provedor tem APIs e serviços próprios, o que gera dependência de fornecedor (*vendor lock-in*). Veja [SaaS, PaaS e IaaS](/saas-paas-iaas/). |
 | 106 | E | Varredura por assinatura | A assinatura identifica apenas ameaças já conhecidas. Bloquear ameaças desconhecidas é papel da detecção heurística ou comportamental. |
 | 107 | C | Controle de acesso | O princípio *need-to-know* limita o acesso ao que é indispensável às atribuições de cada agente, protegendo a confidencialidade. |
-| 108 | E | Firewall com inspeção de estado | O firewall *stateful* mantém uma tabela de estados e avalia o pacote no contexto da conexão. Quem analisa cada pacote isoladamente é o filtro estático. |
+| 108 | X | Firewall com inspeção de estado | Item anulado. Para revisão, o firewall *stateful* considera o estado da conexão ao avaliar os pacotes. |
 | 109 | C | Confirmação por código temporário | Senha mais código enviado ao dispositivo é autenticação multifator. Só a credencial roubada não basta para o acesso. |
 | 110 | C | Firewall pessoal | Ele pode bloquear conexões não autorizadas com base em regras sobre portas e endereços IP de origem e destino. |
 | 111 | E | Privilégios de administrador | Conceder privilégios de administrador para tarefas rotineiras contraria o princípio do menor privilégio e amplia a superfície de ataque. |
@@ -104,7 +91,7 @@ Esta é a parte que interessa ao concurseiro de Informática. A tabela segue a o
 | 113 | E | Worm | O worm se autorreplica pela rede e não depende de inserir seu código em arquivos executáveis. Essa dependência é característica do vírus. |
 | 114 | E | Cavalo de Troia | O trojan não se replica nem envia cópias aos contatos da vítima. Essa propagação é do worm, e a alteração do setor de inicialização é típica do vírus de boot. |
 | 115 | C | Ransomware | Ele criptografa os dados da vítima e condiciona a recuperação ao pagamento de um resgate. |
-| 116 | C | Recomposição de base de dados | A recomposição integral exige o backup completo mais cada incremental até a data do incidente. |
+| 116 | X | Recomposição de base de dados | Item anulado. Para revisão, uma restauração com backups incrementais usa o último backup completo e os incrementais seguintes até o ponto que se quer recuperar. |
 | 117 | E | Backup incremental | O incremental copia apenas o que mudou desde o último backup. Quem copia todos os arquivos a cada ciclo é o backup completo. |
 | 118 | C | Armazenamento em nuvem | Permite sincronizar pastas entre estações conectadas e facilita a recuperação de arquivos em caso de falha do disco local. |
 | 119 | C | Backup diferencial | Cada rotina registra tudo o que mudou desde o último backup completo, e não desde o último diferencial. Veja o artigo sobre [backup](/backup-seguranca-da-informacao/). |
@@ -116,19 +103,19 @@ Olhando os 45 itens, o padrão da Cebraspe aparece com clareza. Boa parte dos it
 
 Outro grupo é o das **afirmações absolutas ou incompletas**, em que o item exagera o alcance de uma ferramenta, como a senha principal que “protege tudo” (item 91) ou a nuvem que “garante compatibilidade” (item 105). Por fim, a prova cobrou bastante o **Linux e o Windows lado a lado**, com UID 0, systemd, PATH e atalhos de exclusão.
 
-Se você errou itens desses grupos, o caminho para o recurso e para as próximas provas é revisar justamente esses temas. O roteiro de [dicas para gabaritar Informática na Cebraspe](/informatica-cebraspe-pm-ma-2026/) e o artigo sobre [como a banca cobra Informática](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) ajudam a fixar esses padrões.
+Se você errou itens desses grupos, revise esses temas para as próximas provas. O roteiro de [dicas para gabaritar Informática na Cebraspe](/informatica-cebraspe-pm-ma-2026/) e o artigo sobre [como a banca cobra Informática](/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/) ajudam a fixar esses padrões.
 
 ## Como calcular a sua nota na prova da PM MA
 
-A Cebraspe usa o formato Certo ou Errado. Segundo o edital, cada resposta que coincide com o gabarito definitivo vale **1 ponto**, e cada resposta em discordância tira **1 ponto**. Item em branco ou com marcação dupla vale zero.
+Pelo item 8.13.2 do edital de abertura, cada acerto vale **1 ponto**, cada erro desconta **1 ponto** e cada item válido em branco ou com marcação dupla vale zero. O item 8.14.6.1 prevê que a pontuação de um item anulado seja atribuída a todos os candidatos.
 
-Na prática, a conta é simples:
+Para estimar sua nota, conte acertos e erros apenas nos itens válidos. Depois, some um ponto por item anulado no bloco.
 
--   **Nota = acertos − erros**, somando as duas provas;
--   a prova de Conhecimentos Gerais (P1) tem 50 itens, e a de Conhecimentos Específicos (P2) tem 70, e Informática está na P2, ao lado da Legislação Institucional;
--   a nota final nas provas objetivas é a soma das notas da P1 e da P2.
+- **P1 (50 itens)** — acertos menos erros, mais 3 pontos pelas anulações.
+- **P2 (70 itens)** — acertos menos erros, mais 3 pontos pelas anulações.
+- **Nota das objetivas** — soma das duas provas.
 
-Para fazer a sua estimativa, compare o seu caderno com o gabarito, conte acertos e erros de cada prova e aplique a conta. Se algum dos itens divergentes decidir o resultado, considere os dois cenários.
+Para saber sua nota e sua situação no concurso, use o [resultado final publicado pela Cebraspe](https://cdn.cebraspe.org.br/concursos/pm_ma_26/arquivos/45C834502AE51291DF90DD2BB1BF93AE2D81354B284A5CB8E049035FE05DB85D.pdf).
 
 ## Notas mínimas da PM MA: quanto preciso para não ser eliminado?
 
@@ -140,28 +127,15 @@ O edital fixa três pontuações mínimas. Ficar abaixo de qualquer uma delas el
 
 Atingir os mínimos, porém, não garante a aprovação. O candidato ainda precisa estar entre os mais bem classificados dentro do quantitativo previsto para o cargo e para a modalidade de concorrência.
 
-## Cronograma do gabarito oficial e dos recursos
+## Resultado e próximas etapas
 
-O gabarito oficial preliminar já saiu. Estas são as datas que constavam no cronograma do edital, mantidas aqui como registro:
+O Edital nº 8 informa o resultado final das provas objetivas e as convocações para as etapas seguintes. Para conferir seu nome, data, horário e local de convocação, acompanhe a [página do concurso na Cebraspe](https://www.cebraspe.org.br/concursos/pm_ma_26).
 
--   **13 a 15 de outubro:** consulta individual aos gabaritos oficiais preliminares, a partir das 19h do primeiro dia;
--   **16 de outubro:** divulgação dos gabaritos oficiais preliminares;
--   **14 de outubro, a partir das 10h, até as 18h de 15 de outubro:** prazo para recursos contra as questões e os gabaritos preliminares, no horário de Brasília.
+Para continuar estudando, faça o [simulado de véspera de Informática](/simulado-vespera-concurso/) ou revise os temas em [Noções de Informática](/nocoes-de-informatica/).
 
-Eventuais alterações de gabarito e anulações de itens só aparecem depois da análise dos recursos, em um novo gabarito divulgado pela Cebraspe. Por isso, acompanhe a página oficial do concurso, pois o cronograma pode ter sido retificado.
+## Fontes e referências
 
-## Como usar este gabarito para o recurso
-
-Antes de escrever qualquer recurso, siga uma ordem simples. Primeiro, marque no seu caderno os itens em que você discorda do gabarito. Em seguida, releia o enunciado procurando a palavra que decide o item. Por fim, busque a fundamentação na legislação, na documentação oficial ou em fonte técnica reconhecida, porque o recurso precisa ser objetivo e bem embasado.
-
-Lembre também que a banca só altera o gabarito quando o erro é demonstrado. Um item que você “achou ambíguo” precisa ter a ambiguidade explicada com base em fonte confiável.
-
-Enquanto o resultado definitivo não sai, vale aproveitar o tempo para revisar o que errou. O [simulado de véspera de Informática](/simulado-vespera-concurso/) é uma boa forma de medir se os temas da prova realmente fixaram, e a página de [Noções de Informática](/nocoes-de-informatica/) reúne os conteúdos do programa para a revisão.
-
-Boa sorte no resultado!
-
-## Fontes e Referências
-
--   Estratégia Concursos. Gabarito extraoficial PM MA 2026 Soldado: [concursos.estrategia.com](https://concursos.estrategia.com/portal/concurso-pm-ma-2026-gabarito-extraoficial-soldado/)
--   Qconcursos. Gabarito extraoficial PM MA 2026 Soldado: [folha.qconcursos.com](https://folha.qconcursos.com/n/concurso-pm-ma-gabarito-extraoficial)
--   Cebraspe. Página oficial do concurso PM MA 2026: [cebraspe.org.br/concursos/pm\_ma\_26](https://www.cebraspe.org.br/concursos/pm_ma_26)
+- Cebraspe. [Gabarito definitivo de Conhecimentos Gerais (P1)](https://cdn.cebraspe.org.br/concursos/PM_MA_26/arquivos/07632E794FE98F91C9FEDBA147702CCC1CFB2C307727E98394EE440B43596F34.pdf).
+- Cebraspe. [Gabarito definitivo de Conhecimentos Específicos (P2)](https://cdn.cebraspe.org.br/concursos/pm_ma_26/arquivos/BBEA8C47F247E0F63DC4F6D5115C88D732F0C216DF4FE5F21F86646BCBB1A55D.pdf).
+- Cebraspe. [Edital de abertura e regras de pontuação](https://cdn.cebraspe.org.br/concursos/PM_MA_26/arquivos/0D18A37FF7787E4389E776EBBFD096137879457949085D7FCE6FA75C174E510B.pdf).
+- Cebraspe. [Edital nº 8, resultado final das provas objetivas e convocações](https://cdn.cebraspe.org.br/concursos/pm_ma_26/arquivos/45C834502AE51291DF90DD2BB1BF93AE2D81354B284A5CB8E049035FE05DB85D.pdf).

@@ -4,6 +4,7 @@ seoTitle: "Concurso IBGE 2026: 27.279 vagas e prova em janeiro"
 description: "Edital do IBGE prevê 27.279 vagas temporárias de recenseador. Confira requisitos, remuneração, inscrições até 25/11 e o conteúdo da prova de janeiro."
 category: "Concursos"
 date: 2026-11-09T17:42:00-03:00
+updated: 2026-11-21T12:41:00-03:00
 draft: false
 readingTime: "12 min"
 tags: ["IBGE 2026", "Recenseador", "Cesgranrio", "Ensino Fundamental", "Censo Agropecuário"]
@@ -19,7 +20,7 @@ O **concurso IBGE 2026 para recenseador** prevê 27.279 vagas temporárias, exig
 
 Antes de olhar apenas o número de vagas, atenção a dois detalhes: a remuneração de até **R$ 4.370 depende de produtividade**, e o vínculo não é efetivo. Outro ponto muda a preparação: **Informática não aparece como disciplina na prova**. O programa reúne Português, Matemática e Conhecimentos Técnicos.
 
-Este guia foi elaborado a partir da cópia do edital de abertura analisada pela redação, incluindo seus anexos. As datas abaixo são as previstas nesse documento; eventuais retificações posteriores precisam ser conferidas nos canais da organizadora antes da inscrição.
+Este guia se baseia no edital de abertura, em seus anexos e na primeira retificação, publicada em 17 de novembro de 2026. A retificação atualizou as regras de pagamento. Confira os comunicados da organizadora antes da inscrição.
 
 ## Concurso IBGE 2026: resumo do edital
 
@@ -105,7 +106,9 @@ O caminho indicado no edital é o site da [Fundação Cesgranrio](https://www.ce
 4. Solicite isenção, se atender às condições, ou gere o pagamento pelos canais previstos.
 5. Acompanhe a confirmação e guarde os comprovantes de inscrição e pagamento.
 
-Para quem **não solicitar isenção**, o pagamento deve ocorrer até **27 de novembro**. O edital admite PagTesouro ou GRU, com as modalidades descritas no item 7.4; comprovante de agendamento bancário não prova quitação.
+Para quem **não solicitar isenção**, o pagamento deve ocorrer até **27 de novembro**. Pela [primeira retificação do edital](https://ftp.ibge.gov.br/edital/PSS_Censo_Agro/2026_03/Edital_03_2026_1a_retificacao.pdf), a **GRU deve ser paga exclusivamente no Banco do Brasil**. No PagTesouro, o Pix pode ser pago por QR Code ou código copia e cola, inclusive por outra instituição financeira. O cartão de crédito pode ter tarifa da operadora.
+
+Confira os horários dos canais do Banco do Brasil. Se houver feriado ou fechamento de agências, antecipe o pagamento ou use outro meio válido dentro do prazo. Guarde o comprovante de quitação.
 
 A conta gov.br de nível prata ou superior é recomendada na inscrição e **obrigatória nos procedimentos de admissão**, conforme o item 13.2. Vale regularizá-la com antecedência.
 
@@ -210,6 +213,7 @@ Antes de pagar, confira a página da seleção e as atualizações nos canais da
 
 ## Fontes e Referências
 
-- IBGE. **Edital nº 03/2026 — Processo Seletivo Simplificado para Recenseador do 12º Censo Agropecuário, Florestal e Aquícola**. Cópia em PDF de 143 páginas fornecida à redação e analisada em 9/11/2026. Itens 1, 3, 4, 7, 8, 10, 11, 12 e 13; Anexos I a IV. A conferência abrange esta cópia, sem confirmação independente de retificações posteriores.
+- IBGE. [Edital nº 03/2026 e anexos](https://ftp.ibge.gov.br/edital/PSS_Censo_Agro/2026_03/EDITAL_03_2026_PSS_RECENSEADOR_IBGE.pdf).
+- IBGE. [Primeira retificação do Edital nº 03/2026](https://ftp.ibge.gov.br/edital/PSS_Censo_Agro/2026_03/Edital_03_2026_1a_retificacao.pdf), publicada no Diário Oficial da União em 17/11/2026. Altera os subitens 7.4.1 e 7.6.
 - Fundação Cesgranrio. Canal da organizadora indicado no edital: [cesgranrio.org.br](https://www.cesgranrio.org.br/). Consulte a página específica da seleção para documentos, inscrição e apostila técnica.
 - Instituto Brasileiro de Geografia e Estatística. Portal institucional: [ibge.gov.br](https://www.ibge.gov.br/).
