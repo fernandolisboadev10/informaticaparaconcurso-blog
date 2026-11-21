@@ -4,7 +4,7 @@ title: "Política de Cookies"
 description: "Como o Informática para Concurso (informaticaparaconcurso.com.br) usa cookies."
 ---
 
-**Última atualização: 20 de outubro de 2026**
+**Última atualização: 21 de novembro de 2026**
 
 Esta Política de Cookies explica o que são cookies, como o Informática para Concurso os utiliza e quais são as suas opções em relação ao uso deles. Ao usar nosso site ([https://informaticaparaconcurso.com.br](https://informaticaparaconcurso.com.br)), você concorda com o uso de cookies conforme descrito nesta política.
 
@@ -16,24 +16,18 @@ O Informática para Concurso usa cookies por vários motivos:
 
 - **Cookies Essenciais**: necessários para o funcionamento correto do site.
 - **Cookies de Análise**: usamos ferramentas como o Google Analytics para entender como os visitantes interagem com nosso conteúdo (por exemplo, quais páginas são mais populares). Esses dados são anônimos.
-- **Cookies de Publicidade**: monetizamos nosso conteúdo por meio de redes de terceiros, como o Google AdSense. Esses cookies rastreiam seus hábitos de navegação para exibir anúncios relevantes.
 
 ## 3. Publicidade e Cookies de Terceiros
-**Google AdSense**  
-Usamos o Google AdSense para exibir anúncios. O Google utiliza cookies para exibir anúncios com base em visitas anteriores ao nosso site ou a outros sites.
-
-- O uso de cookies de publicidade pelo Google permite que ele e seus parceiros exibam anúncios com base na sua visita ao Informática para Concurso e/ou a outros sites na internet.
-- Você pode desativar a publicidade personalizada visitando as [Configurações de Anúncios do Google](https://www.google.com/settings/ads).
+O Google AdSense está desativado. Atualizaremos esta política quando o site passar a exibir anúncios.
 
 Hoje o site não usa links de afiliados. Se isso mudar, esta política será atualizada.
 
 ## 4. Como Controlar os Cookies
 
-Você pode mudar a sua escolha a qualquer momento pelo link **Configurações de cookies**, no rodapé do site. Visitantes da Europa e do Reino Unido são consultados antes de os cookies de análise e de publicidade serem carregados. Nos demais países eles são carregados por padrão, e você pode recusá-los no mesmo aviso.
+Você pode mudar a sua escolha a qualquer momento pelo link **Configurações de cookies**, no rodapé do site. O consentimento para cookies de análise começa desativado para visitantes com fuso horário europeu. Nos demais fusos, começa ativado e pode ser recusado no mesmo aviso.
 Você tem o direito de aceitar ou recusar cookies.
 
 - **Configurações do Navegador**: você pode configurar seu navegador para recusar todos ou alguns cookies, ou para avisá-lo quando um site tentar definir ou acessar cookies.
-- **Preferências de Anúncios**: você pode desativar o uso de cookies por fornecedores terceiros para publicidade baseada em interesses visitando [aboutads.info](https://www.aboutads.info/).
 
 Observe que, se você desativar ou recusar os cookies, algumas partes deste site podem ficar inacessíveis ou não funcionar corretamente.
 

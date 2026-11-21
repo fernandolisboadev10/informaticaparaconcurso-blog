@@ -1,12 +1,17 @@
 # Divulgação da apostila e do Gerador de Questões
 
-Esta pasta guarda os banners, imagens, amostras e a página de vendas da apostila fora das pastas que o Astro publica. O checkout de teste do Mercado Pago também está aqui. A página de acompanhamento em `/apostila/pagamento/` continua atendendo pedidos já iniciados.
+Esta pasta guarda os banners da Apostila e do Gerador de Questões, a página de vendas com checkout da Hotmart e suas imagens e amostras fora das pastas que o Astro publica. A página de acompanhamento em `/apostila/pagamento/` continua atendendo pedidos já iniciados.
 
-O blog encaminhava para a página do Gerador em `geradordequestoes.site`. A pasta guarda o banner, a demonstração e a configuração do link usados no blog. O Gerador tem hospedagem própria.
+O patch guarda os pontos de divulgação do blog e o carregamento do AdSense. A meta tag `google-adsense-account` e o `ads.txt` continuam disponíveis para verificação do site.
 
 ## Como reativar
 
-1. Copie os arquivos de `monetização/src/` e `monetização/public/` para as pastas `src/` e `public/` da raiz, mantendo os caminhos relativos.
+1. Copie a capa de `monetização/public/images/` e os arquivos da lista abaixo para seus caminhos originais em `src/`. `ApostilaBanner.astro`, `QuestoesCTA.astro`, `ApostilaCheckout.astro` e `teste-pagamento.astro` são de uma configuração anterior.
+
+   - `assets/apostila/`
+   - `components/ApostilaSample.astro`, `GeneratorAnchor.astro`, `QuestionPhoneDemo.astro`, `SalesArrow.astro` e `StudyOffer.astro`
+   - `data/apostila-samples.ts`, `apostila.ts` e `questoes.ts`
+   - `pages/apostila/index.astro`
 2. Na raiz do projeto, confira e reverta o patch para repor os pontos de divulgação. Se as páginas tiverem mudado e a conferência indicar conflito, use o patch como referência para recolocar os trechos.
 
    ```sh

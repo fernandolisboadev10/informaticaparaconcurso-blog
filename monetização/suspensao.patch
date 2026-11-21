@@ -1,521 +1,674 @@
 diff --git a/scripts/check-ux.mjs b/scripts/check-ux.mjs
-index bf3dbe0..7196b10 100644
+index ffeeb5e..f89a8a6 100644
 --- a/scripts/check-ux.mjs
 +++ b/scripts/check-ux.mjs
-@@ -13,6 +13,8 @@ const { chromium } = require(process.env.BLOG_PLAYWRIGHT_MODULE || 'playwright')
- const root = process.cwd();
- const dist = path.join(root, 'dist');
- const screenshotDir = process.env.BLOG_SCREENSHOT_DIR;
-+const pausedRoutes = ['apostila/index.html', 'apostila/teste-pagamento/index.html'];
-+const normalizeLineEndings = (source) => source.replaceAll('\r\n', '\n');
- let passed = 0;
- const failures = [];
- async function check(name, run) {
-@@ -22,30 +24,31 @@ async function check(name, run) {
-
- await check('advertising, consent, deployment, content and routing sources preserved', async () => {
-   for (const file of ['astro.config.mjs', 'public/ads.txt', 'public/robots.txt', 'public/CNAME', 'src/components/CookieBanner.astro', '.github/workflows/deploy.yml']) {
--    assert.equal(await readFile(path.join(root, file), 'utf8'), execFileSync('git', ['show', `HEAD:${file}`], { encoding: 'utf8' }), file);
-+    assert.equal(normalizeLineEndings(await readFile(path.join(root, file), 'utf8')), execFileSync('git', ['show', `HEAD:${file}`], { encoding: 'utf8' }), file);
+@@ -23,15 +23,11 @@ async function check(name, run) {
+   catch (error) { failures.push(name); console.error(`FAIL ${name}: ${error.message}`); }
+ }
+ 
+-await check('advertising, consent, deployment and routing sources preserved', async () => {
+-  for (const file of ['astro.config.mjs', 'public/ads.txt', 'public/robots.txt', 'public/CNAME', 'src/components/CookieBanner.astro', '.github/workflows/deploy.yml']) {
++await check('verification, deployment and routing sources preserved', async () => {
++  for (const file of ['astro.config.mjs', 'public/ads.txt', 'public/robots.txt', 'public/CNAME', '.github/workflows/deploy.yml']) {
+     assert.equal(normalizeLineEndings(await readFile(path.join(root, file), 'utf8')), execFileSync('git', ['show', `HEAD:${file}`], { encoding: 'utf8' }), file);
    }
-   const before = execFileSync('git', ['show', 'HEAD:src/layouts/BaseLayout.astro'], { encoding: 'utf8' });
-   const after = await readFile(path.join(root, 'src/layouts/BaseLayout.astro'), 'utf8');
-   const consentScript = (source) => source.match(/<script is:inline data-ads=[\s\S]*?<\/script>/)?.[0];
-   assert.ok(consentScript(before));
--  assert.equal(consentScript(after), consentScript(before));
-+  assert.equal(consentScript(normalizeLineEndings(after)), consentScript(before));
-   for (const file of (await readdir(path.join(root, 'src/content/blog'))).filter((name) => name.endsWith('.md'))) {
--    assert.equal(await readFile(path.join(root, 'src/content/blog', file), 'utf8'), execFileSync('git', ['show', `HEAD:src/content/blog/${file}`], { encoding: 'utf8' }), file);
-+    assert.equal(normalizeLineEndings(await readFile(path.join(root, 'src/content/blog', file), 'utf8')), execFileSync('git', ['show', `HEAD:src/content/blog/${file}`], { encoding: 'utf8' }), file);
-   }
- });
-
--if (process.env.BLOG_BASELINE_DIST) await check('all generated routes and SEO metadata preserved except corrected blog description', async () => {
--  async function htmlFiles(dir, prefix = '') {
--    const list = [];
--    for (const item of await readdir(path.join(dir, prefix), { withFileTypes: true })) {
--      const name = path.join(prefix, item.name);
--      if (item.isDirectory()) list.push(...await htmlFiles(dir, name));
--      else if (name.endsWith('.html')) list.push(name);
--    }
--    return list.sort();
-+async function htmlFiles(dir, prefix = '') {
-+  const list = [];
-+  for (const item of await readdir(path.join(dir, prefix), { withFileTypes: true })) {
-+    const name = path.posix.join(prefix, item.name);
-+    if (item.isDirectory()) list.push(...await htmlFiles(dir, name));
-+    else if (name.endsWith('.html')) list.push(name);
-   }
-+  return list.sort();
-+}
+-  const before = execFileSync('git', ['show', 'HEAD:src/layouts/BaseLayout.astro'], { encoding: 'utf8' });
+-  const after = await readFile(path.join(root, 'src/layouts/BaseLayout.astro'), 'utf8');
+-  const consentScript = (source) => source.match(/<script is:inline data-ads=[\s\S]*?<\/script>/)?.[0];
+-  assert.ok(consentScript(before));
+-  assert.equal(consentScript(normalizeLineEndings(after)), consentScript(before));
 +
-+if (process.env.BLOG_BASELINE_DIST) await check('routes and SEO metadata preserved for the remaining pages', async () => {
-   const baseline = process.env.BLOG_BASELINE_DIST;
--  const files = await htmlFiles(baseline);
-+  const files = (await htmlFiles(baseline)).filter((file) => !pausedRoutes.includes(file));
-   assert.deepEqual(await htmlFiles(dist), files);
-   const metadata = (source, blog) => [...source.matchAll(/<meta\b[^>]*>|<link\b[^>]*rel="canonical"[^>]*>|<title>[\s\S]*?<\/title>/g)]
-     .map(([tag]) => tag).filter((tag) => !blog || !/(?:name="description"|property="og:description"|name="twitter:description")/.test(tag));
-@@ -54,33 +57,29 @@ if (process.env.BLOG_BASELINE_DIST) await check('all generated routes and SEO me
-     const after = await readFile(path.join(dist, file), 'utf8');
-     assert.deepEqual(metadata(after, file === 'blog/index.html'), metadata(before, file === 'blog/index.html'), file);
-   }
--  for (const file of ['robots.txt', 'ads.txt', 'CNAME', 'rss.xml', 'sitemap-index.xml', 'sitemap-0.xml']) {
-+  for (const file of ['robots.txt', 'ads.txt', 'CNAME', 'rss.xml', 'sitemap-index.xml']) {
-     assert.deepEqual(await readFile(path.join(dist, file)), await readFile(path.join(baseline, file)), file);
-   }
-+  const sitemap = await readFile(path.join(baseline, 'sitemap-0.xml'), 'utf8');
-+  assert.equal(await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8'), sitemap.replace(
-+    /<url><loc>https:\/\/informaticaparaconcurso\.com\.br\/apostila\/<\/loc>[^<]*(?:<lastmod>[^<]*<\/lastmod>)?<\/url>/,
-+    '',
-+  ));
  });
-
--await check('phone banner replaces old model on home and every generated article', async () => {
--  const home = await readFile(path.join(dist, 'index.html'), 'utf8');
--  const homeBanners = [...home.matchAll(/<aside\b[^>]*data-banner="gerador"[\s\S]*?<\/aside>/g)];
--  assert.equal(homeBanners.length, 1);
--  assert.match(homeBanners[0][0], /data-slot="home-gerador"/);
--  let articles = 0;
--  for (const dir of await readdir(dist, { withFileTypes: true })) {
--    if (!dir.isDirectory()) continue;
--    let source;
--    try { source = await readFile(path.join(dist, dir.name, 'index.html'), 'utf8'); } catch { continue; }
--    if (!source.includes('"@type":"BlogPosting"')) continue;
--    articles++;
--    const banners = [...source.matchAll(/<aside\b[^>]*data-banner="gerador"[\s\S]*?<\/aside>/g)];
--    assert.equal(banners.length, 1, dir.name);
--    assert.match(banners[0][0], /data-question-demo-banner/, dir.name);
--    assert.match(banners[0][0], /EXEMPLO DE QUESTÃO/, dir.name);
--    assert.match(banners[0][0], /data-slot="post-fim-gerador"/, dir.name);
--    assert.match(banners[0][0], /href="https:\/\/www\.geradordequestoes\.site\/"/, dir.name);
--    assert.doesNotMatch(banners[0][0], /class="mock"|Treine com questões novas, no estilo da sua banca/, dir.name);
-+await check('product offers and sales routes are absent from the generated site', async () => {
-+  const files = await htmlFiles(dist);
-+  for (const route of pausedRoutes) assert.ok(!files.includes(route), route);
-+  for (const file of files) {
-+    const source = await readFile(path.join(dist, file), 'utf8');
-+    assert.doesNotMatch(source, /data-banner=|quiz-cta|geradordequestoes\.site|pay\.hotmart\.com|href="\/apostila\/"/i, file);
-   }
--  assert.ok(articles > 0, 'No articles were inspected');
--  console.log(`  ${articles} generated articles checked`);
+ 
+ async function htmlFiles(dir, prefix = '') {
+@@ -67,28 +63,23 @@ if (process.env.BLOG_BASELINE_DIST) await check('routes and SEO metadata preserv
+   assert.equal(withoutSales(await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8')), withoutSales(await readFile(path.join(baseline, 'sitemap-0.xml'), 'utf8')));
+ });
+ 
+-await check('sales page and offers are present in the selected placements', async () => {
++await check('sales and advertising are absent from the public build', async () => {
+   const files = await htmlFiles(dist);
++  assert.ok(!files.includes(salesRoute));
+   assert.ok(!files.includes(testCheckoutRoute));
+-  const sales = await readFile(path.join(dist, salesRoute), 'utf8');
+-  assert.match(sales, /id="amostra"/);
+-  assert.match(sales, /https:\/\/pay\.hotmart\.com\//);
+-  for (const [file, placement] of [
+-    ['index.html', 'home-trilha'],
+-    ['index.html', 'home-simulados'],
+-    ['index.html', 'home-apos-aulas'],
+-    ['cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/index.html', 'artigo-entre-secoes'],
+-    ['simulado-cebraspe-informatica/index.html', 'simulado-resultado'],
+-    ['questoes/index.html', 'questoes-resultado'],
+-  ]) {
+-    assert.ok((await readFile(path.join(dist, file), 'utf8')).includes(`data-slot="${placement}"`), file);
 +  await assert.rejects(readFile(path.join(dist, 'images/apostila-capa.webp')), { code: 'ENOENT' });
-+  const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
-+  assert.doesNotMatch(sitemap, /\/apostila\//);
-+  const receipt = await readFile(path.join(dist, 'apostila/pagamento/index.html'), 'utf8');
-+  assert.match(receipt, /name="robots" content="noindex, follow"/);
-+  console.log(`  ${files.length} generated pages checked`);
++  const promotion = /data-banner=|generator-anchor|googlesyndication\.com|adsbygoogle|pay\.hotmart\.com|geradordequestoes\.site|href="[^"#]*\/apostila\/(?:#|"|teste-pagamento\/)/i;
++  for (const file of files) {
++    assert.doesNotMatch(await readFile(path.join(dist, file), 'utf8'), promotion, file);
+   }
+-  assert.doesNotMatch(await readFile(path.join(dist, '404.html'), 'utf8'), /data-banner=/);
++  const home = await readFile(path.join(dist, 'index.html'), 'utf8');
++  assert.match(home, /name="google-adsense-account" content="ca-pub-\d+"/);
++  assert.match(home, /googletagmanager\.com\/gtag\/js/);
+   const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
+-  assert.match(sitemap, /\/apostila\/<\/loc>/);
++  assert.doesNotMatch(sitemap, /\/apostila(?:\/[^<]*)?<\/loc>/);
+   const receipt = await readFile(path.join(dist, 'apostila/pagamento/index.html'), 'utf8');
+   assert.match(receipt, /name="robots" content="noindex, follow"/);
+-  console.log(`  ${files.length} generated pages checked`);
++  console.log('  ' + files.length + ' generated pages checked');
  });
-
+ 
  const server = createServer(async (request, response) => {
-@@ -158,24 +157,17 @@ try {
-     await page.getByRole('button', { name: 'Ver mais posts', exact: true }).click();
-     assert.ok(await page.locator('.post-item:visible').count() > before);
-   });
--  for (const [route, slot] of [['/', 'home-gerador'], ['/regra-3-2-1/', 'post-fim-gerador']]) await check(`banner phone, link and single analytics events: ${slot}`, async () => {
--    await page.goto(`${base}${route}`);
--    const banner = page.locator('[data-banner="gerador"]');
--    assert.equal(await banner.count(), 1);
--    assert.equal(await banner.locator('.phone').count(), 1);
--    assert.equal(await banner.locator('[data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
--    await page.evaluate(() => {
--      window.__bannerEvents = [];
--      window.gtag = (...args) => window.__bannerEvents.push(args);
--    });
--    await banner.scrollIntoViewIfNeeded();
--    await page.waitForFunction(() => window.__bannerEvents.some((args) => args[1] === 'banner_view'));
--    await banner.locator('[data-banner-link]').evaluate((link) => link.addEventListener('click', (event) => event.preventDefault()));
--    await banner.locator('[data-banner-link]').click();
--    const events = await page.evaluate(() => window.__bannerEvents.filter((args) => args[2]?.banner_id === 'gerador'));
--    assert.equal(events.filter((args) => args[1] === 'banner_view').length, 1);
--    assert.equal(events.filter((args) => args[1] === 'banner_click').length, 1);
--    for (const event of events) assert.equal(event[2].slot, slot);
-+  await check('free questions and the quiz score still work', async () => {
-+    await page.goto(`${base}/questoes/`);
-+    await page.locator('#q-options button').first().click();
-+    assert.equal(await page.locator('#q-feedback').isVisible(), true);
-+    assert.equal(await page.locator('#q-answered').innerText(), '1');
-+
-+    await page.goto(`${base}/simulado-vespera-concurso/`);
-+    await page.locator('.q-opt').first().click();
-+    await page.getByRole('button', { name: 'Ver resultado', exact: true }).click();
-+    assert.equal(await page.locator('.quiz-result').isVisible(), true);
-+    assert.equal(await page.locator('[data-stat="blank"]').innerText(), '39');
+@@ -175,13 +166,11 @@ try {
+     await page.locator('#q-options button').first().click();
+     assert.equal(await page.locator('#q-feedback').isVisible(), true);
+     assert.equal(await page.locator('#q-answered').innerText(), '1');
+-    assert.match(await page.locator('#q-feedback-offer').innerText(), /Hardware/);
+     for (let i = 1; i < 5; i++) {
+       await page.locator('#btn-next').click();
+       await page.locator('#q-options button').first().click();
+     }
+     assert.match(await page.locator('#q-summary').innerText(), /de 5/i);
+-    assert.equal(await page.locator('#q-complete [data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
+     await page.locator('#btn-restart').click();
+     assert.equal(await page.locator('#q-answered').innerText(), '0');
+     assert.equal(await page.locator('#q-complete').isVisible(), false);
+@@ -191,122 +180,6 @@ try {
+     await page.getByRole('button', { name: 'Ver resultado', exact: true }).click();
+     assert.equal(await page.locator('.quiz-result').isVisible(), true);
+     assert.equal(await page.locator('[data-stat="blank"]').innerText(), '39');
+-    assert.equal(await page.locator('.quiz-result [data-banner-link]').isVisible(), true);
+-  });
+-  await check('article offers sit before the intended sections', async () => {
+-    for (const route of [
+-      '/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/',
+-      '/concurso-policia-civil-cebraspe-informatica/',
+-      '/gabarito-extraoficial-pm-ma-soldado/',
+-      '/nocoes-de-informatica/',
+-      '/sistema-windows-7-10-11-para-concursos/',
+-      '/linux-para-concursos/',
+-      '/aplicativos-para-seguranca-antivirus-firewall-antispyware/',
+-      '/perifericos-entrada-saida-concurso/',
+-      '/fonte-de-alimentacao-nobreak-estabilizador-concursos/',
+-      '/regra-3-2-1/',
+-    ]) {
+-      await page.goto(`${base}${route}`);
+-      const offer = page.locator('.prose [data-article-offer]');
+-      assert.ok(await offer.evaluate((el) => el.nextElementSibling?.id === el.dataset.articleOffer), route);
+-    }
+-  });
+-  await check('desktop rails leave the article free and the bottom offer returns after ten seconds', async () => {
+-    await page.setViewportSize({ width: 1440, height: 900 });
+-    await page.goto(`${base}/regra-3-2-1/`);
+-    const left = page.locator('[data-slot="artigo-lateral-esquerda"]');
+-    const right = page.locator('[data-slot="artigo-lateral-direita"]');
+-    const article = await page.locator('article.post').boundingBox();
+-    const leftRail = await left.boundingBox();
+-    const rightRail = await right.boundingBox();
+-    assert.ok(article && leftRail && rightRail);
+-    assert.ok(leftRail.x + leftRail.width < article.x);
+-    assert.ok(rightRail.x > article.x + article.width);
+-    const mobileApostila = page.locator('.prose [data-slot="artigo-apostila-mobile"]');
+-    assert.equal(await mobileApostila.isVisible(), false);
+-    const phone = right.locator('[data-question-phone]');
+-    assert.ok(await phone.isVisible());
+-    const phoneBounds = await phone.boundingBox();
+-    assert.ok(phoneBounds && phoneBounds.height / phoneBounds.width >= 1.65);
+-    assert.equal(await phone.evaluate((el) => getComputedStyle(el).transform), 'none');
+-    assert.equal(await phone.locator('.demo-status').evaluate((el) => getComputedStyle(el).color), 'rgb(85, 219, 255)');
+-    assert.equal(await phone.evaluate((el) => getComputedStyle(el).animationName), 'none');
+-    const railCta = right.locator('[data-banner-link]');
+-    assert.deepEqual(await railCta.evaluate((el) => {
+-      const style = getComputedStyle(el);
+-      return [style.backgroundColor, style.color, style.fontWeight, style.animationName];
+-    }), ['rgb(85, 219, 255)', 'rgb(0, 0, 0)', '800', 'none']);
+-    await phone.getByRole('button', { name: 'Certo', exact: true }).click();
+-    assert.match(await phone.locator('.demo-feedback').innerText(), /Você acertou/);
+-    await phone.getByRole('button', { name: 'Gerar exemplo' }).click();
+-    assert.match(await phone.locator('.demo-question').innerText(), /modo anônimo/);
+-    assert.equal(await phone.locator('.demo-feedback').isVisible(), false);
+-    await phone.getByRole('button', { name: 'Errado', exact: true }).click();
+-    assert.match(await phone.locator('.demo-feedback').innerText(), /Você acertou/);
+-    assert.equal(await right.locator('[data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
+-    if (screenshotDir) {
+-      await mkdir(screenshotDir, { recursive: true });
+-      await page.screenshot({ path: path.join(screenshotDir, 'laterais-desktop.png') });
+-      await phone.screenshot({ path: path.join(screenshotDir, 'celular-3d.png') });
+-    }
+-    await page.emulateMedia({ reducedMotion: 'no-preference' });
+-    await page.reload();
+-    await right.locator('[data-phone-entered]').waitFor({ state: 'visible' });
+-    assert.match(await phone.evaluate((el) => getComputedStyle(el).animationName), /phone-rise/);
+-    await right.and(page.locator('.offer-in-view')).waitFor({ state: 'visible' });
+-    assert.match(await railCta.evaluate((el) => getComputedStyle(el).animationName), /offer-neon-pulse/);
+-    await page.emulateMedia({ reducedMotion: 'reduce' });
+-    await page.setViewportSize({ width: 390, height: 844 });
+-    assert.equal(await left.isVisible(), false);
+-    assert.equal(await right.isVisible(), false);
+-    assert.ok(await mobileApostila.isVisible());
+-    assert.equal(await mobileApostila.locator('[data-banner-link]').getAttribute('href'), '/apostila/#amostra');
+-
+-    const anchor = page.locator('#generator-anchor');
+-    assert.equal(await anchor.isVisible(), false);
+-    await page.clock.fastForward(10_000);
+-    await anchor.waitFor({ state: 'visible' });
+-    if (screenshotDir) await anchor.screenshot({ path: path.join(screenshotDir, 'gerador-rodape-celular.png') });
+-    assert.equal(await anchor.locator('strong').innerText(), 'Questões para sua banca');
+-    const buttonColors = (el) => {
+-      const style = getComputedStyle(el);
+-      return [style.backgroundColor, style.color, style.fontWeight];
+-    };
+-    assert.deepEqual(await anchor.locator('[data-banner-link]').evaluate(buttonColors), ['rgb(185, 245, 0)', 'rgb(0, 0, 0)', '800']);
+-    const anchorBounds = await anchor.boundingBox();
+-    assert.ok(anchorBounds && anchorBounds.x >= 0 && anchorBounds.x + anchorBounds.width <= 390 && anchorBounds.height < 104);
+-    assert.equal(await anchor.locator('[data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
+-    assert.equal(await anchor.evaluate((el) => getComputedStyle(el).animationName), 'none');
+-    await page.emulateMedia({ reducedMotion: 'no-preference' });
+-    assert.match(await anchor.evaluate((el) => getComputedStyle(el).animationName), /anchor-rise/);
+-    await page.emulateMedia({ reducedMotion: 'reduce' });
+-    await page.goto(`${base}/simulado-vespera-concurso/`);
+-    await page.clock.fastForward(10_000);
+-    await anchor.waitFor({ state: 'visible' });
+-    await page.locator('#questoes').evaluate((quiz) => quiz.scrollIntoView({ block: 'start' }));
+-    await anchor.waitFor({ state: 'hidden' });
+-
+-    await page.setViewportSize({ width: 1600, height: 900 });
+-    await page.goto(`${base}/`);
+-    const apostila = page.locator('[data-slot="home-trilha"]');
+-    assert.deepEqual(await apostila.locator('[data-banner-link]').evaluate(buttonColors), ['rgb(255, 218, 68)', 'rgb(0, 0, 0)', '800']);
+-    if (screenshotDir) await apostila.screenshot({ path: path.join(screenshotDir, 'apostila-cta.png') });
+-    assert.ok(await page.locator('[data-slot="home-lateral-esquerda"]').isVisible());
+-    assert.ok(await page.locator('[data-slot="home-lateral-direita"]').isVisible());
+-    assert.ok(await page.locator('[data-slot="home-apos-aulas"] .offer-preview').isVisible());
+-    await page.clock.fastForward(10_000);
+-    await anchor.waitFor({ state: 'visible' });
+-    const fullWidth = await page.evaluate(() => document.documentElement.clientWidth);
+-    const desktopBounds = await anchor.boundingBox();
+-    assert.ok(desktopBounds && desktopBounds.x === 0 && desktopBounds.width === fullWidth);
+-    assert.equal(desktopBounds.y + desktopBounds.height, 900);
+-    if (screenshotDir) await anchor.screenshot({ path: path.join(screenshotDir, 'gerador-rodape-desktop.png') });
+-    await anchor.getByRole('button', { name: 'Fechar banner do Gerador' }).click();
+-    assert.equal(await anchor.isVisible(), false);
+-    await page.clock.fastForward(8_000);
+-    assert.equal(await anchor.isVisible(), false);
+-    await page.clock.fastForward(2_000);
+-    await anchor.waitFor({ state: 'visible' });
    });
    for (const width of [320, 390, 768, 1440]) for (const theme of ['dark', 'light']) await check(`reading and filter contrast ${width}px ${theme}`, async () => {
      await page.setViewportSize({ width, height: 900 });
-@@ -184,9 +176,6 @@ try {
-       await page.goto(`${base}${route}`);
-       assert.equal(await page.locator('h1').count(), 1, route);
-       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true, route);
--      if (route === '/' || route === '/regra-3-2-1/') {
--        assert.equal(await page.locator('[data-banner="gerador"] .phone').isVisible(), true, route);
--      }
-     }
-     await page.goto(`${base}/blog/`);
-     const contrast = await page.locator('.filter.active').evaluate((el) => {
-diff --git a/src/components/Footer.astro b/src/components/Footer.astro
-index 812430f..5717128 100644
---- a/src/components/Footer.astro
-+++ b/src/components/Footer.astro
-@@ -1,7 +1,5 @@
+diff --git a/src/components/CookieBanner.astro b/src/components/CookieBanner.astro
+index 89fc90d..811fac5 100644
+--- a/src/components/CookieBanner.astro
++++ b/src/components/CookieBanner.astro
+@@ -2,7 +2,7 @@
  ---
- import { categories as categoryList } from "../data/categories";
--import { APOSTILA_URL } from "../data/apostila";
--import { QUESTOES_URL, questoesAriaLabel } from "../data/questoes";
-
- const categories = [
-   { label: "Início", href: "/" },
-@@ -44,14 +42,6 @@ const quickLinks = [
-       </ul>
-     </div>
-
--    <div>
--      <p class="col-title">Materiais</p>
--      <ul>
--        <li><a href={APOSTILA_URL}>Apostila Cebraspe</a></li>
--        <li><a href={QUESTOES_URL} target="_blank" rel="noopener" aria-label={`Conhecer o ${questoesAriaLabel}`}>Gerador de Questões</a></li>
--      </ul>
--    </div>
--
-   </div>
-
-   <div class="bottom">
-@@ -79,7 +69,7 @@ const quickLinks = [
-
-   .grid {
-     display: grid;
--    grid-template-columns: 1.5fr 0.9fr 1.5fr 1fr;
-+    grid-template-columns: 1.5fr 0.9fr 1.5fr;
-     gap: 32px;
-     padding-block: 36px 28px;
-   }
+ <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Preferências de cookies" hidden>
+   <p>
+-    Usamos cookies para análises e anúncios. Você pode aceitar ou recusar os cookies não essenciais.
++    Usamos cookies para análise de tráfego. Você pode aceitar ou recusar os cookies não essenciais.
+     <a href="/politica-de-cookies">Saiba mais</a>
+   </p>
+   <div class="actions">
 diff --git a/src/components/Quiz.astro b/src/components/Quiz.astro
-index 3d5acc6..bf2108f 100644
+index aa93eee..bf2108f 100644
 --- a/src/components/Quiz.astro
 +++ b/src/components/Quiz.astro
-@@ -1,6 +1,4 @@
- ---
--import { QUESTOES_URL } from '../data/questoes';
--
- export interface Question {
-   banca?: string;
-   module?: string;
-@@ -20,7 +18,6 @@ interface Props {
- }
-
- const { questions, title = 'Questões comentadas', mode = 'instant' } = Astro.props;
--const ctaHref = QUESTOES_URL;
- // 'live': como 'final' (nota e desempenho por módulo ao clicar em “Ver resultado”), mas o gabarito comentado
- // de cada questão aparece na hora em que o aluno marca a alternativa.
- const live = mode === 'live';
-@@ -112,7 +109,6 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
+@@ -109,7 +109,6 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
          <p class="quiz-focus"></p>
        </>
      )}
--    <a class="quiz-cta" href={ctaHref} target="_blank" rel="noopener">Gerar mais questões no Gerador de Questões</a>
+-    <slot name="result-offer" />
    </div>
-
+ 
    {final && !live && (
-@@ -299,8 +295,6 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
-         focusEl.textContent = weakName
-           ? `Por onde recomeçar a revisão: ${weakName}.`
-           : 'Você acertou todos os módulos. Mantenha o ritmo e descanse bem.';
--        const ctaLink = quiz.querySelector<HTMLAnchorElement>('.quiz-cta');
--        if (ctaLink && weakName) ctaLink.textContent = `Gerar mais questões de ${weakName}`;
-
-         result.hidden = false;
-         if (gabarito) gabarito.hidden = false;
-@@ -664,21 +658,6 @@ const answerLabel = (q: Question) => optionLabel(q, q.answer);
-     color: var(--ink-soft);
-   }
-
--  .quiz-cta {
--    display: inline-block;
--    margin-top: 16px;
--    padding: 10px 20px;
--    border-radius: 24px;
--    background: #0a6268;
--    color: #fff;
--    font-weight: 700;
--    text-decoration: none;
--  }
+diff --git a/src/layouts/BaseLayout.astro b/src/layouts/BaseLayout.astro
+index b2ab0c8..7a0ddb4 100644
+--- a/src/layouts/BaseLayout.astro
++++ b/src/layouts/BaseLayout.astro
+@@ -16,7 +16,6 @@ interface Props {
+   published?: Date;
+   modified?: Date;
+   showSiteNavigation?: boolean;
+-  ads?: boolean;
+ }
+ 
+ const {
+@@ -29,7 +28,6 @@ const {
+   published,
+   modified,
+   showSiteNavigation = true,
+-  ads = true,
+ } = Astro.props;
+ 
+ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+@@ -63,13 +61,12 @@ const organizationSchema = {
+     <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+     <meta name="google-site-verification" content="X0WtOXNS9hrK5eG-BF29jRIgMf6yj20Xu1gEDDW6Whc" />
+ 
+-    <script is:inline data-ads={ads ? 'enabled' : 'disabled'}>
++    <script is:inline>
+       // Consent: EU/UK-style timezones start denied (opt-in); everywhere else starts granted (opt-out).
+       // The visitor's choice is stored in localStorage under "cookie-consent".
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       (function () {
+-        var adsEnabled = document.currentScript.getAttribute('data-ads') !== 'disabled';
+         var tz = '';
+         try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+         var strict = tz.indexOf('Europe/') === 0 ||
+@@ -77,26 +74,13 @@ const organizationSchema = {
+         var stored = null;
+         try { stored = localStorage.getItem('cookie-consent'); } catch (e) {}
+         var state = (stored === 'granted' || stored === 'denied') ? stored : (strict ? 'denied' : 'granted');
+-        var adsLoaded = false;
 -
--  .quiz-cta:hover {
--    background: #0d7d85;
--  }
+-        function loadAds() {
+-          if (!adsEnabled || adsLoaded) return;
+-          adsLoaded = true;
+-          var s = document.createElement('script');
+-          s.async = true;
+-          s.crossOrigin = 'anonymous';
+-          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1196503092730158';
+-          document.head.appendChild(s);
+-        }
 -
-   .quiz-result {
-     scroll-margin-top: 120px;
-   }
+         gtag('consent', 'default', {
+-          ad_storage: state, analytics_storage: state, ad_user_data: state, ad_personalization: state
++          analytics_storage: state, ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+         });
+         gtag('js', new Date());
+         gtag('config', 'G-0JD2BJEBBS');
+ 
+-        // Analytics loads as soon as the page finished loading (or on the first interaction, if sooner),
+-        // so short visits are still counted. Ads wait longer so they never compete with the first paint.
++        // Load Analytics once, when the page finishes loading or at the first interaction.
+         var analyticsLoaded = false;
+         function loadAnalytics() {
+           if (analyticsLoaded) return;
+@@ -106,29 +90,17 @@ const organizationSchema = {
+           g.src = 'https://www.googletagmanager.com/gtag/js?id=G-0JD2BJEBBS';
+           document.head.appendChild(g);
+         }
+-        var thirdPartyLoaded = false;
+-        function loadThirdParty() {
+-          if (thirdPartyLoaded) return;
+-          thirdPartyLoaded = true;
+-          loadAnalytics();
+-          if (state === 'granted') loadAds();
+-        }
+         ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (ev) {
+-          window.addEventListener(ev, loadThirdParty, { once: true, passive: true });
+-        });
+-        window.addEventListener('load', function () {
+-          loadAnalytics();
+-          setTimeout(loadThirdParty, 8000);
++          window.addEventListener(ev, loadAnalytics, { once: true, passive: true });
+         });
++        window.addEventListener('load', loadAnalytics, { once: true });
+ 
+         window.siteConsent = {
+           hasChoice: function () { return stored === 'granted' || stored === 'denied'; },
+           set: function (value) {
+             stored = value;
+             try { localStorage.setItem('cookie-consent', value); } catch (e) {}
+-            gtag('consent', 'update', {
+-              ad_storage: value, analytics_storage: value, ad_user_data: value, ad_personalization: value
+-            });
++            gtag('consent', 'update', { analytics_storage: value });
+           }
+         };
+       })();
 diff --git a/src/layouts/PostLayout.astro b/src/layouts/PostLayout.astro
-index 028af3e..a7baece 100644
+index 2618832..72c34be 100644
 --- a/src/layouts/PostLayout.astro
 +++ b/src/layouts/PostLayout.astro
 @@ -6,8 +6,6 @@ import AuthorBio from '../components/AuthorBio.astro';
  import ShareButtons from '../components/ShareButtons.astro';
  import RelatedPosts from '../components/RelatedPosts.astro';
  import Quiz from '../components/Quiz.astro';
--import QuestoesCTA from '../components/QuestoesCTA.astro';
--import ApostilaBanner from '../components/ApostilaBanner.astro';
- import type { Question } from '../components/Quiz.astro';
+-import StudyOffer from '../components/StudyOffer.astro';
+-import GeneratorAnchor from '../components/GeneratorAnchor.astro';
  import TableOfContents from '../components/TableOfContents.astro';
  import ReadingProgress from '../components/ReadingProgress.astro';
-@@ -133,14 +131,8 @@ const breadcrumbSchema = {
+ import type { MarkdownHeading } from 'astro';
+@@ -36,24 +34,6 @@ const { title, seoTitle, description, category, date, updated, related, tags, re
+ 
+ // Questões interativas ficam em src/data/quizzes/<slug>.json e são exibidas no final do artigo.
+ const quiz = getArticleQuiz(Astro.props.slug);
+-const articleOffers: Record<string, { product: 'apostila' | 'gerador'; before: string; label?: string }> = {
+-  'cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica': { product: 'apostila', before: 'Estratégia de estudo' },
+-  'concurso-policia-civil-cebraspe-informatica': { product: 'apostila', before: 'Por onde começar' },
+-  'gabarito-extraoficial-pm-ma-soldado': { product: 'apostila', before: 'Como calcular a sua nota' },
+-  'nocoes-de-informatica': { product: 'gerador', before: 'Os 5 blocos', label: 'Praticar mais questões de Informática' },
+-  'sistema-windows-7-10-11-para-concursos': { product: 'gerador', before: 'Windows 11', label: 'Praticar mais questões de Windows' },
+-  'linux-para-concursos': { product: 'gerador', before: 'O escritório dentro do Linux', label: 'Praticar mais questões de Linux' },
+-  'aplicativos-para-seguranca-antivirus-firewall-antispyware': { product: 'gerador', before: 'Perguntas frequentes', label: 'Praticar mais questões de Segurança' },
+-  'perifericos-entrada-saida-concurso': { product: 'gerador', before: 'Conclusão', label: 'Praticar mais questões de Hardware' },
+-  'fonte-de-alimentacao-nobreak-estabilizador-concursos': { product: 'gerador', before: 'Conclusão', label: 'Praticar mais questões de Hardware' },
+-};
+-const showQuizOffer = Astro.props.slug.startsWith('simulado-');
+-const offer = articleOffers[Astro.props.slug];
+-const sections = headings.filter((heading) => heading.depth === 2);
+-const readingSections = sections.length >= 3 ? sections : headings.filter((heading) => heading.depth === 3);
+-const offerBefore = offer
+-  ? sections.find((heading) => heading.text.startsWith(offer.before))?.slug
+-  : readingSections.length >= 3 ? readingSections[Math.floor(readingSections.length / 2)]?.slug : undefined;
+ 
+ const formattedDate = date.toLocaleDateString('pt-BR', {
+   day: '2-digit',
+@@ -147,24 +127,9 @@ const breadcrumbSchema = {
+       <div class="post-body">
+         <div class="prose">
            <slot />
+-          {!showQuizOffer && offer?.product !== 'apostila' && (
+-            <div class="mobile-apostila">
+-              <StudyOffer product="apostila" placement="artigo-apostila-mobile" />
+-            </div>
+-          )}
          </div>
-
--        <template id="apostila-mid"><ApostilaBanner slot="post-meio" category={category} /></template>
+ 
+-        {!showQuizOffer && (
+-          <div data-article-offer={offerBefore ?? ''}>
+-            <StudyOffer product={offer?.product ?? 'gerador'} placement="artigo-entre-secoes" label={offer?.label} />
+-          </div>
+-        )}
 -
-         {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
-
--        <QuestoesCTA slug={Astro.props.slug} />
--
--        <ApostilaBanner slot="post-fim" category={category} />
--
+-        {quiz && (
+-          <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title}>
+-            {showQuizOffer && <StudyOffer slot="result-offer" product="gerador" placement="simulado-resultado" />}
+-          </Quiz>
+-        )}
++        {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
+ 
          <AuthorBio />
-
-         <ShareButtons title={title} variant="end" />
-@@ -152,16 +144,6 @@ const breadcrumbSchema = {
+ 
+@@ -172,22 +137,10 @@ const breadcrumbSchema = {
+         <RelatedPosts slug={Astro.props.slug} category={category} tags={tags} related={related} />
+       </div>
+     </article>
+-    <div class="post-rail rail-left">
+-      <StudyOffer product="apostila" placement="artigo-lateral-esquerda" format="rail" label="Ver amostra" />
+-    </div>
+-    <div class="post-rail rail-right">
+-      <StudyOffer product="gerador" placement="artigo-lateral-direita" format="rail" label="Montar meu treino" />
+-    </div>
+-
+   </div>
+-  <GeneratorAnchor />
  </BaseLayout>
-
+ 
  <script>
--  // Banner no meio do artigo: entra antes do H2 central, só em textos com 4 ou mais seções (nunca no primeiro terço).
--  (function placeMidBanner() {
--    const tpl = document.getElementById('apostila-mid') as HTMLTemplateElement | null;
--    const h2s = document.querySelectorAll('.prose > h2');
--    if (!tpl || h2s.length < 4) return;
--    const target = h2s[Math.floor(h2s.length / 2)];
--    target.before(tpl.content.cloneNode(true));
--    document.dispatchEvent(new Event('banner:added'));
--  })();
+-  const articleOffer = document.querySelector<HTMLElement>('[data-article-offer]');
+-  const offerBefore = articleOffer?.dataset.articleOffer;
+-  if (articleOffer && offerBefore) document.getElementById(offerBefore)?.before(articleOffer);
 -
    function legacyCopy(text: string): boolean {
      const textarea = document.createElement('textarea');
      textarea.value = text;
-diff --git a/src/pages/404.astro b/src/pages/404.astro
-index 6b23dd8..06c253b 100644
---- a/src/pages/404.astro
-+++ b/src/pages/404.astro
-@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
- import { isPublished } from '../utils/posts';
- import BaseLayout from '../layouts/BaseLayout.astro';
- import PostCard from '../components/PostCard.astro';
--import ApostilaBanner from '../components/ApostilaBanner.astro';
-
- const posts = (await getCollection('blog', isPublished))
-   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-@@ -35,7 +34,6 @@ const posts = (await getCollection('blog', isPublished))
-         />
-       ))}
-     </div>
--    <ApostilaBanner slot="404" />
-   </section>
- </BaseLayout>
-
+@@ -296,21 +249,6 @@ const breadcrumbSchema = {
+     max-width: 808px;
+     padding-block: 32px 56px;
+   }
+-  .post-rail { display: none; }
+-
+-  @media (min-width: 1280px) and (min-height: 590px) {
+-    .post-shell {
+-      display: grid;
+-      grid-template-columns: minmax(0, 1fr) minmax(0, 760px) minmax(0, 1fr);
+-      column-gap: 24px;
+-      max-width: 1320px;
+-    }
+-    .post-shell > article { grid-area: 1 / 2; min-width: 0; }
+-    .post-rail { display: block; position: sticky; top: 96px; align-self: start; }
+-    .mobile-apostila { display: none; }
+-    .rail-left { grid-area: 1 / 1; }
+-    .rail-right { grid-area: 1 / 3; }
+-  }
+ 
+   .post-head,
+   .post-body {
 diff --git a/src/pages/apostila/pagamento.astro b/src/pages/apostila/pagamento.astro
-index f301572..eb2774e 100644
+index eb2774e..e51a5ed 100644
 --- a/src/pages/apostila/pagamento.astro
 +++ b/src/pages/apostila/pagamento.astro
-@@ -15,7 +15,6 @@ import { PAYMENTS_API_URL } from '../../data/payments';
-     <button type="button" data-check-payment hidden>Consultar novamente</button>
-     <noscript><p>Ative o JavaScript para consultar o pedido nesta aba. Se precisar, entre em contato pelo e-mail de suporte.</p></noscript>
-     <p class="support">Precisa de ajuda? <a href="mailto:fernandolisboa.dev@gmail.com">fernandolisboa.dev@gmail.com</a></p>
--    <a href="/apostila/">Voltar à apostila</a>
-   </section>
- </BaseLayout>
-
-@@ -48,8 +47,8 @@ import { PAYMENTS_API_URL } from '../../data/payments';
-       pending: ['Aguardando pagamento', 'Assim que o Mercado Pago confirmar o pagamento, a situação será atualizada aqui.'],
-       in_process: ['Pagamento em análise', 'O Mercado Pago ainda está analisando o pagamento. Você pode consultar novamente em instantes.'],
-       authorized: ['Pagamento em processamento', 'O pagamento ainda não foi concluído. Aguarde a confirmação do Mercado Pago.'],
--      rejected: ['Pagamento não aprovado', 'O pagamento não foi aprovado. Volte à página da apostila para iniciar uma nova tentativa.'],
--      cancelled: ['Pagamento cancelado', 'Este pagamento foi cancelado. Se desejar, você pode iniciar uma nova compra.'],
-+      rejected: ['Pagamento não aprovado', 'O pagamento não foi aprovado. Se precisar de ajuda, entre em contato com o suporte.'],
-+      cancelled: ['Pagamento cancelado', 'Este pagamento foi cancelado. Se precisar de ajuda, entre em contato com o suporte.'],
-       refunded: ['Pagamento com reembolso', 'Há um reembolso registrado neste pagamento. Entre em contato com o suporte em caso de dúvida.'],
-       charged_back: ['Pagamento em contestação', 'Há uma contestação registrada. Entre em contato com o suporte para obter ajuda.'],
-       in_mediation: ['Pagamento em mediação', 'Este pagamento está em mediação no Mercado Pago. Entre em contato com o suporte para obter ajuda.'],
-diff --git a/src/pages/category/[slug].astro b/src/pages/category/[slug].astro
-index 23c12ff..8aed2c6 100644
---- a/src/pages/category/[slug].astro
-+++ b/src/pages/category/[slug].astro
-@@ -2,7 +2,6 @@
- import { getCollection } from 'astro:content';
+@@ -2,7 +2,7 @@
  import BaseLayout from '../../layouts/BaseLayout.astro';
- import PostCard from '../../components/PostCard.astro';
--import ApostilaBanner from '../../components/ApostilaBanner.astro';
- import { categories } from '../../data/categories';
- import { isPublished, sortByActivity } from '../../utils/posts';
-
-@@ -15,7 +14,6 @@ export async function getStaticPaths() {
- }
-
- const PAGE_SIZE = 6;
--const BANNER_AFTER = 3; // banner da apostila depois do 3º cartão
- const { category, posts } = Astro.props;
-
- const schema = {
-@@ -52,23 +50,18 @@ const schema = {
-
-     <div class="posts">
-       {posts.map((post, i) => (
--        <>
-         <div class={i < PAGE_SIZE ? 'item' : 'item extra'}>
--        <PostCard
--          slug={post.id}
--          title={post.data.title}
--          description={post.data.description}
--          category={post.data.category}
--          date={post.data.date}
--          readingTime={post.data.readingTime}
--          image={post.data.image}
--          imageAlt={post.data.imageAlt}
--        />
-+          <PostCard
-+            slug={post.id}
-+            title={post.data.title}
-+            description={post.data.description}
-+            category={post.data.category}
-+            date={post.data.date}
-+            readingTime={post.data.readingTime}
-+            image={post.data.image}
-+            imageAlt={post.data.imageAlt}
-+          />
-         </div>
--        {i === BANNER_AFTER - 1 && posts.length > BANNER_AFTER && (
--          <div class="promo"><ApostilaBanner slot="categoria" category={category.name} /></div>
--        )}
--        </>
-       ))}
-     </div>
-     <div class="more-wrap">
-@@ -102,10 +95,6 @@ const schema = {
-     display: contents;
-   }
-
--  .promo {
--    grid-column: 1 / -1;
--  }
--
-   .item.extra:not(.show) {
-     display: none;
-   }
+ import { PAYMENTS_API_URL } from '../../data/payments';
+ ---
+-<BaseLayout title="Acompanhar pagamento" noindex ads={false}>
++<BaseLayout title="Acompanhar pagamento" noindex>
+   <section class="receipt" data-payment-api={PAYMENTS_API_URL}>
+     <p class="eyebrow">Apostila Cebraspe de Informática</p>
+     <h1>Acompanhe seu pagamento</h1>
 diff --git a/src/pages/index.astro b/src/pages/index.astro
-index b650f69..9353474 100644
+index f55b4e6..43223cc 100644
 --- a/src/pages/index.astro
 +++ b/src/pages/index.astro
-@@ -13,8 +13,6 @@ import CompactList from '../components/CompactList.astro';
- import { categories, categoryHref } from '../data/categories';
- import { isPublished, sortByActivity } from '../utils/posts';
- import { questionCount } from '../utils/quizzes';
--import ApostilaBanner from '../components/ApostilaBanner.astro';
--import QuestoesCTA from '../components/QuestoesCTA.astro';
-
- // Page 1 opens with the subjects of the exam syllabus; "Aulas recentes" and the /page/N/ pages
- // list every post, newest first, 9 per page.
-@@ -84,12 +82,6 @@ const trilha = trilhaSlugs
-     </>
+@@ -5,8 +5,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
+ import LessonRow from '../components/LessonRow.astro';
+ import Pagination from '../components/Pagination.astro';
+ import SectionHead from '../components/SectionHead.astro';
+-import StudyOffer from '../components/StudyOffer.astro';
+-import GeneratorAnchor from '../components/GeneratorAnchor.astro';
+ import TrendBar from "../components/TrendBar.astro";
+ import HomeLead from "../components/HomeLead.astro";
+ import LatestList from "../components/LatestList.astro";
+@@ -116,8 +114,6 @@ const trilha = trilhaSlugs
+       </section>
    )}
-
--  {page === 1 && (
--    <section class="block promo-hero">
--      <ApostilaBanner slot="home-topo" variant="hero" />
--    </section>
--  )}
+ 
+-  {page === 1 && <div class="block"><StudyOffer product="apostila" placement="home-trilha" /></div>}
 -
-   {page === 1 && trilha.length > 0 && (
-       <section class="block" id="trilha">
-         <div class="block-head">
-@@ -171,12 +163,6 @@ const trilha = trilhaSlugs
+   <section class="block recent">
+     <SectionHead title={page === 1 ? 'Aulas recentes' : `Todas as aulas, página ${page}`} href={page === 1 ? '/blog' : undefined} linkLabel="Ver todas" />
+     <div class="rows">
+@@ -139,7 +135,6 @@ const trilha = trilhaSlugs
+ 
+   {page === 1 && (
+     <>
+-      <div class="block"><StudyOffer product="gerador" placement="home-apos-aulas" label="Montar meu treino no Gerador" /></div>
+       <section class="block" id="materias">
+         <div class="block-head head-row">
+           <div>
+@@ -156,7 +151,6 @@ const trilha = trilhaSlugs
+           <section>
+             <SectionHead title="Simulados" href="/blog/?q=simulado" linkLabel={`Ver os ${simulados.length}`} />
+             <CompactList posts={simulados.slice(0, 5)} action="Iniciar →" />
+-            <p><StudyOffer product="gerador" placement="home-simulados" compact label="Montar meu treino no Gerador" /></p>
+           </section>
+         )}
+         {concursos.length > 0 && (
+@@ -168,25 +162,11 @@ const trilha = trilhaSlugs
        </div>
      </>
    )}
--
 -  {page === 1 && (
--    <section class="block band-wrap">
--      <QuestoesCTA placement="home" />
--    </section>
+-    <>
+-      <div class="home-rail home-rail-left"><StudyOffer product="apostila" placement="home-lateral-esquerda" format="rail" label="Ver amostra" /></div>
+-      <div class="home-rail home-rail-right"><StudyOffer product="gerador" placement="home-lateral-direita" format="rail" label="Montar meu treino" /></div>
+-      <GeneratorAnchor />
+-    </>
 -  )}
  </BaseLayout>
-
-
-@@ -206,10 +192,6 @@ const trilha = trilhaSlugs
-     padding-block: 40px 24px;
-   }
-
--  .block.promo-hero {
--    padding-block: 8px 0;
+ 
+ 
+ 
+ <style>
+-  .home-rail { display: none; }
+-  @media (min-width: 1600px) and (min-height: 590px) {
+-    .home-rail { display: block; position: fixed; top: 120px; width: 176px; }
+-    .home-rail-left { right: calc(50% + 606px); }
+-    .home-rail-right { left: calc(50% + 606px); }
 -  }
 -
-   .hero {
-     padding-block: 64px 48px;
-     display: grid;
-@@ -631,11 +613,6 @@ const trilha = trilhaSlugs
-     padding-bottom: 8px;
-   }
-
--  /* Faixa final: gerador de questões. Azul profundo com destaques em azul neon. */
--  .band-wrap {
--    padding-block: 48px 72px;
--  }
+   .visually-hidden {
+     position: absolute;
+     width: 1px;
+diff --git a/src/pages/politica-de-cookies.md b/src/pages/politica-de-cookies.md
+index 8d69eaa..11c292f 100644
+--- a/src/pages/politica-de-cookies.md
++++ b/src/pages/politica-de-cookies.md
+@@ -4,7 +4,7 @@ title: "Política de Cookies"
+ description: "Como o Informática para Concurso (informaticaparaconcurso.com.br) usa cookies."
+ ---
+ 
+-**Última atualização: 20 de outubro de 2026**
++**Última atualização: 21 de novembro de 2026**
+ 
+ Esta Política de Cookies explica o que são cookies, como o Informática para Concurso os utiliza e quais são as suas opções em relação ao uso deles. Ao usar nosso site ([https://informaticaparaconcurso.com.br](https://informaticaparaconcurso.com.br)), você concorda com o uso de cookies conforme descrito nesta política.
+ 
+@@ -16,24 +16,18 @@ O Informática para Concurso usa cookies por vários motivos:
+ 
+ - **Cookies Essenciais**: necessários para o funcionamento correto do site.
+ - **Cookies de Análise**: usamos ferramentas como o Google Analytics para entender como os visitantes interagem com nosso conteúdo (por exemplo, quais páginas são mais populares). Esses dados são anônimos.
+-- **Cookies de Publicidade**: monetizamos nosso conteúdo por meio de redes de terceiros, como o Google AdSense. Esses cookies rastreiam seus hábitos de navegação para exibir anúncios relevantes.
+ 
+ ## 3. Publicidade e Cookies de Terceiros
+-**Google AdSense**  
+-Usamos o Google AdSense para exibir anúncios. O Google utiliza cookies para exibir anúncios com base em visitas anteriores ao nosso site ou a outros sites.
 -
-   @media (max-width: 640px) {
-     .hero {
-       padding-block: 40px 32px;
+-- O uso de cookies de publicidade pelo Google permite que ele e seus parceiros exibam anúncios com base na sua visita ao Informática para Concurso e/ou a outros sites na internet.
+-- Você pode desativar a publicidade personalizada visitando as [Configurações de Anúncios do Google](https://www.google.com/settings/ads).
++O Google AdSense está desativado. Atualizaremos esta política quando o site passar a exibir anúncios.
+ 
+ Hoje o site não usa links de afiliados. Se isso mudar, esta política será atualizada.
+ 
+ ## 4. Como Controlar os Cookies
+ 
+-Você pode mudar a sua escolha a qualquer momento pelo link **Configurações de cookies**, no rodapé do site. Visitantes da Europa e do Reino Unido são consultados antes de os cookies de análise e de publicidade serem carregados. Nos demais países eles são carregados por padrão, e você pode recusá-los no mesmo aviso.
++Você pode mudar a sua escolha a qualquer momento pelo link **Configurações de cookies**, no rodapé do site. O consentimento para cookies de análise começa desativado para visitantes com fuso horário europeu. Nos demais fusos, começa ativado e pode ser recusado no mesmo aviso.
+ Você tem o direito de aceitar ou recusar cookies.
+ 
+ - **Configurações do Navegador**: você pode configurar seu navegador para recusar todos ou alguns cookies, ou para avisá-lo quando um site tentar definir ou acessar cookies.
+-- **Preferências de Anúncios**: você pode desativar o uso de cookies por fornecedores terceiros para publicidade baseada em interesses visitando [aboutads.info](https://www.aboutads.info/).
+ 
+ Observe que, se você desativar ou recusar os cookies, algumas partes deste site podem ficar inacessíveis ou não funcionar corretamente.
+ 
+diff --git a/src/pages/politica-de-privacidade.md b/src/pages/politica-de-privacidade.md
+index 5ab0ac6..f340a5a 100644
+--- a/src/pages/politica-de-privacidade.md
++++ b/src/pages/politica-de-privacidade.md
+@@ -6,7 +6,7 @@ description: "Como o Informática para Concurso coleta, usa e protege as suas in
+ 
+ ## **Política de Privacidade e Proteção de Dados**
+ 
+-A sua privacidade é algo que levamos muito a sério. Esta Política de Privacidade detalha como o site **Informática para Concurso** coleta, armazena, utiliza e protege as informações pessoais dos seus usuários, bem como a maneira como gerenciamos cookies e outras ferramentas de publicidade.
++A sua privacidade é algo que levamos muito a sério. Esta Política de Privacidade detalha como o site **Informática para Concurso** coleta, armazena, utiliza e protege as informações pessoais dos seus usuários, bem como a maneira como gerenciamos cookies e ferramentas de análise de tráfego.
+ 
+ Ao navegar e utilizar este site, você concorda com os termos descritos abaixo.
+ 
+@@ -23,24 +23,9 @@ As informações pessoais que coletamos podem incluir:
+ 
+ Utilizamos essas informações para otimizar a sua experiência de usuário e tornar a sua visita o mais produtiva e agradável possível.
+ 
+-## Uso de Cookies e Publicidade
++## Uso de Cookies e Análise de Tráfego
+ 
+-No **Informática para Concurso**, utilizamos cookies para melhorar a navegação, lembrar de suas preferências e oferecer anúncios relevantes.
+-
+--   **Fornecedores externos:** Plataformas como o Google utilizam cookies (como os do Google AdSense e Google Analytics) para exibir anúncios baseados em suas visitas anteriores ao nosso site ou a outros sites na internet.
+-    
+--   **Personalização:** O Google e seus parceiros podem mostrar anúncios personalizados com base no seu comportamento de navegação.
+-    
+-
+-Se preferir, você pode desativar a publicidade personalizada nas [Configurações de Anúncios do Google](https://www.google.com/settings/ads) ou acessando o site [www.aboutads.info](http://www.aboutads.info/choices/).
+-
+-## Cookie DoubleClick e Remarketing
+-
+-O Google, como fornecedor de terceiros, utiliza o cookie **DoubleClick DART** para veicular anúncios baseados nos interesses do usuário.
+-
+-Além disso, nosso site pode utilizar ferramentas de **Remarketing com o Google Analytics**. Isso nos permite exibir anúncios personalizados em outros sites da web com base em suas visitas anteriores ao Informática para Concurso.
+-
+-**Importante:** Esses dados não identificam você individualmente (não revelam seu nome, e-mail ou telefone), apenas analisam o comportamento de navegação.
++No **Informática para Concurso**, utilizamos cookies para melhorar a navegação e lembrar de suas preferências. Usamos o Google Analytics para medir visitas e entender como os leitores usam o site. O AdSense está desativado.
+ 
+ ## Como Administrar seus Cookies
+ 
 diff --git a/src/pages/questoes.astro b/src/pages/questoes.astro
-index 03e74c1..6f97e58 100644
+index b7c8f52..1d4b8af 100644
 --- a/src/pages/questoes.astro
 +++ b/src/pages/questoes.astro
-@@ -3,8 +3,6 @@ import { getCollection } from 'astro:content';
+@@ -1,7 +1,6 @@
+ ---
+ import { getCollection } from 'astro:content';
  import BaseLayout from '../layouts/BaseLayout.astro';
+-import StudyOffer from '../components/StudyOffer.astro';
  import { categories } from '../data/categories';
  import { isPublished } from '../utils/posts';
--import { QUESTOES_URL, questoesAriaLabel } from '../data/questoes';
--import ApostilaBanner from '../components/ApostilaBanner.astro';
-
- // Todas as questões comentadas do site (src/data/quizzes/<slug>.json), reunidas em um treino único.
- // O leitor escolhe a matéria e responde um bloco de 10 questões sorteadas, com gabarito e link para a aula.
-@@ -112,13 +110,6 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
+ 
+@@ -48,7 +47,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g,
+       <div class="intro-text">
+         <h1>Questões comentadas</h1>
+         <p>Faça um treino rápido com {blockSize} questões comentadas. Cada resposta aponta uma aula para revisar.</p>
+-        <p class="intro-offer"><StudyOffer product="gerador" placement="questoes-inicio" compact label="Criar um treino para minha banca no Gerador" /></p>
+       </div>
+       <a class="back" href="/#materias">← Voltar às matérias</a>
      </div>
-
-     <noscript><p class="nojs">Ative o JavaScript para resolver as questões neste treino.</p></noscript>
--
--    <p class="gerador">
--      Quer questões novas, por assunto e banca? Conheça o
--      <a href={QUESTOES_URL} target="_blank" rel="noopener" aria-label={`Conhecer o ${questoesAriaLabel}`}>Gerador de Questões com IA</a>.
--    </p>
--
--    <ApostilaBanner slot="questoes" />
-   </div>
-
-   <script type="application/json" id="q-data" set:html={payload}></script>
-@@ -757,17 +748,6 @@ const payload = JSON.stringify({ lessons, questions }).replace(/</g, '\\u003c');
-     display: none;
-   }
-
--  .page .gerador {
--    margin: 40px 0 0;
--    font-size: 0.9375rem;
--    color: var(--ink-soft);
--  }
--
--  .page .gerador a {
--    color: var(--violet);
--    font-weight: 600;
--  }
--
-   .page .nojs {
+@@ -85,9 +83,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g,
+             <p class="comment" id="q-comment"></p>
+             <a class="lesson" id="q-lesson" href="/"></a>
+           </div>
+-          <p id="q-feedback-offer" class="feedback-offer" hidden>
+-            <StudyOffer product="gerador" placement="questoes-primeira-resposta" compact label="Conhecer o Gerador de Questões" />
+-          </p>
+         </article>
+ 
+         <div class="nav-btns">
+@@ -96,7 +91,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g,
+         </div>
+         <section id="q-complete" class="panel" aria-labelledby="q-summary" hidden>
+           <h2 id="q-summary" aria-live="polite"></h2>
+-          <StudyOffer product="gerador" placement="questoes-resultado" />
+           <button type="button" class="btn-ghost btn-small" id="btn-restart">Fazer outro bloco grátis</button>
+         </section>
+       </section>
+@@ -136,9 +130,7 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g,
+     feedback: $('q-feedback'), verdict: $('q-verdict'), comment: $('q-comment'), lesson: $('q-lesson') as HTMLAnchorElement,
+     prev: $<HTMLButtonElement>('btn-prev'), next: $<HTMLButtonElement>('btn-next'), grid: $('q-grid'),
+     ok: $('s-ok'), done: $('s-done'), complete: $('q-complete'), summary: $('q-summary'), restart: $('btn-restart'),
+-    feedbackOffer: $('q-feedback-offer'),
+   };
+-  const feedbackLink = els.feedbackOffer.querySelector<HTMLAnchorElement>('[data-banner-link]')!;
+   const chips = Array.from(document.querySelectorAll<HTMLButtonElement>('.chip'));
+ 
+   let materia = '';
+@@ -222,8 +214,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g,
+       els.lesson.textContent = `Revisar a aula: ${lesson.title} →`;
+       els.lesson.href = lesson.href;
+     }
+-    els.feedbackOffer.hidden = !answered || doneCount !== 1;
+-    if (!els.feedbackOffer.hidden) feedbackLink.textContent = `Praticar mais questões de ${lesson.cat} no Gerador`;
+ 
+     els.prev.disabled = idx === 0;
+     const last = idx === block.length - 1;
+@@ -318,7 +308,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g,
      color: var(--ink-soft);
    }
-diff --git a/tsconfig.json b/tsconfig.json
-index 8bf91d3..51c0324 100644
---- a/tsconfig.json
-+++ b/tsconfig.json
-@@ -1,5 +1,5 @@
- {
-   "extends": "astro/tsconfigs/strict",
-   "include": [".astro/types.d.ts", "**/*"],
--  "exclude": ["dist"]
-+  "exclude": ["dist", "monetização"]
- }
+ 
+-  .page .intro-text .intro-offer { margin-top: 10px; }
+ 
+   .page .back {
+     display: inline-flex;
+@@ -748,7 +737,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g,
+     color: var(--ink-soft);
+   }
+ 
+-  .page .feedback-offer { margin: 16px 0 0; }
+   .page #q-complete[hidden] { display: none; }
+ 
+   .page .nojs {
+diff --git a/src/pages/transparencia.md b/src/pages/transparencia.md
+index e56f585..8b214dd 100644
+--- a/src/pages/transparencia.md
++++ b/src/pages/transparencia.md
+@@ -42,7 +42,7 @@ O diálogo aberto é fundamental para crescermos juntos e melhorarmos continuame
+ 
+ ## Publicidade e Parcerias
+ 
+-O site pode exibir anúncios do Google AdSense, que aparecem separados do texto dos artigos. Hoje não há links de afiliados nem conteúdo patrocinado. Se isso mudar, informaremos de maneira clara no próprio artigo.
++A exibição de anúncios do Google AdSense está suspensa durante a revisão do site. Hoje não há links de afiliados nem conteúdo patrocinado. Se isso mudar, informaremos de maneira clara no próprio artigo.
+ 
+ Mantemos uma separação estrita entre o nosso conteúdo editorial (suas aulas e resumos) e a publicidade, protegendo a confiança que você deposita em nós para a sua preparação.
+ 

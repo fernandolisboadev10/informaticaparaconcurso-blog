@@ -6,8 +6,6 @@ import AuthorBio from '../components/AuthorBio.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import Quiz from '../components/Quiz.astro';
-import StudyOffer from '../components/StudyOffer.astro';
-import GeneratorAnchor from '../components/GeneratorAnchor.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import type { MarkdownHeading } from 'astro';
@@ -36,24 +34,6 @@ const { title, seoTitle, description, category, date, updated, related, tags, re
 
 // Questões interativas ficam em src/data/quizzes/<slug>.json e são exibidas no final do artigo.
 const quiz = getArticleQuiz(Astro.props.slug);
-const articleOffers: Record<string, { product: 'apostila' | 'gerador'; before: string; label?: string }> = {
-  'cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica': { product: 'apostila', before: 'Estratégia de estudo' },
-  'concurso-policia-civil-cebraspe-informatica': { product: 'apostila', before: 'Por onde começar' },
-  'gabarito-extraoficial-pm-ma-soldado': { product: 'apostila', before: 'Como calcular a sua nota' },
-  'nocoes-de-informatica': { product: 'gerador', before: 'Os 5 blocos', label: 'Praticar mais questões de Informática' },
-  'sistema-windows-7-10-11-para-concursos': { product: 'gerador', before: 'Windows 11', label: 'Praticar mais questões de Windows' },
-  'linux-para-concursos': { product: 'gerador', before: 'O escritório dentro do Linux', label: 'Praticar mais questões de Linux' },
-  'aplicativos-para-seguranca-antivirus-firewall-antispyware': { product: 'gerador', before: 'Perguntas frequentes', label: 'Praticar mais questões de Segurança' },
-  'perifericos-entrada-saida-concurso': { product: 'gerador', before: 'Conclusão', label: 'Praticar mais questões de Hardware' },
-  'fonte-de-alimentacao-nobreak-estabilizador-concursos': { product: 'gerador', before: 'Conclusão', label: 'Praticar mais questões de Hardware' },
-};
-const showQuizOffer = Astro.props.slug.startsWith('simulado-');
-const offer = articleOffers[Astro.props.slug];
-const sections = headings.filter((heading) => heading.depth === 2);
-const readingSections = sections.length >= 3 ? sections : headings.filter((heading) => heading.depth === 3);
-const offerBefore = offer
-  ? sections.find((heading) => heading.text.startsWith(offer.before))?.slug
-  : readingSections.length >= 3 ? readingSections[Math.floor(readingSections.length / 2)]?.slug : undefined;
 
 const formattedDate = date.toLocaleDateString('pt-BR', {
   day: '2-digit',
@@ -147,24 +127,9 @@ const breadcrumbSchema = {
       <div class="post-body">
         <div class="prose">
           <slot />
-          {!showQuizOffer && offer?.product !== 'apostila' && (
-            <div class="mobile-apostila">
-              <StudyOffer product="apostila" placement="artigo-apostila-mobile" />
-            </div>
-          )}
         </div>
 
-        {!showQuizOffer && (
-          <div data-article-offer={offerBefore ?? ''}>
-            <StudyOffer product={offer?.product ?? 'gerador'} placement="artigo-entre-secoes" label={offer?.label} />
-          </div>
-        )}
-
-        {quiz && (
-          <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title}>
-            {showQuizOffer && <StudyOffer slot="result-offer" product="gerador" placement="simulado-resultado" />}
-          </Quiz>
-        )}
+        {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}
 
         <AuthorBio />
 
@@ -172,22 +137,10 @@ const breadcrumbSchema = {
         <RelatedPosts slug={Astro.props.slug} category={category} tags={tags} related={related} />
       </div>
     </article>
-    <div class="post-rail rail-left">
-      <StudyOffer product="apostila" placement="artigo-lateral-esquerda" format="rail" label="Ver amostra" />
-    </div>
-    <div class="post-rail rail-right">
-      <StudyOffer product="gerador" placement="artigo-lateral-direita" format="rail" label="Montar meu treino" />
-    </div>
-
   </div>
-  <GeneratorAnchor />
 </BaseLayout>
 
 <script>
-  const articleOffer = document.querySelector<HTMLElement>('[data-article-offer]');
-  const offerBefore = articleOffer?.dataset.articleOffer;
-  if (articleOffer && offerBefore) document.getElementById(offerBefore)?.before(articleOffer);
-
   function legacyCopy(text: string): boolean {
     const textarea = document.createElement('textarea');
     textarea.value = text;
@@ -295,21 +248,6 @@ const breadcrumbSchema = {
   .post-shell {
     max-width: 808px;
     padding-block: 32px 56px;
-  }
-  .post-rail { display: none; }
-
-  @media (min-width: 1280px) and (min-height: 590px) {
-    .post-shell {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 760px) minmax(0, 1fr);
-      column-gap: 24px;
-      max-width: 1320px;
-    }
-    .post-shell > article { grid-area: 1 / 2; min-width: 0; }
-    .post-rail { display: block; position: sticky; top: 96px; align-self: start; }
-    .mobile-apostila { display: none; }
-    .rail-left { grid-area: 1 / 1; }
-    .rail-right { grid-area: 1 / 3; }
   }
 
   .post-head,

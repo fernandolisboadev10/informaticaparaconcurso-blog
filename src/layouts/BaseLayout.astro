@@ -16,7 +16,6 @@ interface Props {
   published?: Date;
   modified?: Date;
   showSiteNavigation?: boolean;
-  ads?: boolean;
 }
 
 const {
@@ -29,7 +28,6 @@ const {
   published,
   modified,
   showSiteNavigation = true,
-  ads = true,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -63,13 +61,12 @@ const organizationSchema = {
     <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
     <meta name="google-site-verification" content="X0WtOXNS9hrK5eG-BF29jRIgMf6yj20Xu1gEDDW6Whc" />
 
-    <script is:inline data-ads={ads ? 'enabled' : 'disabled'}>
+    <script is:inline>
       // Consent: EU/UK-style timezones start denied (opt-in); everywhere else starts granted (opt-out).
       // The visitor's choice is stored in localStorage under "cookie-consent".
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       (function () {
-        var adsEnabled = document.currentScript.getAttribute('data-ads') !== 'disabled';
         var tz = '';
         try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
         var strict = tz.indexOf('Europe/') === 0 ||
@@ -77,26 +74,13 @@ const organizationSchema = {
         var stored = null;
         try { stored = localStorage.getItem('cookie-consent'); } catch (e) {}
         var state = (stored === 'granted' || stored === 'denied') ? stored : (strict ? 'denied' : 'granted');
-        var adsLoaded = false;
-
-        function loadAds() {
-          if (!adsEnabled || adsLoaded) return;
-          adsLoaded = true;
-          var s = document.createElement('script');
-          s.async = true;
-          s.crossOrigin = 'anonymous';
-          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1196503092730158';
-          document.head.appendChild(s);
-        }
-
         gtag('consent', 'default', {
-          ad_storage: state, analytics_storage: state, ad_user_data: state, ad_personalization: state
+          analytics_storage: state, ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
         });
         gtag('js', new Date());
         gtag('config', 'G-0JD2BJEBBS');
 
-        // Analytics loads as soon as the page finished loading (or on the first interaction, if sooner),
-        // so short visits are still counted. Ads wait longer so they never compete with the first paint.
+        // Load Analytics once, when the page finishes loading or at the first interaction.
         var analyticsLoaded = false;
         function loadAnalytics() {
           if (analyticsLoaded) return;
@@ -106,29 +90,17 @@ const organizationSchema = {
           g.src = 'https://www.googletagmanager.com/gtag/js?id=G-0JD2BJEBBS';
           document.head.appendChild(g);
         }
-        var thirdPartyLoaded = false;
-        function loadThirdParty() {
-          if (thirdPartyLoaded) return;
-          thirdPartyLoaded = true;
-          loadAnalytics();
-          if (state === 'granted') loadAds();
-        }
         ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach(function (ev) {
-          window.addEventListener(ev, loadThirdParty, { once: true, passive: true });
+          window.addEventListener(ev, loadAnalytics, { once: true, passive: true });
         });
-        window.addEventListener('load', function () {
-          loadAnalytics();
-          setTimeout(loadThirdParty, 8000);
-        });
+        window.addEventListener('load', loadAnalytics, { once: true });
 
         window.siteConsent = {
           hasChoice: function () { return stored === 'granted' || stored === 'denied'; },
           set: function (value) {
             stored = value;
             try { localStorage.setItem('cookie-consent', value); } catch (e) {}
-            gtag('consent', 'update', {
-              ad_storage: value, analytics_storage: value, ad_user_data: value, ad_personalization: value
-            });
+            gtag('consent', 'update', { analytics_storage: value });
           }
         };
       })();

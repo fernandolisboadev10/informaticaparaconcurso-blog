@@ -1,110 +1,179 @@
-<div class="demo" aria-hidden="true">
-  <div class="phone">
-    <div class="camera"></div>
-    <div class="screen">
-      <p class="example">EXEMPLO DE QUESTÃO</p>
-      <div class="status">
-        <span class="ia">IA</span>
-        <span class="status-text"><span class="loading">Gerando questão…</span><span class="generated">Questão gerada agora</span></span>
-      </div>
-      <div class="question">
-        <p class="statement">Julgue o item. No Linux, o comando <strong>chmod 755 arquivo</strong> concede ao proprietário as permissões de leitura, escrita e execução.</p>
-        <div class="options">
-          <div class="option correct"><b>C</b> Certo <span class="answer">✓ Gabarito</span></div>
-          <div class="option"><b>E</b> Errado</div>
-        </div>
-        <p class="comment">Comentário: 7 é 4+2+1, ou seja, rwx para o dono.</p>
-      </div>
+---
+const examples = [
+  { text: 'No Linux, chmod 755 dá ao dono permissão de escrita.', correct: true, comment: 'O primeiro 7 vale 4 + 2 + 1, ou seja, leitura, escrita e execução.' },
+  { text: 'O modo anônimo esconde sua navegação dos sites que você visita.', correct: false, comment: 'O modo anônimo limita o que fica salvo no navegador. Os sites ainda recebem sua conexão.' },
+  { text: 'No Excel, $A$1 mantém a coluna e a linha fixas ao copiar uma fórmula.', correct: true, comment: 'O cifrão antes da coluna e da linha indica uma referência absoluta.' },
+];
+---
+<div class="phone" data-question-phone data-examples={JSON.stringify(examples)}>
+  <div class="screen">
+    <p class="demo-status" role="status">Questão de exemplo</p>
+    <p class="demo-question">{examples[0].text}</p>
+    <div class="demo-options" role="group" aria-label="Responder questão de exemplo">
+      <button type="button" data-answer="true">Certo</button>
+      <button type="button" data-answer="false">Errado</button>
     </div>
-    <div class="home-indicator"></div>
+    <p class="demo-feedback" role="status" hidden></p>
+    <button class="demo-next" type="button">Gerar exemplo</button>
   </div>
 </div>
 
-<style>
-  .demo { display: grid; place-items: center; min-width: 0; }
-  .phone {
-    position: relative;
-    box-sizing: border-box;
-    width: 240px;
-    max-width: 100%;
-    aspect-ratio: 1 / 2.1;
-    padding: 64px 17px 32px;
-    border: 3px solid #53657c;
-    border-radius: 38px;
-    background: linear-gradient(145deg, #101d30, #050c17 70%);
-    box-shadow: inset 0 0 0 4px #071426, 0 18px 35px #0009, 0 0 40px #38aaff18;
-    color: #fff;
-    font-size: 12px;
-    line-height: 1.5;
-  }
-  .phone::after { content: ''; position: absolute; right: -5px; top: 106px; width: 3px; height: 46px; border-radius: 2px; background: #687b94; }
-  .camera { position: absolute; width: 68px; height: 19px; background: #000; border-radius: 20px; top: 14px; left: 50%; transform: translateX(-50%); }
-  .camera::after { content: ''; position: absolute; right: 10px; top: 6px; width: 6px; height: 6px; border-radius: 50%; background: #152233; }
-  .home-indicator { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); width: 72px; height: 4px; border-radius: 4px; background: #ffffff65; }
-  .example { margin: 0 0 14px; font-size: 9px; letter-spacing: .12em; color: #9aaec8; }
-  .status { display: flex; align-items: center; gap: 7px; color: #93ceff; font-size: 11px; font-weight: 700; }
-  .ia { border-radius: 5px; padding: 3px 7px; background: #38aaff; color: #071426; }
-  .status-text { display: grid; }
-  .status-text > span { grid-area: 1 / 1; }
-  .loading { visibility: hidden; }
-  .statement { margin: 16px 0; }
-  .options { display: grid; gap: 8px; }
-  .option { display: flex; align-items: center; gap: 7px; padding: 10px 8px; border: 1px solid #293c57; border-radius: 12px; background: #071326; }
-  .option b { display: grid; place-items: center; width: 22px; height: 24px; border-radius: 6px; background: #152a44; }
-  .correct { border-color: #38aaff; background: #38aaff14; }
-  .answer { margin-left: auto; font-size: 10px; font-weight: 700; color: #93ceff; }
-  .comment { margin: 14px 0 0; color: #b5c8df; }
+<script>
+  interface Example { text: string; correct: boolean; comment: string; }
 
-  @keyframes reveal-question {
-    0%, 22% { opacity: 0; transform: translateY(6px); }
-    36%, 100% { opacity: 1; transform: none; }
+  document.querySelectorAll<HTMLElement>('[data-question-phone]').forEach((phone) => {
+    const examples: Example[] = JSON.parse(phone.dataset.examples ?? '[]');
+    const status = phone.querySelector<HTMLElement>('.demo-status')!;
+    const question = phone.querySelector<HTMLElement>('.demo-question')!;
+    const feedback = phone.querySelector<HTMLElement>('.demo-feedback')!;
+    const next = phone.querySelector<HTMLButtonElement>('.demo-next')!;
+    const options = Array.from(phone.querySelectorAll<HTMLButtonElement>('[data-answer]'));
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let index = 0;
+
+    function showExample() {
+      status.textContent = 'Questão de exemplo';
+      question.textContent = examples[index].text;
+      feedback.hidden = true;
+      for (const option of options) {
+        option.disabled = false;
+        option.removeAttribute('data-result');
+      }
+      next.removeAttribute('aria-disabled');
+      phone.removeAttribute('data-generating');
+    }
+
+    function generate() {
+      if (phone.hasAttribute('data-generating')) return;
+      feedback.hidden = true;
+      if (motion.matches) { showExample(); return; }
+      phone.setAttribute('data-generating', '');
+      question.textContent = '';
+      status.textContent = 'Gerando questão…';
+      next.setAttribute('aria-disabled', 'true');
+      for (const option of options) option.disabled = true;
+      // Keep the loading state brief and skip it entirely with reduced motion.
+      window.setTimeout(showExample, 540);
+    }
+
+    for (const option of options) {
+      option.addEventListener('click', () => {
+        const example = examples[index];
+        const correct = (option.dataset.answer === 'true') === example.correct;
+        feedback.textContent = `${correct ? 'Você acertou.' : 'Resposta incorreta.'} ${example.comment}`;
+        feedback.hidden = false;
+        for (const choice of options) {
+          choice.disabled = true;
+          if ((choice.dataset.answer === 'true') === example.correct) choice.dataset.result = 'correct';
+        }
+        next.focus({ preventScroll: true });
+      });
+    }
+    next.addEventListener('click', () => {
+      if (phone.hasAttribute('data-generating')) return;
+      index = (index + 1) % examples.length;
+      generate();
+    });
+    if (!motion.matches && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(([entry]) => {
+        if (!entry?.isIntersecting) return;
+        observer.disconnect();
+        phone.setAttribute('data-phone-entered', '');
+        if (!phone.matches(':focus-within') && feedback.hidden && index === 0) generate();
+      }, { threshold: 0.35 });
+      observer.observe(phone);
+    }
+  });
+</script>
+
+<style>
+  .phone {
+    --phone-neon: #55dbff;
+    --phone-white: #fff;
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 206px;
+    min-width: 0;
+    min-height: clamp(336px, calc(100svh - 228px), 385px);
+    margin: 12px auto 2px;
+    padding: 32px 6px 15px;
+    border: 2px solid #647586;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #263849 0%, #0b1420 34%, #060a11 88%);
+    box-shadow: inset 1px 1px 1px #b6d1e873, inset -2px -2px 0 #03060b, 3px 1px 0 #334757, 5px 2px 0 #101b27, 8px 12px 17px #0008;
   }
-  @keyframes reveal-answer {
-    0%, 53% { opacity: 0; transform: translateY(4px); }
-    68%, 100% { opacity: 1; transform: none; }
+  .phone::before, .phone::after {
+    content: '';
+    position: absolute;
+    border-radius: 8px;
+    pointer-events: none;
   }
-  @keyframes select-answer {
-    0%, 48% { border-color: #293c57; background: #071326; }
-    62%, 100% { border-color: #38aaff; background: #38aaff14; }
+  .phone::before {
+    top: 8px;
+    left: 50%;
+    translate: -50% 0;
+    width: 52px;
+    height: 13px;
+    background: radial-gradient(circle at 78% 50%, #314c61 0 2px, transparent 3px), #020407;
   }
-  @keyframes loading-status { 0%, 22% { visibility: visible; } 23%, 100% { visibility: hidden; } }
-  @keyframes generated-status { 0%, 22% { visibility: hidden; } 23%, 100% { visibility: visible; } }
-  @keyframes invite-click {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 10px #38aaff73; }
-    50% { transform: scale(1.025); box-shadow: 0 0 28px #38aaff99; }
+  .phone::after { right: -5px; top: 79px; width: 3px; height: 31px; background: #8597a9; }
+  .screen {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    gap: 7px;
+    padding: 10px 8px 14px;
+    border-radius: 14px;
+    background: radial-gradient(ellipse at top right, #123e5da0, transparent 58%), #0b1521;
+    color: var(--phone-white);
+    font: 400 .76rem/1.4 var(--font-body);
   }
+  .screen::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    translate: -50% 0;
+    width: 43px;
+    height: 3px;
+    border-radius: 8px;
+    background: #8195a6;
+  }
+  .screen p { margin: 0; }
+  .demo-status { color: var(--phone-neon); font-weight: 700; }
+  .demo-question { min-height: 3.8em; }
+  .demo-options { display: grid; gap: 5px; }
+  button {
+    min-height: 31px;
+    padding: 4px 7px;
+    border: 1px solid #425c73;
+    border-radius: 7px;
+    color: inherit;
+    background: #0a1523;
+    font: 650 .72rem/1.3 var(--font-body);
+    cursor: pointer;
+  }
+  button:hover, button:focus-visible { border-color: var(--phone-neon); }
+  button:focus-visible { outline: 2px solid var(--phone-neon); outline-offset: 2px; }
+  button:disabled { cursor: default; }
+  button[data-result="correct"] { color: var(--phone-white); border-color: var(--phone-neon); background: #17394f; }
+  .demo-next { margin-top: auto; color: var(--phone-neon); }
   @media (prefers-reduced-motion: no-preference) {
-    :global([data-question-demo-banner].demo-ready:not(.demo-playing)) .question { opacity: 0; }
-    :global([data-question-demo-banner].demo-ready:not(.demo-playing)) .loading { visibility: visible; }
-    :global([data-question-demo-banner].demo-ready:not(.demo-playing)) .generated { visibility: hidden; }
-    :global([data-question-demo-banner].demo-playing) .question { animation: reveal-question 4s both; }
-    :global([data-question-demo-banner].demo-playing) .correct { animation: select-answer 4s both; }
-    :global([data-question-demo-banner].demo-playing) .answer,
-    :global([data-question-demo-banner].demo-playing) .comment { animation: reveal-answer 4s both; }
-    :global([data-question-demo-banner].demo-playing) .loading { animation: loading-status 4s both; }
-    :global([data-question-demo-banner].demo-playing) .generated { animation: generated-status 4s both; }
-    :global([data-question-demo-banner].demo-playing [data-banner-link]) { animation: invite-click .8s 3.2s both; }
+    .phone[data-phone-entered] { animation: phone-rise .62s cubic-bezier(.2,.75,.27,1); }
+    [data-generating] .demo-question {
+      background: linear-gradient(105deg, #142d46 20%, #2b6484 50%, #142d46 80%);
+      background-size: 220% 100%;
+      border-radius: 5px;
+      animation: phone-generating .54s ease-in-out both;
+    }
+    @keyframes phone-rise {
+      0% { opacity: .6; translate: 0 12px; }
+      75% { opacity: 1; translate: 0 -2px; }
+      100% { translate: 0 0; }
+    }
+    @keyframes phone-generating { from { background-position: 100% 0; } to { background-position: 0 0; } }
   }
 </style>
-
-<script>
-  // One sequence per banner, only after it enters the viewport. Static result without JS.
-  function initQuestionDemos() {
-    document.querySelectorAll<HTMLElement>('[data-question-demo-banner]').forEach((banner) => {
-      if (banner.dataset.demoInitialized) return;
-      banner.dataset.demoInitialized = 'true';
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
-      banner.classList.add('demo-ready');
-      const observer = new IntersectionObserver((entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          banner.classList.add('demo-playing');
-          observer.disconnect();
-        }
-      }, { threshold: 0.2 });
-      observer.observe(banner);
-      document.addEventListener('astro:before-swap', () => observer.disconnect(), { once: true });
-    });
-  }
-  initQuestionDemos();
-  document.addEventListener('astro:page-load', initQuestionDemos);
-</script>

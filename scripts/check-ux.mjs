@@ -23,15 +23,11 @@ async function check(name, run) {
   catch (error) { failures.push(name); console.error(`FAIL ${name}: ${error.message}`); }
 }
 
-await check('advertising, consent, deployment and routing sources preserved', async () => {
-  for (const file of ['astro.config.mjs', 'public/ads.txt', 'public/robots.txt', 'public/CNAME', 'src/components/CookieBanner.astro', '.github/workflows/deploy.yml']) {
+await check('verification, deployment and routing sources preserved', async () => {
+  for (const file of ['astro.config.mjs', 'public/ads.txt', 'public/robots.txt', 'public/CNAME', '.github/workflows/deploy.yml']) {
     assert.equal(normalizeLineEndings(await readFile(path.join(root, file), 'utf8')), execFileSync('git', ['show', `HEAD:${file}`], { encoding: 'utf8' }), file);
   }
-  const before = execFileSync('git', ['show', 'HEAD:src/layouts/BaseLayout.astro'], { encoding: 'utf8' });
-  const after = await readFile(path.join(root, 'src/layouts/BaseLayout.astro'), 'utf8');
-  const consentScript = (source) => source.match(/<script is:inline data-ads=[\s\S]*?<\/script>/)?.[0];
-  assert.ok(consentScript(before));
-  assert.equal(consentScript(normalizeLineEndings(after)), consentScript(before));
+
 });
 
 async function htmlFiles(dir, prefix = '') {
@@ -67,28 +63,23 @@ if (process.env.BLOG_BASELINE_DIST) await check('routes and SEO metadata preserv
   assert.equal(withoutSales(await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8')), withoutSales(await readFile(path.join(baseline, 'sitemap-0.xml'), 'utf8')));
 });
 
-await check('sales page and offers are present in the selected placements', async () => {
+await check('sales and advertising are absent from the public build', async () => {
   const files = await htmlFiles(dist);
+  assert.ok(!files.includes(salesRoute));
   assert.ok(!files.includes(testCheckoutRoute));
-  const sales = await readFile(path.join(dist, salesRoute), 'utf8');
-  assert.match(sales, /id="amostra"/);
-  assert.match(sales, /https:\/\/pay\.hotmart\.com\//);
-  for (const [file, placement] of [
-    ['index.html', 'home-trilha'],
-    ['index.html', 'home-simulados'],
-    ['index.html', 'home-apos-aulas'],
-    ['cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/index.html', 'artigo-entre-secoes'],
-    ['simulado-cebraspe-informatica/index.html', 'simulado-resultado'],
-    ['questoes/index.html', 'questoes-resultado'],
-  ]) {
-    assert.ok((await readFile(path.join(dist, file), 'utf8')).includes(`data-slot="${placement}"`), file);
+  await assert.rejects(readFile(path.join(dist, 'images/apostila-capa.webp')), { code: 'ENOENT' });
+  const promotion = /data-banner=|generator-anchor|googlesyndication\.com|adsbygoogle|pay\.hotmart\.com|geradordequestoes\.site|href="[^"#]*\/apostila\/(?:#|"|teste-pagamento\/)/i;
+  for (const file of files) {
+    assert.doesNotMatch(await readFile(path.join(dist, file), 'utf8'), promotion, file);
   }
-  assert.doesNotMatch(await readFile(path.join(dist, '404.html'), 'utf8'), /data-banner=/);
+  const home = await readFile(path.join(dist, 'index.html'), 'utf8');
+  assert.match(home, /name="google-adsense-account" content="ca-pub-\d+"/);
+  assert.match(home, /googletagmanager\.com\/gtag\/js/);
   const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
-  assert.match(sitemap, /\/apostila\/<\/loc>/);
+  assert.doesNotMatch(sitemap, /\/apostila(?:\/[^<]*)?<\/loc>/);
   const receipt = await readFile(path.join(dist, 'apostila/pagamento/index.html'), 'utf8');
   assert.match(receipt, /name="robots" content="noindex, follow"/);
-  console.log(`  ${files.length} generated pages checked`);
+  console.log('  ' + files.length + ' generated pages checked');
 });
 
 const server = createServer(async (request, response) => {
@@ -175,13 +166,11 @@ try {
     await page.locator('#q-options button').first().click();
     assert.equal(await page.locator('#q-feedback').isVisible(), true);
     assert.equal(await page.locator('#q-answered').innerText(), '1');
-    assert.match(await page.locator('#q-feedback-offer').innerText(), /Hardware/);
     for (let i = 1; i < 5; i++) {
       await page.locator('#btn-next').click();
       await page.locator('#q-options button').first().click();
     }
     assert.match(await page.locator('#q-summary').innerText(), /de 5/i);
-    assert.equal(await page.locator('#q-complete [data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
     await page.locator('#btn-restart').click();
     assert.equal(await page.locator('#q-answered').innerText(), '0');
     assert.equal(await page.locator('#q-complete').isVisible(), false);
@@ -191,122 +180,6 @@ try {
     await page.getByRole('button', { name: 'Ver resultado', exact: true }).click();
     assert.equal(await page.locator('.quiz-result').isVisible(), true);
     assert.equal(await page.locator('[data-stat="blank"]').innerText(), '39');
-    assert.equal(await page.locator('.quiz-result [data-banner-link]').isVisible(), true);
-  });
-  await check('article offers sit before the intended sections', async () => {
-    for (const route of [
-      '/cebraspe-como-funciona-a-banca-e-o-que-ela-cobra-em-informatica/',
-      '/concurso-policia-civil-cebraspe-informatica/',
-      '/gabarito-extraoficial-pm-ma-soldado/',
-      '/nocoes-de-informatica/',
-      '/sistema-windows-7-10-11-para-concursos/',
-      '/linux-para-concursos/',
-      '/aplicativos-para-seguranca-antivirus-firewall-antispyware/',
-      '/perifericos-entrada-saida-concurso/',
-      '/fonte-de-alimentacao-nobreak-estabilizador-concursos/',
-      '/regra-3-2-1/',
-    ]) {
-      await page.goto(`${base}${route}`);
-      const offer = page.locator('.prose [data-article-offer]');
-      assert.ok(await offer.evaluate((el) => el.nextElementSibling?.id === el.dataset.articleOffer), route);
-    }
-  });
-  await check('desktop rails leave the article free and the bottom offer returns after ten seconds', async () => {
-    await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto(`${base}/regra-3-2-1/`);
-    const left = page.locator('[data-slot="artigo-lateral-esquerda"]');
-    const right = page.locator('[data-slot="artigo-lateral-direita"]');
-    const article = await page.locator('article.post').boundingBox();
-    const leftRail = await left.boundingBox();
-    const rightRail = await right.boundingBox();
-    assert.ok(article && leftRail && rightRail);
-    assert.ok(leftRail.x + leftRail.width < article.x);
-    assert.ok(rightRail.x > article.x + article.width);
-    const mobileApostila = page.locator('.prose [data-slot="artigo-apostila-mobile"]');
-    assert.equal(await mobileApostila.isVisible(), false);
-    const phone = right.locator('[data-question-phone]');
-    assert.ok(await phone.isVisible());
-    const phoneBounds = await phone.boundingBox();
-    assert.ok(phoneBounds && phoneBounds.height / phoneBounds.width >= 1.65);
-    assert.equal(await phone.evaluate((el) => getComputedStyle(el).transform), 'none');
-    assert.equal(await phone.locator('.demo-status').evaluate((el) => getComputedStyle(el).color), 'rgb(85, 219, 255)');
-    assert.equal(await phone.evaluate((el) => getComputedStyle(el).animationName), 'none');
-    const railCta = right.locator('[data-banner-link]');
-    assert.deepEqual(await railCta.evaluate((el) => {
-      const style = getComputedStyle(el);
-      return [style.backgroundColor, style.color, style.fontWeight, style.animationName];
-    }), ['rgb(85, 219, 255)', 'rgb(0, 0, 0)', '800', 'none']);
-    await phone.getByRole('button', { name: 'Certo', exact: true }).click();
-    assert.match(await phone.locator('.demo-feedback').innerText(), /Você acertou/);
-    await phone.getByRole('button', { name: 'Gerar exemplo' }).click();
-    assert.match(await phone.locator('.demo-question').innerText(), /modo anônimo/);
-    assert.equal(await phone.locator('.demo-feedback').isVisible(), false);
-    await phone.getByRole('button', { name: 'Errado', exact: true }).click();
-    assert.match(await phone.locator('.demo-feedback').innerText(), /Você acertou/);
-    assert.equal(await right.locator('[data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
-    if (screenshotDir) {
-      await mkdir(screenshotDir, { recursive: true });
-      await page.screenshot({ path: path.join(screenshotDir, 'laterais-desktop.png') });
-      await phone.screenshot({ path: path.join(screenshotDir, 'celular-3d.png') });
-    }
-    await page.emulateMedia({ reducedMotion: 'no-preference' });
-    await page.reload();
-    await right.locator('[data-phone-entered]').waitFor({ state: 'visible' });
-    assert.match(await phone.evaluate((el) => getComputedStyle(el).animationName), /phone-rise/);
-    await right.and(page.locator('.offer-in-view')).waitFor({ state: 'visible' });
-    assert.match(await railCta.evaluate((el) => getComputedStyle(el).animationName), /offer-neon-pulse/);
-    await page.emulateMedia({ reducedMotion: 'reduce' });
-    await page.setViewportSize({ width: 390, height: 844 });
-    assert.equal(await left.isVisible(), false);
-    assert.equal(await right.isVisible(), false);
-    assert.ok(await mobileApostila.isVisible());
-    assert.equal(await mobileApostila.locator('[data-banner-link]').getAttribute('href'), '/apostila/#amostra');
-
-    const anchor = page.locator('#generator-anchor');
-    assert.equal(await anchor.isVisible(), false);
-    await page.clock.fastForward(10_000);
-    await anchor.waitFor({ state: 'visible' });
-    if (screenshotDir) await anchor.screenshot({ path: path.join(screenshotDir, 'gerador-rodape-celular.png') });
-    assert.equal(await anchor.locator('strong').innerText(), 'Questões para sua banca');
-    const buttonColors = (el) => {
-      const style = getComputedStyle(el);
-      return [style.backgroundColor, style.color, style.fontWeight];
-    };
-    assert.deepEqual(await anchor.locator('[data-banner-link]').evaluate(buttonColors), ['rgb(185, 245, 0)', 'rgb(0, 0, 0)', '800']);
-    const anchorBounds = await anchor.boundingBox();
-    assert.ok(anchorBounds && anchorBounds.x >= 0 && anchorBounds.x + anchorBounds.width <= 390 && anchorBounds.height < 104);
-    assert.equal(await anchor.locator('[data-banner-link]').getAttribute('href'), 'https://www.geradordequestoes.site/');
-    assert.equal(await anchor.evaluate((el) => getComputedStyle(el).animationName), 'none');
-    await page.emulateMedia({ reducedMotion: 'no-preference' });
-    assert.match(await anchor.evaluate((el) => getComputedStyle(el).animationName), /anchor-rise/);
-    await page.emulateMedia({ reducedMotion: 'reduce' });
-    await page.goto(`${base}/simulado-vespera-concurso/`);
-    await page.clock.fastForward(10_000);
-    await anchor.waitFor({ state: 'visible' });
-    await page.locator('#questoes').evaluate((quiz) => quiz.scrollIntoView({ block: 'start' }));
-    await anchor.waitFor({ state: 'hidden' });
-
-    await page.setViewportSize({ width: 1600, height: 900 });
-    await page.goto(`${base}/`);
-    const apostila = page.locator('[data-slot="home-trilha"]');
-    assert.deepEqual(await apostila.locator('[data-banner-link]').evaluate(buttonColors), ['rgb(255, 218, 68)', 'rgb(0, 0, 0)', '800']);
-    if (screenshotDir) await apostila.screenshot({ path: path.join(screenshotDir, 'apostila-cta.png') });
-    assert.ok(await page.locator('[data-slot="home-lateral-esquerda"]').isVisible());
-    assert.ok(await page.locator('[data-slot="home-lateral-direita"]').isVisible());
-    assert.ok(await page.locator('[data-slot="home-apos-aulas"] .offer-preview').isVisible());
-    await page.clock.fastForward(10_000);
-    await anchor.waitFor({ state: 'visible' });
-    const fullWidth = await page.evaluate(() => document.documentElement.clientWidth);
-    const desktopBounds = await anchor.boundingBox();
-    assert.ok(desktopBounds && desktopBounds.x === 0 && desktopBounds.width === fullWidth);
-    assert.equal(desktopBounds.y + desktopBounds.height, 900);
-    if (screenshotDir) await anchor.screenshot({ path: path.join(screenshotDir, 'gerador-rodape-desktop.png') });
-    await anchor.getByRole('button', { name: 'Fechar banner do Gerador' }).click();
-    assert.equal(await anchor.isVisible(), false);
-    await page.clock.fastForward(8_000);
-    assert.equal(await anchor.isVisible(), false);
-    await page.clock.fastForward(2_000);
-    await anchor.waitFor({ state: 'visible' });
   });
   for (const width of [320, 390, 768, 1440]) for (const theme of ['dark', 'light']) await check(`reading and filter contrast ${width}px ${theme}`, async () => {
     await page.setViewportSize({ width, height: 900 });

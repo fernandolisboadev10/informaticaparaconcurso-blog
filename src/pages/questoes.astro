@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import StudyOffer from '../components/StudyOffer.astro';
 import { categories } from '../data/categories';
 import { isPublished } from '../utils/posts';
 
@@ -48,7 +47,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g, 
       <div class="intro-text">
         <h1>Questões comentadas</h1>
         <p>Faça um treino rápido com {blockSize} questões comentadas. Cada resposta aponta uma aula para revisar.</p>
-        <p class="intro-offer"><StudyOffer product="gerador" placement="questoes-inicio" compact label="Criar um treino para minha banca no Gerador" /></p>
       </div>
       <a class="back" href="/#materias">← Voltar às matérias</a>
     </div>
@@ -85,9 +83,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g, 
             <p class="comment" id="q-comment"></p>
             <a class="lesson" id="q-lesson" href="/"></a>
           </div>
-          <p id="q-feedback-offer" class="feedback-offer" hidden>
-            <StudyOffer product="gerador" placement="questoes-primeira-resposta" compact label="Conhecer o Gerador de Questões" />
-          </p>
         </article>
 
         <div class="nav-btns">
@@ -96,7 +91,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g, 
         </div>
         <section id="q-complete" class="panel" aria-labelledby="q-summary" hidden>
           <h2 id="q-summary" aria-live="polite"></h2>
-          <StudyOffer product="gerador" placement="questoes-resultado" />
           <button type="button" class="btn-ghost btn-small" id="btn-restart">Fazer outro bloco grátis</button>
         </section>
       </section>
@@ -136,9 +130,7 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g, 
     feedback: $('q-feedback'), verdict: $('q-verdict'), comment: $('q-comment'), lesson: $('q-lesson') as HTMLAnchorElement,
     prev: $<HTMLButtonElement>('btn-prev'), next: $<HTMLButtonElement>('btn-next'), grid: $('q-grid'),
     ok: $('s-ok'), done: $('s-done'), complete: $('q-complete'), summary: $('q-summary'), restart: $('btn-restart'),
-    feedbackOffer: $('q-feedback-offer'),
   };
-  const feedbackLink = els.feedbackOffer.querySelector<HTMLAnchorElement>('[data-banner-link]')!;
   const chips = Array.from(document.querySelectorAll<HTMLButtonElement>('.chip'));
 
   let materia = '';
@@ -222,8 +214,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g, 
       els.lesson.textContent = `Revisar a aula: ${lesson.title} →`;
       els.lesson.href = lesson.href;
     }
-    els.feedbackOffer.hidden = !answered || doneCount !== 1;
-    if (!els.feedbackOffer.hidden) feedbackLink.textContent = `Praticar mais questões de ${lesson.cat} no Gerador`;
 
     els.prev.disabled = idx === 0;
     const last = idx === block.length - 1;
@@ -318,7 +308,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g, 
     color: var(--ink-soft);
   }
 
-  .page .intro-text .intro-offer { margin-top: 10px; }
 
   .page .back {
     display: inline-flex;
@@ -748,7 +737,6 @@ const payload = JSON.stringify({ lessons, questions, blockSize }).replace(/</g, 
     color: var(--ink-soft);
   }
 
-  .page .feedback-offer { margin: 16px 0 0; }
   .page #q-complete[hidden] { display: none; }
 
   .page .nojs {

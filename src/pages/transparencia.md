@@ -42,7 +42,7 @@ O diálogo aberto é fundamental para crescermos juntos e melhorarmos continuame
 
 ## Publicidade e Parcerias
 
-O site pode exibir anúncios do Google AdSense, que aparecem separados do texto dos artigos. Hoje não há links de afiliados nem conteúdo patrocinado. Se isso mudar, informaremos de maneira clara no próprio artigo.
+A exibição de anúncios do Google AdSense está suspensa durante a revisão do site. Hoje não há links de afiliados nem conteúdo patrocinado. Se isso mudar, informaremos de maneira clara no próprio artigo.
 
 Mantemos uma separação estrita entre o nosso conteúdo editorial (suas aulas e resumos) e a publicidade, protegendo a confiança que você deposita em nós para a sua preparação.
 
