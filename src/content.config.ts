@@ -21,4 +21,31 @@ const blog = defineCollection({
     }),
 });
 
-export const collections = { blog };
+const stories = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/stories' }),
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.coerce.date(),
+    draft: z.boolean().default(false),
+    post: z.string(),
+    poster: image(),
+    cover: image(),
+    coverText: z.string(),
+    pages: z.array(z.object({
+      id: z.string().regex(/^[a-z][a-z0-9-]*$/),
+      label: z.string(),
+      title: z.string(),
+      text: z.string(),
+      image: image(),
+      imageAlt: z.string(),
+      light: z.boolean().default(false),
+    })).min(1),
+    closing: z.object({
+      title: z.string(),
+      text: z.string(),
+    }),
+  }),
+});
+
+export const collections = { blog, stories };

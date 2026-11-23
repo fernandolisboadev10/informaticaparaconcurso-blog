@@ -10,15 +10,18 @@ import HomeLead from "../components/HomeLead.astro";
 import LatestList from "../components/LatestList.astro";
 import SubjectGrid from '../components/SubjectGrid.astro';
 import CompactList from '../components/CompactList.astro';
+import StoryCards from '../components/StoryCards.astro';
 import { categories, categoryHref } from '../data/categories';
 import { isPublished, sortByActivity } from '../utils/posts';
 import { questionBankCount, questionCount } from '../utils/quizzes';
+import { getPublishedStories } from '../utils/stories';
 
 // Page 1 opens with the subjects of the exam syllabus; "Aulas recentes" and the /page/N/ pages
 // list every post, newest first, 9 per page.
 const PER_PAGE = 9;
 const page = Number(Astro.props.page ?? 1);
 const all = sortByActivity(await getCollection('blog', isPublished));
+const stories = page === 1 ? (await getPublishedStories()).slice(0, 4) : [];
 // As listas do topo da home seguem a data de criação.
 const byCreated = [...all].sort((a, b) => b.data.date.getTime() - a.data.date.getTime() || a.id.localeCompare(b.id));
 const featured = byCreated.find((post) => post.id === 'nocoes-de-informatica') ?? byCreated[0];
@@ -112,6 +115,13 @@ const trilha = trilhaSlugs
           ))}
         </ol>
       </section>
+  )}
+
+  {stories.length > 0 && (
+    <section class="block" aria-labelledby="home-stories-title">
+      <SectionHead title="Web Stories" id="home-stories-title" href="/web-stories/" linkLabel="Ver todas" />
+      <StoryCards stories={stories} />
+    </section>
   )}
 
   <section class="block recent">

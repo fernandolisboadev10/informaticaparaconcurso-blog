@@ -1,0 +1,33 @@
+---
+import StoryCards from '../../components/StoryCards.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPublishedStories } from '../../utils/stories';
+
+const stories = await getPublishedStories();
+const description = 'Guias visuais de informática para concursos. Veja o que estudar e como praticar para a prova.';
+---
+
+<BaseLayout title="Web Stories" description={description}>
+  <section class="container stories" aria-labelledby="stories-title">
+    <h1 id="stories-title">Web Stories</h1>
+    <p>{description}</p>
+    {stories.length > 0 ? <StoryCards stories={stories} /> : <p>Em breve, novos guias visuais.</p>}
+  </section>
+</BaseLayout>
+
+<style>
+  .stories {
+    padding-block: clamp(2rem, 6vw, 4rem);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+  }
+
+  p {
+    margin: 0.75rem 0 1.75rem;
+    color: var(--ink-soft);
+  }
+</style>

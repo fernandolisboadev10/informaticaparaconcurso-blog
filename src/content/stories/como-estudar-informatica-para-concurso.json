@@ -1,0 +1,83 @@
+{
+  "title": "Como estudar informática para concurso?",
+  "description": "Conheça o guia, as matérias do edital, as questões comentadas e os simulados do Informática para Concurso em 10 telas.",
+  "date": "2026-11-23T00:00:00-03:00",
+  "post": "como-estudar-informatica-para-concurso",
+  "poster": "./images/como-estudar-informatica-para-concurso/poster.jpg",
+  "cover": "../blog/images/nocoes-de-informatica-capa.webp",
+  "coverText": "Vai prestar concurso? Conheça um site para estudar informática com foco no edital.",
+  "pages": [
+    {
+      "id": "conheca-o-site",
+      "label": "Conheça o site",
+      "title": "Por onde começar",
+      "text": "Se você está começando, abra o guia Como estudar informática para concurso.",
+      "image": "./images/como-estudar-informatica-para-concurso/guia.webp",
+      "imageAlt": "O guia aberto no site Informática para Concurso",
+      "light": true
+    },
+    {
+      "id": "sistemas",
+      "label": "Estude por matéria",
+      "title": "Sistemas",
+      "text": "Veja o que cai sobre Windows e Linux.",
+      "image": "./images/como-estudar-informatica-para-concurso/sistemas.webp",
+      "imageAlt": ""
+    },
+    {
+      "id": "hardware",
+      "label": "Estude por matéria",
+      "title": "Hardware",
+      "text": "Compare HD, SSD SATA e SSD NVMe.",
+      "image": "./images/como-estudar-informatica-para-concurso/hardware.webp",
+      "imageAlt": "",
+      "light": true
+    },
+    {
+      "id": "office",
+      "label": "Estude por matéria",
+      "title": "Office",
+      "text": "Pratique fórmulas do Excel. No exemplo, =SOMA(B2:B4) soma 2, 5 e 3 e retorna 10.",
+      "image": "./images/como-estudar-informatica-para-concurso/office.webp",
+      "imageAlt": ""
+    },
+    {
+      "id": "arquivos",
+      "label": "Estude por matéria",
+      "title": "Arquivos",
+      "text": "Entenda as diferenças entre os formatos ZIP, RAR e 7z.",
+      "image": "./images/como-estudar-informatica-para-concurso/arquivos.webp",
+      "imageAlt": "",
+      "light": true
+    },
+    {
+      "id": "redes",
+      "label": "Estude por matéria",
+      "title": "Redes",
+      "text": "Compare a intranet, usada pela equipe interna, com a extranet, acessível a parceiros autorizados.",
+      "image": "./images/como-estudar-informatica-para-concurso/redes.webp",
+      "imageAlt": ""
+    },
+    {
+      "id": "seguranca",
+      "label": "Estude por matéria",
+      "title": "Segurança",
+      "text": "Conheça a regra de backup 3-2-1. Mantenha 3 cópias em 2 tipos de mídia, com 1 cópia fora do local.",
+      "image": "./images/como-estudar-informatica-para-concurso/seguranca.webp",
+      "imageAlt": ""
+    },
+    {
+      "id": "questoes-e-simulados",
+      "label": "Pratique no site",
+      "title": "Questões e simulados",
+      "text": "Escolha uma matéria, leia as aulas e responda a questões comentadas. Você também pode fazer simulados da sua banca.",
+      "image": "./images/como-estudar-informatica-para-concurso/simulado.webp",
+      "imageAlt": "Gabarito comentado de uma questão de inteligência artificial no simulado Cebraspe",
+      "light": true
+    }
+  ],
+  "closing": {
+    "title": "Quer saber mais sobre informática para concurso?",
+    "text": "Acesse o Informática para Concurso e comece pelo guia de estudos."
+  }
+}

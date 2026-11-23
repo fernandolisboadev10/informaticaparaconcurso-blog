@@ -1,0 +1,196 @@
+---
+import { getImage } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { getPublishedStories, storyHref } from '../../utils/stories';
+
+export async function getStaticPaths() {
+  return (await getPublishedStories()).map((story) => ({
+    params: { slug: story.id },
+    props: { story },
+  }));
+}
+
+interface Props {
+  story: CollectionEntry<'stories'>;
+}
+
+const { id, data } = Astro.props.story;
+const { title, description, date, post, poster, coverText, pages, closing } = data;
+const cover = await getImage({ src: data.cover, width: 760, height: 416, fit: 'cover', format: 'webp' });
+const canonical = new URL(storyHref(id), Astro.site).href;
+const posterUrl = new URL(poster.src, Astro.site).href;
+const logoPath = '/web-stories/publisher-logo.png';
+const logoUrl = new URL(logoPath, Astro.site).href;
+const publisher = 'Informática para Concurso';
+const articlePath = `/${post}/`;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  image: [posterUrl],
+  mainEntityOfPage: canonical,
+  inLanguage: 'pt-BR',
+  datePublished: date.toISOString(),
+  author: { '@type': 'Person', name: 'Fernando Lisboa', url: new URL('/sobre-nos/', Astro.site).href },
+  publisher: { '@type': 'Organization', name: publisher, logo: { '@type': 'ImageObject', url: logoUrl } },
+};
+---
+<!doctype html>
+<html amp lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js" is:inline></script>
+    <script async src="https://cdn.ampproject.org/v0.js" is:inline></script>
+    <title>{title}</title>
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon-48.png" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content={publisher} />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={posterUrl} />
+    <meta property="og:image:width" content={String(poster.width)} />
+    <meta property="og:image:height" content={String(poster.height)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schema).replace(/</g, '\\u003c')} />
+    <style amp-boilerplate is:inline>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript><style amp-boilerplate is:inline>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom is:inline>
+      amp-story {
+        font-family: 'Segoe UI', Arial, sans-serif;
+      }
+
+      .screen {
+        --accent: #65defd;
+        --text: #f5f9ff;
+        --muted: #c7d9f6;
+        --background: radial-gradient(ellipse at 90% 62%, #10405c, #101b30 60%, #091322);
+        background: var(--background);
+        color: var(--text);
+      }
+
+      .screen.light {
+        --accent: #17528b;
+        --text: #0d1a32;
+        --muted: #243e62;
+        --background: radial-gradient(ellipse at 100% 60%, #d7edff, #f3f8ff 70%);
+      }
+
+      .slide {
+        align-content: center;
+        gap: clamp(10px, calc(var(--story-page-vh, 1vh) * 2.4), 22px);
+        padding: 6% 8%;
+      }
+
+      .heading, .caption, .brand {
+        margin: 0;
+      }
+
+      .heading span {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--text);
+        font-size: clamp(14px, calc(var(--story-page-vh, 1vh) * 2.8), 22px);
+        font-weight: 650;
+        line-height: 1.2;
+      }
+
+      h1, h2 {
+        margin: 0;
+        font-size: clamp(25px, calc(var(--story-page-vh, 1vh) * 5.2), 42px);
+        font-weight: 800;
+        line-height: 1.06;
+        letter-spacing: -0.025em;
+        text-wrap: balance;
+      }
+
+      .heading h2 {
+        color: var(--accent);
+      }
+
+      .caption {
+        color: var(--muted);
+        font-size: clamp(16px, calc(var(--story-page-vh, 1vh) * 3.05), 22px);
+        line-height: 1.32;
+        text-wrap: pretty;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .visual {
+        overflow: hidden;
+        border: 1px solid #5283b1;
+        border-radius: 12px;
+        background: #10233e;
+      }
+
+      .site-card {
+        display: grid;
+        gap: 8px;
+        padding: 12px;
+        font-size: clamp(12px, calc(var(--story-page-vh, 1vh) * 2.4), 16px);
+        overflow-wrap: anywhere;
+      }
+
+      .closing {
+        padding-bottom: calc(var(--story-page-vh, 1vh) * 13);
+      }
+    </style>
+  </head>
+  <body>
+    <amp-story standalone="" title={title} publisher={publisher} publisher-logo-src={logoUrl} poster-portrait-src={posterUrl}>
+      <amp-story-page id="capa" class="screen" auto-advance-after="10s">
+        <amp-story-grid-layer template="vertical" class="slide">
+          <p class="brand"><amp-img src={logoPath} width="26" height="26" alt=""></amp-img>{publisher}</p>
+          <h1>{title}</h1>
+          <div class="visual">
+            <amp-img src={cover.src} width="760" height="416" layout="responsive" alt=""></amp-img>
+          </div>
+          <p class="caption">{coverText}</p>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      {pages.map(({ id: pageId, label, title: heading, text, image, imageAlt, light }) => (
+        <amp-story-page id={pageId} class:list={['screen', { light }]} auto-advance-after="12s">
+          <amp-story-grid-layer template="vertical" class="slide">
+            <div class="heading">
+              <span>{label}</span>
+              <h2>{heading}</h2>
+            </div>
+            <div class="visual">
+              <amp-img src={image.src} width={image.width} height={image.height} layout="responsive" alt={imageAlt}></amp-img>
+            </div>
+            <p class="caption">{text}</p>
+          </amp-story-grid-layer>
+        </amp-story-page>
+      ))}
+
+      <amp-story-page id="guia-completo" class="screen">
+        <amp-story-grid-layer template="vertical" class="slide closing">
+          <h2>{closing.title}</h2>
+          <div class="visual site-card">
+            <p class="brand"><amp-img src={logoPath} width="36" height="36" alt=""></amp-img>{publisher}</p>
+            <span>{Astro.site?.hostname}</span>
+          </div>
+          <p class="caption">{closing.text}</p>
+        </amp-story-grid-layer>
+        <amp-story-page-outlink layout="nodisplay" theme="dark">
+          <a href={articlePath}>Ler o guia completo</a>
+        </amp-story-page-outlink>
+      </amp-story-page>
+    </amp-story>
+  </body>
+</html>

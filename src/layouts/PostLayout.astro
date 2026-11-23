@@ -12,6 +12,7 @@ import type { MarkdownHeading } from 'astro';
 import { categoryHref } from '../data/categories';
 import { categoryColor } from '../utils/categoryColor';
 import { getArticleQuiz } from '../utils/quizzes';
+import { getPublishedStories, storyHref } from '../utils/stories';
 
 interface Props {
   title: string;
@@ -34,6 +35,7 @@ const { title, seoTitle, description, category, date, updated, related, tags, re
 
 // Questões interativas ficam em src/data/quizzes/<slug>.json e são exibidas no final do artigo.
 const quiz = getArticleQuiz(Astro.props.slug);
+const story = (await getPublishedStories()).find(({ data }) => data.post === Astro.props.slug);
 
 const formattedDate = date.toLocaleDateString('pt-BR', {
   day: '2-digit',
@@ -119,6 +121,16 @@ const breadcrumbSchema = {
           <div class="hero-image">
             <Image src={image} alt={imageAlt ?? title} width={1200} height={800} widths={[600, 900, 1200]} sizes="(max-width: 820px) 100vw, 760px" quality={72} priority />
           </div>
+        )}
+
+        {story && (
+          <a href={storyHref(story.id)} class="story-link">
+            <span>
+              <strong>Veja em Web Story</strong>
+              <small>{story.data.title} · {story.data.pages.length + 2} telas</small>
+            </span>
+            <span class="story-action">Abrir story</span>
+          </a>
         )}
 
         <TableOfContents headings={headings} />
@@ -244,6 +256,41 @@ const breadcrumbSchema = {
 </script>
 
 <style>
+  .story-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-block: 1rem;
+    padding: 0.875rem 1rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 0.875rem;
+    background: var(--surface-2);
+    color: var(--ink-strong);
+    text-decoration: none;
+  }
+
+  .story-link:hover {
+    border-color: var(--violet);
+  }
+
+  .story-link strong,
+  .story-link small {
+    display: block;
+  }
+
+  .story-link small {
+    margin-top: 0.125rem;
+    color: var(--ink-soft);
+    font-size: 0.875rem;
+  }
+
+  .story-action {
+    color: var(--link);
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
   /* Coluna única de leitura: capa 1200x800 (3:2), guia logo abaixo e o texto. */
   .post-shell {
     max-width: 808px;
