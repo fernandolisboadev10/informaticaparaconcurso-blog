@@ -1,0 +1,83 @@
+{
+  "title": "Noções de Informática para Concursos",
+  "description": "Veja os cinco blocos de noções de informática, exemplos de pegadinhas e como estudar pelo edital. O guia inclui 40 questões comentadas.",
+  "date": "2026-11-24T00:00:00-03:00",
+  "post": "nocoes-de-informatica",
+  "poster": "./images/nocoes-de-informatica/poster.jpg",
+  "cover": "../blog/images/simulado-cebraspe-informatica.webp",
+  "coverText": "Vai prestar concurso? Veja os cinco blocos da matéria e o que praticar em cada um.",
+  "pages": [
+    {
+      "id": "edital",
+      "label": "Por onde começar",
+      "title": "Abra o edital",
+      "text": "Marque os assuntos e as versões dos programas exigidos para o seu cargo. Se hardware aparecer no edital, inclua o tema no plano.",
+      "image": "../blog/images/nocoes-de-informatica-capa.webp",
+      "imageAlt": "Candidato anota os temas de informática em um caderno",
+      "light": true
+    },
+    {
+      "id": "sistemas-operacionais",
+      "label": "Bloco 1 de 5",
+      "title": "Windows e Linux",
+      "text": "No Windows, pratique atalhos e o uso do Explorador de Arquivos. No Linux, revise permissões e comandos de terminal.",
+      "image": "../blog/images/windows-x-linux.webp",
+      "imageAlt": "Ilustração lado a lado de Windows e Linux"
+    },
+    {
+      "id": "edicao-de-documentos",
+      "label": "Bloco 2 de 5",
+      "title": "Office e LibreOffice",
+      "text": "Revise formatação, planilhas e apresentações. No Excel, o intervalo A1:A3 inclui A1, A2 e A3.",
+      "image": "../blog/images/excel.webp",
+      "imageAlt": "Notebook com o ícone do Excel na tela",
+      "light": true
+    },
+    {
+      "id": "redes",
+      "label": "Bloco 3 de 5",
+      "title": "Redes e Internet",
+      "text": "Revise Internet, intranet, navegadores e e-mail. Nos protocolos de e-mail, SMTP envia mensagens e IMAP sincroniza a caixa com o servidor.",
+      "image": "../blog/images/Redes-de-Computadores.webp",
+      "imageAlt": "Ilustração de dispositivos conectados em rede"
+    },
+    {
+      "id": "arquivos-e-pastas",
+      "label": "Bloco 4 de 5",
+      "title": "Arquivos e pastas",
+      "text": "Pratique copiar, mover e excluir arquivos. Se a questão mandar trocar .txt por .pdf, lembre que renomear a extensão não converte o arquivo.",
+      "image": "../blog/images/tipos-de-arquivos.webp",
+      "imageAlt": "Pessoa usando um notebook para estudar tipos de arquivos",
+      "light": true
+    },
+    {
+      "id": "seguranca-da-informacao",
+      "label": "Bloco 5 de 5",
+      "title": "Segurança da informação",
+      "text": "O antivírus detecta programas maliciosos. O firewall controla o tráfego de rede. O backup permite recuperar os dados após uma perda.",
+      "image": "../blog/images/backup.webp",
+      "imageAlt": "Ilustração de servidores e armazenamento com símbolos de proteção"
+    },
+    {
+      "id": "pegadinha-da-banca",
+      "label": "Na prova",
+      "title": "Certo ou errado?",
+      "text": "“O antivírus bloqueia qualquer ameaça.” Errado. No Cebraspe, termos como “qualquer” e “sempre” merecem atenção.",
+      "image": "../blog/images/Cebraspe.webp",
+      "imageAlt": "Candidato respondendo a uma prova do Cebraspe",
+      "light": true
+    },
+    {
+      "id": "roteiro-de-estudo",
+      "label": "Pratique por bloco",
+      "title": "Revise pelos seus erros",
+      "text": "Comece por sistemas e arquivos. Depois de cada bloco, resolva questões da sua banca e anote o motivo de cada erro para revisar.",
+      "image": "../blog/images/como-estudar-informatica-para-concurso.webp",
+      "imageAlt": "Pessoa estuda no computador e faz anotações em um caderno"
+    }
+  ],
+  "closing": {
+    "title": "Pratique com 40 questões comentadas",
+    "text": "Abra o guia completo, confira as aulas por bloco e faça o simulado de Certo ou Errado."
+  }
+}
