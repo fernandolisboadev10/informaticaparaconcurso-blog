@@ -1,0 +1,101 @@
+---
+import { APOSTILA_COVER, APOSTILA_PRICE, APOSTILA_QUESTIONS, APOSTILA_URL } from '../data/apostila';
+import { QUESTOES_URL } from '../data/questoes';
+import SalesArrow from './SalesArrow.astro';
+
+interface Props {
+  product: 'apostila' | 'gerador';
+  placement: string;
+  compact?: boolean;
+}
+
+const { product, placement, compact = false } = Astro.props;
+const isApostila = product === 'apostila';
+const productName = isApostila ? 'Apostila Cebraspe' : 'Gerador de Questões';
+const title = isApostila
+  ? `${APOSTILA_QUESTIONS} questões comentadas da Cebraspe`
+  : 'Monte um treino para sua banca';
+const detail = isApostila
+  ? `Apostila digital em PDF por ${APOSTILA_PRICE}, em pagamento único.`
+  : 'Escolha o assunto, o formato e a dificuldade. Cadastro gratuito.';
+const href = isApostila ? APOSTILA_URL : QUESTOES_URL;
+---
+
+<aside class:list={['study-offer', { apostila: isApostila, compact }]} aria-label={productName} data-banner={product} data-slot={placement}>
+  {isApostila && (
+    <img class="offer-cover" src={APOSTILA_COVER} width="108" height="144" alt="" loading="lazy" decoding="async" />
+  )}
+  <div class="offer-copy">
+    <span class="offer-product">{productName}</span>
+    <strong>{title}</strong>
+    {!compact && <p>{detail}</p>}
+  </div>
+  <a class="offer-button" href={href} data-banner-link>
+    {isApostila ? 'Conhecer a apostila' : 'Abrir o Gerador'}
+    <span class="offer-arrow" aria-hidden="true"><SalesArrow /></span>
+  </a>
+</aside>
+
+<style>
+  .study-offer {
+    --offer-accent: #9bddff;
+    --offer-title: #f6f8ff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px clamp(12px, 2.5vw, 26px);
+    padding: clamp(14px, 2.4vw, 24px);
+    margin-block: 16px;
+    background: #101c34;
+    border: 1px solid #324a69;
+    border-inline-start: 4px solid var(--offer-accent);
+    border-radius: 14px;
+    color: var(--offer-title);
+    text-align: left;
+  }
+
+  .study-offer.apostila { --offer-accent: #ffda44; }
+  .study-offer.compact { padding: 14px 16px; }
+  .offer-cover {
+    flex: none;
+    width: clamp(44px, 9vw, 68px);
+    height: auto;
+    border-radius: 3px 6px 6px 3px;
+    box-shadow: 4px 3px 0 #344866;
+  }
+  .compact .offer-cover { width: 42px; }
+  .offer-copy { flex: 1 1 11rem; min-width: 0; }
+  .offer-product {
+    display: block;
+    color: var(--offer-accent);
+    font: 650 .83rem/1.4 var(--font-body);
+  }
+  .study-offer .offer-copy strong {
+    display: block;
+    margin-top: 4px;
+    color: var(--offer-title);
+    font: 750 clamp(1.12rem, 2.3vw, 1.6rem)/1.2 var(--font-display);
+  }
+  .study-offer.compact .offer-copy strong { font-size: 1.08rem; }
+  .study-offer .offer-copy > p {
+    margin: 6px 0 0;
+    color: #c4d1e4;
+    font: 400 .875rem/1.5 var(--font-body);
+  }
+  .study-offer .offer-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    max-width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: var(--offer-accent);
+    color: #101c34;
+    font: 700 .875rem/1.3 var(--font-body);
+    text-decoration: none;
+  }
+  .study-offer .offer-button:hover { background: #fff; color: #101c34; text-decoration: none; }
+  .offer-arrow { display: inline-flex; flex: none; }
+  .offer-button:focus-visible { outline: 2px solid var(--offer-title); outline-offset: 3px; }
+</style>

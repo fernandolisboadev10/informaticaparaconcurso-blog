@@ -5,6 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LessonRow from '../components/LessonRow.astro';
 import Pagination from '../components/Pagination.astro';
 import SectionHead from '../components/SectionHead.astro';
+import StudyOffer from '../components/StudyOffer.astro';
 import TrendBar from "../components/TrendBar.astro";
 import HomeLead from "../components/HomeLead.astro";
 import LatestList from "../components/LatestList.astro";
@@ -67,7 +68,7 @@ const trilha = trilhaSlugs
   }));
 
 ---
-<BaseLayout title={page > 1 ? `Informática para Concurso: resumos e simulados - Página ${page}` : "Informática para Concurso: resumos e simulados"} description="Resumos, simulados e o que cai na prova de informática dos concursos, em linguagem simples e direta.">
+<BaseLayout title={page > 1 ? `Informática para Concurso: resumos e simulados - Página ${page}` : "Informática para Concurso: resumos e simulados"} description="Resumos, simulados e o que cai na prova de informática dos concursos, em linguagem simples e direta." footerOffer={page === 1 ? 'gerador' : 'apostila'}>
   {page > 1 && <h1 class="visually-hidden">Informática para Concurso</h1>}
 
   {page === 1 && (
@@ -156,6 +157,10 @@ const trilha = trilhaSlugs
         <SubjectGrid subjects={subjects} />
       </section>
 
+      <div class="block home-offer">
+        <StudyOffer product="gerador" placement="home-apos-materias" />
+      </div>
+
       <div class="block pair">
         {simulados.length > 0 && (
           <section>
@@ -169,6 +174,10 @@ const trilha = trilhaSlugs
             <CompactList posts={concursos.slice(0, 5)} />
           </section>
         )}
+      </div>
+
+      <div class="block home-offer">
+        <StudyOffer product="apostila" placement="home-inferior" />
       </div>
     </>
   )}
@@ -620,6 +629,10 @@ const trilha = trilhaSlugs
 
   .recent {
     padding-bottom: 8px;
+  }
+
+  .home-offer {
+    padding-block: 12px;
   }
 
   @media (max-width: 640px) {

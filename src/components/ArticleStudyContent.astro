@@ -1,0 +1,11 @@
+---
+const content = await Astro.slots.render('default');
+const marker = '<!--article-study-offer-->';
+const sections = (content ?? '').split(marker);
+const offers = sections.length > 1
+  ? await Promise.all([Astro.slots.render('gerador'), Astro.slots.render('apostila')])
+  : [];
+---
+{sections.map((section, index) => (
+  <Fragment set:html={index === 0 ? section : `${offers[(index - 1) % 2] ?? ''}${section}`} />
+))}

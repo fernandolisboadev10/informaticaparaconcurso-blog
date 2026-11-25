@@ -1,5 +1,13 @@
 ---
 import { categories as categoryList } from "../data/categories";
+import { APOSTILA_URL } from '../data/apostila';
+import StudyOffer from './StudyOffer.astro';
+
+interface Props {
+  product?: 'apostila' | 'gerador';
+}
+
+const { product = 'apostila' } = Astro.props;
 
 const categories = [
   { label: "Início", href: "/" },
@@ -7,6 +15,7 @@ const categories = [
 ];
 
 const quickLinks = [
+  { label: 'Apostila Cebraspe', href: APOSTILA_URL },
   { label: 'Sobre nós', href: '/sobre-nos/' },
   { label: 'Fale conosco', href: '/fale-conosco/' },
   { label: 'Transparência', href: '/transparencia/' },
@@ -42,6 +51,10 @@ const quickLinks = [
       </ul>
     </div>
 
+  </div>
+
+  <div class="container footer-offer">
+    <StudyOffer product={product} placement="rodape" compact />
   </div>
 
   <div class="bottom">
@@ -162,6 +175,10 @@ const quickLinks = [
 
   .bottom {
     background: var(--ink-deep);
+  }
+
+  .footer-offer {
+    padding-bottom: 24px;
   }
 
   .bottom-inner {

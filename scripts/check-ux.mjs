@@ -23,8 +23,8 @@ async function check(name, run) {
   catch (error) { failures.push(name); console.error(`FAIL ${name}: ${error.message}`); }
 }
 
-await check('verification, deployment and routing sources preserved', async () => {
-  for (const file of ['astro.config.mjs', 'public/ads.txt', 'public/robots.txt', 'public/CNAME', '.github/workflows/deploy.yml']) {
+await check('verification and deployment sources preserved', async () => {
+  for (const file of ['public/ads.txt', 'public/robots.txt', 'public/CNAME', '.github/workflows/deploy.yml']) {
     assert.equal(normalizeLineEndings(await readFile(path.join(root, file), 'utf8')), execFileSync('git', ['show', `HEAD:${file}`], { encoding: 'utf8' }), file);
   }
 
@@ -63,20 +63,41 @@ if (process.env.BLOG_BASELINE_DIST) await check('routes and SEO metadata preserv
   assert.equal(withoutSales(await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8')), withoutSales(await readFile(path.join(baseline, 'sitemap-0.xml'), 'utf8')));
 });
 
-await check('sales and advertising are absent from the public build', async () => {
+await check('study offers and sales are published and AdSense is suspended', async () => {
   const files = await htmlFiles(dist);
-  assert.ok(!files.includes(salesRoute));
+  assert.ok(files.includes(salesRoute));
   assert.ok(!files.includes(testCheckoutRoute));
-  await assert.rejects(readFile(path.join(dist, 'images/apostila-capa.webp')), { code: 'ENOENT' });
-  const promotion = /data-banner=|generator-anchor|googlesyndication\.com|adsbygoogle|pay\.hotmart\.com|geradordequestoes\.site|href="[^"#]*\/apostila\/(?:#|"|teste-pagamento\/)/i;
+  assert.ok((await readFile(path.join(dist, 'images/apostila-capa.webp'))).length > 0);
+  const excluded = /generator-anchor|googlesyndication\.com|adsbygoogle|data-slot="[^"]*lateral/i;
+  let pagesWithInlineOffers = 0;
   for (const file of files) {
-    assert.doesNotMatch(await readFile(path.join(dist, file), 'utf8'), promotion, file);
+    const html = await readFile(path.join(dist, file), 'utf8');
+    assert.doesNotMatch(html, excluded, file);
+    assert.doesNotMatch(html, /<!--article-study-offer-->/, file);
+    const inline = [...html.matchAll(/data-banner="(gerador|apostila)" data-slot="artigo-entre-secoes"/g)];
+    assert.ok(inline.length <= 4, file);
+    if (!inline.length) continue;
+    pagesWithInlineOffers++;
+    assert.deepEqual(inline.map((match) => match[1]), ['gerador', 'apostila', 'gerador', 'apostila'].slice(0, inline.length), file);
+    const post = html.match(/<article class="post"[^>]*>[\s\S]*?<\/article>/)?.[0];
+    assert.ok(post && [...post.matchAll(/data-slot="artigo-entre-secoes"/g)].length === inline.length, file);
   }
+  assert.ok(pagesWithInlineOffers > 0);
   const home = await readFile(path.join(dist, 'index.html'), 'utf8');
+  assert.match(home, /data-banner="gerador" data-slot="home-apos-materias"/);
+  assert.match(home, /data-banner="apostila" data-slot="home-inferior"/);
+  assert.match(home, /<footer[\s\S]*?data-slot="rodape"/);
+  const category = await readFile(path.join(dist, 'category/hardware/index.html'), 'utf8');
+  assert.match(category, /data-banner="gerador" data-slot="categoria-apos-posts"/);
+  assert.match(category, /<footer[\s\S]*?data-banner="apostila" data-slot="rodape"/);
+  const sales = await readFile(path.join(dist, salesRoute), 'utf8');
+  assert.match(sales, /href="https:\/\/pay\.hotmart\.com\/U108363176U\?[^"]+" data-hotmart-checkout/);
+  assert.match(sales, /id="amostra"/);
   assert.match(home, /name="google-adsense-account" content="ca-pub-\d+"/);
   assert.match(home, /googletagmanager\.com\/gtag\/js/);
   const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
-  assert.doesNotMatch(sitemap, /\/apostila(?:\/[^<]*)?<\/loc>/);
+  assert.match(sitemap, /\/apostila\/<\/loc>/);
+  assert.doesNotMatch(sitemap, /\/apostila\/(?:pagamento|teste-pagamento)\/?<\/loc>/);
   const receipt = await readFile(path.join(dist, 'apostila/pagamento/index.html'), 'utf8');
   assert.match(receipt, /name="robots" content="noindex, follow"/);
   console.log('  ' + files.length + ' generated pages checked');
