@@ -93,6 +93,11 @@ await check('study offers and sales are published and AdSense is suspended', asy
   const sales = await readFile(path.join(dist, salesRoute), 'utf8');
   assert.match(sales, /href="https:\/\/pay\.hotmart\.com\/U108363176U\?[^"]+" data-hotmart-checkout/);
   assert.match(sales, /id="amostra"/);
+  const article = await readFile(path.join(dist, 'linux-para-concursos/index.html'), 'utf8');
+  for (const html of [home, category, article, sales]) {
+    assert.match(html, /<footer\b[\s\S]*?data-banner="gerador" data-slot="rodape"[\s\S]*?data-question-phone[\s\S]*?<\/footer>/);
+    assert.equal([...html.matchAll(/\bdata-question-phone(?:\s|>)/g)].length, 1);
+  }
   assert.match(home, /name="google-adsense-account" content="ca-pub-\d+"/);
   assert.match(home, /googletagmanager\.com\/gtag\/js/);
   const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');

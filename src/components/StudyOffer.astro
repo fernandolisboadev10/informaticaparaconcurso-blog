@@ -2,15 +2,18 @@
 import { APOSTILA_COVER, APOSTILA_PRICE, APOSTILA_QUESTIONS, APOSTILA_URL } from '../data/apostila';
 import { QUESTOES_URL } from '../data/questoes';
 import SalesArrow from './SalesArrow.astro';
+import QuestionPhoneDemo from './QuestionPhoneDemo.astro';
 
 interface Props {
   product: 'apostila' | 'gerador';
   placement: string;
   compact?: boolean;
+  phone?: boolean;
 }
 
-const { product, placement, compact = false } = Astro.props;
+const { product, placement, compact = false, phone = false } = Astro.props;
 const isApostila = product === 'apostila';
+const showPhone = phone && !isApostila;
 const productName = isApostila ? 'Apostila Cebraspe' : 'Gerador de Questões';
 const title = isApostila
   ? `${APOSTILA_QUESTIONS} questões comentadas da Cebraspe`
@@ -21,7 +24,7 @@ const detail = isApostila
 const href = isApostila ? APOSTILA_URL : QUESTOES_URL;
 ---
 
-<aside class:list={['study-offer', { apostila: isApostila, compact }]} aria-label={productName} data-banner={product} data-slot={placement}>
+<aside class:list={['study-offer', { apostila: isApostila, compact, 'with-phone': showPhone }]} aria-label={productName} data-banner={product} data-slot={placement}>
   {isApostila && (
     <img class="offer-cover" src={APOSTILA_COVER} width="108" height="144" alt="" loading="lazy" decoding="async" />
   )}
@@ -34,6 +37,7 @@ const href = isApostila ? APOSTILA_URL : QUESTOES_URL;
     {isApostila ? 'Conhecer a apostila' : 'Abrir o Gerador'}
     <span class="offer-arrow" aria-hidden="true"><SalesArrow /></span>
   </a>
+  {showPhone && <div class="offer-demo"><QuestionPhoneDemo /></div>}
 </aside>
 
 <style>
@@ -56,6 +60,22 @@ const href = isApostila ? APOSTILA_URL : QUESTOES_URL;
 
   .study-offer.apostila { --offer-accent: #ffda44; }
   .study-offer.compact { padding: 14px 16px; }
+  .study-offer.with-phone {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'copy' 'action' 'demo';
+    justify-items: start;
+  }
+  .with-phone .offer-copy { grid-area: copy; align-self: end; }
+  .with-phone .offer-button { grid-area: action; align-self: start; }
+  .offer-demo { grid-area: demo; justify-self: stretch; min-width: 0; }
+  @media (min-width: 620px) {
+    .study-offer.with-phone {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 206px);
+      grid-template-areas: 'copy demo' 'action demo';
+      grid-template-rows: 1fr 1fr;
+    }
+  }
   .offer-cover {
     flex: none;
     width: clamp(44px, 9vw, 68px);

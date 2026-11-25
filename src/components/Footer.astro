@@ -53,8 +53,9 @@ const quickLinks = [
 
   </div>
 
-  <div class="container footer-offer">
-    <StudyOffer product={product} placement="rodape" compact />
+  <div class:list={['container', 'footer-offer', { 'has-apostila': product === 'apostila' }]}>
+    <StudyOffer product="gerador" placement="rodape" phone />
+    {product === 'apostila' && <StudyOffer product="apostila" placement="rodape" compact />}
   </div>
 
   <div class="bottom">
@@ -179,6 +180,15 @@ const quickLinks = [
 
   .footer-offer {
     padding-bottom: 24px;
+  }
+
+  @media (min-width: 960px) {
+    .footer-offer.has-apostila {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      align-items: center;
+      gap: 24px;
+    }
   }
 
   .bottom-inner {
