@@ -1,0 +1,83 @@
+{
+  "title": "Windows 7, 10 e 11 para Concursos",
+  "description": "Compare o efeito Aero, os blocos dinâmicos e os Snap Layouts. Revise atalhos, datas de suporte e pegadinhas antes de praticar com 10 questões comentadas.",
+  "date": "2026-11-25T00:00:00-03:00",
+  "post": "sistema-windows-7-10-11-para-concursos",
+  "poster": "./images/sistema-windows-7-10-11-para-concursos/poster.jpg",
+  "cover": "../blog/images/win-7-e-win-10.webp",
+  "coverText": "Aero, blocos dinâmicos ou Snap Layouts? Veja como reconhecer cada versão do Windows na prova.",
+  "pages": [
+    {
+      "id": "interface",
+      "label": "O que cai na prova",
+      "title": "Comece pelo Menu Iniciar",
+      "text": "Quando a banca mostrar uma Área de Trabalho, observe a posição do Menu Iniciar e o que ele exibe. Esses detalhes ajudam a identificar a versão.",
+      "image": "../blog/images/simulado-cebraspe-informatica.webp",
+      "imageAlt": "Folha de respostas de simulado em uma mesa com notebook",
+      "light": true
+    },
+    {
+      "id": "windows-7",
+      "label": "Interface e recursos",
+      "title": "Windows 7 e o efeito Aero",
+      "text": "O botão Iniciar era redondo e ficava à esquerda. As bordas translúcidas das janelas são uma pista do Aero.",
+      "image": "../blog/images/windows-7-1024x683.webp",
+      "imageAlt": "Área de Trabalho do Windows 7 com botão Iniciar redondo e janelas translúcidas"
+    },
+    {
+      "id": "windows-10",
+      "label": "Interface e recursos",
+      "title": "Windows 10 e os blocos dinâmicos",
+      "text": "Os Live Tiles podiam mostrar clima ou calendário no Menu Iniciar. A Central de Ações reunia notificações e atalhos rápidos.",
+      "image": "./images/sistema-windows-7-10-11-para-concursos/menu-windows-10.webp",
+      "imageAlt": "Ilustração dos blocos coloridos do Menu Iniciar do Windows 10",
+      "light": true
+    },
+    {
+      "id": "windows-11",
+      "label": "Interface e recursos",
+      "title": "Windows 11 e os Snap Layouts",
+      "text": "O Menu Iniciar fica centralizado por padrão. Os Snap Layouts organizam janelas em modelos predefinidos.",
+      "image": "../blog/images/Windows-11-1024x683.webp",
+      "imageAlt": "Quatro janelas organizadas lado a lado na Área de Trabalho do Windows 11"
+    },
+    {
+      "id": "fim-do-suporte",
+      "label": "Datas de prova",
+      "title": "Quando acabou o suporte?",
+      "text": "O suporte estendido do Windows 7 terminou em 14/01/2020. O suporte geral do Windows 10 acabou em 14/10/2025. No 11, o prazo varia por versão e edição.",
+      "image": "../blog/images/como-estudar-informatica-para-concurso.webp",
+      "imageAlt": "Pessoa faz anotações em um caderno ao lado do computador",
+      "light": true
+    },
+    {
+      "id": "requisitos",
+      "label": "Segurança",
+      "title": "Windows 11 exige TPM 2.0",
+      "text": "O TPM ajuda a proteger chaves criptográficas. Na prova, associe o TPM 2.0 aos requisitos de instalação do Windows 11.",
+      "image": "../blog/images/seguranca.webp",
+      "imageAlt": "Ilustração sobre segurança da informação"
+    },
+    {
+      "id": "atalhos",
+      "label": "Atalhos de teclado",
+      "title": "O que fazem Win + D e Win + L?",
+      "text": "Win + D mostra ou oculta a Área de Trabalho. Win + L bloqueia a sessão. Os programas continuam abertos nos dois casos.",
+      "image": "../blog/images/Atalhos-do-Windows-10-1-1024x683.webp",
+      "imageAlt": "Teclado com combinações de teclas usadas como atalhos no Windows",
+      "light": true
+    },
+    {
+      "id": "certo-ou-errado",
+      "label": "Pegadinha de prova",
+      "title": "O Painel de Controle sumiu?",
+      "text": "“As Configurações substituíram completamente o Painel de Controle no Windows 10.” Errado. Os dois ficaram disponíveis nessa versão.",
+      "image": "../blog/images/Cebraspe.webp",
+      "imageAlt": "Candidato responde a uma prova do Cebraspe"
+    }
+  ],
+  "closing": {
+    "title": "Pratique com 10 questões comentadas",
+    "text": "Abra o guia, compare as três versões e teste o que aprendeu com questões no estilo da Cebraspe, FGV e outras bancas."
+  }
+}
