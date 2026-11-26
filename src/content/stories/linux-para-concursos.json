@@ -1,0 +1,75 @@
+{
+  "title": "Linux para Concursos",
+  "description": "Revise kernel, comandos do terminal, arquivos ocultos, compactação e permissões do Linux. Treine com questões comentadas de Certo ou Errado.",
+  "date": "2026-11-26T00:00:00-03:00",
+  "post": "linux-para-concursos",
+  "poster": "./images/linux-para-concursos/poster.jpg",
+  "cover": "../blog/images/image-1.webp",
+  "coverText": "O que a Cebraspe cobra sobre Linux? Revise os comandos e as pegadinhas que costumam aparecer na prova.",
+  "pages": [
+    {
+      "id": "kernel-e-distribuicoes",
+      "label": "Conceitos básicos",
+      "title": "Kernel e distribuição",
+      "text": "O Linux é o núcleo que gerencia recursos como memória e processos. Distribuições como Ubuntu e Debian combinam esse núcleo com programas e ferramentas.",
+      "image": "../blog/images/linux.webp",
+      "imageAlt": "Tux, o pinguim do Linux, à frente de uma janela de terminal",
+      "light": true
+    },
+    {
+      "id": "terminal",
+      "label": "Navegação",
+      "title": "Três comandos para começar",
+      "text": "O shell interpreta os comandos digitados no terminal. Use pwd para ver onde você está, cd para trocar de diretório e ls para listar o conteúdo.",
+      "image": "./images/linux-para-concursos/terminal.webp",
+      "imageAlt": "Notebook com comandos numa janela de terminal"
+    },
+    {
+      "id": "copiar-e-mover",
+      "label": "Arquivos e pastas",
+      "title": "Quando usar cp ou mv?",
+      "text": "Use cp para criar uma cópia e manter o original no lugar. Use mv para mudar o arquivo de pasta ou renomeá-lo.",
+      "image": "../blog/images/Organizacao-de-Arquivos.webp",
+      "imageAlt": "Pessoa usa um notebook para estudar organização de arquivos e pastas",
+      "light": true
+    },
+    {
+      "id": "arquivos-ocultos",
+      "label": "Opções do ls",
+      "title": "Como listar arquivos ocultos?",
+      "text": "Nomes que começam com ponto, como .bashrc, ficam ocultos na listagem padrão. ls -a os inclui. Com ls -la, você também vê detalhes como as permissões.",
+      "image": "../blog/images/sistemas-de-arquivos.webp",
+      "imageAlt": "Notebook e dispositivos de armazenamento sobre uma mesa"
+    },
+    {
+      "id": "compactacao",
+      "label": "Agrupamento e compressão",
+      "title": "O que fazem tar e gzip?",
+      "text": "O tar agrupa arquivos em um pacote. O gzip comprime dados. Ao criar um pacote, a opção -z do tar aciona o gzip.",
+      "image": "../blog/images/compactacao-de-arquivos-zip-rar-7z-concursos.webp",
+      "imageAlt": "Notebook exibe pastas e arquivos organizados na tela",
+      "light": true
+    },
+    {
+      "id": "chmod-755",
+      "label": "Permissões",
+      "title": "Decifre o chmod 755",
+      "text": "Leitura vale 4, escrita vale 2 e execução vale 1. No 755, o dono recebe as três permissões. Grupo e outros recebem leitura e execução.",
+      "image": "../blog/images/permissoes-linux-chmod-concursos.webp",
+      "imageAlt": "Ilustração de permissões no Linux com o comando chmod 755"
+    },
+    {
+      "id": "certo-ou-errado",
+      "label": "Pegadinha de prova",
+      "title": "Certo ou errado?",
+      "text": "“O chmod troca o dono do arquivo.” Errado. O chmod altera as permissões. Quem muda o proprietário é o chown.",
+      "image": "../blog/images/Cebraspe.webp",
+      "imageAlt": "Candidato responde a uma prova do Cebraspe",
+      "light": true
+    }
+  ],
+  "closing": {
+    "title": "Pratique com questões comentadas",
+    "text": "Abra o guia completo para consultar a tabela de comandos e resolver as questões de Certo ou Errado."
+  }
+}
