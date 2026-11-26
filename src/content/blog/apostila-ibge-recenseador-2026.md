@@ -1,10 +1,10 @@
 ---
 title: "Apostila IBGE Recenseador 2026 por R$ 9,90: conteúdo da prova e questões comentadas"
 seoTitle: "Apostila IBGE Recenseador 2026 em PDF por R$ 9,90"
-description: "Veja o que cai na prova de Recenseador do IBGE e conheça a apostila em PDF de R$ 9,90, com teoria, exemplos resolvidos e 90 questões comentadas."
+description: "Veja o que cai na prova de Recenseador do IBGE e conheça a apostila em PDF de R$ 9,90, com teoria, exemplos resolvidos e 100 questões comentadas."
 category: "Concursos"
 date: 2026-11-26T12:00:00-03:00
-updated: 2026-11-26T14:39:00-03:00
+updated: 2026-11-26T14:43:00-03:00
 draft: false
 readingTime: "6 min"
 tags: ["IBGE 2026", "Recenseador", "Cesgranrio", "Apostila"]
@@ -15,7 +15,7 @@ related:
   - como-estudar-para-concurso
 ---
 
-Se você vai fazer a prova de **Recenseador do IBGE**, uma boa forma de começar é entender o programa e testar se consegue aplicar o que leu. A **Apostila IBGE Recenseador 2026**, do Informática para Concurso, reúne **Língua Portuguesa, Matemática e Conhecimentos Técnicos** em um PDF com explicações, exemplos resolvidos e **90 questões autorais com gabarito comentado**.
+Se você vai fazer a prova de **Recenseador do IBGE**, uma boa forma de começar é entender o programa e testar se consegue aplicar o que leu. A **Apostila IBGE Recenseador 2026**, do Informática para Concurso, reúne **Língua Portuguesa, Matemática e Conhecimentos Técnicos** em um PDF com explicações, exemplos resolvidos e **100 questões autorais com gabarito comentado**.
 
 O preço de lançamento do PDF é **R$ 9,90, em pagamento único**. Enquanto a compra online aguarda liberação, confira o conteúdo dos módulos e resolva uma questão da própria apostila.
 
@@ -38,7 +38,7 @@ A parte técnica concentra metade dos pontos. Para se preparar, distribua o temp
 
 ![Capa da Apostila IBGE Recenseador 2026](./images/apostila-ibge-recenseador-capa.webp)
 
-Você recebe um **PDF de 41 páginas**, com sumário clicável, três módulos de teoria, exemplos resolvidos e **18 blocos de cinco questões**. O índice de exercícios leva direto ao assunto escolhido, e o gabarito comenta cada resposta no fim da apostila.
+Você recebe um **PDF de 44 páginas**, com sumário clicável, três módulos de teoria, exemplos resolvidos e **20 blocos de cinco questões**. O índice de exercícios leva direto ao assunto escolhido, e o gabarito comenta cada resposta no fim da apostila.
 
 ### Módulo 1 — Língua Portuguesa
 
@@ -76,7 +76,7 @@ Um estabelecimento ocupa partes dos setores X e Y. A sede, usada para administra
 
 **Gabarito: A.** A sede define o setor de recenseamento neste caso. A maior parte da área só passa a ser o critério de localização quando não há sede.
 
-O PDF inclui **45 questões de Português** (cinco por tópico), **40 de Matemática** (cinco por tópico) e **5 de Conhecimentos Técnicos**. Você pode fazer um bloco por vez e, depois, abrir a correção daquele bloco pelo link da própria página.
+O PDF inclui **45 questões de Português**, **40 de Matemática** e **15 de Conhecimentos Técnicos**. Em Português e Matemática, são cinco questões por tópico. O módulo técnico reúne três blocos sobre o Censo Agropecuário, os instrumentos de campo e as situações especiais de registro. Cada bloco tem um link para o respectivo gabarito comentado.
 
 ## Para quem é esta apostila?
 
@@ -84,7 +84,7 @@ O material foi feito para quem vai disputar a função de **Recenseador do IBGE 
 
 ## Apostila IBGE Recenseador 2026 por R$ 9,90
 
-O **PDF com os três módulos, exemplos resolvidos e 90 questões autorais com gabarito comentado** terá preço de **R$ 9,90, em pagamento único**. Use o índice de exercícios para escolher o que precisa praticar, como concordância, porcentagem ou leitura de mapas.
+O **PDF com os três módulos, exemplos resolvidos e 100 questões autorais com gabarito comentado** terá preço de **R$ 9,90, em pagamento único**. Use o índice de exercícios para escolher o que precisa praticar, como concordância, porcentagem ou leitura de mapas.
 
 **A compra online ainda não está disponível.** O link de compra será disponibilizado nesta página.
 
@@ -96,7 +96,7 @@ O **PDF com os três módulos, exemplos resolvidos e 90 questões autorais com g
 
 ### As questões são de provas anteriores?
 
-As 90 questões foram elaboradas para esta apostila. Todas têm cinco alternativas, uma resposta correta e um comentário que explica o raciocínio.
+As 100 questões foram elaboradas para esta apostila. Todas têm cinco alternativas, uma resposta correta e um comentário que explica o raciocínio.
 
 ### É possível estudar pelo celular?
 
