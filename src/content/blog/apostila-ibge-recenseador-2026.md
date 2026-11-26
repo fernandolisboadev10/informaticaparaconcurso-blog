@@ -1,15 +1,15 @@
 ---
-title: "Apostila IBGE Recenseador 2026 por R$ 14,99: conteúdo da prova e questões comentadas"
-seoTitle: "Apostila IBGE Recenseador 2026 em PDF por R$ 14,99"
-description: "Veja o que cai na prova de Recenseador do IBGE e conheça a apostila em PDF de R$ 14,99, com teoria, exemplos resolvidos e 90 questões comentadas."
+title: "Apostila IBGE Recenseador 2026 por R$ 9,90: conteúdo da prova e questões comentadas"
+seoTitle: "Apostila IBGE Recenseador 2026 em PDF por R$ 9,90"
+description: "Veja o que cai na prova de Recenseador do IBGE e conheça a apostila em PDF de R$ 9,90, com teoria, exemplos resolvidos e 90 questões comentadas."
 category: "Concursos"
 date: 2026-11-26T12:00:00-03:00
-updated: 2026-11-26T14:33:00-03:00
+updated: 2026-11-26T14:39:00-03:00
 draft: false
 readingTime: "6 min"
 tags: ["IBGE 2026", "Recenseador", "Cesgranrio", "Apostila"]
-image: "./images/concurso-ibge-2026.webp"
-imageAlt: "Pessoa estudando com notebook e caderno em uma mesa, com paisagem rural ao fundo"
+image: "./images/apostila-ibge-recenseador-mockup.webp"
+imageAlt: "Mockup da Apostila IBGE Recenseador 2026 sobre uma mesa de estudos com luminária e caderno"
 related:
   - concurso-ibge-2026
   - como-estudar-para-concurso
@@ -17,7 +17,7 @@ related:
 
 Se você vai fazer a prova de **Recenseador do IBGE**, uma boa forma de começar é entender o programa e testar se consegue aplicar o que leu. A **Apostila IBGE Recenseador 2026**, do Informática para Concurso, reúne **Língua Portuguesa, Matemática e Conhecimentos Técnicos** em um PDF com explicações, exemplos resolvidos e **90 questões autorais com gabarito comentado**.
 
-O preço de lançamento do PDF é **R$ 14,99, em pagamento único**. Enquanto a compra online aguarda liberação, confira o conteúdo dos módulos e resolva uma questão da própria apostila.
+O preço de lançamento do PDF é **R$ 9,90, em pagamento único**. Enquanto a compra online aguarda liberação, confira o conteúdo dos módulos e resolva uma questão da própria apostila.
 
 [Ver o que vem na apostila](#o-que-vem-na-apostila)
 
@@ -82,9 +82,9 @@ O PDF inclui **45 questões de Português** (cinco por tópico), **40 de Matemá
 
 O material foi feito para quem vai disputar a função de **Recenseador do IBGE pelo Edital nº 03/2026** e quer uma revisão direta dos assuntos da prova. Se estiver começando, leia a teoria e refaça os exemplos no papel. Se já estiver estudando, escolha um bloco, responda às cinco questões e volte à teoria dos pontos em que teve dúvida.
 
-## Apostila IBGE Recenseador 2026 por R$ 14,99
+## Apostila IBGE Recenseador 2026 por R$ 9,90
 
-O **PDF com os três módulos, exemplos resolvidos e 90 questões autorais com gabarito comentado** terá preço de **R$ 14,99, em pagamento único**. Use o índice de exercícios para escolher o que precisa praticar, como concordância, porcentagem ou leitura de mapas.
+O **PDF com os três módulos, exemplos resolvidos e 90 questões autorais com gabarito comentado** terá preço de **R$ 9,90, em pagamento único**. Use o índice de exercícios para escolher o que precisa praticar, como concordância, porcentagem ou leitura de mapas.
 
 **A compra online ainda não está disponível.** O link de compra será disponibilizado nesta página.
 
