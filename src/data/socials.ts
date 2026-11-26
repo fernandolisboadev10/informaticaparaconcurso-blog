@@ -4,17 +4,26 @@ export interface Social {
   path: string;
 }
 
-export const socials: Social[] = [
+export const blogSocials: Social[] = [
   {
     label: 'Instagram',
-    href: 'https://www.instagram.com/fernandolisboa.dev/',
+    href: 'https://www.instagram.com/fernandolisboa.pro',
     path: 'M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z',
   },
   {
     label: 'Facebook',
-    href: 'https://www.facebook.com/profile.php?id=61550636608668',
+    href: 'https://www.facebook.com/profile.php?id=61597043606774',
     path: 'M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.9S15.6 3.6 14.2 3.6c-2.9 0-4.7 1.7-4.7 4.8v2.1H6.7v3.3h2.8V22h4Z',
   },
+  {
+    label: 'YouTube',
+    href: 'https://www.youtube.com/@FernandoLisboa.tecnologia',
+    path: 'M21.6 7.2a2.7 2.7 0 0 0-1.9-1.9C18 4.8 12 4.8 12 4.8s-6 0-7.7.5a2.7 2.7 0 0 0-1.9 1.9A28 28 0 0 0 2 12a28 28 0 0 0 .4 4.8 2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.7.5 7.7.5s6 0 7.7-.5a2.7 2.7 0 0 0 1.9-1.9A28 28 0 0 0 22 12a28 28 0 0 0-.4-4.8ZM10 15V9l5.2 3-5.2 3Z',
+  },
+];
+
+export const socials: Social[] = [
+  ...blogSocials,
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/fernando-lisboa-415204158/',

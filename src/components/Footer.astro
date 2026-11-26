@@ -1,6 +1,7 @@
 ---
 import { categories as categoryList } from "../data/categories";
 import { APOSTILA_URL } from '../data/apostila';
+import { blogSocials } from '../data/socials';
 import StudyOffer from './StudyOffer.astro';
 
 interface Props {
@@ -31,6 +32,11 @@ const quickLinks = [
       <p class="tagline">
         Resumos, simulados e análises das bancas para você estudar informática com foco no que realmente cai nas provas de concursos públicos.
       </p>
+      <ul class="social-links" aria-label="Redes sociais do blog">
+        {blogSocials.map(({ label, href }) => (
+          <li><a href={href} target="_blank" rel="noopener noreferrer">{label}</a></li>
+        ))}
+      </ul>
     </div>
 
     <div>
@@ -159,6 +165,12 @@ const quickLinks = [
     grid-template-rows: repeat(5, auto);
     column-gap: 32px;
     row-gap: 9px;
+  }
+
+  ul.social-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 16px;
   }
 
   ul a {
