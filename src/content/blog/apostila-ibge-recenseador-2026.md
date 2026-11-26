@@ -4,7 +4,7 @@ seoTitle: "Apostila IBGE Recenseador 2026 em PDF por R$ 9,90"
 description: "Veja o que cai na prova de Recenseador do IBGE e conheça a apostila em PDF de R$ 9,90, com teoria, exemplos resolvidos e 100 questões comentadas."
 category: "Concursos"
 date: 2026-11-26T12:00:00-03:00
-updated: 2026-11-26T14:43:00-03:00
+updated: 2026-11-26T15:14:00-03:00
 draft: false
 readingTime: "6 min"
 tags: ["IBGE 2026", "Recenseador", "Cesgranrio", "Apostila"]
@@ -17,7 +17,9 @@ related:
 
 Se você vai fazer a prova de **Recenseador do IBGE**, uma boa forma de começar é entender o programa e testar se consegue aplicar o que leu. A **Apostila IBGE Recenseador 2026**, do Informática para Concurso, reúne **Língua Portuguesa, Matemática e Conhecimentos Técnicos** em um PDF com explicações, exemplos resolvidos e **100 questões autorais com gabarito comentado**.
 
-O preço de lançamento do PDF é **R$ 9,90, em pagamento único**. Enquanto a compra online aguarda liberação, confira o conteúdo dos módulos e resolva uma questão da própria apostila.
+O PDF custa **R$ 9,90, em pagamento único**. Confira o conteúdo dos módulos e resolva uma questão da própria apostila.
+
+**[Comprar a apostila por R$ 9,90 na Hotmart](https://pay.hotmart.com/S108679567O)**
 
 [Ver o que vem na apostila](#o-que-vem-na-apostila)
 
@@ -84,9 +86,12 @@ O material foi feito para quem vai disputar a função de **Recenseador do IBGE 
 
 ## Apostila IBGE Recenseador 2026 por R$ 9,90
 
-O **PDF com os três módulos, exemplos resolvidos e 100 questões autorais com gabarito comentado** terá preço de **R$ 9,90, em pagamento único**. Use o índice de exercícios para escolher o que precisa praticar, como concordância, porcentagem ou leitura de mapas.
+O **PDF com os três módulos, exemplos resolvidos e 100 questões autorais com gabarito comentado** custa **R$ 9,90, em pagamento único**. Use o índice de exercícios para escolher o que precisa praticar, como concordância, porcentagem ou leitura de mapas.
 
-**A compra online ainda não está disponível.** O link de compra será disponibilizado nesta página.
+<aside class="post-cta">
+  <p class="post-cta-title"><a href="https://pay.hotmart.com/S108679567O">Comprar a apostila por R$ 9,90 na Hotmart</a></p>
+  <p class="post-cta-text">Apostila digital em PDF com 100 questões comentadas.</p>
+</aside>
 
 ## Perguntas frequentes
 
