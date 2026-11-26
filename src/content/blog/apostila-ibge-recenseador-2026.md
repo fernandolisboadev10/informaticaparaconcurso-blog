@@ -4,7 +4,8 @@ seoTitle: "Apostila IBGE Recenseador 2026 em PDF por R$ 14,99"
 description: "Veja o que cai na prova de Recenseador do IBGE e conheça a apostila em PDF de R$ 14,99, com teoria, exemplos resolvidos e 90 questões comentadas."
 category: "Concursos"
 date: 2026-11-26T12:00:00-03:00
-draft: true
+updated: 2026-11-26T14:33:00-03:00
+draft: false
 readingTime: "6 min"
 tags: ["IBGE 2026", "Recenseador", "Cesgranrio", "Apostila"]
 image: "./images/concurso-ibge-2026.webp"
@@ -16,7 +17,7 @@ related:
 
 Se você vai fazer a prova de **Recenseador do IBGE**, uma boa forma de começar é entender o programa e testar se consegue aplicar o que leu. A **Apostila IBGE Recenseador 2026**, do Informática para Concurso, reúne **Língua Portuguesa, Matemática e Conhecimentos Técnicos** em um PDF com explicações, exemplos resolvidos e **90 questões autorais com gabarito comentado**.
 
-O PDF custa **R$ 14,99, em pagamento único**. Antes de decidir, confira abaixo o conteúdo dos módulos e resolva uma questão da própria apostila.
+O preço de lançamento do PDF é **R$ 14,99, em pagamento único**. Enquanto a compra online aguarda liberação, confira o conteúdo dos módulos e resolva uma questão da própria apostila.
 
 [Ver o que vem na apostila](#o-que-vem-na-apostila)
 
@@ -83,9 +84,9 @@ O material foi feito para quem vai disputar a função de **Recenseador do IBGE 
 
 ## Apostila IBGE Recenseador 2026 por R$ 14,99
 
-Por **R$ 14,99, em pagamento único**, você recebe o **PDF com os três módulos, exemplos resolvidos e 90 questões autorais com gabarito comentado**. Use o índice de exercícios para escolher o que precisa praticar, como concordância, porcentagem ou leitura de mapas.
+O **PDF com os três módulos, exemplos resolvidos e 90 questões autorais com gabarito comentado** terá preço de **R$ 14,99, em pagamento único**. Use o índice de exercícios para escolher o que precisa praticar, como concordância, porcentagem ou leitura de mapas.
 
-<!-- Inserir aqui o botão "Comprar a apostila por R$ 14,99" com a URL do checkout, depois de cadastrar o PDF. -->
+**A compra online ainda não está disponível.** O link de compra será disponibilizado nesta página.
 
 ## Perguntas frequentes
 
