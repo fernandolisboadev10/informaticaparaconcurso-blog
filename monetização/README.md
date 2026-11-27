@@ -1,22 +1,22 @@
-# Divulgação da apostila e do Gerador de Questões
+# Monetização
 
-Esta pasta guarda os banners da Apostila e do Gerador de Questões, a página de vendas com checkout da Hotmart e suas imagens e amostras fora das pastas que o Astro publica. A página de acompanhamento em `/apostila/pagamento/` continua atendendo pedidos já iniciados.
+Esta pasta reúne os arquivos comerciais do Informática para Concurso. O Astro gera o site a partir de `src/pages/`, `src/content/` e `public/` na raiz do projeto.
 
-O patch guarda os pontos de divulgação do blog e o carregamento do AdSense. A meta tag `google-adsense-account` e o `ads.txt` continuam disponíveis para verificação do site.
+| Caminho | Conteúdo |
+| --- | --- |
+| `src/components/`, `src/utils/` e `src/data/` | Banners da Apostila Cebraspe e do Gerador de Questões, encaixe entre seções, métricas das ofertas, amostras e configurações de pagamento. |
+| `src/pages/apostila/` | Página de vendas da Apostila Cebraspe e páginas de teste e acompanhamento de pagamento. |
+| `src/content/blog/` | Versão comercial anterior do artigo sobre Recenseador do IBGE e suas imagens. O guia educacional fica no blog, em `/conteudo-programatico-ibge-recenseador-2026/`. |
+| `src/assets/apostila/` e `public/images/` | Imagens e páginas de amostra da Apostila Cebraspe. |
+| `services/vendas/` e `pagamento-worker/` | Serviços de pagamento e suas instruções. |
+| `materiais-locais/` | PDFs completos e artes de venda locais, ignorados pelo Git. |
 
-## Como reativar
+A rota `/apostila/pagamento/` importa a tela arquivada e continua disponível para pedidos já iniciados, com `noindex`. O `ads.txt` e a meta tag do AdSense continuam disponíveis para verificação.
 
-1. Copie a capa de `monetização/public/images/` e os arquivos da lista abaixo para seus caminhos originais em `src/`. `ApostilaBanner.astro`, `QuestoesCTA.astro`, `ApostilaCheckout.astro` e `teste-pagamento.astro` são de uma configuração anterior.
+## Reativar a página de vendas
 
-   - `assets/apostila/`
-   - `components/ApostilaSample.astro`, `GeneratorAnchor.astro`, `QuestionPhoneDemo.astro`, `SalesArrow.astro` e `StudyOffer.astro`
-   - `data/apostila-samples.ts`, `apostila.ts` e `questoes.ts`
-   - `pages/apostila/index.astro`
-2. Na raiz do projeto, confira e reverta o patch para repor os pontos de divulgação. Se as páginas tiverem mudado e a conferência indicar conflito, use o patch como referência para recolocar os trechos.
+1. Crie `src/pages/apostila/index.astro` com um componente importado de `../../../monetização/src/pages/apostila/index.astro`, seguindo o exemplo da rota de acompanhamento existente.
+2. Copie `monetização/public/images/apostila-capa.webp` para `public/images/apostila-capa.webp` para servir a capa da página.
+3. Execute `npm run build` e confira a página de vendas, o destino do botão de compra e o fluxo de acompanhamento.
 
-   ```sh
-   git apply --reverse --check "monetização/suspensao.patch"
-   git apply --reverse "monetização/suspensao.patch"
-   ```
-
-3. Rode `npm run build` e confira os banners, a página `/apostila/` e os destinos dos botões antes de publicar.
+O arquivo `suspensao.patch` registra uma configuração anterior. Use-o como referência histórica dos pontos de divulgação.

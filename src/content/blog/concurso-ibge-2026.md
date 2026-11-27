@@ -4,13 +4,14 @@ seoTitle: "Concurso IBGE 2026: 27.279 vagas e prova em janeiro"
 description: "Edital do IBGE prevê 27.279 vagas temporárias de recenseador. Confira requisitos, remuneração, inscrições até 25/11 e o conteúdo da prova de janeiro."
 category: "Concursos"
 date: 2026-11-09T17:42:00-03:00
-updated: 2026-11-21T12:41:00-03:00
+updated: 2026-11-27T09:56:00-03:00
 draft: false
 readingTime: "12 min"
 tags: ["IBGE 2026", "Recenseador", "Cesgranrio", "Ensino Fundamental", "Censo Agropecuário"]
 image: "./images/concurso-ibge-2026.webp"
 imageAlt: "Pessoa estudando com notebook e caderno em uma mesa, com paisagem rural ao fundo"
 related:
+  - conteudo-programatico-ibge-recenseador-2026
   - como-estudar-para-concurso
   - concurso-publico-2026
   - nocoes-de-informatica
@@ -149,7 +150,7 @@ Conhecimentos Técnicos vale metade da prova e é o primeiro critério de nota n
 
 ## O que estudar: o programa do IBGE para recenseador
 
-O **Anexo III** delimita os assuntos. A preparação deve partir dele, evitando pacotes genéricos que acrescentem disciplinas ausentes.
+O **Anexo III** delimita os assuntos. Para ver os tópicos organizados por disciplina e praticar com exercícios resolvidos, consulte o [conteúdo programático do IBGE Recenseador 2026](/conteudo-programatico-ibge-recenseador-2026/). A preparação deve partir dele, evitando pacotes genéricos que acrescentem disciplinas ausentes.
 
 ### Língua Portuguesa
 

@@ -4,7 +4,6 @@ import { defineConfig, fontProviders } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { unified } from '@astrojs/markdown-remark';
 import rehypeExternalLinks from 'rehype-external-links';
-import rehypeStudyOffers from './src/utils/rehype-study-offers.mjs';
 
 const blogDir = new URL('./src/content/blog/', import.meta.url);
 const dateBySlug = new Map();
@@ -27,6 +26,7 @@ export default defineConfig({
   site: 'https://informaticaparaconcurso.com.br',
   // URLs herdadas do WordPress (feed, sitemaps do Yoast, autor e contato)
   redirects: {
+    '/apostila-ibge-recenseador-2026': { status: 301, destination: '/conteudo-programatico-ibge-recenseador-2026/' },
     '/category/sem-categoria': '/blog',
     '/category/noticias': '/category/concursos',
     '/category/simulados': '/blog',
@@ -67,6 +67,7 @@ export default defineConfig({
     sitemap({
       // Category pages with fewer than 2 posts are noindex, so keep them out of the sitemap.
       filter(page) {
+        if (new URL(page).pathname.replace(/\/$/, '') === '/apostila-ibge-recenseador-2026') return false;
         if (/^\/apostila\/(?:pagamento|teste-pagamento)\/?$/.test(new URL(page).pathname)) return false;
         const m = new URL(page).pathname.match(/^\/categoria\/([^/]+)\/?$/);
         if (!m) return true;
@@ -85,7 +86,6 @@ export default defineConfig({
     processor: unified({
       rehypePlugins: [
         [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
-        rehypeStudyOffers,
       ],
     }),
   },

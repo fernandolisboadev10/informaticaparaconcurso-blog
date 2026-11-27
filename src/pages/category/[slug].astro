@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
-import StudyOffer from '../../components/StudyOffer.astro';
 import { categories } from '../../data/categories';
 import { isPublished, sortByActivity } from '../../utils/posts';
 
@@ -69,7 +68,6 @@ const schema = {
       <a href="/blog/" id="more-posts" class="more-btn" data-step={PAGE_SIZE}>Ver mais posts</a>
     </div>
 
-    {posts.length > 0 && <StudyOffer product="gerador" placement="categoria-apos-posts" compact />}
 
     <nav class="other" aria-label="Outras categorias">
       {categories

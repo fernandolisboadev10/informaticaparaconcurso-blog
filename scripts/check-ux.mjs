@@ -15,6 +15,8 @@ const dist = path.join(root, 'dist');
 const screenshotDir = process.env.BLOG_SCREENSHOT_DIR;
 const salesRoute = 'apostila/index.html';
 const testCheckoutRoute = 'apostila/teste-pagamento/index.html';
+const oldIbgeGuide = 'apostila-ibge-recenseador-2026';
+const ibgeGuide = 'conteudo-programatico-ibge-recenseador-2026';
 const normalizeLineEndings = (source) => source.replaceAll('\r\n', '\n');
 let passed = 0;
 const failures = [];
@@ -42,7 +44,7 @@ async function htmlFiles(dir, prefix = '') {
 
 if (process.env.BLOG_BASELINE_DIST) await check('routes and SEO metadata preserved for the remaining pages', async () => {
   const baseline = process.env.BLOG_BASELINE_DIST;
-  const editorialRoutes = (file) => file !== salesRoute && file !== testCheckoutRoute;
+  const editorialRoutes = (file) => [salesRoute, testCheckoutRoute, oldIbgeGuide + '/index.html', ibgeGuide + '/index.html'].every((route) => route !== file);
   const files = (await htmlFiles(baseline)).filter(editorialRoutes);
   assert.deepEqual((await htmlFiles(dist)).filter(editorialRoutes), files);
   const metadata = (source, blog) => [...source.matchAll(/<meta\b[^>]*>|<link\b[^>]*rel="canonical"[^>]*>|<title>[\s\S]*?<\/title>/g)]
@@ -53,56 +55,52 @@ if (process.env.BLOG_BASELINE_DIST) await check('routes and SEO metadata preserv
     const descriptionChanged = ['blog/index.html', 'questoes/index.html', 'formulas-do-excel/index.html', 'linux-para-concursos/index.html'].includes(file);
     assert.deepEqual(metadata(after, descriptionChanged), metadata(before, descriptionChanged), file);
   }
-  for (const file of ['robots.txt', 'ads.txt', 'CNAME', 'rss.xml', 'sitemap-index.xml']) {
+  for (const file of ['robots.txt', 'ads.txt', 'CNAME', 'sitemap-index.xml']) {
     assert.deepEqual(await readFile(path.join(dist, file)), await readFile(path.join(baseline, file)), file);
   }
-  const withoutSales = (sitemap) => sitemap.replace(
-    /<url><loc>https:\/\/informaticaparaconcurso\.com\.br\/apostila\/<\/loc>[^<]*(?:<lastmod>[^<]*<\/lastmod>)?<\/url>/,
-    '',
+  const ignoreChangedEntries = (xml, element) => xml.replace(
+    new RegExp('<' + element + '>[\\s\\S]*?</' + element + '>', 'g'),
+    (entry) => entry.includes('/' + ibgeGuide + '/') || entry.includes('/' + oldIbgeGuide + '/') ||
+      entry.includes('/apostila/</loc>') ? '' : entry,
   );
-  assert.equal(withoutSales(await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8')), withoutSales(await readFile(path.join(baseline, 'sitemap-0.xml'), 'utf8')));
+  for (const [file, element] of [['rss.xml', 'item'], ['sitemap-0.xml', 'url']]) {
+    const after = await readFile(path.join(dist, file), 'utf8');
+    const before = await readFile(path.join(baseline, file), 'utf8');
+    assert.equal(ignoreChangedEntries(after, element), ignoreChangedEntries(before, element), file);
+  }
 });
 
-await check('study offers and sales are published and AdSense is suspended', async () => {
+await check('editorial build excludes sales and publishes the IBGE guide', async () => {
   const files = await htmlFiles(dist);
-  assert.ok(files.includes(salesRoute));
+  assert.ok(!files.includes(salesRoute));
   assert.ok(!files.includes(testCheckoutRoute));
-  assert.ok((await readFile(path.join(dist, 'images/apostila-capa.webp'))).length > 0);
-  const excluded = /generator-anchor|googlesyndication\.com|adsbygoogle|data-slot="[^"]*lateral/i;
-  let pagesWithInlineOffers = 0;
+  await assert.rejects(readFile(path.join(dist, 'images/apostila-capa.webp')), { code: 'ENOENT' });
+  const excluded = /data-banner="(?:gerador|apostila)"|generator-anchor|googlesyndication\.com|adsbygoogle|pay\.hotmart\.com|geradordequestoes\.site|<!--article-study-offer-->/i;
   for (const file of files) {
-    const html = await readFile(path.join(dist, file), 'utf8');
-    assert.doesNotMatch(html, excluded, file);
-    assert.doesNotMatch(html, /<!--article-study-offer-->/, file);
-    const inline = [...html.matchAll(/data-banner="(gerador|apostila)" data-slot="artigo-entre-secoes"/g)];
-    assert.ok(inline.length <= 4, file);
-    if (!inline.length) continue;
-    pagesWithInlineOffers++;
-    assert.deepEqual(inline.map((match) => match[1]), ['gerador', 'apostila', 'gerador', 'apostila'].slice(0, inline.length), file);
-    const post = html.match(/<article class="post"[^>]*>[\s\S]*?<\/article>/)?.[0];
-    assert.ok(post && [...post.matchAll(/data-slot="artigo-entre-secoes"/g)].length === inline.length, file);
+    assert.doesNotMatch(await readFile(path.join(dist, file), 'utf8'), excluded, file);
   }
-  assert.ok(pagesWithInlineOffers > 0);
+
   const home = await readFile(path.join(dist, 'index.html'), 'utf8');
-  assert.match(home, /data-banner="gerador" data-slot="home-apos-materias"/);
-  assert.match(home, /data-banner="apostila" data-slot="home-inferior"/);
-  assert.match(home, /<footer[\s\S]*?data-slot="rodape"/);
-  const category = await readFile(path.join(dist, 'category/hardware/index.html'), 'utf8');
-  assert.match(category, /data-banner="gerador" data-slot="categoria-apos-posts"/);
-  assert.match(category, /<footer[\s\S]*?data-banner="apostila" data-slot="rodape"/);
-  const sales = await readFile(path.join(dist, salesRoute), 'utf8');
-  assert.match(sales, /href="https:\/\/pay\.hotmart\.com\/U108363176U\?[^"]+" data-hotmart-checkout/);
-  assert.match(sales, /id="amostra"/);
-  const article = await readFile(path.join(dist, 'linux-para-concursos/index.html'), 'utf8');
-  for (const html of [home, category, article, sales]) {
-    assert.match(html, /<footer\b[\s\S]*?data-banner="gerador" data-slot="rodape"[\s\S]*?data-question-phone[\s\S]*?<\/footer>/);
-    assert.equal([...html.matchAll(/\bdata-question-phone(?:\s|>)/g)].length, 1);
-  }
   assert.match(home, /name="google-adsense-account" content="ca-pub-\d+"/);
   assert.match(home, /googletagmanager\.com\/gtag\/js/);
+  assert.match(home, new RegExp('href="/' + ibgeGuide + '/?"'));
+
+  const guide = await readFile(path.join(dist, ibgeGuide, 'index.html'), 'utf8');
+  assert.match(guide, /Conteúdo programático do IBGE Recenseador 2026/);
+  for (const discipline of ['Língua Portuguesa', 'Matemática', 'Conhecimentos Técnicos']) {
+    const heading = discipline + ' — 10 questões</h3>';
+    assert.ok(guide.includes(heading), discipline);
+    const [section] = guide.split(heading)[1].split(/<h[23]\b/);
+    const answers = [...section.matchAll(/<details>\s*<summary>Ver gabarito e comentário<\/summary>\s*<p><strong>Resposta [A-E]\.<\/strong>[^<]+<\/p>\s*<\/details>/g)];
+    assert.equal(answers.length, 10, discipline);
+  }
+  const redirect = await readFile(path.join(dist, oldIbgeGuide, 'index.html'), 'utf8');
+  assert.ok(redirect.includes('url=/' + ibgeGuide + '/'));
+
   const sitemap = await readFile(path.join(dist, 'sitemap-0.xml'), 'utf8');
-  assert.match(sitemap, /\/apostila\/<\/loc>/);
-  assert.doesNotMatch(sitemap, /\/apostila\/(?:pagamento|teste-pagamento)\/?<\/loc>/);
+  assert.ok(sitemap.includes('/' + ibgeGuide + '/</loc>'));
+  assert.ok(!sitemap.includes('/' + oldIbgeGuide + '/</loc>'));
+  assert.doesNotMatch(sitemap, /\/apostila(?:\/[^<]*)?<\/loc>/);
   const receipt = await readFile(path.join(dist, 'apostila/pagamento/index.html'), 'utf8');
   assert.match(receipt, /name="robots" content="noindex, follow"/);
   console.log('  ' + files.length + ' generated pages checked');

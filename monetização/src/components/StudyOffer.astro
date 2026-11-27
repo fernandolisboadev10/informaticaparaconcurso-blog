@@ -3,233 +3,130 @@ import { APOSTILA_COVER, APOSTILA_PRICE, APOSTILA_QUESTIONS, APOSTILA_URL } from
 import { QUESTOES_URL } from '../data/questoes';
 import SalesArrow from './SalesArrow.astro';
 import QuestionPhoneDemo from './QuestionPhoneDemo.astro';
+import QuestionChatDemo from './QuestionChatDemo.astro';
 
 interface Props {
   product: 'apostila' | 'gerador';
   placement: string;
-  label?: string;
   compact?: boolean;
-  format?: 'banner' | 'rail' | 'anchor';
+  phone?: boolean;
 }
 
-const { product, placement, label, compact = false, format = 'banner' } = Astro.props;
+const { product, placement, compact = false, phone = false } = Astro.props;
 const isApostila = product === 'apostila';
-const showPhone = !isApostila && format === 'rail';
-const neonButton = isApostila || format === 'anchor' || format === 'rail' || placement === 'home-apos-aulas';
+const showPhone = phone && !isApostila;
 const productName = isApostila ? 'Apostila Cebraspe' : 'Gerador de Questões';
 const title = isApostila
   ? `${APOSTILA_QUESTIONS} questões comentadas da Cebraspe`
-  : format === 'anchor' ? 'Questões para sua banca' : 'Monte um treino para sua banca';
+  : 'Monte um treino para sua banca';
 const detail = isApostila
   ? `Apostila digital em PDF por ${APOSTILA_PRICE}, em pagamento único.`
   : 'Escolha o assunto, o formato e a dificuldade. Cadastro gratuito.';
-const href = isApostila ? `${APOSTILA_URL}#amostra` : QUESTOES_URL;
+const href = isApostila ? APOSTILA_URL : QUESTOES_URL;
 ---
-{compact ? (
-  <a class="offer-link" href={href} data-banner={product} data-slot={placement} data-banner-link>{label}</a>
-) : (
-  <aside class:list={['study-offer', format, { apostila: isApostila }]} aria-label={productName} data-banner={product} data-slot={placement}>
-    {isApostila && (
-      <div class="offer-cover" aria-hidden="true">
-        <img src={APOSTILA_COVER} width="108" height="144" alt="" loading="lazy" decoding="async" />
-      </div>
-    )}
-    <div class="offer-copy">
-      <span class="offer-product">{productName}</span>
-      {showPhone ? <QuestionPhoneDemo /> : (
-        <>
-          <strong>{title}</strong>
-          {format !== 'anchor' && <p>{detail}</p>}
-        </>
-      )}
-      <a class:list={['offer-button', { 'neon-cta': neonButton }]} href={href} data-banner-link>
-        <span>{label ?? (isApostila ? 'Ver amostra da apostila' : 'Continuar no Gerador')}</span>
-        <span class="offer-arrow" aria-hidden="true"><SalesArrow /></span>
-      </a>
+
+<aside class:list={['study-offer', { apostila: isApostila, compact, 'with-phone': showPhone }]} aria-label={productName} data-banner={product} data-slot={placement}>
+  {isApostila && (
+    <img class="offer-cover" src={APOSTILA_COVER} width="108" height="144" alt="" loading="lazy" decoding="async" />
+  )}
+  <div class="offer-copy">
+    <span class="offer-product">{productName}</span>
+    <strong>{title}</strong>
+    {!compact && <p>{detail}</p>}
+  </div>
+  <a class="offer-button" href={href} data-banner-link>
+    {isApostila ? 'Conhecer a apostila' : 'Abrir o Gerador'}
+    <span class="offer-arrow" aria-hidden="true"><SalesArrow /></span>
+  </a>
+  {showPhone && (
+    <div class="offer-demo">
+      <QuestionChatDemo />
+      <QuestionPhoneDemo />
     </div>
-    {!isApostila && format === 'banner' && (
-      <div class="offer-preview" aria-hidden="true">
-        <span>Exemplo de pedido</span>
-        <p>Gere 5 questões de redes no estilo Cebraspe, com gabarito comentado.</p>
-      </div>
-    )}
-  </aside>
-)}
-
-<script>
-  declare const gtag: (...args: unknown[]) => void;
-  const send = (event: string, el: HTMLElement) => {
-    if (typeof gtag === 'function') gtag('event', event, { banner_id: el.dataset.banner, slot: el.dataset.slot });
-  };
-
-  const offers = document.querySelectorAll<HTMLElement>('[data-banner][data-slot]');
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.intersectionRatio < 0.5) continue;
-        entry.target.classList.add('offer-in-view');
-        send('banner_view', entry.target as HTMLElement);
-        observer.unobserve(entry.target);
-      }
-    }, { threshold: 0.5 });
-    offers.forEach((el) => observer.observe(el));
-  }
-  offers.forEach((el) => el.addEventListener('click', (event) => {
-    if ((event.target as Element).closest('[data-banner-link]')) send('banner_click', el);
-  }));
-</script>
+  )}
+</aside>
 
 <style>
   .study-offer {
     --offer-accent: #9bddff;
     --offer-title: #f6f8ff;
-    --offer-muted: #c4d1e4;
-    --offer-button-ink: #101c34;
-    --offer-button-weight: 700;
-    --offer-button-hover: #fff;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: clamp(14px, 3vw, 28px);
-    padding: clamp(16px, 3vw, 28px);
-    margin-block: 18px;
+    gap: 12px clamp(12px, 2.5vw, 26px);
+    padding: clamp(14px, 2.4vw, 24px);
+    margin-block: 16px;
     background: #101c34;
     border: 1px solid #324a69;
     border-inline-start: 4px solid var(--offer-accent);
-    border-radius: 16px;
+    border-radius: 14px;
     color: var(--offer-title);
     text-align: left;
   }
-  .study-offer.apostila {
-    --offer-accent: #ffda44;
+
+  .study-offer.apostila { --offer-accent: #ffda44; }
+  .study-offer.compact { padding: 14px 16px; }
+  .study-offer.with-phone {
     display: grid;
-    grid-template-columns: minmax(42px, clamp(52px, 12vw, 100px)) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'copy' 'action' 'demo';
+    justify-items: start;
   }
-  .offer-cover img {
-    display: block;
-    width: 100%;
+  .with-phone .offer-copy { grid-area: copy; align-self: end; }
+  .with-phone .offer-button { grid-area: action; align-self: start; }
+  .offer-demo {
+    grid-area: demo;
+    justify-self: stretch;
+    display: grid;
+    align-items: center;
+    gap: 18px;
+    min-width: 0;
+  }
+  @media (min-width: 680px) {
+    .offer-demo {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 206px);
+    }
+  }
+  .offer-cover {
+    flex: none;
+    width: clamp(44px, 9vw, 68px);
     height: auto;
-    border-radius: 3px 8px 8px 3px;
-    box-shadow: 5px 4px 0 #344866, 8px 8px 15px #0006;
+    border-radius: 3px 6px 6px 3px;
+    box-shadow: 4px 3px 0 #344866;
   }
-  .offer-copy { flex: 1 1 14rem; min-width: 0; }
-  .offer-product { display: block; color: var(--offer-accent); font-size: .83rem; font-weight: 650; }
+  .compact .offer-cover { width: 42px; }
+  .offer-copy { flex: 1 1 11rem; min-width: 0; }
+  .offer-product {
+    display: block;
+    color: var(--offer-accent);
+    font: 650 .83rem/1.4 var(--font-body);
+  }
   .study-offer .offer-copy strong {
     display: block;
     margin-top: 4px;
     color: var(--offer-title);
-    font: 750 clamp(1.1rem, 2.5vw, 1.6rem)/1.2 var(--font-display);
+    font: 750 clamp(1.12rem, 2.3vw, 1.6rem)/1.2 var(--font-display);
   }
-  .study-offer .offer-copy > p, .study-offer .offer-preview p {
+  .study-offer.compact .offer-copy strong { font-size: 1.08rem; }
+  .study-offer .offer-copy > p {
     margin: 6px 0 0;
-    color: var(--offer-muted);
+    color: #c4d1e4;
     font: 400 .875rem/1.5 var(--font-body);
   }
-  .offer-preview {
-    flex: 1 1 10rem;
-    max-width: 17rem;
-    padding: 12px 14px;
-    background: #1c2e4a;
-    border: 1px solid #496385;
-    border-radius: 4px 14px 14px;
-  }
-  .offer-preview span { color: var(--offer-accent); font-size: .75rem; font-weight: 650; }
-  .offer-link { color: var(--violet); font-size: .9rem; font-weight: 700; text-underline-offset: .18em; }
   .study-offer .offer-button {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     min-height: 44px;
     max-width: 100%;
-    margin-top: 12px;
     padding: 8px 12px;
     border-radius: 8px;
-    background: var(--offer-button-fill, var(--offer-accent));
-    color: var(--offer-button-ink);
-    font-size: .875rem;
-    font-weight: var(--offer-button-weight);
-    line-height: 1.3;
+    background: var(--offer-accent);
+    color: #101c34;
+    font: 700 .875rem/1.3 var(--font-body);
     text-decoration: none;
   }
-  .study-offer .offer-button:hover { background: var(--offer-button-hover); color: var(--offer-button-ink); text-decoration: none; }
-  .offer-arrow { flex: none; }
+  .study-offer .offer-button:hover { background: #fff; color: #101c34; text-decoration: none; }
+  .offer-arrow { display: inline-flex; flex: none; }
   .offer-button:focus-visible { outline: 2px solid var(--offer-title); outline-offset: 3px; }
-  .offer-link:focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; }
-  .study-offer.rail {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 14px;
-    margin: 0;
-    padding: 16px;
-  }
-  .rail .offer-cover { width: min(90px, 75%); }
-  .study-offer.rail .offer-copy strong { font-size: 1.16rem; }
-  .study-offer.rail .offer-button { width: 100%; justify-content: space-between; }
-  .study-offer .offer-button.neon-cta {
-    --offer-button-fill: #b9f500;
-    --offer-button-hover: #d0ff4b;
-    --offer-button-ink: #000;
-    --offer-button-weight: 800;
-  }
-  .study-offer.apostila .offer-button.neon-cta {
-    --offer-button-fill: var(--offer-accent);
-    --offer-button-hover: #ffe36b;
-  }
-  .study-offer.rail:not(.apostila) .offer-button.neon-cta {
-    --offer-button-fill: #55dbff;
-    --offer-button-hover: #9bebff;
-  }
-  .study-offer.anchor {
-    margin: 0;
-    padding: 10px 46px 10px 14px;
-    background: #12283b;
-    border: 1px solid #406171;
-    border-radius: 14px;
-  }
-  .anchor .offer-copy {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: 2px 10px;
-  }
-  .anchor .offer-product { color: #b2c9db; font-size: .74rem; }
-  .study-offer.anchor .offer-copy strong {
-    grid-area: 2 / 1;
-    margin: 0;
-    font-size: clamp(.9rem, 2.4vw, 1.15rem);
-  }
-  .study-offer.anchor .offer-button {
-    grid-area: 1 / 2 / 3 / 3;
-    margin: 0;
-  }
-  @media (max-width: 360px) {
-    .anchor .offer-arrow { display: none; }
-  }
-
-  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-    .study-offer .offer-button { transition: background-color .18s ease, translate .18s ease; }
-    .study-offer .offer-button:hover { translate: 0 -2px; }
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .study-offer.offer-in-view { animation: offer-appear .38s ease-out both; }
-    .offer-in-view .offer-button { position: relative; overflow: hidden; }
-    .offer-in-view .offer-button:not(.neon-cta)::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(110deg, transparent 30%, #fffa 50%, transparent 70%);
-      pointer-events: none;
-      animation: offer-shine .75s .2s ease-out both;
-    }
-    .offer-in-view .offer-button.neon-cta { animation: offer-neon-pulse 1.5s ease-in-out 2; }
-    @keyframes offer-neon-pulse {
-      0%, 100% { box-shadow: 0 0 0 0 transparent; }
-      50% { box-shadow: 0 0 12px 2px color-mix(in srgb, var(--offer-button-fill) 54%, transparent); }
-    }
-    @keyframes offer-appear { from { opacity: .72; translate: 0 8px; } }
-    @keyframes offer-shine {
-      from { translate: -100% 0; }
-      to { translate: 100% 0; }
-    }
-  }
 </style>

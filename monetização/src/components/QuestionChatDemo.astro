@@ -1,0 +1,127 @@
+<section class="chat-demo" data-question-chat aria-label="Exemplo ilustrativo do Chat IA">
+  <header class="chat-header">
+    <strong>Exemplo ilustrativo do Chat IA</strong>
+    <div class="chat-controls" data-chat-controls hidden>
+      <button type="button" data-chat-pause>Pausar demonstração</button>
+      <button type="button" data-chat-replay>Ver de novo</button>
+    </div>
+  </header>
+
+  <p class="chat-message chat-prompt" data-chat-step>
+    Gere 5 questões de Informática sobre segurança da informação, nível médio, no formato Certo ou Errado.
+  </p>
+  <p class="chat-message chat-reply" data-chat-step>
+    Preparei 5 questões com base no acervo de provas da plataforma. O bloco já está no seu histórico.
+  </p>
+  <p class="chat-generated" data-chat-step>5 questões geradas</p>
+  <div class="chat-question" data-chat-step>
+    <span>Segurança da informação · Certo ou Errado</span>
+    <p>No phishing, o golpista pode se passar por uma entidade confiável para induzir a vítima a revelar dados ou clicar em links maliciosos.</p>
+    <div class="chat-answer" data-chat-step>✓ Certo</div>
+  </div>
+</section>
+
+<script>
+  if ('IntersectionObserver' in window && 'animate' in Element.prototype
+    && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll<HTMLElement>('[data-question-chat]').forEach((demo) => {
+      const controls = demo.querySelector<HTMLElement>('[data-chat-controls]')!;
+      const pause = demo.querySelector<HTMLButtonElement>('[data-chat-pause]')!;
+      const replay = demo.querySelector<HTMLButtonElement>('[data-chat-replay]')!;
+      const steps = Array.from(demo.querySelectorAll<HTMLElement>('[data-chat-step]'));
+      let animations: Animation[] = [];
+      let paused = false;
+
+      function play() {
+        animations.forEach((animation) => animation.cancel());
+        paused = false;
+        pause.disabled = false;
+        pause.textContent = 'Pausar demonstração';
+        animations = steps.map((step, index) => step.animate(
+          [{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'translateY(0)' }],
+          { duration: 360, delay: index * 800, easing: 'ease-out', fill: 'both' },
+        ));
+        animations.at(-1)?.addEventListener('finish', () => { pause.disabled = true; });
+      }
+
+      pause.addEventListener('click', () => {
+        paused = !paused;
+        animations.forEach((animation) => paused ? animation.pause() : animation.play());
+        pause.textContent = paused ? 'Retomar demonstração' : 'Pausar demonstração';
+      });
+      replay.addEventListener('click', play);
+
+      const observer = new IntersectionObserver(([entry]) => {
+        if (!entry || entry.intersectionRatio < 0.35) return;
+        observer.disconnect();
+        controls.hidden = false;
+        play();
+      }, { threshold: 0.35 });
+      observer.observe(demo);
+    });
+  }
+</script>
+
+<style>
+  .chat-demo {
+    display: grid;
+    align-content: start;
+    gap: 10px;
+    min-width: 0;
+    padding: clamp(12px, 2vw, 20px);
+    background: #0b1629;
+    border: 1px solid #324a69;
+    border-radius: 12px;
+    color: #e2eeff;
+    font: 400 .875rem/1.5 var(--font-body);
+  }
+  .chat-header, .chat-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .chat-header { justify-content: space-between; }
+  .chat-header strong { color: #9bddff; }
+  .chat-controls[hidden] { display: none; }
+  .chat-controls button {
+    min-height: 32px;
+    padding: 3px 9px;
+    border: 1px solid #496586;
+    border-radius: 6px;
+    background: #14243b;
+    color: inherit;
+    font: inherit;
+    font-size: .75rem;
+    cursor: pointer;
+  }
+  .chat-controls button:focus-visible { outline: 2px solid #9bddff; outline-offset: 2px; }
+  .chat-controls button:disabled { opacity: .55; cursor: default; }
+  .chat-demo p { margin: 0; }
+  .chat-message {
+    max-width: 94%;
+    padding: 9px 12px;
+    border-radius: 8px;
+  }
+  .chat-demo .chat-prompt {
+    justify-self: end;
+    background: #153e5c;
+    border-inline-end: 2px solid #73c7f4;
+  }
+  .chat-demo .chat-reply { background: #1a2b43; }
+  .chat-demo .chat-generated {
+    padding-inline-start: 10px;
+    border-inline-start: 2px solid #73c7f4;
+    color: #9bddff;
+    font-weight: 700;
+  }
+  .chat-question {
+    display: grid;
+    gap: 6px;
+    padding: 10px 12px;
+    border: 1px solid #324a69;
+    border-radius: 8px;
+  }
+  .chat-question > span { color: #b1c7e1; font-size: .75rem; }
+  .chat-answer { color: #9be5c3; font-weight: 700; }
+</style>

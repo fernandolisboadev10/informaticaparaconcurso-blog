@@ -34,7 +34,7 @@ Atualizar ou falsificar `status=approved` no navegador não aprova pedidos.
 Execute no checkout existente; não crie um worktree apenas para configurar o ambiente.
 
 ```sh
-cd /workspace/informaticaparaconcurso-blog/services/vendas
+cd /workspace/informaticaparaconcurso-blog/monetização/services/vendas
 npm ci
 npm test
 npm run check
@@ -84,7 +84,7 @@ O modo de teste depende das credenciais e contas de teste do Mercado Pago; quand
 ## Publicação pelo Wrangler (com a conta autenticada)
 
 ```sh
-cd services/vendas
+cd monetização/services/vendas
 npx wrangler login
 # Se o banco ainda não existe, crie-o uma única vez:
 npx wrangler d1 create apostila-orders

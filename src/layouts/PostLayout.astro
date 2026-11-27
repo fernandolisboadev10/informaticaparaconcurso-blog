@@ -6,8 +6,6 @@ import AuthorBio from '../components/AuthorBio.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import Quiz from '../components/Quiz.astro';
-import ArticleStudyContent from '../components/ArticleStudyContent.astro';
-import StudyOffer from '../components/StudyOffer.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 import type { MarkdownHeading } from 'astro';
@@ -140,11 +138,7 @@ const breadcrumbSchema = {
 
       <div class="post-body">
         <div class="prose">
-          <ArticleStudyContent>
-            <slot />
-            <StudyOffer slot="gerador" product="gerador" placement="artigo-entre-secoes" compact />
-            <StudyOffer slot="apostila" product="apostila" placement="artigo-entre-secoes" compact />
-          </ArticleStudyContent>
+          <slot />
         </div>
 
         {quiz && <Quiz questions={quiz.questions} mode={quiz.mode} title={quiz.title} />}

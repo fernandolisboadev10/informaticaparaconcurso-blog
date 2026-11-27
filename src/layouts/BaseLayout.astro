@@ -16,7 +16,6 @@ interface Props {
   published?: Date;
   modified?: Date;
   showSiteNavigation?: boolean;
-  footerOffer?: 'apostila' | 'gerador';
 }
 
 const {
@@ -29,7 +28,6 @@ const {
   published,
   modified,
   showSiteNavigation = true,
-  footerOffer,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -142,31 +140,8 @@ const organizationSchema = {
     <main id="main-content" tabindex="-1">
       <slot />
     </main>
-    {showSiteNavigation && <Footer product={footerOffer} />}
+    {showSiteNavigation && <Footer />}
     <BackToTop />
     <CookieBanner />
   </body>
 </html>
-
-<script>
-  declare const gtag: (...args: unknown[]) => void;
-
-  const send = (event: string, banner: HTMLElement) => {
-    if (typeof gtag === 'function') gtag('event', event, { banner_id: banner.dataset.banner, slot: banner.dataset.slot });
-  };
-
-  const banners = document.querySelectorAll<HTMLElement>('[data-banner][data-slot]');
-  if (banners.length && 'IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.intersectionRatio < 0.5) continue;
-        send('banner_view', entry.target as HTMLElement);
-        observer.unobserve(entry.target);
-      }
-    }, { threshold: 0.5 });
-    banners.forEach((banner) => observer.observe(banner));
-  }
-  banners.forEach((banner) => {
-    banner.querySelector('[data-banner-link]')?.addEventListener('click', () => send('banner_click', banner));
-  });
-</script>

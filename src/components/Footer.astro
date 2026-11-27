@@ -1,14 +1,6 @@
 ---
 import { categories as categoryList } from "../data/categories";
-import { APOSTILA_URL } from '../data/apostila';
 import { blogSocials } from '../data/socials';
-import StudyOffer from './StudyOffer.astro';
-
-interface Props {
-  product?: 'apostila' | 'gerador';
-}
-
-const { product = 'apostila' } = Astro.props;
 
 const categories = [
   { label: "Início", href: "/" },
@@ -16,7 +8,6 @@ const categories = [
 ];
 
 const quickLinks = [
-  { label: 'Apostila Cebraspe', href: APOSTILA_URL },
   { label: 'Sobre nós', href: '/sobre-nos/' },
   { label: 'Fale conosco', href: '/fale-conosco/' },
   { label: 'Transparência', href: '/transparencia/' },
@@ -57,11 +48,6 @@ const quickLinks = [
       </ul>
     </div>
 
-  </div>
-
-  <div class:list={['container', 'footer-offer', { 'has-apostila': product === 'apostila' }]}>
-    <StudyOffer product="gerador" placement="rodape" phone />
-    {product === 'apostila' && <StudyOffer product="apostila" placement="rodape" compact />}
   </div>
 
   <div class="bottom">
@@ -188,19 +174,6 @@ const quickLinks = [
 
   .bottom {
     background: var(--ink-deep);
-  }
-
-  .footer-offer {
-    padding-bottom: 24px;
-  }
-
-  @media (min-width: 960px) {
-    .footer-offer.has-apostila {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      align-items: center;
-      gap: 24px;
-    }
   }
 
   .bottom-inner {

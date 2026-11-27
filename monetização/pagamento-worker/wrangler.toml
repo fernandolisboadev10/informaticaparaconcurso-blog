@@ -1,0 +1,33 @@
+name = "pagamento-informatica"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Roda em https://pagamento.informaticaparaconcurso.com.br (domínio já está na Cloudflare)
+routes = [
+  { pattern = "pagamento.informaticaparaconcurso.com.br", custom_domain = true }
+]
+
+[vars]
+SITE_URL = "https://www.informaticaparaconcurso.com.br"
+PUBLIC_URL = "https://pagamento.informaticaparaconcurso.com.br"
+PRODUCT_TITLE = "Apostila Cebraspe: Questões de Informática"
+PRICE = "19.90"
+PDF_KEY = "apostila-completa.pdf"
+MAX_DOWNLOADS = "5"
+TOKEN_TTL_DAYS = "7"
+
+# Criar antes: npx wrangler kv namespace create PEDIDOS  (cole o id abaixo)
+[[kv_namespaces]]
+binding = "PEDIDOS"
+id = "COLE_O_ID_DO_KV_AQUI"
+
+# Criar antes: npx wrangler r2 bucket create apostila-privada
+[[r2_buckets]]
+binding = "ARQUIVOS"
+bucket_name = "apostila-privada"
+
+# Segredos (NUNCA no Git), definidos com `npx wrangler secret put NOME`:
+#   MP_ACCESS_TOKEN        Access Token de PRODUÇÃO do Mercado Pago
+#   MP_WEBHOOK_SECRET      Assinatura secreta do webhook (painel do MP > Webhooks)
+#   RESEND_API_KEY         (opcional) envia o link por e-mail
+#   EMAIL_FROM             (opcional) ex.: "Informática para Concurso <apostila@informaticaparaconcurso.com.br>"
