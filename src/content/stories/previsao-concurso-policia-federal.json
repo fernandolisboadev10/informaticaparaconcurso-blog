@@ -1,0 +1,131 @@
+{
+  "title": "Sonha em ser aprovado no concurso da Polícia Federal?",
+  "description": "Comece por Informática. Veja em 15 telas o que o edital de 2025 da Polícia Federal cobrou de Agente, Escrivão e Papiloscopista.",
+  "date": "2026-11-27T00:00:00-03:00",
+  "post": "previsao-concurso-policia-federal",
+  "poster": "./images/previsao-concurso-policia-federal/poster.jpg",
+  "cover": "../blog/images/previsao-concurso-policia-federal.webp",
+  "coverText": "Comece estudando Informática. Veja os conteúdos do concurso anterior, com base no edital de 2025.",
+  "pages": [
+    {
+      "id": "internet-e-intranet",
+      "label": "Internet",
+      "title": "Internet, intranet e navegação",
+      "text": "Revise navegadores, correio eletrônico, grupos de discussão, redes sociais e acesso remoto. Saiba diferenciar uma rede interna da internet aberta ao público.",
+      "image": "../blog/images/buscador-x-navegador.webp",
+      "imageAlt": "Ilustração sobre a diferença entre navegador e buscador",
+      "light": true
+    },
+    {
+      "id": "redes-de-computadores",
+      "label": "Redes",
+      "title": "Modelos e protocolos",
+      "text": "Compare os modelos OSI e TCP/IP. Revise a formação de endereços IPv4 e IPv6 e a função de Ethernet, IP, TCP, UDP, DNS, DHCP e SNMP.",
+      "image": "../blog/images/Redes-de-Computadores.webp",
+      "imageAlt": "Ilustração de dispositivos conectados em rede"
+    },
+    {
+      "id": "redes-sem-fio",
+      "label": "Redes",
+      "title": "Wi-Fi e conexões seguras",
+      "text": "Entenda VPN e SSL/TLS. Para redes sem fio, revise a família de padrões IEEE 802.11 e os mecanismos de segurança WPA e WPA2.",
+      "image": "../blog/images/extranet-acesso-seguro-vpn.webp",
+      "imageAlt": "Notebook e servidores conectados por um túnel VPN ilustrado",
+      "light": true
+    },
+    {
+      "id": "sistemas-operacionais",
+      "label": "Sistemas",
+      "title": "Windows e Linux",
+      "text": "Comece pelas funções do sistema operacional. Compare como Windows e Linux organizam arquivos, gerenciam permissões e executam tarefas do dia a dia.",
+      "image": "../blog/images/windows-x-linux.webp",
+      "imageAlt": "Ilustração comparativa de Windows e Linux",
+      "light": false
+    },
+    {
+      "id": "office-e-colaboracao",
+      "label": "Aplicativos",
+      "title": "Office e colaboração",
+      "text": "Pratique edição de textos, planilhas e apresentações no Microsoft Office e no LibreOffice. Revise também os recursos de colaboração online do Microsoft Teams.",
+      "image": "../blog/images/office.webp",
+      "imageAlt": "Pessoa usando notebook com ícones de editor de texto, planilha e apresentação",
+      "light": true
+    },
+    {
+      "id": "ameacas-digitais",
+      "label": "Segurança",
+      "title": "Malwares e botnets",
+      "text": "Diferencie vírus, worms, trojans, ransomware, spyware e rootkits. Entenda também como uma botnet reúne dispositivos comprometidos sob controle remoto.",
+      "image": "../blog/images/Malwares-1.webp",
+      "imageAlt": "Ilustração de ameaças digitais em um notebook",
+      "light": false
+    },
+    {
+      "id": "protecao-e-autenticacao",
+      "label": "Segurança",
+      "title": "Proteção e autenticação",
+      "text": "Revise antivírus, firewall, controle de acesso e autenticação multifator. Saiba distinguir assinatura digital de hash criptográfico e reconhecer MD5, SHA-1 e SHA-256.",
+      "image": "../blog/images/seguranca.webp",
+      "imageAlt": "Ilustração de segurança da informação com um escudo digital",
+      "light": true
+    },
+    {
+      "id": "computacao-em-nuvem",
+      "label": "Nuvem",
+      "title": "IaaS, PaaS e SaaS",
+      "text": "Compare nuvens públicas e privadas. Em IaaS, PaaS e SaaS, identifique o que o provedor gerencia e o que fica a cargo do usuário.",
+      "image": "../blog/images/saas-paas-e-iaas.webp",
+      "imageAlt": "Ilustração dos três modelos de serviços em nuvem",
+      "light": false
+    },
+    {
+      "id": "bancos-de-dados",
+      "label": "Dados",
+      "title": "Bancos de dados e SQL",
+      "text": "Revise bancos relacionais, SQL e modelagem de entidades, atributos e relacionamentos. Compare o papel de um Data Warehouse com o de um Data Lake.",
+      "image": "../blog/images/sistemas-de-arquivos.webp",
+      "imageAlt": "Notebook e dispositivos de armazenamento sobre uma mesa de estudos",
+      "light": true
+    },
+    {
+      "id": "analise-e-integracao",
+      "label": "Dados",
+      "title": "Análise e integração",
+      "text": "Estude mineração de dados, big data e Business Intelligence (BI). Em integração, entenda para que serve uma API e o que significa extrair, transformar e carregar dados (ETL).",
+      "image": "../blog/images/revisao-excel.webp",
+      "imageAlt": "Pessoa estudando dados e gráficos em uma planilha",
+      "light": false
+    },
+    {
+      "id": "inteligencia-artificial",
+      "label": "Inteligência artificial",
+      "title": "Machine learning e ferramentas",
+      "text": "Revise os conceitos de aprendizado de máquina. O edital de 2025 também citou ferramentas de IA como Copilot, ChatGPT e as da Meta.",
+      "image": "../blog/images/nocoes-de-informatica-capa.webp",
+      "imageAlt": "Pessoa anotando tópicos de Informática, incluindo inteligência artificial",
+      "light": true
+    },
+    {
+      "id": "biometria-e-programacao",
+      "label": "Tópicos do edital da PF",
+      "title": "Biometria e programação",
+      "text": "Revise metadados e os formatos de intercâmbio biométrico NIST, XML e JSON. Na identificação, diferencie falso positivo (FPIR) de falso negativo (FNIR). Estude noções de Python e R.",
+      "image": "../blog/images/Organizacao-de-Arquivos.webp",
+      "imageAlt": "Pessoa estudando organização de arquivos em um computador",
+      "light": false
+    },
+    {
+      "id": "proximo-edital",
+      "label": "Planeje a revisão",
+      "title": "O programa pode mudar",
+      "text": "O edital de 2025 detalhou mais dados e segurança que o de 2021 e passou a citar ferramentas de IA. Use o último programa como base e confira as mudanças quando sair o próximo.",
+      "image": "../blog/images/Cebraspe.webp",
+      "imageAlt": "Candidato resolvendo uma prova de concurso",
+      "light": true
+    }
+  ],
+  "closing": {
+    "title": "Previsão do próximo concurso da PF",
+    "text": "Leia o artigo para ver os cenários para o próximo edital e encontrar links para estudar as matérias."
+  }
+}
