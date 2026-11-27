@@ -1,10 +1,10 @@
 ---
-title: "Conteúdo programático do IBGE Recenseador 2026: o que estudar"
+title: "Conteúdo programático do IBGE Recenseador 2026 e 30 questões"
 seoTitle: "Conteúdo programático do IBGE Recenseador 2026"
-description: "Confira o que cai na prova de Recenseador do IBGE 2026, com tópicos do edital, exemplos resolvidos e 30 questões comentadas de Português, Matemática e Conhecimentos Técnicos."
+description: "Estude o Anexo III do IBGE Recenseador 2026 com exemplos resolvidos e 30 questões comentadas de Português, Matemática e Conhecimentos Técnicos."
 category: "Concursos"
 date: 2026-11-26T12:00:00-03:00
-updated: 2026-11-27T12:00:00-03:00
+updated: 2026-11-27T10:06:00-03:00
 readingTime: "24 min"
 tags: ["IBGE 2026", "Recenseador", "Cesgranrio", "Censo Agropecuário"]
 image: "./images/concurso-ibge-2026.webp"
@@ -14,15 +14,21 @@ related:
   - como-estudar-para-concurso
 ---
 
-A prova de **Recenseador do IBGE 2026** tem 60 questões. São **15 de Língua Portuguesa, 15 de Matemática e 30 de Conhecimentos Técnicos**. Se você tem pouco tempo para estudar, comece o material técnico nesta semana e reserve blocos para as outras duas disciplinas. O edital exige pelo menos um ponto em cada uma e 18 pontos no total. [Edital nº 03/2026 do IBGE](https://ftp.ibge.gov.br/edital/PSS_Censo_Agro/2026_03/EDITAL_03_2026_PSS_RECENSEADOR_IBGE.pdf)
+O **conteúdo programático do IBGE Recenseador 2026** está no Anexo III do Edital nº 03/2026. Veja no print os tópicos de Português, Matemática e Conhecimentos Técnicos. Em seguida, use as tabelas e os exemplos para revisar cada matéria.
 
-| Disciplina | Questões | Parcela da prova |
+[Ir direto às 30 questões comentadas](#30-questões-comentadas-para-treinar). São 10 por disciplina, com cinco alternativas e gabarito comentado.
+
+![Anexo III do edital de Recenseador do IBGE com os tópicos de Língua Portuguesa, Matemática e Conhecimentos Técnicos](./images/ibge-recenseador-2026-anexo-iii-conteudo-programatico.webp)
+
+*Fonte: [Anexo III do Edital nº 03/2026 do IBGE](https://ftp.ibge.gov.br/edital/PSS_Censo_Agro/2026_03/EDITAL_03_2026_PSS_RECENSEADOR_IBGE.pdf#page=138).*
+
+| Disciplina | Questões na prova | Parcela da prova |
 | --- | ---: | ---: |
 | Língua Portuguesa | 15 | 25% |
 | Matemática | 15 | 25% |
 | Conhecimentos Técnicos | 30 | 50% |
 
-Este guia detalha os tópicos do Anexo III e mostra como praticá-los. Para consultar vagas, requisitos e as demais etapas da seleção, leia o [guia do concurso IBGE 2026](/concurso-ibge-2026/).
+Para saber quem pode concorrer, quanto paga a seleção e quando sai o cartão de confirmação, consulte o [edital do Concurso IBGE 2026, com vagas, remuneração e calendário](/concurso-ibge-2026/).
 
 ## Língua Portuguesa
 

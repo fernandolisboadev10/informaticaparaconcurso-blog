@@ -1,27 +1,23 @@
 ---
-title: "Concurso IBGE 2026: 27.279 Vagas de Recenseador e Como Estudar"
-seoTitle: "Concurso IBGE 2026: 27.279 vagas e prova em janeiro"
-description: "Edital do IBGE prevê 27.279 vagas temporárias de recenseador. Confira requisitos, remuneração, inscrições até 25/11 e o conteúdo da prova de janeiro."
+title: "Concurso IBGE 2026: edital, 27.279 vagas e salário de recenseador"
+seoTitle: "Concurso IBGE 2026: edital e 27.279 vagas de recenseador"
+description: "Veja as 27.279 vagas de recenseador do IBGE, os requisitos, a remuneração por produtividade e o cronograma da seleção organizada pela Cesgranrio."
 category: "Concursos"
 date: 2026-11-09T17:42:00-03:00
-updated: 2026-11-27T09:56:00-03:00
+updated: 2026-11-27T10:00:00-03:00
 draft: false
-readingTime: "12 min"
+readingTime: "9 min"
 tags: ["IBGE 2026", "Recenseador", "Cesgranrio", "Ensino Fundamental", "Censo Agropecuário"]
-image: "./images/concurso-ibge-2026.webp"
-imageAlt: "Pessoa estudando com notebook e caderno em uma mesa, com paisagem rural ao fundo"
+image: "./images/concurso-ibge-2026-recenseadora-em-campo.webp"
+imageAlt: "Ilustração de uma recenseadora usando um dispositivo de coleta ao lado de uma porteira em área rural"
 related:
   - conteudo-programatico-ibge-recenseador-2026
-  - como-estudar-para-concurso
   - concurso-publico-2026
-  - nocoes-de-informatica
 ---
 
-O **concurso IBGE 2026 para recenseador** prevê 27.279 vagas temporárias, exige ensino fundamental completo e tem inscrições de 6 a 25 de novembro. Segundo o Edital nº 03/2026, a seleção será organizada pela Cesgranrio para o **12º Censo Agropecuário, Florestal e Aquícola**, com prova prevista para 31 de janeiro de 2027.
+O **concurso IBGE 2026 para recenseador** oferece 27.279 vagas temporárias para o **12º Censo Agropecuário, Florestal e Aquícola**. O Edital nº 03/2026 exige ensino fundamental completo e prevê prova em **31 de janeiro de 2027**, organizada pela Fundação Cesgranrio.
 
-Antes de olhar apenas o número de vagas, atenção a dois detalhes: a remuneração de até **R$ 4.370 depende de produtividade**, e o vínculo não é efetivo. Outro ponto muda a preparação: **Informática não aparece como disciplina na prova**. O programa reúne Português, Matemática e Conhecimentos Técnicos.
-
-Este guia se baseia no edital de abertura, em seus anexos e na primeira retificação, publicada em 17 de novembro de 2026. A retificação atualizou as regras de pagamento. Confira os comunicados da organizadora antes da inscrição.
+O período regular de inscrições previsto no edital foi de **6 a 25 de novembro**. Para quem fez a inscrição sem pedir isenção, o prazo de pagamento indicado é **27 de novembro**. A remuneração mensal tem uma parcela fixa de **R$ 1.741** e uma parcela variável de até **R$ 2.629**, conforme a produção. [Cronograma e regras do Edital nº 03/2026](https://ftp.ibge.gov.br/edital/PSS_Censo_Agro/2026_03/EDITAL_03_2026_PSS_RECENSEADOR_IBGE.pdf)
 
 ## Concurso IBGE 2026: resumo do edital
 
@@ -99,7 +95,7 @@ Não são seis meses assegurados de uma vez. As renovações dependem também da
 
 O cronograma prevê inscrições de **6 a 25 de novembro de 2026**. Pelo item 7.3, o sistema abre às 10h do primeiro dia e encerra às **23h59 do último**, sempre no horário de Brasília. A taxa é de R$ 70.
 
-O caminho indicado no edital é o site da [Fundação Cesgranrio](https://www.cesgranrio.org.br/). Localize a seleção de recenseador do Edital nº 03/2026 e siga estas etapas:
+Durante o período regular de inscrições, a [página da seleção na Fundação Cesgranrio](https://concursos.cesgranrio.org.br/portal/avaliacoes/33) orientava os candidatos a seguir estas etapas:
 
 1. Leia o edital, os anexos e as retificações disponíveis na página da seleção.
 2. Confira a área de trabalho e o município ou localidade de aplicação da prova.
@@ -131,62 +127,32 @@ Para a hipótese de doação de medula, o subitem 8.4.1 especifica documento de 
 
 O prazo de dezembro é **exclusivo para quem pediu isenção no período regular e teve o pedido definitivamente indeferido**. Ele não estende a inscrição para novos candidatos nem substitui o vencimento de 27/11 para os demais.
 
-## Como será a prova da Cesgranrio
+## Próximas etapas e dia da prova
 
-A aplicação está prevista para **31 de janeiro de 2027, das 13h às 17h**. As quatro horas incluem instruções, coleta de digital e preenchimento do cartão-resposta. O horário de fechamento dos portões será informado no Cartão de Confirmação de Inscrição, cuja divulgação está prevista para **26 de janeiro**.
+A prova está prevista para **31 de janeiro de 2027, das 13h às 17h**, no horário de Brasília. Consulte o Cartão de Confirmação de Inscrição (CCI) para conferir endereço, sala e horário de fechamento dos portões. O horário de início da prova é informado separadamente do limite para entrar.
 
-A objetiva tem **60 questões de múltipla escolha**, com cinco alternativas e somente uma correta. Todas valem um ponto:
+| Etapa | Data prevista |
+| --- | --- |
+| Lista preliminar de inscrições e atendimentos especiais | 14/12/2026 |
+| Recursos contra indeferimento de inscrição ou atendimento especial | 15 e 16/12/2026 |
+| Lista definitiva de inscrições e atendimentos especiais | 05/01/2027 |
+| Divulgação do Cartão de Confirmação de Inscrição | 26/01/2027 |
+| Esclarecimentos sobre locais de prova, atendimento especializado e CCI | 26 a 29/01/2027 |
+| Prova objetiva | 31/01/2027 |
+| Gabarito preliminar | 01/02/2027 |
+| Recursos sobre questões e gabarito preliminar | 02 e 03/02/2027 |
+| Resultado preliminar da prova objetiva | 05/03/2027 |
+| Resultado final da seleção | 30/04/2027 |
 
-| Disciplina | Questões | Pontuação máxima |
-| --- | --- | --- |
-| Língua Portuguesa | 15 | 15 |
-| Matemática | 15 | 15 |
-| Conhecimentos Técnicos | 30 | 30 |
-| **Total** | **60** | **60** |
+O cronograma está no Anexo IV. Consulte os comunicados da organizadora para acompanhar eventuais mudanças. [Página da seleção na Cesgranrio](https://concursos.cesgranrio.org.br/portal/avaliacoes/33)
 
-Para não ser eliminado por nota, é necessário obter **pelo menos 18 pontos no total e ao menos um ponto em cada disciplina**. Alcançar esse mínimo não significa ficar dentro das vagas: a classificação depende da pontuação dos concorrentes na área e modalidade escolhidas.
+### O que levar e como funciona a classificação
 
-Conhecimentos Técnicos vale metade da prova e é o primeiro critério de nota no desempate, depois da prioridade etária legal prevista no item 12.3. Por isso, não convém deixar essa parte para a última semana.
+- Leve **documento de identificação com foto, comprovante de inscrição e caneta esferográfica de corpo transparente, com tinta azul ou preta**.
+- Confira os dados no cartão-resposta. Assinale uma alternativa por questão e evite rasuras. Entregue o cartão ao fiscal ao final.
+- Para evitar eliminação por nota, faça **pelo menos 18 dos 60 pontos e ao menos um ponto em cada disciplina**. A classificação depende da pontuação dos candidatos na área de trabalho e na modalidade de concorrência.
 
-## O que estudar: o programa do IBGE para recenseador
-
-O **Anexo III** delimita os assuntos. Para ver os tópicos organizados por disciplina e praticar com exercícios resolvidos, consulte o [conteúdo programático do IBGE Recenseador 2026](/conteudo-programatico-ibge-recenseador-2026/). A preparação deve partir dele, evitando pacotes genéricos que acrescentem disciplinas ausentes.
-
-### Língua Portuguesa
-
-O programa inclui compreensão de texto; sinônimos, antônimos e homônimos; pontuação; estrutura e sequência lógica de frases e parágrafos; ortografia e acentuação; classes de palavras; concordância e regência nominal e verbal; verbos regulares e irregulares, vozes verbais e emprego dos pronomes.
-
-Uma rotina útil é alternar interpretação com gramática aplicada a frases. Ao errar, registre a regra e explique por que a alternativa escolhida não serve, em vez de apenas decorar a letra correta.
-
-### Matemática
-
-Estão previstos números naturais, inteiros e racionais; operações, propriedades, múltiplos e divisores; razão, proporção, divisão proporcional, regra de três e porcentagem; equações do primeiro grau; medidas e conversões; áreas, perímetros e volumes; leitura de tabelas, gráficos, mapas, croquis e esquemas.
-
-Treine problemas com unidades de medida e interpretação de dados. Por exemplo, converter área ou identificar uma informação em uma tabela exige entender o enunciado antes de fazer a conta. Isso é sugestão de prática, não previsão de questão.
-
-### Conhecimentos Técnicos
-
-O conteúdo é o documento **“Estudo dos conhecimentos técnicos a serem aplicados no 12º Censo Agropecuário, Florestal e Aquícola”**, que o edital informa estar disponibilizado no site da Cesgranrio.
-
-Essa apostila precisa ocupar o centro da preparação. O PDF do edital não reproduz seu conteúdo completo; portanto, não é possível apresentar uma lista fechada de capítulos técnicos apenas com o Anexo III. Use a versão indicada para esta seleção, sem substituir por material de um censo anterior.
-
-### Cai Informática no concurso IBGE 2026?
-
-**Não como disciplina autônoma neste edital de recenseador.** As três matérias da objetiva são as da tabela acima. O uso de um dispositivo eletrônico nas atribuições do trabalho não autoriza acrescentar Word, Excel ou Windows ao programa da prova.
-
-O material de [Noções de Informática](/nocoes-de-informatica/) continua útil para outros editais que cobrem essa disciplina. Para esta seleção, priorize Português, Matemática e a apostila técnica; não desvie horas de estudo com base apenas no nome do nosso site.
-
-## Como organizar o estudo de novembro a janeiro
-
-Como ponto de partida, distribua dez blocos semanais: **cinco de Conhecimentos Técnicos, três de Matemática e dois de Português**. Essa divisão é uma sugestão editorial baseada na pontuação e pode mudar conforme seu diagnóstico; uma dificuldade grande em Português, por exemplo, exige ajuste.
-
-Em cada bloco de uma hora, experimente 20 minutos de leitura, 30 de exercícios e 10 para revisar erros. Nos blocos técnicos, use a apostila da seleção e perguntas de revisão elaboradas a partir dela; não atribua à Cesgranrio questões que você mesmo criou.
-
-- **Novembro:** leia o programa inteiro, organize os materiais e faça um diagnóstico de Português e Matemática.
-- **Dezembro:** avance na apostila técnica e revise semanalmente os pontos de maior dificuldade.
-- **Janeiro:** faça simulados com controle de tempo, treine o cartão-resposta e aumente a revisão, sem abandonar disciplinas em que há risco de zerar.
-
-Na semana da prova, confira endereço e portões no CCI, documento de identificação e caneta de corpo transparente, azul ou preta. Não confunda o início da prova às 13h com o limite de entrada.
+Para conferir as matérias do Anexo III e fazer exercícios, acesse o [conteúdo programático do IBGE Recenseador 2026 com 30 questões comentadas](/conteudo-programatico-ibge-recenseador-2026/).
 
 ## Perguntas frequentes sobre o IBGE 2026
 
@@ -202,15 +168,9 @@ Não. O valor combina R$ 1.741 fixos com até R$ 2.629 de produtividade. Há pro
 
 Não. É vínculo temporário, com estimativa inicial de até seis meses e contratos de 15 dias sujeitos a renovação. Não equivale a um cargo efetivo.
 
-### Quando saem o gabarito e o resultado final?
+## Onde acompanhar a seleção
 
-O Anexo IV prevê **gabarito preliminar em 1º de fevereiro de 2027**, recursos em 2 e 3/2 e resultado final do PSS em **30 de abril de 2027**. São etapas diferentes: o gabarito não é o resultado da seleção, e o cronograma pode sofrer retificação.
-
-## O que fazer agora
-
-Comece pelo Anexo I: identifique a área em que pode trabalhar e só então confira a cidade de prova no Anexo II. Depois, conclua a inscrição ou peça isenção dentro do prazo e organize a preparação com o Anexo III e a apostila técnica.
-
-Antes de pagar, confira a página da seleção e as atualizações nos canais da [Cesgranrio](https://www.cesgranrio.org.br/) e do [IBGE](https://www.ibge.gov.br/). O que define as regras é o edital vigente, com suas retificações, não uma manchete nem uma estimativa de salário.
+Consulte sua situação e os comunicados na [página do processo seletivo na Cesgranrio](https://concursos.cesgranrio.org.br/portal/avaliacoes/33). Tenha em mãos a área de trabalho escolhida e acompanhe a lista de inscrições da sua modalidade. Perto da prova, consulte o CCI para confirmar onde e a que horas se apresentar.
 
 ## Fontes e Referências
 
